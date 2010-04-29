@@ -1,0 +1,1 @@
+_dlg = createDialog "ArtilleryDialog";

@@ -1,0 +1,27 @@
+[MCC_SIDENAME,MCC_FACTION,"Infantry","LAND"] call (compile preProcessFileLineNumbers "mcc\pop_menu\mcc_make_array_grps.sqf");
+
+
+w	["USMC","USMC", 
+w	"CDF","CDF",
+w	"Afrenian army","AFR_army",
+w	"Æ US Army","ACE_USARMY",
+w	"Æ USMC (Wüste)","ACE_USMC_D",
+w	"Russia","RU",
+w	"Insurgents","INS"
+	,"Molatian army","MOL_army"
+w	,"Terroristas","FFAA",
+w	"Guerillas","GUE",
+w	"Terroristas","FFAA",
+w	"Civilians","CIV",
+w	"PLA","PLA"]
+	
+	
+	
+	[[["Item","USMC (WEST)"],["Action","mcc_faction="USMC";mcc_sidename="WEST";[] call mcc_faction_choice;"]],[["Item","CDF (WEST)"],["Action","mcc_faction="CDF";mcc_sidename="WEST";[] call mcc_faction_choice;"]],[["Item","Russia (EAST)"],["Action","mcc_faction="RU";mcc_sidename="EAST";[] call mcc_faction_choice;"]],[["Item","Insurgents (EAST)"],["Action","mcc_faction="INS";mcc_sidename="EAST";[] call mcc_faction_choice;"]],[["Item","Guerillas (GUE)"],["Action","mcc_faction="GUE";mcc_sidename="GUE";[] call mcc_faction_choice;"]],[["Item","Chernarus (CIV)"],["Action","mcc_faction="CIV";mcc_sidename="CIV";[] call mcc_faction_choice;"]],[["Item","Russia (CIV)"],["Action","mcc_faction="CIV_RU";mcc_sidename="CIV";[] call mcc_faction_choice;"]],[["Item","Molatian Army (EAST)"],["Action","mcc_faction="MOL_army";mcc_sidename="EAST";[] call mcc_faction_choice;"]],[["Item","PLA (GUE)"],["Action","mcc_faction="ACEXPLA";mcc_sidename="GUE";[] call mcc_faction_choice;"]],[["Item","FFAA (WEST)"],["Action","mcc_faction="FFAA";mcc_sidename="WEST";[] call mcc_faction_choice;"]],[["Item","Afrenian Army (WEST)"],["Action","mcc_faction="AFR_army";mcc_sidename="WEST";[] call mcc_faction_choice;"]],[["Item","Æ USMC (Wüste) (WEST)"],["Action","mcc_faction="ACE_BLUFOR_USMC_Desert";mcc_sidename="WEST";[] call mcc_faction_choice;"]],[["Item","Æ US Army (WEST)"],["Action","mcc_faction="ACE_BLUFOR_USARMY";mcc_sidename="WEST";[] call mcc_faction_choice;"]],[["Item","Æ US Army (Wüste) (WEST)"],["Action","mcc_faction="ACE_BLUFOR_USARMY_DESERT";mcc_sidename="WEST";[] call mcc_faction_choice;"]],[["Item","Æ US Army SOAR (WEST)"],["Action","mcc_faction="ACE_BLUFOR_160SOAR";mcc_sidename="WEST";[] call mcc_faction_choice;"]],[["Item","Æ US Air Force (WEST)"],["Action","mcc_faction="ACE_BLUFOR_USAF";mcc_sidename="WEST";[] call mcc_faction_choice;"]],[["Item","Æ VDV (EAST)"],["Action","mcc_faction="ACE_OPFOR_VDV";mcc_sidename="EAST";[] call mcc_faction_choice;"]],[["Item","Æ Aufständische (GUE)"],["Action","mcc_faction="ACE_INSURGENTS";mcc_side
+	
+	
+	["USMC","USMC_InfSquad","USMC","USMC_FireTeam","USMC","USMC_FireTeam_MG","USMC","USMC_FireTeam_AT","USMC","USMC_FireTeam_Support","USMC","USMC_HeavyATTeam","USMC","USMC_SniperTeam","USMC","USMC_FRTeam","USMC","USMC_FRTeam_Razor","CDF","CDF_InfSquad","CDF","CDF_InfSquad_Weapons","CDF","CDF_InfSection_AT","CDF","CDF_InfSection_AA","CDF","CDF_InfSection_MG","CDF","CDF_InfSection_Patrol","CDF","CDF_SniperTeam","Afrenian army","HQ","Afrenian army","inf_squad","Afrenian army","RPG","Afrenian army","Polisie","Afrenian army","Antiair","Afrenian army","MG","ACE_BLUFOR_USARMY","USArmy_Squad","ACE_BLUFOR_USARMY","ACE_SF_Detachment","ACE_BLUFOR_USMC_Desert","ACE_USMC_D_InfSquad","ACE_BLUFOR_USMC_Desert","ACE_USMC_D_FireTeam","ACE_BLUFOR_USMC_Desert","ACE_USMC_D_FireTeam_MG","ACE_BLUFOR_USMC_Desert","ACE_USMC_D_FireTeam_AT","ACE_BLUFOR_USMC_Desert","ACE_USMC_D_FireTeam_Support","ACE_BLUFOR_USMC_Desert","ACE_USMC_D_HeavyATTeam","ACE_BLUFOR_USMC_Desert","ACE_USMC_D_SniperTeam","RU","RU_InfSquad","RU","RU_InfSection","RU","RU_InfSection_AT","RU","RU_InfSection_AA","RU","RU_InfSection_MG","RU","RU_SniperTeam","RU","RUS_ReconTeam","RU","MVD_AssaultTeam","INS","INS_InfSquad","INS","INS_InfSquad_Weapons","INS","INS_InfSection_AT","INS","INS_InfSection_AA","INS","INS_SniperTeam","INS","INS_MilitiaSquad","Molatian army","HQ","Molatian army","inf_squad","Molatian army","RPG","Molatian army","MG","FFAA","FFAA_ham_grp","FFAA","FFAA_ham_wep_grp","FFAA","FFAA_ham_mob","FFAA","FFAA_ham_AA","GUE","GUE_InfSquad","GUE","GUE_InfSquad_Assault","GUE","GUE_InfSquad_Weapons","GUE","GUE_InfTeam_1","GUE","GUE_InfTeam_2","GUE","GUE_InfTeam_AT","GUE","GUE_GrpInf_TeamAA","GUE","GUE_GrpInf_TeamSniper","GUE","GUE_MilitiaSquad","FFAA","FFAA_agf_grp","FFAA","FFAA_agf_wep_grp","FFAA","FFAA_agf_AA","CIV","CIV_Crowd","CIV","CIV_City_1","CIV","CIV_City_2","CIV","CIV_Village_1","CIV","CIV_Village_2","OHPLA","PLA_InfSquad","OHPLA","PLA_InfSquad_Assault","OHPLA","PLA_InfSquad_Weapons","OHPLA","PLA_InfTeam_1","OHPLA","PLA_InfTeam_2","OHPLA","PLA_InfTeam_AT","OHPLA
+	
+	
+	
+	mcc_spawnfaction="configFile >> "CfgGroups" >>"West">>"USMC">>"Infantry">>"USMC_InfSquad" ";
