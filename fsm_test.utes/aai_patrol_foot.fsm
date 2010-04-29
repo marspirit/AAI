@@ -1,0 +1,109 @@
+class FSM
+{
+	fsmName = "FSM_Document";
+	initState = "Start";
+	finalStates[] = {"Exit_on_Combat"};
+	class States
+	{
+		class Start
+		{
+			name = "Start";
+			init = "_group 			= (group(_this select 0)); _patrol_pos 	= (_this select 1) select 0; _patrol_range   = (_this select 1) select 1;  player globalChat ""Start"";  player globalChat format [""%1"",_group]; player globalChat format [""%1"",_patrol_pos]; player globalChat format [""%1"",_patrol_range];";
+			class Links
+			{
+				class initialized
+				{
+					to = "get_waypoint";
+					priority = "0,000000";
+					condition = "AAI_INITIALIZED";
+					action = "player globalChat ""initialized"";";
+				};
+			};
+		};
+		class get_waypoint
+		{
+			name = "get_waypoint";
+			init = " while {count (waypoints _group) > 0} do {deleteWaypoint ((waypoints _group) select 0)};  _wppos = [_patrol_pos, _patrol_range] call AAI_GET_WP_LAND;  player globalChat ""get waypoint""; _wp = _group addWaypoint [_wppos,0]; _wp setWaypointType 		""move""; _wp showWaypoint 			""never""; _wp setWaypointBehaviour 	""safe""; _wp setWaypointCombatMode   ""green""; _wp setWaypointSpeed 		""limited"";  _group setCurrentWaypoint _wp;  _nrwp = count (waypoints _group);  _time = time;";
+			class Links
+			{
+				class Valid_Waypoint
+				{
+					to = "Patrol_to_waypoint";
+					priority = "1,000000";
+					condition = "not surfaceIsWater _wppos";
+					action = "";
+				};
+				class Waypoint_is_on_water
+				{
+					to = "get_waypoint";
+					priority = "0,000000";
+					condition = "true";
+					action = "";
+				};
+				class Exit_When_Combat
+				{
+					to = "Exit_on_Combat";
+					priority = "2,000000";
+					condition = "(behaviour (leader _group)) == ""COMBAT""";
+					action = "";
+				};
+			};
+		};
+		class Patrol_to_waypoint
+		{
+			name = "Patrol_to_waypoint";
+			init = "";
+			class Links
+			{
+				class Exit_When_Combat
+				{
+					to = "Exit_on_Combat";
+					priority = "1,000000";
+					condition = "(behaviour (leader _group)) == ""COMBAT""";
+					action = "";
+				};
+				class End_of_Waypoint
+				{
+					to = "Clear_Buildings";
+					priority = "0,000000";
+					condition = "((( currentWaypoint _group)+1)> _nrwp)";
+					action = "";
+				};
+				class To_Much_Time_elapsed
+				{
+					to = "get_waypoint";
+					priority = "0,000000";
+					condition = "(time - _time > 300)";
+					action = "";
+				};
+			};
+		};
+		class Exit_on_Combat
+		{
+			name = "Exit_on_Combat";
+			init = "while {count (waypoints _group) > 0} do {deleteWaypoint ((waypoints _group) select 0)}; player globalChat ""Exit on Combat"";";
+		};
+		class Clear_Buildings
+		{
+			name = "Clear_Buildings";
+			init = "_script_handler=[(leader _group), 40,false,0] spawn MON_moveNearestBuildings; _time = time;  ";
+			class Links
+			{
+				class Exit_When_Combat
+				{
+					to = "Exit_on_Combat";
+					priority = "2,000000";
+					condition = "(behaviour (leader _group)) == ""COMBAT""";
+					action = "";
+				};
+				class End_of_Patrol_Waypoint
+				{
+					to = "get_waypoint";
+					priority = "0,000000";
+					condition = "(time - _time > 30)";
+					action = "";
+				};
+			};
+		};
+	};
+};
