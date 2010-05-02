@@ -1,4 +1,4 @@
-can u read it?
+can u read it? yes idiot 
 
 
 README
