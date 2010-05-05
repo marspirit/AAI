@@ -37,7 +37,7 @@ class Mission
 	randomSeed=4931020;
 	class Intel
 	{
-		briefingName="CO_MCC_F2_V10";
+		briefingName="test111";
 		briefingDescription="*** CO_MCC_F2_V10 - chernarus ***";
 		resistanceWest=0;
 		startWeather=0.36250508;

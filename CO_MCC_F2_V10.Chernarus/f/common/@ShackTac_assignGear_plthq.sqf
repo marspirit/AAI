@@ -14,6 +14,7 @@ if (isNull (_this select 1)) exitwith {};
 if (!local (_this select 1)) exitwith {};
 
 waitUntil { !(isnil ("f_var_layout_plthq"))  };
+
 switch (f_var_layout_plthq) do
 {
    

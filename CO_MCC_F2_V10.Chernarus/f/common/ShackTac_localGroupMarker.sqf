@@ -11,18 +11,38 @@
 
 // DECLARE PRIVATE VARIABLES
 
-private ["_grp","_mkrType","_mkrText","_mkrColor","_mkrName","_mkr"];
+private ["_grp","_mkrType","_mkrText","_mkrColor","_mkrName","_mkr","_grpName"];
 
 // ====================================================================================
 
 // SET KEY VARIABLES
 // Using variables passed to the script instance, we will create some local variables:
 
-_grp = _this select 0;
+call compile format ["
+	_grp = %1;
+",_this select 0];
+
+_grpName = _this select 0;
 _mkrType = _this select 1;
 _mkrText = _this select 2;
 _mkrColor = _this select 3;
-_mkrName = str format ["mkr_%1",_grp];
+_mkrName = format ["mkr_%1",_grp];
+
+
+// ====================================================================================
+
+// WAIT FOR GROUP TO EXIST IN-MISSION
+// We wait for the group to have members before creating the marker.
+
+if (isNil "_grp") then 
+{
+	call compile format ["
+		waitUntil {sleep 3; count units %1 > 0}; 
+		_grp = %1;
+		
+	",_grpName,_grp];
+	_mkrName = format ["mkr_%1",_grp];
+};
 
 // ====================================================================================
 
@@ -126,7 +146,29 @@ if ((count (units _grp)) == 0) then
 				_mkrName setMarkerSizeLocal [0.8, 0.8];
 				_mkrName setMarkerTextLocal _mkrText;
 			};
-		};
+// Armor			
+			case 8:
+			{
+				_mkr = createMarkerLocal [_mkrName,[(getPos leader _grp select 0),(getPos leader _grp select 1)]];
+				_mkr setMarkerShapeLocal "ICON";
+				_mkrName setMarkerTypeLocal "B_ARMOR";
+				_mkrName setMarkerColorLocal _mkrColor;
+				_mkrName setMarkerSizeLocal [0.8, 0.8];
+				_mkrName setMarkerTextLocal _mkrText;
+			};			
+
+		
+// Air
+			case 9:
+			{
+				_mkr = createMarkerLocal [_mkrName,[(getPos leader _grp select 0),(getPos leader _grp select 1)]];
+				_mkr setMarkerShapeLocal "ICON";
+				_mkrName setMarkerTypeLocal "B_AIR";
+				_mkrName setMarkerColorLocal _mkrColor;
+				_mkrName setMarkerSizeLocal [0.8, 0.8];
+				_mkrName setMarkerTextLocal _mkrText;
+			};			
+		};		
 
 // ====================================================================================
 

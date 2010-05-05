@@ -10,7 +10,7 @@
 // ====================================================================================
 
 {
-	[_x, 0, "ColorBlack"] execVM "f\common\ShackTac_localFTMemberMarker.sqf";
+	[_x, 0, "ColorYellow"] execVM "f\common\ShackTac_localFTMemberMarker.sqf";
 }
 forEach units (group player);
 

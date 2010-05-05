@@ -1,5 +1,3 @@
-//===============================R3F Arty & Log ====================================
-#include "R3F_ARTY_AND_LOG\init.sqf"
 // ====================================================================================
 
 // F2 - Process ParamsArray
@@ -25,6 +23,13 @@ ace_sys_tracking_markers_enabled = false;
 // Credits: Please see the F2 online manual (http://www.ferstaberinde.com/f2/en/)
 
 enableSaving [false, false];
+
+// ====================================================================================
+
+// F2 - Respawn INIT
+// Credits: Please see the F2 online manual (http://www.ferstaberinde.com/f2/en/)
+
+f_respawnINIT = player addEventHandler ["killed", {_this execVM "init_onPlayerRespawn.sqf"}];
 
 // ====================================================================================
 
@@ -87,10 +92,19 @@ f_endSelected = -1;
 
 // ====================================================================================
 
-// F2 - Kegetys Spectator Script
+// F2A2 - Kegetys Spectator Script (ACE2 Addon)
 // Credits: Please see the F2 online manual (http://www.ferstaberinde.com/f2/en/)
 
-[] execVM "f\common\f_spect\specta_init.sqf";
+// RESTRICT VIEWABLE UNITS
+// We use the array ace_sys_spector_ShownSides to restrict which sides will be visible 
+// to spectating players:
+	
+ace_sys_spector_ShownSides = [west, east, resistance];
+
+// if (side player == west) then {ace_sys_spector_ShownSides = [west];};
+// if (side player == east) then {ace_sys_spector_ShownSides = [east];};
+// if (side player == resistance) then {ace_sys_spector_ShownSides = [resistance];};
+// if (side player == civilian) then {ace_sys_spector_ShownSides = [civilian];};
 
 // ====================================================================================
 
@@ -200,6 +214,13 @@ player setVariable ["BIS_noCoreConversations", true];
 // Credits: Please see the F2 online manual (http://www.ferstaberinde.com/f2/en/)
 
 // [] execVM "f\common\f_recog\recog_init.sqf";
+
+// ====================================================================================
+
+// F2 - Group E&E Check
+// Credits: Please see the F2 online manual (http://www.ferstaberinde.com/f2/en/)
+
+// [GroupName,ObjectName,100,1] execVM "f\server\f_groupEandECheck.sqf";
 
 // ====================================================================================
 // Disable Respawn & Organise start en death location 

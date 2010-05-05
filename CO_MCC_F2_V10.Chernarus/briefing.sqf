@@ -2,6 +2,13 @@
 // Credits: Please see the F2 online manual (http://www.ferstaberinde.com/f2/en/)
 // ====================================================================================
 
+// JIP CHECK
+// Prevents the script executing until the player has synchronised correctly:
+
+#include "f\common\f_waitForJIP.sqf"
+
+// ====================================================================================
+
 // DECLARE VARIABLES AND FUNCTIONS
 
 private ["_unitfaction"];

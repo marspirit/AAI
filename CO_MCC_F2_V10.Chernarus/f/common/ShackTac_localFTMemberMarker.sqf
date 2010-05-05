@@ -21,7 +21,7 @@ private ["_unit","_mkrType","_mkrColor","_mkrName","_mkr"];
 _unit = _this select 0;
 _mkrType = _this select 1;
 _mkrColor = _this select 2;
-_mkrName = str format ["mkr_%1",_unit];
+_mkrName = Format ["mkr_%1",_unit];
 
 // ====================================================================================
 

@@ -63,6 +63,24 @@ f_SETGROUP("HAT3 -",HAT3);
 
 f_SETGROUP("ST1 -",ST1);
 
+f_SETGROUP("SF1 -",SF1);
+f_SETGROUP("SF2 -",SF2);
+
+f_SETGROUP("Foxtrot Lead -",Foxtrot_Lead);
+f_SETGROUP("Foxtrot 1 -",Foxtrot_1);
+f_SETGROUP("Foxtrot 2 -",Foxtrot_2);
+f_SETGROUP("Foxtrot 3 -",Foxtrot_3);
+
+f_SETGROUP("Golf Lead -",Golf_Lead);
+f_SETGROUP("Golf 1 -",Golf_1);
+f_SETGROUP("Golf 2 -",Golf_2);
+f_SETGROUP("Golf 3 -",Golf_3);
+
+
+
+
+
+
 //===================================================================================== 
 
 if (true) exitWith {};

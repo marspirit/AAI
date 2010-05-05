@@ -12,12 +12,20 @@ class Header
 
 // ============================================================================================
 
-// F2 - Respawn Settings
+// F2A2 - Respawn Settings
 // Credits: Please see the F2 online manual (http://www.ferstaberinde.com/f2/en/)
 
 respawn      ="BASE";
 respawndelay = 10;
 disabledAI   = true;
+
+// ============================================================================================
+
+// F2 - JIP Reinforcement Options
+// Credits: Please see the F2 online manual (http://www.ferstaberinde.com/f2/en/)
+
+//#include "f\common\f_JIP_kitpicker.h"
+//#include "f\common\f_JIP_grppicker.h"
 
 // ============================================================================================
 
@@ -219,12 +227,13 @@ class Params
 
 };
 
+
 // ============================================================================================
 
 // F2 - Kegetys Spectator Script
 // Credits: Please see the F2 online manual (http://www.ferstaberinde.com/f2/en/)
 
-#include "f\common\f_spect\spectating.hpp"
+//#include "f\common\f_spect\spectating.hpp"
 
 // ============================================================================================
 
@@ -243,8 +252,20 @@ class Params
 
 // ============================================================================================
 
+//class RscTitles {
 
+// ============================================================================================
 
+// F2 - Name Tags
+// Credits: Please see the F2 online manual (http://www.ferstaberinde.com/f2/en/)
+
+// #include "f\common\f_recog\recogOverlay.hpp"
+
+// ============================================================================================
+
+//};
+
+// ============================================================================================
 // Desc: Dialog Template & Framework
 //-----------------------------------------------------------------------------
 // Note: ordering of these #include statements is important.
@@ -378,7 +399,3 @@ class CfgSounds
 		};
 		
 };
-
-
-
-
