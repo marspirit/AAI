@@ -47,7 +47,7 @@ _MenuStructureArray =
 		 [ ["Item", "Enemy Para Drop >"], ["SubMenu", "paratroops"]],
 		 [ ["Item", "Put Hostages >"], ["SubMenu", "hostages"] ],
 		 [ ["Item", "Put artillery site"], ["Action", "nul=[3] execVM 'mcc\general_scripts\arty_site\arty_site_request.sqf';"] ],
-		 [ ["Item", "Start RTE"], ["Action",  "nul=[player] execvm  ""\ION_RTE\StartRTE_MP.sqf;" ] ],
+		 [ ["Item", "Start RTE"], ["Action",  "nul=[3] execVM 'mcc\general_scripts\RTE\rte.sqf';" ] ],
 		  [ ["Item", "-"] ],
 		 [ ["Item", "Set Time >"], ["SubMenu", "time"] ],
 		 [ ["Item", "Set Weather >"], ["SubMenu", "weather"] ],
