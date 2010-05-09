@@ -97,7 +97,7 @@ while { true } do
 
 	sleep 2;
 
-    [player] call ace_fnc_startSpectator;
+    [] call ace_fnc_startSpectator;
 
 	if !(_trainingMode) exitWith {};
 };

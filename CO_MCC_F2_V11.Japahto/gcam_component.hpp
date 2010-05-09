@@ -504,7 +504,7 @@ class GCamDialog2
 			idc = 4;
 			x = 0.9155;
 			y = 0.7675;
-			h = 0.035
+			h = 0.035;
 			w = 0.0845;
 			text = "Close";
 			toolTip = "Close Units List";
@@ -524,7 +524,7 @@ class GCamDialog2
 			idc = 6;
 			x = 0.8655;
 			y = 0.9675;
-			h = 0.035
+			h = 0.035;
 			w = 0.0845;
 			text = "Close";
 			toolTip = "Close Map";
@@ -534,7 +534,7 @@ class GCamDialog2
 			idc = 7;
 			x = 0.7590;
 			y = 0.9675;
-			h = 0.035
+			h = 0.035;
 			w = 0.0845;
 			text = "Scan";
 			toolTip = "Scan and Show Groups (5sec, Visibility Range)";
@@ -544,7 +544,7 @@ class GCamDialog2
 			idc = 8;
 			x = 0.7485;
 			y = 0.7675;
-			h = 0.035
+			h = 0.035;
 			w = 0.0845;
 			text = "Behind";
 			sizeEx = 0.0385;
@@ -555,7 +555,7 @@ class GCamDialog2
 			idc = 9;
 			x = 0.6520;
 			y = 0.7675;
-			h = 0.035
+			h = 0.035;
 			w = 0.0845;
 			text = "Follow";
 			sizeEx = 0.0385;
@@ -566,7 +566,7 @@ class GCamDialog2
 			idc = 10;
 			x = 0.7485;
 			y = 0.7675;
-			h = 0.035
+			h = 0.035;
 			w = 0.0845;
 			text = "Focus";
 			sizeEx = 0.0385;
