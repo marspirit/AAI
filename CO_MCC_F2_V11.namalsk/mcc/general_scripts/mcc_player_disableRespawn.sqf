@@ -97,7 +97,7 @@ while { true } do
 
 	sleep 2;
 
-    [player, player, "null"] execVM "f\common\f_spect\specta.sqf";
+    [player] call ace_fnc_startSpectator;
 
 	if !(_trainingMode) exitWith {};
 };
