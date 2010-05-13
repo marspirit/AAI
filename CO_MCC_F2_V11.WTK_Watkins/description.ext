@@ -136,7 +136,7 @@ class Params
 //=======================Arty Params============================
 		class f_param_arty
         {
-                title = "Number of Arty round"
+                title = "Number of Arty round";
                 values[] = {0,5,10,20,30};
                 texts[] = {"0","5","10","20","30"};
                 default = 5;
