@@ -7,7 +7,7 @@ if (artyindex==0) then // in case we want a tent
 	}
 	else //in case we want a vehicle
 	{
-	_dummy addAction [("<t color=""#dddd00"">" + (localize "STR_R3F_ARTY_action_ouvrir_dlg_SM") + "</t>"), "R3F_ARTY_AND_LOG\R3F_ARTY\poste_commandement\ouvrir_dlg_saisie_mission.sqf", nil, 6, true, true, "","vehicle player != player"];
+	_dummy setVehicleInit "addAction [(""<t color=""#dddd00"">"" + (localize ""STR_R3F_ARTY_action_ouvrir_dlg_SM"") + ""</t>""), ""R3F_ARTY_AND_LOG\R3F_ARTY\poste_commandement\ouvrir_dlg_saisie_mission.sqf"", nil, 6, true, true, """",""vehicle player != player""]";
 	};
 if (artyindex<=2) then //now place some mortars by the side required
 	{
