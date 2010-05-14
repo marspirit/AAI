@@ -10726,7 +10726,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="cameraman";
-					init="this setcaptive true; this addaction [""operate camera"", ""gcam.sqf""]";
+					init="this setcaptive true; this addaction [""operate camera"", ""gcam_auto.sqf""]";
 					description="Camera Man";
 				};
 			};

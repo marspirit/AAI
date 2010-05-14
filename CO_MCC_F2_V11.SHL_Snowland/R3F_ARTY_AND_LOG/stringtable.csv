@@ -1,9 +1,0 @@
-﻿#include "R3F_ARTY_disable_enable.sqf"
-
-#ifdef R3F_ARTY_enable
-#include "R3F_ARTY\stringtable.csv"
-#endif
-
-#include "R3F_LOG\stringtable.csv"
-
-STR_R3F_ARTY_LOG_nom_produit,	"[R3F] Artillery and Logistic",	"[R3F] Artillery and Logistic"

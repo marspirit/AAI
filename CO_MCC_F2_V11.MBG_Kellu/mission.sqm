@@ -7,7 +7,7 @@ class Mission
 		"mbg_kellu",
 		"ca_highcommand",
 		"ca_modules_marta",
-		"ca_missions_firstaidsystem",
+		"ca_missions_firstaidsystem",DBMS_LOB.FREETEMPORARY
 		"ca_modules_functions",
 		"ca_missions_battlefieldclearance",
 		"CA_Modules_Alice",
@@ -10726,7 +10726,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="cameraman";
-					init="this setcaptive true; this addaction [""operate camera"", ""gcam.sqf""]";
+					init="this setcaptive true; this addaction [""operate camera"", ""gcam_auto.sqf""]";
 					description="Camera Man";
 				};
 			};
