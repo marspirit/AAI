@@ -1,10 +1,10 @@
-//==== put silencer on M4 weapons=================
+//==== put silencer on  weapons=================
 
 //who activate?
-_unit= _this select 1;
-_weapon= primaryWeapon _unit;
+_unit = _this select 1;
+_weapon = primaryWeapon _unit;
 
-if (_weapon == "M4A1_HWS_GL_camo" || _weapon =="M4A1_HWS_GL_SD_Camo" || _weapon == "ACE_M110" || _weapon == "ACE_M110_SD" || _weapon == "M4A1_Aim_camo" ||_weapon == "M4A1_AIM_SD_camo" || _weapon == "AKS_74_U" || _weapon == "AKS_74_UN_kobra" || _weapon =="G36K" || _weapon == "G36_C_SD_eotech" || _weapon == "MP5A5" || _weapon == "MP5SD" ||_weapon == "Bizon" || _weapon == "bizon_silenced" || _weapon == "ACE_M4A1_GL" || _weapon =="ACE_M4A1_GL_SD" || _weapon == "ACE_M4A1_ACOG" || _weapon == "ACE_M4A1_ACOG_SD" || _weapon == "M4A1_AIM" ||_weapon == "ACE_M4A1_AIM_SD" || _weapon == "ACE_SOC_M4A1_Aim" || _weapon == "ACE_SOC_M4A1_AIM_SD" || _weapon =="ACE_SOC_M4A1_SHORTDOT" || _weapon == "ACE_SOC_M4A1_SHORTDOT_SD" || _weapon == "M4SPR" || _weapon == "ACE_M4SPR_SD" ||_weapon == "ACE_TAC50" || _weapon == "ACE_TAC50_SD" || _weapon == "ACE_AK74M" || _weapon == "ACE_AK74M_Kobra" || _weapon == "ACE_AK74M_GL" ||_weapon == "ACE_AK74M_GL_Kobra" || _weapon == "ACE_AKS74P" || _weapon == "ACE_AKS74P_Kobra" || _weapon =="ACE_AKS74P_GL" || _weapon == "ACE_AKS74P_GL_Kobra" || _weapon == "ACE_AK105" || _weapon == "ACE_AK105_Kobra" ||_weapon == "ACE_AK103" || _weapon == "ACE_AK103_Kobra" || _weapon == "ACE_AK103_GL" || _weapon =="ACE_AK103_GL_Kobra" || _weapon == "ACE_AK104" || _weapon == "ACE_AK104_Kobra" || _weapon == "ACE_Val" ||_weapon == "ACE_Val_Kobra" || _weapon == "ACE_HK416_D10" || _weapon == "ACE_HK416_D10_SD" || _weapon =="ACE_HK416_D14" || _weapon == "ACE_HK416_D14_SD" || _weapon == "QBZ95" || _weapon == "QBZ95_SD" || _weapon == "ACE_oc14sd" || _weapon == "ACE_oc14" || _weapon == "ACE_oc14sp" || _weapon == "ACE_oc14sdsp" || _weapon == "ACE_gr1sd" || _weapon == "ACE_gr1" || _weapon == "ACE_gr1sp" || _weapon == "ACE_gr1sdsp" || _weapon == "ACE_HK416_D10_COMPM3_SD" || _weapon == "ACE_HK416_D10_COMPM3") then
+if (_weapon == "M4A1_HWS_GL_camo" || _weapon =="M4A1_HWS_GL_SD_Camo" || _weapon == "ACE_M110" || _weapon == "ACE_M110_SD" || _weapon == "M4A1_Aim_camo" ||_weapon == "M4A1_AIM_SD_camo" || _weapon == "AKS_74_U" || _weapon == "AKS_74_UN_kobra" || _weapon =="G36K" || _weapon == "G36_C_SD_eotech" || _weapon == "MP5A5" || _weapon == "MP5SD" ||_weapon == "Bizon" || _weapon == "bizon_silenced" || _weapon == "ACE_M4A1_GL" || _weapon =="ACE_M4A1_GL_SD" || _weapon == "ACE_M4A1_ACOG" || _weapon == "ACE_M4A1_ACOG_SD" || _weapon == "M4A1_AIM" ||_weapon == "ACE_M4A1_AIM_SD" || _weapon == "ACE_SOC_M4A1_Aim" || _weapon == "ACE_SOC_M4A1_AIM_SD" || _weapon =="ACE_SOC_M4A1_SHORTDOT" || _weapon == "ACE_SOC_M4A1_SHORTDOT_SD" || _weapon == "M4SPR" || _weapon == "ACE_M4SPR_SD" ||_weapon == "ACE_TAC50" || _weapon == "ACE_TAC50_SD" || _weapon == "ACE_AK74M" || _weapon == "ACE_AK74M_Kobra" || _weapon == "ACE_AK74M_GL" ||_weapon == "ACE_AK74M_GL_Kobra" || _weapon == "ACE_AKS74P" || _weapon == "ACE_AKS74P_Kobra" || _weapon =="ACE_AKS74P_GL" || _weapon == "ACE_AKS74P_GL_Kobra" || _weapon == "ACE_AK105" || _weapon == "ACE_AK105_Kobra" ||_weapon == "ACE_AK103" || _weapon == "ACE_AK103_Kobra" || _weapon == "ACE_AK103_GL" || _weapon =="ACE_AK103_GL_Kobra" || _weapon == "ACE_AK104" || _weapon == "ACE_AK104_Kobra" || _weapon == "ACE_Val" ||_weapon == "ACE_Val_Kobra" || _weapon == "ACE_HK416_D10" || _weapon == "ACE_HK416_D10_SD" || _weapon =="ACE_HK416_D14" || _weapon == "ACE_HK416_D14_SD" || _weapon == "QBZ95" || _weapon == "QBZ95_SD" || _weapon == "ACE_oc14sd" || _weapon == "ACE_oc14" || _weapon == "ACE_oc14sp" || _weapon == "ACE_oc14sdsp" || _weapon == "ACE_gr1sd" || _weapon == "ACE_gr1" || _weapon == "ACE_gr1sp" || _weapon == "ACE_gr1sdsp" || _weapon == "ACE_HK416_D10_COMPM3_SD" || _weapon == "ACE_HK416_D10_COMPM3" || _weapon == "ACE_M4A1_AIM_GL" || _weapon == "ACE_M4A1_AIM_GL_SD") then
 	{
 	//M4A1_RCO_GL to M4A1_HWS_GL_SD_Camo
 	if (_weapon == "M4A1_HWS_GL_camo") then
@@ -645,4 +645,27 @@ if (_weapon == "M4A1_HWS_GL_camo" || _weapon =="M4A1_HWS_GL_SD_Camo" || _weapon 
 		hintsilent "Weapon changed";
 		_unit selectWeapon "ACE_gr1sdsp";
 		};
+
+	
+	//ACE_M4A1_AIM_GL  to ACE_M4A1_AIM_GL_SD 
+	if (_weapon == "ACE_M4A1_AIM_GL") then
+		{
+		_unit playmove "AmovPercMstpSrasWrflDnon_AinvPknlMstpSlayWrflDnon";
+		sleep 1.5;
+		_unit removeweapon "ACE_M4A1_AIM_GL";
+		_unit addweapon "ACE_M4A1_AIM_GL_SD";
+		hintsilent "Weapon changed";
+		_unit selectWeapon "ACE_M4A1_AIM_GL_SD";
+		};
+	//and back
+	if (_weapon == "ACE_M4A1_AIM_GL_SD") then
+		{
+		_unit playMove "AmovPercMstpSrasWrflDnon_AinvPknlMstpSlayWrflDnon";
+		sleep 1.5;
+		_unit removeweapon "ACE_M4A1_AIM_GL_SD";
+		_unit addweapon "ACE_M4A1_AIM_GL";
+		hintsilent "Weapon changed";
+		_unit selectWeapon "ACE_M4A1_AIM_GL";
+		};
 	} else {hint "No silencer found for this Weapon"};
+

@@ -145,7 +145,7 @@ switch (_faction) do
    _atmag = "ACE_M136_CSRS";
    
    _sfrifle = "ACE_HK416_D10_COMPM3";
-   _sfrifleGL = "M4A1_HWS_GL_camo";
+   _sfrifleGL = "ACE_M4A1_AIM_GL";
    _sfriflemag = "30Rnd_556x45_Stanag";
    _sfsnrifle = "ACE_M4A1_ACOG";
    _sfsnmag = "30Rnd_556x45_Stanag";

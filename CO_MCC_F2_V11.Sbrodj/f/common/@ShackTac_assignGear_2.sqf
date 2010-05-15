@@ -145,12 +145,12 @@ switch (_faction) do
    _atmag = "ACE_M136_CSRS";
    
    _sfrifle = "ACE_SOC_M4A1_Aim";
-   _sfrifleGL = "M4A1_HWS_GL_camo";
+   _sfrifleGL = "ACE_M4A1_AIM_GL";
    _sfriflemag = "30Rnd_556x45_Stanag";
    _sfsnrifle = "M4SPR";
    _sfsnmag = "30Rnd_556x45_Stanag";
-   _sfmg = "Mk_48";
-   _sfmgmag = "100Rnd_762x51_M240";
+   _sfmg = "ACE_M249Para";
+   _sfmgmag = "200Rnd_556x45_M249";
    _sfpistol = "M9SD";
    _sfpistolmag = "15Rnd_9x19_M9SD";
    
@@ -1354,7 +1354,7 @@ switch (_typeofUnit) do
 	      
 	  _unit addweapon _rucksack;
 
-	  [_unit,_sfmgmag,1] spawn f_addMagToRuck;	
+	  [_unit,_sfmgmag,2] spawn f_addMagToRuck;	
 	  [_unit,"ACE_IRStrobe",1] spawn f_addMagToRuck;
 	  [_unit,"Binocular",1] spawn f_addMagToRuck;
       _unit selectweapon primaryweapon _unit;
