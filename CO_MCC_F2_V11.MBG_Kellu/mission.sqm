@@ -7,7 +7,7 @@ class Mission
 		"mbg_kellu",
 		"ca_highcommand",
 		"ca_modules_marta",
-		"ca_missions_firstaidsystem",DBMS_LOB.FREETEMPORARY
+		"ca_missions_firstaidsystem",
 		"ca_modules_functions",
 		"ca_missions_battlefieldclearance",
 		"CA_Modules_Alice",
@@ -3937,7 +3937,7 @@ class Mission
 					position[]={3910.48,22.361492,3047.1079};
 					id=254;
 					side="WEST";
-					vehicle="USMC_Soldier_Crew";
+					vehicle="USMC_Soldier_Pilot";
 					player="PLAY CDG";
 					rank="LIEUTENANT";
 					skill=0.60000002;
@@ -3972,7 +3972,7 @@ class Mission
 					position[]={3914.6885,22.079296,3047.3413};
 					id=256;
 					side="WEST";
-					vehicle="USMC_Soldier_Crew";
+					vehicle="USMC_Soldier_Pilot";
 					player="PLAY CDG";
 					rank="LIEUTENANT";
 					skill=0.60000002;
@@ -4007,7 +4007,7 @@ class Mission
 					position[]={3918.5835,21.762083,3047.2981};
 					id=258;
 					side="WEST";
-					vehicle="USMC_Soldier_Crew";
+					vehicle="USMC_Soldier_Pilot";
 					player="PLAY CDG";
 					rank="LIEUTENANT";
 					skill=0.60000002;
@@ -4042,7 +4042,7 @@ class Mission
 					position[]={3921.4648,21.567986,3047.3528};
 					id=260;
 					side="WEST";
-					vehicle="USMC_Soldier_Crew";
+					vehicle="USMC_Soldier_Pilot";
 					player="PLAY CDG";
 					rank="LIEUTENANT";
 					skill=0.60000002;

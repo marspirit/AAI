@@ -3937,7 +3937,7 @@ class Mission
 					position[]={3378.3159,10,506.59222};
 					id=254;
 					side="WEST";
-					vehicle="USMC_Soldier_Crew";
+					vehicle="USMC_Soldier_Pilot";
 					player="PLAY CDG";
 					rank="LIEUTENANT";
 					skill=0.60000002;
@@ -3972,7 +3972,7 @@ class Mission
 					position[]={3382.5244,10.493523,506.82562};
 					id=256;
 					side="WEST";
-					vehicle="USMC_Soldier_Crew";
+					vehicle="USMC_Soldier_Pilot";
 					player="PLAY CDG";
 					rank="LIEUTENANT";
 					skill=0.60000002;
@@ -4007,7 +4007,7 @@ class Mission
 					position[]={3386.4194,11.257389,506.78241};
 					id=258;
 					side="WEST";
-					vehicle="USMC_Soldier_Crew";
+					vehicle="USMC_Soldier_Pilot";
 					player="PLAY CDG";
 					rank="LIEUTENANT";
 					skill=0.60000002;
@@ -4042,7 +4042,7 @@ class Mission
 					position[]={3389.3008,11.822918,506.8371};
 					id=260;
 					side="WEST";
-					vehicle="USMC_Soldier_Crew";
+					vehicle="USMC_Soldier_Pilot";
 					player="PLAY CDG";
 					rank="LIEUTENANT";
 					skill=0.60000002;

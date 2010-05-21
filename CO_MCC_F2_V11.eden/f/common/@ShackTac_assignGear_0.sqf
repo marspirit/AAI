@@ -1275,22 +1275,29 @@ switch (_typeofUnit) do
    };
 // ====================================================================================
 
-// LOADOUT: SF Grenadir
+// LOADOUT: SF Radioman
 
    case "sfg":
    {
       removeallweapons _unit;
-	  {_unit addmagazine _sfriflemag} foreach [1,2,3,4,5,6,7,8];
+	  {_unit addmagazine _sfriflemag} foreach [1,2,3,4,5,6,7];
       {_unit addmagazine _Grenade} foreach [1,2];
-      {_unit addmagazine _smokegrenade;} foreach [1];
+      {_unit addmagazine _smokegrenade;} foreach [1,2];
       {_unit addmagazine _bandage} foreach [1,2];
+	  {_unit addmagazine "Laserbatteries"} foreach [1];
+	  _unit addweapon "ACE_M72A2";
+	  _success = [_unit, "ACE_M72A2"] call ACE_fnc_PutWeaponOnBack;
       _unit addweapon _sfrifle;
       _unit addweapon "NVGoggles";   
 	  _unit addweapon "ACE_GlassesBalaklava";
-	  _unit addmagazine "ACE_IRStrobe";
 	  _unit addweapon "ACE_Map_Tools";
-            
-       _unit addweapon "ACE_P159_RD90";
+	  _unit addweapon "Laserdesignator";
+	              
+      _unit addweapon "ACE_P159_RD90";
+	   
+	  [_unit,_sfriflemag,2] spawn f_addMagToRuck;
+	  [_unit,"Laserbatteries",1] spawn f_addMagToRuck;
+	  [_unit,"ACE_IRStrobe",1] spawn f_addMagToRuck;
 	  	              
       _unit selectweapon primaryweapon _unit;
    };
@@ -1328,23 +1335,20 @@ switch (_typeofUnit) do
    case "sfm":
    {
       removeallweapons _unit;
-      {_unit addmagazine _sfsnmag} foreach [1,2,3,4,5,6];
+      {_unit addmagazine _sfsnmag} foreach [1,2,3,4,5,6,7];
       {_unit addmagazine _Grenade} foreach [1,2];
       {_unit addmagazine _smokegrenade;} foreach [1,2];
       {_unit addmagazine _sfpistolmag;} foreach [1,2,3,4,5,6];
 	  {_unit addmagazine _bandage} foreach [1,2];
-	  {_unit addmagazine "Laserbatteries"} foreach [1];
 	  _unit addweapon _sfpistol;
       _unit addweapon _sfsnrifle;
       _unit addweapon "NVGoggles";   
 	  _unit addweapon "ACE_GlassesBalaklava";
-	  _unit addweapon "Laserdesignator";
 	  _unit addweapon "ACE_Map_Tools";
             
       _unit addweapon _rucksack;
 
       [_unit,_sfsnmag,6] spawn f_addMagToRuck;
-	  [_unit,"Laserbatteries",2] spawn f_addMagToRuck;
 	  [_unit,_smokegrenade,2] spawn f_addMagToRuck;
       [_unit,_grenade,2] spawn f_addMagToRuck;
 	  [_unit,"ACE_IRStrobe",1] spawn f_addMagToRuck;

@@ -1,671 +1,374 @@
 //==== put silencer on  weapons=================
 
 //who activate?
+private ["_unit", "_weapon", "_mag", "_sdmag", "_magazines", "_weapons", "_items", "_stance", "_weaponnew","_success"];
+If (!(isPlayer _unit) || !(local player)) exitWith{};
 _unit = _this select 1;
 _weapon = primaryWeapon _unit;
-
-if (_weapon == "M4A1_HWS_GL_camo" || _weapon =="M4A1_HWS_GL_SD_Camo" || _weapon == "ACE_M110" || _weapon == "ACE_M110_SD" || _weapon == "M4A1_Aim_camo" ||_weapon == "M4A1_AIM_SD_camo" || _weapon == "AKS_74_U" || _weapon == "AKS_74_UN_kobra" || _weapon =="G36K" || _weapon == "G36_C_SD_eotech" || _weapon == "MP5A5" || _weapon == "MP5SD" ||_weapon == "Bizon" || _weapon == "bizon_silenced" || _weapon == "ACE_M4A1_GL" || _weapon =="ACE_M4A1_GL_SD" || _weapon == "ACE_M4A1_ACOG" || _weapon == "ACE_M4A1_ACOG_SD" || _weapon == "M4A1_AIM" ||_weapon == "ACE_M4A1_AIM_SD" || _weapon == "ACE_SOC_M4A1_Aim" || _weapon == "ACE_SOC_M4A1_AIM_SD" || _weapon =="ACE_SOC_M4A1_SHORTDOT" || _weapon == "ACE_SOC_M4A1_SHORTDOT_SD" || _weapon == "M4SPR" || _weapon == "ACE_M4SPR_SD" ||_weapon == "ACE_TAC50" || _weapon == "ACE_TAC50_SD" || _weapon == "ACE_AK74M" || _weapon == "ACE_AK74M_Kobra" || _weapon == "ACE_AK74M_GL" ||_weapon == "ACE_AK74M_GL_Kobra" || _weapon == "ACE_AKS74P" || _weapon == "ACE_AKS74P_Kobra" || _weapon =="ACE_AKS74P_GL" || _weapon == "ACE_AKS74P_GL_Kobra" || _weapon == "ACE_AK105" || _weapon == "ACE_AK105_Kobra" ||_weapon == "ACE_AK103" || _weapon == "ACE_AK103_Kobra" || _weapon == "ACE_AK103_GL" || _weapon =="ACE_AK103_GL_Kobra" || _weapon == "ACE_AK104" || _weapon == "ACE_AK104_Kobra" || _weapon == "ACE_Val" ||_weapon == "ACE_Val_Kobra" || _weapon == "ACE_HK416_D10" || _weapon == "ACE_HK416_D10_SD" || _weapon =="ACE_HK416_D14" || _weapon == "ACE_HK416_D14_SD" || _weapon == "QBZ95" || _weapon == "QBZ95_SD" || _weapon == "ACE_oc14sd" || _weapon == "ACE_oc14" || _weapon == "ACE_oc14sp" || _weapon == "ACE_oc14sdsp" || _weapon == "ACE_gr1sd" || _weapon == "ACE_gr1" || _weapon == "ACE_gr1sp" || _weapon == "ACE_gr1sdsp" || _weapon == "ACE_HK416_D10_COMPM3_SD" || _weapon == "ACE_HK416_D10_COMPM3" || _weapon == "ACE_M4A1_AIM_GL" || _weapon == "ACE_M4A1_AIM_GL_SD") then
+_success = true;
+switch (_weapon) do 
 	{
-	//M4A1_RCO_GL to M4A1_HWS_GL_SD_Camo
-	if (_weapon == "M4A1_HWS_GL_camo") then
-		{
-		_unit playmove "AmovPercMstpSrasWrflDnon_AinvPknlMstpSlayWrflDnon";
-		sleep 1.5;
-		_unit removeweapon "M4A1_HWS_GL_camo";
-		_unit addweapon "M4A1_HWS_GL_SD_Camo";
-		hintsilent "Weapon changed";
-		_unit selectWeapon "M4A1_HWS_GL_SD_Camo";
-		};
-	//and back
-	if (_weapon == "M4A1_HWS_GL_SD_Camo") then
-		{
-		_unit playMove 	"AmovPercMstpSrasWrflDnon_AinvPknlMstpSlayWrflDnon";
-		sleep 1.5;
-		_unit removeweapon "M4A1_HWS_GL_SD_Camo";
-		_unit addweapon "M4A1_HWS_GL_camo";
-		hintsilent "Weapon changed";
-		_unit selectWeapon "M4A1_HWS_GL_camo";
-		};
+	case "M4A1_HWS_GL_camo":
+	{
+	_mag = "30Rnd_556x45_Stanag";
+	_sdmag = "30Rnd_556x45_StanagSD";
+	_weaponnew = "M4A1_HWS_GL_SD_Camo";
+	};
 	
-	//ACE_M110 to ACE_M110 silenced
-	if (_weapon == "ACE_M110") then
-		{
-		_unit playmove "AmovPercMstpSrasWrflDnon_AinvPknlMstpSlayWrflDnon";
-		sleep 1.5;
-		_unit removeweapon "ACE_M110";
-		_unit addweapon "ACE_M110_SD";
-		hintsilent "Weapon changed";
-		_unit selectWeapon "ACE_M110_SD";
-		};
-	//and back
-	if (_weapon == "ACE_M110_SD") then
-		{
-		_unit playMove "AmovPercMstpSrasWrflDnon_AinvPknlMstpSlayWrflDnon";
-		sleep 1.5;
-		_unit removeweapon "ACE_M110_SD";
-		_unit addweapon "ACE_M110";
-		hintsilent "Weapon changed";
-		_unit selectWeapon "ACE_M110";
-		};
+	case "M4A1_HWS_GL_SD_Camo":
+	{
+	_mag = "30Rnd_556x45_Stanag";
+	_sdmag = "30Rnd_556x45_StanagSD";
+	_weaponnew = "M4A1_HWS_GL_camo";
+	};
 	
-	//M4A1_Aim_camo to M4A1_Aim_camo SD
-	if (_weapon == "M4A1_Aim_camo") then
-		{
-		_unit playmove "AmovPercMstpSrasWrflDnon_AinvPknlMstpSlayWrflDnon";
-		sleep 1.5;
-		_unit removeweapon "M4A1_Aim_camo";
-		_unit addweapon "M4A1_AIM_SD_camo";
-		hintsilent "Weapon changed";
-		_unit selectWeapon "M4A1_AIM_SD_camo";
-		};
-	//and back
-	if (_weapon == "M4A1_AIM_SD_camo") then
-		{
-		_unit playMove "AmovPercMstpSrasWrflDnon_AinvPknlMstpSlayWrflDnon";
-		sleep 1.5;
-		_unit removeweapon "M4A1_AIM_SD_camo";
-		_unit addweapon "M4A1_Aim_camo";
-		hintsilent "Weapon changed";
-		_unit selectWeapon "M4A1_Aim_camo";
-		};
-	//AKS_74_U to AKS_74_UN_kobra
-	if (_weapon == "AKS_74_U") then
-		{
-		_unit playmove "AmovPercMstpSrasWrflDnon_AinvPknlMstpSlayWrflDnon";
-		sleep 1.5;
-		_unit removeweapon "AKS_74_U";
-		_unit addweapon "AKS_74_UN_kobra";
-		hintsilent "Weapon changed";
-		_unit selectWeapon "AKS_74_UN_kobra";
-		};
-	//and back
-	if (_weapon == "AKS_74_UN_kobra") then
-		{
-		_unit playMove 	"AmovPercMstpSrasWrflDnon_AinvPknlMstpSlayWrflDnon";
-		sleep 1.5;
-		_unit removeweapon "AKS_74_UN_kobra";
-		_unit addweapon "AKS_74_U";
-		hintsilent "Weapon changed";
-		_unit selectWeapon "AKS_74_U";
-		};
+	case "ACE_M110":
+	{
+	_mag = "ACE_20Rnd_762x51_SB_M110";
+	_sdmag = "ACE_20Rnd_762x51_S_M110";
+	_weaponnew = "ACE_M110_SD";
+	};
 	
-	//G36K to G36_C_SD_eotech
-	if (_weapon == "G36K") then
-		{
-		_unit playmove "AmovPercMstpSrasWrflDnon_AinvPknlMstpSlayWrflDnon";
-		sleep 1.5;
-		_unit removeweapon "G36K";
-		_unit addweapon "G36_C_SD_eotech";
-		hintsilent "Weapon changed";
-		_unit selectWeapon "G36_C_SD_eotech";
-		};
-	//and back
-	if (_weapon == "G36_C_SD_eotech") then
-		{
-		_unit playMove "AmovPercMstpSrasWrflDnon_AinvPknlMstpSlayWrflDnon";
-		sleep 1.5;
-		_unit removeweapon "G36_C_SD_eotech";
-		_unit addweapon "G36K";
-		hintsilent "Weapon changed";
-		_unit selectWeapon "G36K";
-		};
+	case "ACE_M110_SD":
+	{
+	_mag = "ACE_20Rnd_762x51_SB_M110";
+	_sdmag = "ACE_20Rnd_762x51_S_M110";
+	_weaponnew = "ACE_M110";
+	};
 	
-	//MP5A5 to MP5SD
-	if (_weapon == "MP5A5") then
-		{
-		_unit playmove "AmovPercMstpSrasWrflDnon_AinvPknlMstpSlayWrflDnon";
-		sleep 1.5;
-		_unit removeweapon "MP5A5";
-		_unit addweapon "MP5SD";
-		hintsilent "Weapon changed";
-		_unit selectWeapon "MP5SD";
-		};
-	//and back
-	if (_weapon == "MP5SD") then
-		{
-		_unit playMove "AmovPercMstpSrasWrflDnon_AinvPknlMstpSlayWrflDnon";
-		sleep 1.5;
-		_unit removeweapon "MP5SD";
-		_unit addweapon "MP5A5";
-		hintsilent "Weapon changed";
-		_unit selectWeapon "MP5A5";
-		};
-	//Bizon to bizon_silenced
-	if (_weapon == "Bizon") then
-		{
-		_unit playmove "AmovPercMstpSrasWrflDnon_AinvPknlMstpSlayWrflDnon";
-		sleep 1.5;
-		_unit removeweapon "Bizon";
-		_unit addweapon "bizon_silenced";
-		hintsilent "Weapon changed";
-		_unit selectWeapon "bizon_silenced";
-		};
-	//and back
-	if (_weapon == "bizon_silenced") then
-		{
-		_unit playMove 	"AmovPercMstpSrasWrflDnon_AinvPknlMstpSlayWrflDnon";
-		sleep 1.5;
-		_unit removeweapon "bizon_silenced";
-		_unit addweapon "Bizon";
-		hintsilent "Weapon changed";
-		_unit selectWeapon "Bizon";
-		};
+	case "M4A1_Aim_camo":
+	{
+	_mag = "30Rnd_556x45_Stanag";
+	_sdmag = "30Rnd_556x45_StanagSD";
+	_weaponnew = "M4A1_AIM_SD_camo";
+	};
 	
-	//ACE_M4A1_GL  to ACE_M4A1_GL_SD        
-	if (_weapon == "ACE_M4A1_GL") then
-		{
-		_unit playmove "AmovPercMstpSrasWrflDnon_AinvPknlMstpSlayWrflDnon";
-		sleep 1.5;
-		_unit removeweapon "ACE_M4A1_GL";
-		_unit addweapon "ACE_M4A1_GL_SD";
-		hintsilent "Weapon changed";
-		_unit selectWeapon "ACE_M4A1_GL_SD";
-		};
-	//and back
-	if (_weapon == "ACE_M4A1_GL_SD") then
-		{
-		_unit playMove "AmovPercMstpSrasWrflDnon_AinvPknlMstpSlayWrflDnon";
-		sleep 1.5;
-		_unit removeweapon "ACE_M4A1_GL_SD";
-		_unit addweapon "ACE_M4A1_GL";
-		hintsilent "Weapon changed";
-		_unit selectWeapon "ACE_M4A1_GL";
-		};
+	case "M4A1_AIM_SD_camo":
+	{
+	_mag = "30Rnd_556x45_Stanag";
+	_sdmag = "30Rnd_556x45_StanagSD";
+	_weaponnew = "M4A1_Aim_camo";
+	};
 	
-	//ACE_M4A1_ACOG  to ACE_M4A1_ACOG_SD  
-	if (_weapon == "ACE_M4A1_ACOG") then
-		{
-		_unit playmove "AmovPercMstpSrasWrflDnon_AinvPknlMstpSlayWrflDnon";
-		sleep 1.5;
-		_unit removeweapon "ACE_M4A1_ACOG";
-		_unit addweapon "ACE_M4A1_ACOG_SD";
-		hintsilent "Weapon changed";
-		_unit selectWeapon "ACE_M4A1_ACOG_SD";
-		};
-	//and back
-	if (_weapon == "ACE_M4A1_ACOG_SD") then
-		{
-		_unit playMove "AmovPercMstpSrasWrflDnon_AinvPknlMstpSlayWrflDnon";
-		sleep 1.5;
-		_unit removeweapon "ACE_M4A1_ACOG_SD";
-		_unit addweapon "ACE_M4A1_ACOG";
-		hintsilent "Weapon changed";
-		_unit selectWeapon "ACE_M4A1_ACOG";
-		};
-	//M4A1_AIM  to ACE_M4A1_AIM_SD           
-	if (_weapon == "M4A1_AIM") then
-		{
-		_unit playmove "AmovPercMstpSrasWrflDnon_AinvPknlMstpSlayWrflDnon";
-		sleep 1.5;
-		_unit removeweapon "M4A1_AIM";
-		_unit addweapon "ACE_M4A1_AIM_SD";
-		hintsilent "Weapon changed";
-		_unit selectWeapon "ACE_M4A1_AIM_SD";
-		};
-	//and back
-	if (_weapon == "ACE_M4A1_AIM_SD") then
-		{
-		_unit playMove 	"AmovPercMstpSrasWrflDnon_AinvPknlMstpSlayWrflDnon";
-		sleep 1.5;
-		_unit removeweapon "ACE_M4A1_AIM_SD";
-		_unit addweapon "M4A1_AIM";
-		hintsilent "Weapon changed";
-		_unit selectWeapon "M4A1_AIM";
-		};
+	case "G36K":
+	{
+	_mag = "30Rnd_556x45_Stanag";
+	_sdmag = "30Rnd_556x45_StanagSD";
+	_weaponnew = "G36_C_SD_eotech";
+	};
 	
-	//ACE_SOC_M4A1_Aim  to ACE_SOC_M4A1_AIM_SD
-	if (_weapon == "ACE_SOC_M4A1_Aim") then
-		{
-		_unit playmove "AmovPercMstpSrasWrflDnon_AinvPknlMstpSlayWrflDnon";
-		sleep 1.5;
-		_unit removeweapon "ACE_SOC_M4A1_Aim";
-		_unit addweapon "ACE_SOC_M4A1_AIM_SD";
-		hintsilent "Weapon changed";
-		_unit selectWeapon "ACE_SOC_M4A1_AIM_SD";
-		};
-	//and back
-	if (_weapon == "ACE_SOC_M4A1_AIM_SD") then
-		{
-		_unit playMove "AmovPercMstpSrasWrflDnon_AinvPknlMstpSlayWrflDnon";
-		sleep 1.5;
-		_unit removeweapon "ACE_SOC_M4A1_AIM_SD";
-		_unit addweapon "ACE_SOC_M4A1_Aim";
-		hintsilent "Weapon changed";
-		_unit selectWeapon "ACE_SOC_M4A1_Aim";
-		};
+	case "G36_C_SD_eotech":
+	{
+	_mag = "30Rnd_556x45_Stanag";
+	_sdmag = "30Rnd_556x45_StanagSD";
+	_weaponnew = "G36K";
+	};
 	
-	//ACE_SOC_M4A1_SHORTDOT  to ACE_SOC_M4A1_SHORTDOT_SD
-	if (_weapon == "ACE_SOC_M4A1_SHORTDOT") then
-		{
-		_unit playmove "AmovPercMstpSrasWrflDnon_AinvPknlMstpSlayWrflDnon";
-		sleep 1.5;
-		_unit removeweapon "ACE_SOC_M4A1_SHORTDOT";
-		_unit addweapon "ACE_SOC_M4A1_SHORTDOT_SD";
-		hintsilent "Weapon changed";
-		_unit selectWeapon "ACE_SOC_M4A1_SHORTDOT_SD";
-		};
-	//and back
-	if (_weapon == "ACE_SOC_M4A1_SHORTDOT_SD") then
-		{
-		_unit playMove "AmovPercMstpSrasWrflDnon_AinvPknlMstpSlayWrflDnon";
-		sleep 1.5;
-		_unit removeweapon "ACE_SOC_M4A1_SHORTDOT_SD";
-		_unit addweapon "ACE_SOC_M4A1_SHORTDOT";
-		hintsilent "Weapon changed";
-		_unit selectWeapon "ACE_SOC_M4A1_SHORTDOT";
-		};
-	//M4SPR  to ACE_M4SPR_SD                     
-	if (_weapon == "M4SPR") then
-		{
-		_unit playmove "AmovPercMstpSrasWrflDnon_AinvPknlMstpSlayWrflDnon";
-		sleep 1.5;
-		_unit removeweapon "M4SPR";
-		_unit addweapon "ACE_M4SPR_SD";
-		hintsilent "Weapon changed";
-		_unit selectWeapon "ACE_M4SPR_SD";
-		};
-	//and back
-	if (_weapon == "ACE_M4SPR_SD") then
-		{
-		_unit playMove "AmovPercMstpSrasWrflDnon_AinvPknlMstpSlayWrflDnon";
-		sleep 1.5;
-		_unit removeweapon "ACE_M4SPR_SD";
-		_unit addweapon "M4SPR";
-		hintsilent "Weapon changed";
-		_unit selectWeapon "M4SPR";
-		};
+	case "MP5A5":
+	{
+	_mag = "30Rnd_9x19_MP5";
+	_sdmag = "30Rnd_9x19_MP5S";
+	_weaponnew = "MP5SD";
+	};
+		
+	case "MP5SD":
+	{
+	_mag = "30Rnd_9x19_MP5";
+	_sdmag = "30Rnd_9x19_MP5S";
+	_weaponnew = "MP5A5";
+	};
 	
-	//ACE_TAC50   to ACE_TAC50_SD                 
-	if (_weapon == "ACE_TAC50") then
-		{
-		_unit playmove "AmovPercMstpSrasWrflDnon_AinvPknlMstpSlayWrflDnon";
-		sleep 1.5;
-		_unit removeweapon "ACE_TAC50";
-		_unit addweapon "ACE_TAC50_SD";
-		hintsilent "Weapon changed";
-		_unit selectWeapon "ACE_TAC50_SD";
-		};
-	//and back
-	if (_weapon == "ACE_TAC50_SD") then
-		{
-		_unit playMove "AmovPercMstpSrasWrflDnon_AinvPknlMstpSlayWrflDnon";
-		sleep 1.5;
-		_unit removeweapon "ACE_TAC50_SD";
-		_unit addweapon "ACE_TAC50";
-		hintsilent "Weapon changed";
-		_unit selectWeapon "ACE_TAC50";
-		};
-	//
-	//ACE_AK74M  to ACE_AK74M_Kobra
-	if (_weapon == "ACE_AK74M") then
-		{
-		_unit playmove "AmovPercMstpSrasWrflDnon_AinvPknlMstpSlayWrflDnon";
-		sleep 1.5;
-		_unit removeweapon "ACE_AK74M";
-		_unit addweapon "ACE_AK74M_Kobra";
-		hintsilent "Weapon changed";
-		_unit selectWeapon "ACE_AK74M_Kobra";
-		};
-	//and back
-	if (_weapon == "ACE_AK74M_Kobra") then
-		{
-		_unit playMove 	"AmovPercMstpSrasWrflDnon_AinvPknlMstpSlayWrflDnon";
-		sleep 1.5;
-		_unit removeweapon "ACE_AK74M_Kobra";
-		_unit addweapon "ACE_AK74M";
-		hintsilent "Weapon changed";
-		_unit selectWeapon "ACE_AK74M";
-		};
+	case "Bizon":
+	{
+	_mag = "64Rnd_9x19_Bizon";
+	_sdmag = "64Rnd_9x19_SD_Bizon";
+	_weaponnew = "bizon_silenced";
+	};
 	
-	//ACE_AK74M_GL to ACE_AK74M_GL_Kobra
-	if (_weapon == "ACE_AK74M_GL") then
-		{
-		_unit playmove "AmovPercMstpSrasWrflDnon_AinvPknlMstpSlayWrflDnon";
-		sleep 1.5;
-		_unit removeweapon "ACE_AK74M_GL";
-		_unit addweapon "ACE_AK74M_GL_Kobra";
-		hintsilent "Weapon changed";
-		_unit selectWeapon "ACE_AK74M_GL_Kobra";
-		};
-	//and back
-	if (_weapon == "ACE_AK74M_GL_Kobra") then
-		{
-		_unit playMove "AmovPercMstpSrasWrflDnon_AinvPknlMstpSlayWrflDnon";
-		sleep 1.5;
-		_unit removeweapon "ACE_AK74M_GL_Kobra";
-		_unit addweapon "ACE_AK74M_GL";
-		hintsilent "Weapon changed";
-		_unit selectWeapon "ACE_AK74M_GL";
-		};
+	case "bizon_silenced":
+	{
+	_mag = "64Rnd_9x19_Bizon";
+	_sdmag = "64Rnd_9x19_SD_Bizon";
+	_weaponnew = "Bizon";
+	};
 	
-	//ACE_AKS74P  to ACE_AKS74P_Kobra
-	if (_weapon == "ACE_AKS74P") then
-		{
-		_unit playmove "AmovPercMstpSrasWrflDnon_AinvPknlMstpSlayWrflDnon";
-		sleep 1.5;
-		_unit removeweapon "ACE_AKS74P";
-		_unit addweapon "ACE_AKS74P_Kobra";
-		hintsilent "Weapon changed";
-		_unit selectWeapon "ACE_AKS74P_Kobra";
-		};
-	//and back
-	if (_weapon == "ACE_AKS74P_Kobra") then
-		{
-		_unit playMove "AmovPercMstpSrasWrflDnon_AinvPknlMstpSlayWrflDnon";
-		sleep 1.5;
-		_unit removeweapon "ACE_AKS74P_Kobra";
-		_unit addweapon "ACE_AKS74P";
-		hintsilent "Weapon changed";
-		_unit selectWeapon "ACE_AKS74P";
-		};
-	//ACE_AKS74P_GL  to ACE_AKS74P_GL_Kobra
-	if (_weapon == "ACE_AKS74P_GL") then
-		{
-		_unit playmove "AmovPercMstpSrasWrflDnon_AinvPknlMstpSlayWrflDnon";
-		sleep 1.5;
-		_unit removeweapon "ACE_AKS74P_GL";
-		_unit addweapon "ACE_AKS74P_GL_Kobra";
-		hintsilent "Weapon changed";
-		_unit selectWeapon "ACE_AKS74P_GL_Kobra";
-		};
-	//and back
-	if (_weapon == "ACE_AKS74P_GL_Kobra") then
-		{
-		_unit playMove 	"AmovPercMstpSrasWrflDnon_AinvPknlMstpSlayWrflDnon";
-		sleep 1.5;
-		_unit removeweapon "ACE_AKS74P_GL_Kobra";
-		_unit addweapon "ACE_AKS74P_GL";
-		hintsilent "Weapon changed";
-		_unit selectWeapon "ACE_AKS74P_GL";
-		};
+	case "ACE_M4A1_GL":
+	{
+	_mag = "30Rnd_556x45_Stanag";
+	_sdmag = "30Rnd_556x45_StanagSD";
+	_weaponnew = "ACE_M4A1_GL_SD";
+	};
 	
-	//ACE_AK105 to ACE_AK105_Kobra
-	if (_weapon == "ACE_AK105") then
-		{
-		_unit playmove "AmovPercMstpSrasWrflDnon_AinvPknlMstpSlayWrflDnon";
-		sleep 1.5;
-		_unit removeweapon "ACE_AK105";
-		_unit addweapon "ACE_AK105_Kobra";
-		hintsilent "Weapon changed";
-		_unit selectWeapon "ACE_AK105_Kobra";
-		};
-	//and back
-	if (_weapon == "ACE_AK105_Kobra") then
-		{
-		_unit playMove "AmovPercMstpSrasWrflDnon_AinvPknlMstpSlayWrflDnon";
-		sleep 1.5;
-		_unit removeweapon "ACE_AK105_Kobra";
-		_unit addweapon "ACE_AK105";
-		hintsilent "Weapon changed";
-		_unit selectWeapon "ACE_AK105";
-		};
+	case "ACE_M4A1_GL_SD":
+	{
+	_mag = "30Rnd_556x45_Stanag";
+	_sdmag = "30Rnd_556x45_StanagSD";
+	_weaponnew = "ACE_M4A1_GL";
+	};
 	
-	//ACE_AK103 to ACE_AK103_Kobra
-	if (_weapon == "ACE_AK103") then
-		{
-		_unit playmove "AmovPercMstpSrasWrflDnon_AinvPknlMstpSlayWrflDnon";
-		sleep 1.5;
-		_unit removeweapon "ACE_AK103";
-		_unit addweapon "ACE_AK103_Kobra";
-		hintsilent "Weapon changed";
-		_unit selectWeapon "ACE_AK103_Kobra";
-		};
-	//and back
-	if (_weapon == "ACE_AK103_Kobra") then
-		{
-		_unit playMove "AmovPercMstpSrasWrflDnon_AinvPknlMstpSlayWrflDnon";
-		sleep 1.5;
-		_unit removeweapon "ACE_AK103_Kobra";
-		_unit addweapon "ACE_AK103";
-		hintsilent "Weapon changed";
-		_unit selectWeapon "ACE_AK103";
-		};
-	//ACE_AK103_GL to ACE_AK103_GL_Kobra
-	if (_weapon == "ACE_AK103_GL") then
-		{
-		_unit playmove "AmovPercMstpSrasWrflDnon_AinvPknlMstpSlayWrflDnon";
-		sleep 1.5;
-		_unit removeweapon "ACE_AK103_GL";
-		_unit addweapon "ACE_AK103_GL_Kobra";
-		hintsilent "Weapon changed";
-		_unit selectWeapon "ACE_AK103_GL_Kobra";
-		};
-	//and back
-	if (_weapon == "ACE_AK103_GL_Kobra") then
-		{
-		_unit playMove 	"AmovPercMstpSrasWrflDnon_AinvPknlMstpSlayWrflDnon";
-		sleep 1.5;
-		_unit removeweapon "ACE_AK103_GL_Kobra";
-		_unit addweapon "ACE_AK103_GL";
-		hintsilent "Weapon changed";
-		_unit selectWeapon "ACE_AK103_GL";
-		};
+	case "ACE_M4A1_ACOG":
+	{
+	_mag = "30Rnd_556x45_Stanag";
+	_sdmag = "30Rnd_556x45_StanagSD";
+	_weaponnew = "ACE_M4A1_ACOG_SD";
+	};
 	
-	//ACE_AK104  to ACE_AK104_Kobra        
-	if (_weapon == "ACE_AK104") then
-		{
-		_unit playmove "AmovPercMstpSrasWrflDnon_AinvPknlMstpSlayWrflDnon";
-		sleep 1.5;
-		_unit removeweapon "ACE_AK104";
-		_unit addweapon "ACE_AK104_Kobra";
-		hintsilent "Weapon changed";
-		_unit selectWeapon "ACE_AK104_Kobra";
-		};
-	//and back
-	if (_weapon == "ACE_AK104_Kobra") then
-		{
-		_unit playMove "AmovPercMstpSrasWrflDnon_AinvPknlMstpSlayWrflDnon";
-		sleep 1.5;
-		_unit removeweapon "ACE_AK104_Kobra";
-		_unit addweapon "ACE_AK104";
-		hintsilent "Weapon changed";
-		_unit selectWeapon "ACE_AK104";
-		};
+	case "ACE_M4A1_ACOG_SD":
+	{
+	_mag = "30Rnd_556x45_Stanag";
+	_sdmag = "30Rnd_556x45_StanagSD";
+	_weaponnew = "ACE_M4A1_ACOG";
+	};
 	
-	//ACE_Val  to ACE_Val_Kobra  
-	if (_weapon == "ACE_Val") then
-		{
-		_unit playmove "AmovPercMstpSrasWrflDnon_AinvPknlMstpSlayWrflDnon";
-		sleep 1.5;
-		_unit removeweapon "ACE_Val";
-		_unit addweapon "ACE_Val_Kobra";
-		hintsilent "Weapon changed";
-		_unit selectWeapon "ACE_Val_Kobra";
-		};
-	//and back
-	if (_weapon == "ACE_Val_Kobra") then
-		{
-		_unit playMove "AmovPercMstpSrasWrflDnon_AinvPknlMstpSlayWrflDnon";
-		sleep 1.5;
-		_unit removeweapon "ACE_Val_Kobra";
-		_unit addweapon "ACE_Val";
-		hintsilent "Weapon changed";
-		_unit selectWeapon "ACE_Val";
-		};
-	//ACE_HK416_D10  to ACE_HK416_D10_SD           
-	if (_weapon == "ACE_HK416_D10") then
-		{
-		_unit playmove "AmovPercMstpSrasWrflDnon_AinvPknlMstpSlayWrflDnon";
-		sleep 1.5;
-		_unit removeweapon "ACE_HK416_D10";
-		_unit addweapon "ACE_HK416_D10_SD";
-		hintsilent "Weapon changed";
-		_unit selectWeapon "ACE_HK416_D10_SD";
-		};
-	//and back
-	if (_weapon == "ACE_HK416_D10_SD") then
-		{
-		_unit playMove 	"AmovPercMstpSrasWrflDnon_AinvPknlMstpSlayWrflDnon";
-		sleep 1.5;
-		_unit removeweapon "ACE_HK416_D10_SD";
-		_unit addweapon "ACE_HK416_D10";
-		hintsilent "Weapon changed";
-		_unit selectWeapon "ACE_HK416_D10";
-		};
+	case "M4A1_AIM":
+	{
+	_mag = "30Rnd_556x45_Stanag";
+	_sdmag = "30Rnd_556x45_StanagSD";
+	_weaponnew = "ACE_M4A1_AIM_SD";
+	};
 	
-	//ACE_HK416_D10_COMPM3  to ACE_HK416_D10_COMPM3_SD           
-	if (_weapon == "ACE_HK416_D10_COMPM3") then
-		{
-		_unit playmove "AmovPercMstpSrasWrflDnon_AinvPknlMstpSlayWrflDnon";
-		sleep 1.5;
-		_unit removeweapon "ACE_HK416_D10_COMPM3";
-		_unit addweapon "ACE_HK416_D10_COMPM3_SD";
-		hintsilent "Weapon changed";
-		_unit selectWeapon "ACE_HK416_D10_COMPM3_SD";
-		};
-	//and back
-	if (_weapon == "ACE_HK416_D10_COMPM3_SD") then
-		{
-		_unit playMove 	"AmovPercMstpSrasWrflDnon_AinvPknlMstpSlayWrflDnon";
-		sleep 1.5;
-		_unit removeweapon "ACE_HK416_D10_COMPM3_SD";
-		_unit addweapon "ACE_HK416_D10_COMPM3";
-		hintsilent "Weapon changed";
-		_unit selectWeapon "ACE_HK416_D10_COMPM3";
-		};
+	case "ACE_M4A1_AIM_SD":
+	{
+	_mag = "30Rnd_556x45_Stanag";
+	_sdmag = "30Rnd_556x45_StanagSD";
+	_weaponnew = "M4A1_AIM";
+	};
 	
-	//ACE_HK416_D14  to ACE_HK416_D14_SD
-	if (_weapon == "ACE_HK416_D14") then
-		{
-		_unit playmove "AmovPercMstpSrasWrflDnon_AinvPknlMstpSlayWrflDnon";
-		sleep 1.5;
-		_unit removeweapon "ACE_HK416_D14";
-		_unit addweapon "ACE_HK416_D14_SD";
-		hintsilent "Weapon changed";
-		_unit selectWeapon "ACE_HK416_D14_SD";
-		};
-	//and back
-	if (_weapon == "ACE_HK416_D14_SD") then
-		{
-		_unit playMove "AmovPercMstpSrasWrflDnon_AinvPknlMstpSlayWrflDnon";
-		sleep 1.5;
-		_unit removeweapon "ACE_HK416_D14_SD";
-		_unit addweapon "ACE_HK416_D14";
-		hintsilent "Weapon changed";
-		_unit selectWeapon "ACE_HK416_D14";
-		};
+	case "ACE_SOC_M4A1_Aim":
+	{
+	_mag = "30Rnd_556x45_Stanag";
+	_sdmag = "30Rnd_556x45_StanagSD";
+	_weaponnew = "ACE_SOC_M4A1_AIM_SD";
+	};
 	
-	//QBZ95  to QBZ95_SD
-	if (_weapon == "QBZ95") then
-		{
-		_unit playmove "AmovPercMstpSrasWrflDnon_AinvPknlMstpSlayWrflDnon";
-		sleep 1.5;
-		_unit removeweapon "QBZ95";
-		_unit addweapon "QBZ95_SD";
-		hintsilent "Weapon changed";
-		_unit selectWeapon "QBZ95_SD";
-		};
-	//and back
-	if (_weapon == "QBZ95_SD") then
-		{
-		_unit playMove "AmovPercMstpSrasWrflDnon_AinvPknlMstpSlayWrflDnon";
-		sleep 1.5;
-		_unit removeweapon "QBZ95_SD";
-		_unit addweapon "QBZ95";
-		hintsilent "Weapon changed";
-		_unit selectWeapon "QBZ95";
-		};
-	//ACE_oc14  to ACE_oc14sd
-	if (_weapon == "ACE_oc14") then
-		{
-		_unit playmove "AmovPercMstpSrasWrflDnon_AinvPknlMstpSlayWrflDnon";
-		sleep 1.5;
-		_unit removeweapon "ACE_oc14";
-		_unit addweapon "ACE_oc14sd";
-		hintsilent "Weapon changed";
-		_unit selectWeapon "ACE_oc14sd";
-		};
-	//and back
-	if (_weapon == "ACE_oc14sd") then
-		{
-		_unit playMove "AmovPercMstpSrasWrflDnon_AinvPknlMstpSlayWrflDnon";
-		sleep 1.5;
-		_unit removeweapon "ACE_oc14sd";
-		_unit addweapon "ACE_oc14";
-		hintsilent "Weapon changed";
-		_unit selectWeapon "ACE_oc14";
-		};
-	//ACE_oc14sp  to ACE_oc14sd
-	if (_weapon == "ACE_oc14sp") then
-		{
-		_unit playmove "AmovPercMstpSrasWrflDnon_AinvPknlMstpSlayWrflDnon";
-		sleep 1.5;
-		_unit removeweapon "ACE_oc14sp";
-		_unit addweapon "ACE_oc14sdsp";
-		hintsilent "Weapon changed";
-		_unit selectWeapon "ACE_oc14sdsp";
-		};
-	//and back
-	if (_weapon == "ACE_oc14sdsp") then
-		{
-		_unit playMove "AmovPercMstpSrasWrflDnon_AinvPknlMstpSlayWrflDnon";
-		sleep 1.5;
-		_unit removeweapon "ACE_oc14sdsp";
-		_unit addweapon "ACE_oc14";
-		hintsilent "Weapon changed";
-		_unit selectWeapon "ACE_oc14";
-		};
-	//ACE_gr1  to ACE_gr1sd
-	if (_weapon == "ACE_gr1") then
-		{
-		_unit playmove "AmovPercMstpSrasWrflDnon_AinvPknlMstpSlayWrflDnon";
-		sleep 1.5;
-		_unit removeweapon "ACE_gr1";
-		_unit addweapon "ACE_gr1sd";
-		hintsilent "Weapon changed";
-		_unit selectWeapon "ACE_gr1sd";
-		};
-	//and back
-	if (_weapon == "ACE_gr1sd") then
-		{
-		_unit playMove "AmovPercMstpSrasWrflDnon_AinvPknlMstpSlayWrflDnon";
-		sleep 1.5;
-		_unit removeweapon "ACE_gr1sd";
-		_unit addweapon "ACE_gr1";
-		hintsilent "Weapon changed";
-		_unit selectWeapon "ACE_gr1";
-		};
-	//ACE_gr1sdsp  to ACE_gr1sd
-	if (_weapon == "ACE_gr1sdsp") then
-		{
-		_unit playmove "AmovPercMstpSrasWrflDnon_AinvPknlMstpSlayWrflDnon";
-		sleep 1.5;
-		_unit removeweapon "ACE_gr1sdsp";
-		_unit addweapon "ACE_gr1sp";
-		hintsilent "Weapon changed";
-		_unit selectWeapon "ACE_gr1sp";
-		};
-	//and back
-	if (_weapon == "ACE_gr1sp") then
-		{
-		_unit playMove "AmovPercMstpSrasWrflDnon_AinvPknlMstpSlayWrflDnon";
-		sleep 1.5;
-		_unit removeweapon "ACE_gr1sp";
-		_unit addweapon "ACE_gr1sdsp";
-		hintsilent "Weapon changed";
-		_unit selectWeapon "ACE_gr1sdsp";
-		};
+	case "ACE_SOC_M4A1_AIM_SD":
+	{
+	_mag = "30Rnd_556x45_Stanag";
+	_sdmag = "30Rnd_556x45_StanagSD";
+	_weaponnew = "ACE_SOC_M4A1_Aim";
+	};
+	
+	case "ACE_SOC_M4A1_SHORTDOT":
+	{
+	_mag = "30Rnd_556x45_Stanag";
+	_sdmag = "30Rnd_556x45_StanagSD";
+	_weaponnew = "ACE_SOC_M4A1_SHORTDOT_SD";
+	};
+	
+	case "ACE_SOC_M4A1_SHORTDOT_SD":
+	{
+	_mag = "30Rnd_556x45_Stanag";
+	_sdmag = "30Rnd_556x45_StanagSD";
+	_weaponnew = "ACE_SOC_M4A1_SHORTDOT";
+	};
+	
+	case "M4SPR":
+	{
+	_mag = "30Rnd_556x45_Stanag";
+	_sdmag = "30Rnd_556x45_StanagSD";
+	_weaponnew = "ACE_M4SPR_SD";
+	};
+	
+	case "ACE_M4SPR_SD":
+	{
+	_mag = "30Rnd_556x45_Stanag";
+	_sdmag = "30Rnd_556x45_StanagSD";
+	_weaponnew = "M4SPR";
+	};
+	
+	case "ACE_TAC50":
+	{
+	_mag = "ACE_5Rnd_127x99_B_TAC50";
+	_sdmag = "ACE_5Rnd_127x99_S_TAC50";
+	_weaponnew = "ACE_TAC50_SD";
+	};
+	
+	case "ACE_TAC50_SD":
+	{
+	_mag = "ACE_5Rnd_127x99_B_TAC50";
+	_sdmag = "ACE_5Rnd_127x99_S_TAC50";
+	_weaponnew = "ACE_TAC50";
+	};
+	
+	case "ACE_HK416_D10":
+	{
+	_mag = "30Rnd_556x45_Stanag";
+	_sdmag = "30Rnd_556x45_StanagSD";
+	_weaponnew = "ACE_HK416_D10_SD";
+	};
+		
+	case "ACE_HK416_D10_SD":
+	{
+	_mag = "30Rnd_556x45_Stanag";
+	_sdmag = "30Rnd_556x45_StanagSD";
+	_weaponnew = "ACE_HK416_D10";
+	};
+	
+	case "ACE_HK416_D10_COMPM3":
+	{
+	_mag = "30Rnd_556x45_Stanag";
+	_sdmag = "30Rnd_556x45_StanagSD";
+	_weaponnew = "ACE_HK416_D10_COMPM3_SD";
+	};
+	
+	case "ACE_HK416_D10_COMPM3_SD":
+	{
+	_mag = "30Rnd_556x45_Stanag";
+	_sdmag = "30Rnd_556x45_StanagSD";
+	_weaponnew = "ACE_HK416_D10_COMPM3";
+	};
+	
+	case "ACE_HK416_D14":
+	{
+	_mag = "30Rnd_556x45_Stanag";
+	_sdmag = "30Rnd_556x45_StanagSD";
+	_weaponnew = "ACE_HK416_D14_SD";
+	};
+		
+	case "ACE_HK416_D14_SD":
+	{
+	_mag = "30Rnd_556x45_Stanag";
+	_sdmag = "30Rnd_556x45_StanagSD";
+	_weaponnew = "ACE_HK416_D14";
+	};
+	
+	case "QBZ95":
+	{
+	_mag = "30Rnd_556x45_Stanag";
+	_sdmag = "30Rnd_556x45_StanagSD";
+	_weaponnew = "QBZ95_SD";
+	};
+	
+	case "QBZ95_SD":
+	{
+	_mag = "30Rnd_556x45_Stanag";
+	_sdmag = "30Rnd_556x45_StanagSD";
+	_weaponnew = "QBZ95";
+	};
+	
+	case "ACE_oc14":
+	{
+	_mag = "ACE_20Rnd_9x39_B_OC14";
+	_sdmag = "ACE_20Rnd_9x39_S_OC14";
+	_weaponnew = "ACE_oc14sd";
+	};
+	
+	case "ACE_oc14sd":
+	{
+	_mag = "ACE_20Rnd_9x39_B_OC14";
+	_sdmag = "ACE_20Rnd_9x39_S_OC14";
+	_weaponnew = "ACE_oc14";
+	};
+	
+	case "ACE_oc14sp":
+	{
+	_mag = "ACE_20Rnd_9x39_B_OC14";
+	_sdmag = "ACE_20Rnd_9x39_S_OC14";
+	_weaponnew = "ACE_oc14sdsp";
+	};
+	
+	case "ACE_oc14sdsp":
+	{
+	_mag = "ACE_20Rnd_9x39_B_OC14";
+	_sdmag = "ACE_20Rnd_9x39_S_OC14";
+	_weaponnew = "ACE_oc14sp";
+	};
+	
+	case "ACE_gr1":
+	{
+	_mag = "30Rnd_762x39_AK47";
+	_sdmag = "ACE_30Rnd_762x39_SD_AK47";
+	_weaponnew = "ACE_gr1sd";
+	};
+	
+	case "ACE_gr1sd":
+	{
+	_mag = "30Rnd_762x39_AK47";
+	_sdmag = "ACE_30Rnd_762x39_SD_AK47";
+	_weaponnew = "ACE_gr1";
+	};
+	
+	case "ACE_gr1sdsp":
+	{
+	_mag = "30Rnd_762x39_AK47";
+	_sdmag = "ACE_30Rnd_762x39_SD_AK47";
+	_weaponnew = "ACE_gr1sp";
+	};
+	
+	case "ACE_gr1sp":
+	{
+	_mag = "30Rnd_762x39_AK47";
+	_sdmag = "ACE_30Rnd_762x39_SD_AK47";
+	_weaponnew = "ACE_gr1sdsp";
+	};
+	
+	case "ACE_M4A1_AIM_GL":
+	{
+	_mag = "30Rnd_556x45_Stanag";
+	_sdmag = "30Rnd_556x45_StanagSD";
+	_weaponnew = "ACE_M4A1_AIM_GL_SD";
+	};
 
+	case "ACE_M4A1_AIM_GL_SD":
+	{
+	_mag = "30Rnd_556x45_Stanag";
+	_sdmag = "30Rnd_556x45_StanagSD";
+	_weaponnew = "ACE_M4A1_AIM_GL";
+	};
 	
-	//ACE_M4A1_AIM_GL  to ACE_M4A1_AIM_GL_SD 
-	if (_weapon == "ACE_M4A1_AIM_GL") then
+	default					// If no supressed version found for this weapon
+	{
+	hint "No silencer found for this Weapon";
+	_success = false;
+	};
+	};
+	if (_success) then
 		{
-		_unit playmove "AmovPercMstpSrasWrflDnon_AinvPknlMstpSlayWrflDnon";
+		_stance = _unit call CBA_fnc_getUnitAnim select 0;
+		switch (_stance) do {
+						case "stand":
+						{
+						_unit playMove "WeaponMagazineReloadStand";
+						};
+						case "kneel":
+						{
+						_unit playMove "WeaponMagazineReloadKneel";
+						};
+						case "prone":
+						{
+						_unit playMove "WeaponMagazineReloadProne";
+						};
+						default
+						{
+						_unit playMove "AmovPercMstpSrasWrflDnon_AinvPknlMstpSlayWrflDnon";
+						};
+						};
 		sleep 1.5;
-		_unit removeweapon "ACE_M4A1_AIM_GL";
-		_unit addweapon "ACE_M4A1_AIM_GL_SD";
-		hintsilent "Weapon changed";
-		_unit selectWeapon "ACE_M4A1_AIM_GL_SD";
+		_unit removeweapon _weapon;
+		_unit addweapon _weaponnew;
+		_weapons = (weapons _unit) - (items _unit);	// save weapons
+		_items = items _unit;		// save items
+		_magazines = magazines _unit;	// save mags
+		removeAllWeapons _unit;				//remove all weapons
+		{_unit addWeapon _x} forEach _weapons; //add weapons
+		{_unit addWeapon _x} forEach _items; 	//add items
+		{switch (_x) do {
+					case _mag:
+					{
+					_unit addMagazine _sdmag; //replace regular mags with SD
+					};
+					case _sdmag:
+					{
+					_unit addMagazine _mag;  //replace SD mags with regulars
+					};
+					default
+					{
+					_unit addMagazine _x;   // add saved mags
+					};
+					};} forEach _magazines;
+		_unit selectWeapon _weaponnew; // Select the primaryWeapon	
+		_muzzles = getArray(configFile>>"cfgWeapons" >> _weaponnew >> "muzzles"); // Fix for weapons with grenade launcher
+		_unit selectWeapon (_muzzles select 0);
 		};
-	//and back
-	if (_weapon == "ACE_M4A1_AIM_GL_SD") then
-		{
-		_unit playMove "AmovPercMstpSrasWrflDnon_AinvPknlMstpSlayWrflDnon";
-		sleep 1.5;
-		_unit removeweapon "ACE_M4A1_AIM_GL_SD";
-		_unit addweapon "ACE_M4A1_AIM_GL";
-		hintsilent "Weapon changed";
-		_unit selectWeapon "ACE_M4A1_AIM_GL";
-		};
-	} else {hint "No silencer found for this Weapon"};
+		
 
