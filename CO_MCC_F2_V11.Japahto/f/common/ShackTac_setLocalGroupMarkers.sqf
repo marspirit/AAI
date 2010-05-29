@@ -63,7 +63,9 @@ switch (faction player) do
 				["GrpUSMC_Golf_1", 9, "G1", "ColorGreen"] execVM "f\common\ShackTac_localGroupMarker.sqf";
 				["GrpUSMC_Golf_2", 9, "G2", "ColorGreen"] execVM "f\common\ShackTac_localGroupMarker.sqf";
 				["GrpUSMC_Golf_3", 9, "G3", "ColorGreen"] execVM "f\common\ShackTac_localGroupMarker.sqf";
-
+				["GrpUSMC_DM1", 2, "DM1", "ColorRed"] execVM "f\common\ShackTac_localGroupMarker.sqf";
+				["GrpUSMC_DM2", 2, "DM2", "ColorGreen"] execVM "f\common\ShackTac_localGroupMarker.sqf";
+				["GrpUSMC_DM3", 2, "DM3", "ColorBlue"] execVM "f\common\ShackTac_localGroupMarker.sqf";
                
                ["GrpCDF_1Plt_PltHQ", 0, "PltHQ", "ColorBlack"] execVM "f\common\ShackTac_localGroupMarker.sqf";
                ["GrpCDF_1Plt_Alpha", 1, "ASL", "ColorBlack"] execVM "f\common\ShackTac_localGroupMarker.sqf";
@@ -254,6 +256,9 @@ switch (faction player) do
 				["GrpRU_Golf_1", 9, "G1", "ColorGreen"] execVM "f\common\ShackTac_localGroupMarker.sqf";
 				["GrpRU_Golf_2", 9, "G2", "ColorGreen"] execVM "f\common\ShackTac_localGroupMarker.sqf";
 				["GrpRU_Golf_3", 9, "G3", "ColorGreen"] execVM "f\common\ShackTac_localGroupMarker.sqf";
+				["GrpRU_DM1", 2, "DM1", "ColorRed"] execVM "f\common\ShackTac_localGroupMarker.sqf";
+				["GrpRU_DM2", 2, "DM2", "ColorGreen"] execVM "f\common\ShackTac_localGroupMarker.sqf";
+				["GrpRU_DM3", 2, "DM3", "ColorBlue"] execVM "f\common\ShackTac_localGroupMarker.sqf";
 
                ["GrpINS_1Plt_PltHQ", 0, "PltHQ", "ColorBlack"] execVM "f\common\ShackTac_localGroupMarker.sqf";
                ["GrpINS_1Plt_Alpha", 1, "ASL", "ColorBlack"] execVM "f\common\ShackTac_localGroupMarker.sqf";
@@ -441,7 +446,10 @@ switch (faction player) do
 				["GrpGUE_Golf_Lead", 9, "GL", "ColorGreen"] execVM "f\common\ShackTac_localGroupMarker.sqf";
 				["GrpGUE_Golf_1", 9, "G1", "ColorGreen"] execVM "f\common\ShackTac_localGroupMarker.sqf";
 				["GrpGUE_Golf_2", 9, "G2", "ColorGreen"] execVM "f\common\ShackTac_localGroupMarker.sqf";
-				["GrpGUE_Golf_3", 9, "G3", "ColorGreen"] execVM "f\common\ShackTac_localGroupMarker.sqf";			   
+				["GrpGUE_Golf_3", 9, "G3", "ColorGreen"] execVM "f\common\ShackTac_localGroupMarker.sqf";
+				["GrpGUE_DM1", 2, "DM1", "ColorRed"] execVM "f\common\ShackTac_localGroupMarker.sqf";
+				["GrpGUE_DM2", 2, "DM2", "ColorGreen"] execVM "f\common\ShackTac_localGroupMarker.sqf";
+				["GrpGUE_DM3", 2, "DM3", "ColorBlue"] execVM "f\common\ShackTac_localGroupMarker.sqf";
        };
 
 // ====================================================================================

@@ -50,7 +50,7 @@ class Mission
 	};
 	class Groups
 	{
-		items=223;
+		items=150;
 		class Item0
 		{
 			side="WEST";
@@ -4502,1712 +4502,6 @@ class Mission
 		};
 		class Item93
 		{
-			side="WEST";
-			class Vehicles
-			{
-				items=4;
-				class Item0
-				{
-					position[]={4017.6641,21.703527,3031.8079};
-					id=293;
-					side="WEST";
-					vehicle="CDF_Soldier_GL";
-					player="PLAY CDG";
-					leader=1;
-					rank="LIEUTENANT";
-					skill=0.60000002;
-					text="UnitCDF_1Plt_PltCo";
-					init="GrpCDF_1Plt_PltHQ = group this; nul = [""pltco"",this] execVM ""f\common\@ShackTac_assignGear_plthq.sqf"";";
-					description="CDF 1Plt PltHQ Platoon Commander";
-				};
-				class Item1
-				{
-					position[]={4019.6367,21.75935,3029.71};
-					id=294;
-					side="WEST";
-					vehicle="CDF_Soldier";
-					player="PLAY CDG";
-					rank="SERGEANT";
-					skill=0.60000002;
-					text="UnitCDF_1Plt_PltSgt";
-					init="GrpCDF_1Plt_PltHQ = group this; nul = [""pltsgt"",this] execVM ""f\common\@ShackTac_assignGear_plthq.sqf"";";
-					description="CDF 1Plt PltHQ Platoon Sgt.";
-				};
-				class Item2
-				{
-					position[]={4021.9902,21.949129,3029.6633};
-					id=295;
-					side="WEST";
-					vehicle="CDF_Soldier_Medic";
-					player="PLAY CDG";
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitCDF_1Plt_PltM";
-					init="GrpCDF_1Plt_PltHQ = group this; nul = [""pltm"",this] execVM ""f\common\@ShackTac_assignGear_plthq.sqf"";";
-					description="CDF 1Plt PltHQ Medic";
-				};
-				class Item3
-				{
-					position[]={4024.3892,22.1411,3029.6653};
-					id=296;
-					side="WEST";
-					vehicle="CDF_Soldier";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitCDF_1Plt_PltR";
-					init="GrpCDF_1Plt_PltHQ = group this; nul = [""pltr"",this] execVM ""f\common\@ShackTac_assignGear_plthq.sqf"";";
-					description="CDF 1Plt PltHQ Rifleman";
-				};
-			};
-		};
-		class Item94
-		{
-			side="WEST";
-			class Vehicles
-			{
-				items=2;
-				class Item0
-				{
-					position[]={3995.5386,18.52368,2996.2603};
-					id=297;
-					side="WEST";
-					vehicle="CDF_Soldier_GL";
-					player="PLAY CDG";
-					leader=1;
-					rank="SERGEANT";
-					skill=0.60000002;
-					text="UnitCDF_1Plt_ASL";
-					init="GrpCDF_1Plt_Alpha = group this; nul = [""sl"",this] execVM ""f\common\@ShackTac_assignGear_alpha.sqf"";";
-					description="CDF 1Plt Alpha Squad Leader";
-				};
-				class Item1
-				{
-					position[]={3997.5112,18.65926,2994.1624};
-					id=298;
-					side="WEST";
-					vehicle="CDF_Soldier_Medic";
-					player="PLAY CDG";
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitCDF_1Plt_AM";
-					init="GrpCDF_1Plt_Alpha = group this; nul = [""m"",this] execVM ""f\common\@ShackTac_assignGear_alpha.sqf"";";
-					description="CDF 1Plt Alpha Squad Medic";
-				};
-			};
-		};
-		class Item95
-		{
-			side="WEST";
-			class Vehicles
-			{
-				items=4;
-				class Item0
-				{
-					position[]={3995.521,18.252399,2987.2549};
-					id=299;
-					side="WEST";
-					vehicle="CDF_Soldier_GL";
-					player="PLAY CDG";
-					leader=1;
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitCDF_1Plt_A1FTL";
-					init="GrpCDF_1Plt_A1 = group this; nul = [""ftl"",this] execVM ""f\common\@ShackTac_assignGear_alpha.sqf"";";
-					description="CDF 1Plt A1 Fireteam Leader";
-				};
-				class Item1
-				{
-					position[]={3997.4937,18.427433,2985.157};
-					id=300;
-					side="WEST";
-					vehicle="CDF_Soldier_AR";
-					player="PLAY CDG";
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitCDF_1Plt_A1AR";
-					init="GrpCDF_1Plt_A1 = group this; nul = [""ar"",this] execVM ""f\common\@ShackTac_assignGear_alpha.sqf"";";
-					description="CDF 1Plt A1 Automatic Rifleman";
-				};
-				class Item2
-				{
-					position[]={3999.8472,18.685385,2985.1104};
-					id=301;
-					side="WEST";
-					vehicle="CDF_Soldier";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitCDF_1Plt_A1AAR";
-					init="GrpCDF_1Plt_A1 = group this; nul = [""aar"",this] execVM ""f\common\@ShackTac_assignGear_alpha.sqf"";";
-					description="CDF 1Plt A1 Assistant Automatic Rifleman";
-				};
-				class Item3
-				{
-					position[]={4002.2461,19.016697,2985.1123};
-					id=302;
-					side="WEST";
-					vehicle="CDF_Soldier";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitCDF_1Plt_A1RAT";
-					init="GrpCDF_1Plt_A1 = group this; nul = [""rat"",this] execVM ""f\common\@ShackTac_assignGear_alpha.sqf"";";
-					description="CDF 1Plt A1 Rifleman (AT)";
-				};
-			};
-		};
-		class Item96
-		{
-			side="WEST";
-			class Vehicles
-			{
-				items=4;
-				class Item0
-				{
-					position[]={3995.2573,17.867472,2976.1343};
-					id=303;
-					side="WEST";
-					vehicle="CDF_Soldier_GL";
-					player="PLAY CDG";
-					leader=1;
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitCDF_1Plt_A2FTL";
-					init="GrpCDF_1Plt_A2 = group this; nul = [""ftl"",this] execVM ""f\common\@ShackTac_assignGear_alpha.sqf"";";
-					description="CDF 1Plt A2 Fireteam Leader";
-				};
-				class Item1
-				{
-					position[]={3997.23,18.060986,2974.0364};
-					id=304;
-					side="WEST";
-					vehicle="CDF_Soldier_AR";
-					player="PLAY CDG";
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitCDF_1Plt_A2AR";
-					init="GrpCDF_1Plt_A2 = group this; nul = [""ar"",this] execVM ""f\common\@ShackTac_assignGear_alpha.sqf"";";
-					description="CDF 1Plt A2 Automatic Rifleman";
-				};
-				class Item2
-				{
-					position[]={3999.5835,18.365538,2973.9897};
-					id=305;
-					side="WEST";
-					vehicle="CDF_Soldier";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitCDF_1Plt_A2AAR";
-					init="GrpCDF_1Plt_A2 = group this; nul = [""aar"",this] execVM ""f\common\@ShackTac_assignGear_alpha.sqf"";";
-					description="CDF 1Plt A2 Assistant Automatic Rifleman";
-				};
-				class Item3
-				{
-					position[]={4001.9824,18.736933,2973.9917};
-					id=306;
-					side="WEST";
-					vehicle="CDF_Soldier";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitCDF_1Plt_A2RAT";
-					init="GrpCDF_1Plt_A2 = group this; nul = [""rat"",this] execVM ""f\common\@ShackTac_assignGear_alpha.sqf"";";
-					description="CDF 1Plt A2 Rifleman (AT)";
-				};
-			};
-		};
-		class Item97
-		{
-			side="WEST";
-			class Vehicles
-			{
-				items=4;
-				class Item0
-				{
-					position[]={3995.2676,17.405693,2965.3887};
-					id=307;
-					side="WEST";
-					vehicle="CDF_Soldier_GL";
-					player="PLAY CDG";
-					leader=1;
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitCDF_1Plt_A3FTL";
-					init="GrpCDF_1Plt_A3 = group this; nul = [""ftl"",this] execVM ""f\common\@ShackTac_assignGear_alpha.sqf"";";
-					description="CDF 1Plt A3 Fireteam Leader";
-				};
-				class Item1
-				{
-					position[]={3997.2402,17.617666,2963.2908};
-					id=308;
-					side="WEST";
-					vehicle="CDF_Soldier_AR";
-					player="PLAY CDG";
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitCDF_1Plt_A3AR";
-					init="GrpCDF_1Plt_A3 = group this; nul = [""ar"",this] execVM ""f\common\@ShackTac_assignGear_alpha.sqf"";";
-					description="CDF 1Plt A3 Automatic Rifleman";
-				};
-				class Item2
-				{
-					position[]={3999.5938,17.968838,2963.2441};
-					id=309;
-					side="WEST";
-					vehicle="CDF_Soldier";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitCDF_1Plt_A3AAR";
-					init="GrpCDF_1Plt_A3 = group this; nul = [""aar"",this] execVM ""f\common\@ShackTac_assignGear_alpha.sqf"";";
-					description="CDF 1Plt A3 Assistant Automatic Rifleman";
-				};
-				class Item3
-				{
-					position[]={4001.9927,18.368614,2963.2461};
-					id=310;
-					side="WEST";
-					vehicle="CDF_Soldier";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitCDF_1Plt_A3R";
-					init="GrpCDF_1Plt_A3 = group this; nul = [""r"",this] execVM ""f\common\@ShackTac_assignGear_alpha.sqf"";";
-					description="CDF 1Plt A3 Rifleman";
-				};
-			};
-		};
-		class Item98
-		{
-			side="WEST";
-			class Vehicles
-			{
-				items=2;
-				class Item0
-				{
-					position[]={4015.6836,20.663368,2996.1824};
-					id=311;
-					side="WEST";
-					vehicle="CDF_Soldier_GL";
-					player="PLAY CDG";
-					leader=1;
-					rank="SERGEANT";
-					skill=0.60000002;
-					text="UnitCDF_1Plt_BSL";
-					init="GrpCDF_1Plt_Bravo = group this; nul = [""sl"",this] execVM ""f\common\@ShackTac_assignGear_bravo.sqf"";";
-					description="CDF 1Plt Bravo Squad Leader";
-				};
-				class Item1
-				{
-					position[]={4017.6563,20.90134,2994.0845};
-					id=312;
-					side="WEST";
-					vehicle="CDF_Soldier_Medic";
-					player="PLAY CDG";
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitCDF_1Plt_BM";
-					init="GrpCDF_1Plt_Bravo = group this; nul = [""m"",this] execVM ""f\common\@ShackTac_assignGear_bravo.sqf"";";
-					description="CDF 1Plt Bravo Squad Medic";
-				};
-			};
-		};
-		class Item99
-		{
-			side="WEST";
-			class Vehicles
-			{
-				items=4;
-				class Item0
-				{
-					position[]={4015.666,20.708174,2987.177};
-					id=313;
-					side="WEST";
-					vehicle="CDF_Soldier_GL";
-					player="PLAY CDG";
-					leader=1;
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitCDF_1Plt_B1FTL";
-					init="GrpCDF_1Plt_B1 = group this; nul = [""ftl"",this] execVM ""f\common\@ShackTac_assignGear_bravo.sqf"";";
-					description="CDF 1Plt B1 Fireteam Leader";
-				};
-				class Item1
-				{
-					position[]={4017.6387,20.965874,2985.0791};
-					id=314;
-					side="WEST";
-					vehicle="CDF_Soldier_AR";
-					player="PLAY CDG";
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitCDF_1Plt_B1AR";
-					init="GrpCDF_1Plt_B1 = group this; nul = [""ar"",this] execVM ""f\common\@ShackTac_assignGear_bravo.sqf"";";
-					description="CDF 1Plt B1 Automatic Rifleman";
-				};
-				class Item2
-				{
-					position[]={4019.9922,21.248758,2985.0325};
-					id=315;
-					side="WEST";
-					vehicle="CDF_Soldier";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitCDF_1Plt_B1AAR";
-					init="GrpCDF_1Plt_B1 = group this; nul = [""aar"",this] execVM ""f\common\@ShackTac_assignGear_bravo.sqf"";";
-					description="CDF 1Plt B1 Assistant Automatic Rifleman";
-				};
-				class Item3
-				{
-					position[]={4022.3911,21.512669,2985.0344};
-					id=316;
-					side="WEST";
-					vehicle="CDF_Soldier";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitCDF_1Plt_B1RAT";
-					init="GrpCDF_1Plt_B1 = group this; nul = [""rat"",this] execVM ""f\common\@ShackTac_assignGear_bravo.sqf"";";
-					description="CDF 1Plt B1 Rifleman (AT)";
-				};
-			};
-		};
-		class Item100
-		{
-			side="WEST";
-			class Vehicles
-			{
-				items=4;
-				class Item0
-				{
-					position[]={4015.4023,20.662893,2976.0564};
-					id=317;
-					side="WEST";
-					vehicle="CDF_Soldier_GL";
-					player="PLAY CDG";
-					leader=1;
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitCDF_1Plt_B2FTL";
-					init="GrpCDF_1Plt_B2 = group this; nul = [""ftl"",this] execVM ""f\common\@ShackTac_assignGear_bravo.sqf"";";
-					description="CDF 1Plt B2 Fireteam Leader";
-				};
-				class Item1
-				{
-					position[]={4017.375,20.898357,2973.9585};
-					id=318;
-					side="WEST";
-					vehicle="CDF_Soldier_AR";
-					player="PLAY CDG";
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitCDF_1Plt_B2AR";
-					init="GrpCDF_1Plt_B2 = group this; nul = [""ar"",this] execVM ""f\common\@ShackTac_assignGear_bravo.sqf"";";
-					description="CDF 1Plt B2 Automatic Rifleman";
-				};
-				class Item2
-				{
-					position[]={4019.7285,21.203852,2973.9119};
-					id=319;
-					side="WEST";
-					vehicle="CDF_Soldier";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitCDF_1Plt_B2AAR";
-					init="GrpCDF_1Plt_B2 = group this; nul = [""aar"",this] execVM ""f\common\@ShackTac_assignGear_bravo.sqf"";";
-					description="CDF 1Plt B2 Assistant Automatic Rifleman";
-				};
-				class Item3
-				{
-					position[]={4022.1274,21.494423,2973.9138};
-					id=320;
-					side="WEST";
-					vehicle="CDF_Soldier";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitCDF_1Plt_B2RAT";
-					init="GrpCDF_1Plt_B2 = group this; nul = [""rat"",this] execVM ""f\common\@ShackTac_assignGear_bravo.sqf"";";
-					description="CDF 1Plt B2 Rifleman (AT)";
-				};
-			};
-		};
-		class Item101
-		{
-			side="WEST";
-			class Vehicles
-			{
-				items=4;
-				class Item0
-				{
-					position[]={4015.4126,20.462957,2965.3108};
-					id=321;
-					side="WEST";
-					vehicle="CDF_Soldier_GL";
-					player="PLAY CDG";
-					leader=1;
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitCDF_1Plt_B3FTL";
-					init="GrpCDF_1Plt_B3 = group this; nul = [""ftl"",this] execVM ""f\common\@ShackTac_assignGear_bravo.sqf"";";
-					description="CDF 1Plt B3 Fireteam Leader";
-				};
-				class Item1
-				{
-					position[]={4017.3853,20.65646,2963.2129};
-					id=322;
-					side="WEST";
-					vehicle="CDF_Soldier_AR";
-					player="PLAY CDG";
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitCDF_1Plt_B3AR";
-					init="GrpCDF_1Plt_B3 = group this; nul = [""ar"",this] execVM ""f\common\@ShackTac_assignGear_bravo.sqf"";";
-					description="CDF 1Plt B3 Automatic Rifleman";
-				};
-				class Item2
-				{
-					position[]={4019.7388,20.96102,2963.1663};
-					id=323;
-					side="WEST";
-					vehicle="CDF_Soldier";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitCDF_1Plt_B3AAR";
-					init="GrpCDF_1Plt_B3 = group this; nul = [""aar"",this] execVM ""f\common\@ShackTac_assignGear_bravo.sqf"";";
-					description="CDF 1Plt B3 Assistant Automatic Rifleman";
-				};
-				class Item3
-				{
-					position[]={4022.1377,21.272955,2963.1682};
-					id=324;
-					side="WEST";
-					vehicle="CDF_Soldier";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitCDF_1Plt_B3R";
-					init="GrpCDF_1Plt_B3 = group this; nul = [""r"",this] execVM ""f\common\@ShackTac_assignGear_bravo.sqf"";";
-					description="CDF 1Plt B3 Rifleman";
-				};
-			};
-		};
-		class Item102
-		{
-			side="WEST";
-			class Vehicles
-			{
-				items=2;
-				class Item0
-				{
-					position[]={4036.2427,22.886694,2996.1118};
-					id=325;
-					side="WEST";
-					vehicle="CDF_Soldier_GL";
-					player="PLAY CDG";
-					leader=1;
-					rank="SERGEANT";
-					skill=0.60000002;
-					text="UnitCDF_1Plt_CSL";
-					init="GrpCDF_1Plt_Charlie = group this; nul = [""sl"",this] execVM ""f\common\@ShackTac_assignGear_charlie.sqf"";";
-					description="CDF 1Plt Charlie Squad Leader";
-				};
-				class Item1
-				{
-					position[]={4038.2153,23.103685,2994.0139};
-					id=326;
-					side="WEST";
-					vehicle="CDF_Soldier_Medic";
-					player="PLAY CDG";
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitCDF_1Plt_CM";
-					init="GrpCDF_1Plt_Charlie = group this; nul = [""m"",this] execVM ""f\common\@ShackTac_assignGear_charlie.sqf"";";
-					description="CDF 1Plt Charlie Squad Medic";
-				};
-			};
-		};
-		class Item103
-		{
-			side="WEST";
-			class Vehicles
-			{
-				items=4;
-				class Item0
-				{
-					position[]={4036.2251,22.951458,2987.1064};
-					id=327;
-					side="WEST";
-					vehicle="CDF_Soldier_GL";
-					player="PLAY CDG";
-					leader=1;
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitCDF_1Plt_C1FTL";
-					init="GrpCDF_1Plt_C1 = group this; nul = [""ftl"",this] execVM ""f\common\@ShackTac_assignGear_charlie.sqf"";";
-					description="CDF 1Plt C1 Fireteam Leader";
-				};
-				class Item1
-				{
-					position[]={4038.1978,23.169703,2985.0085};
-					id=328;
-					side="WEST";
-					vehicle="CDF_Soldier_AR";
-					player="PLAY CDG";
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitCDF_1Plt_C1AR";
-					init="GrpCDF_1Plt_C1 = group this; nul = [""ar"",this] execVM ""f\common\@ShackTac_assignGear_charlie.sqf"";";
-					description="CDF 1Plt C1 Automatic Rifleman";
-				};
-				class Item2
-				{
-					position[]={4040.5513,23.400007,2984.9619};
-					id=329;
-					side="WEST";
-					vehicle="CDF_Soldier";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitCDF_1Plt_C1AAR";
-					init="GrpCDF_1Plt_C1 = group this; nul = [""aar"",this] execVM ""f\common\@ShackTac_assignGear_charlie.sqf"";";
-					description="CDF 1Plt C1 Assistant Automatic Rifleman";
-				};
-				class Item3
-				{
-					position[]={4042.9502,23.61587,2984.9639};
-					id=330;
-					side="WEST";
-					vehicle="CDF_Soldier";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitCDF_1Plt_C1RAT";
-					init="GrpCDF_1Plt_C1 = group this; nul = [""rat"",this] execVM ""f\common\@ShackTac_assignGear_charlie.sqf"";";
-					description="CDF 1Plt C1 Rifleman (AT)";
-				};
-			};
-		};
-		class Item104
-		{
-			side="WEST";
-			class Vehicles
-			{
-				items=4;
-				class Item0
-				{
-					position[]={4035.9614,22.996151,2975.9858};
-					id=331;
-					side="WEST";
-					vehicle="CDF_Soldier_GL";
-					player="PLAY CDG";
-					leader=1;
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitCDF_1Plt_C2FTL";
-					init="GrpCDF_1Plt_C2 = group this; nul = [""ftl"",this] execVM ""f\common\@ShackTac_assignGear_charlie.sqf"";";
-					description="CDF 1Plt C2 Fireteam Leader";
-				};
-				class Item1
-				{
-					position[]={4037.9341,23.193417,2973.8879};
-					id=332;
-					side="WEST";
-					vehicle="CDF_Soldier_AR";
-					player="PLAY CDG";
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitCDF_1Plt_C2AR";
-					init="GrpCDF_1Plt_C2 = group this; nul = [""ar"",this] execVM ""f\common\@ShackTac_assignGear_charlie.sqf"";";
-					description="CDF 1Plt C2 Automatic Rifleman";
-				};
-				class Item2
-				{
-					position[]={4040.2876,23.428768,2973.8413};
-					id=333;
-					side="WEST";
-					vehicle="CDF_Soldier";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitCDF_1Plt_C2AAR";
-					init="GrpCDF_1Plt_C2 = group this; nul = [""aar"",this] execVM ""f\common\@ShackTac_assignGear_charlie.sqf"";";
-					description="CDF 1Plt C2 Assistant Automatic Rifleman";
-				};
-				class Item3
-				{
-					position[]={4042.6865,23.668636,2973.8433};
-					id=334;
-					side="WEST";
-					vehicle="CDF_Soldier";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitCDF_1Plt_C2RAT";
-					init="GrpCDF_1Plt_C2 = group this; nul = [""rat"",this] execVM ""f\common\@ShackTac_assignGear_charlie.sqf"";";
-					description="CDF 1Plt C2 Rifleman (AT)";
-				};
-			};
-		};
-		class Item105
-		{
-			side="WEST";
-			class Vehicles
-			{
-				items=4;
-				class Item0
-				{
-					position[]={4035.9717,22.997158,2965.2402};
-					id=335;
-					side="WEST";
-					vehicle="CDF_Soldier_GL";
-					player="PLAY CDG";
-					leader=1;
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitCDF_1Plt_C3FTL";
-					init="GrpCDF_1Plt_C3 = group this; nul = [""ftl"",this] execVM ""f\common\@ShackTac_assignGear_charlie.sqf"";";
-					description="CDF 1Plt C3 Fireteam Leader";
-				};
-				class Item1
-				{
-					position[]={4037.9443,23.194424,2963.1423};
-					id=336;
-					side="WEST";
-					vehicle="CDF_Soldier_AR";
-					player="PLAY CDG";
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitCDF_1Plt_C3AR";
-					init="GrpCDF_1Plt_C3 = group this; nul = [""ar"",this] execVM ""f\common\@ShackTac_assignGear_charlie.sqf"";";
-					description="CDF 1Plt C3 Automatic Rifleman";
-				};
-				class Item2
-				{
-					position[]={4040.2979,23.46254,2963.0957};
-					id=337;
-					side="WEST";
-					vehicle="CDF_Soldier";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitCDF_1Plt_C3AAR";
-					init="GrpCDF_1Plt_C3 = group this; nul = [""aar"",this] execVM ""f\common\@ShackTac_assignGear_charlie.sqf"";";
-					description="CDF 1Plt C3 Assistant Automatic Rifleman";
-				};
-				class Item3
-				{
-					position[]={4042.6968,23.96633,2963.0977};
-					id=338;
-					side="WEST";
-					vehicle="CDF_Soldier";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitCDF_1Plt_C3R";
-					init="GrpCDF_1Plt_C3 = group this; nul = [""r"",this] execVM ""f\common\@ShackTac_assignGear_charlie.sqf"";";
-					description="CDF 1Plt C3 Rifleman";
-				};
-			};
-		};
-		class Item106
-		{
-			side="WEST";
-			class Vehicles
-			{
-				items=2;
-				class Item0
-				{
-					position[]={4056.8555,24.816986,2995.8069};
-					id=339;
-					side="WEST";
-					vehicle="CDF_Soldier_GL";
-					player="PLAY CDG";
-					leader=1;
-					rank="SERGEANT";
-					skill=0.60000002;
-					text="UnitCDF_1Plt_DSL";
-					init="GrpCDF_1Plt_Delta = group this; nul = [""sl"",this] execVM ""f\common\@ShackTac_assignGear_delta.sqf"";";
-					description="CDF 1Plt Delta Squad Leader";
-				};
-				class Item1
-				{
-					position[]={4058.8281,24.994524,2993.709};
-					id=340;
-					side="WEST";
-					vehicle="CDF_Soldier_Medic";
-					player="PLAY CDG";
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitCDF_1Plt_DM";
-					init="GrpCDF_1Plt_Delta = group this; nul = [""m"",this] execVM ""f\common\@ShackTac_assignGear_delta.sqf"";";
-					description="CDF 1Plt Delta Squad Medic";
-				};
-			};
-		};
-		class Item107
-		{
-			side="WEST";
-			class Vehicles
-			{
-				items=4;
-				class Item0
-				{
-					position[]={4056.8379,24.847408,2986.8015};
-					id=341;
-					side="WEST";
-					vehicle="CDF_Soldier_GL";
-					player="PLAY CDG";
-					leader=1;
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitCDF_1Plt_D1FTL";
-					init="GrpCDF_1Plt_D1 = group this; nul = [""ftl"",this] execVM ""f\common\@ShackTac_assignGear_delta.sqf"";";
-					description="CDF 1Plt D1 Fireteam Leader";
-				};
-				class Item1
-				{
-					position[]={4058.8105,25.045927,2984.7036};
-					id=342;
-					side="WEST";
-					vehicle="CDF_Soldier_AR";
-					player="PLAY CDG";
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitCDF_1Plt_D1AR";
-					init="GrpCDF_1Plt_D1 = group this; nul = [""ar"",this] execVM ""f\common\@ShackTac_assignGear_delta.sqf"";";
-					description="CDF 1Plt D1 Automatic Rifleman";
-				};
-				class Item2
-				{
-					position[]={4061.1641,25.269852,2984.657};
-					id=343;
-					side="WEST";
-					vehicle="CDF_Soldier";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitCDF_1Plt_D1AAR";
-					init="GrpCDF_1Plt_D1 = group this; nul = [""aar"",this] execVM ""f\common\@ShackTac_assignGear_delta.sqf"";";
-					description="CDF 1Plt D1 Assistant Automatic Rifleman";
-				};
-				class Item3
-				{
-					position[]={4063.5625,25.509666,2984.6589};
-					id=344;
-					side="WEST";
-					vehicle="CDF_Soldier";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitCDF_1Plt_D1RAT";
-					init="GrpCDF_1Plt_D1 = group this; nul = [""rat"",this] execVM ""f\common\@ShackTac_assignGear_delta.sqf"";";
-					description="CDF 1Plt D1 Rifleman (AT)";
-				};
-			};
-		};
-		class Item108
-		{
-			side="WEST";
-			class Vehicles
-			{
-				items=4;
-				class Item0
-				{
-					position[]={4056.5742,24.978075,2975.6809};
-					id=345;
-					side="WEST";
-					vehicle="CDF_Soldier_GL";
-					player="PLAY CDG";
-					leader=1;
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitCDF_1Plt_D2FTL";
-					init="GrpCDF_1Plt_D2 = group this; nul = [""ftl"",this] execVM ""f\common\@ShackTac_assignGear_delta.sqf"";";
-					description="CDF 1Plt D2 Fireteam Leader";
-				};
-				class Item1
-				{
-					position[]={4058.5469,25.197567,2973.583};
-					id=346;
-					side="WEST";
-					vehicle="CDF_Soldier_AR";
-					player="PLAY CDG";
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitCDF_1Plt_D2AR";
-					init="GrpCDF_1Plt_D2 = group this; nul = [""ar"",this] execVM ""f\common\@ShackTac_assignGear_delta.sqf"";";
-					description="CDF 1Plt D2 Automatic Rifleman";
-				};
-				class Item2
-				{
-					position[]={4060.9004,25.428329,2973.5364};
-					id=347;
-					side="WEST";
-					vehicle="CDF_Soldier";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitCDF_1Plt_D2AAR";
-					init="GrpCDF_1Plt_D2 = group this; nul = [""aar"",this] execVM ""f\common\@ShackTac_assignGear_delta.sqf"";";
-					description="CDF 1Plt D2 Assistant Automatic Rifleman";
-				};
-				class Item3
-				{
-					position[]={4063.2988,25.692112,2973.5383};
-					id=348;
-					side="WEST";
-					vehicle="CDF_Soldier";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitCDF_1Plt_D2RAT";
-					init="GrpCDF_1Plt_D2 = group this; nul = [""rat"",this] execVM ""f\common\@ShackTac_assignGear_delta.sqf"";";
-					description="CDF 1Plt D2 Rifleman (AT)";
-				};
-			};
-		};
-		class Item109
-		{
-			side="WEST";
-			class Vehicles
-			{
-				items=4;
-				class Item0
-				{
-					position[]={4056.584,25.210354,2964.9353};
-					id=349;
-					side="WEST";
-					vehicle="CDF_Soldier_GL";
-					player="PLAY CDG";
-					leader=1;
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitCDF_1Plt_D3FTL";
-					init="GrpCDF_1Plt_D3 = group this; nul = [""ftl"",this] execVM ""f\common\@ShackTac_assignGear_delta.sqf"";";
-					description="CDF 1Plt D3 Fireteam Leader";
-				};
-				class Item1
-				{
-					position[]={4058.5566,25.470554,2962.8374};
-					id=350;
-					side="WEST";
-					vehicle="CDF_Soldier_AR";
-					player="PLAY CDG";
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitCDF_1Plt_D3AR";
-					init="GrpCDF_1Plt_D3 = group this; nul = [""ar"",this] execVM ""f\common\@ShackTac_assignGear_delta.sqf"";";
-					description="CDF 1Plt D3 Automatic Rifleman";
-				};
-				class Item2
-				{
-					position[]={4060.9102,25.916685,2962.7908};
-					id=351;
-					side="WEST";
-					vehicle="CDF_Soldier";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitCDF_1Plt_D3AAR";
-					init="GrpCDF_1Plt_D3 = group this; nul = [""aar"",this] execVM ""f\common\@ShackTac_assignGear_delta.sqf"";";
-					description="CDF 1Plt D3 Assistant Automatic Rifleman";
-				};
-				class Item3
-				{
-					position[]={4063.3096,26.708397,2962.7927};
-					id=352;
-					side="WEST";
-					vehicle="CDF_Soldier";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitCDF_1Plt_D3R";
-					init="GrpCDF_1Plt_D3 = group this; nul = [""r"",this] execVM ""f\common\@ShackTac_assignGear_delta.sqf"";";
-					description="CDF 1Plt D3 Rifleman";
-				};
-			};
-		};
-		class Item110
-		{
-			side="WEST";
-			class Vehicles
-			{
-				items=2;
-				class Item0
-				{
-					position[]={4075.6621,26.666214,2995.8433};
-					id=353;
-					side="WEST";
-					vehicle="CDF_Soldier_GL";
-					player="PLAY CDG";
-					leader=1;
-					rank="SERGEANT";
-					skill=0.60000002;
-					text="UnitCDF_1Plt_ESL";
-					init="GrpCDF_1Plt_Echo = group this; nul = [""sl"",this] execVM ""f\common\@ShackTac_assignGear_echo.sqf"";";
-					description="CDF 1Plt Echo Squad Leader";
-				};
-				class Item1
-				{
-					position[]={4077.6348,26.86348,2993.7454};
-					id=354;
-					side="WEST";
-					vehicle="CDF_Soldier_Medic";
-					player="PLAY CDG";
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitCDF_1Plt_EM";
-					init="GrpCDF_1Plt_Echo = group this; nul = [""m"",this] execVM ""f\common\@ShackTac_assignGear_echo.sqf"";";
-					description="CDF 1Plt Echo Squad Medic";
-				};
-			};
-		};
-		class Item111
-		{
-			side="WEST";
-			class Vehicles
-			{
-				items=4;
-				class Item0
-				{
-					position[]={4075.6445,26.759302,2986.8379};
-					id=355;
-					side="WEST";
-					vehicle="CDF_Soldier_GL";
-					player="PLAY CDG";
-					leader=1;
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitCDF_1Plt_E1FTL";
-					init="GrpCDF_1Plt_E1 = group this; nul = [""ftl"",this] execVM ""f\common\@ShackTac_assignGear_echo.sqf"";";
-					description="CDF 1Plt E1 Fireteam Leader";
-				};
-				class Item1
-				{
-					position[]={4077.6172,27.01951,2984.74};
-					id=356;
-					side="WEST";
-					vehicle="CDF_Soldier_AR";
-					player="PLAY CDG";
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitCDF_1Plt_E1AR";
-					init="GrpCDF_1Plt_E1 = group this; nul = [""ar"",this] execVM ""f\common\@ShackTac_assignGear_echo.sqf"";";
-					description="CDF 1Plt E1 Automatic Rifleman";
-				};
-				class Item2
-				{
-					position[]={4079.9707,27.256262,2984.6934};
-					id=357;
-					side="WEST";
-					vehicle="CDF_Soldier";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitCDF_1Plt_E1AAR";
-					init="GrpCDF_1Plt_E1 = group this; nul = [""aar"",this] execVM ""f\common\@ShackTac_assignGear_echo.sqf"";";
-					description="CDF 1Plt E1 Assistant Automatic Rifleman";
-				};
-				class Item3
-				{
-					position[]={4082.3691,27.614489,2984.6953};
-					id=358;
-					side="WEST";
-					vehicle="CDF_Soldier";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitCDF_1Plt_E1RAT";
-					init="GrpCDF_1Plt_E1 = group this; nul = [""rat"",this] execVM ""f\common\@ShackTac_assignGear_echo.sqf"";";
-					description="CDF 1Plt E1 Rifleman (AT)";
-				};
-			};
-		};
-		class Item112
-		{
-			side="WEST";
-			class Vehicles
-			{
-				items=4;
-				class Item0
-				{
-					position[]={4075.3809,27.102654,2975.7173};
-					id=359;
-					side="WEST";
-					vehicle="CDF_Soldier_GL";
-					player="PLAY CDG";
-					leader=1;
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitCDF_1Plt_E2FTL";
-					init="GrpCDF_1Plt_E2 = group this; nul = [""ftl"",this] execVM ""f\common\@ShackTac_assignGear_echo.sqf"";";
-					description="CDF 1Plt E2 Fireteam Leader";
-				};
-				class Item1
-				{
-					position[]={4077.3535,27.465258,2973.6194};
-					id=360;
-					side="WEST";
-					vehicle="CDF_Soldier_AR";
-					player="PLAY CDG";
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitCDF_1Plt_E2AR";
-					init="GrpCDF_1Plt_E2 = group this; nul = [""ar"",this] execVM ""f\common\@ShackTac_assignGear_echo.sqf"";";
-					description="CDF 1Plt E2 Automatic Rifleman";
-				};
-				class Item2
-				{
-					position[]={4079.707,27.750479,2973.5728};
-					id=361;
-					side="WEST";
-					vehicle="CDF_Soldier";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitCDF_1Plt_E2AAR";
-					init="GrpCDF_1Plt_E2 = group this; nul = [""aar"",this] execVM ""f\common\@ShackTac_assignGear_echo.sqf"";";
-					description="CDF 1Plt E2 Assistant Automatic Rifleman";
-				};
-				class Item3
-				{
-					position[]={4082.1055,28.16448,2973.5747};
-					id=362;
-					side="WEST";
-					vehicle="CDF_Soldier";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitCDF_1Plt_E2RAT";
-					init="GrpCDF_1Plt_E2 = group this; nul = [""rat"",this] execVM ""f\common\@ShackTac_assignGear_echo.sqf"";";
-					description="CDF 1Plt E2 Rifleman (AT)";
-				};
-			};
-		};
-		class Item113
-		{
-			side="WEST";
-			class Vehicles
-			{
-				items=4;
-				class Item0
-				{
-					position[]={4075.3906,27.660582,2964.9717};
-					id=363;
-					side="WEST";
-					vehicle="CDF_Soldier_GL";
-					player="PLAY CDG";
-					leader=1;
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitCDF_1Plt_E3FTL";
-					init="GrpCDF_1Plt_E3 = group this; nul = [""ftl"",this] execVM ""f\common\@ShackTac_assignGear_echo.sqf"";";
-					description="CDF 1Plt E3 Fireteam Leader";
-				};
-				class Item1
-				{
-					position[]={4079.7168,28.45962,2962.8271};
-					id=365;
-					side="WEST";
-					vehicle="CDF_Soldier";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitCDF_1Plt_E3AAR";
-					init="GrpCDF_1Plt_E3 = group this; nul = [""aar"",this] execVM ""f\common\@ShackTac_assignGear_echo.sqf"";";
-					description="CDF 1Plt E3 Assistant Automatic Rifleman";
-				};
-				class Item2
-				{
-					position[]={4082.1162,28.946394,2962.8291};
-					id=366;
-					side="WEST";
-					vehicle="CDF_Soldier";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitCDF_1Plt_E3R";
-					init="GrpCDF_1Plt_E3 = group this; nul = [""r"",this] execVM ""f\common\@ShackTac_assignGear_echo.sqf"";";
-					description="CDF 1Plt E3 Rifleman";
-				};
-				class Item3
-				{
-					position[]={4077.3633,28.103323,2962.8738};
-					id=364;
-					side="WEST";
-					vehicle="CDF_Soldier_AR";
-					player="PLAY CDG";
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitCDF_1Plt_E3AR";
-					init="GrpCDF_1Plt_E3 = group this; nul = [""ar"",this] execVM ""f\common\@ShackTac_assignGear_echo.sqf"";";
-					description="CDF 1Plt E3 Automatic Rifleman";
-				};
-			};
-		};
-		class Item114
-		{
-			side="WEST";
-			class Vehicles
-			{
-				items=3;
-				class Item0
-				{
-					position[]={4096.6201,29.83345,2986.9773};
-					id=367;
-					side="WEST";
-					vehicle="CDF_Soldier_MG";
-					player="PLAY CDG";
-					leader=1;
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitCDF_MMG1G";
-					init="GrpCDF_MMG1 = group this; nul = [""mmgg"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="CDF Medium MG Team 1 Gunner";
-				};
-				class Item1
-				{
-					position[]={4098.5469,30.378824,2984.4956};
-					id=368;
-					side="WEST";
-					vehicle="CDF_Soldier";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitCDF_MMG1AG";
-					init="GrpCDF_MMG1 = group this; nul = [""mmgag"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="CDF Medium MG Team 1 Assistant Gunner";
-				};
-				class Item2
-				{
-					position[]={4100.9004,30.905233,2984.449};
-					id=369;
-					side="WEST";
-					vehicle="CDF_Soldier";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitCDF_MMG1AM";
-					init="GrpCDF_MMG1 = group this; nul = [""mmgam"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="CDF Medium MG Team 1 Ammo Man";
-				};
-			};
-		};
-		class Item115
-		{
-			side="WEST";
-			class Vehicles
-			{
-				items=3;
-				class Item0
-				{
-					position[]={4096.7227,30.853064,2975.489};
-					id=370;
-					side="WEST";
-					vehicle="CDF_Soldier_MG";
-					player="PLAY CDG";
-					leader=1;
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitCDF_MMG2G";
-					init="GrpCDF_MMG2 = group this; nul = [""mmgg"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="CDF Medium MG Team 2 Gunner";
-				};
-				class Item1
-				{
-					position[]={4098.6953,31.519093,2973.3911};
-					id=371;
-					side="WEST";
-					vehicle="CDF_Soldier";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitCDF_MMG2AG";
-					init="GrpCDF_MMG2 = group this; nul = [""mmgag"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="CDF Medium MG Team 2 Assistant Gunner";
-				};
-				class Item2
-				{
-					position[]={4101.0488,32.102848,2973.3445};
-					id=372;
-					side="WEST";
-					vehicle="CDF_Soldier";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitCDF_MMG2AM";
-					init="GrpCDF_MMG2 = group this; nul = [""mmgam"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="CDF Medium MG Team 2 Ammo Man";
-				};
-			};
-		};
-		class Item116
-		{
-			side="WEST";
-			class Vehicles
-			{
-				items=3;
-				class Item0
-				{
-					position[]={4096.6484,32.049145,2964.9731};
-					id=373;
-					side="WEST";
-					vehicle="CDF_Soldier_MG";
-					player="PLAY CDG";
-					leader=1;
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitCDF_MMG3G";
-					init="GrpCDF_MMG3 = group this; nul = [""mmgg"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="CDF Medium MG Team 3 Gunner";
-				};
-				class Item1
-				{
-					position[]={4098.6211,32.795292,2962.8752};
-					id=374;
-					side="WEST";
-					vehicle="CDF_Soldier";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitCDF_MMG3AG";
-					init="GrpCDF_MMG3 = group this; nul = [""mmgag"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="CDF Medium MG Team 3 Assistant Gunner";
-				};
-				class Item2
-				{
-					position[]={4100.9746,33.414944,2962.8286};
-					id=375;
-					side="WEST";
-					vehicle="CDF_Soldier";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitCDF_MMG3AM";
-					init="GrpCDF_MMG3 = group this; nul = [""mmgam"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="CDF Medium MG Team 3 Ammo Man";
-				};
-			};
-		};
-		class Item117
-		{
-			side="WEST";
-			class Vehicles
-			{
-				items=3;
-				class Item0
-				{
-					position[]={4113.4473,34.386131,2986.5144};
-					id=376;
-					side="WEST";
-					vehicle="CDF_Soldier_MG";
-					player="PLAY CDG";
-					leader=1;
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitCDF_HMG1G";
-					init="GrpCDF_HMG1 = group this; nul = [""hmgg"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="CDF Heavy MG Team 1 Gunner";
-				};
-				class Item1
-				{
-					position[]={4115.4199,35.246922,2984.4165};
-					id=377;
-					side="WEST";
-					vehicle="CDF_Soldier";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitCDF_HMG1AG";
-					init="GrpCDF_HMG1 = group this; nul = [""hmgag"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="CDF Heavy MG Team 1 Assistant Gunner";
-				};
-				class Item2
-				{
-					position[]={4117.7734,36.071114,2984.3699};
-					id=378;
-					side="WEST";
-					vehicle="CDF_Soldier";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitCDF_HMG1AM";
-					init="GrpCDF_HMG1 = group this; nul = [""hmgam"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="CDF Heavy MG Team 1 Ammo Man";
-				};
-			};
-		};
-		class Item118
-		{
-			side="WEST";
-			class Vehicles
-			{
-				items=3;
-				class Item0
-				{
-					position[]={4113.5957,35.493618,2975.4099};
-					id=379;
-					side="WEST";
-					vehicle="CDF_Soldier_MG";
-					player="PLAY CDG";
-					leader=1;
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitCDF_HMG2G";
-					init="GrpCDF_HMG2 = group this; nul = [""hmgg"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="CDF Heavy MG Team 2 Gunner";
-				};
-				class Item1
-				{
-					position[]={4115.5684,36.317425,2973.312};
-					id=380;
-					side="WEST";
-					vehicle="CDF_Soldier";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitCDF_HMG2AG";
-					init="GrpCDF_HMG2 = group this; nul = [""hmgag"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="CDF Heavy MG Team 2 Assistant Gunner";
-				};
-				class Item2
-				{
-					position[]={4117.9219,37.053047,2973.2654};
-					id=381;
-					side="WEST";
-					vehicle="CDF_Soldier";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitCDF_HMG2AM";
-					init="GrpCDF_HMG2 = group this; nul = [""hmgam"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="CDF Heavy MG Team 2 Ammo Man";
-				};
-			};
-		};
-		class Item119
-		{
-			side="WEST";
-			class Vehicles
-			{
-				items=3;
-				class Item0
-				{
-					position[]={4113.5215,36.679329,2964.894};
-					id=382;
-					side="WEST";
-					vehicle="CDF_Soldier_MG";
-					player="PLAY CDG";
-					leader=1;
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitCDF_HMG3G";
-					init="GrpCDF_HMG3 = group this; nul = [""hmgg"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="CDF Heavy MG Team 3 Gunner";
-				};
-				class Item1
-				{
-					position[]={4115.4941,37.464935,2962.7961};
-					id=383;
-					side="WEST";
-					vehicle="CDF_Soldier";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitCDF_HMG3AG";
-					init="GrpCDF_HMG3 = group this; nul = [""hmgag"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="CDF Heavy MG Team 3 Assistant Gunner";
-				};
-				class Item2
-				{
-					position[]={4117.8477,38.100838,2962.7495};
-					id=384;
-					side="WEST";
-					vehicle="CDF_Soldier";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitCDF_HMG3AM";
-					init="GrpCDF_HMG3 = group this; nul = [""hmgam"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="CDF Heavy MG Team 3 Ammo Man";
-				};
-			};
-		};
-		class Item120
-		{
-			side="WEST";
-			class Vehicles
-			{
-				items=3;
-				class Item0
-				{
-					position[]={4129.3496,39.395679,2986.7571};
-					id=385;
-					side="WEST";
-					vehicle="CDF_Soldier_RPG";
-					player="PLAY CDG";
-					leader=1;
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitCDF_MAT1G";
-					init="GrpCDF_MAT1 = group this; nul = [""matg"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="CDF Medium AT Team 1 Gunner";
-				};
-				class Item1
-				{
-					position[]={4131.3213,39.832008,2984.6592};
-					id=386;
-					side="WEST";
-					vehicle="CDF_Soldier";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitCDF_MAT1AG";
-					init="GrpCDF_MAT1 = group this; nul = [""matag"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="CDF Medium AT Team 1 Assistant Gunner";
-				};
-				class Item2
-				{
-					position[]={4133.6748,40.139355,2984.6125};
-					id=387;
-					side="WEST";
-					vehicle="CDF_Soldier";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitCDF_MAT1AM";
-					init="GrpCDF_MAT1 = group this; nul = [""matam"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="CDF Medium AT Team 1 Ammo Man";
-				};
-			};
-		};
-		class Item121
-		{
-			side="WEST";
-			class Vehicles
-			{
-				items=3;
-				class Item0
-				{
-					position[]={4129.542,39.834751,2974.8716};
-					id=388;
-					side="WEST";
-					vehicle="CDF_Soldier_RPG";
-					player="PLAY CDG";
-					leader=1;
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitCDF_MAT2G";
-					init="GrpCDF_MAT2 = group this; nul = [""matg"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="CDF Medium AT Team 2 Gunner";
-				};
-				class Item1
-				{
-					position[]={4131.5137,40.183285,2972.7737};
-					id=389;
-					side="WEST";
-					vehicle="CDF_Soldier";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitCDF_MAT2AG";
-					init="GrpCDF_MAT2 = group this; nul = [""matag"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="CDF Medium AT Team 2 Assistant Gunner";
-				};
-				class Item2
-				{
-					position[]={4133.8672,40.443577,2972.7271};
-					id=390;
-					side="WEST";
-					vehicle="CDF_Soldier";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitCDF_MAT2AM";
-					init="GrpCDF_MAT2 = group this; nul = [""matam"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="CDF Medium AT Team 2 Ammo Man";
-				};
-			};
-		};
-		class Item122
-		{
-			side="WEST";
-			class Vehicles
-			{
-				items=3;
-				class Item0
-				{
-					position[]={4129.6074,40.337208,2964.6729};
-					id=391;
-					side="WEST";
-					vehicle="CDF_Soldier_RPG";
-					player="PLAY CDG";
-					leader=1;
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitCDF_MAT3G";
-					init="GrpCDF_MAT3 = group this; nul = [""matg"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="CDF Medium AT Team 3 Gunner";
-				};
-				class Item1
-				{
-					position[]={4131.5791,40.65604,2962.575};
-					id=392;
-					side="WEST";
-					vehicle="CDF_Soldier";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitCDF_MAT3AG";
-					init="GrpCDF_MAT3 = group this; nul = [""matag"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="CDF Medium AT Team 3 Assistant Gunner";
-				};
-				class Item2
-				{
-					position[]={4133.9326,40.823586,2962.5283};
-					id=393;
-					side="WEST";
-					vehicle="CDF_Soldier";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitCDF_MAT3AM";
-					init="GrpCDF_MAT3 = group this; nul = [""matam"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="CDF Medium AT Team 3 Ammo Man";
-				};
-			};
-		};
-		class Item123
-		{
-			side="WEST";
-			class Vehicles
-			{
-				items=3;
-				class Item0
-				{
-					position[]={4144.8701,40.937653,2986.4941};
-					id=394;
-					side="WEST";
-					vehicle="CDF_Soldier_RPG";
-					player="PLAY CDG";
-					leader=1;
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitCDF_HAT1G";
-					init="GrpCDF_HAT1 = group this; nul = [""hatg"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="CDF Heavy AT Team 1 Gunner";
-				};
-				class Item1
-				{
-					position[]={4146.8428,40.91917,2984.3962};
-					id=395;
-					side="WEST";
-					vehicle="CDF_Soldier";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitCDF_HAT1AG";
-					init="GrpCDF_HAT1 = group this; nul = [""hatag"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="CDF Heavy AT Team 1 Assistant Gunner";
-				};
-				class Item2
-				{
-					position[]={4149.1963,40.87257,2984.3496};
-					id=396;
-					side="WEST";
-					vehicle="CDF_Soldier";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitCDF_HAT1AM";
-					init="GrpCDF_HAT1 = group this; nul = [""hatam"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="CDF Heavy AT Team 1 Ammo Man";
-				};
-			};
-		};
-		class Item124
-		{
-			side="WEST";
-			class Vehicles
-			{
-				items=3;
-				class Item0
-				{
-					position[]={4144.9531,41.055344,2974.5586};
-					id=397;
-					side="WEST";
-					vehicle="CDF_Soldier_RPG";
-					player="PLAY CDG";
-					leader=1;
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitCDF_HAT2G";
-					init="GrpCDF_HAT2 = group this; nul = [""hatg"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="CDF Heavy AT Team 2 Gunner";
-				};
-				class Item1
-				{
-					position[]={4146.9258,41.036873,2972.4607};
-					id=398;
-					side="WEST";
-					vehicle="CDF_Soldier";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitCDF_HAT2AG";
-					init="GrpCDF_HAT2 = group this; nul = [""hatag"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="CDF Heavy AT Team 2 Assistant Gunner";
-				};
-				class Item2
-				{
-					position[]={4149.2793,40.990269,2972.4141};
-					id=399;
-					side="WEST";
-					vehicle="CDF_Soldier";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitCDF_HAT2AM";
-					init="GrpCDF_HAT2 = group this; nul = [""hatam"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="CDF Heavy AT Team 2 Ammo Man";
-				};
-			};
-		};
-		class Item125
-		{
-			side="WEST";
-			class Vehicles
-			{
-				items=3;
-				class Item0
-				{
-					position[]={4145.0352,41.159317,2964.4812};
-					id=400;
-					side="WEST";
-					vehicle="CDF_Soldier_RPG";
-					player="PLAY CDG";
-					leader=1;
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitCDF_HAT3G";
-					init="GrpCDF_HAT3 = group this; nul = [""hatg"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="CDF Heavy AT Team 3 Gunner";
-				};
-				class Item1
-				{
-					position[]={4147.0078,41.142094,2962.3833};
-					id=401;
-					side="WEST";
-					vehicle="CDF_Soldier";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitCDF_HAT3AG";
-					init="GrpCDF_HAT3 = group this; nul = [""hatag"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="CDF Heavy AT Team 3 Assistant Gunner";
-				};
-				class Item2
-				{
-					position[]={4149.3613,41.089401,2962.3367};
-					id=402;
-					side="WEST";
-					vehicle="CDF_Soldier";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitCDF_HAT3AM";
-					init="GrpCDF_HAT3 = group this; nul = [""hatam"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="CDF Heavy AT Team 3 Ammo Man";
-				};
-			};
-		};
-		class Item126
-		{
-			side="WEST";
-			class Vehicles
-			{
-				items=2;
-				class Item0
-				{
-					position[]={4160.1152,38.930843,2986.3809};
-					id=403;
-					side="WEST";
-					vehicle="CDF_Soldier_Sniper";
-					player="PLAY CDG";
-					leader=1;
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitCDF_ST1SN";
-					init="GrpCDF_ST1 = group this; nul = [""sn"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="CDF Sniper Team 1 Sniper";
-				};
-				class Item1
-				{
-					position[]={4162.0879,38.262646,2984.283};
-					id=404;
-					side="WEST";
-					vehicle="CDF_Soldier_Spotter";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitCDF_ST1SP";
-					init="GrpCDF_ST1 = group this; nul = [""sp"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="CDF Sniper Team 1 Spotter";
-				};
-			};
-		};
-		class Item127
-		{
 			side="GUER";
 			class Vehicles
 			{
@@ -6215,7 +4509,7 @@ class Mission
 				class Item0
 				{
 					position[]={4135.4536,43.290577,2872.4224};
-					id=405;
+					id=293;
 					side="GUER";
 					vehicle="GUE_Soldier_GL";
 					player="PLAY CDG";
@@ -6229,7 +4523,7 @@ class Mission
 				class Item1
 				{
 					position[]={4138.3418,42.890499,2870.0393};
-					id=406;
+					id=294;
 					side="GUER";
 					vehicle="GUE_Soldier_3";
 					player="PLAY CDG";
@@ -6242,7 +4536,7 @@ class Mission
 				class Item2
 				{
 					position[]={4140.6865,42.878677,2869.9578};
-					id=407;
+					id=295;
 					side="GUER";
 					vehicle="GUE_Soldier_Medic";
 					player="PLAY CDG";
@@ -6255,7 +4549,7 @@ class Mission
 				class Item3
 				{
 					position[]={4143.2056,42.821709,2869.9211};
-					id=408;
+					id=296;
 					side="GUER";
 					vehicle="GUE_Soldier_3";
 					player="PLAY CDG";
@@ -6266,7 +4560,7 @@ class Mission
 				};
 			};
 		};
-		class Item128
+		class Item94
 		{
 			side="GUER";
 			class Vehicles
@@ -6275,7 +4569,7 @@ class Mission
 				class Item0
 				{
 					position[]={4110.5703,32.50629,2841.1477};
-					id=409;
+					id=297;
 					side="GUER";
 					vehicle="GUE_Soldier_GL";
 					player="PLAY CDG";
@@ -6289,7 +4583,7 @@ class Mission
 				class Item1
 				{
 					position[]={4113.4585,32.833649,2838.7646};
-					id=410;
+					id=298;
 					side="GUER";
 					vehicle="GUE_Soldier_Medic";
 					player="PLAY CDG";
@@ -6301,7 +4595,7 @@ class Mission
 				};
 			};
 		};
-		class Item129
+		class Item95
 		{
 			side="GUER";
 			class Vehicles
@@ -6310,7 +4604,7 @@ class Mission
 				class Item0
 				{
 					position[]={4110.4717,30.189476,2831.5676};
-					id=411;
+					id=299;
 					side="GUER";
 					vehicle="GUE_Soldier_GL";
 					player="PLAY CDG";
@@ -6324,7 +4618,7 @@ class Mission
 				class Item1
 				{
 					position[]={4113.3599,30.188377,2829.1846};
-					id=412;
+					id=300;
 					side="GUER";
 					vehicle="GUE_Soldier_AR";
 					player="PLAY CDG";
@@ -6337,7 +4631,7 @@ class Mission
 				class Item2
 				{
 					position[]={4115.7046,30.719316,2829.103};
-					id=413;
+					id=301;
 					side="GUER";
 					vehicle="GUE_Soldier_3";
 					player="PLAY CDG";
@@ -6349,7 +4643,7 @@ class Mission
 				class Item3
 				{
 					position[]={4118.2236,31.309572,2829.0664};
-					id=414;
+					id=302;
 					side="GUER";
 					vehicle="GUE_Soldier_3";
 					player="PLAY CDG";
@@ -6360,7 +4654,7 @@ class Mission
 				};
 			};
 		};
-		class Item130
+		class Item96
 		{
 			side="GUER";
 			class Vehicles
@@ -6369,7 +4663,7 @@ class Mission
 				class Item0
 				{
 					position[]={4110.5884,26.685654,2818.8701};
-					id=415;
+					id=303;
 					side="GUER";
 					vehicle="GUE_Soldier_GL";
 					player="PLAY CDG";
@@ -6383,7 +4677,7 @@ class Mission
 				class Item1
 				{
 					position[]={4113.4766,27.32753,2816.4871};
-					id=416;
+					id=304;
 					side="GUER";
 					vehicle="GUE_Soldier_AR";
 					player="PLAY CDG";
@@ -6396,7 +4690,7 @@ class Mission
 				class Item2
 				{
 					position[]={4115.8213,27.711111,2816.4055};
-					id=417;
+					id=305;
 					side="GUER";
 					vehicle="GUE_Soldier_3";
 					player="PLAY CDG";
@@ -6408,7 +4702,7 @@ class Mission
 				class Item3
 				{
 					position[]={4118.3403,28.11602,2816.3689};
-					id=418;
+					id=306;
 					side="GUER";
 					vehicle="GUE_Soldier_3";
 					player="PLAY CDG";
@@ -6419,7 +4713,7 @@ class Mission
 				};
 			};
 		};
-		class Item131
+		class Item97
 		{
 			side="GUER";
 			class Vehicles
@@ -6428,7 +4722,7 @@ class Mission
 				class Item0
 				{
 					position[]={4110.6479,25.478254,2807.481};
-					id=419;
+					id=307;
 					side="GUER";
 					vehicle="GUE_Soldier_GL";
 					player="PLAY CDG";
@@ -6442,7 +4736,7 @@ class Mission
 				class Item1
 				{
 					position[]={4113.5361,25.102009,2805.0979};
-					id=420;
+					id=308;
 					side="GUER";
 					vehicle="GUE_Soldier_AR";
 					player="PLAY CDG";
@@ -6455,7 +4749,7 @@ class Mission
 				class Item2
 				{
 					position[]={4115.8809,25.353939,2805.0164};
-					id=421;
+					id=309;
 					side="GUER";
 					vehicle="GUE_Soldier_3";
 					player="PLAY CDG";
@@ -6467,7 +4761,7 @@ class Mission
 				class Item3
 				{
 					position[]={4118.3999,26.043127,2804.9797};
-					id=422;
+					id=310;
 					side="GUER";
 					vehicle="GUE_Soldier_3";
 					player="PLAY CDG";
@@ -6478,7 +4772,7 @@ class Mission
 				};
 			};
 		};
-		class Item132
+		class Item98
 		{
 			side="GUER";
 			class Vehicles
@@ -6487,7 +4781,7 @@ class Mission
 				class Item0
 				{
 					position[]={4131.4458,34.576542,2841.699};
-					id=423;
+					id=311;
 					side="GUER";
 					vehicle="GUE_Soldier_GL";
 					player="PLAY CDG";
@@ -6501,7 +4795,7 @@ class Mission
 				class Item1
 				{
 					position[]={4134.334,33.067261,2839.3159};
-					id=424;
+					id=312;
 					side="GUER";
 					vehicle="GUE_Soldier_Medic";
 					player="PLAY CDG";
@@ -6513,7 +4807,7 @@ class Mission
 				};
 			};
 		};
-		class Item133
+		class Item99
 		{
 			side="GUER";
 			class Vehicles
@@ -6522,7 +4816,7 @@ class Mission
 				class Item0
 				{
 					position[]={4131.3472,32.117203,2832.1189};
-					id=425;
+					id=313;
 					side="GUER";
 					vehicle="GUE_Soldier_GL";
 					player="PLAY CDG";
@@ -6536,7 +4830,7 @@ class Mission
 				class Item1
 				{
 					position[]={4134.2354,30.271124,2829.7358};
-					id=426;
+					id=314;
 					side="GUER";
 					vehicle="GUE_Soldier_AR";
 					player="PLAY CDG";
@@ -6549,7 +4843,7 @@ class Mission
 				class Item2
 				{
 					position[]={4136.5801,29.043718,2829.6543};
-					id=427;
+					id=315;
 					side="GUER";
 					vehicle="GUE_Soldier_3";
 					player="PLAY CDG";
@@ -6561,7 +4855,7 @@ class Mission
 				class Item3
 				{
 					position[]={4139.0991,27.730217,2829.6177};
-					id=428;
+					id=316;
 					side="GUER";
 					vehicle="GUE_Soldier_3";
 					player="PLAY CDG";
@@ -6572,7 +4866,7 @@ class Mission
 				};
 			};
 		};
-		class Item134
+		class Item100
 		{
 			side="GUER";
 			class Vehicles
@@ -6581,7 +4875,7 @@ class Mission
 				class Item0
 				{
 					position[]={4131.4639,27.376457,2819.4214};
-					id=429;
+					id=317;
 					side="GUER";
 					vehicle="GUE_Soldier_GL";
 					player="PLAY CDG";
@@ -6595,7 +4889,7 @@ class Mission
 				class Item1
 				{
 					position[]={4134.3521,25.72279,2817.0383};
-					id=430;
+					id=318;
 					side="GUER";
 					vehicle="GUE_Soldier_AR";
 					player="PLAY CDG";
@@ -6608,7 +4902,7 @@ class Mission
 				class Item2
 				{
 					position[]={4136.6968,25.306906,2816.9568};
-					id=431;
+					id=319;
 					side="GUER";
 					vehicle="GUE_Soldier_3";
 					player="PLAY CDG";
@@ -6620,7 +4914,7 @@ class Mission
 				class Item3
 				{
 					position[]={4139.2158,24.885521,2816.9202};
-					id=432;
+					id=320;
 					side="GUER";
 					vehicle="GUE_Soldier_3";
 					player="PLAY CDG";
@@ -6631,7 +4925,7 @@ class Mission
 				};
 			};
 		};
-		class Item135
+		class Item101
 		{
 			side="GUER";
 			class Vehicles
@@ -6640,7 +4934,7 @@ class Mission
 				class Item0
 				{
 					position[]={4131.5234,25.142326,2808.0322};
-					id=433;
+					id=321;
 					side="GUER";
 					vehicle="GUE_Soldier_GL";
 					player="PLAY CDG";
@@ -6654,7 +4948,7 @@ class Mission
 				class Item1
 				{
 					position[]={4134.4116,22.341059,2805.6492};
-					id=434;
+					id=322;
 					side="GUER";
 					vehicle="GUE_Soldier_AR";
 					player="PLAY CDG";
@@ -6667,7 +4961,7 @@ class Mission
 				class Item2
 				{
 					position[]={4136.7563,20.988937,2805.5676};
-					id=435;
+					id=323;
 					side="GUER";
 					vehicle="GUE_Soldier_3";
 					player="PLAY CDG";
@@ -6679,7 +4973,7 @@ class Mission
 				class Item3
 				{
 					position[]={4139.2754,19.560595,2805.531};
-					id=436;
+					id=324;
 					side="GUER";
 					vehicle="GUE_Soldier_3";
 					player="PLAY CDG";
@@ -6690,7 +4984,7 @@ class Mission
 				};
 			};
 		};
-		class Item136
+		class Item102
 		{
 			side="GUER";
 			class Vehicles
@@ -6699,7 +4993,7 @@ class Mission
 				class Item0
 				{
 					position[]={4153.0791,34.119961,2841.3933};
-					id=437;
+					id=325;
 					side="GUER";
 					vehicle="GUE_Soldier_GL";
 					player="PLAY CDG";
@@ -6713,7 +5007,7 @@ class Mission
 				class Item1
 				{
 					position[]={4155.9673,32.689659,2839.0103};
-					id=438;
+					id=326;
 					side="GUER";
 					vehicle="GUE_Soldier_Medic";
 					player="PLAY CDG";
@@ -6725,7 +5019,7 @@ class Mission
 				};
 			};
 		};
-		class Item137
+		class Item103
 		{
 			side="GUER";
 			class Vehicles
@@ -6734,7 +5028,7 @@ class Mission
 				class Item0
 				{
 					position[]={4152.9805,30.058321,2831.8132};
-					id=439;
+					id=327;
 					side="GUER";
 					vehicle="GUE_Soldier_GL";
 					player="PLAY CDG";
@@ -6748,7 +5042,7 @@ class Mission
 				class Item1
 				{
 					position[]={4155.8687,28.667826,2829.4302};
-					id=440;
+					id=328;
 					side="GUER";
 					vehicle="GUE_Soldier_AR";
 					player="PLAY CDG";
@@ -6761,7 +5055,7 @@ class Mission
 				class Item2
 				{
 					position[]={4158.2134,28.353872,2829.3486};
-					id=441;
+					id=329;
 					side="GUER";
 					vehicle="GUE_Soldier_3";
 					player="PLAY CDG";
@@ -6773,7 +5067,7 @@ class Mission
 				class Item3
 				{
 					position[]={4160.7324,28.736156,2829.312};
-					id=442;
+					id=330;
 					side="GUER";
 					vehicle="GUE_Soldier_3";
 					player="PLAY CDG";
@@ -6784,7 +5078,7 @@ class Mission
 				};
 			};
 		};
-		class Item138
+		class Item104
 		{
 			side="GUER";
 			class Vehicles
@@ -6793,7 +5087,7 @@ class Mission
 				class Item0
 				{
 					position[]={4153.0972,24.333012,2819.1157};
-					id=443;
+					id=331;
 					side="GUER";
 					vehicle="GUE_Soldier_GL";
 					player="PLAY CDG";
@@ -6807,7 +5101,7 @@ class Mission
 				class Item1
 				{
 					position[]={4155.9854,23.507599,2816.7327};
-					id=444;
+					id=332;
 					side="GUER";
 					vehicle="GUE_Soldier_AR";
 					player="PLAY CDG";
@@ -6820,7 +5114,7 @@ class Mission
 				class Item2
 				{
 					position[]={4158.3301,23.411999,2816.6511};
-					id=445;
+					id=333;
 					side="GUER";
 					vehicle="GUE_Soldier_3";
 					player="PLAY CDG";
@@ -6832,7 +5126,7 @@ class Mission
 				class Item3
 				{
 					position[]={4160.8491,23.622322,2816.6145};
-					id=446;
+					id=334;
 					side="GUER";
 					vehicle="GUE_Soldier_3";
 					player="PLAY CDG";
@@ -6843,7 +5137,7 @@ class Mission
 				};
 			};
 		};
-		class Item139
+		class Item105
 		{
 			side="GUER";
 			class Vehicles
@@ -6852,7 +5146,7 @@ class Mission
 				class Item0
 				{
 					position[]={4153.1567,19.978928,2807.7266};
-					id=447;
+					id=335;
 					side="GUER";
 					vehicle="GUE_Soldier_GL";
 					player="PLAY CDG";
@@ -6866,7 +5160,7 @@ class Mission
 				class Item1
 				{
 					position[]={4156.0449,19.700848,2805.3435};
-					id=448;
+					id=336;
 					side="GUER";
 					vehicle="GUE_Soldier_AR";
 					player="PLAY CDG";
@@ -6879,7 +5173,7 @@ class Mission
 				class Item2
 				{
 					position[]={4158.3896,19.938391,2805.262};
-					id=449;
+					id=337;
 					side="GUER";
 					vehicle="GUE_Soldier_3";
 					player="PLAY CDG";
@@ -6891,7 +5185,7 @@ class Mission
 				class Item3
 				{
 					position[]={4160.9087,20.506258,2805.2253};
-					id=450;
+					id=338;
 					side="GUER";
 					vehicle="GUE_Soldier_3";
 					player="PLAY CDG";
@@ -6902,7 +5196,7 @@ class Mission
 				};
 			};
 		};
-		class Item140
+		class Item106
 		{
 			side="GUER";
 			class Vehicles
@@ -6911,7 +5205,7 @@ class Mission
 				class Item0
 				{
 					position[]={4174.7148,32.570763,2841.2839};
-					id=451;
+					id=339;
 					side="GUER";
 					vehicle="GUE_Soldier_GL";
 					player="PLAY CDG";
@@ -6925,7 +5219,7 @@ class Mission
 				class Item1
 				{
 					position[]={4177.603,32.113319,2838.9009};
-					id=452;
+					id=340;
 					side="GUER";
 					vehicle="GUE_Soldier_Medic";
 					player="PLAY CDG";
@@ -6937,7 +5231,7 @@ class Mission
 				};
 			};
 		};
-		class Item141
+		class Item107
 		{
 			side="GUER";
 			class Vehicles
@@ -6946,7 +5240,7 @@ class Mission
 				class Item0
 				{
 					position[]={4174.6162,30.446501,2831.7039};
-					id=453;
+					id=341;
 					side="GUER";
 					vehicle="GUE_Soldier_GL";
 					player="PLAY CDG";
@@ -6960,7 +5254,7 @@ class Mission
 				class Item1
 				{
 					position[]={4177.5044,30.514843,2829.3208};
-					id=454;
+					id=342;
 					side="GUER";
 					vehicle="GUE_Soldier_AR";
 					player="PLAY CDG";
@@ -6973,7 +5267,7 @@ class Mission
 				class Item2
 				{
 					position[]={4179.8491,30.999861,2829.2393};
-					id=455;
+					id=343;
 					side="GUER";
 					vehicle="GUE_Soldier_3";
 					player="PLAY CDG";
@@ -6985,7 +5279,7 @@ class Mission
 				class Item3
 				{
 					position[]={4182.3682,31.802467,2829.2026};
-					id=456;
+					id=344;
 					side="GUER";
 					vehicle="GUE_Soldier_3";
 					player="PLAY CDG";
@@ -6996,7 +5290,7 @@ class Mission
 				};
 			};
 		};
-		class Item142
+		class Item108
 		{
 			side="GUER";
 			class Vehicles
@@ -7005,7 +5299,7 @@ class Mission
 				class Item0
 				{
 					position[]={4174.7329,28.224373,2819.0063};
-					id=457;
+					id=345;
 					side="GUER";
 					vehicle="GUE_Soldier_GL";
 					player="PLAY CDG";
@@ -7019,7 +5313,7 @@ class Mission
 				class Item1
 				{
 					position[]={4177.6211,29.073469,2816.6233};
-					id=458;
+					id=346;
 					side="GUER";
 					vehicle="GUE_Soldier_AR";
 					player="PLAY CDG";
@@ -7032,7 +5326,7 @@ class Mission
 				class Item2
 				{
 					position[]={4179.9658,29.911032,2816.5417};
-					id=459;
+					id=347;
 					side="GUER";
 					vehicle="GUE_Soldier_3";
 					player="PLAY CDG";
@@ -7044,7 +5338,7 @@ class Mission
 				class Item3
 				{
 					position[]={4182.4849,30.988979,2816.5051};
-					id=460;
+					id=348;
 					side="GUER";
 					vehicle="GUE_Soldier_3";
 					player="PLAY CDG";
@@ -7055,7 +5349,7 @@ class Mission
 				};
 			};
 		};
-		class Item143
+		class Item109
 		{
 			side="GUER";
 			class Vehicles
@@ -7064,7 +5358,7 @@ class Mission
 				class Item0
 				{
 					position[]={4174.7925,26.681517,2807.6172};
-					id=461;
+					id=349;
 					side="GUER";
 					vehicle="GUE_Soldier_GL";
 					player="PLAY CDG";
@@ -7078,7 +5372,7 @@ class Mission
 				class Item1
 				{
 					position[]={4177.6807,27.929907,2805.2341};
-					id=462;
+					id=350;
 					side="GUER";
 					vehicle="GUE_Soldier_AR";
 					player="PLAY CDG";
@@ -7091,7 +5385,7 @@ class Mission
 				class Item2
 				{
 					position[]={4180.0254,29.072075,2805.1526};
-					id=463;
+					id=351;
 					side="GUER";
 					vehicle="GUE_Soldier_3";
 					player="PLAY CDG";
@@ -7103,7 +5397,7 @@ class Mission
 				class Item3
 				{
 					position[]={4182.5444,30.203163,2805.116};
-					id=464;
+					id=352;
 					side="GUER";
 					vehicle="GUE_Soldier_3";
 					player="PLAY CDG";
@@ -7114,7 +5408,7 @@ class Mission
 				};
 			};
 		};
-		class Item144
+		class Item110
 		{
 			side="GUER";
 			class Vehicles
@@ -7123,7 +5417,7 @@ class Mission
 				class Item0
 				{
 					position[]={4195.1958,34.530407,2841.7454};
-					id=465;
+					id=353;
 					side="GUER";
 					vehicle="GUE_Soldier_GL";
 					player="PLAY CDG";
@@ -7137,7 +5431,7 @@ class Mission
 				class Item1
 				{
 					position[]={4198.084,34.468025,2839.3623};
-					id=466;
+					id=354;
 					side="GUER";
 					vehicle="GUE_Soldier_Medic";
 					player="PLAY CDG";
@@ -7149,7 +5443,7 @@ class Mission
 				};
 			};
 		};
-		class Item145
+		class Item111
 		{
 			side="GUER";
 			class Vehicles
@@ -7158,7 +5452,7 @@ class Mission
 				class Item0
 				{
 					position[]={4195.0972,34.529434,2832.1653};
-					id=467;
+					id=355;
 					side="GUER";
 					vehicle="GUE_Soldier_GL";
 					player="PLAY CDG";
@@ -7172,7 +5466,7 @@ class Mission
 				class Item1
 				{
 					position[]={4197.9854,34.745361,2829.7822};
-					id=468;
+					id=356;
 					side="GUER";
 					vehicle="GUE_Soldier_AR";
 					player="PLAY CDG";
@@ -7185,7 +5479,7 @@ class Mission
 				class Item2
 				{
 					position[]={4200.3301,34.870491,2829.7007};
-					id=469;
+					id=357;
 					side="GUER";
 					vehicle="GUE_Soldier_3";
 					player="PLAY CDG";
@@ -7197,7 +5491,7 @@ class Mission
 				class Item3
 				{
 					position[]={4202.8491,34.42075,2829.6641};
-					id=470;
+					id=358;
 					side="GUER";
 					vehicle="GUE_Soldier_3";
 					player="PLAY CDG";
@@ -7208,7 +5502,7 @@ class Mission
 				};
 			};
 		};
-		class Item146
+		class Item112
 		{
 			side="GUER";
 			class Vehicles
@@ -7217,7 +5511,7 @@ class Mission
 				class Item0
 				{
 					position[]={4195.2139,34.636314,2819.4678};
-					id=471;
+					id=359;
 					side="GUER";
 					vehicle="GUE_Soldier_GL";
 					player="PLAY CDG";
@@ -7231,7 +5525,7 @@ class Mission
 				class Item1
 				{
 					position[]={4198.1021,35.03056,2817.0847};
-					id=472;
+					id=360;
 					side="GUER";
 					vehicle="GUE_Soldier_AR";
 					player="PLAY CDG";
@@ -7244,7 +5538,7 @@ class Mission
 				class Item2
 				{
 					position[]={4200.4468,35.134838,2817.0032};
-					id=473;
+					id=361;
 					side="GUER";
 					vehicle="GUE_Soldier_3";
 					player="PLAY CDG";
@@ -7256,7 +5550,7 @@ class Mission
 				class Item3
 				{
 					position[]={4202.9658,34.430187,2816.9666};
-					id=474;
+					id=362;
 					side="GUER";
 					vehicle="GUE_Soldier_3";
 					player="PLAY CDG";
@@ -7267,7 +5561,7 @@ class Mission
 				};
 			};
 		};
-		class Item147
+		class Item113
 		{
 			side="GUER";
 			class Vehicles
@@ -7276,7 +5570,7 @@ class Mission
 				class Item0
 				{
 					position[]={4195.2734,34.538841,2808.0786};
-					id=475;
+					id=363;
 					side="GUER";
 					vehicle="GUE_Soldier_GL";
 					player="PLAY CDG";
@@ -7290,7 +5584,7 @@ class Mission
 				class Item1
 				{
 					position[]={4198.1616,34.958332,2805.6956};
-					id=476;
+					id=364;
 					side="GUER";
 					vehicle="GUE_Soldier_AR";
 					player="PLAY CDG";
@@ -7303,7 +5597,7 @@ class Mission
 				class Item2
 				{
 					position[]={4200.5063,35.141838,2805.614};
-					id=477;
+					id=365;
 					side="GUER";
 					vehicle="GUE_Soldier_3";
 					player="PLAY CDG";
@@ -7315,7 +5609,7 @@ class Mission
 				class Item3
 				{
 					position[]={4203.0254,34.510933,2805.5774};
-					id=478;
+					id=366;
 					side="GUER";
 					vehicle="GUE_Soldier_3";
 					player="PLAY CDG";
@@ -7326,7 +5620,7 @@ class Mission
 				};
 			};
 		};
-		class Item148
+		class Item114
 		{
 			side="GUER";
 			class Vehicles
@@ -7335,7 +5629,7 @@ class Mission
 				class Item0
 				{
 					position[]={4218.1392,30.485506,2832.4097};
-					id=479;
+					id=367;
 					side="GUER";
 					vehicle="GUE_Soldier_MG";
 					player="PLAY CDG";
@@ -7349,7 +5643,7 @@ class Mission
 				class Item1
 				{
 					position[]={4221.0273,29.868803,2830.0266};
-					id=480;
+					id=368;
 					side="GUER";
 					vehicle="GUE_Soldier_AR";
 					player="PLAY CDG";
@@ -7372,7 +5666,7 @@ class Mission
 				};
 			};
 		};
-		class Item149
+		class Item115
 		{
 			side="GUER";
 			class Vehicles
@@ -7381,7 +5675,7 @@ class Mission
 				class Item0
 				{
 					position[]={4218.0625,30.002079,2819.5234};
-					id=481;
+					id=369;
 					side="GUER";
 					vehicle="GUE_Soldier_MG";
 					player="PLAY CDG";
@@ -7395,7 +5689,7 @@ class Mission
 				class Item1
 				{
 					position[]={4220.9507,28.576082,2817.1404};
-					id=482;
+					id=370;
 					side="GUER";
 					vehicle="GUE_Soldier_AR";
 					player="PLAY CDG";
@@ -7418,7 +5712,7 @@ class Mission
 				};
 			};
 		};
-		class Item150
+		class Item116
 		{
 			side="GUER";
 			class Vehicles
@@ -7427,7 +5721,7 @@ class Mission
 				class Item0
 				{
 					position[]={4218.293,29.108027,2807.7131};
-					id=483;
+					id=371;
 					side="GUER";
 					vehicle="GUE_Soldier_MG";
 					player="PLAY CDG";
@@ -7441,7 +5735,7 @@ class Mission
 				class Item1
 				{
 					position[]={4221.1812,28.359474,2805.3301};
-					id=484;
+					id=372;
 					side="GUER";
 					vehicle="GUE_Soldier_AR";
 					player="PLAY CDG";
@@ -7464,335 +5758,7 @@ class Mission
 				};
 			};
 		};
-		class Item151
-		{
-			side="WEST";
-			class Vehicles
-			{
-				items=3;
-				class Item0
-				{
-					position[]={4051.9348,29.391174,2950.9976};
-					id=485;
-					side="WEST";
-					vehicle="CDF_Soldier_Crew";
-					player="PLAY CDG";
-					leader=1;
-					rank="LIEUTENANT";
-					skill=0.60000002;
-					text="UnitCDF_FLC";
-					init="GrpCDF_Foxtrot_Lead = group this;";
-					description="CDF Foxtrot Lead Commander";
-				};
-				class Item1
-				{
-					position[]={4052.4143,29.931446,2949.4668};
-					id=486;
-					side="WEST";
-					vehicle="CDF_Soldier_Crew";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitCDF_FLD";
-					init="GrpCDF_Foxtrot_Lead = group this;";
-					description="CDF Foxtrot Lead Driver";
-				};
-				class Item2
-				{
-					position[]={4053.2805,30.064022,2949.4465};
-					id=487;
-					side="WEST";
-					vehicle="CDF_Soldier_Crew";
-					player="PLAY CDG";
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitCDF_FLG";
-					init="GrpCDF_Foxtrot_Lead = group this;";
-					description="USMC Foxtrot Lead Gunner";
-				};
-			};
-		};
-		class Item152
-		{
-			side="WEST";
-			class Vehicles
-			{
-				items=3;
-				class Item0
-				{
-					position[]={4056.3477,29.905762,2951.366};
-					id=488;
-					side="WEST";
-					vehicle="CDF_Soldier_Crew";
-					player="PLAY CDG";
-					leader=1;
-					rank="SERGEANT";
-					skill=0.60000002;
-					text="UnitCDF_F1C";
-					init="GrpCDF_Foxtrot_1 = group this;";
-					description="CDF Foxtrot1 Commander";
-				};
-				class Item1
-				{
-					position[]={4056.8271,30.545486,2949.8352};
-					id=489;
-					side="WEST";
-					vehicle="CDF_Soldier_Crew";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitCDF_F1D";
-					init="GrpCDF_Foxtrot_1 = group this;";
-					description="CDF Foxtrot1 Driver";
-				};
-				class Item2
-				{
-					position[]={4057.6934,30.678064,2949.8149};
-					id=490;
-					side="WEST";
-					vehicle="CDF_Soldier_Crew";
-					player="PLAY CDG";
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitCDF_F1G";
-					init="GrpCDF_Foxtrot_Lead = group this;";
-					description="USMC Foxtrot1 Gunner";
-				};
-			};
-		};
-		class Item153
-		{
-			side="WEST";
-			class Vehicles
-			{
-				items=3;
-				class Item0
-				{
-					position[]={4060.4004,30.305593,2951.2876};
-					id=491;
-					side="WEST";
-					vehicle="CDF_Soldier_Crew";
-					player="PLAY CDG";
-					leader=1;
-					rank="SERGEANT";
-					skill=0.60000002;
-					text="UnitCDF_F2C";
-					init="GrpCDF_Foxtrot_2 = group this;";
-					description="CDF Foxtrot2 Commander";
-				};
-				class Item1
-				{
-					position[]={4060.8799,31.061167,2949.7568};
-					id=492;
-					side="WEST";
-					vehicle="CDF_Soldier_Crew";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitCDF_F2D";
-					init="GrpCDF_Foxtrot_2 = group this;";
-					description="CDF Foxtrot2 Driver";
-				};
-				class Item2
-				{
-					position[]={4061.7461,31.042425,2949.7366};
-					id=493;
-					side="WEST";
-					vehicle="CDF_Soldier_Crew";
-					player="PLAY CDG";
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitCDF_F2G";
-					init="GrpCDF_Foxtrot_2 = group this;";
-					description="USMC Foxtrot2 Gunner";
-				};
-			};
-		};
-		class Item154
-		{
-			side="WEST";
-			class Vehicles
-			{
-				items=3;
-				class Item0
-				{
-					position[]={4063.584,30.133259,2951.4324};
-					id=494;
-					side="WEST";
-					vehicle="CDF_Soldier_Crew";
-					player="PLAY CDG";
-					leader=1;
-					rank="SERGEANT";
-					skill=0.60000002;
-					text="UnitCDF_F3C";
-					init="GrpCDF_Foxtrot_3 = group this;";
-					description="CDF Foxtrot3 Commander";
-				};
-				class Item1
-				{
-					position[]={4064.0635,30.913473,2949.9016};
-					id=495;
-					side="WEST";
-					vehicle="CDF_Soldier_Crew";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitCDF_F3D";
-					init="GrpCDF_Foxtrot_3 = group this;";
-					description="CDF Foxtrot3 Driver";
-				};
-				class Item2
-				{
-					position[]={4064.9297,30.894844,2949.8813};
-					id=496;
-					side="WEST";
-					vehicle="CDF_Soldier_Crew";
-					player="PLAY CDG";
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitCDF_F3G";
-					init="GrpCDF_Foxtrot_3 = group this;";
-					description="USMC Foxtrot3 Gunner";
-				};
-			};
-		};
-		class Item155
-		{
-			side="WEST";
-			class Vehicles
-			{
-				items=2;
-				class Item0
-				{
-					position[]={4083.3389,31.421818,2951.4836};
-					id=497;
-					side="WEST";
-					vehicle="CDF_Soldier_Pilot";
-					player="PLAY CDG";
-					leader=1;
-					rank="CAPTAIN";
-					skill=0.60000002;
-					text="UnitCDF_GLP";
-					init="GrpCDF_Golf_Lead = group this; this addweapon ""ACE_ParachuteRoundPack""; this addweapon ""ACE_Flaregun""; {this addmagazine ""ACE_SSRed_FG"";} foreach [1,2];  {this addmagazine ""ACE_SSGreen_FG"";} foreach [1,2];  {this addmagazine ""ACE_Bandage"";} foreach [1,2]; ";
-					description="CDF Golf Lead Pilot";
-				};
-				class Item1
-				{
-					position[]={4084.541,32.099083,2948.988};
-					id=498;
-					side="WEST";
-					vehicle="CDF_Soldier_Pilot";
-					player="PLAY CDG";
-					rank="LIEUTENANT";
-					skill=0.60000002;
-					text="UnitCDF_GLG";
-					init="GrpUSMC_Golf_Lead = group this; this addweapon ""ACE_ParachuteRoundPack""; this addweapon ""ACE_Flaregun""; {this addmagazine ""ACE_SSRed_FG"";} foreach [1,2];  {this addmagazine ""ACE_SSGreen_FG"";} foreach [1,2];  {this addmagazine ""ACE_Bandage"";} foreach [1,2]; ";
-					description="CDF Golf Lead Gunner";
-				};
-			};
-		};
-		class Item156
-		{
-			side="WEST";
-			class Vehicles
-			{
-				items=2;
-				class Item0
-				{
-					position[]={4088.0146,31.608646,2951.6404};
-					id=499;
-					side="WEST";
-					vehicle="CDF_Soldier_Pilot";
-					player="PLAY CDG";
-					leader=1;
-					rank="LIEUTENANT";
-					skill=0.60000002;
-					text="UnitCDF_G1P";
-					init="GrpCDF_Golf_1 = group this; this addweapon ""ACE_ParachuteRoundPack""; this addweapon ""ACE_Flaregun""; {this addmagazine ""ACE_SSRed_FG"";} foreach [1,2];  {this addmagazine ""ACE_SSGreen_FG"";} foreach [1,2];  {this addmagazine ""ACE_Bandage"";} foreach [1,2]; ";
-					description="CDF Golf1 Pilot";
-				};
-				class Item1
-				{
-					position[]={4088.75,32.269844,2949.2214};
-					id=500;
-					side="WEST";
-					vehicle="CDF_Soldier_Pilot";
-					player="PLAY CDG";
-					rank="LIEUTENANT";
-					skill=0.60000002;
-					text="UnitCDF_G1G";
-					init="GrpCDF_Golf_1 = group this; this addweapon ""ACE_ParachuteRoundPack""; this addweapon ""ACE_Flaregun""; {this addmagazine ""ACE_SSRed_FG"";} foreach [1,2];  {this addmagazine ""ACE_SSGreen_FG"";} foreach [1,2];  {this addmagazine ""ACE_Bandage"";} foreach [1,2]; ";
-					description="CDF Golf1 Gunner";
-				};
-			};
-		};
-		class Item157
-		{
-			side="WEST";
-			class Vehicles
-			{
-				items=2;
-				class Item0
-				{
-					position[]={4091.9102,32.702217,2951.5972};
-					id=501;
-					side="WEST";
-					vehicle="CDF_Soldier_Pilot";
-					player="PLAY CDG";
-					leader=1;
-					rank="LIEUTENANT";
-					skill=0.60000002;
-					text="UnitCDF_G2P";
-					init="GrpCDF_Golf_2 = group this; this addweapon ""ACE_ParachuteRoundPack""; this addweapon ""ACE_Flaregun""; {this addmagazine ""ACE_SSRed_FG"";} foreach [1,2];  {this addmagazine ""ACE_SSGreen_FG"";} foreach [1,2];  {this addmagazine ""ACE_Bandage"";} foreach [1,2]; ";
-					description="CDF Golf2 Pilot";
-				};
-				class Item1
-				{
-					position[]={4092.6445,33.369335,2949.1782};
-					id=502;
-					side="WEST";
-					vehicle="CDF_Soldier_Pilot";
-					player="PLAY CDG";
-					rank="LIEUTENANT";
-					skill=0.60000002;
-					text="UnitCDF_G2G";
-					init="GrpCDF_Golf_2 = group this; this addweapon ""ACE_ParachuteRoundPack""; this addweapon ""ACE_Flaregun""; {this addmagazine ""ACE_SSRed_FG"";} foreach [1,2];  {this addmagazine ""ACE_SSGreen_FG"";} foreach [1,2];  {this addmagazine ""ACE_Bandage"";} foreach [1,2]; ";
-					description="CDF Golf2 Gunner";
-				};
-			};
-		};
-		class Item158
-		{
-			side="WEST";
-			class Vehicles
-			{
-				items=2;
-				class Item0
-				{
-					position[]={4094.791,33.789295,2951.6519};
-					id=503;
-					side="WEST";
-					vehicle="CDF_Soldier_Pilot";
-					player="PLAY CDG";
-					leader=1;
-					rank="LIEUTENANT";
-					skill=0.60000002;
-					text="UnitCDF_G3P";
-					init="GrpCDF_Golf_3 = group this; this addweapon ""ACE_ParachuteRoundPack""; this addweapon ""ACE_Flaregun""; {this addmagazine ""ACE_SSRed_FG"";} foreach [1,2];  {this addmagazine ""ACE_SSGreen_FG"";} foreach [1,2];  {this addmagazine ""ACE_Bandage"";} foreach [1,2]; ";
-					description="CDF Golf3 Pilot";
-				};
-				class Item1
-				{
-					position[]={4095.5264,34.453423,2949.2329};
-					id=504;
-					side="WEST";
-					vehicle="CDF_Soldier_Pilot";
-					player="PLAY CDG";
-					rank="LIEUTENANT";
-					skill=0.60000002;
-					text="UnitCDF_G3G";
-					init="GrpCDF_Golf_3 = group this; this addweapon ""ACE_ParachuteRoundPack""; this addweapon ""ACE_Flaregun""; {this addmagazine ""ACE_SSRed_FG"";} foreach [1,2];  {this addmagazine ""ACE_SSGreen_FG"";} foreach [1,2];  {this addmagazine ""ACE_Bandage"";} foreach [1,2]; ";
-					description="CDF Golf3 Gunner";
-				};
-			};
-		};
-		class Item159
+		class Item117
 		{
 			side="GUER";
 			class Vehicles
@@ -7801,7 +5767,7 @@ class Mission
 				class Item0
 				{
 					position[]={4140.79,11.156993,2787.2729};
-					id=505;
+					id=373;
 					side="GUER";
 					vehicle="GUE_Soldier_Crew";
 					player="PLAY CDG";
@@ -7815,7 +5781,7 @@ class Mission
 				class Item1
 				{
 					position[]={4140.79,9.6749954,2782.9141};
-					id=506;
+					id=374;
 					side="GUER";
 					vehicle="GUE_Soldier_Crew";
 					player="PLAY CDG";
@@ -7827,7 +5793,7 @@ class Mission
 				class Item2
 				{
 					position[]={4143.9175,9.6124477,2782.9141};
-					id=507;
+					id=375;
 					side="GUER";
 					vehicle="GUE_Soldier_Crew";
 					player="PLAY CDG";
@@ -7839,7 +5805,7 @@ class Mission
 				};
 			};
 		};
-		class Item160
+		class Item118
 		{
 			side="GUER";
 			class Vehicles
@@ -7848,7 +5814,7 @@ class Mission
 				class Item0
 				{
 					position[]={4148.7202,11.842211,2787.1604};
-					id=508;
+					id=376;
 					side="GUER";
 					vehicle="GUE_Soldier_Crew";
 					player="PLAY CDG";
@@ -7862,7 +5828,7 @@ class Mission
 				class Item1
 				{
 					position[]={4148.7202,9.7063904,2782.8015};
-					id=509;
+					id=377;
 					side="GUER";
 					vehicle="GUE_Soldier_Crew";
 					player="PLAY CDG";
@@ -7874,7 +5840,7 @@ class Mission
 				class Item2
 				{
 					position[]={4151.8477,11.886882,2782.8015};
-					id=510;
+					id=378;
 					side="GUER";
 					vehicle="GUE_Soldier_Crew";
 					player="PLAY CDG";
@@ -7886,7 +5852,7 @@ class Mission
 				};
 			};
 		};
-		class Item161
+		class Item119
 		{
 			side="GUER";
 			class Vehicles
@@ -7895,7 +5861,7 @@ class Mission
 				class Item0
 				{
 					position[]={4155.2788,16.093557,2786.9771};
-					id=511;
+					id=379;
 					side="GUER";
 					vehicle="GUE_Soldier_Crew";
 					player="PLAY CDG";
@@ -7909,7 +5875,7 @@ class Mission
 				class Item1
 				{
 					position[]={4155.2788,15.536898,2782.6182};
-					id=512;
+					id=380;
 					side="GUER";
 					vehicle="GUE_Soldier_Crew";
 					player="PLAY CDG";
@@ -7921,7 +5887,7 @@ class Mission
 				class Item2
 				{
 					position[]={4158.4063,22.667501,2782.6182};
-					id=513;
+					id=381;
 					side="GUER";
 					vehicle="GUE_Soldier_Crew";
 					player="PLAY CDG";
@@ -7933,7 +5899,7 @@ class Mission
 				};
 			};
 		};
-		class Item162
+		class Item120
 		{
 			side="GUER";
 			class Vehicles
@@ -7942,7 +5908,7 @@ class Mission
 				class Item0
 				{
 					position[]={4161.3472,21.095388,2786.6101};
-					id=514;
+					id=382;
 					side="GUER";
 					vehicle="GUE_Soldier_Crew";
 					player="PLAY CDG";
@@ -7956,7 +5922,7 @@ class Mission
 				class Item1
 				{
 					position[]={4161.3472,26.434265,2782.2512};
-					id=515;
+					id=383;
 					side="GUER";
 					vehicle="GUE_Soldier_Crew";
 					player="PLAY CDG";
@@ -7968,7 +5934,7 @@ class Mission
 				class Item2
 				{
 					position[]={4164.4746,27.66363,2782.2512};
-					id=516;
+					id=384;
 					side="GUER";
 					vehicle="GUE_Soldier_Crew";
 					player="PLAY CDG";
@@ -7980,7 +5946,7 @@ class Mission
 				};
 			};
 		};
-		class Item163
+		class Item121
 		{
 			side="GUER";
 			class Vehicles
@@ -7989,7 +5955,7 @@ class Mission
 				class Item0
 				{
 					position[]={4190.2358,31.43177,2787.7107};
-					id=517;
+					id=385;
 					side="GUER";
 					vehicle="GUE_Soldier_Pilot";
 					player="PLAY CDG";
@@ -8003,7 +5969,7 @@ class Mission
 				class Item1
 				{
 					position[]={4191.688,30.838007,2784.0217};
-					id=518;
+					id=386;
 					side="GUER";
 					vehicle="GUE_Soldier_Pilot";
 					player="PLAY CDG";
@@ -8015,7 +5981,7 @@ class Mission
 				};
 			};
 		};
-		class Item164
+		class Item122
 		{
 			side="GUER";
 			class Vehicles
@@ -8024,7 +5990,7 @@ class Mission
 				class Item0
 				{
 					position[]={4196.3916,32.45845,2787.4771};
-					id=519;
+					id=387;
 					side="GUER";
 					vehicle="GUE_Soldier_Pilot";
 					player="PLAY CDG";
@@ -8038,7 +6004,7 @@ class Mission
 				class Item1
 				{
 					position[]={4197.8438,31.775265,2783.7881};
-					id=520;
+					id=388;
 					side="GUER";
 					vehicle="GUE_Soldier_Pilot";
 					player="PLAY CDG";
@@ -8050,7 +6016,7 @@ class Mission
 				};
 			};
 		};
-		class Item165
+		class Item123
 		{
 			side="GUER";
 			class Vehicles
@@ -8059,7 +6025,7 @@ class Mission
 				class Item0
 				{
 					position[]={4202.8589,33.124554,2787.3196};
-					id=521;
+					id=389;
 					side="GUER";
 					vehicle="GUE_Soldier_Pilot";
 					player="PLAY CDG";
@@ -8073,7 +6039,7 @@ class Mission
 				class Item1
 				{
 					position[]={4204.311,32.187088,2783.6306};
-					id=522;
+					id=390;
 					side="GUER";
 					vehicle="GUE_Soldier_Pilot";
 					player="PLAY CDG";
@@ -8085,7 +6051,7 @@ class Mission
 				};
 			};
 		};
-		class Item166
+		class Item124
 		{
 			side="GUER";
 			class Vehicles
@@ -8094,7 +6060,7 @@ class Mission
 				class Item0
 				{
 					position[]={4209.6382,32.869808,2787.0862};
-					id=523;
+					id=391;
 					side="GUER";
 					vehicle="GUE_Soldier_Pilot";
 					player="PLAY CDG";
@@ -8108,7 +6074,7 @@ class Mission
 				class Item1
 				{
 					position[]={4211.0903,31.916538,2783.3972};
-					id=524;
+					id=392;
 					side="GUER";
 					vehicle="GUE_Soldier_Pilot";
 					player="PLAY CDG";
@@ -8120,7 +6086,7 @@ class Mission
 				};
 			};
 		};
-		class Item167
+		class Item125
 		{
 			side="EAST";
 			class Vehicles
@@ -8129,7 +6095,7 @@ class Mission
 				class Item0
 				{
 					position[]={3596.7178,28.606161,3343.2429};
-					id=525;
+					id=393;
 					side="EAST";
 					vehicle="RUS_Soldier_TL";
 					player="PLAY CDG";
@@ -8143,7 +6109,7 @@ class Mission
 				class Item1
 				{
 					position[]={3599.7178,28.973721,3338.2429};
-					id=526;
+					id=394;
 					side="EAST";
 					vehicle="RUS_Soldier_GL";
 					player="PLAY CDG";
@@ -8156,7 +6122,7 @@ class Mission
 				class Item2
 				{
 					position[]={3601.7178,29.090906,3338.2429};
-					id=527;
+					id=395;
 					side="EAST";
 					vehicle="RUS_Soldier3";
 					player="PLAY CDG";
@@ -8169,7 +6135,7 @@ class Mission
 				class Item3
 				{
 					position[]={3603.7178,29.191303,3338.2429};
-					id=528;
+					id=396;
 					side="EAST";
 					vehicle="RUS_Soldier_Marksman";
 					player="PLAY CDG";
@@ -8182,7 +6148,7 @@ class Mission
 				class Item4
 				{
 					position[]={3605.7178,29.291294,3338.2429};
-					id=529;
+					id=397;
 					side="EAST";
 					vehicle="RUS_Soldier1";
 					player="PLAY CDG";
@@ -8195,7 +6161,7 @@ class Mission
 				class Item5
 				{
 					position[]={3607.7178,29.3913,3338.2429};
-					id=530;
+					id=398;
 					side="EAST";
 					vehicle="RUS_Soldier2";
 					player="PLAY CDG";
@@ -8207,7 +6173,7 @@ class Mission
 				};
 			};
 		};
-		class Item168
+		class Item126
 		{
 			side="EAST";
 			class Vehicles
@@ -8216,7 +6182,7 @@ class Mission
 				class Item0
 				{
 					position[]={3596.4204,29.054501,3333.3303};
-					id=531;
+					id=399;
 					side="EAST";
 					vehicle="RUS_Soldier_TL";
 					player="PLAY CDG";
@@ -8230,7 +6196,7 @@ class Mission
 				class Item1
 				{
 					position[]={3599.4204,29.471191,3328.3303};
-					id=532;
+					id=400;
 					side="EAST";
 					vehicle="RUS_Soldier_GL";
 					player="PLAY CDG";
@@ -8243,7 +6209,7 @@ class Mission
 				class Item2
 				{
 					position[]={3601.4204,29.585403,3328.3303};
-					id=533;
+					id=401;
 					side="EAST";
 					vehicle="RUS_Soldier3";
 					player="PLAY CDG";
@@ -8256,7 +6222,7 @@ class Mission
 				class Item3
 				{
 					position[]={3603.4204,29.705395,3328.3303};
-					id=534;
+					id=402;
 					side="EAST";
 					vehicle="RUS_Soldier_Marksman";
 					player="PLAY CDG";
@@ -8269,7 +6235,7 @@ class Mission
 				class Item4
 				{
 					position[]={3605.4204,29.825403,3328.3303};
-					id=535;
+					id=403;
 					side="EAST";
 					vehicle="RUS_Soldier1";
 					player="PLAY CDG";
@@ -8282,7 +6248,7 @@ class Mission
 				class Item5
 				{
 					position[]={3607.4204,29.945395,3328.3303};
-					id=536;
+					id=404;
 					side="EAST";
 					vehicle="RUS_Soldier2";
 					player="PLAY CDG";
@@ -8294,7 +6260,7 @@ class Mission
 				};
 			};
 		};
-		class Item169
+		class Item127
 		{
 			side="EAST";
 			class Vehicles
@@ -8303,7 +6269,7 @@ class Mission
 				class Item0
 				{
 					position[]={3578.0059,29.907072,3273.3401};
-					id=537;
+					id=405;
 					side="EAST";
 					vehicle="RU_Soldier_Crew";
 					player="PLAY CDG";
@@ -8317,7 +6283,7 @@ class Mission
 				class Item1
 				{
 					position[]={3584.3232,30.838259,3266.4753};
-					id=539;
+					id=407;
 					side="EAST";
 					vehicle="RU_Soldier_Crew";
 					player="PLAY CDG";
@@ -8330,7 +6296,7 @@ class Mission
 				class Item2
 				{
 					position[]={3578.3672,30.175476,3266.8372};
-					id=538;
+					id=406;
 					side="EAST";
 					vehicle="RU_Soldier_Crew";
 					player="PLAY CDG";
@@ -8341,7 +6307,7 @@ class Mission
 				};
 			};
 		};
-		class Item170
+		class Item128
 		{
 			side="EAST";
 			class Vehicles
@@ -8350,7 +6316,7 @@ class Mission
 				class Item0
 				{
 					position[]={3592.9883,31.699165,3272.9797};
-					id=540;
+					id=408;
 					side="EAST";
 					vehicle="RU_Soldier_Crew";
 					player="PLAY CDG";
@@ -8364,7 +6330,7 @@ class Mission
 				class Item1
 				{
 					position[]={3599.3057,32.974743,3266.115};
-					id=542;
+					id=410;
 					side="EAST";
 					vehicle="RU_Soldier_Crew";
 					player="PLAY CDG";
@@ -8377,7 +6343,7 @@ class Mission
 				class Item2
 				{
 					position[]={3593.3496,32.112095,3266.4768};
-					id=541;
+					id=409;
 					side="EAST";
 					vehicle="RU_Soldier_Crew";
 					player="PLAY CDG";
@@ -8388,7 +6354,7 @@ class Mission
 				};
 			};
 		};
-		class Item171
+		class Item129
 		{
 			side="EAST";
 			class Vehicles
@@ -8397,7 +6363,7 @@ class Mission
 				class Item0
 				{
 					position[]={3609.2334,34.025505,3273.3394};
-					id=543;
+					id=411;
 					side="EAST";
 					vehicle="RU_Soldier_Crew";
 					player="PLAY CDG";
@@ -8411,7 +6377,7 @@ class Mission
 				class Item1
 				{
 					position[]={3615.5508,35.605412,3266.4746};
-					id=545;
+					id=413;
 					side="EAST";
 					vehicle="RU_Soldier_Crew";
 					player="PLAY CDG";
@@ -8424,7 +6390,7 @@ class Mission
 				class Item2
 				{
 					position[]={3609.5947,34.588226,3266.8364};
-					id=544;
+					id=412;
 					side="EAST";
 					vehicle="RU_Soldier_Crew";
 					player="PLAY CDG";
@@ -8435,7 +6401,7 @@ class Mission
 				};
 			};
 		};
-		class Item172
+		class Item130
 		{
 			side="EAST";
 			class Vehicles
@@ -8444,7 +6410,7 @@ class Mission
 				class Item0
 				{
 					position[]={3624.3955,36.46965,3271.8965};
-					id=546;
+					id=414;
 					side="EAST";
 					vehicle="RU_Soldier_Crew";
 					player="PLAY CDG";
@@ -8458,7 +6424,7 @@ class Mission
 				class Item1
 				{
 					position[]={3630.7129,38.146309,3265.0317};
-					id=548;
+					id=416;
 					side="EAST";
 					vehicle="RU_Soldier_Crew";
 					player="PLAY CDG";
@@ -8471,7 +6437,7 @@ class Mission
 				class Item2
 				{
 					position[]={3624.7568,37.220207,3265.3936};
-					id=547;
+					id=415;
 					side="EAST";
 					vehicle="RU_Soldier_Crew";
 					player="PLAY CDG";
@@ -8482,7 +6448,7 @@ class Mission
 				};
 			};
 		};
-		class Item173
+		class Item131
 		{
 			side="EAST";
 			class Vehicles
@@ -8491,7 +6457,7 @@ class Mission
 				class Item0
 				{
 					position[]={3650.3833,39.914467,3271.8398};
-					id=549;
+					id=417;
 					side="EAST";
 					vehicle="RU_Soldier_Pilot";
 					player="PLAY CDG";
@@ -8505,7 +6471,7 @@ class Mission
 				class Item1
 				{
 					position[]={3650.9937,40.78587,3265.5264};
-					id=550;
+					id=418;
 					side="EAST";
 					vehicle="RU_Soldier_Pilot";
 					player="PLAY CDG";
@@ -8517,7 +6483,7 @@ class Mission
 				};
 			};
 		};
-		class Item174
+		class Item132
 		{
 			side="EAST";
 			class Vehicles
@@ -8526,7 +6492,7 @@ class Mission
 				class Item0
 				{
 					position[]={3659.0283,41.183472,3271.3586};
-					id=551;
+					id=419;
 					side="EAST";
 					vehicle="RU_Soldier_Pilot";
 					player="PLAY CDG";
@@ -8540,7 +6506,7 @@ class Mission
 				class Item1
 				{
 					position[]={3659.6387,42.09354,3265.0452};
-					id=552;
+					id=420;
 					side="EAST";
 					vehicle="RU_Soldier_Pilot";
 					player="PLAY CDG";
@@ -8552,7 +6518,7 @@ class Mission
 				};
 			};
 		};
-		class Item175
+		class Item133
 		{
 			side="EAST";
 			class Vehicles
@@ -8561,7 +6527,7 @@ class Mission
 				class Item0
 				{
 					position[]={3670.2344,42.846825,3270.5576};
-					id=553;
+					id=421;
 					side="EAST";
 					vehicle="RU_Soldier_Pilot";
 					player="PLAY CDG";
@@ -8575,7 +6541,7 @@ class Mission
 				class Item1
 				{
 					position[]={3671.1655,43.746059,3265.2053};
-					id=554;
+					id=422;
 					side="EAST";
 					vehicle="RU_Soldier_Pilot";
 					player="PLAY CDG";
@@ -8587,7 +6553,7 @@ class Mission
 				};
 			};
 		};
-		class Item176
+		class Item134
 		{
 			side="EAST";
 			class Vehicles
@@ -8596,7 +6562,7 @@ class Mission
 				class Item0
 				{
 					position[]={3678.0796,43.794743,3271.0374};
-					id=555;
+					id=423;
 					side="EAST";
 					vehicle="RU_Soldier_Pilot";
 					player="PLAY CDG";
@@ -8610,7 +6576,7 @@ class Mission
 				class Item1
 				{
 					position[]={3678.6899,44.873871,3264.7239};
-					id=556;
+					id=424;
 					side="EAST";
 					vehicle="RU_Soldier_Pilot";
 					player="PLAY CDG";
@@ -8622,2041 +6588,7 @@ class Mission
 				};
 			};
 		};
-		class Item177
-		{
-			side="EAST";
-			class Vehicles
-			{
-				items=4;
-				class Item0
-				{
-					position[]={3359.7485,16.235806,3358.6228};
-					id=557;
-					side="EAST";
-					vehicle="Ins_Soldier_CO";
-					player="PLAY CDG";
-					leader=1;
-					rank="LIEUTENANT";
-					skill=0.60000002;
-					text="UnitINS_1Plt_PltCo";
-					init="GrpINS_1Plt_PltHQ = group this; nul = [""pltco"",this] execVM ""f\common\@ShackTac_assignGear_plthq.sqf"";";
-					description="ChDKZ 1Plt PltHQ Platoon Commander";
-				};
-				class Item1
-				{
-					position[]={3362.103,15.92726,3356.4321};
-					id=558;
-					side="EAST";
-					vehicle="Ins_Soldier_GL";
-					player="PLAY CDG";
-					rank="SERGEANT";
-					skill=0.60000002;
-					text="UnitINS_1Plt_PltSgt";
-					init="GrpINS_1Plt_PltHQ = group this; nul = [""pltsgt"",this] execVM ""f\common\@ShackTac_assignGear_plthq.sqf"";";
-					description="ChDKZ 1Plt PltHQ Platoon Sgt.";
-				};
-				class Item2
-				{
-					position[]={3364.5288,15.995556,3356.335};
-					id=559;
-					side="EAST";
-					vehicle="Ins_Soldier_Medic";
-					player="PLAY CDG";
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitINS_1Plt_PltM";
-					init="GrpINS_1Plt_PltHQ = group this; nul = [""pltm"",this] execVM ""f\common\@ShackTac_assignGear_plthq.sqf"";";
-					description="ChDKZ 1Plt PltHQ Medic";
-				};
-				class Item3
-				{
-					position[]={3367.2456,16.015581,3356.2874};
-					id=560;
-					side="EAST";
-					vehicle="Ins_Soldier_1";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitINS_1Plt_PltR";
-					init="GrpINS_1Plt_PltHQ = group this; nul = [""pltr"",this] execVM ""f\common\@ShackTac_assignGear_plthq.sqf"";";
-					description="ChDKZ 1Plt PltHQ Rifleman";
-				};
-			};
-		};
-		class Item178
-		{
-			side="EAST";
-			class Vehicles
-			{
-				items=2;
-				class Item0
-				{
-					position[]={3327.0049,9.7178917,3337.7954};
-					id=561;
-					side="EAST";
-					vehicle="Ins_Soldier_2";
-					player="PLAY CDG";
-					leader=1;
-					rank="SERGEANT";
-					skill=0.60000002;
-					text="UnitINS_1Plt_ASL";
-					init="GrpINS_1Plt_Alpha = group this; nul = [""sl"",this] execVM ""f\common\@ShackTac_assignGear_alpha.sqf"";";
-					description="ChDKZ 1Plt Alpha Squad Leader";
-				};
-				class Item1
-				{
-					position[]={3329.3599,9.6653328,3335.6047};
-					id=562;
-					side="EAST";
-					vehicle="Ins_Soldier_Medic";
-					player="PLAY CDG";
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitINS_1Plt_AM";
-					init="GrpINS_1Plt_Alpha = group this; nul = [""m"",this] execVM ""f\common\@ShackTac_assignGear_alpha.sqf"";";
-					description="ChDKZ 1Plt Alpha Squad Medic";
-				};
-			};
-		};
-		class Item179
-		{
-			side="EAST";
-			class Vehicles
-			{
-				items=4;
-				class Item0
-				{
-					position[]={3326.9934,8.8456116,3327.9189};
-					id=563;
-					side="EAST";
-					vehicle="Ins_Soldier_2";
-					player="PLAY CDG";
-					leader=1;
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitINS_1Plt_A1FTL";
-					init="GrpINS_1Plt_A1 = group this; nul = [""ftl"",this] execVM ""f\common\@ShackTac_assignGear_alpha.sqf"";";
-					description="ChDKZ 1Plt A1 Fireteam Leader";
-				};
-				class Item1
-				{
-					position[]={3329.3481,8.8538208,3325.7283};
-					id=564;
-					side="EAST";
-					vehicle="Ins_Soldier_AR";
-					player="PLAY CDG";
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitINS_1Plt_A1AR";
-					init="GrpINS_1Plt_A1 = group this; nul = [""ar"",this] execVM ""f\common\@ShackTac_assignGear_alpha.sqf"";";
-					description="ChDKZ 1Plt A1 Automatic Rifleman";
-				};
-				class Item2
-				{
-					position[]={3331.7739,9.0057268,3325.6311};
-					id=565;
-					side="EAST";
-					vehicle="Ins_Soldier_2";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitINS_1Plt_A1AAR";
-					init="GrpINS_1Plt_A1 = group this; nul = [""aar"",this] execVM ""f\common\@ShackTac_assignGear_alpha.sqf"";";
-					description="ChDKZ 1Plt A1 Assistant Automatic Rifleman";
-				};
-				class Item3
-				{
-					position[]={3334.4907,9.1942587,3325.5835};
-					id=566;
-					side="EAST";
-					vehicle="Ins_Soldier_1";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitINS_1Plt_A1RAT";
-					init="GrpINS_1Plt_A1 = group this; nul = [""rat"",this] execVM ""f\common\@ShackTac_assignGear_alpha.sqf"";";
-					description="ChDKZ 1Plt A1 Rifleman (AT)";
-				};
-			};
-		};
-		class Item180
-		{
-			side="EAST";
-			class Vehicles
-			{
-				items=4;
-				class Item0
-				{
-					position[]={3326.6006,8.3705883,3317.0281};
-					id=567;
-					side="EAST";
-					vehicle="Ins_Soldier_2";
-					player="PLAY CDG";
-					leader=1;
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitINS_1Plt_A2FTL";
-					init="GrpINS_1Plt_A2 = group this; nul = [""ftl"",this] execVM ""f\common\@ShackTac_assignGear_alpha.sqf"";";
-					description="ChDKZ 1Plt A2 Fireteam Leader";
-				};
-				class Item1
-				{
-					position[]={3328.9556,8.4445238,3314.8374};
-					id=568;
-					side="EAST";
-					vehicle="Ins_Soldier_AR";
-					player="PLAY CDG";
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitINS_1Plt_A2AR";
-					init="GrpINS_1Plt_A2 = group this; nul = [""ar"",this] execVM ""f\common\@ShackTac_assignGear_alpha.sqf"";";
-					description="ChDKZ 1Plt A2 Automatic Rifleman";
-				};
-				class Item2
-				{
-					position[]={3331.3813,8.5915051,3314.7402};
-					id=569;
-					side="EAST";
-					vehicle="Ins_Soldier_2";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitINS_1Plt_A2AAR";
-					init="GrpINS_1Plt_A2 = group this; nul = [""aar"",this] execVM ""f\common\@ShackTac_assignGear_alpha.sqf"";";
-					description="ChDKZ 1Plt A2 Assistant Automatic Rifleman";
-				};
-				class Item3
-				{
-					position[]={3334.0981,8.7807198,3314.6926};
-					id=570;
-					side="EAST";
-					vehicle="Ins_Soldier_1";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitINS_1Plt_A2RAT";
-					init="GrpINS_1Plt_A2 = group this; nul = [""rat"",this] execVM ""f\common\@ShackTac_assignGear_alpha.sqf"";";
-					description="ChDKZ 1Plt A2 Rifleman (AT)";
-				};
-			};
-		};
-		class Item181
-		{
-			side="EAST";
-			class Vehicles
-			{
-				items=4;
-				class Item0
-				{
-					position[]={3326.7664,8.1411295,3306.7576};
-					id=571;
-					side="EAST";
-					vehicle="Ins_Soldier_2";
-					player="PLAY CDG";
-					leader=1;
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitINS_1Plt_A3FTL";
-					init="GrpINS_1Plt_A3 = group this; nul = [""ftl"",this] execVM ""f\common\@ShackTac_assignGear_alpha.sqf"";";
-					description="ChDKZ 1Plt A3 Fireteam Leader";
-				};
-				class Item1
-				{
-					position[]={3329.1216,8.2386379,3304.5669};
-					id=572;
-					side="EAST";
-					vehicle="Ins_Soldier_AR";
-					player="PLAY CDG";
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitINS_1Plt_A3AR";
-					init="GrpINS_1Plt_A3 = group this; nul = [""ar"",this] execVM ""f\common\@ShackTac_assignGear_alpha.sqf"";";
-					description="ChDKZ 1Plt A3 Automatic Rifleman";
-				};
-				class Item2
-				{
-					position[]={3331.5474,8.4131975,3304.4697};
-					id=573;
-					side="EAST";
-					vehicle="Ins_Soldier_2";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitINS_1Plt_A3AAR";
-					init="GrpINS_1Plt_A3 = group this; nul = [""aar"",this] execVM ""f\common\@ShackTac_assignGear_alpha.sqf"";";
-					description="ChDKZ 1Plt A3 Assistant Automatic Rifleman";
-				};
-				class Item3
-				{
-					position[]={3334.2642,8.6295805,3304.4221};
-					id=574;
-					side="EAST";
-					vehicle="Ins_Soldier_1";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitINS_1Plt_A3R";
-					init="GrpINS_1Plt_A3 = group this; nul = [""r"",this] execVM ""f\common\@ShackTac_assignGear_alpha.sqf"";";
-					description="ChDKZ 1Plt A3 Rifleman";
-				};
-			};
-		};
-		class Item182
-		{
-			side="EAST";
-			class Vehicles
-			{
-				items=2;
-				class Item0
-				{
-					position[]={3347.0942,11.276251,3335.675};
-					id=575;
-					side="EAST";
-					vehicle="Ins_Soldier_2";
-					player="PLAY CDG";
-					leader=1;
-					rank="SERGEANT";
-					skill=0.60000002;
-					text="UnitINS_1Plt_BSL";
-					init="GrpINS_1Plt_Bravo = group this; nul = [""sl"",this] execVM ""f\common\@ShackTac_assignGear_bravo.sqf"";";
-					description="ChDKZ 1Plt Bravo Squad Leader";
-				};
-				class Item1
-				{
-					position[]={3349.7764,11.176197,3333.0486};
-					id=576;
-					side="EAST";
-					vehicle="Ins_Soldier_Medic";
-					player="PLAY CDG";
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitINS_1Plt_BM";
-					init="GrpINS_1Plt_Bravo = group this; nul = [""m"",this] execVM ""f\common\@ShackTac_assignGear_bravo.sqf"";";
-					description="ChDKZ 1Plt Bravo Squad Medic";
-				};
-			};
-		};
-		class Item183
-		{
-			side="EAST";
-			class Vehicles
-			{
-				items=4;
-				class Item0
-				{
-					position[]={3347.4097,10.195897,3325.3628};
-					id=577;
-					side="EAST";
-					vehicle="Ins_Soldier_2";
-					player="PLAY CDG";
-					leader=1;
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitINS_1Plt_B1FTL";
-					init="GrpINS_1Plt_B1 = group this; nul = [""ftl"",this] execVM ""f\common\@ShackTac_assignGear_bravo.sqf"";";
-					description="ChDKZ 1Plt B1 Fireteam Leader";
-				};
-				class Item1
-				{
-					position[]={3349.7656,10.23269,3323.1721};
-					id=578;
-					side="EAST";
-					vehicle="Ins_Soldier_AR";
-					player="PLAY CDG";
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitINS_1Plt_B1AR";
-					init="GrpINS_1Plt_B1 = group this; nul = [""ar"",this] execVM ""f\common\@ShackTac_assignGear_bravo.sqf"";";
-					description="ChDKZ 1Plt B1 Automatic Rifleman";
-				};
-				class Item2
-				{
-					position[]={3352.1909,10.486988,3323.075};
-					id=579;
-					side="EAST";
-					vehicle="Ins_Soldier_2";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitINS_1Plt_B1AAR";
-					init="GrpINS_1Plt_B1 = group this; nul = [""aar"",this] execVM ""f\common\@ShackTac_assignGear_bravo.sqf"";";
-					description="ChDKZ 1Plt B1 Assistant Automatic Rifleman";
-				};
-				class Item3
-				{
-					position[]={3354.9077,10.782044,3323.0273};
-					id=580;
-					side="EAST";
-					vehicle="Ins_Soldier_1";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitINS_1Plt_B1RAT";
-					init="GrpINS_1Plt_B1 = group this; nul = [""rat"",this] execVM ""f\common\@ShackTac_assignGear_bravo.sqf"";";
-					description="ChDKZ 1Plt B1 Rifleman (AT)";
-				};
-			};
-		};
-		class Item184
-		{
-			side="EAST";
-			class Vehicles
-			{
-				items=4;
-				class Item0
-				{
-					position[]={3347.0171,9.7359228,3314.4719};
-					id=581;
-					side="EAST";
-					vehicle="Ins_Soldier_2";
-					player="PLAY CDG";
-					leader=1;
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitINS_1Plt_B2FTL";
-					init="GrpINS_1Plt_B2 = group this; nul = [""ftl"",this] execVM ""f\common\@ShackTac_assignGear_bravo.sqf"";";
-					description="ChDKZ 1Plt B2 Fireteam Leader";
-				};
-				class Item1
-				{
-					position[]={3349.3726,9.8788862,3312.2813};
-					id=582;
-					side="EAST";
-					vehicle="Ins_Soldier_AR";
-					player="PLAY CDG";
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitINS_1Plt_B2AR";
-					init="GrpINS_1Plt_B2 = group this; nul = [""ar"",this] execVM ""f\common\@ShackTac_assignGear_bravo.sqf"";";
-					description="ChDKZ 1Plt B2 Automatic Rifleman";
-				};
-				class Item2
-				{
-					position[]={3351.7983,10.101676,3312.1841};
-					id=583;
-					side="EAST";
-					vehicle="Ins_Soldier_2";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitINS_1Plt_B2AAR";
-					init="GrpINS_1Plt_B2 = group this; nul = [""aar"",this] execVM ""f\common\@ShackTac_assignGear_bravo.sqf"";";
-					description="ChDKZ 1Plt B2 Assistant Automatic Rifleman";
-				};
-				class Item3
-				{
-					position[]={3354.5151,10.372867,3312.1365};
-					id=584;
-					side="EAST";
-					vehicle="Ins_Soldier_1";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitINS_1Plt_B2RAT";
-					init="GrpINS_1Plt_B2 = group this; nul = [""rat"",this] execVM ""f\common\@ShackTac_assignGear_bravo.sqf"";";
-					description="ChDKZ 1Plt B2 Rifleman (AT)";
-				};
-			};
-		};
-		class Item185
-		{
-			side="EAST";
-			class Vehicles
-			{
-				items=4;
-				class Item0
-				{
-					position[]={3347.1831,9.6746511,3304.2014};
-					id=585;
-					side="EAST";
-					vehicle="Ins_Soldier_2";
-					player="PLAY CDG";
-					leader=1;
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitINS_1Plt_B3FTL";
-					init="GrpINS_1Plt_B3 = group this; nul = [""ftl"",this] execVM ""f\common\@ShackTac_assignGear_bravo.sqf"";";
-					description="ChDKZ 1Plt B3 Fireteam Leader";
-				};
-				class Item1
-				{
-					position[]={3349.5381,9.8630552,3302.0107};
-					id=586;
-					side="EAST";
-					vehicle="Ins_Soldier_AR";
-					player="PLAY CDG";
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitINS_1Plt_B3AR";
-					init="GrpINS_1Plt_B3 = group this; nul = [""ar"",this] execVM ""f\common\@ShackTac_assignGear_bravo.sqf"";";
-					description="ChDKZ 1Plt B3 Automatic Rifleman";
-				};
-				class Item2
-				{
-					position[]={3351.9634,10.07671,3301.9136};
-					id=587;
-					side="EAST";
-					vehicle="Ins_Soldier_2";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitINS_1Plt_B3AAR";
-					init="GrpINS_1Plt_B3 = group this; nul = [""aar"",this] execVM ""f\common\@ShackTac_assignGear_bravo.sqf"";";
-					description="ChDKZ 1Plt B3 Assistant Automatic Rifleman";
-				};
-				class Item3
-				{
-					position[]={3354.6802,10.321213,3301.866};
-					id=588;
-					side="EAST";
-					vehicle="Ins_Soldier_1";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitINS_1Plt_B3R";
-					init="GrpINS_1Plt_B3 = group this; nul = [""r"",this] execVM ""f\common\@ShackTac_assignGear_bravo.sqf"";";
-					description="ChDKZ 1Plt B3 Rifleman";
-				};
-			};
-		};
-		class Item186
-		{
-			side="EAST";
-			class Vehicles
-			{
-				items=2;
-				class Item0
-				{
-					position[]={3368.0854,13.05129,3334.2358};
-					id=589;
-					side="EAST";
-					vehicle="Ins_Soldier_2";
-					player="PLAY CDG";
-					leader=1;
-					rank="SERGEANT";
-					skill=0.60000002;
-					text="UnitINS_1Plt_CSL";
-					init="GrpINS_1Plt_Charlie = group this; nul = [""sl"",this] execVM ""f\common\@ShackTac_assignGear_charlie.sqf"";";
-					description="ChDKZ 1Plt Charlie Squad Leader";
-				};
-				class Item1
-				{
-					position[]={3370.439,13.057227,3332.0452};
-					id=590;
-					side="EAST";
-					vehicle="Ins_Soldier_Medic";
-					player="PLAY CDG";
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitINS_1Plt_CM";
-					init="GrpINS_1Plt_Charlie = group this; nul = [""m"",this] execVM ""f\common\@ShackTac_assignGear_charlie.sqf"";";
-					description="ChDKZ 1Plt Charlie Squad Medic";
-				};
-			};
-		};
-		class Item187
-		{
-			side="EAST";
-			class Vehicles
-			{
-				items=4;
-				class Item0
-				{
-					position[]={3368.0737,12.268939,3324.3594};
-					id=591;
-					side="EAST";
-					vehicle="Ins_Soldier_2";
-					player="PLAY CDG";
-					leader=1;
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitINS_1Plt_C1FTL";
-					init="GrpINS_1Plt_C1 = group this; nul = [""ftl"",this] execVM ""f\common\@ShackTac_assignGear_charlie.sqf"";";
-					description="ChDKZ 1Plt C1 Fireteam Leader";
-				};
-				class Item1
-				{
-					position[]={3370.4282,12.385794,3322.1687};
-					id=592;
-					side="EAST";
-					vehicle="Ins_Soldier_AR";
-					player="PLAY CDG";
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitINS_1Plt_C1AR";
-					init="GrpINS_1Plt_C1 = group this; nul = [""ar"",this] execVM ""f\common\@ShackTac_assignGear_charlie.sqf"";";
-					description="ChDKZ 1Plt C1 Automatic Rifleman";
-				};
-				class Item2
-				{
-					position[]={3372.855,12.695432,3322.0715};
-					id=593;
-					side="EAST";
-					vehicle="Ins_Soldier_2";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitINS_1Plt_C1AAR";
-					init="GrpINS_1Plt_C1 = group this; nul = [""aar"",this] execVM ""f\common\@ShackTac_assignGear_charlie.sqf"";";
-					description="ChDKZ 1Plt C1 Assistant Automatic Rifleman";
-				};
-				class Item3
-				{
-					position[]={3375.5718,13.045782,3322.0239};
-					id=594;
-					side="EAST";
-					vehicle="Ins_Soldier_1";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitINS_1Plt_C1RAT";
-					init="GrpINS_1Plt_C1 = group this; nul = [""rat"",this] execVM ""f\common\@ShackTac_assignGear_charlie.sqf"";";
-					description="ChDKZ 1Plt C1 Rifleman (AT)";
-				};
-			};
-		};
-		class Item188
-		{
-			side="EAST";
-			class Vehicles
-			{
-				items=4;
-				class Item0
-				{
-					position[]={3367.6812,11.81431,3313.4685};
-					id=595;
-					side="EAST";
-					vehicle="Ins_Soldier_2";
-					player="PLAY CDG";
-					leader=1;
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitINS_1Plt_C2FTL";
-					init="GrpINS_1Plt_C2 = group this; nul = [""ftl"",this] execVM ""f\common\@ShackTac_assignGear_charlie.sqf"";";
-					description="ChDKZ 1Plt C2 Fireteam Leader";
-				};
-				class Item1
-				{
-					position[]={3370.0356,12.030197,3311.2778};
-					id=596;
-					side="EAST";
-					vehicle="Ins_Soldier_AR";
-					player="PLAY CDG";
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitINS_1Plt_C2AR";
-					init="GrpINS_1Plt_C2 = group this; nul = [""ar"",this] execVM ""f\common\@ShackTac_assignGear_charlie.sqf"";";
-					description="ChDKZ 1Plt C2 Automatic Rifleman";
-				};
-				class Item2
-				{
-					position[]={3372.4624,12.343735,3311.1807};
-					id=597;
-					side="EAST";
-					vehicle="Ins_Soldier_2";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitINS_1Plt_C2AAR";
-					init="GrpINS_1Plt_C2 = group this; nul = [""aar"",this] execVM ""f\common\@ShackTac_assignGear_charlie.sqf"";";
-					description="ChDKZ 1Plt C2 Assistant Automatic Rifleman";
-				};
-				class Item3
-				{
-					position[]={3375.1792,12.695951,3311.1331};
-					id=598;
-					side="EAST";
-					vehicle="Ins_Soldier_1";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitINS_1Plt_C2RAT";
-					init="GrpINS_1Plt_C2 = group this; nul = [""rat"",this] execVM ""f\common\@ShackTac_assignGear_charlie.sqf"";";
-					description="ChDKZ 1Plt C2 Rifleman (AT)";
-				};
-			};
-		};
-		class Item189
-		{
-			side="EAST";
-			class Vehicles
-			{
-				items=4;
-				class Item0
-				{
-					position[]={3367.8472,11.627159,3303.198};
-					id=599;
-					side="EAST";
-					vehicle="Ins_Soldier_2";
-					player="PLAY CDG";
-					leader=1;
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitINS_1Plt_C3FTL";
-					init="GrpINS_1Plt_C3 = group this; nul = [""ftl"",this] execVM ""f\common\@ShackTac_assignGear_charlie.sqf"";";
-					description="ChDKZ 1Plt C3 Fireteam Leader";
-				};
-				class Item1
-				{
-					position[]={3370.2007,11.846252,3301.0073};
-					id=600;
-					side="EAST";
-					vehicle="Ins_Soldier_AR";
-					player="PLAY CDG";
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitINS_1Plt_C3AR";
-					init="GrpINS_1Plt_C3 = group this; nul = [""ar"",this] execVM ""f\common\@ShackTac_assignGear_charlie.sqf"";";
-					description="ChDKZ 1Plt C3 Automatic Rifleman";
-				};
-				class Item2
-				{
-					position[]={3372.6274,12.159787,3300.9102};
-					id=601;
-					side="EAST";
-					vehicle="Ins_Soldier_2";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitINS_1Plt_C3AAR";
-					init="GrpINS_1Plt_C3 = group this; nul = [""aar"",this] execVM ""f\common\@ShackTac_assignGear_charlie.sqf"";";
-					description="ChDKZ 1Plt C3 Assistant Automatic Rifleman";
-				};
-				class Item3
-				{
-					position[]={3375.3442,12.512,3300.8625};
-					id=602;
-					side="EAST";
-					vehicle="Ins_Soldier_1";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitINS_1Plt_C3R";
-					init="GrpINS_1Plt_C3 = group this; nul = [""r"",this] execVM ""f\common\@ShackTac_assignGear_charlie.sqf"";";
-					description="ChDKZ 1Plt C3 Rifleman";
-				};
-			};
-		};
-		class Item190
-		{
-			side="EAST";
-			class Vehicles
-			{
-				items=2;
-				class Item0
-				{
-					position[]={3390.0093,15.575206,3334.5662};
-					id=603;
-					side="EAST";
-					vehicle="Ins_Soldier_2";
-					player="PLAY CDG";
-					leader=1;
-					rank="SERGEANT";
-					skill=0.60000002;
-					text="UnitINS_1Plt_DSL";
-					init="GrpINS_1Plt_Delta = group this; nul = [""sl"",this] execVM ""f\common\@ShackTac_assignGear_echo.sqf"";";
-					description="ChDKZ 1Plt Delta Squad Leader";
-				};
-				class Item1
-				{
-					position[]={3392.3638,15.749831,3332.3755};
-					id=604;
-					side="EAST";
-					vehicle="Ins_Soldier_Medic";
-					player="PLAY CDG";
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitINS_1Plt_DM";
-					init="GrpINS_1Plt_Delta = group this; nul = [""m"",this] execVM ""f\common\@ShackTac_assignGear_echo.sqf"";";
-					description="ChDKZ 1Plt Delta Squad Medic";
-				};
-			};
-		};
-		class Item191
-		{
-			side="EAST";
-			class Vehicles
-			{
-				items=4;
-				class Item0
-				{
-					position[]={3389.9976,15.087263,3324.6897};
-					id=605;
-					side="EAST";
-					vehicle="Ins_Soldier_2";
-					player="PLAY CDG";
-					leader=1;
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitINS_1Plt_D1FTL";
-					init="GrpINS_1Plt_D1 = group this; nul = [""ftl"",this] execVM ""f\common\@ShackTac_assignGear_echo.sqf"";";
-					description="ChDKZ 1Plt D1 Fireteam Leader";
-				};
-				class Item1
-				{
-					position[]={3392.353,15.352938,3322.499};
-					id=606;
-					side="EAST";
-					vehicle="Ins_Soldier_AR";
-					player="PLAY CDG";
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitINS_1Plt_D1AR";
-					init="GrpINS_1Plt_D1 = group this; nul = [""ar"",this] execVM ""f\common\@ShackTac_assignGear_echo.sqf"";";
-					description="ChDKZ 1Plt D1 Automatic Rifleman";
-				};
-				class Item2
-				{
-					position[]={3394.7788,15.712886,3322.4019};
-					id=607;
-					side="EAST";
-					vehicle="Ins_Soldier_2";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitINS_1Plt_D1AAR";
-					init="GrpINS_1Plt_D1 = group this; nul = [""aar"",this] execVM ""f\common\@ShackTac_assignGear_echo.sqf"";";
-					description="ChDKZ 1Plt D1 Assistant Automatic Rifleman";
-				};
-				class Item3
-				{
-					position[]={3397.4956,16.118528,3322.3542};
-					id=608;
-					side="EAST";
-					vehicle="Ins_Soldier_1";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitINS_1Plt_D1RAT";
-					init="GrpINS_1Plt_D1 = group this; nul = [""rat"",this] execVM ""f\common\@ShackTac_assignGear_echo.sqf"";;";
-					description="ChDKZ 1Plt D1 Rifleman (AT)";
-				};
-			};
-		};
-		class Item192
-		{
-			side="EAST";
-			class Vehicles
-			{
-				items=4;
-				class Item0
-				{
-					position[]={3389.605,14.7827,3313.7988};
-					id=609;
-					side="EAST";
-					vehicle="Ins_Soldier_2";
-					player="PLAY CDG";
-					leader=1;
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitINS_1Plt_D2FTL";
-					init="GrpINS_1Plt_D2 = group this; nul = [""ftl"",this] execVM ""f\common\@ShackTac_assignGear_echo.sqf"";";
-					description="ChDKZ 1Plt D2 Fireteam Leader";
-				};
-				class Item1
-				{
-					position[]={3391.9595,15.110011,3311.6082};
-					id=610;
-					side="EAST";
-					vehicle="Ins_Soldier_AR";
-					player="PLAY CDG";
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitINS_1Plt_D2AR";
-					init="GrpINS_1Plt_D2 = group this; nul = [""ar"",this] execVM ""f\common\@ShackTac_assignGear_echo.sqf"";";
-					description="ChDKZ 1Plt D2 Automatic Rifleman";
-				};
-				class Item2
-				{
-					position[]={3394.3862,15.473051,3311.511};
-					id=611;
-					side="EAST";
-					vehicle="Ins_Soldier_2";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitINS_1Plt_D2AAR";
-					init="GrpINS_1Plt_D2 = group this; nul = [""aar"",this] execVM ""f\common\@ShackTac_assignGear_echo.sqf"";";
-					description="ChDKZ 1Plt D2 Assistant Automatic Rifleman";
-				};
-				class Item3
-				{
-					position[]={3397.103,15.880076,3311.4634};
-					id=612;
-					side="EAST";
-					vehicle="Ins_Soldier_1";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitINS_1Plt_D2RAT";
-					init="GrpINS_1Plt_D2 = group this; nul = [""rat"",this] execVM ""f\common\@ShackTac_assignGear_echo.sqf"";";
-					description="ChDKZ 1Plt D2 Rifleman (AT)";
-				};
-			};
-		};
-		class Item193
-		{
-			side="EAST";
-			class Vehicles
-			{
-				items=4;
-				class Item0
-				{
-					position[]={3389.771,14.63623,3303.5283};
-					id=613;
-					side="EAST";
-					vehicle="Ins_Soldier_2";
-					player="PLAY CDG";
-					leader=1;
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitINS_1Plt_D3FTL";
-					init="GrpINS_1Plt_D3 = group this; nul = [""ftl"",this] execVM ""f\common\@ShackTac_assignGear_echo.sqf"";;";
-					description="ChDKZ 1Plt D3 Fireteam Leader";
-				};
-				class Item1
-				{
-					position[]={3392.1255,14.988089,3301.3376};
-					id=614;
-					side="EAST";
-					vehicle="Ins_Soldier_AR";
-					player="PLAY CDG";
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitINS_1Plt_D3AR";
-					init="GrpINS_1Plt_D3 = group this; nul = [""ar"",this] execVM ""f\common\@ShackTac_assignGear_echo.sqf"";";
-					description="ChDKZ 1Plt D3 Automatic Rifleman";
-				};
-				class Item2
-				{
-					position[]={3394.5513,15.398542,3301.2405};
-					id=615;
-					side="EAST";
-					vehicle="Ins_Soldier_2";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitINS_1Plt_D3AAR";
-					init="GrpINS_1Plt_D3 = group this; nul = [""aar"",this] execVM ""f\common\@ShackTac_assignGear_echo.sqf"";;";
-					description="ChDKZ 1Plt D3 Assistant Automatic Rifleman";
-				};
-				class Item3
-				{
-					position[]={3397.2681,15.859427,3301.1929};
-					id=616;
-					side="EAST";
-					vehicle="Ins_Soldier_1";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitINS_1Plt_D3R";
-					init="GrpINS_1Plt_D3 = group this; nul = [""r"",this] execVM ""f\common\@ShackTac_assignGear_echo.sqf"";";
-					description="ChDKZ 1Plt D3 Rifleman";
-				};
-			};
-		};
-		class Item194
-		{
-			side="EAST";
-			class Vehicles
-			{
-				items=2;
-				class Item0
-				{
-					position[]={3411.4409,18.091782,3334.4424};
-					id=617;
-					side="EAST";
-					vehicle="Ins_Soldier_2";
-					player="PLAY CDG";
-					leader=1;
-					rank="SERGEANT";
-					skill=0.60000002;
-					text="UnitINS_1Plt_ESL";
-					init="GrpINS_1Plt_Echo = group this; nul = [""sl"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="ChDKZ 1Plt Echo Squad Leader";
-				};
-				class Item1
-				{
-					position[]={3413.7954,18.285053,3332.2517};
-					id=618;
-					side="EAST";
-					vehicle="Ins_Soldier_Medic";
-					player="PLAY CDG";
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitINS_1Plt_EM";
-					init="GrpINS_1Plt_Echo = group this; nul = [""m"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="ChDKZ 1Plt Echo Squad Medic";
-				};
-			};
-		};
-		class Item195
-		{
-			side="EAST";
-			class Vehicles
-			{
-				items=4;
-				class Item0
-				{
-					position[]={3411.4292,17.917156,3324.5659};
-					id=619;
-					side="EAST";
-					vehicle="Ins_Soldier_2";
-					player="PLAY CDG";
-					leader=1;
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitINS_1Plt_E1FTL";
-					init="GrpINS_1Plt_E1 = group this; nul = [""ftl"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="ChDKZ 1Plt E1 Fireteam Leader";
-				};
-				class Item1
-				{
-					position[]={3413.7847,18.177923,3322.3752};
-					id=620;
-					side="EAST";
-					vehicle="Ins_Soldier_AR";
-					player="PLAY CDG";
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitINS_1Plt_E1AR";
-					init="GrpINS_1Plt_E1 = group this; nul = [""ar"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="ChDKZ 1Plt E1 Automatic Rifleman";
-				};
-				class Item2
-				{
-					position[]={3416.2104,18.468052,3322.2781};
-					id=621;
-					side="EAST";
-					vehicle="Ins_Soldier_2";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitINS_1Plt_E1AAR";
-					init="GrpINS_1Plt_E1 = group this; nul = [""aar"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="ChDKZ 1Plt E1 Assistant Automatic Rifleman";
-				};
-				class Item3
-				{
-					position[]={3418.9272,18.781994,3322.2305};
-					id=622;
-					side="EAST";
-					vehicle="Ins_Soldier_1";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitINS_1Plt_E1RAT";
-					init="GrpINS_1Plt_E1 = group this; nul = [""rat"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="ChDKZ 1Plt E1 Rifleman (AT)";
-				};
-			};
-		};
-		class Item196
-		{
-			side="EAST";
-			class Vehicles
-			{
-				items=4;
-				class Item0
-				{
-					position[]={3411.0366,17.908382,3313.675};
-					id=623;
-					side="EAST";
-					vehicle="Ins_Soldier_2";
-					player="PLAY CDG";
-					leader=1;
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitINS_1Plt_E2FTL";
-					init="GrpINS_1Plt_E2 = group this; nul = [""ftl"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="ChDKZ 1Plt E2 Fireteam Leader";
-				};
-				class Item1
-				{
-					position[]={3413.3921,18.26004,3311.4844};
-					id=624;
-					side="EAST";
-					vehicle="Ins_Soldier_AR";
-					player="PLAY CDG";
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitINS_1Plt_E2AR";
-					init="GrpINS_1Plt_E2 = group this; nul = [""ar"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="ChDKZ 1Plt E2 Automatic Rifleman";
-				};
-				class Item2
-				{
-					position[]={3415.8179,18.60063,3311.3872};
-					id=625;
-					side="EAST";
-					vehicle="Ins_Soldier_2";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitINS_1Plt_E2AAR";
-					init="GrpINS_1Plt_E2 = group this; nul = [""aar"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="ChDKZ 1Plt E2 Assistant Automatic Rifleman";
-				};
-				class Item3
-				{
-					position[]={3418.5347,18.981483,3311.3396};
-					id=626;
-					side="EAST";
-					vehicle="Ins_Soldier_1";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitINS_1Plt_E2RAT";
-					init="GrpINS_1Plt_E2 = group this; nul = [""rat"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="ChDKZ 1Plt E2 Rifleman (AT)";
-				};
-			};
-		};
-		class Item197
-		{
-			side="EAST";
-			class Vehicles
-			{
-				items=4;
-				class Item0
-				{
-					position[]={3411.2026,18.19029,3303.4045};
-					id=627;
-					side="EAST";
-					vehicle="Ins_Soldier_2";
-					player="PLAY CDG";
-					leader=1;
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitINS_1Plt_E3FTL";
-					init="GrpINS_1Plt_E3 = group this; nul = [""ftl"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="ChDKZ 1Plt E3 Fireteam Leader";
-				};
-				class Item1
-				{
-					position[]={3413.5571,18.632717,3301.2139};
-					id=628;
-					side="EAST";
-					vehicle="Ins_Soldier_AR";
-					player="PLAY CDG";
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitINS_1Plt_E3AR";
-					init="GrpINS_1Plt_E3 = group this; nul = [""ar"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="ChDKZ 1Plt E3 Automatic Rifleman";
-				};
-				class Item2
-				{
-					position[]={3415.9829,19.023773,3301.1167};
-					id=629;
-					side="EAST";
-					vehicle="Ins_Soldier_2";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitINS_1Plt_E3AAR";
-					init="GrpINS_1Plt_E3 = group this; nul = [""aar"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="ChDKZ 1Plt E3 Assistant Automatic Rifleman";
-				};
-				class Item3
-				{
-					position[]={3418.6997,19.459873,3301.0691};
-					id=630;
-					side="EAST";
-					vehicle="Ins_Soldier_1";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitINS_1Plt_E3R";
-					init="GrpINS_1Plt_E3 = group this; nul = [""r"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="ChDKZ 1Plt E3 Rifleman";
-				};
-			};
-		};
-		class Item198
-		{
-			side="EAST";
-			class Vehicles
-			{
-				items=3;
-				class Item0
-				{
-					position[]={3433.605,20.348452,3324.8096};
-					id=631;
-					side="EAST";
-					vehicle="Ins_Soldier_MG";
-					player="PLAY CDG";
-					leader=1;
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitINS_MMG1G";
-					init="GrpINS_MMG1 = group this; nul = [""mmgg"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="ChDKZ Medium MG Team 1 Gunner";
-				};
-				class Item1
-				{
-					position[]={3435.9604,20.629444,3322.6189};
-					id=632;
-					side="EAST";
-					vehicle="Ins_Soldier_1";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitINS_MMG1AG";
-					init="GrpINS_MMG1 = group this; nul = [""mmgag"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="ChDKZ Medium MG Team 1 Assistant Gunner";
-				};
-				class Item2
-				{
-					position[]={3438.3862,20.88818,3322.5217};
-					id=633;
-					side="EAST";
-					vehicle="Ins_Soldier_1";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitINS_MMG1AM";
-					init="GrpINS_MMG1 = group this; nul = [""mmgam"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="ChDKZ Medium MG Team 1 Ammo Man";
-				};
-			};
-		};
-		class Item199
-		{
-			side="EAST";
-			class Vehicles
-			{
-				items=3;
-				class Item0
-				{
-					position[]={3433.7905,20.569771,3314.2546};
-					id=634;
-					side="EAST";
-					vehicle="Ins_Soldier_MG";
-					player="PLAY CDG";
-					leader=1;
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitINS_MMG2G";
-					init="GrpINS_MMG2 = group this; nul = [""mmgg"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="ChDKZ Medium MG Team 2 Gunner";
-				};
-				class Item1
-				{
-					position[]={3436.146,20.896229,3312.064};
-					id=635;
-					side="EAST";
-					vehicle="Ins_Soldier_1";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitINS_MMG2AG";
-					init="GrpINS_MMG2 = group this; nul = [""mmgag"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="ChDKZ Medium MG Team 2 Assistant Gunner";
-				};
-				class Item2
-				{
-					position[]={3438.5718,21.183882,3311.9668};
-					id=636;
-					side="EAST";
-					vehicle="Ins_Soldier_1";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitINS_MMG2AM";
-					init="GrpINS_MMG2 = group this; nul = [""mmgam"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="ChDKZ Medium MG Team 2 Ammo Man";
-				};
-			};
-		};
-		class Item200
-		{
-			side="EAST";
-			class Vehicles
-			{
-				items=3;
-				class Item0
-				{
-					position[]={3433.9585,21.045746,3303.1611};
-					id=637;
-					side="EAST";
-					vehicle="Ins_Soldier_MG";
-					player="PLAY CDG";
-					leader=1;
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitINS_MMG3G";
-					init="GrpINS_MMG3 = group this; nul = [""mmgg"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="ChDKZ Medium MG Team 3 Gunner";
-				};
-				class Item1
-				{
-					position[]={3436.314,21.436316,3300.9705};
-					id=638;
-					side="EAST";
-					vehicle="Ins_Soldier_1";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitINS_MMG3AG";
-					init="GrpINS_MMG3 = group this; nul = [""mmgag"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="ChDKZ Medium MG Team 3 Assistant Gunner";
-				};
-				class Item2
-				{
-					position[]={3438.7397,21.708979,3300.8733};
-					id=639;
-					side="EAST";
-					vehicle="Ins_Soldier_1";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitINS_MMG3AM";
-					init="GrpINS_MMG3 = group this; nul = [""mmgam"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="ChDKZ Medium MG Team 3 Ammo Man";
-				};
-			};
-		};
-		class Item201
-		{
-			side="EAST";
-			class Vehicles
-			{
-				items=3;
-				class Item0
-				{
-					position[]={3450.2729,22.024933,3324.9819};
-					id=640;
-					side="EAST";
-					vehicle="Ins_Soldier_MG";
-					player="PLAY CDG";
-					leader=1;
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitINS_HMG1G";
-					init="GrpINS_HMG1 = group this; nul = [""hmgg"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="ChDKZ Heavy MG Team 1 Gunner";
-				};
-				class Item1
-				{
-					position[]={3452.6284,22.280727,3322.7913};
-					id=641;
-					side="EAST";
-					vehicle="Ins_Soldier_1";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitINS_HMG1AG";
-					init="GrpINS_HMG1 = group this; nul = [""hmgag"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="ChDKZ Heavy MG Team 1 Assistant Gunner";
-				};
-				class Item2
-				{
-					position[]={3455.0542,22.501003,3322.6941};
-					id=642;
-					side="EAST";
-					vehicle="Ins_Soldier_1";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitINS_HMG1AM";
-					init="GrpINS_HMG1 = group this; nul = [""hmgam"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="ChDKZ Heavy MG Team 1 Ammo Man";
-				};
-			};
-		};
-		class Item202
-		{
-			side="EAST";
-			class Vehicles
-			{
-				items=3;
-				class Item0
-				{
-					position[]={3450.1333,22.333019,3314.4744};
-					id=643;
-					side="EAST";
-					vehicle="Ins_Soldier_MG";
-					player="PLAY CDG";
-					leader=1;
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitINS_HMG2G";
-					init="GrpINS_HMG2 = group this; nul = [""hmgg"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="ChDKZ Heavy MG Team 2 Gunner";
-				};
-				class Item1
-				{
-					position[]={3452.4888,22.632633,3312.2837};
-					id=644;
-					side="EAST";
-					vehicle="Ins_Soldier_1";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitINS_HMG2AG";
-					init="GrpINS_HMG2 = group this; nul = [""hmgag"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="ChDKZ Heavy MG Team 2 Assistant Gunner";
-				};
-				class Item2
-				{
-					position[]={3454.9146,22.854839,3312.1865};
-					id=645;
-					side="EAST";
-					vehicle="Ins_Soldier_1";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitINS_HMG2AM";
-					init="GrpINS_HMG2 = group this; nul = [""hmgam"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="ChDKZ Heavy MG Team 2 Ammo Man";
-				};
-			};
-		};
-		class Item203
-		{
-			side="EAST";
-			class Vehicles
-			{
-				items=3;
-				class Item0
-				{
-					position[]={3449.9243,22.845556,3302.9224};
-					id=646;
-					side="EAST";
-					vehicle="Ins_Soldier_MG";
-					player="PLAY CDG";
-					leader=1;
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitINS_HMG3G";
-					init="GrpINS_HMG3 = group this; nul = [""hmgg"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="ChDKZ Heavy MG Team 3 Gunner";
-				};
-				class Item1
-				{
-					position[]={3452.2798,23.145807,3300.7317};
-					id=647;
-					side="EAST";
-					vehicle="Ins_Soldier_1";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitINS_HMG3AG";
-					init="GrpINS_HMG3 = group this; nul = [""hmgag"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="ChDKZ Heavy MG Team 3 Assistant Gunner";
-				};
-				class Item2
-				{
-					position[]={3454.7056,23.344717,3300.6345};
-					id=648;
-					side="EAST";
-					vehicle="Ins_Soldier_1";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitINS_HMG3AM";
-					init="GrpINS_HMG3 = group this; nul = [""hmgam"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="ChDKZ Heavy MG Team 3 Ammo Man";
-				};
-			};
-		};
-		class Item204
-		{
-			side="EAST";
-			class Vehicles
-			{
-				items=3;
-				class Item0
-				{
-					position[]={3466.3521,23.390581,3325.1357};
-					id=649;
-					side="EAST";
-					vehicle="Ins_Soldier_AT";
-					player="PLAY CDG";
-					leader=1;
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitINS_MAT1G";
-					init="GrpINS_MAT1 = group this; nul = [""matg"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="ChDKZ Medium AT Team 1 Gunner";
-				};
-				class Item1
-				{
-					position[]={3468.7075,23.621172,3322.9451};
-					id=650;
-					side="EAST";
-					vehicle="Ins_Soldier_1";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitINS_MAT1AG";
-					init="GrpINS_MAT1 = group this; nul = [""matag"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="ChDKZ Medium AT Team 1 Assistant Gunner";
-				};
-				class Item2
-				{
-					position[]={3471.1333,23.771235,3322.8479};
-					id=651;
-					side="EAST";
-					vehicle="Ins_Soldier_1";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitINS_MAT1AM";
-					init="GrpINS_MAT1 = group this; nul = [""matam"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="ChDKZ Medium AT Team 1 Ammo Man";
-				};
-			};
-		};
-		class Item205
-		{
-			side="EAST";
-			class Vehicles
-			{
-				items=3;
-				class Item0
-				{
-					position[]={3466.4106,23.689777,3314.1028};
-					id=652;
-					side="EAST";
-					vehicle="Ins_Soldier_AT";
-					player="PLAY CDG";
-					leader=1;
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitINS_MAT2G";
-					init="GrpINS_MAT2 = group this; nul = [""matg"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="ChDKZ Medium AT Team 2 Gunner";
-				};
-				class Item1
-				{
-					position[]={3468.7661,23.94392,3311.9121};
-					id=653;
-					side="EAST";
-					vehicle="Ins_Soldier_1";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitINS_MAT2AG";
-					init="GrpINS_MAT2 = group this; nul = [""matag"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="ChDKZ Medium AT Team 2 Assistant Gunner";
-				};
-				class Item2
-				{
-					position[]={3471.1919,24.105146,3311.8149};
-					id=654;
-					side="EAST";
-					vehicle="Ins_Soldier_1";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitINS_MAT2AM";
-					init="GrpINS_MAT2 = group this; nul = [""matam"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="ChDKZ Medium AT Team 2 Ammo Man";
-				};
-			};
-		};
-		class Item206
-		{
-			side="EAST";
-			class Vehicles
-			{
-				items=3;
-				class Item0
-				{
-					position[]={3466.7388,24.130192,3303.5381};
-					id=655;
-					side="EAST";
-					vehicle="Ins_Soldier_AT";
-					player="PLAY CDG";
-					leader=1;
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitINS_MAT3G";
-					init="GrpINS_MAT3 = group this; nul = [""matg"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="ChDKZ Medium AT Team 3 Gunner";
-				};
-				class Item1
-				{
-					position[]={3469.0942,24.3827,3301.3474};
-					id=656;
-					side="EAST";
-					vehicle="Ins_Soldier_1";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitINS_MAT3AG";
-					init="GrpINS_MAT3 = group this; nul = [""matag"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="ChDKZ Medium AT Team 3 Assistant Gunner";
-				};
-				class Item2
-				{
-					position[]={3471.52,24.510788,3301.2502};
-					id=657;
-					side="EAST";
-					vehicle="Ins_Soldier_1";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitINS_MAT3AM";
-					init="GrpINS_MAT3 = group this; nul = [""matam"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="ChDKZ Medium AT Team 3 Ammo Man";
-				};
-			};
-		};
-		class Item207
-		{
-			side="EAST";
-			class Vehicles
-			{
-				items=3;
-				class Item0
-				{
-					position[]={3483.2847,24.310242,3326.0566};
-					id=658;
-					side="EAST";
-					vehicle="Ins_Soldier_AT";
-					player="PLAY CDG";
-					leader=1;
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitINS_HAT1G";
-					init="GrpINS_HAT1 = group this; nul = [""hatg"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="ChDKZ Heavy AT Team 1 Gunner";
-				};
-				class Item1
-				{
-					position[]={3485.6401,24.448288,3323.866};
-					id=659;
-					side="EAST";
-					vehicle="Ins_Soldier_1";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitINS_HAT1AG";
-					init="GrpINS_HAT1 = group this; nul = [""hatag"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="ChDKZ Heavy AT Team 1 Assistant Gunner";
-				};
-				class Item2
-				{
-					position[]={3488.0659,24.528912,3323.7688};
-					id=660;
-					side="EAST";
-					vehicle="Ins_Soldier_1";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitINS_HAT1AM";
-					init="GrpINS_HAT1 = group this; nul = [""hatam"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="ChDKZ Heavy AT Team 1 Ammo Man";
-				};
-			};
-		};
-		class Item208
-		{
-			side="EAST";
-			class Vehicles
-			{
-				items=3;
-				class Item0
-				{
-					position[]={3483.1997,24.574364,3315.1208};
-					id=661;
-					side="EAST";
-					vehicle="Ins_Soldier_AT";
-					player="PLAY CDG";
-					leader=1;
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitINS_HAT2G";
-					init="GrpINS_HAT2 = group this; nul = [""hatg"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="ChDKZ Heavy AT Team 2 Gunner";
-				};
-				class Item1
-				{
-					position[]={3485.5552,24.734295,3312.9302};
-					id=662;
-					side="EAST";
-					vehicle="Ins_Soldier_1";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitINS_HAT2AG";
-					init="GrpINS_HAT2 = group this; nul = [""hatag"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="ChDKZ Heavy AT Team 2 Assistant Gunner";
-				};
-				class Item2
-				{
-					position[]={3487.981,24.834249,3312.833};
-					id=663;
-					side="EAST";
-					vehicle="Ins_Soldier_1";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitINS_HAT2AM";
-					init="GrpINS_HAT2 = group this; nul = [""hatam"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="ChDKZ Heavy AT Team 2 Ammo Man";
-				};
-			};
-		};
-		class Item209
-		{
-			side="EAST";
-			class Vehicles
-			{
-				items=3;
-				class Item0
-				{
-					position[]={3483.2847,24.880703,3303.9275};
-					id=664;
-					side="EAST";
-					vehicle="Ins_Soldier_AT";
-					player="PLAY CDG";
-					leader=1;
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitINS_HAT3G";
-					init="GrpINS_HAT3 = group this; nul = [""hatg"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="ChDKZ Heavy AT Team 3 Gunner";
-				};
-				class Item1
-				{
-					position[]={3485.6401,25.017101,3301.7368};
-					id=665;
-					side="EAST";
-					vehicle="Ins_Soldier_1";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitINS_HAT3AG";
-					init="GrpINS_HAT3 = group this; nul = [""hatag"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="ChDKZ Heavy AT Team 3 Assistant Gunner";
-				};
-				class Item2
-				{
-					position[]={3488.0659,25.092791,3301.6396};
-					id=666;
-					side="EAST";
-					vehicle="Ins_Soldier_1";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitINS_HAT3AM";
-					init="GrpINS_HAT3 = group this; nul = [""hatam"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="ChDKZ Heavy AT Team 3 Ammo Man";
-				};
-			};
-		};
-		class Item210
-		{
-			side="EAST";
-			class Vehicles
-			{
-				items=2;
-				class Item0
-				{
-					position[]={3500.8169,24.823748,3325.0378};
-					id=667;
-					side="EAST";
-					vehicle="Ins_Soldier_Sniper";
-					player="PLAY CDG";
-					leader=1;
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitINS_ST1SN";
-					init="GrpINS_ST1 = group this; nul = [""sn"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="ChDKZ Sniper Team 1 Sniper";
-				};
-				class Item1
-				{
-					position[]={3503.1714,24.938192,3322.8472};
-					id=668;
-					side="EAST";
-					vehicle="Ins_Soldier_Sniper";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitINS_ST1SP";
-					init="GrpINS_ST1 = group this; nul = [""sp"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="ChDKZ Sniper Team 1 Spotter";
-				};
-			};
-		};
-		class Item211
-		{
-			side="EAST";
-			class Vehicles
-			{
-				items=3;
-				class Item0
-				{
-					position[]={3371.4575,11.321231,3277.5752};
-					id=669;
-					side="EAST";
-					vehicle="Ins_Soldier_Crew";
-					player="PLAY CDG";
-					leader=1;
-					rank="LIEUTENANT";
-					skill=0.60000002;
-					text="UnitINS_FLC";
-					init="GrpINS_Foxtrot_Lead = group this;";
-					description="ChDKZ Foxtrot Lead Commander";
-				};
-				class Item1
-				{
-					position[]={3377.7749,11.664477,3270.7104};
-					id=671;
-					side="EAST";
-					vehicle="Ins_Soldier_Crew";
-					player="PLAY CDG";
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitINS_FLG";
-					init="GrpINS_Foxtrot_Lead = group this;";
-					description="ChDKZ Foxtrot Lead Gunner";
-				};
-				class Item2
-				{
-					position[]={3371.8188,11.64638,3271.0723};
-					id=670;
-					side="EAST";
-					vehicle="Ins_Soldier_Crew";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitINS_FLD";
-					init="GrpINS_Foxtrot_Lead = group this;";
-					description="ChDKZ Foxtrot Lead Driver";
-				};
-			};
-		};
-		class Item212
-		{
-			side="EAST";
-			class Vehicles
-			{
-				items=3;
-				class Item0
-				{
-					position[]={3386.4399,13.115358,3277.2148};
-					id=672;
-					side="EAST";
-					vehicle="Ins_Soldier_Crew";
-					player="PLAY CDG";
-					leader=1;
-					rank="SERGEANT";
-					skill=0.60000002;
-					text="UnitINS_F1C";
-					init="GrpINS_Foxtrot_1 = group this;";
-					description="ChDKZ Foxtrot1 Commander";
-				};
-				class Item1
-				{
-					position[]={3392.7573,13.52781,3270.3501};
-					id=674;
-					side="EAST";
-					vehicle="RU_Soldier_Crew";
-					player="PLAY CDG";
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitRU_F1G_1";
-					init="GrpRU_Foxtrot_1 = group this;";
-					description="ChDKZ Foxtrot1 Gunner";
-				};
-				class Item2
-				{
-					position[]={3386.8013,12.634027,3270.7119};
-					id=673;
-					side="EAST";
-					vehicle="RU_Soldier_Crew";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitRU_F1D_1";
-					init="GrpRU_Foxtrot_1 = group this;";
-					description="ChDKZ Foxtrot1 Driver";
-				};
-			};
-		};
-		class Item213
-		{
-			side="EAST";
-			class Vehicles
-			{
-				items=3;
-				class Item0
-				{
-					position[]={3402.6851,16.118368,3277.5745};
-					id=675;
-					side="EAST";
-					vehicle="Ins_Soldier_Crew";
-					player="PLAY CDG";
-					leader=1;
-					rank="SERGEANT";
-					skill=0.60000002;
-					text="UnitINS_F2C";
-					init="GrpINS_Foxtrot_2 = group this;";
-					description="ChDKZ Foxtrot2 Commander";
-				};
-				class Item1
-				{
-					position[]={3409.0024,17.024458,3270.7097};
-					id=677;
-					side="EAST";
-					vehicle="Ins_Soldier_Crew";
-					player="PLAY CDG";
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitINS_F2G";
-					init="GrpINS_Foxtrot_2 = group this;";
-					description="ChDKZ Foxtrot2 Gunner";
-				};
-				class Item2
-				{
-					position[]={3403.0464,15.627609,3271.0715};
-					id=676;
-					side="EAST";
-					vehicle="Ins_Soldier_Crew";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitINS_F2D";
-					init="GrpINS_Foxtrot_2 = group this;";
-					description="ChDKZ Foxtrot2 Driver";
-				};
-			};
-		};
-		class Item214
-		{
-			side="EAST";
-			class Vehicles
-			{
-				items=3;
-				class Item0
-				{
-					position[]={3417.8472,18.596878,3276.1316};
-					id=678;
-					side="EAST";
-					vehicle="Ins_Soldier_Crew";
-					player="PLAY CDG";
-					leader=1;
-					rank="SERGEANT";
-					skill=0.60000002;
-					text="UnitINS_F3C";
-					init="GrpINS_Foxtrot_3 = group this;";
-					description="ChDKZ Foxtrot3 Commander";
-				};
-				class Item1
-				{
-					position[]={3424.1646,18.354357,3269.2668};
-					id=680;
-					side="EAST";
-					vehicle="Ins_Soldier_Crew";
-					player="PLAY CDG";
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitINS_F3G";
-					init="GrpINS_Foxtrot_3 = group this;";
-					description="ChDKZ Foxtrot3 Gunner";
-				};
-				class Item2
-				{
-					position[]={3418.2085,17.584435,3269.6287};
-					id=679;
-					side="EAST";
-					vehicle="Ins_Soldier_Crew";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitINS_F3D";
-					init="GrpINS_Foxtrot_3 = group this;";
-					description="ChDKZ Foxtrot3 Driver";
-				};
-			};
-		};
-		class Item215
-		{
-			side="EAST";
-			class Vehicles
-			{
-				items=2;
-				class Item0
-				{
-					position[]={3443.8345,21.830212,3276.075};
-					id=681;
-					side="EAST";
-					vehicle="Ins_Soldier_Pilot";
-					player="PLAY CDG";
-					leader=1;
-					rank="CAPTAIN";
-					skill=0.60000002;
-					text="UnitINS_GLP";
-					init="GrpINS_Golf_Lead = group this; this addweapon ""ACE_ParachuteRoundPack""; this addweapon ""ACE_Flaregun""; {this addmagazine ""ACE_SSRed_FG"";} foreach [1,2];  {this addmagazine ""ACE_SSGreen_FG"";} foreach [1,2];  {this addmagazine ""ACE_Bandage"";} foreach [1,2]; ";
-					description="ChDKZ Golf Lead Pilot";
-				};
-				class Item1
-				{
-					position[]={3444.4448,21.344479,3269.7615};
-					id=682;
-					side="EAST";
-					vehicle="Ins_Soldier_Pilot";
-					player="PLAY CDG";
-					rank="LIEUTENANT";
-					skill=0.60000002;
-					text="UnitINS_GLG";
-					init="GrpINS_Golf_Lead = group this; this addweapon ""ACE_ParachuteRoundPack""; this addweapon ""ACE_Flaregun""; {this addmagazine ""ACE_SSRed_FG"";} foreach [1,2];  {this addmagazine ""ACE_SSGreen_FG"";} foreach [1,2];  {this addmagazine ""ACE_Bandage"";} foreach [1,2]; ";
-					description="ChDKZ Golf Lead Gunner";
-				};
-			};
-		};
-		class Item216
-		{
-			side="EAST";
-			class Vehicles
-			{
-				items=2;
-				class Item0
-				{
-					position[]={3452.48,22.888426,3275.5938};
-					id=683;
-					side="EAST";
-					vehicle="Ins_Soldier_Pilot";
-					player="PLAY CDG";
-					leader=1;
-					rank="LIEUTENANT";
-					skill=0.60000002;
-					text="UnitINS_G1P";
-					init="GrpINS_Golf_1 = group this; this addweapon ""ACE_ParachuteRoundPack""; this addweapon ""ACE_Flaregun""; {this addmagazine ""ACE_SSRed_FG"";} foreach [1,2];  {this addmagazine ""ACE_SSGreen_FG"";} foreach [1,2];  {this addmagazine ""ACE_Bandage"";} foreach [1,2]; ";
-					description="ChDKZ Golf1 Pilot";
-				};
-				class Item1
-				{
-					position[]={3453.0903,21.872042,3269.2803};
-					id=684;
-					side="EAST";
-					vehicle="RU_Soldier_Pilot";
-					player="PLAY CDG";
-					rank="LIEUTENANT";
-					skill=0.60000002;
-					text="UnitINS_G1G";
-					init="GrpINS_Golf_1 = group this; this addweapon ""ACE_ParachuteRoundPack""; this addweapon ""ACE_Flaregun""; {this addmagazine ""ACE_SSRed_FG"";} foreach [1,2];  {this addmagazine ""ACE_SSGreen_FG"";} foreach [1,2];  {this addmagazine ""ACE_Bandage"";} foreach [1,2]; ";
-					description="ChDKZ Golf1 Gunner";
-				};
-			};
-		};
-		class Item217
-		{
-			side="EAST";
-			class Vehicles
-			{
-				items=2;
-				class Item0
-				{
-					position[]={3463.686,23.837732,3274.7927};
-					id=685;
-					side="EAST";
-					vehicle="Ins_Soldier_Pilot";
-					player="PLAY CDG";
-					leader=1;
-					rank="LIEUTENANT";
-					skill=0.60000002;
-					text="UnitINS_G2P";
-					init="GrpINS_Golf_2 = group this; this addweapon ""ACE_ParachuteRoundPack""; this addweapon ""ACE_Flaregun""; {this addmagazine ""ACE_SSRed_FG"";} foreach [1,2];  {this addmagazine ""ACE_SSGreen_FG"";} foreach [1,2];  {this addmagazine ""ACE_Bandage"";} foreach [1,2]; ";
-					description="ChDKZ Golf2 Pilot";
-				};
-				class Item1
-				{
-					position[]={3464.6167,22.549953,3269.4404};
-					id=686;
-					side="EAST";
-					vehicle="Ins_Soldier_Pilot";
-					player="PLAY CDG";
-					rank="LIEUTENANT";
-					skill=0.60000002;
-					text="UnitINS_G2G";
-					init="GrpINS_Golf_2 = group this; this addweapon ""ACE_ParachuteRoundPack""; this addweapon ""ACE_Flaregun""; {this addmagazine ""ACE_SSRed_FG"";} foreach [1,2];  {this addmagazine ""ACE_SSGreen_FG"";} foreach [1,2];  {this addmagazine ""ACE_Bandage"";} foreach [1,2]; ";
-					description="ChDKZ Golf2 Gunner";
-				};
-			};
-		};
-		class Item218
-		{
-			side="EAST";
-			class Vehicles
-			{
-				items=2;
-				class Item0
-				{
-					position[]={3471.5308,23.930605,3275.2725};
-					id=687;
-					side="EAST";
-					vehicle="Ins_Soldier_Pilot";
-					player="PLAY CDG";
-					leader=1;
-					rank="LIEUTENANT";
-					skill=0.60000002;
-					text="UnitINS_G3P";
-					init="GrpINS_Golf_3 = group this; this addweapon ""ACE_ParachuteRoundPack""; this addweapon ""ACE_Flaregun""; {this addmagazine ""ACE_SSRed_FG"";} foreach [1,2];  {this addmagazine ""ACE_SSGreen_FG"";} foreach [1,2];  {this addmagazine ""ACE_Bandage"";} foreach [1,2]; ";
-					description="ChDKZ Golf3 Pilot";
-				};
-				class Item1
-				{
-					position[]={3472.1411,23.828308,3268.959};
-					id=688;
-					side="EAST";
-					vehicle="Ins_Soldier_Pilot";
-					player="PLAY CDG";
-					rank="LIEUTENANT";
-					skill=0.60000002;
-					text="UnitINS_G3G";
-					init="GrpINS_Golf_3 = group this; this addweapon ""ACE_ParachuteRoundPack""; this addweapon ""ACE_Flaregun""; {this addmagazine ""ACE_SSRed_FG"";} foreach [1,2];  {this addmagazine ""ACE_SSGreen_FG"";} foreach [1,2];  {this addmagazine ""ACE_Bandage"";} foreach [1,2]; ";
-					description="ChDKZ Golf3 Gunner";
-				};
-			};
-		};
-		class Item219
+		class Item135
 		{
 			side="LOGIC";
 			class Vehicles
@@ -10665,7 +6597,7 @@ class Mission
 				class Item0
 				{
 					position[]={2890.717,0.28644541,2400.7034};
-					id=701;
+					id=437;
 					side="LOGIC";
 					vehicle="BIS_ARTY_Logic";
 					leader=1;
@@ -10673,7 +6605,7 @@ class Mission
 				};
 			};
 		};
-		class Item220
+		class Item136
 		{
 			side="LOGIC";
 			class Vehicles
@@ -10682,7 +6614,7 @@ class Mission
 				class Item0
 				{
 					position[]={2675.8281,0.27329037,2322.906};
-					id=705;
+					id=441;
 					side="LOGIC";
 					vehicle="ACE_EASA";
 					leader=1;
@@ -10692,7 +6624,7 @@ class Mission
 				};
 			};
 		};
-		class Item221
+		class Item137
 		{
 			side="LOGIC";
 			class Vehicles
@@ -10701,7 +6633,7 @@ class Mission
 				class Item0
 				{
 					position[]={4297.291,34.194302,3758.0938};
-					id=706;
+					id=442;
 					side="LOGIC";
 					vehicle="BIS_clouds_Logic";
 					leader=1;
@@ -10709,7 +6641,7 @@ class Mission
 				};
 			};
 		};
-		class Item222
+		class Item138
 		{
 			side="WEST";
 			class Vehicles
@@ -10719,7 +6651,7 @@ class Mission
 				{
 					position[]={3831.9429,40.556057,3156.3516};
 					azimut=201.35899;
-					id=707;
+					id=443;
 					side="WEST";
 					vehicle="USMC_LHD_Crew_Yellow";
 					player="PLAY CDG";
@@ -10731,6 +6663,244 @@ class Mission
 				};
 			};
 		};
+		class Item139
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={2917.105,0.59945369,2303.5525};
+					azimut=90;
+					id=444;
+					side="LOGIC";
+					vehicle="Logic";
+					leader=1;
+					skill=0.60000002;
+					text="loc";
+					init="this setPosASL [getposASL this select 0, getposASL this select 1, 16.4]; ";
+				};
+			};
+		};
+		class Item140
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={2671.1768,0.27349889,2303.6194};
+					azimut=270;
+					id=445;
+					side="LOGIC";
+					vehicle="Logic";
+					leader=1;
+					skill=0.60000002;
+					text="airport";
+					init="this setPosASL [getposASL this select 0, getposASL this select 1, 16.4]; ";
+				};
+			};
+		};
+		class Item141
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={3979.4771,24.11788,3080.062};
+					id=446;
+					side="WEST";
+					vehicle="USMC_SoldierM_Marksman";
+					player="PLAY CDG";
+					leader=1;
+					rank="CORPORAL";
+					skill=0.60000002;
+					text="UnitUSMC_DM1";
+					init="GrpUSMC_DM1 = group this; nul = [""dm"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
+					description="USMC Designated Marksman 1";
+				};
+			};
+		};
+		class Item142
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={3979.823,23.283506,3072.5452};
+					id=447;
+					side="WEST";
+					vehicle="USMC_SoldierM_Marksman";
+					player="PLAY CDG";
+					leader=1;
+					rank="CORPORAL";
+					skill=0.60000002;
+					text="UnitUSMC_DM2";
+					init="GrpUSMC_DM2 = group this; nul = [""dm"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
+					description="USMC Designated Marksman 2";
+				};
+			};
+		};
+		class Item143
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={3979.8184,22.571754,3066.0903};
+					id=448;
+					side="WEST";
+					vehicle="USMC_SoldierM_Marksman";
+					player="PLAY CDG";
+					leader=1;
+					rank="CORPORAL";
+					skill=0.60000002;
+					text="UnitUSMC_DM3";
+					init="GrpUSMC_DM3 = group this; nul = [""dm"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
+					description="USMC Designated Marksman 3";
+				};
+			};
+		};
+		class Item144
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={4302.0239,6.4269519,2818.4905};
+					id=449;
+					side="GUER";
+					vehicle="GUE_Soldier_3";
+					player="PLAY CDG";
+					leader=1;
+					rank="CORPORAL";
+					skill=0.60000002;
+					text="UnitGUE_DM1";
+					init="GrpGUE_DM1 = group this; nul = [""dm"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
+					description="NAPA Designated Marksman 1";
+				};
+			};
+		};
+		class Item145
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={4301.7524,6.6665516,2811.0015};
+					id=450;
+					side="GUER";
+					vehicle="GUE_Soldier_3";
+					player="PLAY CDG";
+					leader=1;
+					rank="CORPORAL";
+					skill=0.60000002;
+					text="UnitGUE_DM2";
+					init="GrpGUE_DM2 = group this; nul = [""dm"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
+					description="NAPA Designated Marksman 2";
+				};
+			};
+		};
+		class Item146
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={4301.8433,6.6964989,2803.9924};
+					id=451;
+					side="GUER";
+					vehicle="GUE_Soldier_3";
+					player="PLAY CDG";
+					leader=1;
+					rank="CORPORAL";
+					skill=0.60000002;
+					text="UnitGUE_DM3";
+					init="GrpGUE_DM3 = group this; nul = [""dm"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
+					description="NAPA Designated Marksman 3";
+				};
+			};
+		};
+		class Item147
+		{
+			side="EAST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={3714.2876,40.749798,3297.2925};
+					id=452;
+					side="EAST";
+					vehicle="RU_Soldier";
+					player="PLAY CDG";
+					leader=1;
+					rank="CORPORAL";
+					skill=0.60000002;
+					text="UnitRU_DM1";
+					init="GrpRU_DM1 = group this; nul = [""dm"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
+					description="Russian Designated Marksman 1";
+				};
+			};
+		};
+		class Item148
+		{
+			side="EAST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={3714.0034,42.497231,3289.7615};
+					id=453;
+					side="EAST";
+					vehicle="RU_Soldier";
+					player="PLAY CDG";
+					leader=1;
+					rank="CORPORAL";
+					skill=0.60000002;
+					text="UnitRU_DM2";
+					init="GrpRU_DM2 = group this; nul = [""dm"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
+					description="Russian Designated Marksman 2";
+				};
+			};
+		};
+		class Item149
+		{
+			side="EAST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={3713.7202,43.804718,3284.2161};
+					id=454;
+					side="EAST";
+					vehicle="RU_Soldier";
+					player="PLAY CDG";
+					leader=1;
+					rank="CORPORAL";
+					skill=0.60000002;
+					text="UnitRU_DM3";
+					init="GrpRU_DM3 = group this; nul = [""dm"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
+					description="Russian Designated Marksman 3";
+				};
+			};
+		};
 	};
 	class Vehicles
 	{
@@ -10739,7 +6909,7 @@ class Mission
 		{
 			position[]={2783.8882,0.19576797,2063.3542};
 			azimut=1.39906;
-			id=689;
+			id=425;
 			side="EMPTY";
 			vehicle="HeliHEmpty";
 			leader=1;
@@ -10750,7 +6920,7 @@ class Mission
 		{
 			position[]={2801.9834,0.46418887,2303.7322};
 			azimut=270;
-			id=690;
+			id=426;
 			side="EMPTY";
 			vehicle="HeliH";
 			skill=0.60000002;
@@ -10760,7 +6930,7 @@ class Mission
 		class Item2
 		{
 			position[]={2756.6597,0.38259333,2317.1863};
-			id=691;
+			id=427;
 			side="EMPTY";
 			vehicle="FlagCarrierUSA";
 			skill=0.60000002;
@@ -10771,7 +6941,7 @@ class Mission
 		{
 			position[]={2750.0933,0.37638956,2348.075};
 			azimut=-178.586;
-			id=692;
+			id=428;
 			side="EMPTY";
 			vehicle="Land_ConcreteBlock";
 			skill=0.60000002;
@@ -10781,7 +6951,7 @@ class Mission
 		class Item4
 		{
 			position[]={2751.7378,0.3253572,2350.3738};
-			id=693;
+			id=429;
 			side="EMPTY";
 			vehicle="FlagCarrierUSA";
 			skill=0.60000002;
@@ -10790,7 +6960,7 @@ class Mission
 		class Item5
 		{
 			position[]={2746.1401,0.15961674,2357.1521};
-			id=694;
+			id=430;
 			side="EMPTY";
 			vehicle="RHIB";
 			skill=0.60000002;
@@ -10798,7 +6968,7 @@ class Mission
 		class Item6
 		{
 			position[]={2750.2192,0.10365009,2356.946};
-			id=695;
+			id=431;
 			side="EMPTY";
 			vehicle="RHIB";
 			skill=0.60000002;
@@ -10806,7 +6976,7 @@ class Mission
 		class Item7
 		{
 			position[]={2754.02,0.044837877,2356.7375};
-			id=696;
+			id=432;
 			side="EMPTY";
 			vehicle="RHIB2Turret";
 			skill=0.60000002;
@@ -10814,7 +6984,7 @@ class Mission
 		class Item8
 		{
 			position[]={2757.4458,0.17715088,2351.8357};
-			id=697;
+			id=433;
 			side="EMPTY";
 			vehicle="Zodiac";
 			skill=0.60000002;
@@ -10822,7 +6992,7 @@ class Mission
 		class Item9
 		{
 			position[]={2757.5591,0.51342303,2345.6169};
-			id=698;
+			id=434;
 			side="EMPTY";
 			vehicle="Zodiac";
 			skill=0.60000002;
@@ -10830,7 +7000,7 @@ class Mission
 		class Item10
 		{
 			position[]={2741.1772,0.41540498,2351.9749};
-			id=699;
+			id=435;
 			side="EMPTY";
 			vehicle="Zodiac";
 			skill=0.60000002;
@@ -10838,7 +7008,7 @@ class Mission
 		class Item11
 		{
 			position[]={2741.1948,0.030789703,2344.7527};
-			id=700;
+			id=436;
 			side="EMPTY";
 			vehicle="Zodiac";
 			skill=0.60000002;
@@ -10846,7 +7016,7 @@ class Mission
 		class Item12
 		{
 			position[]={2794.3579,0.025386378,2315.8538};
-			id=702;
+			id=438;
 			side="EMPTY";
 			vehicle="HeliHEmpty";
 			skill=0.60000002;
@@ -10856,7 +7026,7 @@ class Mission
 		class Item13
 		{
 			position[]={2682.2227,0.14422725,2304.5471};
-			id=703;
+			id=439;
 			side="EMPTY";
 			vehicle="HeliHEmpty";
 			skill=0.60000002;
@@ -10866,7 +7036,7 @@ class Mission
 		class Item14
 		{
 			position[]={3035.2759,0.4900049,2242.7036};
-			id=704;
+			id=440;
 			side="EMPTY";
 			vehicle="FlagCarrierUSA";
 			skill=0.60000002;

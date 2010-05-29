@@ -5,7 +5,7 @@ if !mcc_isloading then
 	_x = lhdtype createVehicle [lhdpos select 0, lhdpos select 1, (lhdpos select 2) + 116]; 
 	_x setposasl [lhdpos select 0, lhdpos select 1, 17];
 	_x setdir dirlhd;
-	_x setVehicleInit "this addaction [""Taxi to 		takeoff"",""mcc\general_scripts\lhd_take_off\lhd_take_off.sqf""];";
+	_x setVehicleInit "this addaction [""Taxi to takeoff"",""mcc\general_scripts\lhd_take_off\lhd_take_off.sqf""];this addAction [""ILS"",""mcc\general_scripts\LHD\ilsproII.sqf"",[loc,airport,""LHD"",""Rwy 1"",""ILS""]];";
 	processInitCommands;
 			
 	}	
