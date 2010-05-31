@@ -219,10 +219,15 @@ _MenuStructureArray =
       ["Items",
         [
          
-       	 [ ["Item", "Objects"], ["SubMenu", "objects"] ],
-		 [ ["Item", "Cars"], ["SubMenu", "cars"] ],
-		 [ ["Item", "Mines"], ["SubMenu", "mines"] ],
-		 [ ["Item", "Armed civilans"], ["SubMenu", "sbombers"] ],
+       	 [ ["Item", "Small Objects >"], ["SubMenu", "small_objects"] ],
+		 [ ["Item", "Medium Objects >"], ["SubMenu", "medium_objects"] ],
+		 [ ["Item", "Large Objects >"], ["SubMenu", "large_objects"] ],
+		 [ ["Item", "Ammobox Objects >"], ["SubMenu", "ammobox"] ],
+		 [ ["Item", "Wrecks Objects >"], ["SubMenu", "wrecks"] ],
+		 [ ["Item", "Cars >"], ["SubMenu", "cars"] ],
+		 [ ["Item", "Mines >"], ["SubMenu", "mines"] ],
+		 [ ["Item", "Roadside charges >"], ["SubMenu", "roadside_charges"] ],
+		 [ ["Item", "Armed civilans >"], ["SubMenu", "sbombers"] ],
 		 [ ["Item", "----Setting----"] ],
 		 [ ["Item", "Set Size >"], ["SubMenu", "trapssize"] ],
 		 [ ["Item", "Set explodion proximity >"], ["SubMenu", "trapsprox"] ],
@@ -302,25 +307,114 @@ _MenuStructureArray =
       ]
     ]
   ],
-//Traps - Objects 
-["objects",
+//Traps - Small Objects 
+["small_objects",
     [
-      ["Caption", "objects"],
+      ["Caption", "small_objects"],
       ["Items",
         [
          
 		 [ ["Item", "----Single spawn----"] ],
-         [ ["Item", "Small Objects - Single"], ["Action",  "trapkind =[""Land_Pneu"",""Notebook"",""Radio"",""SatPhone"",""SmallTV"",""Suitcase""]; trapvolume=""small""; nul=[3] execVM 'mcc\general_scripts\traps\trap_request.sqf';" ] ],
-		 [ ["Item", "Medium Objects - Single"], ["Action",  "trapkind =[""Barrel1"",""Barrel4"",""Barrel5"",""Land_Barrel_sand"",""Land_Pneu""]; trapvolume=""medium""; nul=[3] execVM 'mcc\general_scripts\traps\trap_request.sqf';" ] ],
-		 [ ["Item", "Big Objects - Single"], ["Action",  "trapkind =[""Barrel1"",""Barrel4"",""Barrel5"",""Land_Barrel_sand"",""Barrels""]; trapvolume=""large""; nul=[3] execVM 'mcc\general_scripts\traps\trap_request.sqf';" ] ],
+         [ ["Item", "Land_Pneu - Single"], ["Action",  "trapkind =[""Land_Pneu"",""Land_Pneu""]; trapvolume=""small""; nul=[3] execVM 'mcc\general_scripts\traps\trap_request.sqf';" ] ],
+		 [ ["Item", "Notebook - Single"], ["Action",  "trapkind =[""Notebook"",""Notebook""]; trapvolume=""small""; nul=[3] execVM 'mcc\general_scripts\traps\trap_request.sqf';" ] ],
+		 [ ["Item", "Radio - Single"], ["Action",  "trapkind =[""Radio"",""Radio""]; trapvolume=""small""; nul=[3] execVM 'mcc\general_scripts\traps\trap_request.sqf';" ] ],
+		 [ ["Item", "SatPhone - Single"], ["Action",  "trapkind =[""SatPhone"",""SatPhone""]; trapvolume=""small""; nul=[3] execVM 'mcc\general_scripts\traps\trap_request.sqf';" ] ],
+		 [ ["Item", "SmallTV - Single"], ["Action",  "trapkind =[""SmallTV"",""SmallTV""]; trapvolume=""small""; nul=[3] execVM 'mcc\general_scripts\traps\trap_request.sqf';" ] ],
+		 [ ["Item", "Suitcase - Single"], ["Action",  "trapkind =[""Suitcase"",""Suitcase""]; trapvolume=""small""; nul=[3] execVM 'mcc\general_scripts\traps\trap_request.sqf';" ] ],
+		 [ ["Item", "ACE_Pomz - Single"], ["Action",  "trapkind =[""ACE_Pomz"",""ACE_Pomz""]; trapvolume=""medium""; nul=[3] execVM 'mcc\general_scripts\traps\trap_request.sqf';" ] ],
+		 [ ["Item", "----Area spawn----"] ],
+		 [ ["Item", "Small Objects - Area"], ["Action",  "trapkind =[""Land_Pneu"",""Notebook"",""Radio"",""SatPhone"",""SmallTV"",""Suitcase"",""ACE_Pomz""]; trapvolume=""small""; nul=[3] execVM 'mcc\general_scripts\traps\trap_request_area.sqf';" ] ]
+		]        
+      ]
+    ]
+  ],
+//Traps - medium Objects 
+["medium_objects",
+    [
+      ["Caption", "medium_objects"],
+      ["Items",
+        [
+         
+		 [ ["Item", "----Single spawn----"] ],
+         [ ["Item", "Barrel1 - Single"], ["Action",  "trapkind =[""Barrel1"",""Barrel1""]; trapvolume=""medium""; nul=[3] execVM 'mcc\general_scripts\traps\trap_request.sqf';" ] ],
+		 [ ["Item", "Barrel4 - Single"], ["Action",  "trapkind =[""Barrel4"",""Barrel4""]; trapvolume=""medium""; nul=[3] execVM 'mcc\general_scripts\traps\trap_request.sqf';" ] ],
+		 [ ["Item", "Barrel5 - Single"], ["Action",  "trapkind =[""Barrel5"",""Barrel5""]; trapvolume=""medium""; nul=[3] execVM 'mcc\general_scripts\traps\trap_request.sqf';" ] ],
+		 [ ["Item", "Land_Pneu - Single"], ["Action",  "trapkind =[""Land_Pneu"",""Land_Pneu""]; trapvolume=""medium""; nul=[3] execVM 'mcc\general_scripts\traps\trap_request.sqf';" ] ],
+		 [ ["Item", "Garbage_can - Single"], ["Action",  "trapkind =[""Garbage_can"",""Garbage_can""]; trapvolume=""medium""; nul=[3] execVM 'mcc\general_scripts\traps\trap_request.sqf';" ] ],
+		 [ ["Item", "ACamp - Single"], ["Action",  "trapkind =[""ACamp"",""ACamp""]; trapvolume=""medium""; nul=[3] execVM 'mcc\general_scripts\traps\trap_request.sqf';" ] ],
+		 [ ["Item", "Land_A_tent - Single"], ["Action",  "trapkind =[""Land_A_tent"",""Land_A_tent""]; trapvolume=""medium""; nul=[3] execVM 'mcc\general_scripts\traps\trap_request.sqf';" ] ],
+		 [ ["Item", "Misc_Backpackheap - Single"], ["Action",  "trapkind =[""Misc_Backpackheap"",""Misc_Backpackheap""]; trapvolume=""medium""; nul=[3] execVM 'mcc\general_scripts\traps\trap_request.sqf';" ] ],
+		 [ ["Item", "----Area spawn----"] ],
+		 [ ["Item", "Medium Objects - Area"], ["Action",  "trapkind =[""Barrel1"",""Barrel4"",""Barrel5"",""Land_Barrel_sand"",""Land_Pneu""]; trapvolume=""medium""; nul=[3] execVM 'mcc\general_scripts\traps\trap_request_area.sqf';" ] ]
+		]        
+      ]
+    ]
+  ],
+//Traps - Large Objects 
+["large_objects",
+    [
+      ["Caption", "large_objects"],
+      ["Items",
+        [
+         
+		 [ ["Item", "----Single spawn----"] ],
+         [ ["Item", "Barrels - Single"], ["Action",  "trapkind =[""Barrels"",""Barrels""]; trapvolume=""large""; nul=[3] execVM 'mcc\general_scripts\traps\trap_request.sqf';" ] ],
+		 [ ["Item", "PowGen_Big - Single"], ["Action",  "trapkind =[""PowGen_Big"",""PowGen_Big""]; trapvolume=""large""; nul=[3] execVM 'mcc\general_scripts\traps\trap_request.sqf';" ] ],
+		 [ ["Item", "Garbage_container - Single"], ["Action",  "trapkind =[""Garbage_container"",""Garbage_container""]; trapvolume=""large""; nul=[3] execVM 'mcc\general_scripts\traps\trap_request.sqf';" ] ],
+		 [ ["Item", "Land_Ind_TankSmall - Single"], ["Action",  "trapkind =[""Land_Ind_TankSmall"",""Land_Ind_TankSmall""]; trapvolume=""large""; nul=[3] execVM 'mcc\general_scripts\traps\trap_request.sqf';" ] ],
+		 [ ["Item", "Land_Ind_TankSmall2 - Single"], ["Action",  "trapkind =[""Land_Ind_TankSmall2"",""Land_Ind_TankSmall2""]; trapvolume=""large""; nul=[3] execVM 'mcc\general_scripts\traps\trap_request.sqf';" ] ],
+		 [ ["Item", "Land_Toilet - Single"], ["Action",  "trapkind =[""Land_Toilet"",""Land_Toilet""]; trapvolume=""large""; nul=[3] execVM 'mcc\general_scripts\traps\trap_request.sqf';" ] ],
+		 [ ["Item", "PowerGenerator - Single"], ["Action",  "trapkind =[""PowerGenerator"",""PowerGenerator""]; trapvolume=""large""; nul=[3] execVM 'mcc\general_scripts\traps\trap_request.sqf';" ] ],
 		  [ ["Item", "----Area spawn----"] ],
-		 [ ["Item", "Small Objects - Area"], ["Action",  "trapkind =[""Land_Pneu"",""Notebook"",""Radio"",""SatPhone"",""SmallTV"",""Suitcase""]; trapvolume=""small""; nul=[3] execVM 'mcc\general_scripts\traps\trap_request_area.sqf';" ] ],
-		 [ ["Item", "Medium Objects - Area"], ["Action",  "trapkind =[""Barrel1"",""Barrel4"",""Barrel5"",""Land_Barrel_sand"",""Land_Pneu""]; trapvolume=""medium""; nul=[3] execVM 'mcc\general_scripts\traps\trap_request_area.sqf';" ] ],
-		 [ ["Item", "Big Objects - Area"], ["Action",  "trapkind =[""Barrel1"",""Barrel4"",""Barrel5"",""Land_Barrel_sand"",""Barrels""]; trapvolume=""large""; nul=[3] execVM 'mcc\general_scripts\traps\trap_request_area.sqf';" ] ]
+		 [ ["Item", "Big Objects - Area"], ["Action",  "trapkind =[""PowerGenerator"",""PowGen_Big"",""Garbage_container"",""Land_Toilet"",""Barrels"",""Land_Ind_TankSmall"",""Land_Ind_TankSmall2""]; trapvolume=""large""; nul=[3] execVM 'mcc\general_scripts\traps\trap_request_area.sqf';" ] ]
         ]        
       ]
     ]
   ],
+//Traps - ammobox
+["ammobox",
+    [
+      ["Caption", "ammobox"],
+      ["Items",
+        [
+         
+		 [ ["Item", "----Single spawn----"] ],
+         [ ["Item", "GuerillaCacheBox - Single"], ["Action",  "trapkind =[""GuerillaCacheBox"",""GuerillaCacheBox""]; trapvolume=""medium""; nul=[3] execVM 'mcc\general_scripts\traps\trap_request.sqf';" ] ],
+		 [ ["Item", "LocalBasicAmmunitionBox - Single"], ["Action",  "trapkind =[""LocalBasicAmmunitionBox"",""LocalBasicAmmunitionBox""]; trapvolume=""medium""; nul=[3] execVM 'mcc\general_scripts\traps\trap_request.sqf';" ] ],
+		 [ ["Item", "RUBasicAmmunitionBox - Single"], ["Action",  "trapkind =[""RUBasicAmmunitionBox"",""RUBasicAmmunitionBox""]; trapvolume=""medium""; nul=[3] execVM 'mcc\general_scripts\traps\trap_request.sqf';" ] ],
+		 [ ["Item", "RUBasicWeaponsBox - Single"], ["Action",  "trapkind =[""RUBasicWeaponsBox"",""RUBasicWeaponsBox""]; trapvolume=""medium""; nul=[3] execVM 'mcc\general_scripts\traps\trap_request.sqf';" ] ],
+		 [ ["Item", "USBasicAmmunitionBox - Single"], ["Action",  "trapkind =[""USBasicAmmunitionBox"",""USBasicAmmunitionBox""]; trapvolume=""medium""; nul=[3] execVM 'mcc\general_scripts\traps\trap_request.sqf';" ] ],
+		 [ ["Item", "----Area spawn----"] ],
+		 [ ["Item", "Ammoboxes - Area"], ["Action",  "trapkind =[""LocalBasicAmmunitionBox"",""GuerillaCacheBox"",""RUBasicAmmunitionBox"",""RUBasicWeaponsBox"",""USBasicAmmunitionBox""]; trapvolume=""medium""; nul=[3] execVM 'mcc\general_scripts\traps\trap_request_area.sqf';" ] ]
+        ]        
+      ]
+    ]
+  ],
+//Traps - Wrecks
+["wrecks",
+    [
+      ["Caption", "wrecks"],
+      ["Items",
+        [
+         
+		 [ ["Item", "----Single spawn----"] ],
+         [ ["Item", "BMP2Wreck - Single"], ["Action",  "trapkind =[""BMP2Wreck"",""BMP2Wreck""]; trapvolume=""medium""; nul=[3] execVM 'mcc\general_scripts\traps\trap_request.sqf';" ] ],
+		 [ ["Item", "BRDMWreck - Single"], ["Action",  "trapkind =[""BRDMWreck"",""BRDMWreck""]; trapvolume=""medium""; nul=[3] execVM 'mcc\general_scripts\traps\trap_request.sqf';" ] ],
+		 [ ["Item", "HMMWVWreck - Single"], ["Action",  "trapkind =[""HMMWVWreck"",""HMMWVWreck""]; trapvolume=""medium""; nul=[3] execVM 'mcc\general_scripts\traps\trap_request.sqf';" ] ],
+		 [ ["Item", "LADAWreck - Single"], ["Action",  "trapkind =[""LADAWreck"",""LADAWreck""]; trapvolume=""medium""; nul=[3] execVM 'mcc\general_scripts\traps\trap_request.sqf';" ] ],
+		 [ ["Item", "Mi8Wreck - Single"], ["Action",  "trapkind =[""Mi8Wreck"",""Mi8Wreck""]; trapvolume=""medium""; nul=[3] execVM 'mcc\general_scripts\traps\trap_request.sqf';" ] ],
+		 [ ["Item", "SKODAWreck - Single"], ["Action",  "trapkind =[""SKODAWreck"",""SKODAWreck""]; trapvolume=""medium""; nul=[3] execVM 'mcc\general_scripts\traps\trap_request.sqf';" ] ],
+		 [ ["Item", "T72Wreck - Single"], ["Action",  "trapkind =[""T72Wreck"",""T72Wreck""]; trapvolume=""medium""; nul=[3] execVM 'mcc\general_scripts\traps\trap_request.sqf';" ] ],
+		 [ ["Item", "UAZWreck - Single"], ["Action",  "trapkind =[""UAZWreck"",""UAZWreck""]; trapvolume=""medium""; nul=[3] execVM 'mcc\general_scripts\traps\trap_request.sqf';" ] ],
+		 [ ["Item", "UralWreck - Single"], ["Action",  "trapkind =[""UralWreck"",""UralWreck""]; trapvolume=""medium""; nul=[3] execVM 'mcc\general_scripts\traps\trap_request.sqf';" ] ],
+		 [ ["Item", "datsun02Wreck - Single"], ["Action",  "trapkind =[""datsun02Wreck"",""datsun02Wreck""]; trapvolume=""medium""; nul=[3] execVM 'mcc\general_scripts\traps\trap_request.sqf';" ] ],
+		 [ ["Item", "----Area spawn----"] ],
+		 [ ["Item", "Ammoboxes - Area"], ["Action",  "trapkind =[""BMP2Wreck"",""BRDMWreck"",""HMMWVWreck"",""LADAWreck"",""Mi8Wreck"",""SKODAWreck"",""UAZWreck"",""UralWreck"",""T72Wreck"",""datsun02Wreck""]; trapvolume=""medium""; nul=[3] execVM 'mcc\general_scripts\traps\trap_request_area.sqf';" ] ]
+        ]        
+      ]
+    ]
+  ],
+
 //Traps - Cars
 ["cars",
     [
@@ -359,6 +453,25 @@ _MenuStructureArray =
 		[ ["Item", "AntiHuman minefield invisable"], ["Action",  "trapkind =[""ACE_BBetty"",""ACE_BBetty_burried""]; trapvolume=""small"";trapdistance = 6; nul=[3] execVM 'mcc\general_scripts\traps\trap_request_area.sqf';" ] ],
 		[ ["Item", "AntiTank minefield visable"], ["Action",  "trapkind =[""Mine"",""Mine"",""Hedgehog"",""Sign_Danger"",""Mine"",""Mine"",""Mine"",""Mine"",""Mine"",""Mine"",""Mine"",""Mine"",""Mine""];trapdistance = 6; trapvolume=""at""; nul=[3] execVM 'mcc\general_scripts\traps\trap_request_area.sqf';" ] ],
 		[ ["Item", "AntiTank minefield invisable"], ["Action",  "trapkind =[""Mine"",""Mine""];trapdistance = 6; trapvolume=""at""; nul=[3] execVM 'mcc\general_scripts\traps\trap_request_area.sqf';" ] ]
+        ]        
+      ]
+    ]
+  ],
+//Traps - roadside_charges 
+["roadside_charges",
+    [
+      ["Caption", "roadside_charges"],
+      ["Items",
+        [
+         
+		 [ ["Item", "----Single spawn----"] ],
+         [ ["Item", "Claymore - Single"], ["Action",  "trapkind =""ACE_Claymore"" ; trapvolume=""small""; nul=[3] execVM 'mcc\general_scripts\traps\trap_rc_request.sqf';" ] ],
+		[ ["Item", "M2Slam - Single"], ["Action",  "trapkind =""ACE_M2SLAM""; trapvolume=""at""; nul=[3] execVM 'mcc\general_scripts\traps\trap_rc_request.sqf';" ] ],
+		 [ ["Item", "Pomz - Single"], ["Action",  "trapkind =""ACE_Pomz""; trapvolume=""medium""; nul=[3] execVM 'mcc\general_scripts\traps\trap_rc_request.sqf';" ] ],
+		  [ ["Item", "----Area spawn----"] ],
+		 [ ["Item", "Claymore - Area"], ["Action",  "trapkind =""ACE_Claymore""; trapvolume=""small""; nul=[3] execVM 'mcc\general_scripts\traps\trap_rc_request_area.sqf';" ] ],
+		 [ ["Item", "M2Slam - Area"], ["Action",  "trapkind =""ACE_M2SLAM""; trapvolume=""medium""; nul=[3] execVM 'mcc\general_scripts\traps\trap_rc_request_area.sqf';" ] ],
+		 [ ["Item", "Pomz - Area"], ["Action",  "trapkind =""ACE_Pomz"";trapdistance = 6; trapvolume=""at""; nul=[3] execVM 'mcc\general_scripts\traps\trap_rc_request_area.sqf';" ] ]
         ]        
       ]
     ]
