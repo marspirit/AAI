@@ -42,7 +42,7 @@ while {alive _ied && _wait} do
 	{  
 	sleep _tim;
 	_tim=_time;
-	_near = (getPos _ied) nearObjects 35;
+	_near = (getPos _ied) nearObjects 100;
 	if(_side countSide _near > 0) then 
 		{
 		_tmo=600;

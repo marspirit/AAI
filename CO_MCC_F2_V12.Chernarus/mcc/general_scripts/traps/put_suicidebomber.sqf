@@ -1,7 +1,20 @@
-_tpos=_this;
-_count = count trapkind;
-_random= trapkind select (random (_count-1));
+disableSerialization;
+_pos = _this select 0; 
+_trapsx = _this select 1; 
+_trapsy = _this select 2; 
+_trapdistance = _this select 3; 
+_trapsnumber = _this select 4; 
+_iedside = _this select 5; 
+_trapvolume = _this select 6; 
+_trapkind = _this select 7;
+
+_count = count _trapkind;
+_random= _trapkind select (random (_count-1));
 _group = creategroup civilian;
-_sb = _random createunit [_tpos, _group,"_null = [this,iedside,trapvolume,10,10] execVM ""mcc\general_scripts\traps\IED_sb.sqf""; this addrating -1; this allowfleeing 0;this setbehaviour ""CARELESS""; group this setSpeedMode ""Full"";",1];
-publicvariable "disarm";
-_sb setposatl _tpos;
+_sb = _random createunit [_pos, _group,"_null = [this,_iedside,_trapvolume,10,10] execVM ""mcc\general_scripts\traps\IED_sb.sqf"""];
+_sb setposatl pos;
+_sb setBehaviour "AWARE";
+_sb setCombatMode "RED";
+_sb setSpeedMode "Full";
+_sb setFormation "DELTA";
+_sb addrating -1;

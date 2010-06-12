@@ -7,6 +7,7 @@ _trapdistance = _this select 3;
 _trapsnumber = _this select 4; 
 _iedside = _this select 5; 
 _trapvolume = _this select 6; 
+_trapkind = _this select 7;
 
 //markers for first GUI
 _eib_marker = createMarkerLocal ["area",_pos];
@@ -14,7 +15,6 @@ _eib_marker setMarkerShapeLocal "ELLIPSE";
 _eib_marker setMarkerSizeLocal [_trapsx, _trapsx];
 _eib_marker setMarkerDirLocal 0;
 _eib_marker setMarkerColorLocal "ColorRed";
-_eib_marker setMarkertext "area";
 sleep 0.1;		
 	
 _pos= getMarkerPos "area";
@@ -44,11 +44,11 @@ for "_x" from 1 to _trapsnumber do
      _road = _roadlist select round(random (_roadnum-1));
      _roadlist = _roadlist - [_road];
      _validpos=getpos _road;
-    _rc = trapkind createVehicle _validpos;
+    _rc = _trapkind createVehicle _validpos;
 	_rc setVehicleInit "this addaction [""Disarm explosive"",""mcc\general_scripts\traps\ied_disarm.sqf""]";
 	publicvariable "disarm";
 	_rc setDir (direction _road)-90; //Set the IED facing the road
-	_Offset = [0,-5,0]; //Put the IED on the right of the road
+	_Offset = [0,-7,0]; //Put the IED on the right of the road
 	_validpos = _rc modelToWorld _Offset;
 	_validpos = _validpos findEmptyPosition [0.1,10]; //Make sure the IED is not in a wall on the road side           
 	_rc setposatl _validpos;
@@ -73,14 +73,13 @@ for "_x" from 1 to _trapsnumber do
 	_ied = [_rc,_iedside,_trapvolume,30,10,_trigger] execVM "mcc\general_scripts\traps\IED_rc.sqf";
 	sleep 0.1;
 	//markers for last GUI   
-	_eib_marker2 = createMarkerLocal ["traps",_validpos];
+	_eib_marker2 = createMarkerLocal ["rc",_validpos];
 	_eib_marker2 setMarkerShapeLocal "ELLIPSE";
 	_eib_marker2 setMarkerSizeLocal [1, 1];
 	_eib_marker2 setMarkerDirLocal 0;
 	_eib_marker2 setMarkerColorLocal "ColorRed";
-	_eib_marker2 setMarkertext "traps";
 	sleep 0.1;			
-	deletemarker "traps";
+	deletemarker "rc";
 	};
 
 deletemarker "area";

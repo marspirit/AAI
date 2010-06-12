@@ -1,4 +1,22 @@
-
+/* tcp_IED.sqf v04 executed from init of object that is the IED
+Author: tcp <http://blackop.co.cc> for support
+Used examples from Jeevz's Proximity IED, POTS SuicideBomber, Foxhound Random IED, Javhe/HOZ IED, SPON VBIED
+To create a proximity IED/Suicide Bomber place in init line of any object where:
+<this> is object reference/name
+<west,east,guer,civ> is the activating side (1 only)
+<"Small","Medium","Large","Huge","Massive"> is the magnitude of explosion
+<10> is the radius/proximity for detonation 
+<60> is the sleep delay when no onjects of target side are present (improves performance) *note* delaying trigger check and the proximity check creates a gap when IED might miss a target, but unlikely
+<["M1151_M2","M1151G_M2"]> is an array of vehicle types that can detect IEDs (after they are active, see below) 3% chance of detection and 20% chance of detonation every half second starting 40 feet out
+<trigger1> is a trigger reference/name that has to be activated before IED is considered active/planted
+_iedh = [this,west,"Medium",15,60] execVM "tcp_IED.sqf";
+_iedh = [this,west,"Medium",15,60,[],trigger1] execVM "tcp_IED.sqf";
+_iedh = [this,west,"Medium",15,60,["HMMWV_Armored"],trigger1] execVM "tcp_IED.sqf";
+_iedh = [this,west,"Medium",15,60,["M1151_M2","M1151G_M2"]] execVM "tcp_IED.sqf";
+By default, IED only set off by Land Vehicles(_targ), can be disarmed by player on foot(_eod), or by shooting/destroying IED or Suicide bomber
+10% chance IED disarming will fail, safer to try to destroy it from a distance, however, engineer has 100% success rate. For vehicles, 33% chance IED will not go off if speed under 10mph
+Configure class types for target vehicles and EOD personnel below 
+*/
 //if(!isServer) exitWith{};
 
 private ["_ied","_side","_size","_rad","_time","_dtec","_trg","_targ","_eod","_wait","_wait2","_armed","_near","_nrsd","_detect","_tmo","_count","_sel","_luck","_pos","_tim","_engi"];
