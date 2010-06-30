@@ -1,0 +1,99 @@
+﻿STR_R3F_ARTY_action_installer_poste,	"Deploy artillery command quarter",	"Déployer poste de commandement d'artillerie"
+STR_R3F_ARTY_action_demonter_poste,	"Uninstall artillery command quarter",	"Désinstaller poste de commandement d'artillerie"
+
+STR_R3F_ARTY_action_recharger_piece,	"Reload with ",	"Recharger avec "
+STR_R3F_ARTY_recharger_trop_loin_poste_commandement,	"There is no artillery command quarter close to you te be supplied in ammo.",	"Il n'y a pas de poste de commandement d'artillerie à proximité pour être approvisionné en munitions."
+
+STR_R3F_ARTY_pas_de_table_munition,	"No existing range table for this ammuniton.",	"Aucune table n'existe pour cette munition."
+STR_R3F_ARTY_altitude_hors_table,	"Relative altitude of the target is out of range.",	"Altitude relative de la cible hors table."
+STR_R3F_ARTY_altitude_erreur_calcul_tendu,	"The computing of low solution has failed.",	"Le calcul de la solution basse a échoué."
+STR_R3F_ARTY_altitude_erreur_calcul_courbe,	"The computing of high solution has failed.",	"Le calcul de la solution haute a échoué."
+
+STR_R3F_ARTY_dlg_clic_carte_erreur_hors_champ,	"Position out of range.",	"Position hors champ."
+
+STR_R3F_ARTY_echec_suivi_projectile,	"Shell tracking failed.",	"Echec du suivi du projectile."
+
+STR_R3F_ARTY_dlg_artilleur_label_ordre_titre,	"Fire order (%1) :",	"Ordre de tir (%1) :"
+STR_R3F_ARTY_dlg_artilleur_label_piece_titre,	"Artillery piece :",	"Pièce d'artillerie :"
+STR_R3F_ARTY_dlg_artilleur_label_azimut,	"Azimuth :",	"Azimut :"
+STR_R3F_ARTY_dlg_artilleur_label_elevation,	"Elevation :",	"Elévation :"
+STR_R3F_ARTY_dlg_artilleur_label_munition,	"Ammo :",	"Munition :"
+STR_R3F_ARTY_dlg_artilleur_label_emetteur,	"Sender :",	"Emetteur :"
+STR_R3F_ARTY_dlg_artilleur_label_info_purger,	"To cancel the %1 fire orders : action menu",	"Annuler les %1 ordres de tirs : menu d'actions"
+STR_R3F_ARTY_dlg_artilleur_label_info_purger_aucun_ordre,	"There is no fire order pending.",	"Il n'y a aucun ordre de tir en attente."
+STR_R3F_ARTY_dlg_artilleur_astuce_texte,	"Tips to be more precise :<br />- In the command's options, set the mouse sensitivity to minimum.<br />- Use the ""+"" numpad's key during the sight.",	"Astuce pour plus de précision :<br />- Dans les options de commandes, règlez la sensibilité de la souris au minimum.<br />- Utilisez la touche ""+"" du pavé numérique pendant la visée."
+
+STR_R3F_ARTY_action_fermer_dlg_artilleur,	"Close interface",	"Fermer interface"
+STR_R3F_ARTY_action_ouvrir_dlg_artilleur,	"Open artillery interface",	"Ouvrir interface d'artillerie"
+
+STR_R3F_ARTY_action_ordre_suivant,	"Next fire order",	"Ordre de tir suivant"
+STR_R3F_ARTY_action_purger_ordres,	"Empty fire orders queue",	"Vider liste d'ordres de tirs"
+STR_R3F_ARTY_action_purger_ordres_fait,	"Fire orders queue emptied.",	"Liste d'ordres de tir purgée."
+
+STR_R3F_ARTY_action_ouvrir_dlg_SM,	"Artillery computer",	"Calculateur artillerie"
+
+STR_R3F_ARTY_dlg_SM_position_batterie_titre,	"Battery position :",	"Position batterie :"
+STR_R3F_ARTY_dlg_SM_position_cible_titre,	"Target position :",	"Position cible :"
+STR_R3F_ARTY_dlg_SM_correction_titre,	"Adjustments :",	"Correction :"
+STR_R3F_ARTY_dlg_SM_aide_titre,	"Help :",	"Aide :"
+STR_R3F_ARTY_dlg_SM_info_tir_titre,	"Fire informations :",	"Informations de tir :"
+STR_R3F_ARTY_dlg_SM_param_tir_titre,	"Rel. position :",	"Position rel. :"
+STR_R3F_ARTY_dlg_SM_tir_courbe_titre,	"High solution :",	"Solution haute :"
+STR_R3F_ARTY_dlg_SM_tir_tendu_titre,	"Low solution :",	"Solution basse :"
+STR_R3F_ARTY_dlg_SM_artilleurs_titre,	"Selection of operators :",	"Sélection des artilleurs :"
+
+STR_R3F_ARTY_dlg_SM_position_label_long,	"Longitude :",	"Longitude :"
+STR_R3F_ARTY_dlg_SM_position_label_lat,	"Latitude :",	"Latitude :"
+STR_R3F_ARTY_dlg_SM_position_label_alt,	"Altitude :",	"Altitude :"
+STR_R3F_ARTY_dlg_SM_position_btn_clic_carte,	"Map click",	"Clic carte"
+STR_R3F_ARTY_dlg_SM_position_btn_pos_joueur,	"Your pos",	"Votre pos"
+STR_R3F_ARTY_pos_joueur_fait,	"Position of your player has been copied.",	"Position de votre joueur récupérée."
+STR_R3F_ARTY_dlg_SM_btn_calculer,	"Compute",	"Calculer"
+STR_R3F_ARTY_dlg_SM_btn_fermer,	"Close",	"Fermer"
+STR_R3F_ARTY_calcul_en_cours,	"Computing...",	"Calcul en cours..."
+
+STR_R3F_ARTY_dlg_SM_correction_label_add_drop,	"Add(+)/Drop(-) :",	"Ajout(+)/Retrait(-) :"
+STR_R3F_ARTY_dlg_SM_correction_label_left_right,	"Left(+)/Right(-) :",	"Gauche(+)/Droite(-) :"
+STR_R3F_ARTY_dlg_SM_correction_label_dir_cible,	"Dir. to target :",	"Direction cible :"
+
+STR_R3F_ARTY_dlg_SM_info_tir_munition,	"Ammo type :",	"Munition :"
+STR_R3F_ARTY_dlg_SM_info_tir_nb_tirs,	"Nb. rounds :",	"Nombre tirs :"
+STR_R3F_ARTY_dlg_SM_info_tir_dispersion,	"Dispersion :",	"Dispersion :"
+
+STR_R3F_ARTY_dlg_SM_param_tir_label_distance,	"Distance :",	"Distance :"
+STR_R3F_ARTY_dlg_SM_param_tir_label_azimut,	"Azimuth :",	"Azimut :"
+STR_R3F_ARTY_dlg_SM_param_tir_label_altitude,	"Altitude :",	"Altitude :"
+
+STR_R3F_ARTY_dlg_SM_tir_courbe_label_elevation,	"Elevation :",	"Elévation :"
+STR_R3F_ARTY_dlg_SM_tir_courbe_label_azimut,	"Azimuth :",	"Azimut :"
+STR_R3F_ARTY_dlg_SM_tir_courbe_label_temps_vol,	"Delay :",	"Délai :"
+
+STR_R3F_ARTY_dlg_SM_tir_tendu_label_elevation,	"Elevation :",	"Elévation :"
+STR_R3F_ARTY_dlg_SM_tir_tendu_label_azimut,	"Azimuth :",	"Azimut :"
+STR_R3F_ARTY_dlg_SM_tir_tendu_label_temps_vol,	"Delay :",	"Délai :"
+
+STR_R3F_ARTY_dlg_SM_artilleurs_touche_ctrl,	"Multiselect. : Control+click",	"Multisélect : Contrôle+clic"
+
+STR_R3F_ARTY_dlg_SM_btn_ordonner_tir_courbe,	"Order high",	"Ordonner haut"
+STR_R3F_ARTY_dlg_SM_btn_ordonner_tir_tendu,	"Order low",	"Ordonner bas"
+
+STR_R3F_ARTY_dlg_SM_saisie_manquante_batterie,	"No empty value admitted for battery position.",	"Pas de valeur vide autorisée pour position batterie."
+STR_R3F_ARTY_dlg_SM_erreur_saisie_batterie,	"Bad value for battery position.",	"Mauvaise valeur pour position batterie."
+STR_R3F_ARTY_dlg_SM_saisie_manquante_cible,	"No empty value admitted for target position.",	"Pas de valeur vide autorisée pour position cible."
+STR_R3F_ARTY_dlg_SM_erreur_saisie_cible,	"Bad value for target position.",	"Mauvaise valeur pour position cible."
+STR_R3F_ARTY_dlg_SM_erreur_saisie_munition,	"Bad ammo type selection.",	"Mauvaise sélection de munition."
+STR_R3F_ARTY_dlg_SM_erreur_saisie_valeur_dispersion,	"Negative values are not allowed for dispersion.",	"Les valeurs négatives ne sont pas autorisées pour la dispersion."
+STR_R3F_ARTY_dlg_SM_erreur_saisie_valeur_nb_tirs,	"Negative or null values are not allowed for the number of rounds.",	"Les valeurs négatives ou nulles ne sont pas autorisées pour le nombre de tirs."
+STR_R3F_ARTY_dlg_SM_erreur_saisie_artilleurs,	"Invalid artillery operators selection.",	"Sélection d'artilleurs invalide."
+STR_R3F_ARTY_dlg_SM_erreur_saisie_pas_de_calcul,	"Invalid fire solution.",	"Solution de tir invalide."
+
+STR_R3F_ARTY_aucune_solution_trouvee,	"No fire solution found.",	"Aucune solution de tir trouvée."
+
+STR_R3F_ARTY_dlg_SM_ordres_transmis,	"Fire orders transmitted.",	"Ordres de tirs transmis."
+STR_R3F_ARTY_dlg_SM_ordres_recus,	"%1 gave you %2 new fire orders.",	"%1 vous a donné %2 nouveaux ordres de tirs."
+STR_R3F_ARTY_dlg_SM_ordres_recus_un,	"%1 gave you a new fire order.",	"%1 vous a donné un nouvel ordre de tir."
+
+STR_R3F_ARTY_dlg_clic_carte_titre,	"Click on map to pick the coordinates :",	"Cliquez sur la carte pour récupérer les coordonnées :"
+STR_R3F_ARTY_dlg_clic_carte_btn_annuler,	"Cancel",	"Annuler"
+
+STR_R3F_ARTY_dlg_SM_aide_contenu,	"<t size=""1.22"">Interface in two parts :</t><br />- At top : input the fire informations<br />- At bottom : consult the fire solution and transmit orders<br /><t size=""0.5""> </t><br /><t size=""1.25"">Position's coordinate :</t><br />- Based on GPS coordinates<br />- Longitude : from left to right<br />- Latitude : from top to bottom<br />- The input format is 4 digits with zeros leading. The latitude value 0254 indicates the subdivision 4 of the latitude 025. The origin is the top-left corner.<br /><t size=""0.5""> </t><br /><t size=""1.25"">Correction :</t><br />- Dir. to target : relative to the observer<br />- Two axis. The way for an axis is defined by the sign of the value.<br /><t size=""0.5""> </t><br /><t size=""1.25"">Dispersion and nb of rounds :</t><br />How many shells to fire in the area of the defined diameter.<br /><t size=""0.5""> </t><br /><t size=""1.25"">Solution high and low :</t><br />To hit a target, there are usually a ""straight"" shot (low) and a ""curved"" shot (high). The curved shot is often better or imposed.<br /><t size=""0.5""> </t><br /><t size=""1.25"">Selection of operators :</t><br />All players are listed. Select one or several player(s) to whom transmit orders. The nb of rounds is distributed between them.",	"<t size=""1.22"">Interface en deux parties :</t><br />- En haut : saisir les informations<br />- En bas : consulter les solutions de tir et transmettre les ordres<br /><t size=""0.5""> </t><br /><t size=""1.25"">Coordonnée de position :</t><br />- Basé sur les coordonnées GPS<br />- Longitude : de gauche à droite<br />- Latitude : de haut en bas<br />- Le format de saisie est de 4 chiffres, avec des zéros devant. La valeur de latitude 0254 indique la sous-division 4 de la latitude 025. L'origine est le coin haut-gauche.<br /><t size=""0.5""> </t><br /><t size=""1.25"">Correction :</t><br />- Direction cible : depuis l'observateur<br />- Deux axes. Le sens pour un axe est donnée par le signe de la valeur.<br /><t size=""0.5""> </t><br /><t size=""1.25"">Dispersion et nb de tirs :</t><br />Combien d'obus tirer dans la zone du diamètre indiqué.<br /><t size=""0.5""> </t><br /><t size=""1.25"">Solution haute et basse :</t><br />Pour atteindre une cible, il y a généralement un tir ""tendu"" (bas) et un tir ""courbé"" (haut). Le tir courbé est souvent préferable ou imposé.<br /><t size=""0.5""> </t><br /><t size=""1.25"">Sélection des artilleurs :</t><br />Tout les joueurs sont listés. Sélectionnez un ou plusieurs joueur(s) à qui transmettre les ordres. Le nb de tirs sera réparti entre eux."
