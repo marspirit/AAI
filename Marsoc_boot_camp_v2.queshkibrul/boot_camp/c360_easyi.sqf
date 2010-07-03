@@ -1,0 +1,1 @@
+["c360_e" ,[player]] call CBA_fnc_globalEvent;
