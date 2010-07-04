@@ -266,15 +266,15 @@ switch (_faction) do
 // The block of code below identifies equipment for the NAPA faction.
 
    case "bis_tk_gue":
-   {
-   _rifle = "AK_74";
-   _rifleGL = "AK_74_GL";
-   _rifleTL = "AK_74_GL";
-   _medicrifle = "AKS_74_U";
-   _medicmag = "30Rnd_545x39_AK";
+   { 
+   _rifle = "AK_47_M";
+   _rifleGL = "Sa58P_EP1";
+   _rifleTL = "AK_47_S";
+   _medicrifle = "LeeEnfield";
+   _medicmag = "10x_303";
    _MG = "RPK_74";
-   _riflemag = "30Rnd_545x39_AK";
-   _GLmag = "1Rnd_HE_GP25";
+   _riflemag = "30Rnd_762x39_AK47";
+   _GLmag = "1Rnd_HE_M203";
    _MGmag = "75Rnd_545x39_RPK";
    _grenade = "HandGrenade_East";
    _at = "RPG18";
@@ -308,10 +308,10 @@ switch (_faction) do
    _smokered = "1Rnd_SMOKERED_GP25";
    _smokegrenade = "ACE_RDG2";
 
-   _pistol = "Makarov";
-   _pistolmag = "8Rnd_9x18_Makarov";
+   _pistol = "";
+   _pistolmag = "";
    
-   _rucksack = "ACE_BackPack";
+   _rucksack = "";
    _medicrucksack = "ACE_BackPack";
 
    _oldrifle = "ACE_SKS";
@@ -460,7 +460,7 @@ switch (_typeofUnit) do
       {_unit addmagazine _pistolmag} foreach [1,2,3,4,5,6];
       _unit addweapon _rifle;
       _unit addweapon _pistol;
-      _unit addweapon "NVGoggles";   
+      if (_faction != "bis_tk_gue") then {_unit addweapon "NVGoggles"};    
       _unit addweapon "Binocular";
       _unit addweapon "ACE_Map_Tools";
       
@@ -487,11 +487,11 @@ switch (_typeofUnit) do
       {_unit addmagazine _grenade} foreach [1,2];
       {_unit addmagazine _smokegrenade} foreach [1,2];
       _unit addweapon _rifleGL;
-      _unit addweapon "NVGoggles";   
+      if (_faction != "bis_tk_gue") then {_unit addweapon "NVGoggles"};    
       _unit addweapon "Binocular";
       _unit addweapon "ACE_Map_Tools";
       
-      _unit addweapon _rucksack;
+      if (_faction != "bis_tk_gue") then {_unit addweapon _rucksack;
       
       [_unit,_riflemag,6] spawn f_addMagToRuck;
       [_unit,_smokewhite,2] spawn f_addMagToRuck;
@@ -500,7 +500,7 @@ switch (_typeofUnit) do
       [_unit,_smokegrenade,2] spawn f_addMagToRuck;
       [_unit,_grenade,1] spawn f_addMagToRuck;       
       
-      _unit selectweapon primaryweapon _unit;
+      _unit selectweapon primaryweapon _unit;};
    };
 
 // ====================================================================================
@@ -518,16 +518,16 @@ switch (_typeofUnit) do
       {_unit addmagazine _pistolmag} foreach [1,2,3,4,5,6];
       _unit addweapon _rifle;
       _unit addweapon _pistol;
-      _unit addweapon "NVGoggles";
+      if (_faction != "bis_tk_gue") then {_unit addweapon "NVGoggles"}; 
       _unit addweapon "ACE_Map_Tools";
       
-      _unit addweapon _rucksack;
+      if (_faction != "bis_tk_gue") then {_unit addweapon _rucksack;
 
       [_unit,_riflemag,6] spawn f_addMagToRuck;
       [_unit,_grenade,1] spawn f_addMagToRuck;
       [_unit,_smokegrenade,2] spawn f_addMagToRuck;
       
-      _unit selectweapon primaryweapon _unit;
+      _unit selectweapon primaryweapon _unit;};
    };
 
 // ====================================================================================
@@ -541,7 +541,7 @@ switch (_typeofUnit) do
       {_unit addmagazine _medicmag} foreach [1,2,3,4,5,6];
       {_unit addmagazine _grenade} foreach [1];
       _unit addweapon _medicrifle;
-      _unit addweapon "NVGoggles";   
+      if (_faction != "bis_tk_gue") then {_unit addweapon "NVGoggles"};    
       {_unit addmagazine _smokegrenade;} foreach [1,2,3,4,5];
       {_unit addmagazine _bandage;} foreach [1,2];
       {_unit addmagazine _morphine;} foreach [1,2,3];
@@ -567,6 +567,7 @@ switch (_typeofUnit) do
    {
       removeallweapons _unit;
 	  removeBackpack _unit;
+	  if (_faction == "bis_tk_gue") then {_unit addweapon "M79_EP1";_success = [_unit, "M79_EP1"] call ACE_fnc_PutWeaponOnBack;};
       {_unit addmagazine _riflemag} foreach [1,2,3,4,5,6,7,8];
       {_unit addmagazine _GLmag} foreach [1,2,3,4];
       {_unit addmagazine _bandage} foreach [1,2];
@@ -575,7 +576,7 @@ switch (_typeofUnit) do
       _unit addmagazine _smokered;
       _unit addmagazine _smokegreen;
       _unit addweapon _rifleGL;
-      _unit addweapon "NVGoggles";   
+      if (_faction != "bis_tk_gue") then {_unit addweapon "NVGoggles"};    
       _unit addweapon "Binocular";
       _unit addweapon "ACE_Map_Tools";
       
@@ -599,7 +600,7 @@ switch (_typeofUnit) do
       {_unit addmagazine _medicmag} foreach [1,2,3,4,5,6];
       {_unit addmagazine _grenade} foreach [1];
       _unit addweapon _medicrifle;
-      _unit addweapon "NVGoggles";   
+      if (_faction != "bis_tk_gue") then {_unit addweapon "NVGoggles"};    
       {_unit addmagazine _smokegrenade;} foreach [1,2,3,4,5];
       {_unit addmagazine _bandage;} foreach [1,2];
       {_unit addmagazine _morphine;} foreach [1,2,3];
@@ -625,6 +626,7 @@ switch (_typeofUnit) do
    {
       removeallweapons _unit;
 	  removeBackpack _unit;
+	  if (_faction == "bis_tk_gue") then {_unit addweapon "M79_EP1";_success = [_unit, "M79_EP1"] call ACE_fnc_PutWeaponOnBack;};
       {_unit addmagazine _riflemag} foreach [1,2,3,4,5,6,7,8];
       {_unit addmagazine _GLmag} foreach [1,2,3,4,5];
       {_unit addmagazine _smokewhite} foreach [1];
@@ -632,11 +634,11 @@ switch (_typeofUnit) do
       {_unit addmagazine _smokegrenade;} foreach [1,2];
       {_unit addmagazine _bandage} foreach [1,2];
       _unit addweapon _rifleTL;
-      _unit addweapon "NVGoggles";   
+      if (_faction != "bis_tk_gue") then {_unit addweapon "NVGoggles"};   
       _unit addweapon "Binocular";
       _unit addweapon "ACE_Map_Tools";
       
-      _unit addweapon _rucksack;
+      if (_faction != "bis_tk_gue") then {_unit addweapon _rucksack;
 
       [_unit,_riflemag,6] spawn f_addMagToRuck;
       [_unit,_GLmag,7] spawn f_addMagToRuck;
@@ -645,8 +647,8 @@ switch (_typeofUnit) do
       [_unit,_smokegreen,1] spawn f_addMagToRuck;
       [_unit,_smokegrenade,1] spawn f_addMagToRuck;
       [_unit,_grenade,1] spawn f_addMagToRuck; 
-            
-      _unit selectweapon primaryweapon _unit;
+	            
+      _unit selectweapon primaryweapon _unit;};
    };
 
 // ====================================================================================
@@ -669,14 +671,14 @@ switch (_typeofUnit) do
 	      _unit addweapon _pistol;
               {_unit addmagazine _grenade} foreach [1,2];
               {_unit addmagazine _smokegrenade;} foreach [1,2];
-	      _unit addweapon "NVGoggles";
+	      if (_faction != "bis_tk_gue") then {_unit addweapon "NVGoggles"}; 
     	      _unit addweapon "ACE_Map_Tools";
 	      
-	      _unit addweapon _rucksack;
+	      if (_faction != "bis_tk_gue") then {_unit addweapon _rucksack;
 
 	      [_unit,_MGmag,2] spawn f_addMagToRuck;	      
 	      
-	      _unit selectweapon primaryweapon _unit;
+	      _unit selectweapon primaryweapon _unit;};
 	};
 	case "bis_us":
 	{
@@ -689,14 +691,14 @@ switch (_typeofUnit) do
 	      _unit addweapon _pistol;
               {_unit addmagazine _grenade} foreach [1,2];
               {_unit addmagazine _smokegrenade;} foreach [1,2];
-	      _unit addweapon "NVGoggles";
+	      if (_faction != "bis_tk_gue") then {_unit addweapon "NVGoggles"}; 
               _unit addweapon "ACE_Map_Tools";
 	      
-	      _unit addweapon _rucksack;
+	      if (_faction != "bis_tk_gue") then {_unit addweapon _rucksack;
 
 	      [_unit,_MGmag,1] spawn f_addMagToRuck;	      
 
-	      _unit selectweapon primaryweapon _unit;
+	      _unit selectweapon primaryweapon _unit;};
 	};
 	case "bis_tk_gue":
 	{
@@ -709,14 +711,14 @@ switch (_typeofUnit) do
 	      _unit addweapon _pistol;
               {_unit addmagazine _grenade} foreach [1,2];
               {_unit addmagazine _smokegrenade;} foreach [1,2];
-	      _unit addweapon "NVGoggles";
+	      if (_faction != "bis_tk_gue") then {_unit addweapon "NVGoggles"}; 
               _unit addweapon "ACE_Map_Tools";
 	      
-	      _unit addweapon _rucksack;
+	      if (_faction != "bis_tk_gue") then {_unit addweapon _rucksack;
 
 	      [_unit,_MGmag,2] spawn f_addMagToRuck;
 	      
-	      _unit selectweapon primaryweapon _unit;
+	      _unit selectweapon primaryweapon _unit;};
 	};
 	case "ins":
 	{
@@ -729,14 +731,14 @@ switch (_typeofUnit) do
 	      _unit addweapon _pistol;
               {_unit addmagazine _grenade} foreach [1,2];
               {_unit addmagazine _smokegrenade;} foreach [1,2];
-	      _unit addweapon "NVGoggles";
+	      if (_faction != "bis_tk_gue") then {_unit addweapon "NVGoggles"}; 
               _unit addweapon "ACE_Map_Tools";
 	      
-	      _unit addweapon _rucksack;
+	      if (_faction != "bis_tk_gue") then {_unit addweapon _rucksack;
 	      
 	      [_unit,_MGmag,2] spawn f_addMagToRuck;
 
-	      _unit selectweapon primaryweapon _unit;
+	      _unit selectweapon primaryweapon _unit;};
 	};
 	case "cdf":
 	{
@@ -749,14 +751,14 @@ switch (_typeofUnit) do
 	      _unit addweapon _pistol;
               {_unit addmagazine _grenade} foreach [1,2];
               {_unit addmagazine _smokegrenade;} foreach [1,2];
-	      _unit addweapon "NVGoggles";
+	      if (_faction != "bis_tk_gue") then {_unit addweapon "NVGoggles"}; 
               _unit addweapon "ACE_Map_Tools";
 	      
-	      _unit addweapon _rucksack;
+	      if (_faction != "bis_tk_gue") then {_unit addweapon _rucksack;
 
 	      [_unit,_MGmag,2] spawn f_addMagToRuck;
 	      
-	      _unit selectweapon primaryweapon _unit;
+	      _unit selectweapon primaryweapon _unit;};
 	};
       };
    };
@@ -782,17 +784,17 @@ switch (_typeofUnit) do
 	      {_unit addmagazine _pistolmag;} foreach [1,2,3,4,5,6];
 	      _unit addweapon _rifle;
 	      _unit addweapon _pistol;
-	      _unit addweapon "NVGoggles";
+	      if (_faction != "bis_tk_gue") then {_unit addweapon "NVGoggles"}; 
               _unit addweapon "ACE_Map_Tools";
 	      
-	      _unit addweapon _rucksack;
+	      if (_faction != "bis_tk_gue") then {_unit addweapon _rucksack;
 	      
 	      [_unit,_riflemag,4] spawn f_addMagToRuck;
 	      [_unit,_MGmag,6] spawn f_addMagToRuck;
 	      [_unit,_smokegrenade,1] spawn f_addMagToRuck;
 	      [_unit,_grenade,1] spawn f_addMagToRuck;
       
-	      _unit selectweapon primaryweapon _unit;
+	      _unit selectweapon primaryweapon _unit;};
       	};
       	case "bis_us":
    	{
@@ -806,17 +808,17 @@ switch (_typeofUnit) do
 	      {_unit addmagazine _pistolmag;} foreach [1,2,3,4,5,6];
 	      _unit addweapon _rifle;
 	      _unit addweapon _pistol;
-	      _unit addweapon "NVGoggles";
+	      if (_faction != "bis_tk_gue") then {_unit addweapon "NVGoggles"}; 
               _unit addweapon "ACE_Map_Tools";
 	      
-	      _unit addweapon _rucksack;
+	      if (_faction != "bis_tk_gue") then {_unit addweapon _rucksack;
 
 	      [_unit,_riflemag,4] spawn f_addMagToRuck;
 	      [_unit,_MGmag,3] spawn f_addMagToRuck;
 	      [_unit,_smokegrenade,1] spawn f_addMagToRuck;
 	      [_unit,_grenade,1] spawn f_addMagToRuck;
 	      
-	      _unit selectweapon primaryweapon _unit;
+	      _unit selectweapon primaryweapon _unit;};
       	};
       	case "bis_tk_gue":
 	{
@@ -830,17 +832,17 @@ switch (_typeofUnit) do
 	      {_unit addmagazine _pistolmag;} foreach [1,2,3,4,5,6];
 	      _unit addweapon _rifle;
 	      _unit addweapon _pistol;
-	      _unit addweapon "NVGoggles";
+	      if (_faction != "bis_tk_gue") then {_unit addweapon "NVGoggles"}; 
               _unit addweapon "ACE_Map_Tools";
 	      
-	      _unit addweapon _rucksack;
+	      if (_faction != "bis_tk_gue") then {_unit addweapon _rucksack;
 	      
 	      [_unit,_riflemag,4] spawn f_addMagToRuck;
 	      [_unit,_MGmag,6] spawn f_addMagToRuck;
 	      [_unit,_smokegrenade,1] spawn f_addMagToRuck;
 	      [_unit,_grenade,1] spawn f_addMagToRuck;
       
-	      _unit selectweapon primaryweapon _unit;
+	      _unit selectweapon primaryweapon _unit;};
       	};
 	case "ins":
 	{
@@ -854,17 +856,17 @@ switch (_typeofUnit) do
 	      {_unit addmagazine _pistolmag;} foreach [1,2,3,4,5,6];
 	      _unit addweapon _rifle;
 	      _unit addweapon _pistol;
-	      _unit addweapon "NVGoggles";
+	      if (_faction != "bis_tk_gue") then {_unit addweapon "NVGoggles"}; 
               _unit addweapon "ACE_Map_Tools";
 	      
-	      _unit addweapon _rucksack;
+	      if (_faction != "bis_tk_gue") then {_unit addweapon _rucksack;
 	      
 	      [_unit,_riflemag,4] spawn f_addMagToRuck;
 	      [_unit,_MGmag,6] spawn f_addMagToRuck;
 	      [_unit,_smokegrenade,1] spawn f_addMagToRuck;
 	      [_unit,_grenade,1] spawn f_addMagToRuck;
       
-	      _unit selectweapon primaryweapon _unit;
+	      _unit selectweapon primaryweapon _unit;};
       	};
 	case "cdf":
 	{
@@ -878,17 +880,17 @@ switch (_typeofUnit) do
 	      {_unit addmagazine _pistolmag;} foreach [1,2,3,4,5,6];
 	      _unit addweapon _rifle;
 	      _unit addweapon _pistol;
-	      _unit addweapon "NVGoggles";
+	      if (_faction != "bis_tk_gue") then {_unit addweapon "NVGoggles"}; 
               _unit addweapon "ACE_Map_Tools";
 	      
-	      _unit addweapon _rucksack;
+	      if (_faction != "bis_tk_gue") then {_unit addweapon _rucksack;
 	      
 	      [_unit,_riflemag,4] spawn f_addMagToRuck;
 	      [_unit,_MGmag,6] spawn f_addMagToRuck;
 	      [_unit,_smokegrenade,1] spawn f_addMagToRuck;
 	      [_unit,_grenade,1] spawn f_addMagToRuck;
       
-	      _unit selectweapon primaryweapon _unit;
+	      _unit selectweapon primaryweapon _unit;};
       	};
       };
    };
@@ -908,16 +910,16 @@ switch (_typeofUnit) do
       {_unit addmagazine _pistolmag;} foreach [1,2,3,4,5,6];
       _unit addweapon _rifle;
       _unit addweapon _pistol;
-      _unit addweapon "NVGoggles";
+      if (_faction != "bis_tk_gue") then {_unit addweapon "NVGoggles"}; 
       _unit addweapon "ACE_Map_Tools";
       
-      _unit addweapon _rucksack;
+      if (_faction != "bis_tk_gue") then {_unit addweapon _rucksack;
 
       [_unit,_riflemag,6] spawn f_addMagToRuck;
       [_unit,_grenade,1] spawn f_addMagToRuck;
       [_unit,_smokegrenade,1] spawn f_addMagToRuck; 
       
-      _unit selectweapon primaryweapon _unit;
+      _unit selectweapon primaryweapon _unit;};
    };
 
 // ====================================================================================
@@ -937,10 +939,10 @@ switch (_typeofUnit) do
       _unit addweapon _at;
       _unit addweapon _rifle;
       _unit addweapon _pistol;
-      _unit addweapon "NVGoggles";
+      if (_faction != "bis_tk_gue") then {_unit addweapon "NVGoggles"}; 
       _unit addweapon "ACE_Map_Tools";
       
-//      _unit addweapon _rucksack;
+//      if (_faction != "bis_tk_gue") then {_unit addweapon _rucksack;
       
       _unit selectweapon primaryweapon _unit;
    };
@@ -960,7 +962,7 @@ switch (_typeofUnit) do
       {_unit addmagazine _pistolmag;} foreach [1,2,3,4,5,6];
       {_unit addmagazine _bandage} foreach [1,2];
       _unit addweapon _pistol;
-      _unit addweapon "NVGoggles";
+      if (_faction != "bis_tk_gue") then {_unit addweapon "NVGoggles"}; 
       _unit addweapon "ACE_Earplugs";
       _unit addweapon "ACE_Map_Tools";
       
@@ -985,18 +987,18 @@ switch (_typeofUnit) do
       _unit addweapon _pistol;
       _unit addmagazine "ACE_Battery_Rangefinder";
       _unit addweapon "ACE_Rangefinder_OD";
-      _unit addweapon "NVGoggles";
+      if (_faction != "bis_tk_gue") then {_unit addweapon "NVGoggles"}; 
       _unit addweapon "ACE_Earplugs";
       _unit addweapon "ACE_Map_Tools"; 
 
       
-      _unit addweapon _rucksack;
+      if (_faction != "bis_tk_gue") then {_unit addweapon _rucksack;
 
       [_unit,_medicmag,4] spawn f_addMagToRuck;
       [_unit,_mediumMGmag,1] spawn f_addMagToRuck;
       [_unit,"ACE_Battery_Rangefinder",1] spawn f_addMagToRuck; 
       
-      _unit selectweapon primaryweapon _unit;
+      _unit selectweapon primaryweapon _unit;};
    };
 
 // ====================================================================================
@@ -1015,16 +1017,16 @@ switch (_typeofUnit) do
       {_unit addmagazine _pistolmag;} foreach [1,2,3,4,5,6];
       _unit addweapon _rifle;
       _unit addweapon _pistol;
-      _unit addweapon "NVGoggles";
+      if (_faction != "bis_tk_gue") then {_unit addweapon "NVGoggles"}; 
       _unit addweapon "ACE_Earplugs";
       _unit addweapon "ACE_Map_Tools";
       
-      _unit addweapon _rucksack;
+      if (_faction != "bis_tk_gue") then {_unit addweapon _rucksack;
       
       [_unit,_riflemag,4] spawn f_addMagToRuck;
       [_unit,_mediumMGmag,4] spawn f_addMagToRuck;       
       
-      _unit selectweapon primaryweapon _unit;
+      _unit selectweapon primaryweapon _unit;};
    };
 
 // ====================================================================================
@@ -1040,7 +1042,7 @@ switch (_typeofUnit) do
       {_unit addmagazine _bandage} foreach [1,2];
       _unit addweapon _medicrifle;
       _unit addweapon _heavyMG;
-      _unit addweapon "NVGoggles";
+      if (_faction != "bis_tk_gue") then {_unit addweapon "NVGoggles"}; 
       _unit addweapon "ACE_Earplugs";
       _unit addweapon "ACE_Map_Tools";
       
@@ -1069,7 +1071,7 @@ switch (_typeofUnit) do
       _unit addweapon _medicrifle;
       _unit addWeapon _heavyMGtripod;
       _unit addweapon "ACE_Rangefinder_OD";
-      _unit addweapon "NVGoggles";
+      if (_faction != "bis_tk_gue") then {_unit addweapon "NVGoggles"}; 
       _unit addweapon "ACE_Earplugs";
       _unit addweapon "ACE_Map_Tools";
       
@@ -1107,11 +1109,11 @@ switch (_typeofUnit) do
       {_unit addmagazine _smokegrenade} foreach [1];
       {_unit addmagazine _bandage} foreach [1,2];
       _unit addweapon _rifle;      
-      _unit addweapon "NVGoggles";
+      if (_faction != "bis_tk_gue") then {_unit addweapon "NVGoggles"}; 
       _unit addweapon "ACE_Earplugs";
       _unit addweapon "ACE_Map_Tools";
       
-      _unit addweapon _rucksack;
+      if (_faction != "bis_tk_gue") then {_unit addweapon _rucksack;
       
       [_unit,_riflemag,5] spawn f_addMagToRuck;
       
@@ -1129,7 +1131,7 @@ switch (_typeofUnit) do
         };
       };
 
-      _unit selectweapon primaryweapon _unit;
+      _unit selectweapon primaryweapon _unit;};
    };
 
 // ====================================================================================
@@ -1152,7 +1154,7 @@ switch (_typeofUnit) do
       {_unit addmagazine _smokegrenade} foreach [1,2];
       {_unit addmagazine _bandage} foreach [1,2];
       _unit addweapon _medicrifle;
-      _unit addweapon "NVGoggles";
+      if (_faction != "bis_tk_gue") then {_unit addweapon "NVGoggles"}; 
       _unit addweapon "ACE_Map_Tools";
    };
 
@@ -1171,17 +1173,17 @@ switch (_typeofUnit) do
       _unit addweapon _medicrifle;
       _unit addmagazine "ACE_Battery_Rangefinder";
       _unit addweapon "ACE_Rangefinder_OD";
-      _unit addweapon "NVGoggles";
+      if (_faction != "bis_tk_gue") then {_unit addweapon "NVGoggles"}; 
       _unit addweapon "ACE_Map_Tools";
       
-      _unit addweapon _rucksack;
+      if (_faction != "bis_tk_gue") then {_unit addweapon _rucksack;
       
       [_unit,_medicmag,4] spawn f_addMagToRuck;
       [_unit,_mediumATmag1,1] spawn f_addMagToRuck; 
       [_unit,_mediumATmag2,1] spawn f_addMagToRuck;
       [_unit,"ACE_Battery_Rangefinder",1] spawn f_addMagToRuck; 
       
-      _unit selectweapon primaryweapon _unit; 
+      _unit selectweapon primaryweapon _unit;}; 
    };
 
 // ====================================================================================
@@ -1197,16 +1199,16 @@ switch (_typeofUnit) do
       {_unit addmagazine _grenade} foreach [1,2];
       {_unit addmagazine _bandage} foreach [1,2];
       _unit addweapon _rifle;
-      _unit addweapon "NVGoggles";
+      if (_faction != "bis_tk_gue") then {_unit addweapon "NVGoggles"}; 
       _unit addweapon "ACE_Map_Tools";
       
-      _unit addweapon _rucksack;
+      if (_faction != "bis_tk_gue") then {_unit addweapon _rucksack;
       
       [_unit,_riflemag,4] spawn f_addMagToRuck;
       [_unit,_mediumATmag1,1] spawn f_addMagToRuck; 
       [_unit,_mediumATmag2,1] spawn f_addMagToRuck; 
  
-      _unit selectweapon primaryweapon _unit;
+      _unit selectweapon primaryweapon _unit;};
    };
    
 // ====================================================================================
@@ -1223,7 +1225,7 @@ switch (_typeofUnit) do
       {_unit addmagazine _bandage} foreach [1,2];
       _unit addweapon _heavyAT;
       _unit addweapon _medicrifle;
-      _unit addweapon "NVGoggles";
+      if (_faction != "bis_tk_gue") then {_unit addweapon "NVGoggles"}; 
       _unit addweapon "ACE_Map_Tools";
    };
 
@@ -1242,15 +1244,15 @@ switch (_typeofUnit) do
       _unit addweapon _medicrifle;
       _unit addmagazine "ACE_Battery_Rangefinder";
       _unit addweapon "ACE_Rangefinder_OD";
-      _unit addweapon "NVGoggles";
+      if (_faction != "bis_tk_gue") then {_unit addweapon "NVGoggles"}; 
       _unit addweapon "ACE_Map_Tools";
       
-      _unit addweapon _rucksack;
+      if (_faction != "bis_tk_gue") then {_unit addweapon _rucksack;
         
       [_unit,_medicmag,5] spawn f_addMagToRuck;
       [_unit,"ACE_Battery_Rangefinder",1] spawn f_addMagToRuck;
       
-      _unit selectweapon primaryweapon _unit; 
+      _unit selectweapon primaryweapon _unit;}; 
    };
 
 // ====================================================================================
@@ -1266,14 +1268,14 @@ switch (_typeofUnit) do
       {_unit addmagazine _bandage} foreach [1,2];
       _unit addmagazine _smokegrenade;
       _unit addweapon _rifle;
-      _unit addweapon "NVGoggles";
+      if (_faction != "bis_tk_gue") then {_unit addweapon "NVGoggles"}; 
       _unit addweapon "ACE_Map_Tools";
       
-      _unit addweapon _rucksack;
+      if (_faction != "bis_tk_gue") then {_unit addweapon _rucksack;
       
       [_unit,_riflemag,5] spawn f_addMagToRuck; 
       
-      _unit selectweapon primaryweapon _unit;
+      _unit selectweapon primaryweapon _unit;};
    };
 
 // ====================================================================================
@@ -1292,10 +1294,10 @@ switch (_typeofUnit) do
       _unit addweapon _pistol;
       _unit addweapon _snrifle;
       _unit addweapon "Binocular";
-      _unit addweapon "NVGoggles";
+      if (_faction != "bis_tk_gue") then {_unit addweapon "NVGoggles"}; 
       _unit addweapon "ACE_Map_Tools";
       
-//      _unit addweapon _rucksack;
+//      if (_faction != "bis_tk_gue") then {_unit addweapon _rucksack;
      
       _unit selectweapon primaryweapon _unit; 
    };
@@ -1317,7 +1319,7 @@ switch (_typeofUnit) do
       _unit addweapon _sprifle;
       _unit addmagazine "ACE_Battery_Rangefinder";
       _unit addweapon "ACE_Rangefinder_OD";
-      _unit addweapon "NVGoggles";
+      if (_faction != "bis_tk_gue") then {_unit addweapon "NVGoggles"}; 
       _unit addweapon "ACE_Map_Tools";
       _unit addweapon "ACE_Spottingscope";
       if (!(_unit hasWeapon "ACE_Kestrel4500")) then
@@ -1326,7 +1328,7 @@ switch (_typeofUnit) do
       };
       
 	  _unit addweapon "ACE_P159_RD90";
-      _unit selectweapon primaryweapon _unit; 
+      _unit selectweapon primaryweapon _unit;
    };
 
 // ====================================================================================
@@ -1346,9 +1348,9 @@ switch (_typeofUnit) do
       _unit addweapon _pistol;
       _unit addweapon "ACE_Map_Tools";
       
-//      _unit addweapon _rucksack;
+//      if (_faction != "bis_tk_gue") then {_unit addweapon _rucksack;
             
-      _unit selectweapon primaryweapon _unit; 
+      _unit selectweapon primaryweapon _unit;
    };
 
 // ====================================================================================
@@ -1366,13 +1368,13 @@ switch (_typeofUnit) do
       {_unit addmagazine _smokegrenade;} foreach [1,2];
       {_unit addmagazine _bandage} foreach [1,2];
       _unit addweapon _sfrifleGL;
-      _unit addweapon "NVGoggles";   
+      if (_faction != "bis_tk_gue") then {_unit addweapon "NVGoggles"};    
       _unit addweapon "Binocular";
       _unit addweapon "ACE_Map_Tools";
 	  _unit addweapon "ACE_GlassesBalaklava";
 	
       
-      _unit addweapon _rucksack;
+      if (_faction != "bis_tk_gue") then {_unit addweapon _rucksack;
 	 
       [_unit,_sfriflemag,10] spawn f_addMagToRuck;
       [_unit,_GLmag,7] spawn f_addMagToRuck;
@@ -1382,7 +1384,7 @@ switch (_typeofUnit) do
       [_unit,_grenade,2] spawn f_addMagToRuck;
 	  [_unit,"ACE_IRStrobe",1] spawn f_addMagToRuck;
             
-      _unit selectweapon primaryweapon _unit;
+      _unit selectweapon primaryweapon _unit;};
    };
 // ====================================================================================
 
@@ -1400,7 +1402,7 @@ switch (_typeofUnit) do
 	  _unit addweapon "ACE_M72A2";
 	  _success = [_unit, "ACE_M72A2"] call ACE_fnc_PutWeaponOnBack;
       _unit addweapon _sfrifle;
-      _unit addweapon "NVGoggles";   
+      if (_faction != "bis_tk_gue") then {_unit addweapon "NVGoggles"};    
 	  _unit addweapon "ACE_GlassesBalaklava";
 	  _unit addweapon "ACE_Map_Tools";
 	  _unit addweapon "Laserdesignator";
@@ -1428,16 +1430,16 @@ switch (_typeofUnit) do
 	  _unit addweapon _sfpistol;
       {_unit addmagazine _grenade} foreach [1,2];
       {_unit addmagazine _smokegrenade;} foreach [1,2];
-	  _unit addweapon "NVGoggles";
+	  if (_faction != "bis_tk_gue") then {_unit addweapon "NVGoggles"}; 
       _unit addweapon "ACE_Map_Tools";
 	  _unit addweapon "ACE_GlassesBalaklava";
 	  _unit addweapon "ACE_Earplugs";
 	  	      
-	  _unit addweapon _rucksack;
+	  if (_faction != "bis_tk_gue") then {_unit addweapon _rucksack;
 
 	  [_unit,_sfmgmag,2] spawn f_addMagToRuck;	
 	  [_unit,"ACE_IRStrobe",1] spawn f_addMagToRuck;
-      _unit selectweapon primaryweapon _unit;
+      _unit selectweapon primaryweapon _unit;};
    };
 
 
@@ -1456,18 +1458,18 @@ switch (_typeofUnit) do
 	  {_unit addmagazine _bandage} foreach [1,2];
 	  _unit addweapon _sfpistol;
       _unit addweapon _sfsnrifle;
-      _unit addweapon "NVGoggles";   
+      if (_faction != "bis_tk_gue") then {_unit addweapon "NVGoggles"};    
 	  _unit addweapon "ACE_GlassesBalaklava";
 	  _unit addweapon "ACE_Map_Tools";
             
-      _unit addweapon _rucksack;
+      if (_faction != "bis_tk_gue") then {_unit addweapon _rucksack;
 
       [_unit,_sfsnmag,6] spawn f_addMagToRuck;
 	  [_unit,_smokegrenade,2] spawn f_addMagToRuck;
       [_unit,_grenade,2] spawn f_addMagToRuck;
 	  [_unit,"ACE_IRStrobe",1] spawn f_addMagToRuck;
 	              
-      _unit selectweapon primaryweapon _unit;
+      _unit selectweapon primaryweapon _unit;};
    };
 
 // ====================================================================================
@@ -1488,11 +1490,11 @@ switch (_typeofUnit) do
 	  _unit addweapon "ACE_Wirecutter";
 	  _success = [_unit, "ACE_Wirecutter"] call ACE_fnc_PutWeaponOnBack;
 	  _unit addweapon _sfrifle;
-      _unit addweapon "NVGoggles";   
+      if (_faction != "bis_tk_gue") then {_unit addweapon "NVGoggles"};    
 	  _unit addweapon "ACE_GlassesBalaklava";
 	  _unit addweapon "ACE_Map_Tools";
             
-      _unit addweapon _rucksack;
+      if (_faction != "bis_tk_gue") then {_unit addweapon _rucksack;
 
       [_unit,_sfriflemag,6] spawn f_addMagToRuck;
       [_unit,_smokegrenade,2] spawn f_addMagToRuck;
@@ -1502,7 +1504,7 @@ switch (_typeofUnit) do
 	  [_unit,"ACE_M2SLAM_M",4] spawn f_addMagToRuck;
       
 	  	              
-      _unit selectweapon primaryweapon _unit;
+      _unit selectweapon primaryweapon _unit;};
    };
 
 // ====================================================================================
@@ -1522,7 +1524,7 @@ switch (_typeofUnit) do
       {_unit addmagazine _morphine;} foreach [1,2,3];
       {_unit addmagazine _epinephrine;} foreach [1,2,3];
       _unit addweapon "ACE_Map_Tools";
-	  _unit addweapon "NVGoggles";
+	  if (_faction != "bis_tk_gue") then {_unit addweapon "NVGoggles"}; 
 	  _unit addweapon "ACE_GlassesBalaklava";
 	  _unit addweapon "ACE_Map_Tools";
       
@@ -1555,7 +1557,7 @@ switch (_typeofUnit) do
 	  {_unit addmagazine _morphine;} foreach [1];
 	  _unit addweapon _pistol;
       _unit addweapon _dmrifle;
-      _unit addweapon "NVGoggles";   
+      if (_faction != "bis_tk_gue") then {_unit addweapon "NVGoggles"};    
 	  _unit addweapon "ACE_Map_Tools";
             
                    

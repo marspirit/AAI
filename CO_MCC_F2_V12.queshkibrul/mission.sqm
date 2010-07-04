@@ -18,12 +18,10 @@ class Mission
 		"CA_Modules_ARTY",
 		"CAWater",
 		"ace_sys_easa",
-		"ca_modules_clouds",
-		"cacharacters_e"
-	};
+		"ca_modules_clouds"
+		};
 	addOnsAuto[]=
 	{
-		"cacharacters_e",
 		"ca_modules_functions",
 		"CA_Modules_Alice",
 		"ca_modules_silvie",
@@ -71,7 +69,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitUSMC_1Plt_PltCo";
 					init="GrpUSMC_1Plt_PltHQ = group this; nul = [""pltco"",this] execVM ""f\common\@ShackTac_assignGear_plthq.sqf"";";
-					description="USMC 1Plt PltHQ Platoon Commander";
+					description="US 1Plt PltHQ Platoon Commander";
 				};
 				class Item1
 				{
@@ -84,7 +82,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitUSMC_1Plt_PltSgt";
 					init="GrpUSMC_1Plt_PltHQ = group this; nul = [""pltsgt"",this] execVM ""f\common\@ShackTac_assignGear_plthq.sqf"";";
-					description="USMC 1Plt PltHQ Platoon Sgt.";
+					description="US 1Plt PltHQ Platoon Sgt.";
 				};
 				class Item2
 				{
@@ -97,7 +95,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitUSMC_1Plt_PltM";
 					init="GrpUSMC_1Plt_PltHQ = group this; nul = [""pltm"",this] execVM ""f\common\@ShackTac_assignGear_plthq.sqf"";";
-					description="USMC 1Plt PltHQ Medic";
+					description="US 1Plt PltHQ Medic";
 				};
 				class Item3
 				{
@@ -109,7 +107,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitUSMC_1Plt_PltR";
 					init="GrpUSMC_1Plt_PltHQ = group this; nul = [""pltr"",this] execVM ""f\common\@ShackTac_assignGear_plthq.sqf"";";
-					description="USMC 1Plt PltHQ Rifleman";
+					description="US 1Plt PltHQ Rifleman";
 				};
 			};
 		};
@@ -131,7 +129,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitUSMC_1Plt_ASL";
 					init="GrpUSMC_1Plt_Alpha = group this; nul = [""sl"",this] execVM ""f\common\@ShackTac_assignGear_alpha.sqf"";";
-					description="USMC 1Plt Alpha Squad Leader";
+					description="US 1Plt Alpha Squad Leader";
 				};
 				class Item1
 				{
@@ -144,7 +142,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitUSMC_1Plt_AM";
 					init="GrpUSMC_1Plt_Alpha = group this; nul = [""m"",this] execVM ""f\common\@ShackTac_assignGear_alpha.sqf"";";
-					description="USMC 1Plt Alpha Squad Corpsman";
+					description="US 1Plt Alpha Squad Corpsman";
 				};
 			};
 		};
@@ -166,7 +164,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitUSMC_1Plt_A1FTL";
 					init="GrpUSMC_1Plt_A1 = group this; nul = [""ftl"",this] execVM ""f\common\@ShackTac_assignGear_alpha.sqf"";";
-					description="USMC 1Plt A1 Fireteam Leader";
+					description="US 1Plt A1 Fireteam Leader";
 				};
 				class Item1
 				{
@@ -179,7 +177,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitUSMC_1Plt_A1AR";
 					init="GrpUSMC_1Plt_A1 = group this; nul = [""ar"",this] execVM ""f\common\@ShackTac_assignGear_alpha.sqf"";";
-					description="USMC 1Plt A1 Automatic Rifleman";
+					description="US 1Plt A1 Automatic Rifleman";
 				};
 				class Item2
 				{
@@ -191,7 +189,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitUSMC_1Plt_A1AAR";
 					init="GrpUSMC_1Plt_A1 = group this; nul = [""aar"",this] execVM ""f\common\@ShackTac_assignGear_alpha.sqf"";";
-					description="USMC 1Plt A1 Assistant Automatic Rifleman";
+					description="US 1Plt A1 Assistant Automatic Rifleman";
 				};
 				class Item3
 				{
@@ -203,7 +201,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitUSMC_1Plt_A1RAT";
 					init="GrpUSMC_1Plt_A1 = group this; nul = [""rat"",this] execVM ""f\common\@ShackTac_assignGear_alpha.sqf"";";
-					description="USMC 1Plt A1 Rifleman (AT)";
+					description="US 1Plt A1 Rifleman (AT)";
 				};
 			};
 		};
@@ -225,7 +223,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitUSMC_1Plt_A2FTL";
 					init="GrpUSMC_1Plt_A2 = group this; nul = [""ftl"",this] execVM ""f\common\@ShackTac_assignGear_alpha.sqf"";";
-					description="USMC 1Plt A2 Fireteam Leader";
+					description="US 1Plt A2 Fireteam Leader";
 				};
 				class Item1
 				{
@@ -238,7 +236,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitUSMC_1Plt_A2AR";
 					init="GrpUSMC_1Plt_A2 = group this; nul = [""ar"",this] execVM ""f\common\@ShackTac_assignGear_alpha.sqf"";";
-					description="USMC 1Plt A2 Automatic Rifleman";
+					description="US 1Plt A2 Automatic Rifleman";
 				};
 				class Item2
 				{
@@ -250,7 +248,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitUSMC_1Plt_A2AAR";
 					init="GrpUSMC_1Plt_A2 = group this; nul = [""aar"",this] execVM ""f\common\@ShackTac_assignGear_alpha.sqf"";";
-					description="USMC 1Plt A2 Assistant Automatic Rifleman";
+					description="US 1Plt A2 Assistant Automatic Rifleman";
 				};
 				class Item3
 				{
@@ -262,7 +260,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitUSMC_1Plt_A2RAT";
 					init="GrpUSMC_1Plt_A2 = group this; nul = [""rat"",this] execVM ""f\common\@ShackTac_assignGear_alpha.sqf"";";
-					description="USMC 1Plt A2 Rifleman (AT)";
+					description="US 1Plt A2 Rifleman (AT)";
 				};
 			};
 		};
@@ -284,7 +282,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitUSMC_1Plt_A3FTL";
 					init="GrpUSMC_1Plt_A3 = group this; nul = [""ftl"",this] execVM ""f\common\@ShackTac_assignGear_alpha.sqf"";";
-					description="USMC 1Plt A3 Fireteam Leader";
+					description="US 1Plt A3 Fireteam Leader";
 				};
 				class Item1
 				{
@@ -297,7 +295,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitUSMC_1Plt_A3AR";
 					init="GrpUSMC_1Plt_A3 = group this; nul = [""ar"",this] execVM ""f\common\@ShackTac_assignGear_alpha.sqf"";";
-					description="USMC 1Plt A3 Automatic Rifleman";
+					description="US 1Plt A3 Automatic Rifleman";
 				};
 				class Item2
 				{
@@ -309,7 +307,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitUSMC_1Plt_A3AAR";
 					init="GrpUSMC_1Plt_A3 = group this; nul = [""aar"",this] execVM ""f\common\@ShackTac_assignGear_alpha.sqf"";";
-					description="USMC 1Plt A3 Assistant Automatic Rifleman";
+					description="US 1Plt A3 Assistant Automatic Rifleman";
 				};
 				class Item3
 				{
@@ -321,7 +319,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitUSMC_1Plt_A3R";
 					init="GrpUSMC_1Plt_A3 = group this; nul = [""r"",this] execVM ""f\common\@ShackTac_assignGear_alpha.sqf"";";
-					description="USMC 1Plt A3 Rifleman";
+					description="US 1Plt A3 Rifleman";
 				};
 			};
 		};
@@ -343,7 +341,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitUSMC_1Plt_BSL";
 					init="GrpUSMC_1Plt_Bravo = group this; nul = [""sl"",this] execVM ""f\common\@ShackTac_assignGear_bravo.sqf"";";
-					description="USMC 1Plt Bravo Squad Leader";
+					description="US 1Plt Bravo Squad Leader";
 				};
 				class Item1
 				{
@@ -356,7 +354,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitUSMC_1Plt_BM";
 					init="GrpUSMC_1Plt_Bravo = group this; nul = [""m"",this] execVM ""f\common\@ShackTac_assignGear_bravo.sqf"";";
-					description="USMC 1Plt Bravo Squad Corpsman";
+					description="US 1Plt Bravo Squad Corpsman";
 				};
 			};
 		};
@@ -378,7 +376,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitUSMC_1Plt_B1FTL";
 					init="GrpUSMC_1Plt_B1 = group this; nul = [""ftl"",this] execVM ""f\common\@ShackTac_assignGear_bravo.sqf"";";
-					description="USMC 1Plt B1 Fireteam Leader";
+					description="US 1Plt B1 Fireteam Leader";
 				};
 				class Item1
 				{
@@ -391,7 +389,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitUSMC_1Plt_B1AR";
 					init="GrpUSMC_1Plt_B1 = group this; nul = [""ar"",this] execVM ""f\common\@ShackTac_assignGear_bravo.sqf"";";
-					description="USMC 1Plt B1 Automatic Rifleman";
+					description="US 1Plt B1 Automatic Rifleman";
 				};
 				class Item2
 				{
@@ -403,7 +401,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitUSMC_1Plt_B1AAR";
 					init="GrpUSMC_1Plt_B1 = group this; nul = [""aar"",this] execVM ""f\common\@ShackTac_assignGear_bravo.sqf"";";
-					description="USMC 1Plt B1 Assistant Automatic Rifleman";
+					description="US 1Plt B1 Assistant Automatic Rifleman";
 				};
 				class Item3
 				{
@@ -415,7 +413,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitUSMC_1Plt_B1RAT";
 					init="GrpUSMC_1Plt_B1 = group this; nul = [""rat"",this] execVM ""f\common\@ShackTac_assignGear_bravo.sqf"";";
-					description="USMC 1Plt B1 Rifleman (AT)";
+					description="US 1Plt B1 Rifleman (AT)";
 				};
 			};
 		};
@@ -437,7 +435,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitUSMC_1Plt_B2FTL";
 					init="GrpUSMC_1Plt_B2 = group this; nul = [""ftl"",this] execVM ""f\common\@ShackTac_assignGear_bravo.sqf"";";
-					description="USMC 1Plt B2 Fireteam Leader";
+					description="US 1Plt B2 Fireteam Leader";
 				};
 				class Item1
 				{
@@ -450,7 +448,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitUSMC_1Plt_B2AR";
 					init="GrpUSMC_1Plt_B2 = group this; nul = [""ar"",this] execVM ""f\common\@ShackTac_assignGear_bravo.sqf"";";
-					description="USMC 1Plt B2 Automatic Rifleman";
+					description="US 1Plt B2 Automatic Rifleman";
 				};
 				class Item2
 				{
@@ -462,7 +460,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitUSMC_1Plt_B2AAR";
 					init="GrpUSMC_1Plt_B2 = group this; nul = [""aar"",this] execVM ""f\common\@ShackTac_assignGear_bravo.sqf"";";
-					description="USMC 1Plt B2 Assistant Automatic Rifleman";
+					description="US 1Plt B2 Assistant Automatic Rifleman";
 				};
 				class Item3
 				{
@@ -474,7 +472,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitUSMC_1Plt_B2RAT";
 					init="GrpUSMC_1Plt_B2 = group this; nul = [""rat"",this] execVM ""f\common\@ShackTac_assignGear_bravo.sqf"";";
-					description="USMC 1Plt B2 Rifleman (AT)";
+					description="US 1Plt B2 Rifleman (AT)";
 				};
 			};
 		};
@@ -496,7 +494,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitUSMC_1Plt_B3FTL";
 					init="GrpUSMC_1Plt_B3 = group this; nul = [""ftl"",this] execVM ""f\common\@ShackTac_assignGear_bravo.sqf"";";
-					description="USMC 1Plt B3 Fireteam Leader";
+					description="US 1Plt B3 Fireteam Leader";
 				};
 				class Item1
 				{
@@ -509,7 +507,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitUSMC_1Plt_B3AR";
 					init="GrpUSMC_1Plt_B3 = group this; nul = [""ar"",this] execVM ""f\common\@ShackTac_assignGear_bravo.sqf"";";
-					description="USMC 1Plt B3 Automatic Rifleman";
+					description="US 1Plt B3 Automatic Rifleman";
 				};
 				class Item2
 				{
@@ -521,7 +519,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitUSMC_1Plt_B3AAR";
 					init="GrpUSMC_1Plt_B3 = group this; nul = [""aar"",this] execVM ""f\common\@ShackTac_assignGear_bravo.sqf"";";
-					description="USMC 1Plt B3 Assistant Automatic Rifleman";
+					description="US 1Plt B3 Assistant Automatic Rifleman";
 				};
 				class Item3
 				{
@@ -533,7 +531,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitUSMC_1Plt_B3R";
 					init="GrpUSMC_1Plt_B3 = group this; nul = [""r"",this] execVM ""f\common\@ShackTac_assignGear_bravo.sqf"";";
-					description="USMC 1Plt B3 Rifleman";
+					description="US 1Plt B3 Rifleman";
 				};
 			};
 		};
@@ -555,7 +553,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitUSMC_1Plt_CSL";
 					init="GrpUSMC_1Plt_Charlie = group this; nul = [""sl"",this] execVM ""f\common\@ShackTac_assignGear_delta.sqf"";";
-					description="USMC 1Plt Charlie Squad Leader";
+					description="US 1Plt Charlie Squad Leader";
 				};
 				class Item1
 				{
@@ -568,7 +566,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitUSMC_1Plt_CM";
 					init="GrpUSMC_1Plt_Charlie = group this; nul = [""m"",this] execVM ""f\common\@ShackTac_assignGear_charlie.sqf"";";
-					description="USMC 1Plt Charlie Squad Corpsman";
+					description="US 1Plt Charlie Squad Corpsman";
 				};
 			};
 		};
@@ -590,7 +588,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitUSMC_1Plt_C1FTL";
 					init="GrpUSMC_1Plt_C1 = group this; nul = [""ftl"",this] execVM ""f\common\@ShackTac_assignGear_charlie.sqf"";";
-					description="USMC 1Plt C1 Fireteam Leader";
+					description="US 1Plt C1 Fireteam Leader";
 				};
 				class Item1
 				{
@@ -603,7 +601,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitUSMC_1Plt_C1AR";
 					init="GrpUSMC_1Plt_C1 = group this; nul = [""ar"",this] execVM ""f\common\@ShackTac_assignGear_charlie.sqf"";";
-					description="USMC 1Plt C1 Automatic Rifleman";
+					description="US 1Plt C1 Automatic Rifleman";
 				};
 				class Item2
 				{
@@ -615,7 +613,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitUSMC_1Plt_C1AAR";
 					init="GrpUSMC_1Plt_C1 = group this; nul = [""aar"",this] execVM ""f\common\@ShackTac_assignGear_charlie.sqf"";";
-					description="USMC 1Plt C1 Assistant Automatic Rifleman";
+					description="US 1Plt C1 Assistant Automatic Rifleman";
 				};
 				class Item3
 				{
@@ -627,7 +625,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitUSMC_1Plt_C1RAT";
 					init="GrpUSMC_1Plt_C1 = group this; nul = [""rat"",this] execVM ""f\common\@ShackTac_assignGear_charlie.sqf"";";
-					description="USMC 1Plt C1 Rifleman (AT)";
+					description="US 1Plt C1 Rifleman (AT)";
 				};
 			};
 		};
@@ -649,7 +647,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitUSMC_1Plt_C2FTL";
 					init="GrpUSMC_1Plt_C2 = group this; nul = [""ftl"",this] execVM ""f\common\@ShackTac_assignGear_charlie.sqf"";";
-					description="USMC 1Plt C2 Fireteam Leader";
+					description="US 1Plt C2 Fireteam Leader";
 				};
 				class Item1
 				{
@@ -662,7 +660,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitUSMC_1Plt_C2AR";
 					init="GrpUSMC_1Plt_C2 = group this; nul = [""ar"",this] execVM ""f\common\@ShackTac_assignGear_charlie.sqf"";";
-					description="USMC 1Plt C2 Automatic Rifleman";
+					description="US 1Plt C2 Automatic Rifleman";
 				};
 				class Item2
 				{
@@ -674,7 +672,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitUSMC_1Plt_C2AAR";
 					init="GrpUSMC_1Plt_C2 = group this; nul = [""aar"",this] execVM ""f\common\@ShackTac_assignGear_charlie.sqf"";";
-					description="USMC 1Plt C2 Assistant Automatic Rifleman";
+					description="US 1Plt C2 Assistant Automatic Rifleman";
 				};
 				class Item3
 				{
@@ -686,7 +684,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitUSMC_1Plt_C2RAT";
 					init="GrpUSMC_1Plt_C2 = group this; nul = [""rat"",this] execVM ""f\common\@ShackTac_assignGear_charlie.sqf"";";
-					description="USMC 1Plt C2 Rifleman (AT)";
+					description="US 1Plt C2 Rifleman (AT)";
 				};
 			};
 		};
@@ -708,7 +706,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitUSMC_1Plt_C3FTL";
 					init="GrpUSMC_1Plt_C3 = group this; nul = [""ftl"",this] execVM ""f\common\@ShackTac_assignGear_charlie.sqf"";";
-					description="USMC 1Plt C3 Fireteam Leader";
+					description="US 1Plt C3 Fireteam Leader";
 				};
 				class Item1
 				{
@@ -721,7 +719,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitUSMC_1Plt_C3AR";
 					init="GrpUSMC_1Plt_C3 = group this; nul = [""ar"",this] execVM ""f\common\@ShackTac_assignGear_charlie.sqf"";";
-					description="USMC 1Plt C3 Automatic Rifleman";
+					description="US 1Plt C3 Automatic Rifleman";
 				};
 				class Item2
 				{
@@ -733,7 +731,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitUSMC_1Plt_C3AAR";
 					init="GrpUSMC_1Plt_C3 = group this; nul = [""aar"",this] execVM ""f\common\@ShackTac_assignGear_charlie.sqf"";";
-					description="USMC 1Plt C3 Assistant Automatic Rifleman";
+					description="US 1Plt C3 Assistant Automatic Rifleman";
 				};
 				class Item3
 				{
@@ -745,7 +743,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitUSMC_1Plt_C3R";
 					init="GrpUSMC_1Plt_C3 = group this; nul = [""r"",this] execVM ""f\common\@ShackTac_assignGear_charlie.sqf"";";
-					description="USMC 1Plt C3 Rifleman";
+					description="US 1Plt C3 Rifleman";
 				};
 			};
 		};
@@ -767,7 +765,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitUSMC_1Plt_DSL";
 					init="GrpUSMC_1Plt_Delta = group this; nul = [""sl"",this] execVM ""f\common\@ShackTac_assignGear_delta.sqf"";";
-					description="USMC 1Plt Delta Squad Leader";
+					description="US 1Plt Delta Squad Leader";
 				};
 				class Item1
 				{
@@ -780,7 +778,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitUSMC_1Plt_DM";
 					init="GrpUSMC_1Plt_Delta = group this; nul = [""m"",this] execVM ""f\common\@ShackTac_assignGear_delta.sqf"";";
-					description="USMC 1Plt Delta Squad Corpsman";
+					description="US 1Plt Delta Squad Corpsman";
 				};
 			};
 		};
@@ -802,7 +800,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitUSMC_1Plt_D1FTL";
 					init="GrpUSMC_1Plt_D1 = group this; nul = [""ftl"",this] execVM ""f\common\@ShackTac_assignGear_delta.sqf"";";
-					description="USMC 1Plt D1 Fireteam Leader";
+					description="US 1Plt D1 Fireteam Leader";
 				};
 				class Item1
 				{
@@ -815,7 +813,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitUSMC_1Plt_D1AR";
 					init="GrpUSMC_1Plt_D1 = group this; nul = [""ar"",this] execVM ""f\common\@ShackTac_assignGear_delta.sqf"";";
-					description="USMC 1Plt D1 Automatic Rifleman";
+					description="US 1Plt D1 Automatic Rifleman";
 				};
 				class Item2
 				{
@@ -827,7 +825,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitUSMC_1Plt_D1AAR";
 					init="GrpUSMC_1Plt_D1 = group this; nul = [""aar"",this] execVM ""f\common\@ShackTac_assignGear_delta.sqf"";";
-					description="USMC 1Plt D1 Assistant Automatic Rifleman";
+					description="US 1Plt D1 Assistant Automatic Rifleman";
 				};
 				class Item3
 				{
@@ -839,7 +837,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitUSMC_1Plt_D1RAT";
 					init="GrpUSMC_1Plt_D1 = group this; nul = [""rat"",this] execVM ""f\common\@ShackTac_assignGear_delta.sqf"";";
-					description="USMC 1Plt D1 Rifleman (AT)";
+					description="US 1Plt D1 Rifleman (AT)";
 				};
 			};
 		};
@@ -861,7 +859,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitUSMC_1Plt_D2FTL";
 					init="GrpUSMC_1Plt_D2 = group this; nul = [""ftl"",this] execVM ""f\common\@ShackTac_assignGear_delta.sqf"";";
-					description="USMC 1Plt D2 Fireteam Leader";
+					description="US 1Plt D2 Fireteam Leader";
 				};
 				class Item1
 				{
@@ -874,7 +872,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitUSMC_1Plt_D2AR";
 					init="GrpUSMC_1Plt_D2 = group this; nul = [""ar"",this] execVM ""f\common\@ShackTac_assignGear_delta.sqf"";";
-					description="USMC 1Plt D2 Automatic Rifleman";
+					description="US 1Plt D2 Automatic Rifleman";
 				};
 				class Item2
 				{
@@ -886,7 +884,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitUSMC_1Plt_D2AAR";
 					init="GrpUSMC_1Plt_D2 = group this; nul = [""aar"",this] execVM ""f\common\@ShackTac_assignGear_delta.sqf"";";
-					description="USMC 1Plt D2 Assistant Automatic Rifleman";
+					description="US 1Plt D2 Assistant Automatic Rifleman";
 				};
 				class Item3
 				{
@@ -898,7 +896,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitUSMC_1Plt_D2RAT";
 					init="GrpUSMC_1Plt_D2 = group this; nul = [""rat"",this] execVM ""f\common\@ShackTac_assignGear_delta.sqf"";";
-					description="USMC 1Plt D2 Rifleman (AT)";
+					description="US 1Plt D2 Rifleman (AT)";
 				};
 			};
 		};
@@ -920,7 +918,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitUSMC_1Plt_D3FTL";
 					init="GrpUSMC_1Plt_D3 = group this; nul = [""ftl"",this] execVM ""f\common\@ShackTac_assignGear_delta.sqf"";";
-					description="USMC 1Plt D3 Fireteam Leader";
+					description="US 1Plt D3 Fireteam Leader";
 				};
 				class Item1
 				{
@@ -933,7 +931,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitUSMC_1Plt_D3AR";
 					init="GrpUSMC_1Plt_D3 = group this; nul = [""ar"",this] execVM ""f\common\@ShackTac_assignGear_delta.sqf"";";
-					description="USMC 1Plt D3 Automatic Rifleman";
+					description="US 1Plt D3 Automatic Rifleman";
 				};
 				class Item2
 				{
@@ -945,7 +943,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitUSMC_1Plt_D3AAR";
 					init="GrpUSMC_1Plt_D3 = group this; nul = [""aar"",this] execVM ""f\common\@ShackTac_assignGear_delta.sqf"";";
-					description="USMC 1Plt D3 Assistant Automatic Rifleman";
+					description="US 1Plt D3 Assistant Automatic Rifleman";
 				};
 				class Item3
 				{
@@ -957,7 +955,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitUSMC_1Plt_D3R";
 					init="GrpUSMC_1Plt_D3 = group this; nul = [""r"",this] execVM ""f\common\@ShackTac_assignGear_delta.sqf"";";
-					description="USMC 1Plt D3 Rifleman";
+					description="US 1Plt D3 Rifleman";
 				};
 			};
 		};
@@ -1014,7 +1012,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitUSMC_1Plt_ESL";
 					init="GrpUSMC_1Plt_Echo = group this; nul = [""sl"",this] execVM ""f\common\@ShackTac_assignGear_echo.sqf"";";
-					description="USMC 1Plt Echo Squad Leader";
+					description="US 1Plt Echo Squad Leader";
 				};
 				class Item1
 				{
@@ -1027,7 +1025,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitUSMC_1Plt_EM";
 					init="GrpUSMC_1Plt_Echo = group this; nul = [""m"",this] execVM ""f\common\@ShackTac_assignGear_echo.sqf"";";
-					description="USMC 1Plt Echo Squad Corpsman";
+					description="US 1Plt Echo Squad Corpsman";
 				};
 			};
 		};
@@ -1049,7 +1047,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitUSMC_1Plt_E1FTL";
 					init="GrpUSMC_1Plt_E1 = group this; nul = [""ftl"",this] execVM ""f\common\@ShackTac_assignGear_echo.sqf"";";
-					description="USMC 1Plt E1 Fireteam Leader";
+					description="US 1Plt E1 Fireteam Leader";
 				};
 				class Item1
 				{
@@ -1062,7 +1060,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitUSMC_1Plt_E1AR";
 					init="GrpUSMC_1Plt_E1 = group this; nul = [""ar"",this] execVM ""f\common\@ShackTac_assignGear_echo.sqf"";";
-					description="USMC 1Plt E1 Automatic Rifleman";
+					description="US 1Plt E1 Automatic Rifleman";
 				};
 				class Item2
 				{
@@ -1074,7 +1072,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitUSMC_1Plt_E1AAR";
 					init="GrpUSMC_1Plt_E1 = group this; nul = [""aar"",this] execVM ""f\common\@ShackTac_assignGear_echo.sqf"";";
-					description="USMC 1Plt E1 Assistant Automatic Rifleman";
+					description="US 1Plt E1 Assistant Automatic Rifleman";
 				};
 				class Item3
 				{
@@ -1086,7 +1084,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitUSMC_1Plt_E1RAT";
 					init="GrpUSMC_1Plt_E1 = group this; nul = [""rat"",this] execVM ""f\common\@ShackTac_assignGear_echo.sqf"";";
-					description="USMC 1Plt E1 Rifleman (AT)";
+					description="US 1Plt E1 Rifleman (AT)";
 				};
 			};
 		};
@@ -1108,7 +1106,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitUSMC_1Plt_E2FTL";
 					init="GrpUSMC_1Plt_E2 = group this; nul = [""ftl"",this] execVM ""f\common\@ShackTac_assignGear_echo.sqf"";";
-					description="USMC 1Plt E2 Fireteam Leader";
+					description="US 1Plt E2 Fireteam Leader";
 				};
 				class Item1
 				{
@@ -1121,7 +1119,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitUSMC_1Plt_E2AR";
 					init="GrpUSMC_1Plt_E2 = group this; nul = [""ar"",this] execVM ""f\common\@ShackTac_assignGear_echo.sqf"";";
-					description="USMC 1Plt E2 Automatic Rifleman";
+					description="US 1Plt E2 Automatic Rifleman";
 				};
 				class Item2
 				{
@@ -1133,7 +1131,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitUSMC_1Plt_E2AAR";
 					init="GrpUSMC_1Plt_E2 = group this; nul = [""aar"",this] execVM ""f\common\@ShackTac_assignGear_echo.sqf"";";
-					description="USMC 1Plt E2 Assistant Automatic Rifleman";
+					description="US 1Plt E2 Assistant Automatic Rifleman";
 				};
 				class Item3
 				{
@@ -1145,7 +1143,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitUSMC_1Plt_E2RAT";
 					init="GrpUSMC_1Plt_E2 = group this; nul = [""rat"",this] execVM ""f\common\@ShackTac_assignGear_echo.sqf"";";
-					description="USMC 1Plt E2 Rifleman (AT)";
+					description="US 1Plt E2 Rifleman (AT)";
 				};
 			};
 		};
@@ -1167,7 +1165,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitUSMC_1Plt_E3FTL";
 					init="GrpUSMC_1Plt_E3 = group this; nul = [""ftl"",this] execVM ""f\common\@ShackTac_assignGear_echo.sqf"";";
-					description="USMC 1Plt E3 Fireteam Leader";
+					description="US 1Plt E3 Fireteam Leader";
 				};
 				class Item1
 				{
@@ -1180,7 +1178,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitUSMC_1Plt_E3AR";
 					init="GrpUSMC_1Plt_E3 = group this; nul = [""ar"",this] execVM ""f\common\@ShackTac_assignGear_echo.sqf"";";
-					description="USMC 1Plt E3 Automatic Rifleman";
+					description="US 1Plt E3 Automatic Rifleman";
 				};
 				class Item2
 				{
@@ -1192,7 +1190,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitUSMC_1Plt_E3AAR";
 					init="GrpUSMC_1Plt_E3 = group this; nul = [""aar"",this] execVM ""f\common\@ShackTac_assignGear_echo.sqf"";";
-					description="USMC 1Plt E3 Assistant Automatic Rifleman";
+					description="US 1Plt E3 Assistant Automatic Rifleman";
 				};
 				class Item3
 				{
@@ -1204,7 +1202,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitUSMC_1Plt_E3R";
 					init="GrpUSMC_1Plt_E3 = group this; nul = [""r"",this] execVM ""f\common\@ShackTac_assignGear_echo.sqf"";";
-					description="USMC 1Plt E3 Rifleman";
+					description="US 1Plt E3 Rifleman";
 				};
 			};
 		};
@@ -1226,7 +1224,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitUSMC_MMG1G";
 					init="GrpUSMC_MMG1 = group this; nul = [""mmgg"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="USMC Medium MG Team 1 Gunner";
+					description="US Medium MG Team 1 Gunner";
 				};
 				class Item1
 				{
@@ -1238,7 +1236,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitUSMC_MMG1AG";
 					init="GrpUSMC_MMG1 = group this; nul = [""mmgag"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="USMC Medium MG Team 1 Assistant Gunner";
+					description="US Medium MG Team 1 Assistant Gunner";
 				};
 				class Item2
 				{
@@ -1250,7 +1248,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitUSMC_MMG1AM";
 					init="GrpUSMC_MMG1 = group this; nul = [""mmgam"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="USMC Medium MG Team 1 Ammo Man";
+					description="US Medium MG Team 1 Ammo Man";
 				};
 			};
 		};
@@ -1272,7 +1270,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitUSMC_MMG2G";
 					init="GrpUSMC_MMG2 = group this; nul = [""mmgg"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="USMC Medium MG Team 2 Gunner";
+					description="US Medium MG Team 2 Gunner";
 				};
 				class Item1
 				{
@@ -1284,7 +1282,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitUSMC_MMG2AG";
 					init="GrpUSMC_MMG2 = group this; nul = [""mmgag"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="USMC Medium MG Team 2 Assistant Gunner";
+					description="US Medium MG Team 2 Assistant Gunner";
 				};
 				class Item2
 				{
@@ -1296,7 +1294,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitUSMC_MMG2AM";
 					init="GrpUSMC_MMG2 = group this; nul = [""mmgam"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="USMC Medium MG Team 2 Ammo Man";
+					description="US Medium MG Team 2 Ammo Man";
 				};
 			};
 		};
@@ -1318,7 +1316,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitUSMC_MMG3G";
 					init="GrpUSMC_MMG3 = group this; nul = [""mmgg"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="USMC Medium MG Team 3 Gunner";
+					description="US Medium MG Team 3 Gunner";
 				};
 				class Item1
 				{
@@ -1330,7 +1328,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitUSMC_MMG3AG";
 					init="GrpUSMC_MMG3 = group this; nul = [""mmgag"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="USMC Medium MG Team 3 Assistant Gunner";
+					description="US Medium MG Team 3 Assistant Gunner";
 				};
 				class Item2
 				{
@@ -1342,7 +1340,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitUSMC_MMG3AM";
 					init="GrpUSMC_MMG3 = group this; nul = [""mmgam"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="USMC Medium MG Team 3 Ammo Man";
+					description="US Medium MG Team 3 Ammo Man";
 				};
 			};
 		};
@@ -1364,7 +1362,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitUSMC_HMG1G";
 					init="GrpUSMC_HMG1 = group this; nul = [""hmgg"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="USMC Heavy MG Team 1 Gunner";
+					description="US Heavy MG Team 1 Gunner";
 				};
 				class Item1
 				{
@@ -1376,7 +1374,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitUSMC_HMG1AG";
 					init="GrpUSMC_HMG1 = group this; nul = [""hmgag"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="USMC Heavy MG Team 1 Assistant Gunner";
+					description="US Heavy MG Team 1 Assistant Gunner";
 				};
 				class Item2
 				{
@@ -1388,7 +1386,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitUSMC_HMG1AM";
 					init="GrpUSMC_HMG1 = group this; nul = [""hmgam"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="USMC Heavy MG Team 1 Ammo Man";
+					description="US Heavy MG Team 1 Ammo Man";
 				};
 			};
 		};
@@ -1410,7 +1408,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitUSMC_HMG2G";
 					init="GrpUSMC_HMG2 = group this; nul = [""hmgg"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="USMC Heavy MG Team 2 Gunner";
+					description="US Heavy MG Team 2 Gunner";
 				};
 				class Item1
 				{
@@ -1422,7 +1420,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitUSMC_HMG2AG";
 					init="GrpUSMC_HMG2 = group this; nul = [""hmgag"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="USMC Heavy MG Team 2 Assistant Gunner";
+					description="US Heavy MG Team 2 Assistant Gunner";
 				};
 				class Item2
 				{
@@ -1434,7 +1432,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitUSMC_HMG2AM";
 					init="GrpUSMC_HMG2 = group this; nul = [""hmgam"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="USMC Heavy MG Team 2 Ammo Man";
+					description="US Heavy MG Team 2 Ammo Man";
 				};
 			};
 		};
@@ -1456,7 +1454,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitUSMC_HMG3G";
 					init="GrpUSMC_HMG3 = group this; nul = [""hmgg"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="USMC Heavy MG Team 3 Gunner";
+					description="US Heavy MG Team 3 Gunner";
 				};
 				class Item1
 				{
@@ -1468,7 +1466,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitUSMC_HMG3AG";
 					init="GrpUSMC_HMG3 = group this; nul = [""hmgag"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="USMC Heavy MG Team 3 Assistant Gunner";
+					description="US Heavy MG Team 3 Assistant Gunner";
 				};
 				class Item2
 				{
@@ -1480,7 +1478,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitUSMC_HMG3AM";
 					init="GrpUSMC_HMG3 = group this; nul = [""hmgam"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="USMC Heavy MG Team 3 Ammo Man";
+					description="US Heavy MG Team 3 Ammo Man";
 				};
 			};
 		};
@@ -1502,7 +1500,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitUSMC_MAT1G";
 					init="GrpUSMC_MAT1 = group this; nul = [""matg"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="USMC Medium AT Team 1 Gunner";
+					description="US Medium AT Team 1 Gunner";
 				};
 				class Item1
 				{
@@ -1514,7 +1512,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitUSMC_MAT1AG";
 					init="GrpUSMC_MAT1 = group this; nul = [""matag"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="USMC Medium AT Team 1 Assistant Gunner";
+					description="US Medium AT Team 1 Assistant Gunner";
 				};
 				class Item2
 				{
@@ -1526,7 +1524,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitUSMC_MAT1AM";
 					init="GrpUSMC_MAT1 = group this; nul = [""matam"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="USMC Medium AT Team 1 Ammo Man";
+					description="US Medium AT Team 1 Ammo Man";
 				};
 			};
 		};
@@ -1548,7 +1546,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitUSMC_MAT2G";
 					init="GrpUSMC_MAT2 = group this; nul = [""matg"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="USMC Medium AT Team 2 Gunner";
+					description="US Medium AT Team 2 Gunner";
 				};
 				class Item1
 				{
@@ -1560,7 +1558,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitUSMC_MAT2AG";
 					init="GrpUSMC_MAT2 = group this; nul = [""matag"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="USMC Medium AT Team 2 Assistant Gunner";
+					description="US Medium AT Team 2 Assistant Gunner";
 				};
 				class Item2
 				{
@@ -1572,7 +1570,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitUSMC_MAT2AM";
 					init="GrpUSMC_MAT2 = group this; nul = [""matam"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="USMC Medium AT Team 2 Ammo Man";
+					description="US Medium AT Team 2 Ammo Man";
 				};
 			};
 		};
@@ -1594,7 +1592,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitUSMC_MAT3G";
 					init="GrpUSMC_MAT3 = group this; nul = [""matg"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="USMC Medium AT Team 3 Gunner";
+					description="US Medium AT Team 3 Gunner";
 				};
 				class Item1
 				{
@@ -1606,7 +1604,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitUSMC_MAT3AG";
 					init="GrpUSMC_MAT3 = group this; nul = [""matag"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="USMC Medium AT Team 3 Assistant Gunner";
+					description="US Medium AT Team 3 Assistant Gunner";
 				};
 				class Item2
 				{
@@ -1618,7 +1616,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitUSMC_MAT3AM";
 					init="GrpUSMC_MAT3 = group this; nul = [""matam"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="USMC Medium AT Team 3 Ammo Man";
+					description="US Medium AT Team 3 Ammo Man";
 				};
 			};
 		};
@@ -1640,7 +1638,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitUSMC_HAT1G";
 					init="GrpUSMC_HAT1 = group this; nul = [""hatg"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="USMC Heavy AT Team 1 Gunner";
+					description="US Heavy AT Team 1 Gunner";
 				};
 				class Item1
 				{
@@ -1652,7 +1650,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitUSMC_HAT1AG";
 					init="GrpUSMC_HAT1 = group this; nul = [""hatag"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="USMC Heavy AT Team 1 Assistant Gunner";
+					description="US Heavy AT Team 1 Assistant Gunner";
 				};
 				class Item2
 				{
@@ -1664,7 +1662,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitUSMC_HAT1AM";
 					init="GrpUSMC_HAT1 = group this; nul = [""hatam"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="USMC Heavy AT Team 1 Ammo Man";
+					description="US Heavy AT Team 1 Ammo Man";
 				};
 			};
 		};
@@ -1686,7 +1684,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitUSMC_HAT2G";
 					init="GrpUSMC_HAT2 = group this; nul = [""hatg"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="USMC Heavy AT Team 2 Gunner";
+					description="US Heavy AT Team 2 Gunner";
 				};
 				class Item1
 				{
@@ -1698,7 +1696,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitUSMC_HAT2AG";
 					init="GrpUSMC_HAT2 = group this; nul = [""hatag"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="USMC Heavy AT Team 2 Assistant Gunner";
+					description="US Heavy AT Team 2 Assistant Gunner";
 				};
 				class Item2
 				{
@@ -1710,7 +1708,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitUSMC_HAT2AM";
 					init="GrpUSMC_HAT2 = group this; nul = [""hatam"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="USMC Heavy AT Team 2 Ammo Man";
+					description="US Heavy AT Team 2 Ammo Man";
 				};
 			};
 		};
@@ -1732,7 +1730,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitUSMC_HAT3G";
 					init="GrpUSMC_HAT3 = group this; nul = [""hatg"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="USMC Heavy AT Team 3 Gunner";
+					description="US Heavy AT Team 3 Gunner";
 				};
 				class Item1
 				{
@@ -1744,7 +1742,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitUSMC_HAT3AG";
 					init="GrpUSMC_HAT3 = group this; nul = [""hatag"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="USMC Heavy AT Team 3 Assistant Gunner";
+					description="US Heavy AT Team 3 Assistant Gunner";
 				};
 				class Item2
 				{
@@ -1756,7 +1754,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitUSMC_HAT3AM";
 					init="GrpUSMC_HAT3 = group this; nul = [""hatam"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="USMC Heavy AT Team 3 Ammo Man";
+					description="US Heavy AT Team 3 Ammo Man";
 				};
 			};
 		};
@@ -1778,7 +1776,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitUSMC_ST1SN";
 					init="GrpUSMC_ST1 = group this; nul = [""sn"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="USMC Sniper Team 1 Sniper";
+					description="US Sniper Team 1 Sniper";
 				};
 				class Item1
 				{
@@ -1790,7 +1788,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitUSMC_ST1SP";
 					init="GrpUSMC_ST1 = group this; nul = [""sp"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="USMC Sniper Team 1 Spotter";
+					description="US Sniper Team 1 Spotter";
 				};
 			};
 		};
@@ -1812,7 +1810,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitRU_1Plt_PltCo";
 					init="GrpRU_1Plt_PltHQ = group this; nul = [""pltco"",this] execVM ""f\common\@ShackTac_assignGear_plthq.sqf"";";
-					description="Russian 1Plt PltHQ Platoon Commander";
+					description="Takistan Army 1Plt PltHQ Platoon Commander";
 				};
 				class Item1
 				{
@@ -1825,7 +1823,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitRU_1Plt_PltSgt";
 					init="GrpRU_1Plt_PltHQ = group this; nul = [""pltsgt"",this] execVM ""f\common\@ShackTac_assignGear_plthq.sqf"";";
-					description="Russian 1Plt PltHQ Platoon Sgt.";
+					description="Takistan Army 1Plt PltHQ Platoon Sgt.";
 				};
 				class Item2
 				{
@@ -1838,7 +1836,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitRU_1Plt_PltM";
 					init="GrpRU_1Plt_PltHQ = group this; nul = [""pltm"",this] execVM ""f\common\@ShackTac_assignGear_plthq.sqf"";";
-					description="Russian 1Plt PltHQ Medic";
+					description="Takistan Army 1Plt PltHQ Medic";
 				};
 				class Item3
 				{
@@ -1850,7 +1848,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitRU_1Plt_PltR";
 					init="GrpRU_1Plt_PltHQ = group this; nul = [""pltr"",this] execVM ""f\common\@ShackTac_assignGear_plthq.sqf"";";
-					description="Russian 1Plt PltHQ Rifleman";
+					description="Takistan Army 1Plt PltHQ Rifleman";
 				};
 			};
 		};
@@ -1872,7 +1870,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitRU_1Plt_ASL";
 					init="GrpRU_1Plt_Alpha = group this; nul = [""sl"",this] execVM ""f\common\@ShackTac_assignGear_alpha.sqf"";";
-					description="Russian 1Plt Alpha Squad Leader";
+					description="Takistan Army 1Plt Alpha Squad Leader";
 				};
 				class Item1
 				{
@@ -1885,7 +1883,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitRU_1Plt_AM";
 					init="GrpRU_1Plt_Alpha = group this; nul = [""m"",this] execVM ""f\common\@ShackTac_assignGear_alpha.sqf"";";
-					description="Russian 1Plt Alpha Squad Medic";
+					description="Takistan Army 1Plt Alpha Squad Medic";
 					synchronizations[]={119};
 				};
 			};
@@ -1908,7 +1906,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitRU_1Plt_A1FTL";
 					init="GrpRU_1Plt_A1 = group this; nul = [""ftl"",this] execVM ""f\common\@ShackTac_assignGear_alpha.sqf"";";
-					description="Russian 1Plt A1 Fireteam Leader";
+					description="Takistan Army 1Plt A1 Fireteam Leader";
 				};
 				class Item1
 				{
@@ -1921,7 +1919,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitRU_1Plt_A1AR";
 					init="GrpRU_1Plt_A1 = group this; nul = [""ar"",this] execVM ""f\common\@ShackTac_assignGear_alpha.sqf"";";
-					description="Russian 1Plt A1 Automatic Rifleman";
+					description="Takistan Army 1Plt A1 Automatic Rifleman";
 				};
 				class Item2
 				{
@@ -1933,7 +1931,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitRU_1Plt_A1AAR";
 					init="GrpRU_1Plt_A1 = group this; nul = [""aar"",this] execVM ""f\common\@ShackTac_assignGear_alpha.sqf"";";
-					description="Russian 1Plt A1 Assistant Automatic Rifleman";
+					description="Takistan Army 1Plt A1 Assistant Automatic Rifleman";
 				};
 				class Item3
 				{
@@ -1945,7 +1943,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitRU_1Plt_A1RAT";
 					init="GrpRU_1Plt_A1 = group this; nul = [""rat"",this] execVM ""f\common\@ShackTac_assignGear_alpha.sqf"";";
-					description="Russian 1Plt A1 Rifleman (AT)";
+					description="Takistan Army 1Plt A1 Rifleman (AT)";
 				};
 			};
 		};
@@ -1967,7 +1965,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitRU_1Plt_A2FTL";
 					init="GrpRU_1Plt_A2 = group this; nul = [""ftl"",this] execVM ""f\common\@ShackTac_assignGear_alpha.sqf"";";
-					description="Russian 1Plt A2 Fireteam Leader";
+					description="Takistan Army 1Plt A2 Fireteam Leader";
 				};
 				class Item1
 				{
@@ -1980,7 +1978,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitRU_1Plt_A2AR";
 					init="GrpRU_1Plt_A2 = group this; nul = [""ar"",this] execVM ""f\common\@ShackTac_assignGear_alpha.sqf"";";
-					description="Russian 1Plt A2 Automatic Rifleman";
+					description="Takistan Army 1Plt A2 Automatic Rifleman";
 				};
 				class Item2
 				{
@@ -1992,7 +1990,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitRU_1Plt_A2AAR";
 					init="GrpRU_1Plt_A2 = group this; nul = [""aar"",this] execVM ""f\common\@ShackTac_assignGear_alpha.sqf"";";
-					description="Russian 1Plt A2 Assistant Automatic Rifleman";
+					description="Takistan Army 1Plt A2 Assistant Automatic Rifleman";
 				};
 				class Item3
 				{
@@ -2004,7 +2002,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitRU_1Plt_A2RAT";
 					init="GrpRU_1Plt_A2 = group this; nul = [""rat"",this] execVM ""f\common\@ShackTac_assignGear_alpha.sqf"";";
-					description="Russian 1Plt A2 Rifleman (AT)";
+					description="Takistan Army 1Plt A2 Rifleman (AT)";
 				};
 			};
 		};
@@ -2026,7 +2024,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitRU_1Plt_A3FTL";
 					init="GrpRU_1Plt_A3 = group this; nul = [""ftl"",this] execVM ""f\common\@ShackTac_assignGear_alpha.sqf"";";
-					description="Russian 1Plt A3 Fireteam Leader";
+					description="Takistan Army 1Plt A3 Fireteam Leader";
 				};
 				class Item1
 				{
@@ -2039,7 +2037,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitRU_1Plt_A3AR";
 					init="GrpRU_1Plt_A3 = group this; nul = [""ar"",this] execVM ""f\common\@ShackTac_assignGear_alpha.sqf"";";
-					description="Russian 1Plt A3 Automatic Rifleman";
+					description="Takistan Army 1Plt A3 Automatic Rifleman";
 				};
 				class Item2
 				{
@@ -2051,7 +2049,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitRU_1Plt_A3AAR";
 					init="GrpRU_1Plt_A3 = group this; nul = [""aar"",this] execVM ""f\common\@ShackTac_assignGear_alpha.sqf"";";
-					description="Russian 1Plt A3 Assistant Automatic Rifleman";
+					description="Takistan Army 1Plt A3 Assistant Automatic Rifleman";
 				};
 				class Item3
 				{
@@ -2063,7 +2061,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitRU_1Plt_A3R";
 					init="GrpRU_1Plt_A3 = group this; nul = [""r"",this] execVM ""f\common\@ShackTac_assignGear_alpha.sqf"";";
-					description="Russian 1Plt A3 Rifleman";
+					description="Takistan Army 1Plt A3 Rifleman";
 				};
 			};
 		};
@@ -2085,7 +2083,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitRU_1Plt_BSL";
 					init="GrpRU_1Plt_Bravo = group this; nul = [""sl"",this] execVM ""f\common\@ShackTac_assignGear_bravo.sqf"";";
-					description="Russian 1Plt Bravo Squad Leader";
+					description="Takistan Army 1Plt Bravo Squad Leader";
 				};
 				class Item1
 				{
@@ -2098,7 +2096,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitRU_1Plt_BM";
 					init="GrpRU_1Plt_Bravo = group this; nul = [""m"",this] execVM ""f\common\@ShackTac_assignGear_bravo.sqf"";";
-					description="Russian 1Plt Bravo Squad Medic";
+					description="Takistan Army 1Plt Bravo Squad Medic";
 				};
 			};
 		};
@@ -2120,7 +2118,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitRU_1Plt_B1FTL";
 					init="GrpRU_1Plt_B1 = group this; nul = [""ftl"",this] execVM ""f\common\@ShackTac_assignGear_bravo.sqf"";";
-					description="Russian 1Plt B1 Fireteam Leader";
+					description="Takistan Army 1Plt B1 Fireteam Leader";
 				};
 				class Item1
 				{
@@ -2133,7 +2131,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitRU_1Plt_B1AR";
 					init="GrpRU_1Plt_B1 = group this; nul = [""ar"",this] execVM ""f\common\@ShackTac_assignGear_bravo.sqf"";";
-					description="Russian 1Plt B1 Automatic Rifleman";
+					description="Takistan Army 1Plt B1 Automatic Rifleman";
 				};
 				class Item2
 				{
@@ -2145,7 +2143,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitRU_1Plt_B1AAR";
 					init="GrpRU_1Plt_B1 = group this; nul = [""aar"",this] execVM ""f\common\@ShackTac_assignGear_bravo.sqf"";";
-					description="Russian 1Plt B1 Assistant Automatic Rifleman";
+					description="Takistan Army 1Plt B1 Assistant Automatic Rifleman";
 				};
 				class Item3
 				{
@@ -2157,7 +2155,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitRU_1Plt_B1RAT";
 					init="GrpRU_1Plt_B1 = group this; nul = [""rat"",this] execVM ""f\common\@ShackTac_assignGear_bravo.sqf"";";
-					description="Russian 1Plt B1 Rifleman (AT)";
+					description="Takistan Army 1Plt B1 Rifleman (AT)";
 				};
 			};
 		};
@@ -2179,7 +2177,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitRU_1Plt_B2FTL";
 					init="GrpRU_1Plt_B2 = group this; nul = [""ftl"",this] execVM ""f\common\@ShackTac_assignGear_bravo.sqf"";";
-					description="Russian 1Plt B2 Fireteam Leader";
+					description="Takistan Army 1Plt B2 Fireteam Leader";
 				};
 				class Item1
 				{
@@ -2192,7 +2190,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitRU_1Plt_B2AR";
 					init="GrpRU_1Plt_B2 = group this; nul = [""ar"",this] execVM ""f\common\@ShackTac_assignGear_bravo.sqf"";";
-					description="Russian 1Plt B2 Automatic Rifleman";
+					description="Takistan Army 1Plt B2 Automatic Rifleman";
 				};
 				class Item2
 				{
@@ -2204,7 +2202,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitRU_1Plt_B2AAR";
 					init="GrpRU_1Plt_B2 = group this; nul = [""aar"",this] execVM ""f\common\@ShackTac_assignGear_bravo.sqf"";";
-					description="Russian 1Plt B2 Assistant Automatic Rifleman";
+					description="Takistan Army 1Plt B2 Assistant Automatic Rifleman";
 				};
 				class Item3
 				{
@@ -2216,7 +2214,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitRU_1Plt_B2RAT";
 					init="GrpRU_1Plt_B2 = group this; nul = [""rat"",this] execVM ""f\common\@ShackTac_assignGear_bravo.sqf"";";
-					description="Russian 1Plt B2 Rifleman (AT)";
+					description="Takistan Army 1Plt B2 Rifleman (AT)";
 				};
 			};
 		};
@@ -2238,7 +2236,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitRU_1Plt_B3FTL";
 					init="GrpRU_1Plt_B3 = group this; nul = [""ftl"",this] execVM ""f\common\@ShackTac_assignGear_bravo.sqf"";";
-					description="Russian 1Plt B3 Fireteam Leader";
+					description="Takistan Army 1Plt B3 Fireteam Leader";
 				};
 				class Item1
 				{
@@ -2251,7 +2249,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitRU_1Plt_B3AR";
 					init="GrpRU_1Plt_B3 = group this; nul = [""ar"",this] execVM ""f\common\@ShackTac_assignGear_bravo.sqf"";";
-					description="Russian 1Plt B3 Automatic Rifleman";
+					description="Takistan Army 1Plt B3 Automatic Rifleman";
 				};
 				class Item2
 				{
@@ -2263,7 +2261,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitRU_1Plt_B3AAR";
 					init="GrpRU_1Plt_B3 = group this; nul = [""aar"",this] execVM ""f\common\@ShackTac_assignGear_bravo.sqf"";";
-					description="Russian 1Plt B3 Assistant Automatic Rifleman";
+					description="Takistan Army 1Plt B3 Assistant Automatic Rifleman";
 				};
 				class Item3
 				{
@@ -2275,7 +2273,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitRU_1Plt_B3R";
 					init="GrpRU_1Plt_B3 = group this; nul = [""r"",this] execVM ""f\common\@ShackTac_assignGear_bravo.sqf"";";
-					description="Russian 1Plt B3 Rifleman";
+					description="Takistan Army 1Plt B3 Rifleman";
 				};
 			};
 		};
@@ -2297,7 +2295,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitRU_1Plt_CSL";
 					init="GrpRU_1Plt_Charlie = group this; nul = [""sl"",this] execVM ""f\common\@ShackTac_assignGear_charlie.sqf"";";
-					description="Russian 1Plt Charlie Squad Leader";
+					description="Takistan Army 1Plt Charlie Squad Leader";
 				};
 				class Item1
 				{
@@ -2310,7 +2308,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitRU_1Plt_CM";
 					init="GrpRU_1Plt_Charlie = group this; nul = [""m"",this] execVM ""f\common\@ShackTac_assignGear_charlie.sqf"";";
-					description="Russian 1Plt Charlie Squad Medic";
+					description="Takistan Army 1Plt Charlie Squad Medic";
 				};
 			};
 		};
@@ -2332,7 +2330,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitRU_1Plt_C1FTL";
 					init="GrpRU_1Plt_C1 = group this; nul = [""ftl"",this] execVM ""f\common\@ShackTac_assignGear_charlie.sqf"";";
-					description="Russian 1Plt C1 Fireteam Leader";
+					description="Takistan Army 1Plt C1 Fireteam Leader";
 				};
 				class Item1
 				{
@@ -2345,7 +2343,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitRU_1Plt_C1AR";
 					init="GrpRU_1Plt_C1 = group this; nul = [""ar"",this] execVM ""f\common\@ShackTac_assignGear_charlie.sqf"";";
-					description="Russian 1Plt C1 Automatic Rifleman";
+					description="Takistan Army 1Plt C1 Automatic Rifleman";
 				};
 				class Item2
 				{
@@ -2357,7 +2355,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitRU_1Plt_C1AAR";
 					init="GrpRU_1Plt_C1 = group this; nul = [""aar"",this] execVM ""f\common\@ShackTac_assignGear_charlie.sqf"";";
-					description="Russian 1Plt C1 Assistant Automatic Rifleman";
+					description="Takistan Army 1Plt C1 Assistant Automatic Rifleman";
 				};
 				class Item3
 				{
@@ -2369,7 +2367,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitRU_1Plt_C1RAT";
 					init="GrpRU_1Plt_C1 = group this; nul = [""rat"",this] execVM ""f\common\@ShackTac_assignGear_charlie.sqf"";";
-					description="Russian 1Plt C1 Rifleman (AT)";
+					description="Takistan Army 1Plt C1 Rifleman (AT)";
 				};
 			};
 		};
@@ -2391,7 +2389,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitRU_1Plt_C2FTL";
 					init="GrpRU_1Plt_C2 = group this; nul = [""ftl"",this] execVM ""f\common\@ShackTac_assignGear_charlie.sqf"";";
-					description="Russian 1Plt C2 Fireteam Leader";
+					description="Takistan Army 1Plt C2 Fireteam Leader";
 				};
 				class Item1
 				{
@@ -2404,7 +2402,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitRU_1Plt_C2AR";
 					init="GrpRU_1Plt_C2 = group this; nul = [""ar"",this] execVM ""f\common\@ShackTac_assignGear_charlie.sqf"";";
-					description="Russian 1Plt C2 Automatic Rifleman";
+					description="Takistan Army 1Plt C2 Automatic Rifleman";
 				};
 				class Item2
 				{
@@ -2416,7 +2414,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitRU_1Plt_C2AAR";
 					init="GrpRU_1Plt_C2 = group this; nul = [""aar"",this] execVM ""f\common\@ShackTac_assignGear_charlie.sqf"";";
-					description="Russian 1Plt C2 Assistant Automatic Rifleman";
+					description="Takistan Army 1Plt C2 Assistant Automatic Rifleman";
 				};
 				class Item3
 				{
@@ -2428,7 +2426,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitRU_1Plt_C2RAT";
 					init="GrpRU_1Plt_C2 = group this; nul = [""rat"",this] execVM ""f\common\@ShackTac_assignGear_charlie.sqf"";";
-					description="Russian 1Plt C2 Rifleman (AT)";
+					description="Takistan Army 1Plt C2 Rifleman (AT)";
 				};
 			};
 		};
@@ -2450,7 +2448,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitRU_1Plt_C3FTL";
 					init="GrpRU_1Plt_C3 = group this; nul = [""ftl"",this] execVM ""f\common\@ShackTac_assignGear_charlie.sqf"";";
-					description="Russian 1Plt C3 Fireteam Leader";
+					description="Takistan Army 1Plt C3 Fireteam Leader";
 				};
 				class Item1
 				{
@@ -2463,7 +2461,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitRU_1Plt_C3AR";
 					init="GrpRU_1Plt_C3 = group this; nul = [""ar"",this] execVM ""f\common\@ShackTac_assignGear_charlie.sqf"";";
-					description="Russian 1Plt C3 Automatic Rifleman";
+					description="Takistan Army 1Plt C3 Automatic Rifleman";
 				};
 				class Item2
 				{
@@ -2475,7 +2473,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitRU_1Plt_C3AAR";
 					init="GrpRU_1Plt_C3 = group this; nul = [""aar"",this] execVM ""f\common\@ShackTac_assignGear_charlie.sqf"";";
-					description="Russian 1Plt C3 Assistant Automatic Rifleman";
+					description="Takistan Army 1Plt C3 Assistant Automatic Rifleman";
 				};
 				class Item3
 				{
@@ -2487,7 +2485,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitRU_1Plt_C3R";
 					init="GrpRU_1Plt_C3 = group this; nul = [""r"",this] execVM ""f\common\@ShackTac_assignGear_charlie.sqf"";";
-					description="Russian 1Plt C3 Rifleman";
+					description="Takistan Army 1Plt C3 Rifleman";
 				};
 			};
 		};
@@ -2509,7 +2507,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitRU_1Plt_DSL";
 					init="GrpRU_1Plt_Delta = group this; nul = [""sl"",this] execVM ""f\common\@ShackTac_assignGear_delta.sqf"";";
-					description="Russian 1Plt Delta Squad Leader";
+					description="Takistan Army 1Plt Delta Squad Leader";
 				};
 				class Item1
 				{
@@ -2522,7 +2520,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitRU_1Plt_DM";
 					init="GrpRU_1Plt_Delta = group this; nul = [""m"",this] execVM ""f\common\@ShackTac_assignGear_delta.sqf"";";
-					description="Russian 1Plt Delta Squad Medic";
+					description="Takistan Army 1Plt Delta Squad Medic";
 				};
 			};
 		};
@@ -2544,7 +2542,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitRU_1Plt_D1FTL";
 					init="GrpRU_1Plt_D1 = group this; nul = [""ftl"",this] execVM ""f\common\@ShackTac_assignGear_delta.sqf"";";
-					description="Russian 1Plt D1 Fireteam Leader";
+					description="Takistan Army 1Plt D1 Fireteam Leader";
 				};
 				class Item1
 				{
@@ -2557,7 +2555,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitRU_1Plt_D1AR";
 					init="GrpRU_1Plt_D1 = group this; nul = [""ar"",this] execVM ""f\common\@ShackTac_assignGear_delta.sqf"";";
-					description="Russian 1Plt D1 Automatic Rifleman";
+					description="Takistan Army 1Plt D1 Automatic Rifleman";
 				};
 				class Item2
 				{
@@ -2569,7 +2567,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitRU_1Plt_D1AAR";
 					init="GrpRU_1Plt_D1 = group this; nul = [""aar"",this] execVM ""f\common\@ShackTac_assignGear_delta.sqf"";";
-					description="Russian 1Plt D1 Assistant Automatic Rifleman";
+					description="Takistan Army 1Plt D1 Assistant Automatic Rifleman";
 				};
 				class Item3
 				{
@@ -2581,7 +2579,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitRU_1Plt_D1RAT";
 					init="GrpRU_1Plt_D1 = group this; nul = [""rat"",this] execVM ""f\common\@ShackTac_assignGear_delta.sqf"";";
-					description="Russian 1Plt D1 Rifleman (AT)";
+					description="Takistan Army 1Plt D1 Rifleman (AT)";
 				};
 			};
 		};
@@ -2603,7 +2601,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitRU_1Plt_D2FTL";
 					init="GrpRU_1Plt_D2 = group this; nul = [""ftl"",this] execVM ""f\common\@ShackTac_assignGear_delta.sqf"";";
-					description="Russian 1Plt D2 Fireteam Leader";
+					description="Takistan Army 1Plt D2 Fireteam Leader";
 				};
 				class Item1
 				{
@@ -2616,7 +2614,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitRU_1Plt_D2AR";
 					init="GrpRU_1Plt_D2 = group this; nul = [""ar"",this] execVM ""f\common\@ShackTac_assignGear_delta.sqf"";";
-					description="Russian 1Plt D2 Automatic Rifleman";
+					description="Takistan Army 1Plt D2 Automatic Rifleman";
 				};
 				class Item2
 				{
@@ -2628,7 +2626,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitRU_1Plt_D2AAR";
 					init="GrpRU_1Plt_D2 = group this; nul = [""aar"",this] execVM ""f\common\@ShackTac_assignGear_delta.sqf"";";
-					description="Russian 1Plt D2 Assistant Automatic Rifleman";
+					description="Takistan Army 1Plt D2 Assistant Automatic Rifleman";
 				};
 				class Item3
 				{
@@ -2640,7 +2638,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitRU_1Plt_D2RAT";
 					init="GrpRU_1Plt_D2 = group this; nul = [""rat"",this] execVM ""f\common\@ShackTac_assignGear_delta.sqf"";";
-					description="Russian 1Plt D2 Rifleman (AT)";
+					description="Takistan Army 1Plt D2 Rifleman (AT)";
 				};
 			};
 		};
@@ -2662,7 +2660,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitRU_1Plt_D3FTL";
 					init="GrpRU_1Plt_D3 = group this; nul = [""ftl"",this] execVM ""f\common\@ShackTac_assignGear_delta.sqf"";";
-					description="Russian 1Plt D3 Fireteam Leader";
+					description="Takistan Army 1Plt D3 Fireteam Leader";
 				};
 				class Item1
 				{
@@ -2675,7 +2673,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitRU_1Plt_D3AR";
 					init="GrpRU_1Plt_D3 = group this; nul = [""ar"",this] execVM ""f\common\@ShackTac_assignGear_delta.sqf"";";
-					description="Russian 1Plt D3 Automatic Rifleman";
+					description="Takistan Army 1Plt D3 Automatic Rifleman";
 				};
 				class Item2
 				{
@@ -2687,7 +2685,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitRU_1Plt_D3AAR";
 					init="GrpRU_1Plt_D3 = group this; nul = [""aar"",this] execVM ""f\common\@ShackTac_assignGear_delta.sqf"";";
-					description="Russian 1Plt D3 Assistant Automatic Rifleman";
+					description="Takistan Army 1Plt D3 Assistant Automatic Rifleman";
 				};
 				class Item3
 				{
@@ -2699,7 +2697,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitRU_1Plt_D3R";
 					init="GrpRU_1Plt_D3 = group this; nul = [""r"",this] execVM ""f\common\@ShackTac_assignGear_delta.sqf"";";
-					description="Russian 1Plt D3 Rifleman";
+					description="Takistan Army 1Plt D3 Rifleman";
 				};
 			};
 		};
@@ -2721,7 +2719,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitRU_1Plt_ESL";
 					init="GrpRU_1Plt_Echo = group this; nul = [""sl"",this] execVM ""f\common\@ShackTac_assignGear_echo.sqf"";";
-					description="Russian 1Plt Echo Squad Leader";
+					description="Takistan Army 1Plt Echo Squad Leader";
 				};
 				class Item1
 				{
@@ -2734,7 +2732,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitRU_1Plt_EM";
 					init="GrpRU_1Plt_Echo = group this; nul = [""m"",this] execVM ""f\common\@ShackTac_assignGear_echo.sqf"";";
-					description="Russian 1Plt Echo Squad Medic";
+					description="Takistan Army 1Plt Echo Squad Medic";
 				};
 			};
 		};
@@ -2756,7 +2754,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitRU_1Plt_E1FTL";
 					init="GrpRU_1Plt_E1 = group this; nul = [""ftl"",this] execVM ""f\common\@ShackTac_assignGear_echo.sqf"";";
-					description="Russian 1Plt E1 Fireteam Leader";
+					description="Takistan Army 1Plt E1 Fireteam Leader";
 				};
 				class Item1
 				{
@@ -2769,7 +2767,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitRU_1Plt_E1AR";
 					init="GrpRU_1Plt_E1 = group this; nul = [""ar"",this] execVM ""f\common\@ShackTac_assignGear_echo.sqf"";";
-					description="Russian 1Plt E1 Automatic Rifleman";
+					description="Takistan Army 1Plt E1 Automatic Rifleman";
 				};
 				class Item2
 				{
@@ -2781,7 +2779,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitRU_1Plt_E1AAR";
 					init="GrpRU_1Plt_E1 = group this; nul = [""aar"",this] execVM ""f\common\@ShackTac_assignGear_echo.sqf"";";
-					description="Russian 1Plt E1 Assistant Automatic Rifleman";
+					description="Takistan Army 1Plt E1 Assistant Automatic Rifleman";
 				};
 				class Item3
 				{
@@ -2793,7 +2791,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitRU_1Plt_E1RAT";
 					init="GrpRU_1Plt_E1 = group this; nul = [""rat"",this] execVM ""f\common\@ShackTac_assignGear_echo.sqf"";";
-					description="Russian 1Plt E1 Rifleman (AT)";
+					description="Takistan Army 1Plt E1 Rifleman (AT)";
 				};
 			};
 		};
@@ -2815,7 +2813,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitRU_1Plt_E2FTL";
 					init="GrpRU_1Plt_E2 = group this; nul = [""ftl"",this] execVM ""f\common\@ShackTac_assignGear_echo.sqf"";";
-					description="Russian 1Plt E2 Fireteam Leader";
+					description="Takistan Army 1Plt E2 Fireteam Leader";
 				};
 				class Item1
 				{
@@ -2828,7 +2826,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitRU_1Plt_E2AR";
 					init="GrpRU_1Plt_E2 = group this; nul = [""ar"",this] execVM ""f\common\@ShackTac_assignGear_echo.sqf"";";
-					description="Russian 1Plt E2 Automatic Rifleman";
+					description="Takistan Army 1Plt E2 Automatic Rifleman";
 				};
 				class Item2
 				{
@@ -2840,7 +2838,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitRU_1Plt_E2AAR";
 					init="GrpRU_1Plt_E2 = group this; nul = [""aar"",this] execVM ""f\common\@ShackTac_assignGear_echo.sqf"";";
-					description="Russian 1Plt E2 Assistant Automatic Rifleman";
+					description="Takistan Army 1Plt E2 Assistant Automatic Rifleman";
 				};
 				class Item3
 				{
@@ -2852,7 +2850,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitRU_1Plt_E2RAT";
 					init="GrpRU_1Plt_E2 = group this; nul = [""rat"",this] execVM ""f\common\@ShackTac_assignGear_echo.sqf"";";
-					description="Russian 1Plt E2 Rifleman (AT)";
+					description="Takistan Army 1Plt E2 Rifleman (AT)";
 				};
 			};
 		};
@@ -2874,7 +2872,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitRU_1Plt_E3FTL";
 					init="GrpRU_1Plt_E3 = group this; nul = [""ftl"",this] execVM ""f\common\@ShackTac_assignGear_echo.sqf"";";
-					description="Russian 1Plt E3 Fireteam Leader";
+					description="Takistan Army 1Plt E3 Fireteam Leader";
 				};
 				class Item1
 				{
@@ -2887,7 +2885,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitRU_1Plt_E3AR";
 					init="GrpRU_1Plt_E3 = group this; nul = [""ar"",this] execVM ""f\common\@ShackTac_assignGear_echo.sqf"";";
-					description="Russian 1Plt E3 Automatic Rifleman";
+					description="Takistan Army 1Plt E3 Automatic Rifleman";
 				};
 				class Item2
 				{
@@ -2899,7 +2897,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitRU_1Plt_E3AAR";
 					init="GrpRU_1Plt_E3 = group this; nul = [""aar"",this] execVM ""f\common\@ShackTac_assignGear_echo.sqf"";";
-					description="Russian 1Plt E3 Assistant Automatic Rifleman";
+					description="Takistan Army 1Plt E3 Assistant Automatic Rifleman";
 				};
 				class Item3
 				{
@@ -2911,7 +2909,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitRU_1Plt_E3R";
 					init="GrpRU_1Plt_E3 = group this; nul = [""r"",this] execVM ""f\common\@ShackTac_assignGear_echo.sqf"";";
-					description="Russian 1Plt E3 Rifleman";
+					description="Takistan Army 1Plt E3 Rifleman";
 				};
 			};
 		};
@@ -2933,7 +2931,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitRU_MMG1G";
 					init="GrpRU_MMG1 = group this; nul = [""mmgg"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="Russian Medium MG Team 1 Gunner";
+					description="Takistan Army Medium MG Team 1 Gunner";
 				};
 				class Item1
 				{
@@ -2945,7 +2943,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitRU_MMG1AG";
 					init="GrpRU_MMG1 = group this; nul = [""mmgag"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="Russian Medium MG Team 1 Assistant Gunner";
+					description="Takistan Army Medium MG Team 1 Assistant Gunner";
 				};
 				class Item2
 				{
@@ -2957,7 +2955,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitRU_MMG1AM";
 					init="GrpRU_MMG1 = group this; nul = [""mmgam"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="Russian Medium MG Team 1 Ammo Man";
+					description="Takistan Army Medium MG Team 1 Ammo Man";
 				};
 			};
 		};
@@ -2979,7 +2977,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitRU_MMG2G";
 					init="GrpRU_MMG2 = group this; nul = [""mmgg"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="Russian Medium MG Team 2 Gunner";
+					description="Takistan Army Medium MG Team 2 Gunner";
 				};
 				class Item1
 				{
@@ -2991,7 +2989,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitRU_MMG2AG";
 					init="GrpRU_MMG2 = group this; nul = [""mmgag"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="Russian Medium MG Team 2 Assistant Gunner";
+					description="Takistan Army Medium MG Team 2 Assistant Gunner";
 				};
 				class Item2
 				{
@@ -3003,7 +3001,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitRU_MMG2AM";
 					init="GrpRU_MMG2 = group this; nul = [""mmgam"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="Russian Medium MG Team 2 Ammo Man";
+					description="Takistan Army Medium MG Team 2 Ammo Man";
 				};
 			};
 		};
@@ -3025,7 +3023,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitRU_MMG3G";
 					init="GrpRU_MMG3 = group this; nul = [""mmgg"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="Russian Medium MG Team 3 Gunner";
+					description="Takistan Army Medium MG Team 3 Gunner";
 				};
 				class Item1
 				{
@@ -3037,7 +3035,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitRU_MMG3AG";
 					init="GrpRU_MMG3 = group this; nul = [""mmgag"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="Russian Medium MG Team 3 Assistant Gunner";
+					description="Takistan Army Medium MG Team 3 Assistant Gunner";
 				};
 				class Item2
 				{
@@ -3049,7 +3047,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitRU_MMG3AM";
 					init="GrpRU_MMG3 = group this; nul = [""mmgam"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="Russian Medium MG Team 3 Ammo Man";
+					description="Takistan Army Medium MG Team 3 Ammo Man";
 				};
 			};
 		};
@@ -3071,7 +3069,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitRU_HMG1G";
 					init="GrpRU_HMG1 = group this; nul = [""hmgg"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="Russian Heavy MG Team 1 Gunner";
+					description="Takistan Army Heavy MG Team 1 Gunner";
 				};
 				class Item1
 				{
@@ -3083,7 +3081,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitRU_HMG1AG";
 					init="GrpRU_HMG1 = group this; nul = [""hmgag"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="Russian Heavy MG Team 1 Assistant Gunner";
+					description="Takistan Army Heavy MG Team 1 Assistant Gunner";
 				};
 				class Item2
 				{
@@ -3095,7 +3093,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitRU_HMG1AM";
 					init="GrpRU_HMG1 = group this; nul = [""hmgam"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="Russian Heavy MG Team 1 Ammo Man";
+					description="Takistan Army Heavy MG Team 1 Ammo Man";
 				};
 			};
 		};
@@ -3117,7 +3115,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitRU_HMG2G";
 					init="GrpRU_HMG2 = group this; nul = [""hmgg"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="Russian Heavy MG Team 2 Gunner";
+					description="Takistan Army Heavy MG Team 2 Gunner";
 				};
 				class Item1
 				{
@@ -3129,7 +3127,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitRU_HMG2AG";
 					init="GrpRU_HMG2 = group this; nul = [""hmgag"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="Russian Heavy MG Team 2 Assistant Gunner";
+					description="Takistan Army Heavy MG Team 2 Assistant Gunner";
 				};
 				class Item2
 				{
@@ -3141,7 +3139,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitRU_HMG2AM";
 					init="GrpRU_HMG2 = group this; nul = [""hmgam"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="Russian Heavy MG Team 2 Ammo Man";
+					description="Takistan Army Heavy MG Team 2 Ammo Man";
 				};
 			};
 		};
@@ -3163,7 +3161,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitRU_HMG3G";
 					init="GrpRU_HMG3 = group this; nul = [""hmgg"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="Russian Heavy MG Team 3 Gunner";
+					description="Takistan Army Heavy MG Team 3 Gunner";
 				};
 				class Item1
 				{
@@ -3175,7 +3173,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitRU_HMG3AG";
 					init="GrpRU_HMG3 = group this; nul = [""hmgag"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="Russian Heavy MG Team 3 Assistant Gunner";
+					description="Takistan Army Heavy MG Team 3 Assistant Gunner";
 				};
 				class Item2
 				{
@@ -3187,7 +3185,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitRU_HMG3AM";
 					init="GrpRU_HMG3 = group this; nul = [""hmgam"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="Russian Heavy MG Team 3 Ammo Man";
+					description="Takistan Army Heavy MG Team 3 Ammo Man";
 				};
 			};
 		};
@@ -3209,7 +3207,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitRU_MAT1G";
 					init="GrpRU_MAT1 = group this; nul = [""matg"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="Russian Medium AT Team 1 Gunner";
+					description="Takistan Army Medium AT Team 1 Gunner";
 				};
 				class Item1
 				{
@@ -3221,7 +3219,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitRU_MAT1AG";
 					init="GrpRU_MAT1 = group this; nul = [""matag"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="Russian Medium AT Team 1 Assistant Gunner";
+					description="Takistan Army Medium AT Team 1 Assistant Gunner";
 				};
 				class Item2
 				{
@@ -3233,7 +3231,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitRU_MAT1AM";
 					init="GrpRU_MAT1 = group this; nul = [""matam"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="Russian Medium AT Team 1 Ammo Man";
+					description="Takistan Army Medium AT Team 1 Ammo Man";
 				};
 			};
 		};
@@ -3255,7 +3253,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitRU_MAT2G";
 					init="GrpRU_MAT2 = group this; nul = [""matg"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="Russian Medium AT Team 2 Gunner";
+					description="Takistan Army Medium AT Team 2 Gunner";
 				};
 				class Item1
 				{
@@ -3267,7 +3265,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitRU_MAT2AG";
 					init="GrpRU_MAT2 = group this; nul = [""matag"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="Russian Medium AT Team 2 Assistant Gunner";
+					description="Takistan Army Medium AT Team 2 Assistant Gunner";
 				};
 				class Item2
 				{
@@ -3279,7 +3277,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitRU_MAT2AM";
 					init="GrpRU_MAT2 = group this; nul = [""matam"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="Russian Medium AT Team 2 Ammo Man";
+					description="Takistan Army Medium AT Team 2 Ammo Man";
 				};
 			};
 		};
@@ -3301,7 +3299,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitRU_MAT3G";
 					init="GrpRU_MAT3 = group this; nul = [""matg"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="Russian Medium AT Team 3 Gunner";
+					description="Takistan Army Medium AT Team 3 Gunner";
 				};
 				class Item1
 				{
@@ -3313,7 +3311,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitRU_MAT3AG";
 					init="GrpRU_MAT3 = group this; nul = [""matag"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="Russian Medium AT Team 3 Assistant Gunner";
+					description="Takistan Army Medium AT Team 3 Assistant Gunner";
 				};
 				class Item2
 				{
@@ -3325,7 +3323,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitRU_MAT3AM";
 					init="GrpRU_MAT3 = group this; nul = [""matam"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="Russian Medium AT Team 3 Ammo Man";
+					description="Takistan Army Medium AT Team 3 Ammo Man";
 				};
 			};
 		};
@@ -3347,7 +3345,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitRU_HAT1G";
 					init="GrpRU_HAT1 = group this; nul = [""hatg"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="Russian Heavy AT Team 1 Gunner";
+					description="Takistan Army Heavy AT Team 1 Gunner";
 				};
 				class Item1
 				{
@@ -3359,7 +3357,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitRU_HAT1AG";
 					init="GrpRU_HAT1 = group this; nul = [""hatag"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="Russian Heavy AT Team 1 Assistant Gunner";
+					description="Takistan Army Heavy AT Team 1 Assistant Gunner";
 				};
 				class Item2
 				{
@@ -3371,7 +3369,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitRU_HAT1AM";
 					init="GrpRU_HAT1 = group this; nul = [""hatam"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="Russian Heavy AT Team 1 Ammo Man";
+					description="Takistan Army Heavy AT Team 1 Ammo Man";
 				};
 			};
 		};
@@ -3393,7 +3391,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitRU_HAT2G";
 					init="GrpRU_HAT2 = group this; nul = [""hatg"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="Russian Heavy AT Team 2 Gunner";
+					description="Takistan Army Heavy AT Team 2 Gunner";
 				};
 				class Item1
 				{
@@ -3405,7 +3403,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitRU_HAT2AG";
 					init="GrpRU_HAT2 = group this; nul = [""hatag"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="Russian Heavy AT Team 2 Assistant Gunner";
+					description="Takistan Army Heavy AT Team 2 Assistant Gunner";
 				};
 				class Item2
 				{
@@ -3417,7 +3415,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitRU_HAT2AM";
 					init="GrpRU_HAT2 = group this; nul = [""hatam"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="Russian Heavy AT Team 2 Ammo Man";
+					description="Takistan Army Heavy AT Team 2 Ammo Man";
 				};
 			};
 		};
@@ -3439,7 +3437,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitRU_HAT3G";
 					init="GrpRU_HAT3 = group this; nul = [""hatg"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="Russian Heavy AT Team 3 Gunner";
+					description="Takistan Army Heavy AT Team 3 Gunner";
 				};
 				class Item1
 				{
@@ -3451,7 +3449,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitRU_HAT3AG";
 					init="GrpRU_HAT3 = group this; nul = [""hatag"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="Russian Heavy AT Team 3 Assistant Gunner";
+					description="Takistan Army Heavy AT Team 3 Assistant Gunner";
 				};
 				class Item2
 				{
@@ -3463,7 +3461,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitRU_HAT3AM";
 					init="GrpRU_HAT3 = group this; nul = [""hatam"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="Russian Heavy AT Team 3 Ammo Man";
+					description="Takistan Army Heavy AT Team 3 Ammo Man";
 				};
 			};
 		};
@@ -3485,7 +3483,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitRU_ST1SN";
 					init="GrpRU_ST1 = group this; nul = [""sn"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="Russian Sniper Team 1 Sniper";
+					description="Takistan Army Sniper Team 1 Sniper";
 				};
 				class Item1
 				{
@@ -3497,7 +3495,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitRU_ST1SP";
 					init="GrpRU_ST1 = group this; nul = [""sp"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="Russian Sniper Team 1 Spotter";
+					description="Takistan Army Sniper Team 1 Spotter";
 				};
 			};
 		};
@@ -3570,7 +3568,7 @@ class Mission
 					skill=0.59999996;
 					text="UnitUSMC_SF1_SF1L";
 					init="GrpUSMC_SF1 = group this; nul = [""sfl"",this] execVM ""f\common\@ShackTac_assignGear_sf1.sqf"";_null = this addaction [""Add/Remove Silencer"", ""mcc\general_scripts\silencer\silencer.sqf""];";
-					description="USMC SF1 - Leader";
+					description="US SF1 - Leader";
 				};
 				class Item1
 				{
@@ -3583,7 +3581,7 @@ class Mission
 					skill=0.46666664;
 					text="UnitUSMC_SF1_SFHg";
 					init="GrpUSMC_SF1 = group this; nul = [""sfhg"",this] execVM ""f\common\@ShackTac_assignGear_sf1.sqf"";_null = this addaction [""Add/Remove Silencer"", ""mcc\general_scripts\silencer\silencer.sqf""];;";
-					description="USMC SF1 - Heavy gunner";
+					description="US SF1 - Heavy gunner";
 				};
 				class Item2
 				{
@@ -3596,7 +3594,7 @@ class Mission
 					skill=0.46666664;
 					text="UnitUSMC_SF1R";
 					init="GrpUSMC_SF1 = group this; nul = [""sfg"",this] execVM ""f\common\@ShackTac_assignGear_sf1.sqf"";_null = this addaction [""Add/Remove Silencer"", ""mcc\general_scripts\silencer\silencer.sqf""];";
-					description="USMC SF1 - Radioman";
+					description="US SF1 - Radioman";
 				};
 				class Item3
 				{
@@ -3609,7 +3607,7 @@ class Mission
 					skill=0.46666664;
 					text="UnitUSMC_SF1_SFM";
 					init="GrpUSMC_SF1 = group this; nul = [""sfm"",this] execVM ""f\common\@ShackTac_assignGear_sf1.sqf"";_null = this addaction [""Add/Remove Silencer"", ""mcc\general_scripts\silencer\silencer.sqf""];";
-					description="USMC SF1 - Marksman";
+					description="US SF1 - Marksman";
 				};
 				class Item4
 				{
@@ -3622,7 +3620,7 @@ class Mission
 					skill=0.46666664;
 					text="UnitUSMC_SF1_SFS";
 					init="GrpUSMC_SF1 = group this; nul = [""sfs"",this] execVM ""f\common\@ShackTac_assignGear_sf1.sqf"";_null = this addaction [""Add/Remove Silencer"", ""mcc\general_scripts\silencer\silencer.sqf""];";
-					description="USMC SF1 - Saboteur";
+					description="US SF1 - Saboteur";
 				};
 				class Item5
 				{
@@ -3635,7 +3633,7 @@ class Mission
 					skill=0.46666664;
 					text="UnitUSMC_SF1_SFC";
 					init="GrpUSMC_SF1 = group this; nul = [""sfc"",this] execVM ""f\common\@ShackTac_assignGear_sf1.sqf"";_null = this addaction [""Add/Remove Silencer"", ""mcc\general_scripts\silencer\silencer.sqf""];";
-					description="USMC SF1 - Corpsman";
+					description="US SF1 - Corpsman";
 				};
 			};
 		};
@@ -3657,7 +3655,7 @@ class Mission
 					skill=0.59999996;
 					text="UnitUSMC_SF2_SF1L";
 					init="GrpUSMC_SF2 = group this; nul = [""sfl"",this] execVM ""f\common\@ShackTac_assignGear_sf2.sqf"";_null = this addaction [""Add/Remove Silencer"", ""mcc\general_scripts\silencer\silencer.sqf""];";
-					description="USMC SF2 - Leader";
+					description="US SF2 - Leader";
 				};
 				class Item1
 				{
@@ -3670,7 +3668,7 @@ class Mission
 					skill=0.46666664;
 					text="UnitUSMC_SF2_SFHg";
 					init="GrpUSMC_SF2 = group this; nul = [""sfhg"",this] execVM ""f\common\@ShackTac_assignGear_sf2.sqf"";_null = this addaction [""Add/Remove Silencer"", ""mcc\general_scripts\silencer\silencer.sqf""];";
-					description="USMC SF2 - Heavy gunner";
+					description="US SF2 - Heavy gunner";
 				};
 				class Item2
 				{
@@ -3683,7 +3681,7 @@ class Mission
 					skill=0.46666664;
 					text="UnitUSMC_SF2R";
 					init="GrpUSMC_SF2 = group this; nul = [""sfg"",this] execVM ""f\common\@ShackTac_assignGear_sf2.sqf"";_null = this addaction [""Add/Remove Silencer"", ""mcc\general_scripts\silencer\silencer.sqf""];";
-					description="USMC SF2 - Radioman";
+					description="US SF2 - Radioman";
 				};
 				class Item3
 				{
@@ -3696,7 +3694,7 @@ class Mission
 					skill=0.46666664;
 					text="UnitUSMC_SF2_SFM";
 					init="GrpUSMC_SF2 = group this; nul = [""sfm"",this] execVM ""f\common\@ShackTac_assignGear_sf2.sqf"";_null = this addaction [""Add/Remove Silencer"", ""mcc\general_scripts\silencer\silencer.sqf""];";
-					description="USMC SF2 - Marksman";
+					description="US SF2 - Marksman";
 				};
 				class Item4
 				{
@@ -3709,7 +3707,7 @@ class Mission
 					skill=0.46666664;
 					text="UnitUSMC_SF2_SFS";
 					init="GrpUSMC_SF2 = group this; nul = [""sfs"",this] execVM ""f\common\@ShackTac_assignGear_sf2.sqf"";_null = this addaction [""Add/Remove Silencer"", ""mcc\general_scripts\silencer\silencer.sqf""];";
-					description="USMC SF2 - Saboteur";
+					description="US SF2 - Saboteur";
 				};
 				class Item5
 				{
@@ -3722,7 +3720,7 @@ class Mission
 					skill=0.46666664;
 					text="UnitUSMC_SF2_SFC";
 					init="GrpUSMC_SF2 = group this; nul = [""sfc"",this] execVM ""f\common\@ShackTac_assignGear_sf2.sqf"";_null = this addaction [""Add/Remove Silencer"", ""mcc\general_scripts\silencer\silencer.sqf""];";
-					description="USMC SF2 - Corpsman";
+					description="US SF2 - Corpsman";
 				};
 			};
 		};
@@ -3744,7 +3742,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitUSMC_FLC";
 					init="GrpUSMC_Foxtrot_Lead = group this;";
-					description="USMC Foxtrot Lead Commander";
+					description="US Foxtrot Lead Commander";
 				};
 				class Item1
 				{
@@ -3757,7 +3755,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitUSMC_FLG";
 					init="GrpUSMC_Foxtrot_Lead = group this;";
-					description="USMC Foxtrot Lead Gunner";
+					description="US Foxtrot Lead Gunner";
 				};
 				class Item2
 				{
@@ -3769,7 +3767,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitUSMC_FLD";
 					init="GrpUSMC_Foxtrot_Lead = group this;";
-					description="USMC Foxtrot Lead Driver";
+					description="US Foxtrot Lead Driver";
 				};
 			};
 		};
@@ -3791,7 +3789,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitUSMC_F1C";
 					init="GrpUSMC_Foxtrot_1 = group this;";
-					description="USMC Foxtrot1 Commander";
+					description="US Foxtrot1 Commander";
 				};
 				class Item1
 				{
@@ -3804,7 +3802,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitUSMC_F1G";
 					init="GrpUSMC_Foxtrot_1 = group this;";
-					description="USMC Foxtrot1 Gunner";
+					description="US Foxtrot1 Gunner";
 				};
 				class Item2
 				{
@@ -3816,7 +3814,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitUSMC_F1D";
 					init="GrpUSMC_Foxtrot_1 = group this;";
-					description="USMC Foxtrot1 Driver";
+					description="US Foxtrot1 Driver";
 				};
 			};
 		};
@@ -3838,7 +3836,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitUSMC_F2C";
 					init="GrpUSMC_Foxtrot_2 = group this;";
-					description="USMC Foxtrot2 Commander";
+					description="US Foxtrot2 Commander";
 				};
 				class Item1
 				{
@@ -3851,7 +3849,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitUSMC_F2G";
 					init="GrpUSMC_Foxtrot_2 = group this;";
-					description="USMC Foxtrot2 Gunner";
+					description="US Foxtrot2 Gunner";
 				};
 				class Item2
 				{
@@ -3863,7 +3861,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitUSMC_F2D";
 					init="GrpUSMC_Foxtrot_2 = group this;";
-					description="USMC Foxtrot2 Driver";
+					description="US Foxtrot2 Driver";
 				};
 			};
 		};
@@ -3885,7 +3883,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitUSMC_F3C";
 					init="GrpUSMC_Foxtrot_3 = group this;";
-					description="USMC Foxtrot3 Commander";
+					description="US Foxtrot3 Commander";
 				};
 				class Item1
 				{
@@ -3898,7 +3896,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitUSMC_F3G";
 					init="GrpUSMC_Foxtrot_3 = group this;";
-					description="USMC Foxtrot3 Gunner";
+					description="US Foxtrot3 Gunner";
 				};
 				class Item2
 				{
@@ -3910,7 +3908,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitUSMC_F3D";
 					init="GrpUSMC_Foxtrot_3 = group this;";
-					description="USMC Foxtrot3 Driver";
+					description="US Foxtrot3 Driver";
 				};
 			};
 		};
@@ -3932,7 +3930,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitUSMC_GLP";
 					init="GrpUSMC_Golf_Lead = group this; this addweapon ""ACE_ParachuteRoundPack""; this addweapon ""ACE_Flaregun""; {this addmagazine ""ACE_SSRed_FG"";} foreach [1,2];  {this addmagazine ""ACE_SSGreen_FG"";} foreach [1,2];  {this addmagazine ""ACE_Bandage"";} foreach [1,2]; ";
-					description="USMC Golf Lead Pilot";
+					description="US Golf Lead Pilot";
 				};
 				class Item1
 				{
@@ -3945,7 +3943,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitUSMC_GLG";
 					init="GrpUSMC_Golf_Lead = group this; this addweapon ""ACE_ParachuteRoundPack""; this addweapon ""ACE_Flaregun""; {this addmagazine ""ACE_SSRed_FG"";} foreach [1,2];  {this addmagazine ""ACE_SSGreen_FG"";} foreach [1,2];  {this addmagazine ""ACE_Bandage"";} foreach [1,2]; ";
-					description="USMC Golf Lead Gunner";
+					description="US Golf Lead Gunner";
 				};
 			};
 		};
@@ -3967,7 +3965,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitUSMC_G1P";
 					init="GrpUSMC_Golf_1 = group this; this addweapon ""ACE_ParachuteRoundPack""; this addweapon ""ACE_Flaregun""; {this addmagazine ""ACE_SSRed_FG"";} foreach [1,2];  {this addmagazine ""ACE_SSGreen_FG"";} foreach [1,2];  {this addmagazine ""ACE_Bandage"";} foreach [1,2]; ";
-					description="USMC Golf1 Pilot";
+					description="US Golf1 Pilot";
 				};
 				class Item1
 				{
@@ -3980,7 +3978,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitUSMC_G1G";
 					init="GrpUSMC_Golf_1 = group this; this addweapon ""ACE_ParachuteRoundPack""; this addweapon ""ACE_Flaregun""; {this addmagazine ""ACE_SSRed_FG"";} foreach [1,2];  {this addmagazine ""ACE_SSGreen_FG"";} foreach [1,2];  {this addmagazine ""ACE_Bandage"";} foreach [1,2]; ";
-					description="USMC Golf1 Gunner";
+					description="US Golf1 Gunner";
 				};
 			};
 		};
@@ -4002,7 +4000,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitUSMC_G2P";
 					init="GrpUSMC_Golf_2 = group this; this addweapon ""ACE_ParachuteRoundPack""; this addweapon ""ACE_Flaregun""; {this addmagazine ""ACE_SSRed_FG"";} foreach [1,2];  {this addmagazine ""ACE_SSGreen_FG"";} foreach [1,2];  {this addmagazine ""ACE_Bandage"";} foreach [1,2]; ";
-					description="USMC Golf2 Pilot";
+					description="US Golf2 Pilot";
 				};
 				class Item1
 				{
@@ -4015,7 +4013,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitUSMC_G2G";
 					init="GrpUSMC_Golf_2 = group this; this addweapon ""ACE_ParachuteRoundPack""; this addweapon ""ACE_Flaregun""; {this addmagazine ""ACE_SSRed_FG"";} foreach [1,2];  {this addmagazine ""ACE_SSGreen_FG"";} foreach [1,2];  {this addmagazine ""ACE_Bandage"";} foreach [1,2]; ";
-					description="USMC Golf2 Gunner";
+					description="US Golf2 Gunner";
 				};
 			};
 		};
@@ -4037,7 +4035,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitUSMC_G3P";
 					init="GrpUSMC_Golf_3 = group this; this addweapon ""ACE_ParachuteRoundPack""; this addweapon ""ACE_Flaregun""; {this addmagazine ""ACE_SSRed_FG"";} foreach [1,2];  {this addmagazine ""ACE_SSGreen_FG"";} foreach [1,2];  {this addmagazine ""ACE_Bandage"";} foreach [1,2]; ";
-					description="USMC Golf3 Pilot";
+					description="US Golf3 Pilot";
 				};
 				class Item1
 				{
@@ -4050,7 +4048,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitUSMC_G3G";
 					init="GrpUSMC_Golf_3 = group this; this addweapon ""ACE_ParachuteRoundPack""; this addweapon ""ACE_Flaregun""; {this addmagazine ""ACE_SSRed_FG"";} foreach [1,2];  {this addmagazine ""ACE_SSGreen_FG"";} foreach [1,2];  {this addmagazine ""ACE_Bandage"";} foreach [1,2]; ";
-					description="USMC Golf3 Gunner";
+					description="US Golf3 Gunner";
 				};
 			};
 		};
@@ -4072,7 +4070,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitGUE_1Plt_PltCo";
 					init="GrpGUE_1Plt_PltHQ = group this; nul = [""pltco"",this] execVM ""f\common\@ShackTac_assignGear_plthq.sqf"";";
-					description="NAPA 1Plt PltHQ Platoon Commander";
+					description="Takistan Locals 1Plt PltHQ Platoon Commander";
 				};
 				class Item1
 				{
@@ -4085,7 +4083,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitGUE_1Plt_PltSgt";
 					init="GrpGUE_1Plt_PltHQ = group this; nul = [""pltsgt"",this] execVM ""f\common\@ShackTac_assignGear_plthq.sqf"";";
-					description="NAPA 1Plt PltHQ Platoon Sgt.";
+					description="Takistan Locals 1Plt PltHQ Platoon Sgt.";
 				};
 				class Item2
 				{
@@ -4098,7 +4096,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitGUE_1Plt_PltM";
 					init="GrpGUE_1Plt_PltHQ = group this; nul = [""pltm"",this] execVM ""f\common\@ShackTac_assignGear_plthq.sqf"";";
-					description="NAPA 1Plt PltHQ Medic";
+					description="Takistan Locals 1Plt PltHQ Medic";
 				};
 				class Item3
 				{
@@ -4110,7 +4108,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitGUE_1Plt_PltR";
 					init="GrpGUE_1Plt_PltHQ = group this; nul = [""pltr"",this] execVM ""f\common\@ShackTac_assignGear_plthq.sqf"";";
-					description="NAPA 1Plt PltHQ Rifleman";
+					description="Takistan Locals 1Plt PltHQ Rifleman";
 				};
 			};
 		};
@@ -4132,7 +4130,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitGUE_1Plt_ASL";
 					init="GrpGUE_1Plt_Alpha = group this; nul = [""sl"",this] execVM ""f\common\@ShackTac_assignGear_alpha.sqf"";";
-					description="NAPA 1Plt Alpha Squad Leader";
+					description="Takistan Locals 1Plt Alpha Squad Leader";
 				};
 				class Item1
 				{
@@ -4145,7 +4143,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitGUE_1Plt_AM";
 					init="GrpGUE_1Plt_Alpha = group this; nul = [""m"",this] execVM ""f\common\@ShackTac_assignGear_alpha.sqf"";";
-					description="NAPA 1Plt Alpha Squad Medic";
+					description="Takistan Locals 1Plt Alpha Squad Medic";
 				};
 			};
 		};
@@ -4167,7 +4165,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitGUE_1Plt_A1FTL";
 					init="GrpGUE_1Plt_A1 = group this; nul = [""ftl"",this] execVM ""f\common\@ShackTac_assignGear_alpha.sqf"";";
-					description="NAPA 1Plt A1 Fireteam Leader";
+					description="Takistan Locals 1Plt A1 Fireteam Leader";
 				};
 				class Item1
 				{
@@ -4180,7 +4178,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitGUE_1Plt_A1AR";
 					init="GrpGUE_1Plt_A1 = group this; nul = [""ar"",this] execVM ""f\common\@ShackTac_assignGear_alpha.sqf"";";
-					description="NAPA 1Plt A1 Automatic Rifleman";
+					description="Takistan Locals 1Plt A1 Automatic Rifleman";
 				};
 				class Item2
 				{
@@ -4192,7 +4190,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitGUE_1Plt_A1AAR";
 					init="GrpGUE_1Plt_A1 = group this; nul = [""aar"",this] execVM ""f\common\@ShackTac_assignGear_alpha.sqf"";";
-					description="NAPA 1Plt A1 Assistant Automatic Rifleman";
+					description="Takistan Locals 1Plt A1 Assistant Automatic Rifleman";
 				};
 				class Item3
 				{
@@ -4204,7 +4202,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitGUE_1Plt_A1RAT";
 					init="GrpGUE_1Plt_A1 = group this; nul = [""rat"",this] execVM ""f\common\@ShackTac_assignGear_alpha.sqf"";";
-					description="NAPA 1Plt A1 Rifleman (AT)";
+					description="Takistan Locals 1Plt A1 Rifleman (AT)";
 				};
 			};
 		};
@@ -4226,7 +4224,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitGUE_1Plt_A2FTL";
 					init="GrpGUE_1Plt_A2 = group this; nul = [""ftl"",this] execVM ""f\common\@ShackTac_assignGear_alpha.sqf"";";
-					description="NAPA 1Plt A2 Fireteam Leader";
+					description="Takistan Locals 1Plt A2 Fireteam Leader";
 				};
 				class Item1
 				{
@@ -4239,7 +4237,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitGUE_1Plt_A2AR";
 					init="GrpGUE_1Plt_A2 = group this; nul = [""ar"",this] execVM ""f\common\@ShackTac_assignGear_alpha.sqf"";";
-					description="NAPA 1Plt A2 Automatic Rifleman";
+					description="Takistan Locals 1Plt A2 Automatic Rifleman";
 				};
 				class Item2
 				{
@@ -4251,7 +4249,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitGUE_1Plt_A2AAR";
 					init="GrpGUE_1Plt_A2 = group this; nul = [""aar"",this] execVM ""f\common\@ShackTac_assignGear_alpha.sqf"";";
-					description="NAPA 1Plt A2 Assistant Automatic Rifleman";
+					description="Takistan Locals 1Plt A2 Assistant Automatic Rifleman";
 				};
 				class Item3
 				{
@@ -4263,7 +4261,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitGUE_1Plt_A2RAT";
 					init="GrpGUE_1Plt_A2 = group this; nul = [""rat"",this] execVM ""f\common\@ShackTac_assignGear_alpha.sqf"";";
-					description="NAPA 1Plt A2 Rifleman (AT)";
+					description="Takistan Locals 1Plt A2 Rifleman (AT)";
 				};
 			};
 		};
@@ -4285,7 +4283,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitGUE_1Plt_A3FTL";
 					init="GrpGUE_1Plt_A3 = group this; nul = [""ftl"",this] execVM ""f\common\@ShackTac_assignGear_alpha.sqf"";";
-					description="NAPA 1Plt A3 Fireteam Leader";
+					description="Takistan Locals 1Plt A3 Fireteam Leader";
 				};
 				class Item1
 				{
@@ -4298,7 +4296,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitGUE_1Plt_A3AR";
 					init="GrpGUE_1Plt_A3 = group this; nul = [""ar"",this] execVM ""f\common\@ShackTac_assignGear_alpha.sqf"";";
-					description="NAPA 1Plt A3 Automatic Rifleman";
+					description="Takistan Locals 1Plt A3 Automatic Rifleman";
 				};
 				class Item2
 				{
@@ -4310,7 +4308,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitGUE_1Plt_A3AAR";
 					init="GrpGUE_1Plt_A3 = group this; nul = [""aar"",this] execVM ""f\common\@ShackTac_assignGear_alpha.sqf"";";
-					description="NAPA 1Plt A3 Assistant Automatic Rifleman";
+					description="Takistan Locals 1Plt A3 Assistant Automatic Rifleman";
 				};
 				class Item3
 				{
@@ -4322,7 +4320,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitGUE_1Plt_A3R";
 					init="GrpGUE_1Plt_A3 = group this; nul = [""r"",this] execVM ""f\common\@ShackTac_assignGear_alpha.sqf"";";
-					description="NAPA 1Plt A3 Rifleman";
+					description="Takistan Locals 1Plt A3 Rifleman";
 				};
 			};
 		};
@@ -4344,7 +4342,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitGUE_1Plt_BSL";
 					init="GrpGUE_1Plt_Bravo = group this; nul = [""sl"",this] execVM ""f\common\@ShackTac_assignGear_bravo.sqf"";";
-					description="NAPA 1Plt Bravo Squad Leader";
+					description="Takistan Locals 1Plt Bravo Squad Leader";
 				};
 				class Item1
 				{
@@ -4357,7 +4355,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitGUE_1Plt_BM";
 					init="GrpGUE_1Plt_Bravo = group this; nul = [""m"",this] execVM ""f\common\@ShackTac_assignGear_bravo.sqf"";";
-					description="NAPA 1Plt Bravo Squad Medic";
+					description="Takistan Locals 1Plt Bravo Squad Medic";
 				};
 			};
 		};
@@ -4379,7 +4377,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitGUE_1Plt_B1FTL";
 					init="GrpGUE_1Plt_B1 = group this; nul = [""ftl"",this] execVM ""f\common\@ShackTac_assignGear_bravo.sqf"";";
-					description="NAPA 1Plt B1 Fireteam Leader";
+					description="Takistan Locals 1Plt B1 Fireteam Leader";
 				};
 				class Item1
 				{
@@ -4392,7 +4390,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitGUE_1Plt_B1AR";
 					init="GrpGUE_1Plt_B1 = group this; nul = [""ar"",this] execVM ""f\common\@ShackTac_assignGear_bravo.sqf"";";
-					description="NAPA 1Plt B1 Automatic Rifleman";
+					description="Takistan Locals 1Plt B1 Automatic Rifleman";
 				};
 				class Item2
 				{
@@ -4404,7 +4402,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitGUE_1Plt_B1AAR";
 					init="GrpGUE_1Plt_B1 = group this; nul = [""aar"",this] execVM ""f\common\@ShackTac_assignGear_bravo.sqf"";";
-					description="NAPA 1Plt B1 Assistant Automatic Rifleman";
+					description="Takistan Locals 1Plt B1 Assistant Automatic Rifleman";
 				};
 				class Item3
 				{
@@ -4416,7 +4414,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitGUE_1Plt_B1RAT";
 					init="GrpGUE_1Plt_B1 = group this; nul = [""rat"",this] execVM ""f\common\@ShackTac_assignGear_bravo.sqf"";";
-					description="NAPA 1Plt B1 Rifleman (AT)";
+					description="Takistan Locals 1Plt B1 Rifleman (AT)";
 				};
 			};
 		};
@@ -4438,7 +4436,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitGUE_1Plt_B2FTL";
 					init="GrpGUE_1Plt_B2 = group this; nul = [""ftl"",this] execVM ""f\common\@ShackTac_assignGear_bravo.sqf"";";
-					description="NAPA 1Plt B2 Fireteam Leader";
+					description="Takistan Locals 1Plt B2 Fireteam Leader";
 				};
 				class Item1
 				{
@@ -4451,7 +4449,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitGUE_1Plt_B2AR";
 					init="GrpGUE_1Plt_B2 = group this; nul = [""ar"",this] execVM ""f\common\@ShackTac_assignGear_bravo.sqf"";";
-					description="NAPA 1Plt B2 Automatic Rifleman";
+					description="Takistan Locals 1Plt B2 Automatic Rifleman";
 				};
 				class Item2
 				{
@@ -4463,7 +4461,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitGUE_1Plt_B2AAR";
 					init="GrpGUE_1Plt_B2 = group this; nul = [""aar"",this] execVM ""f\common\@ShackTac_assignGear_bravo.sqf"";";
-					description="NAPA 1Plt B2 Assistant Automatic Rifleman";
+					description="Takistan Locals 1Plt B2 Assistant Automatic Rifleman";
 				};
 				class Item3
 				{
@@ -4475,7 +4473,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitGUE_1Plt_B2RAT";
 					init="GrpGUE_1Plt_B2 = group this; nul = [""rat"",this] execVM ""f\common\@ShackTac_assignGear_bravo.sqf"";";
-					description="NAPA 1Plt B2 Rifleman (AT)";
+					description="Takistan Locals 1Plt B2 Rifleman (AT)";
 				};
 			};
 		};
@@ -4497,7 +4495,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitGUE_1Plt_B3FTL";
 					init="GrpGUE_1Plt_B3 = group this; nul = [""ftl"",this] execVM ""f\common\@ShackTac_assignGear_bravo.sqf"";";
-					description="NAPA 1Plt B3 Fireteam Leader";
+					description="Takistan Locals 1Plt B3 Fireteam Leader";
 				};
 				class Item1
 				{
@@ -4510,7 +4508,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitGUE_1Plt_B3AR";
 					init="GrpGUE_1Plt_B3 = group this; nul = [""ar"",this] execVM ""f\common\@ShackTac_assignGear_bravo.sqf"";";
-					description="NAPA 1Plt B3 Automatic Rifleman";
+					description="Takistan Locals 1Plt B3 Automatic Rifleman";
 				};
 				class Item2
 				{
@@ -4522,7 +4520,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitGUE_1Plt_B3AAR";
 					init="GrpGUE_1Plt_B3 = group this; nul = [""aar"",this] execVM ""f\common\@ShackTac_assignGear_bravo.sqf"";";
-					description="NAPA 1Plt B3 Assistant Automatic Rifleman";
+					description="Takistan Locals 1Plt B3 Assistant Automatic Rifleman";
 				};
 				class Item3
 				{
@@ -4534,7 +4532,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitGUE_1Plt_B3R";
 					init="GrpGUE_1Plt_B3 = group this; nul = [""r"",this] execVM ""f\common\@ShackTac_assignGear_bravo.sqf"";";
-					description="NAPA 1Plt B3 Rifleman";
+					description="Takistan Locals 1Plt B3 Rifleman";
 				};
 			};
 		};
@@ -4556,7 +4554,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitGUE_1Plt_CSL";
 					init="GrpGUE_1Plt_Charlie = group this; nul = [""sl"",this] execVM ""f\common\@ShackTac_assignGear_charlie.sqf"";";
-					description="NAPA 1Plt Charlie Squad Leader";
+					description="Takistan Locals 1Plt Charlie Squad Leader";
 				};
 				class Item1
 				{
@@ -4569,7 +4567,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitGUE_1Plt_CM";
 					init="GrpGUE_1Plt_Charlie = group this; nul = [""m"",this] execVM ""f\common\@ShackTac_assignGear_charlie.sqf"";";
-					description="NAPA 1Plt Charlie Squad Medic";
+					description="Takistan Locals 1Plt Charlie Squad Medic";
 				};
 			};
 		};
@@ -4591,7 +4589,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitGUE_1Plt_C1FTL";
 					init="GrpGUE_1Plt_C1 = group this; nul = [""ftl"",this] execVM ""f\common\@ShackTac_assignGear_charlie.sqf"";";
-					description="NAPA 1Plt C1 Fireteam Leader";
+					description="Takistan Locals 1Plt C1 Fireteam Leader";
 				};
 				class Item1
 				{
@@ -4604,7 +4602,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitGUE_1Plt_C1AR";
 					init="GrpGUE_1Plt_C1 = group this; nul = [""ar"",this] execVM ""f\common\@ShackTac_assignGear_charlie.sqf"";";
-					description="NAPA 1Plt C1 Automatic Rifleman";
+					description="Takistan Locals 1Plt C1 Automatic Rifleman";
 				};
 				class Item2
 				{
@@ -4616,7 +4614,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitGUE_1Plt_C1AAR";
 					init="GrpGUE_1Plt_C1 = group this; nul = [""aar"",this] execVM ""f\common\@ShackTac_assignGear_charlie.sqf"";";
-					description="NAPA 1Plt C1 Assistant Automatic Rifleman";
+					description="Takistan Locals 1Plt C1 Assistant Automatic Rifleman";
 				};
 				class Item3
 				{
@@ -4628,7 +4626,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitGUE_1Plt_C1RAT";
 					init="GrpGUE_1Plt_C1 = group this; nul = [""rat"",this] execVM ""f\common\@ShackTac_assignGear_charlie.sqf"";";
-					description="NAPA 1Plt C1 Rifleman (AT)";
+					description="Takistan Locals 1Plt C1 Rifleman (AT)";
 				};
 			};
 		};
@@ -4650,7 +4648,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitGUE_1Plt_C2FTL";
 					init="GrpGUE_1Plt_C2 = group this; nul = [""ftl"",this] execVM ""f\common\@ShackTac_assignGear_charlie.sqf"";";
-					description="NAPA 1Plt C2 Fireteam Leader";
+					description="Takistan Locals 1Plt C2 Fireteam Leader";
 				};
 				class Item1
 				{
@@ -4663,7 +4661,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitGUE_1Plt_C2AR";
 					init="GrpGUE_1Plt_C2 = group this; nul = [""ar"",this] execVM ""f\common\@ShackTac_assignGear_charlie.sqf"";";
-					description="NAPA 1Plt C2 Automatic Rifleman";
+					description="Takistan Locals 1Plt C2 Automatic Rifleman";
 				};
 				class Item2
 				{
@@ -4675,7 +4673,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitGUE_1Plt_C2AAR";
 					init="GrpGUE_1Plt_C2 = group this; nul = [""aar"",this] execVM ""f\common\@ShackTac_assignGear_charlie.sqf"";";
-					description="NAPA 1Plt C2 Assistant Automatic Rifleman";
+					description="Takistan Locals 1Plt C2 Assistant Automatic Rifleman";
 				};
 				class Item3
 				{
@@ -4687,7 +4685,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitGUE_1Plt_C2RAT";
 					init="GrpGUE_1Plt_C2 = group this; nul = [""rat"",this] execVM ""f\common\@ShackTac_assignGear_charlie.sqf"";";
-					description="NAPA 1Plt C2 Rifleman (AT)";
+					description="Takistan Locals 1Plt C2 Rifleman (AT)";
 				};
 			};
 		};
@@ -4709,7 +4707,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitGUE_1Plt_C3FTL";
 					init="GrpGUE_1Plt_C3 = group this; nul = [""ftl"",this] execVM ""f\common\@ShackTac_assignGear_charlie.sqf"";";
-					description="NAPA 1Plt C3 Fireteam Leader";
+					description="Takistan Locals 1Plt C3 Fireteam Leader";
 				};
 				class Item1
 				{
@@ -4722,7 +4720,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitGUE_1Plt_C3AR";
 					init="GrpGUE_1Plt_C3 = group this; nul = [""ar"",this] execVM ""f\common\@ShackTac_assignGear_charlie.sqf"";";
-					description="NAPA 1Plt C3 Automatic Rifleman";
+					description="Takistan Locals 1Plt C3 Automatic Rifleman";
 				};
 				class Item2
 				{
@@ -4734,7 +4732,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitGUE_1Plt_C3AAR";
 					init="GrpGUE_1Plt_C3 = group this; nul = [""aar"",this] execVM ""f\common\@ShackTac_assignGear_charlie.sqf"";";
-					description="NAPA 1Plt C3 Assistant Automatic Rifleman";
+					description="Takistan Locals 1Plt C3 Assistant Automatic Rifleman";
 				};
 				class Item3
 				{
@@ -4746,7 +4744,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitGUE_1Plt_C3R";
 					init="GrpGUE_1Plt_C3 = group this; nul = [""r"",this] execVM ""f\common\@ShackTac_assignGear_charlie.sqf"";";
-					description="NAPA 1Plt C3 Rifleman";
+					description="Takistan Locals 1Plt C3 Rifleman";
 				};
 			};
 		};
@@ -4768,7 +4766,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitGUE_1Plt_DSL";
 					init="GrpGUE_1Plt_Delta = group this; nul = [""sl"",this] execVM ""f\common\@ShackTac_assignGear_delta.sqf"";";
-					description="NAPA 1Plt Delta Squad Leader";
+					description="Takistan Locals 1Plt Delta Squad Leader";
 				};
 				class Item1
 				{
@@ -4781,7 +4779,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitGUE_1Plt_DM";
 					init="GrpGUE_1Plt_Delta = group this; nul = [""m"",this] execVM ""f\common\@ShackTac_assignGear_delta.sqf"";";
-					description="NAPA 1Plt Delta Squad Medic";
+					description="Takistan Locals 1Plt Delta Squad Medic";
 				};
 			};
 		};
@@ -4803,7 +4801,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitGUE_1Plt_D1FTL";
 					init="GrpGUE_1Plt_D1 = group this; nul = [""ftl"",this] execVM ""f\common\@ShackTac_assignGear_delta.sqf"";";
-					description="NAPA 1Plt D1 Fireteam Leader";
+					description="Takistan Locals 1Plt D1 Fireteam Leader";
 				};
 				class Item1
 				{
@@ -4816,7 +4814,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitGUE_1Plt_D1AR";
 					init="GrpGUE_1Plt_D1 = group this; nul = [""ar"",this] execVM ""f\common\@ShackTac_assignGear_delta.sqf"";";
-					description="NAPA 1Plt D1 Automatic Rifleman";
+					description="Takistan Locals 1Plt D1 Automatic Rifleman";
 				};
 				class Item2
 				{
@@ -4828,7 +4826,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitGUE_1Plt_D1AAR";
 					init="GrpGUE_1Plt_D1 = group this; nul = [""aar"",this] execVM ""f\common\@ShackTac_assignGear_delta.sqf"";";
-					description="NAPA 1Plt D1 Assistant Automatic Rifleman";
+					description="Takistan Locals 1Plt D1 Assistant Automatic Rifleman";
 				};
 				class Item3
 				{
@@ -4840,7 +4838,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitGUE_1Plt_D1RAT";
 					init="GrpGUE_1Plt_D1 = group this; nul = [""rat"",this] execVM ""f\common\@ShackTac_assignGear_delta.sqf"";";
-					description="NAPA 1Plt D1 Rifleman (AT)";
+					description="Takistan Locals 1Plt D1 Rifleman (AT)";
 				};
 			};
 		};
@@ -4862,7 +4860,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitGUE_1Plt_D2FTL";
 					init="GrpGUE_1Plt_D2 = group this; nul = [""ftl"",this] execVM ""f\common\@ShackTac_assignGear_delta.sqf"";";
-					description="NAPA 1Plt D2 Fireteam Leader";
+					description="Takistan Locals 1Plt D2 Fireteam Leader";
 				};
 				class Item1
 				{
@@ -4875,7 +4873,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitGUE_1Plt_D2AR";
 					init="GrpGUE_1Plt_D2 = group this; nul = [""ar"",this] execVM ""f\common\@ShackTac_assignGear_delta.sqf"";";
-					description="NAPA 1Plt D2 Automatic Rifleman";
+					description="Takistan Locals 1Plt D2 Automatic Rifleman";
 				};
 				class Item2
 				{
@@ -4887,7 +4885,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitGUE_1Plt_D2AAR";
 					init="GrpGUE_1Plt_D2 = group this; nul = [""aar"",this] execVM ""f\common\@ShackTac_assignGear_delta.sqf"";";
-					description="NAPA 1Plt D2 Assistant Automatic Rifleman";
+					description="Takistan Locals 1Plt D2 Assistant Automatic Rifleman";
 				};
 				class Item3
 				{
@@ -4899,7 +4897,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitGUE_1Plt_D2RAT";
 					init="GrpGUE_1Plt_D2 = group this; nul = [""rat"",this] execVM ""f\common\@ShackTac_assignGear_delta.sqf"";";
-					description="NAPA 1Plt D2 Rifleman (AT)";
+					description="Takistan Locals 1Plt D2 Rifleman (AT)";
 				};
 			};
 		};
@@ -4921,7 +4919,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitGUE_1Plt_D3FTL";
 					init="GrpGUE_1Plt_D3 = group this; nul = [""ftl"",this] execVM ""f\common\@ShackTac_assignGear_delta.sqf"";";
-					description="NAPA 1Plt D3 Fireteam Leader";
+					description="Takistan Locals 1Plt D3 Fireteam Leader";
 				};
 				class Item1
 				{
@@ -4934,7 +4932,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitGUE_1Plt_D3AR";
 					init="GrpGUE_1Plt_D3 = group this; nul = [""ar"",this] execVM ""f\common\@ShackTac_assignGear_delta.sqf"";";
-					description="NAPA 1Plt D3 Automatic Rifleman";
+					description="Takistan Locals 1Plt D3 Automatic Rifleman";
 				};
 				class Item2
 				{
@@ -4946,7 +4944,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitGUE_1Plt_D3AAR";
 					init="GrpGUE_1Plt_D3 = group this; nul = [""aar"",this] execVM ""f\common\@ShackTac_assignGear_delta.sqf"";";
-					description="NAPA 1Plt D3 Assistant Automatic Rifleman";
+					description="Takistan Locals 1Plt D3 Assistant Automatic Rifleman";
 				};
 				class Item3
 				{
@@ -4958,7 +4956,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitGUE_1Plt_D3R";
 					init="GrpGUE_1Plt_D3 = group this; nul = [""r"",this] execVM ""f\common\@ShackTac_assignGear_delta.sqf"";";
-					description="NAPA 1Plt D3 Rifleman";
+					description="Takistan Locals 1Plt D3 Rifleman";
 				};
 			};
 		};
@@ -4980,7 +4978,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitGUE_1Plt_ESL";
 					init="GrpGUE_1Plt_Echo = group this; nul = [""sl"",this] execVM ""f\common\@ShackTac_assignGear_echo.sqf"";";
-					description="NAPA 1Plt Echo Squad Leader";
+					description="Takistan Locals 1Plt Echo Squad Leader";
 				};
 				class Item1
 				{
@@ -4993,7 +4991,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitGUE_1Plt_EM";
 					init="GrpGUE_1Plt_Echo = group this; nul = [""m"",this] execVM ""f\common\@ShackTac_assignGear_echo.sqf"";";
-					description="NAPA 1Plt Echo Squad Medic";
+					description="Takistan Locals 1Plt Echo Squad Medic";
 				};
 			};
 		};
@@ -5015,7 +5013,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitGUE_1Plt_E1FTL";
 					init="GrpGUE_1Plt_E1 = group this; nul = [""ftl"",this] execVM ""f\common\@ShackTac_assignGear_echo.sqf"";";
-					description="NAPA 1Plt E1 Fireteam Leader";
+					description="Takistan Locals 1Plt E1 Fireteam Leader";
 				};
 				class Item1
 				{
@@ -5028,7 +5026,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitGUE_1Plt_E1AR";
 					init="GrpGUE_1Plt_E1 = group this; nul = [""ar"",this] execVM ""f\common\@ShackTac_assignGear_echo.sqf"";";
-					description="NAPA 1Plt E1 Automatic Rifleman";
+					description="Takistan Locals 1Plt E1 Automatic Rifleman";
 				};
 				class Item2
 				{
@@ -5040,7 +5038,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitGUE_1Plt_E1AAR";
 					init="GrpGUE_1Plt_E1 = group this; nul = [""aar"",this] execVM ""f\common\@ShackTac_assignGear_echo.sqf"";";
-					description="NAPA 1Plt E1 Assistant Automatic Rifleman";
+					description="Takistan Locals 1Plt E1 Assistant Automatic Rifleman";
 				};
 				class Item3
 				{
@@ -5052,7 +5050,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitGUE_1Plt_E1RAT";
 					init="GrpGUE_1Plt_E1 = group this; nul = [""rat"",this] execVM ""f\common\@ShackTac_assignGear_echo.sqf"";";
-					description="NAPA 1Plt E1 Rifleman (AT)";
+					description="Takistan Locals 1Plt E1 Rifleman (AT)";
 				};
 			};
 		};
@@ -5074,7 +5072,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitGUE_1Plt_E2FTL";
 					init="GrpGUE_1Plt_E2 = group this; nul = [""ftl"",this] execVM ""f\common\@ShackTac_assignGear_echo.sqf"";";
-					description="NAPA 1Plt E2 Fireteam Leader";
+					description="Takistan Locals 1Plt E2 Fireteam Leader";
 				};
 				class Item1
 				{
@@ -5087,7 +5085,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitGUE_1Plt_E2AR";
 					init="GrpGUE_1Plt_E2 = group this; nul = [""ar"",this] execVM ""f\common\@ShackTac_assignGear_echo.sqf"";";
-					description="NAPA 1Plt E2 Automatic Rifleman";
+					description="Takistan Locals 1Plt E2 Automatic Rifleman";
 				};
 				class Item2
 				{
@@ -5099,7 +5097,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitGUE_1Plt_E2AAR";
 					init="GrpGUE_1Plt_E2 = group this; nul = [""aar"",this] execVM ""f\common\@ShackTac_assignGear_echo.sqf"";";
-					description="NAPA 1Plt E2 Assistant Automatic Rifleman";
+					description="Takistan Locals 1Plt E2 Assistant Automatic Rifleman";
 				};
 				class Item3
 				{
@@ -5111,7 +5109,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitGUE_1Plt_E2RAT";
 					init="GrpGUE_1Plt_E2 = group this; nul = [""rat"",this] execVM ""f\common\@ShackTac_assignGear_echo.sqf"";";
-					description="NAPA 1Plt E2 Rifleman (AT)";
+					description="Takistan Locals 1Plt E2 Rifleman (AT)";
 				};
 			};
 		};
@@ -5133,7 +5131,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitGUE_1Plt_E3FTL";
 					init="GrpGUE_1Plt_E3 = group this; nul = [""ftl"",this] execVM ""f\common\@ShackTac_assignGear_echo.sqf"";";
-					description="NAPA 1Plt E3 Fireteam Leader";
+					description="Takistan Locals 1Plt E3 Fireteam Leader";
 				};
 				class Item1
 				{
@@ -5146,7 +5144,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitGUE_1Plt_E3AR";
 					init="GrpGUE_1Plt_E3 = group this; nul = [""ar"",this] execVM ""f\common\@ShackTac_assignGear_echo.sqf"";";
-					description="NAPA 1Plt E3 Automatic Rifleman";
+					description="Takistan Locals 1Plt E3 Automatic Rifleman";
 				};
 				class Item2
 				{
@@ -5158,7 +5156,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitGUE_1Plt_E3AAR";
 					init="GrpGUE_1Plt_E3 = group this; nul = [""aar"",this] execVM ""f\common\@ShackTac_assignGear_echo.sqf"";";
-					description="NAPA 1Plt E3 Assistant Automatic Rifleman";
+					description="Takistan Locals 1Plt E3 Assistant Automatic Rifleman";
 				};
 				class Item3
 				{
@@ -5170,7 +5168,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitGUE_1Plt_E3R";
 					init="GrpGUE_1Plt_E3 = group this; nul = [""r"",this] execVM ""f\common\@ShackTac_assignGear_echo.sqf"";";
-					description="NAPA 1Plt E3 Rifleman";
+					description="Takistan Locals 1Plt E3 Rifleman";
 				};
 			};
 		};
@@ -5192,7 +5190,7 @@ class Mission
 					skill=0.67817551;
 					text="UnitRU_SF1L";
 					init="GrpRU_SF1 = group this; nul = [""sfl"",this] execVM ""f\common\@ShackTac_assignGear_sf1.sqf"";_null = this addaction [""Add/Remove Silencer"", ""mcc\general_scripts\silencer\silencer.sqf""];";
-					description="Russian SF1 - Leader";
+					description="Takistan Army SF1 - Leader";
 				};
 				class Item1
 				{
@@ -5205,7 +5203,7 @@ class Mission
 					skill=0.62582558;
 					text="UnitRU_SF1Hg";
 					init="GrpRU_SF1 = group this; nul = [""sfhg"",this] execVM ""f\common\@ShackTac_assignGear_sf1.sqf"";_null = this addaction [""Add/Remove Silencer"", ""mcc\general_scripts\silencer\silencer.sqf""];";
-					description="Russian SF1 - Heavy gunner";
+					description="Takistan Army SF1 - Heavy gunner";
 				};
 				class Item2
 				{
@@ -5218,7 +5216,7 @@ class Mission
 					skill=0.60837549;
 					text="UnitRU_SF1R";
 					init="GrpRU_SF1 = group this; nul = [""sfg"",this] execVM ""f\common\@ShackTac_assignGear_sf1.sqf"";_null = this addaction [""Add/Remove Silencer"", ""mcc\general_scripts\silencer\silencer.sqf""];";
-					description="Russian SF1 - Radioman";
+					description="Takistan Army SF1 - Radioman";
 				};
 				class Item3
 				{
@@ -5231,7 +5229,7 @@ class Mission
 					skill=0.60255855;
 					text="UnitRU_SF1M";
 					init="GrpRU_SF1 = group this; nul = [""sfm"",this] execVM ""f\common\@ShackTac_assignGear_sf1.sqf"";_null = this addaction [""Add/Remove Silencer"", ""mcc\general_scripts\silencer\silencer.sqf""];";
-					description="Russian SF1 - Marksman";
+					description="Takistan Army SF1 - Marksman";
 				};
 				class Item4
 				{
@@ -5244,7 +5242,7 @@ class Mission
 					skill=0.53275853;
 					text="UnitRU_SF1S";
 					init="GrpRU_SF1 = group this; nul = [""sfs"",this] execVM ""f\common\@ShackTac_assignGear_sf1.sqf"";_null = this addaction [""Add/Remove Silencer"", ""mcc\general_scripts\silencer\silencer.sqf""];";
-					description="Russian SF1 - Saboteur";
+					description="Takistan Army SF1 - Saboteur";
 				};
 				class Item5
 				{
@@ -5257,7 +5255,7 @@ class Mission
 					skill=0.63745874;
 					text="UnitRU_SF1C";
 					init="GrpRU_SF1 = group this; nul = [""sfc"",this] execVM ""f\common\@ShackTac_assignGear_sf1.sqf"";_null = this addaction [""Add/Remove Silencer"", ""mcc\general_scripts\silencer\silencer.sqf""];";
-					description="Russian SF1 - Corpsman";
+					description="Takistan Army SF1 - Corpsman";
 				};
 			};
 		};
@@ -5279,7 +5277,7 @@ class Mission
 					skill=0.67817551;
 					text="UnitRU_SF2L";
 					init="GrpRU_SF2 = group this; nul = [""sfl"",this] execVM ""f\common\@ShackTac_assignGear_sf2.sqf"";_null = this addaction [""Add/Remove Silencer"", ""mcc\general_scripts\silencer\silencer.sqf""];";
-					description="Russian SF2 - Leader";
+					description="Takistan Army SF2 - Leader";
 				};
 				class Item1
 				{
@@ -5292,7 +5290,7 @@ class Mission
 					skill=0.62582558;
 					text="UnitRU_SF2Hg";
 					init="GrpRU_SF2 = group this; nul = [""sfhg"",this] execVM ""f\common\@ShackTac_assignGear_sf2.sqf"";_null = this addaction [""Add/Remove Silencer"", ""mcc\general_scripts\silencer\silencer.sqf""];";
-					description="Russian SF2 - Heavy gunner";
+					description="Takistan Army SF2 - Heavy gunner";
 				};
 				class Item2
 				{
@@ -5305,7 +5303,7 @@ class Mission
 					skill=0.60837549;
 					text="UnitRU_SF2R";
 					init="GrpRU_SF2 = group this; nul = [""sfg"",this] execVM ""f\common\@ShackTac_assignGear_sf2.sqf"";_null = this addaction [""Add/Remove Silencer"", ""mcc\general_scripts\silencer\silencer.sqf""];";
-					description="Russian SF2 - Radioman";
+					description="Takistan Army SF2 - Radioman";
 				};
 				class Item3
 				{
@@ -5318,7 +5316,7 @@ class Mission
 					skill=0.60255855;
 					text="UnitRU_SF2M";
 					init="GrpRU_SF2 = group this; nul = [""sfm"",this] execVM ""f\common\@ShackTac_assignGear_sf2.sqf"";_null = this addaction [""Add/Remove Silencer"", ""mcc\general_scripts\silencer\silencer.sqf""];";
-					description="Russian SF2 - Marksman";
+					description="Takistan Army SF2 - Marksman";
 				};
 				class Item4
 				{
@@ -5331,7 +5329,7 @@ class Mission
 					skill=0.53275853;
 					text="UnitRU_SF2S";
 					init="GrpRU_SF2 = group this; nul = [""sfs"",this] execVM ""f\common\@ShackTac_assignGear_sf2.sqf"";_null = this addaction [""Add/Remove Silencer"", ""mcc\general_scripts\silencer\silencer.sqf""];";
-					description="Russian SF2 - Saboteur";
+					description="Takistan Army SF2 - Saboteur";
 				};
 				class Item5
 				{
@@ -5344,7 +5342,7 @@ class Mission
 					skill=0.63745874;
 					text="UnitRU_SF2C";
 					init="GrpRU_SF2 = group this; nul = [""sfc"",this] execVM ""f\common\@ShackTac_assignGear_sf2.sqf"";_null = this addaction [""Add/Remove Silencer"", ""mcc\general_scripts\silencer\silencer.sqf""];";
-					description="Russian SF2 - Corpsman";
+					description="Takistan Army SF2 - Corpsman";
 				};
 			};
 		};
@@ -5366,7 +5364,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitRU_FLC";
 					init="GrpRU_Foxtrot_Lead = group this;";
-					description="Russian Foxtrot Lead Commander";
+					description="Takistan Army Foxtrot Lead Commander";
 				};
 				class Item1
 				{
@@ -5379,7 +5377,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitRU_FLG";
 					init="GrpRU_Foxtrot_Lead = group this;";
-					description="Russian Foxtrot Lead Gunner";
+					description="Takistan Army Foxtrot Lead Gunner";
 				};
 				class Item2
 				{
@@ -5391,7 +5389,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitRU_FLD";
 					init="GrpRU_Foxtrot_Lead = group this;";
-					description="Russian Foxtrot Lead Driver";
+					description="Takistan Army Foxtrot Lead Driver";
 				};
 			};
 		};
@@ -5413,7 +5411,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitRU_F1C";
 					init="GrpRU_Foxtrot_1 = group this;";
-					description="Russian Foxtrot1 Commander";
+					description="Takistan Army Foxtrot1 Commander";
 				};
 				class Item1
 				{
@@ -5426,7 +5424,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitRU_F1G";
 					init="GrpRU_Foxtrot_1 = group this;";
-					description="Russian Foxtrot1 Gunner";
+					description="Takistan Army Foxtrot1 Gunner";
 				};
 				class Item2
 				{
@@ -5438,7 +5436,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitRU_F1D";
 					init="GrpRU_Foxtrot_1 = group this;";
-					description="Russian Foxtrot1 Driver";
+					description="Takistan Army Foxtrot1 Driver";
 				};
 			};
 		};
@@ -5460,7 +5458,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitRU_F2C";
 					init="GrpRU_Foxtrot_2 = group this;";
-					description="Russian Foxtrot2 Commander";
+					description="Takistan Army Foxtrot2 Commander";
 				};
 				class Item1
 				{
@@ -5473,7 +5471,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitRU_F2G";
 					init="GrpRU_Foxtrot_2 = group this;";
-					description="Russian Foxtrot2 Gunner";
+					description="Takistan Army Foxtrot2 Gunner";
 				};
 				class Item2
 				{
@@ -5485,7 +5483,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitRU_F2D";
 					init="GrpRU_Foxtrot_2 = group this;";
-					description="Russian Foxtrot2 Driver";
+					description="Takistan Army Foxtrot2 Driver";
 				};
 			};
 		};
@@ -5507,7 +5505,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitRU_F3C";
 					init="GrpRU_Foxtrot_3 = group this;";
-					description="Russian Foxtrot3 Commander";
+					description="Takistan Army Foxtrot3 Commander";
 				};
 				class Item1
 				{
@@ -5520,7 +5518,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitRU_F3G";
 					init="GrpRU_Foxtrot_3 = group this;";
-					description="Russian Foxtrot3 Gunner";
+					description="Takistan Army Foxtrot3 Gunner";
 				};
 				class Item2
 				{
@@ -5532,7 +5530,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitRU_F3D";
 					init="GrpRU_Foxtrot_3 = group this;";
-					description="Russian Foxtrot3 Driver";
+					description="Takistan Army Foxtrot3 Driver";
 				};
 			};
 		};
@@ -5809,7 +5807,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitUSMC_DM1";
 					init="GrpUSMC_DM1 = group this; nul = [""dm"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="USMC Designated Marksman 1";
+					description="US Designated Marksman 1";
 				};
 			};
 		};
@@ -5831,7 +5829,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitUSMC_DM2";
 					init="GrpUSMC_DM2 = group this; nul = [""dm"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="USMC Designated Marksman 2";
+					description="US Designated Marksman 2";
 				};
 			};
 		};
@@ -5853,7 +5851,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitUSMC_DM3";
 					init="GrpUSMC_DM3 = group this; nul = [""dm"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="USMC Designated Marksman 3";
+					description="US Designated Marksman 3";
 				};
 			};
 		};
@@ -5875,7 +5873,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitRU_DM1";
 					init="GrpRU_DM1 = group this; nul = [""dm"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="Russian Designated Marksman 1";
+					description="Takistan Army Designated Marksman 1";
 				};
 			};
 		};
@@ -5897,7 +5895,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitRU_DM2";
 					init="GrpRU_DM2 = group this; nul = [""dm"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="Russian Designated Marksman 2";
+					description="Takistan Army Designated Marksman 2";
 				};
 			};
 		};
@@ -5919,7 +5917,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitRU_DM3";
 					init="GrpRU_DM3 = group this; nul = [""dm"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="Russian Designated Marksman 3";
+					description="Takistan Army Designated Marksman 3";
 				};
 			};
 		};
@@ -5941,7 +5939,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitGUE_HMG1G";
 					init="GrpGUE_HMG1 = group this; nul = [""hmgg"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="NAPA Heavy MG Team 1 Gunner";
+					description="Takistan Locals Heavy MG Team 1 Gunner";
 				};
 				class Item1
 				{
@@ -5953,7 +5951,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitGUE_HMG1AG";
 					init="GrpGUE_HMG1 = group this; nul = [""hmgag"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="NAPA Heavy MG Team 1 Assistant Gunner";
+					description="Takistan Locals Heavy MG Team 1 Assistant Gunner";
 				};
 				class Item2
 				{
@@ -5965,7 +5963,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitGUE_HMG1AM";
 					init="GrpGUE_HMG1 = group this; nul = [""hmgam"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="NAPA Heavy MG Team 1 Ammo Man";
+					description="Takistan Locals Heavy MG Team 1 Ammo Man";
 				};
 			};
 		};
@@ -5987,7 +5985,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitGUE_HMG2G";
 					init="GrpGUE_HMG2 = group this; nul = [""hmgg"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="NAPA Heavy MG Team 2 Gunner";
+					description="Takistan Locals Heavy MG Team 2 Gunner";
 				};
 				class Item1
 				{
@@ -5999,7 +5997,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitGUE_HMG2AG";
 					init="GrpGUE_HMG2 = group this; nul = [""hmgag"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="NAPA Heavy MG Team 2 Assistant Gunner";
+					description="Takistan Locals Heavy MG Team 2 Assistant Gunner";
 				};
 				class Item2
 				{
@@ -6011,7 +6009,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitGUE_HMG2AM";
 					init="GrpGUE_HMG2 = group this; nul = [""hmgam"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="NAPA Heavy MG Team 2 Ammo Man";
+					description="Takistan Locals Heavy MG Team 2 Ammo Man";
 				};
 			};
 		};
@@ -6033,7 +6031,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitGUE_HMG3G";
 					init="GrpGUE_HMG3 = group this; nul = [""hmgg"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="NAPA Heavy MG Team 3 Gunner";
+					description="Takistan Locals Heavy MG Team 3 Gunner";
 				};
 				class Item1
 				{
@@ -6045,7 +6043,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitGUE_HMG3AG";
 					init="GrpGUE_HMG3 = group this; nul = [""hmgag"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="NAPA Heavy MG Team 3 Assistant Gunner";
+					description="Takistan Locals Heavy MG Team 3 Assistant Gunner";
 				};
 				class Item2
 				{
@@ -6057,7 +6055,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitGUE_HMG3AM";
 					init="GrpGUE_HMG3 = group this; nul = [""hmgam"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="NAPA Heavy MG Team 3 Ammo Man";
+					description="Takistan Locals Heavy MG Team 3 Ammo Man";
 				};
 			};
 		};
@@ -6079,7 +6077,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitGUE_MAT1G";
 					init="GrpGUE_MAT1 = group this; nul = [""matg"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="NAPA Medium AT Team 1 Gunner";
+					description="Takistan Locals Medium AT Team 1 Gunner";
 				};
 				class Item1
 				{
@@ -6091,7 +6089,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitGUE_MAT1AG";
 					init="GrpGUE_MAT1 = group this; nul = [""matag"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="NAPA Medium AT Team 1 Assistant Gunner";
+					description="Takistan Locals Medium AT Team 1 Assistant Gunner";
 				};
 				class Item2
 				{
@@ -6103,7 +6101,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitGUE_MAT1AM";
 					init="GrpGUE_MAT1 = group this; nul = [""matam"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="NAPA Medium AT Team 1 Ammo Man";
+					description="Takistan Locals Medium AT Team 1 Ammo Man";
 				};
 			};
 		};
@@ -6125,7 +6123,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitGUE_MAT2G";
 					init="GrpGUE_MAT2 = group this; nul = [""matg"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="NAPA Medium AT Team 2 Gunner";
+					description="Takistan Locals Medium AT Team 2 Gunner";
 				};
 				class Item1
 				{
@@ -6137,7 +6135,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitGUE_MAT2AG";
 					init="GrpGUE_MAT2 = group this; nul = [""matag"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="NAPA Medium AT Team 2 Assistant Gunner";
+					description="Takistan Locals Medium AT Team 2 Assistant Gunner";
 				};
 				class Item2
 				{
@@ -6149,7 +6147,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitGUE_MAT2AM";
 					init="GrpGUE_MAT2 = group this; nul = [""matam"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="NAPA Medium AT Team 2 Ammo Man";
+					description="Takistan Locals Medium AT Team 2 Ammo Man";
 				};
 			};
 		};
@@ -6171,7 +6169,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitGUE_MAT3G";
 					init="GrpGUE_MAT3 = group this; nul = [""matg"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="NAPA Medium AT Team 3 Gunner";
+					description="Takistan Locals Medium AT Team 3 Gunner";
 				};
 				class Item1
 				{
@@ -6183,7 +6181,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitGUE_MAT3AG";
 					init="GrpGUE_MAT3 = group this; nul = [""matag"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="NAPA Medium AT Team 3 Assistant Gunner";
+					description="Takistan Locals Medium AT Team 3 Assistant Gunner";
 				};
 				class Item2
 				{
@@ -6195,7 +6193,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitGUE_MAT3AM";
 					init="GrpGUE_MAT3 = group this; nul = [""matam"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="NAPA Medium AT Team 3 Ammo Man";
+					description="Takistan Locals Medium AT Team 3 Ammo Man";
 				};
 			};
 		};
@@ -6217,7 +6215,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitGUE_HAT1G";
 					init="GrpGUE_HAT1 = group this; nul = [""hatg"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="NAPA Heavy AT Team 1 Gunner";
+					description="Takistan Locals Heavy AT Team 1 Gunner";
 				};
 				class Item1
 				{
@@ -6229,7 +6227,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitGUE_HAT1AG";
 					init="GrpGUE_HAT1 = group this; nul = [""hatag"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="NAPA Heavy AT Team 1 Assistant Gunner";
+					description="Takistan Locals Heavy AT Team 1 Assistant Gunner";
 				};
 				class Item2
 				{
@@ -6241,7 +6239,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitGUE_HAT1AM";
 					init="GrpGUE_HAT1 = group this; nul = [""hatam"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="NAPA Heavy AT Team 1 Ammo Man";
+					description="Takistan Locals Heavy AT Team 1 Ammo Man";
 				};
 			};
 		};
@@ -6263,7 +6261,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitGUE_HAT2G";
 					init="GrpGUE_HAT2 = group this; nul = [""hatg"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="NAPA Heavy AT Team 2 Gunner";
+					description="Takistan Locals Heavy AT Team 2 Gunner";
 				};
 				class Item1
 				{
@@ -6275,7 +6273,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitGUE_HAT2AG";
 					init="GrpGUE_HAT2 = group this; nul = [""hatag"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="NAPA Heavy AT Team 2 Assistant Gunner";
+					description="Takistan Locals Heavy AT Team 2 Assistant Gunner";
 				};
 				class Item2
 				{
@@ -6287,7 +6285,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitGUE_HAT2AM";
 					init="GrpGUE_HAT2 = group this; nul = [""hatam"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="NAPA Heavy AT Team 2 Ammo Man";
+					description="Takistan Locals Heavy AT Team 2 Ammo Man";
 				};
 			};
 		};
@@ -6309,7 +6307,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitGUE_HAT3G";
 					init="GrpGUE_HAT3 = group this; nul = [""hatg"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="NAPA Heavy AT Team 3 Gunner";
+					description="Takistan Locals Heavy AT Team 3 Gunner";
 				};
 				class Item1
 				{
@@ -6321,7 +6319,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitGUE_HAT3AG";
 					init="GrpGUE_HAT3 = group this; nul = [""hatag"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="NAPA Heavy AT Team 3 Assistant Gunner";
+					description="Takistan Locals Heavy AT Team 3 Assistant Gunner";
 				};
 				class Item2
 				{
@@ -6333,7 +6331,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitGUE_HAT3AM";
 					init="GrpGUE_HAT3 = group this; nul = [""hatam"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="NAPA Heavy AT Team 3 Ammo Man";
+					description="Takistan Locals Heavy AT Team 3 Ammo Man";
 				};
 			};
 		};
@@ -6355,7 +6353,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitGUE_ST1SN";
 					init="GrpGUE_ST1 = group this; nul = [""sn"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="NAPA Sniper Team 1 Sniper";
+					description="Takistan Locals Sniper Team 1 Sniper";
 				};
 				class Item1
 				{
@@ -6367,7 +6365,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitGUE_ST1SP";
 					init="GrpGUE_ST1 = group this; nul = [""sp"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="NAPA Sniper Team 1 Spotter";
+					description="Takistan Locals Sniper Team 1 Spotter";
 				};
 			};
 		};
@@ -6389,7 +6387,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitGUE_MMG1G";
 					init="GrpGUE_MMG1 = group this; nul = [""mmgg"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="NAPA Medium MG Team 1 Gunner";
+					description="Takistan Locals Medium MG Team 1 Gunner";
 				};
 				class Item1
 				{
@@ -6401,7 +6399,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitGUE_MMG1AG";
 					init="GrpGUE_MMG1 = group this; nul = [""mmgag"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="NAPA Medium MG Team 1 Assistant Gunner";
+					description="Takistan Locals Medium MG Team 1 Assistant Gunner";
 				};
 				class Item2
 				{
@@ -6413,7 +6411,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitGUE_MMG1AM";
 					init="GrpGUE_MMG1 = group this; nul = [""mmgam"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="NAPA Medium MG Team 1 Ammo Man";
+					description="Takistan Locals Medium MG Team 1 Ammo Man";
 				};
 			};
 		};
@@ -6435,7 +6433,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitGUE_MMG2G";
 					init="GrpGUE_MMG2 = group this; nul = [""mmgg"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="NAPA Medium MG Team 2 Gunner";
+					description="Takistan Locals Medium MG Team 2 Gunner";
 				};
 				class Item1
 				{
@@ -6447,7 +6445,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitGUE_MMG2AG";
 					init="GrpGUE_MMG2 = group this; nul = [""mmgag"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="NAPA Medium MG Team 2 Assistant Gunner";
+					description="Takistan Locals Medium MG Team 2 Assistant Gunner";
 				};
 				class Item2
 				{
@@ -6459,7 +6457,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitGUE_MMG2AM";
 					init="GrpGUE_MMG2 = group this; nul = [""mmgam"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="NAPA Medium MG Team 2 Ammo Man";
+					description="Takistan Locals Medium MG Team 2 Ammo Man";
 				};
 			};
 		};
@@ -6481,7 +6479,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitGUE_MMG3G";
 					init="GrpGUE_MMG3 = group this; nul = [""mmgg"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="NAPA Medium MG Team 3 Gunner";
+					description="Takistan Locals Medium MG Team 3 Gunner";
 				};
 				class Item1
 				{
@@ -6493,7 +6491,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitGUE_MMG3AG";
 					init="GrpGUE_MMG3 = group this; nul = [""mmgag"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="NAPA Medium MG Team 3 Assistant Gunner";
+					description="Takistan Locals Medium MG Team 3 Assistant Gunner";
 				};
 				class Item2
 				{
@@ -6505,7 +6503,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitGUE_MMG3AM";
 					init="GrpGUE_MMG3 = group this; nul = [""mmgam"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="NAPA Medium MG Team 3 Ammo Man";
+					description="Takistan Locals Medium MG Team 3 Ammo Man";
 				};
 			};
 		};
@@ -6527,7 +6525,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitGUE_FLC";
 					init="GrpGUE_Foxtrot_Lead = group this;";
-					description="NAPA Foxtrot Lead Commander";
+					description="Takistan Locals Foxtrot Lead Commander";
 				};
 				class Item1
 				{
@@ -6539,7 +6537,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitGUE_FLD";
 					init="GrpGUE_Foxtrot_Lead = group this;";
-					description="NAPA Foxtrot Lead Driver";
+					description="Takistan Locals Foxtrot Lead Driver";
 				};
 				class Item2
 				{
@@ -6552,7 +6550,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitGUE_FLG";
 					init="GrpGUE_Foxtrot_Lead = group this;";
-					description="NAPA Foxtrot Lead Gunner";
+					description="Takistan Locals Foxtrot Lead Gunner";
 				};
 			};
 		};
@@ -6574,7 +6572,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitGUE_F1C";
 					init="GrpGUE_Foxtrot_1 = group this;";
-					description="NAPA Foxtrot1 Commander";
+					description="Takistan Locals Foxtrot1 Commander";
 				};
 				class Item1
 				{
@@ -6586,7 +6584,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitGUE_F1D";
 					init="GrpGUE_Foxtrot_1 = group this;";
-					description="NAPA Foxtrot1 Driver";
+					description="Takistan Locals Foxtrot1 Driver";
 				};
 				class Item2
 				{
@@ -6599,7 +6597,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitGUE_F1G";
 					init="GrpGUE_Foxtrot_1 = group this;";
-					description="NAPA Foxtrot1 Gunner";
+					description="Takistan Locals Foxtrot1 Gunner";
 				};
 			};
 		};
@@ -6621,7 +6619,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitGUE_F2C";
 					init="GrpGUE_Foxtrot_2 = group this;";
-					description="NAPA Foxtrot2 Commander";
+					description="Takistan Locals Foxtrot2 Commander";
 				};
 				class Item1
 				{
@@ -6633,7 +6631,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitGUE_F2D";
 					init="GrpGUE_Foxtrot_2 = group this;";
-					description="NAPA Foxtrot2 Driver";
+					description="Takistan Locals Foxtrot2 Driver";
 				};
 				class Item2
 				{
@@ -6646,7 +6644,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitGUE_F2G";
 					init="GrpGUE_Foxtrot_2 = group this;";
-					description="NAPA Foxtrot2 Gunner";
+					description="Takistan Locals Foxtrot2 Gunner";
 				};
 			};
 		};
@@ -6668,7 +6666,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitGUE_F3C";
 					init="GrpGUE_Foxtrot_3 = group this;";
-					description="NAPA Foxtrot3 Commander";
+					description="Takistan Locals Foxtrot3 Commander";
 				};
 				class Item1
 				{
@@ -6680,7 +6678,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitGUE_F3D";
 					init="GrpGUE_Foxtrot_3 = group this;";
-					description="NAPA Foxtrot3 Driver";
+					description="Takistan Locals Foxtrot3 Driver";
 				};
 				class Item2
 				{
@@ -6693,7 +6691,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitGUE_F3G";
 					init="GrpGUE_Foxtrot_3 = group this;";
-					description="NAPA Foxtrot3 Gunner";
+					description="Takistan Locals Foxtrot3 Gunner";
 				};
 			};
 		};
@@ -6715,7 +6713,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitGUE_GLP";
 					init="GrpGUE_Golf_Lead = group this; this addweapon ""ACE_ParachuteRoundPack""; this addweapon ""ACE_Flaregun""; {this addmagazine ""ACE_SSRed_FG"";} foreach [1,2];  {this addmagazine ""ACE_SSGreen_FG"";} foreach [1,2];  {this addmagazine ""ACE_Bandage"";} foreach [1,2]; ";
-					description="NAPA Golf Lead Pilot";
+					description="Takistan Locals Golf Lead Pilot";
 				};
 				class Item1
 				{
@@ -6728,7 +6726,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitGUE_GLG";
 					init="GrpGUE_Golf_Lead = group this; this addweapon ""ACE_ParachuteRoundPack""; this addweapon ""ACE_Flaregun""; {this addmagazine ""ACE_SSRed_FG"";} foreach [1,2];  {this addmagazine ""ACE_SSGreen_FG"";} foreach [1,2];  {this addmagazine ""ACE_Bandage"";} foreach [1,2]; ";
-					description="NAPA Golf Lead Gunner";
+					description="Takistan Locals Golf Lead Gunner";
 				};
 			};
 		};
@@ -6750,7 +6748,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitGUE_G1P";
 					init="GrpGUE_Golf_1 = group this; this addweapon ""ACE_ParachuteRoundPack""; this addweapon ""ACE_Flaregun""; {this addmagazine ""ACE_SSRed_FG"";} foreach [1,2];  {this addmagazine ""ACE_SSGreen_FG"";} foreach [1,2];  {this addmagazine ""ACE_Bandage"";} foreach [1,2]; ";
-					description="NAPA Golf1 Pilot";
+					description="Takistan Locals Golf1 Pilot";
 				};
 				class Item1
 				{
@@ -6763,7 +6761,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitGUE_G1G";
 					init="GrpGUE_Golf_1 = group this; this addweapon ""ACE_ParachuteRoundPack""; this addweapon ""ACE_Flaregun""; {this addmagazine ""ACE_SSRed_FG"";} foreach [1,2];  {this addmagazine ""ACE_SSGreen_FG"";} foreach [1,2];  {this addmagazine ""ACE_Bandage"";} foreach [1,2]; ";
-					description="NAPA Golf1 Gunner";
+					description="Takistan Locals Golf1 Gunner";
 				};
 			};
 		};
@@ -6785,7 +6783,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitGUE_G2P";
 					init="GrpGUE_Golf_2 = group this; this addweapon ""ACE_ParachuteRoundPack""; this addweapon ""ACE_Flaregun""; {this addmagazine ""ACE_SSRed_FG"";} foreach [1,2];  {this addmagazine ""ACE_SSGreen_FG"";} foreach [1,2];  {this addmagazine ""ACE_Bandage"";} foreach [1,2]; ";
-					description="NAPA Golf2 Pilot";
+					description="Takistan Locals Golf2 Pilot";
 				};
 				class Item1
 				{
@@ -6798,7 +6796,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitGUE_G2G";
 					init="GrpGUE_Golf_2 = group this; this addweapon ""ACE_ParachuteRoundPack""; this addweapon ""ACE_Flaregun""; {this addmagazine ""ACE_SSRed_FG"";} foreach [1,2];  {this addmagazine ""ACE_SSGreen_FG"";} foreach [1,2];  {this addmagazine ""ACE_Bandage"";} foreach [1,2]; ";
-					description="NAPA Golf2 Gunner";
+					description="Takistan Locals Golf2 Gunner";
 				};
 			};
 		};
@@ -6820,7 +6818,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitGUE_G3P";
 					init="GrpGUE_Golf_3 = group this; this addweapon ""ACE_ParachuteRoundPack""; this addweapon ""ACE_Flaregun""; {this addmagazine ""ACE_SSRed_FG"";} foreach [1,2];  {this addmagazine ""ACE_SSGreen_FG"";} foreach [1,2];  {this addmagazine ""ACE_Bandage"";} foreach [1,2]; ";
-					description="NAPA Golf3 Pilot";
+					description="Takistan Locals Golf3 Pilot";
 				};
 				class Item1
 				{
@@ -6833,7 +6831,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitGUE_G3G";
 					init="GrpGUE_Golf_3 = group this; this addweapon ""ACE_ParachuteRoundPack""; this addweapon ""ACE_Flaregun""; {this addmagazine ""ACE_SSRed_FG"";} foreach [1,2];  {this addmagazine ""ACE_SSGreen_FG"";} foreach [1,2];  {this addmagazine ""ACE_Bandage"";} foreach [1,2]; ";
-					description="NAPA Golf3 Gunner";
+					description="Takistan Locals Golf3 Gunner";
 				};
 			};
 		};
@@ -6855,7 +6853,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitGUE_DM1";
 					init="GrpGUE_DM1 = group this; nul = [""dm"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="NAPA Designated Marksman 1";
+					description="Takistan Locals Designated Marksman 1";
 				};
 			};
 		};
@@ -6877,7 +6875,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitGUE_DM2";
 					init="GrpGUE_DM2 = group this; nul = [""dm"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="NAPA Designated Marksman 2";
+					description="Takistan Locals Designated Marksman 2";
 				};
 			};
 		};
@@ -6899,7 +6897,7 @@ class Mission
 					skill=0.60000002;
 					text="UnitGUE_DM3";
 					init="GrpGUE_DM3 = group this; nul = [""dm"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";";
-					description="NAPA Designated Marksman 3";
+					description="Takistan Locals Designated Marksman 3";
 				};
 			};
 		};

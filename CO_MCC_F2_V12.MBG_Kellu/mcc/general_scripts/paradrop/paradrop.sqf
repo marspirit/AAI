@@ -22,8 +22,7 @@ _c130 animate ["ramp_top",1];
 _c130 setposasl [position c130_para select 0,position c130_para select 1,2520];
 _c130 enableSimulation false;
 
-paradrop = true; 
-publicvariable "paradrop";
+["sf_para", [mpos]] call CBA_fnc_globalEvent;
 
 [] spawn {n = 0; while {true} do {sleep 0.01; c130_para setvectorup [(sin n)/36,(sin n)/36,1];n = n + random 1;}};
 

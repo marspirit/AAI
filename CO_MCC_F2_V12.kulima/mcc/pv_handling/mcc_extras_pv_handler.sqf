@@ -9,6 +9,8 @@ trap_area = compile preProcessFileLineNumbers "mcc\general_scripts\traps\put_tra
 sb_bomber = compile preProcessFileLineNumbers "mcc\general_scripts\traps\put_suicidebomber.sqf";
 hostage_req = compile preProcessFileLineNumbers "mcc\general_scripts\hostages\create_hostage.sqf";
 arty_site = compile preProcessFileLineNumbers "mcc\general_scripts\arty_site\create_arty_site.sqf";
+sf_para = compile preProcessFileLineNumbers "mcc\general_scripts\paradrop\parastart.sqf";
+["sf_para", {[(_this select 0)] spawn sf_para}] call CBA_fnc_addEventHandler; 
 
 if (isServer) then
 {
