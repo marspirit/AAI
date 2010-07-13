@@ -334,3 +334,5 @@ trapdistance=4;
 trapsnumber=5;
 iedside=west;
 trapvolume="at";
+//=============================<MCC convoy ==================================
+isvip=0;  

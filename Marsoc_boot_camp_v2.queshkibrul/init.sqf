@@ -1,35 +1,8 @@
 //===============================R3F Arty & Log ====================================
 #include "R3F_ARTY_AND_LOG\init.sqf"
 // ====================================================================================
-nopop = true;
-doojiptaskarray = [];
-doojipsucceededarray = [];
 
-launchskeet = false;
-[] spawn {
-	while {true} do {
-		waituntil {launchskeet};
-		launchskeet = false;
-		[] spawn {
-			private ["_v", "_vel", "_i"];
-			_v = "SkeetDisk" createvehicle getpos skeetmachine;
-			_v setpos (skeetmachine modeltoworld [0, -0.6]);
-			_v setvelocity [-9 * sin getdir skeetmachine, -9 * cos getdir skeetmachine, 10 + random 2];
-			sleep 1;
-			_vel = velocity _v;
-			_i = 0;
-			while {getpos _v select 2 > 0.1 and alive _v} do {
-				_v setvelocity [(_vel select 0) / (1 + (_i / 10)), (_vel select 1) / (1 + (_i / 10)), (_vel select 2) / (1 + _i)];
-				_i = _i + 0.1;
-				sleep 0.1;
-			};
-			deletevehicle _v;
-		};
-	};
-};
 
-cqb_trig = true;
-binf_trig = 0;
 // ====================================================================================
 
 // F2 - Process ParamsArray
@@ -341,6 +314,7 @@ nul=[] execVM "mcc\pv_handling\mcc_pv_handler.sqf";
 nul=[] execVM "mcc\pv_handling\mcc_extras_pv_handler.sqf";
 
 //==========================Bon Artillery ===================
+waitUntil { !(isnil ("f_param_arty"))  };
 HW_arti_number_shells_per_hour = f_param_arty; // Number rounds per hour
 [] execVM "bon_artillery\bon_arti_init.sqf";
 //===============================Arrestinggear by Tusken Raider=====================
@@ -360,3 +334,5 @@ trapdistance=4;
 trapsnumber=5;
 iedside=west;
 trapvolume="at";
+//=============================<MCC convoy ==================================
+isvip=0;  

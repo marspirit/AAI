@@ -26,6 +26,7 @@ _MenuStructureArray =
 		 [ ["Item", "Spawn on LHD >"], ["SubMenu", "LHD"] ],
 		 [ ["Item", "Artillery >"], ["SubMenu", "Artillery"] ],
 	     [ ["Item", "Booby Traps >"], ["SubMenu", "traps"] ],
+		 [ ["Item", "Convoy Generator >"], ["SubMenu", "convoy"] ],
 //        [ ["Item", "Safe/load             >"], ["SubMenu", "Safeload"] ],
 		 [ ["Item", "-"] ],
          [ ["Item", "Logout as Mission Maker"], ["Action", "mcc_resetmissionmaker=true;nul=[0] execVM 'mcc\general_scripts\mcc_SpawnStuff.sqf';"] ]         
@@ -689,24 +690,164 @@ _MenuStructureArray =
 		 [ ["Item", "Civilian - Businessman"], ["Action", "hostage = ""Functionary1""; nul=[3] execVM 'mcc\general_scripts\hostages\hostage_request.sqf';"] ],
 		 [ ["Item", "Civilian - Policeman"], ["Action", "hostage = ""Policeman""; nul=[3] execVM 'mcc\general_scripts\hostages\hostage_request.sqf';"] ],
 		 [ ["Item", "Civilian - Priest"], ["Action", "hostage = ""Priest""; nul=[3] execVM 'mcc\general_scripts\hostages\hostage_request.sqf';"] ],
-		 [ ["Item", "Civilian - Rocker"], ["Action", "hostage = ""RU_Rocker1""; nul=[3] execVM 'mcc\general_scripts\hostages\hostage_request.sqf';"] ],
-		 [ ["Item", "Civilian - Damsel"], ["Action", "hostage = ""Damsel1""; nul=[3] execVM 'mcc\general_scripts\hostages\hostage_request.sqf';"] ],
 		 [ ["Item", "Civilian - Hooker"], ["Action", "hostage = ""Hooker1""; nul=[3] execVM 'mcc\general_scripts\hostages\hostage_request.sqf';"] ],
-		  [ ["Item", "Civilian - Secretary"], ["Action", "hostage = ""RU_Secretary1""; nul=[3] execVM 'mcc\general_scripts\hostages\hostage_request.sqf';"] ],
-		  [ ["Item", "Insurgent - Boss"], ["Action", "hostage = ""Ins_Lopotev""; nul=[3] execVM 'mcc\general_scripts\hostages\hostage_request.sqf';"] ],
+		 [ ["Item", "Civilian - Secretary"], ["Action", "hostage = ""RU_Secretary1""; nul=[3] execVM 'mcc\general_scripts\hostages\hostage_request.sqf';"] ],
+		 [ ["Item", "Insurgent - Boss"], ["Action", "hostage = ""Ins_Lopotev""; nul=[3] execVM 'mcc\general_scripts\hostages\hostage_request.sqf';"] ],
 		 [ ["Item", "Insurgent - Warlord"], ["Action", "hostage = ""Ins_Bardak""; nul=[3] execVM 'mcc\general_scripts\hostages\hostage_request.sqf';"] ],
-		  [ ["Item", "Resistance - Warlord"], ["Action", "hostage = ""GUE_Commander""; nul=[3] execVM 'mcc\general_scripts\hostages\hostage_request.sqf';"] ],
+		 [ ["Item", "Resistance - Warlord"], ["Action", "hostage = ""GUE_Commander""; nul=[3] execVM 'mcc\general_scripts\hostages\hostage_request.sqf';"] ],
+		 [ ["Item", "UN - Officer"], ["Action", "hostage = ""UN_CDF_Soldier_Officer_EP1""; nul=[3] execVM 'mcc\general_scripts\hostages\hostage_request.sqf';"] ],
+		 [ ["Item", "Takistan army - officer"], ["Action", "hostage = ""TK_Commander_EP1""; nul=[3] execVM 'mcc\general_scripts\hostages\hostage_request.sqf';"] ],
+		 [ ["Item", "Takistan locals - Warlord"], ["Action", "hostage = ""TK_GUE_Warlord_EP1""; nul=[3] execVM 'mcc\general_scripts\hostages\hostage_request.sqf';"] ],
 		 [ ["Item", "USMC - SF soldier1"], ["Action", "hostage = ""FR_GL""; nul=[3] execVM 'mcc\general_scripts\hostages\hostage_request.sqf';"] ],
 		 [ ["Item", "USMC - SF soldier2"], ["Action", "hostage = ""FR_Corpsman""; nul=[3] execVM 'mcc\general_scripts\hostages\hostage_request.sqf';"] ],
 		 [ ["Item", "USMC - SF Commander"], ["Action", "hostage = ""FR_Commander""; nul=[3] execVM 'mcc\general_scripts\hostages\hostage_request.sqf';"] ],
-		  [ ["Item", "USMC -  soldier1"], ["Action", "hostage = ""USMC_SoldierS_Engineer""; nul=[3] execVM 'mcc\general_scripts\hostages\hostage_request.sqf';"] ],
-		  [ ["Item", "USMC -  soldier2"], ["Action", "hostage = ""FR_Assault_GL""; nul=[3] execVM 'mcc\general_scripts\hostages\hostage_request.sqf';"] ],
-		   [ ["Item", "USMC -  pilot"], ["Action", "hostage = ""USMC_Soldier_Pilot""; nul=[3] execVM 'mcc\general_scripts\hostages\hostage_request.sqf';"] ]
+		 [ ["Item", "USMC -  soldier1"], ["Action", "hostage = ""USMC_SoldierS_Engineer""; nul=[3] execVM 'mcc\general_scripts\hostages\hostage_request.sqf';"] ],
+		 [ ["Item", "USMC -  soldier2"], ["Action", "hostage = ""FR_Assault_GL""; nul=[3] execVM 'mcc\general_scripts\hostages\hostage_request.sqf';"] ],
+		 [ ["Item", "USMC -  pilot"], ["Action", "hostage = ""USMC_Soldier_Pilot""; nul=[3] execVM 'mcc\general_scripts\hostages\hostage_request.sqf';"] ]
 
         ]        
       ]
     ]
   ],
+  
+//===================================================Convoy Generator ===========================================================================================
+ //Convoy Generator
+ ["Convoy",
+    [
+      ["convoy", "Convoy Generator"],
+      ["Items",
+        [
+          
+          [ ["Item", "Car 1 >"], ["SubMenu", "car_1"] ],
+		  [ ["Item", "Car 1a >"], ["SubMenu", "car_1a"] ],
+		  [ ["Item", "Car 2 >"], ["SubMenu", "car_2"] ],
+		  [ ["Item", "Car 2a >"], ["SubMenu", "car_2a"] ],
+		  [ ["Item", "Car 3 >"], ["SubMenu", "car_3"] ],	
+		  [ ["Item", "Car 3a >"], ["SubMenu", "car_3a"] ],
+          [ ["Item", "Car 4 >"], ["SubMenu", "car_4"] ],
+		  [ ["Item", "Car 4a >"], ["SubMenu", "car_4a"] ],
+          [ ["Item", "Car 5 >"], ["SubMenu", "car_5"] ],
+		  [ ["Item", "Car 5a >"], ["SubMenu", "car_5a"] ],
+          [ ["Item", "-"]], 		  
+		  [ ["Item", "HVT's Car >"], ["SubMenu", "vip"] ],
+		  [ ["Item", "Show Convoy content"], ["Action", "nul=[3] execVM 'mcc\general_scripts\convoy\show_convoy.sqf';"] ],
+		  [ ["Item", "Place Convoy's WP"], ["Action", "nul=[3] execVM 'mcc\general_scripts\convoy\make_convoy_WP.sqf';"] ],
+		  [ ["Item", "Start/reStart Convoy"], ["Action", "nul=[3] execVM 'mcc\general_scripts\convoy\start_convoy.sqf';"] ],
+		  [ ["Item", "-"]],
+		  [ ["Item", "Reset/add Waypoints"], ["Action", "nul=[3] execVM 'mcc\general_scripts\convoy\reset_convoy_WP.sqf';"] ],
+		  [ ["Item", "Reset Convoy"], ["Action", "convoy_car1="""";convoy_car2="""";convoy_car3="""";convoy_car4="""";convoy_car5="""";isvip=0;"] ] 
+                   
+        ]        
+      ]
+    ]
+  ],
+  //convoy car 1
+ ["car_1",
+    [
+      ["Caption", "car_1"],
+      ["Items",  convoy_array1]
+	]
+  ],
+   //convoy car 1a
+ ["car_1a",
+    [
+      ["Caption", "car_1a"],
+      ["Items",  convoy_array1a]
+	]
+  ],
+  
+  //convoy car 2
+ ["car_2",
+    [
+      ["Caption", "car_2"],
+	  ["Items",  convoy_array2]
+	]
+  ],
+  //convoy car 2
+ ["car_2a",
+    [
+      ["Caption", "car_2a"],
+	  ["Items",  convoy_array2a]
+	]
+  ],
+    //convoy car 3
+ ["car_3",
+    [
+      ["Caption", "car_3"],
+      ["Items",  convoy_array3]
+	]
+  ],
+   //convoy car 3
+ ["car_3a",
+    [
+      ["Caption", "car_3a"],
+      ["Items",  convoy_array3a]
+	]
+  ],
+    //convoy car 4
+ ["car_4",
+    [
+      ["Caption", "car_4"],
+      ["Items",  convoy_array4]
+	]
+  ],
+   //convoy car 4a
+ ["car_4a",
+    [
+      ["Caption", "car_4a"],
+      ["Items",  convoy_array4a]
+	]
+  ],
+    //convoy car 5
+ ["car_5",
+    [
+      ["Caption", "car_5"],
+      ["Items",  convoy_array5]
+	]
+  ],
+   //convoy car 5a
+ ["car_5a",
+    [
+      ["Caption", "car_5a"],
+      ["Items",  convoy_array5a]
+	]
+  ],
+  
+  //HVT
+["vip",
+    [
+      ["Caption", "vip"],
+      ["Items",
+	  [
+	  [ ["Item", "Civilian - doctor Male"], ["Action", "convoy_car3=""SUV_TK_CIV_EP1""; vip=""Doctor""; isvip=1"] ],
+	  [ ["Item", "Civilian - Citizen Male"], ["Action", "convoy_car3=""SUV_TK_CIV_EP1""; vip=""Citizen1""; isvip=1"] ],
+	  [ ["Item", "Civilian - Businessman"], ["Action", "convoy_car3=""SUV_TK_CIV_EP1""; vip=""Functionary1""; isvip=1"] ],
+	  [ ["Item", "Civilian - Policeman"], ["Action", "convoy_car3=""SUV_TK_CIV_EP1""; vip=""Policeman""; isvip=1"] ],
+	  [ ["Item", "Civilian - Priest"], ["Action", "convoy_car3=""SUV_TK_CIV_EP1""; vip=""Priest"";isvip=1 "] ],
+	  [ ["Item", "Civilian - Rocker"], ["Action", "convoy_car3=""SUV_TK_CIV_EP1""; vip=""RU_Rocker1""; isvip=1"] ],
+	  [ ["Item", "Civilian - Damsel"], ["Action", "convoy_car3=""SUV_TK_CIV_EP1""; vip=""Damsel1""; isvip=1"] ],
+	  [ ["Item", "Civilian - Hooker"], ["Action", "convoy_car3=""SUV_TK_CIV_EP1""; vip=""Hooker1""; isvip=1"] ],
+	  [ ["Item", "Civilian - Secretary"], ["Action", "convoy_car3=""SUV_TK_CIV_EP1""; vip=""RU_Secretary1"";isvip=1 "] ],
+	  [ ["Item", "Insurgent - Boss"], ["Action", "convoy_car3=""SUV_TK_CIV_EP1""; vip=""Ins_Lopotev""; isvip=1"] ],
+	  [ ["Item", "Insurgent - Warlord"], ["Action", "convoy_car3=""SUV_TK_CIV_EP1""; vip=""Ins_Bardak""; isvip=1"] ],
+	  [ ["Item", "Resistance - Warlord"], ["Action", "convoy_car3=""SUV_TK_CIV_EP1""; vip=""GUE_Commander""; isvip=1"] ],
+	  [ ["Item", "UN - Officer"], ["Action", "convoy_car3=""SUV_TK_CIV_EP1""; vip=""UN_CDF_Soldier_Officer_EP1""; isvip=1"] ],
+	  [ ["Item", "Takistan army - officer"], ["Action", "convoy_car3=""SUV_TK_CIV_EP1""; vip=""TK_Commander_EP1""; isvip=1"] ],
+	  [ ["Item", "Takistan locals - Warlord"], ["Action", "convoy_car3=""SUV_TK_CIV_EP1""; vip=""TK_GUE_Warlord_EP1""; isvip=1"] ],
+	  [ ["Item", "USMC - SF soldier1"], ["Action", "convoy_car3=""SUV_TK_CIV_EP1""; vip=""FR_GL""; isvip=1"] ],
+	  [ ["Item", "USMC - SF soldier2"], ["Action", "convoy_car3=""SUV_TK_CIV_EP1""; vip=""FR_Corpsman""; isvip=1"] ],
+	  [ ["Item", "USMC - SF Commander"], ["Action", "convoy_car3=""SUV_TK_CIV_EP1""; vip=""FR_Commander""; isvip=1"] ],
+	  [ ["Item", "USMC -  soldier1"], ["Action", "convoy_car3=""SUV_TK_CIV_EP1""; vip=""USMC_SoldierS_Engineer""; isvip=1"] ],
+	  [ ["Item", "USMC -  soldier2"], ["Action", "convoy_car3=""SUV_TK_CIV_EP1""; vip=""FR_Assault_GL""; isvip=1"] ],
+	  [ ["Item", "USMC -  pilot"], ["Action", "convoy_car3=""SUV_TK_CIV_EP1""; vip=""USMC_Soldier_Pilot""; isvip=1"] ]
+
+	  
+	  ]
+	 ]
+	]
+  ],
+  
+
   
  //HIER
  ["doc",

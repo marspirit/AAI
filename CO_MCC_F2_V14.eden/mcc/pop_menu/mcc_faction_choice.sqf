@@ -31,6 +31,7 @@ U_GEN_SOLDIER1    	= [];
 U_GEN_SOLDIER2    	= [];
 
 nul=[] execVM "mcc\pop_menu\mcc_make_array_units.sqf";
+nul=[] execVM "mcc\pop_menu\mcc_make_array_convoy.sqf";
 
 // Load DOC -> Dynamic Object Compositions
 
