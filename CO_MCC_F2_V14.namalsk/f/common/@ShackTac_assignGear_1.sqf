@@ -669,6 +669,7 @@ switch (_typeofUnit) do
               {_unit addmagazine _smokegrenade;} foreach [1,2];
 	      _unit addweapon "NVGoggles";
               _unit addweapon "ACE_Map_Tools";
+			  _unit addweapon "ACE_Earplugs";
 	      
 	      _unit addweapon _rucksack;
 
@@ -688,6 +689,7 @@ switch (_typeofUnit) do
               {_unit addmagazine _smokegrenade;} foreach [1,2];
 	      _unit addweapon "NVGoggles";
               _unit addweapon "ACE_Map_Tools";
+			  _unit addweapon "ACE_Earplugs";
 	      
 	      _unit addweapon _rucksack;
 
@@ -707,6 +709,7 @@ switch (_typeofUnit) do
               {_unit addmagazine _smokegrenade;} foreach [1,2];
 	      _unit addweapon "NVGoggles";
               _unit addweapon "ACE_Map_Tools";
+			  _unit addweapon "ACE_Earplugs";
 	      
 	      _unit addweapon _rucksack;
 
@@ -726,6 +729,7 @@ switch (_typeofUnit) do
               {_unit addmagazine _smokegrenade;} foreach [1,2];
 	      _unit addweapon "NVGoggles";
               _unit addweapon "ACE_Map_Tools";
+			  _unit addweapon "ACE_Earplugs";
 	      
 	      _unit addweapon _rucksack;
 	      
@@ -745,6 +749,7 @@ switch (_typeofUnit) do
               {_unit addmagazine _smokegrenade;} foreach [1,2];
 	      _unit addweapon "NVGoggles";
               _unit addweapon "ACE_Map_Tools";
+			  _unit addweapon "ACE_Earplugs";
 	      
 	      _unit addweapon _rucksack;
 
@@ -1349,7 +1354,7 @@ switch (_typeofUnit) do
       [_unit,_smokered,1] spawn f_addMagToRuck;
       [_unit,_smokegreen,1] spawn f_addMagToRuck;
       [_unit,_grenade,2] spawn f_addMagToRuck;
-	  [_unit,"IRStrobe",1] spawn f_addMagToRuck;
+	  [_unit,"IR_Strobe_Target",1] spawn f_addMagToRuck;
             
       _unit selectweapon primaryweapon _unit;
    };
@@ -1378,7 +1383,7 @@ switch (_typeofUnit) do
 	   
 	  [_unit,_sfriflemag,2] spawn f_addMagToRuck;
 	  [_unit,"Laserbatteries",1] spawn f_addMagToRuck;
-	  [_unit,"IRStrobe",1] spawn f_addMagToRuck;
+	  [_unit,"IR_Strobe_Target",1] spawn f_addMagToRuck;
 	  	              
       _unit selectweapon primaryweapon _unit;
    };
@@ -1404,7 +1409,7 @@ switch (_typeofUnit) do
 	  _unit addweapon _rucksack;
 
 	  [_unit,_sfmgmag,2] spawn f_addMagToRuck;	
-	  [_unit,"IRStrobe",1] spawn f_addMagToRuck;
+	  [_unit,"IR_Strobe_Target",1] spawn f_addMagToRuck;
       _unit selectweapon primaryweapon _unit;
    };
 
@@ -1431,7 +1436,7 @@ switch (_typeofUnit) do
       [_unit,_sfsnmag,6] spawn f_addMagToRuck;
 	  [_unit,_smokegrenade,2] spawn f_addMagToRuck;
       [_unit,_grenade,2] spawn f_addMagToRuck;
-	  [_unit,"IRStrobe",1] spawn f_addMagToRuck;
+	  [_unit,"IR_Strobe_Target",1] spawn f_addMagToRuck;
 	              
       _unit selectweapon primaryweapon _unit;
    };
@@ -1462,7 +1467,7 @@ switch (_typeofUnit) do
       [_unit,_sfriflemag,6] spawn f_addMagToRuck;
       [_unit,_smokegrenade,2] spawn f_addMagToRuck;
       [_unit,_grenade,2] spawn f_addMagToRuck;
-	  [_unit,"IRStrobe",1] spawn f_addMagToRuck;
+	  [_unit,"IR_Strobe_Target",1] spawn f_addMagToRuck;
 	  [_unit,"ACE_C4_M",4] spawn f_addMagToRuck;
 	  [_unit,"ACE_M2SLAM_M",4] spawn f_addMagToRuck;
       
@@ -1497,7 +1502,7 @@ switch (_typeofUnit) do
       [_unit,_bandage,15] spawn f_addMagToRuck; 
       [_unit,_morphine,25] spawn f_addMagToRuck; 
       [_unit,_epinephrine,15] spawn f_addMagToRuck; 
-	  [_unit,"IRStrobe",1] spawn f_addMagToRuck;
+	  [_unit,"IR_Strobe_Target",1] spawn f_addMagToRuck;
       
       _unit selectweapon primaryweapon _unit;
    };
