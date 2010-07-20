@@ -36,7 +36,7 @@ _arti_cond_classes = [];
 _arti_cond_sides = [];
 
 //### Specify weapons player must have to call in artillery, or leave the array empty
-_arti_cond_weapons = ["ACE_P159_RD90"];
+_arti_cond_weapons = ["ACE_PRC119_MAR","ACE_PRC119_MAR_ID_1","ACE_PRC119_MAR_ID_2","ACE_PRC119_MAR_ID_3","ACE_PRC119_MAR_ID_4","ACE_PRC119_MAR_ID_5","ACE_PRC119_MAR_ID_6","ACE_PRC119_MAR_ID_7"];
 
 //### define own conditions by replacing the 'true', ( e.g. _arti_cond_other = "!alive tank1 && !alive tank2"; )
 _arti_cond_other = "true";

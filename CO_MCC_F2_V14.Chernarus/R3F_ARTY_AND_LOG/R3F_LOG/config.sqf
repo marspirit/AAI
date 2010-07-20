@@ -36,6 +36,7 @@ R3F_LOG_CFG_remorqueurs =
 	"BTR90_Base",
 	"GAZ_Vodnik_HMG",
 	"LAV25_Base",
+	"ATV_Base_EP1",
 	"MLRS"
 ];
 
@@ -59,10 +60,16 @@ R3F_LOG_CFG_objets_remorquables =
 R3F_LOG_CFG_heliporteurs =
 [
 	"Mi17_base",
+	"Mi171Sh_Base_EP1",
 	"Mi24_Base",
 	"UH1Y",
+	"UH1H_base",
 	"UH60_Base",
-	"MV22"
+	"UH60M_US_base_EP1",
+	"MV22",
+	"AH6_Base_EP1 ",
+	"CH47_base_EP1"
+	
 ];
 
 /**
@@ -151,6 +158,46 @@ R3F_LOG_CFG_transporteurs =
 	["AAV", 10],
 	["BMP2_Base", 8],
 	["BMP3", 8],
+	["ATV_Base_EP1", 2],
+	["HMMWV_M1151_M2_DES_Base_EP1", 12],
+	["LandRover_Base", 10],
+	["hilux1_civil_3_open_EP1", 10],
+	["Ikarus_base", 40],
+	["LandRover_CZ_EP1", 8],
+	["S1203_TK_CIV_EP1", 10],
+	["SUV_Base_EP1", 10],
+	["UAZ_Unarmed_Base ", 10],
+	["V3S_Base_EP1", 25],
+	["Volha_TK_CIV_Base_EP1", 6],
+	["LandRover_MG_Base_EP1", 8],
+	["LandRover_SPG9_Base_EP1", 8],
+	["MAZ_543_SCUD_Base_EP1", 25],
+	["UAZ_AGS30_Base", 10],
+	["Pickup_PK_base", 8],
+	["Offroad_DSHKM_base", 8],
+	["Offroad_SPG9_base", 8],
+	["ACE_Truck5t_Base", 40],
+	["ACE_Truck5tMG_Base", 40],
+	["ACE_Truck5tMGOpen_Base", 40],
+	["ACE_Truck5tOpen_Base", 40],
+	["HMMWV", 12],
+	["HMMWV_M2", 12],
+	["HMMWV_TOW", 12],
+	["HMMWV_MK19", 12],
+	["ACE_HMMWV_GMV", 12],
+	["BMP2_HQ_Base", 8],
+	["BRDM2_ATGM_Base", 25],
+	["M113_Base", 25],
+	["BTR40_MG_base_EP1", 12],
+	["BTR40_base_EP1", 12],
+	["M113_UN_EP1", 25],
+	["M1126_ICV_BASE_EP1", 20],
+	["StrykerBase_EP1", 20],
+	["M1126_ICV_mk19_EP1", 20],
+	["M1126_ICV_M2_EP1", 20],
+	["M2A2_Base", 20],
+	["M2A2_EP1", 20],
+	
 	
 	["Mi17_base", 50],
 	["Mi24_Base", 40],
@@ -159,7 +206,14 @@ R3F_LOG_CFG_transporteurs =
 	["UH60_Base", 25],
 	["C130J", 150],
 	["MV22", 90],
-	
+	["Mi17_base", 50],
+	["Mi171Sh_Base_EP1", 50],
+	["UH1H_base", 15],
+	["AH6_Base_EP1", 5],
+	["UH60M_US_base_EP1", 25],
+	["CH47_base_EP1", 60],
+	["An2_Base_EP1", 30],
+		
 	["RHIB", 12],
 	["RubberBoat", 5],
 	["Fishing_Boat", 18],

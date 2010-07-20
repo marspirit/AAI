@@ -469,7 +469,7 @@ switch (_typeofUnit) do
       _unit addweapon "Binocular";
       _unit addweapon "ACE_Map_Tools";
       
-      _unit addweapon "ACE_P159_RD90";
+      _unit addweapon "ACE_PRC119_MAR";
 	   
 	  [_unit,_riflemag,3] spawn f_addMagToRuck;
       
@@ -580,7 +580,7 @@ switch (_typeofUnit) do
       _unit addweapon "Binocular";
       _unit addweapon "ACE_Map_Tools";
       
-       _unit addweapon "ACE_P159_RD90";
+       _unit addweapon "ACE_PRC119_MAR";
 	   	        
       [_unit,_riflemag,2] spawn f_addMagToRuck;
       [_unit,_smokered,2] spawn f_addMagToRuck;
@@ -1302,7 +1302,7 @@ switch (_typeofUnit) do
         _unit addweapon "ACE_Kestrel4500";
       };
       
-	  _unit addweapon "ACE_P159_RD90";
+	  _unit addweapon "ACE_PRC119_MAR";
       _unit selectweapon primaryweapon _unit; 
    };
 
@@ -1379,7 +1379,7 @@ switch (_typeofUnit) do
 	  _unit addweapon "ACE_Map_Tools";
 	  _unit addweapon "Laserdesignator";
 	              
-      _unit addweapon "ACE_P159_RD90";
+      _unit addweapon "ACE_PRC119_MAR";
 	   
 	  [_unit,_sfriflemag,2] spawn f_addMagToRuck;
 	  [_unit,"Laserbatteries",1] spawn f_addMagToRuck;
