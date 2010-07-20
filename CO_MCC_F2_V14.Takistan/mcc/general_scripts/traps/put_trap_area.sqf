@@ -11,7 +11,7 @@ _trapkind = _this select 7;
 
 _eib_marker = createMarkerLocal ["traps",_pos];
 _eib_marker setMarkerShapeLocal "RECTANGLE";
-_eib_marker setMarkerSizeLocal [trapsx, trapsy];
+_eib_marker setMarkerSizeLocal [_trapsx, _trapsy];
 _eib_marker setMarkerDirLocal 0;
 _eib_marker setMarkerColorLocal "ColorBlue";
 _eib_marker setMarkertext "traps";
