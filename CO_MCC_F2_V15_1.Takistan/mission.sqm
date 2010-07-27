@@ -4,7 +4,7 @@ class Mission
 	addOns[]=
 	{
 		"cacharacters2",
-		"utes",
+		"takistan",
 		"ca_highcommand",
 		"ca_modules_marta",
 		"ca_missions_firstaidsystem",
@@ -45,8 +45,8 @@ class Mission
 	randomSeed=4931020;
 	class Intel
 	{
-		briefingName="CO_MCC_F2_V15";
-		briefingDescription="*** CO_MCC_F2_V15 - utes ***";
+		briefingName="CO_MCC_F2_V15_1";
+		briefingDescription="*** CO_MCC_F2_V15_1 - Takistan ***";
 		resistanceWest=0;
 		startWeather=0.36250508;
 		forecastWeather=0.37342513;
