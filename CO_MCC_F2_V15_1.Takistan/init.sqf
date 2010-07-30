@@ -297,6 +297,8 @@ _SideHQ_East   = createCenter east;
 _SideHQ_Resist = createCenter resistance;
 _SideHQ_west   = createCenter west;
 
+month = 3; 
+
 // East hates all
 east setFriend [west, 0];
 east setfriend [resistance, 0];

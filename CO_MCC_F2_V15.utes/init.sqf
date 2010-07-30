@@ -297,6 +297,8 @@ _SideHQ_East   = createCenter east;
 _SideHQ_Resist = createCenter resistance;
 _SideHQ_west   = createCenter west;
 
+month = 3; 
+
 // East hates all
 east setFriend [west, 0];
 east setfriend [resistance, 0];
@@ -312,8 +314,6 @@ resistance setfriend [west, 0];
 // Handler code for on the server for MP purpose
 nul=[] execVM "mcc\pv_handling\mcc_pv_handler.sqf";
 nul=[] execVM "mcc\pv_handling\mcc_extras_pv_handler.sqf";
-
-month = 3; 
 
 //==========================Bon Artillery ===================
 waitUntil { !(isnil ("f_param_arty"))  };
