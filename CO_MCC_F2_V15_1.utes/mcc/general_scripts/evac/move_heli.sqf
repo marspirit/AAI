@@ -59,7 +59,7 @@ if !mcc_isloading then
 	sleep 0.5;
 		
 	hint "Markers placed";
-	["evac_move", [evac,[_point1, _point2, _point3], fly_in_hight, true]] call CBA_fnc_globalEvent;
+	["evac_move", [[_point1, _point2, _point3], fly_in_hight, true]] call CBA_fnc_globalEvent;
 	}	
 		else { player globalchat "Access Denied"};
 	};

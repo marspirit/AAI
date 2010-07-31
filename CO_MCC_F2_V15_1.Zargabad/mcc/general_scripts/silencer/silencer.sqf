@@ -316,62 +316,6 @@ switch (_weapon) do
 	_weaponnew = "ACE_M4A1_AIM_GL";
 	};
 	
-	case "AKS_74_U":
-	{
-	_mag = "30Rnd_545x39_AK";
-	_sdmag = "30Rnd_545x39_AKSD";
-	_weaponnew = "ACE_AKS74_UN";
-	};
-	
-	case "ACE_AKS74_UN":
-	{
-	_mag = "30Rnd_545x39_AK";
-	_sdmag = "30Rnd_545x39_AKSD";
-	_weaponnew = "AKS_74_U";
-	};
-	
-	case "AK_74_GL_kobra":
-	{
-	_mag = "30Rnd_545x39_AK";
-	_sdmag = "30Rnd_545x39_AKSD";
-	_weaponnew = "AKS_74_UN_kobra";
-	};
-	
-	case "AKS_74_UN_kobra":
-	{
-	_mag = "30Rnd_545x39_AK";
-	_sdmag = "30Rnd_545x39_AKSD";
-	_weaponnew = "AK_74_GL_kobra";
-	};
-	
-	case "SCAR_L_CQC_Holo":
-	{
-	_mag = "30Rnd_556x45_Stanag";
-	_sdmag = "30Rnd_556x45_StanagSD";
-	_weaponnew = "SCAR_L_CQC_CCO_SD";
-	};
-	
-	case "SCAR_L_CQC_CCO_SD":
-	{
-	_mag = "30Rnd_556x45_Stanag";
-	_sdmag = "30Rnd_556x45_StanagSD";
-	_weaponnew = "SCAR_L_CQC_Holo";
-	};
-	
-	case "SCAR_H_LNG_Sniper":
-	{
-	_mag = "20rnd_762x51_B_SCAR";
-	_sdmag = "20rnd_762x51_SB_SCAR";
-	_weaponnew = "SCAR_H_LNG_Sniper_SD";
-	};	
-	
-	case "SCAR_H_LNG_Sniper_SD":
-	{
-	_mag = "20rnd_762x51_B_SCAR";
-	_sdmag = "20rnd_762x51_SB_SCAR";
-	_weaponnew = "SCAR_H_LNG_Sniper";
-	};	
-	
 	default					// If no supressed version found for this weapon
 	{
 	hint "No silencer found for this Weapon";

@@ -24,7 +24,7 @@ if !mcc_isloading then
 	_point1 =getmarkerpos "evac_marker1";
 	
 	hint "Markers placed";
-	["evac_move", [evac,[_point1], fly_in_hight, true]] call CBA_fnc_globalEvent;
+	["evac_move", [[_point1], fly_in_hight, true]] call CBA_fnc_globalEvent;
 	}	
 		else { player globalchat "Access Denied"};
 	};

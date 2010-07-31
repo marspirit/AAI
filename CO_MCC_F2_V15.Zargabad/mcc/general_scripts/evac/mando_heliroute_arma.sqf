@@ -38,11 +38,10 @@ else
 
 private["_heli", "_route", "_endpos", "_height", "_landing ", "_pilot", "_i", "_j", "_pos", "_dist", "_distold", "_angh", "_dir", "_accel", "_speed", "_steps", "_inipos", "_offset"];
 
-_heli          = _this select 0;
-_route         = _this select 1;
-_height        = _this select 2;
-_landing       = _this select 3;
-
+_heli          = evac;
+_route         = _this select 0;
+_height        = _this select 1;
+_landing       = _this select 2;
 
 if (!local _heli) exitWith {hint "mando_heliroute: vehicle must be local";};
 

@@ -32,5 +32,6 @@ if (isServer) then
 	["uav", {[(_this select 0), (_this select 1), (_this select 2)] spawn uav}] call CBA_fnc_addEventHandler;
 	["evac_spawn", {[(_this select 0), (_this select 1)] execvm "mcc\general_scripts\evac\spawn_heli.sqf";}] call CBA_fnc_addEventHandler;
 	["evac_delete", {[(_this select 0)] execvm "mcc\general_scripts\evac\delete_heli_server.sqf";}] call CBA_fnc_addEventHandler;
-	["evac_move", {[(_this select 0), (_this select 1),(_this select 2), (_this select 3) ] execvm "mcc\general_scripts\evac\mando_heliroute_arma.sqf";}] call CBA_fnc_addEventHandler;
+	["evac_move", {[(_this select 0), (_this select 1),(_this select 2)] execvm "mcc\general_scripts\evac\mando_heliroute_arma.sqf";}] call CBA_fnc_addEventHandler;
+	["evac_relocate", {[(_this select 0)] execvm "mcc\general_scripts\evac\evac_relocate.sqf";}] call CBA_fnc_addEventHandler;
 };
