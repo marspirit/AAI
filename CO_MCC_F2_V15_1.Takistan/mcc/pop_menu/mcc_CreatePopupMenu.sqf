@@ -50,6 +50,8 @@ _MenuStructureArray =
 		 [ ["Item", "-"] ],
 		 [ ["Item", "Start RTE at player"], ["Action",  "nul=[3] execVM 'mcc\general_scripts\RTE\rte.sqf';" ] ],
 		 [ ["Item", "Start RTE at map click"], ["Action",  "nul=[3] execVM 'mcc\general_scripts\RTE\rte_p.sqf';" ] ],
+		 [ ["Item", "Save Hostage Script to clipboard (for RTE)"], ["Action", "hostage_safe=""_null = this addaction ['Secure Hostage','mcc\general_scripts\hostages\hostage.sqf'];
+removeAllWeapons this ;this switchmove 'AmovPercMstpSnonWnonDnon_AmovPercMstpSsurWnonDnon';this allowFleeing 0 ; this setcaptive true;"";copyToClipboard hostage_safe;hint 'SAVED to Clipboard! Now you can paste this code to the init of the spawned unit in RTE (ctrl-V).';"] ],
 		 [ ["Item", "-"] ],
 		 [ ["Item", "Set Grass Density - CS only>"], ["SubMenu", "grass"] ],
 		 [ ["Item", "Set View Distance - CS only>"], ["SubMenu", "viewdistance"] ]
@@ -195,10 +197,13 @@ _MenuStructureArray =
       ["Items",
         [
          [ ["Item", "Enemy Para Drop >"], ["SubMenu", "paratroops"]],
+		 [ ["Item", "-"] ],
 		 [ ["Item", "Put Hostages >"], ["SubMenu", "hostages"] ],
 		 [ ["Item", "Put artillery site >"], ["SubMenu", "artysite"] ],
 		 [ ["Item", "Put UAV site >"], ["SubMenu", "uav"] ],
-		 [ ["Item", "Call Artillery>"], ["SubMenu", "Artillery"] ]
+		 [ ["Item", "-"] ],
+		 [ ["Item", "Call Artillery>"], ["SubMenu", "Artillery"] ],
+		 [ ["Item", "Call Evac >"], ["SubMenu", "evac"] ]
 		]        
       ]
     ]
@@ -337,7 +342,32 @@ _MenuStructureArray =
       ]
     ]
   ],
-  
+ 
+//Evac
+["evac",
+    [
+      ["Caption", "evac"],
+      ["Items",
+        [
+		[ ["Item", "Spwan heli -Small"], ["Action",  "heli_size = 0; nul=[3] execVM 'mcc\general_scripts\evac\request_heli.sqf';"] ],
+		[ ["Item", "Spwan heli -Big"], ["Action",  "heli_size = 1; nul=[3] execVM 'mcc\general_scripts\evac\request_heli.sqf';"] ],
+		[ ["Item", "----Manage----"] ],
+		[ ["Item", "Delete pilot"], ["Action",  "evac_d = 0; nul=[3] execVM 'mcc\general_scripts\evac\delete_heli.sqf';"] ],
+		[ ["Item", "Respawn pilot"], ["Action",  "evac_d = 1; nul=[3] execVM 'mcc\general_scripts\evac\delete_heli.sqf';"] ],
+		[ ["Item", "Delete all"], ["Action",  "evac_d = 2; nul=[3] execVM 'mcc\general_scripts\evac\delete_heli.sqf';"] ],
+		[ ["Item", "----Move----"] ],
+		[ ["Item", "Move-Evac Landing (3 Wp)"], ["Action",  "nul=[3] execVM 'mcc\general_scripts\evac\move_heli.sqf'"] ],
+		[ ["Item", "Move-add single WP"], ["Action",  "nul=[3] execVM 'mcc\general_scripts\evac\add_wp_heli.sqf'"] ],
+		[ ["Item", "Evac-Return to LHD"], ["Action",  "nul=[3] execVM 'mcc\general_scripts\evac\return_to_lhd.sqf'"] ],
+		[ ["Item", "----Set fly In Hight----"] ],
+		[ ["Item", "100 meters"], ["Action",  "fly_in_hight= 100"] ],
+		[ ["Item", "200 meters"], ["Action",  "fly_in_hight= 200"] ],
+		[ ["Item", "300 meters"], ["Action",  "fly_in_hight= 300"] ]
+	   ]        
+      ]
+    ]
+  ],
+   
  //===============================================Traps=============================================
 ["traps",
     [
@@ -642,7 +672,7 @@ _MenuStructureArray =
         [
          [ ["Item", "----Planes----"] ],
          [ ["Item", "Spawn AV8B GBU >"], ["SubMenu", "AV8B"] ],
-		 [ ["Item", "Spawn AV8B2 GBU >"], ["SubMenu", "AV8B2"] ],
+		 [ ["Item", "Spawn AV8B2 Multirole>"], ["SubMenu", "AV8B2"] ],
 		 [ ["Item", "Spawn F35B >"], ["SubMenu", "F35B"] ],
 		 [ ["Item", "----Helis----"] ],
 		 [ ["Item", "Spawn Supercobra >"], ["SubMenu", "supercobra"] ],

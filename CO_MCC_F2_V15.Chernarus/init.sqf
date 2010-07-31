@@ -314,6 +314,7 @@ nul=[] execVM "mcc\pv_handling\mcc_pv_handler.sqf";
 nul=[] execVM "mcc\pv_handling\mcc_extras_pv_handler.sqf";
 
 month = 3; 
+fly_in_hight= 300;
 
 //==========================Bon Artillery ===================
 waitUntil { !(isnil ("f_param_arty"))  };

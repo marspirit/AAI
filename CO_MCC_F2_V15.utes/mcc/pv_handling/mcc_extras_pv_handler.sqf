@@ -15,6 +15,7 @@ start_convoy = compile preProcessFileLineNumbers "mcc\general_scripts\convoy\con
 ["sf_para", {[(_this select 0)] spawn sf_para}] call CBA_fnc_addEventHandler; 
 uav = compile preProcessFileLineNumbers "mcc\general_scripts\uav\create_uav_site.sqf";
 
+
 if (isServer) then
 {
 	["trap_rc_single", {[(_this select 0), (_this select 1), (_this select 2), (_this select 3), (_this select 4), (_this select 5), (_this select 6), (_this select 7)] spawn trap_rc_single}] call CBA_fnc_addEventHandler;
@@ -29,4 +30,7 @@ if (isServer) then
 	["place_convoy", {[(_this select 0), (_this select 1), (_this select 2), (_this select 3) , (_this select 4), (_this select 5), (_this select 6), (_this select 7), (_this select 8), (_this select 9), (_this select 10), (_this select 11)] spawn place_convoy}] call CBA_fnc_addEventHandler;
 	["start_convoy", {[(_this select 0), (_this select 1)] execvm "mcc\general_scripts\convoy\convoyDefend_init.sqf";}] call CBA_fnc_addEventHandler;
 	["uav", {[(_this select 0), (_this select 1), (_this select 2)] spawn uav}] call CBA_fnc_addEventHandler;
+	["evac_spawn", {[(_this select 0), (_this select 1)] execvm "mcc\general_scripts\evac\spawn_heli.sqf";}] call CBA_fnc_addEventHandler;
+	["evac_delete", {[(_this select 0)] execvm "mcc\general_scripts\evac\delete_heli_server.sqf";}] call CBA_fnc_addEventHandler;
+	["evac_move", {[(_this select 0), (_this select 1),(_this select 2), (_this select 3) ] execvm "mcc\general_scripts\evac\mando_heliroute_arma.sqf";}] call CBA_fnc_addEventHandler;
 };
