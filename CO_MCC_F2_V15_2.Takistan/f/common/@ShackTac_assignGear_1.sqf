@@ -244,7 +244,7 @@ switch (_faction) do
    _dmrifle = "DMR";
    _dmriflemag = "20Rnd_762x51_DMR";
    
-   _mediumMG = "ACE_M240G_M145";
+   _mediumMG = "m240_scoped_EP1";
    _mediumMGmag = "100Rnd_762x51_M240";
    
    _heavyMG = "ACE_M2HBProxy";

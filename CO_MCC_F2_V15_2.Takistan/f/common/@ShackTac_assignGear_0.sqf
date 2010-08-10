@@ -203,6 +203,7 @@ switch (_faction) do
    
    _radio = "ACE_PRC119_ACU";
    };
+   
 // ====================================================================================
 
 // EQUIPMENT: US ARMY
@@ -280,8 +281,8 @@ switch (_faction) do
 
 // ====================================================================================
 
-// EQUIPMENT: NAPA
-// The block of code below identifies equipment for the NAPA faction.
+// EQUIPMENT: Takistani Militia
+// The block of code below identifies equipment for the Takistani Militia faction.
 
    case "bis_tk_gue":
    { 

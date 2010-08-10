@@ -5,7 +5,7 @@
 // DECLARE VARIABLES AND FUNCTIONS
 
 private [
-"_faction","_rifle","_rifleGL","_rifleTL","_MG","_pistol","_riflemag",
+"_faction","_rifle","_rifleGL","_rifleTL","_MG","_pistol","_riflemag","_rifleGLmag",
 "_GLMag","_MGmag","_grenade","_at","_atmag",
 "_smokewhite","_smokegreen","_smokered","_smokegrenade",
 "_pistol","_pistolmag",
@@ -64,33 +64,35 @@ switch (_faction) do
 
    case "bis_tk":
    {
-   _rifle = "AK_107_kobra";
-   _rifleGL = "AK_107_GL_kobra";
-   _rifleTL = "AK_107_GL_kobra";
-   _medicrifle = "AKS_74_U";
-   _medicmag = "30Rnd_545x39_AK";
+   _rifle = "FN_FAL";
+   _rifleGL = "AK_74_GL";
+   _rifleTL = "AK_74_GL";
+   _medicrifle = "FN_FAL";
+   _medicmag = "20Rnd_762x51_FNFAL";
    _MG = "RPK_74";
-   _riflemag = "30Rnd_545x39_AK";
+   _riflemag = "20Rnd_762x51_FNFAL";
+   _rifleGLmag = "30Rnd_545x39_AK";
    _GLmag = "1Rnd_HE_GP25";
    _MGmag = "75Rnd_545x39_RPK";
    _grenade = "HandGrenade_East";
    _at = "RPG18";
    _atmag = "RPG18";
    
-   _sfrifle = "G36K";
-   _sfrifleGL = "ACE_oc14gl";
-   _sfrifleGLmag = "ACE_20Rnd_9x39_B_OC14";
-   _sfriflemag = "30Rnd_556x45_G36";
-   _sfsnrifle = "ACE_Val_PSO";
+   _sfrifle = "AKS_74_U";
+   _sfrifleGL = "AK_74_GL_kobra";
+   _sfrifleGLmag = "30Rnd_545x39_AK";
+   _sfriflemag = "30Rnd_545x39_AK";
+   _sfsnrifle = "VSS_Vintorez";
    _sfsnmag = "20Rnd_9x39_SP5_VSS";
-   _sfmg = "MG36";
-   _sfmgmag = "100Rnd_556x45_BetaCMag";
+   _sfmg = "RPK_74";
+   _sfmgmag = "75Rnd_545x39_RPK";
    _sfpistol = "MakarovSD";
    _sfpistolmag = "8Rnd_9x18_MakarovSD";
+   
       
    _snrifle = "SVD_CAMO";
    _snmag = "10Rnd_762x54_SVD";
-   _sprifle = "ACE_AK105_PSO";
+   _sprifle = "AK_107_pso";
    _spmag = "30Rnd_545x39_AK";
    
    _dmrifle = "AK_107_pso";
@@ -147,20 +149,20 @@ switch (_faction) do
    _at = "RPG18";
    _atmag = "RPG18";
    
-   _sfrifle = "G36K";
-   _sfrifleGL = "ACE_oc14gl";
-   _sfrifleGLmag = "ACE_20Rnd_9x39_B_OC14";
-   _sfriflemag = "30Rnd_556x45_G36";
-   _sfsnrifle = "ACE_Val_PSO";
+   _sfrifle = "AKS_74_U";
+   _sfrifleGL = "AK_74_GL_kobra";
+   _sfrifleGLmag = "30Rnd_545x39_AK";
+   _sfriflemag = "30Rnd_545x39_AK";
+   _sfsnrifle = "VSS_Vintorez";
    _sfsnmag = "20Rnd_9x39_SP5_VSS";
-   _sfmg = "MG36";
-   _sfmgmag = "100Rnd_556x45_BetaCMag";
+   _sfmg = "RPK_74";
+   _sfmgmag = "75Rnd_545x39_RPK";
    _sfpistol = "MakarovSD";
    _sfpistolmag = "8Rnd_9x18_MakarovSD";
       
    _snrifle = "SVD_CAMO";
    _snmag = "10Rnd_762x54_SVD";
-   _sprifle = "ACE_AK105_PSO";
+   _sprifle = "AK_107_pso";
    _spmag = "30Rnd_545x39_AK";
    
    _dmrifle = "AK_107_pso";
