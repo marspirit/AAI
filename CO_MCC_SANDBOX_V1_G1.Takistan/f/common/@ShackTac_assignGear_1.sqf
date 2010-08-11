@@ -163,7 +163,7 @@ switch (_faction) do
    
    _snrifle = "KSVK";
    _snmag = "5Rnd_127x108_KSVK";
-   _sprifle = "ACE_AK105_PSO";
+   _sprifle = "AK_107_pso";
    _spmag = "30Rnd_545x39_AK";
    
    _dmrifle = "SVD_des_EP1";
@@ -300,13 +300,13 @@ switch (_faction) do
    _at = "RPG18";
    _atmag = "RPG18";
 
-   _snrifle = "Huntingrifle";
-   _snmag = "5x_22_LR_17_HMR";
-   _sprifle = "ACE_AK105_PSO";
+   _snrifle = "SVD";
+   _snmag = "10Rnd_762x54_SVD";
+   _sprifle = "AKS_74_pso";
    _spmag = "30Rnd_545x39_AK";
    
-   _dmrifle = "SVD";
-   _dmriflemag = "10Rnd_762x54_SVD";
+   _dmrifle = "Huntingrifle";
+   _dmriflemag = "5x_22_LR_17_HMR";
 
    _mediumMG = "PK";
    _mediumMGmag = "100Rnd_762x54_PK";
@@ -427,7 +427,7 @@ switch (_faction) do
    
    _snrifle = "SVD";
    _snmag = "10Rnd_762x54_SVD";
-   _sprifle = "ACE_AK105_PSO";
+   _sprifle = "AKS_74_pso";
    _spmag = "30Rnd_545x39_AK";
    
    _dmrifle = "SVD";

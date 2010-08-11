@@ -49,7 +49,7 @@ class Mission
 	class Intel
 	{
 		briefingName="CO_MCC_SANDBOX_V1_G1";
-		briefingDescription="*** CO_MCC_SANDBOX_V1_G1 - zargabad ***";
+		briefingDescription="*** CO_MCC_SANDBOX_V1_G1 - Zargabad ***";
 		resistanceWest=0;
 		startWeather=0.36250508;
 		forecastWeather=0.37342513;

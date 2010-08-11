@@ -48,7 +48,7 @@ class Mission
 	randomSeed=4931020;
 	class Intel
 	{
-		briefingName="CO_MCC_SANDBOX_V1_g1";
+		briefingName="CO_MCC_SANDBOX_V1_G1";
 		briefingDescription="*** CO_MCC_SANDBOX_V1_G1 - takistan ***";
 		resistanceWest=0;
 		startWeather=0.36250508;

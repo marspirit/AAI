@@ -133,6 +133,7 @@ switch (_faction) do
    };
 
  // ====================================================================================
+ 
 // EQUIPMENT: RUSSIAN SPETZ
 // The block of code below identifies equipment for the Russian faction.
    case "ace_gru":
@@ -153,7 +154,7 @@ switch (_faction) do
    
    _snrifle = "SVD_CAMO";
    _snmag = "10Rnd_762x54_SVD";
-   _sprifle = "ACE_AK105_PSO";
+   _sprifle = "AK_107_pso";
    _spmag = "30Rnd_545x39_AK";
    
    _dmrifle = "AK_107_pso";
@@ -301,10 +302,10 @@ switch (_faction) do
 
    _snrifle = "Huntingrifle";
    _snmag = "5x_22_LR_17_HMR";
-   _sprifle = "ACE_AK105_PSO";
+   _sprifle = "AKS_74_pso";
    _spmag = "30Rnd_545x39_AK";
    
-   _dmrifle = "AK_107_pso";
+   _dmrifle = "AKS_74_pso";
    _dmriflemag = "30Rnd_545x39_AK";
 
    _mediumMG = "PK";
@@ -429,10 +430,10 @@ switch (_faction) do
    
    _snrifle = "SVD";
    _snmag = "10Rnd_762x54_SVD";
-   _sprifle = "ACE_AK105_PSO";
+   _sprifle = "AKS_74_pso";
    _spmag = "30Rnd_545x39_AK";
    
-   _dmrifle = "AK_107_pso";
+   _dmrifle = "AKS_74_pso";
    _dmriflemag = "30Rnd_545x39_AK";
       
    _mediumMG = "PK";
