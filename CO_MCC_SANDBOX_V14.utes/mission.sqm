@@ -24,7 +24,8 @@ class Mission
 		"caweapons_e_ammoboxes",
 		"CAAir_E",
 		"ace_sys_aitalk",
-		"ca_modules_animals"
+		"ca_modules_animals",
+		"cacharacters_e"
 	};
 	addOnsAuto[]=
 	{
@@ -32,7 +33,6 @@ class Mission
 		"CA_Modules_ARTY",
 		"ace_sys_easa",
 		"ca_modules_functions",
-		"ca_modules_animals",
 		"ca_modules_e_uav",
 		"ca_modules_e_uav_heli",
 		"ace_sys_aitalk",
@@ -58,7 +58,7 @@ class Mission
 	};
 	class Groups
 	{
-		items=154;
+		items=153;
 		class Item0
 		{
 			side="WEST";
@@ -71,7 +71,7 @@ class Mission
 					id=0;
 					side="WEST";
 					vehicle="USMC_Soldier_SL";
-					player="PLAYER COMMANDER";
+					player="PLAY CDG";
 					leader=1;
 					rank="LIEUTENANT";
 					skill=0.60000002;
@@ -136,7 +136,7 @@ class Mission
 					rank="SERGEANT";
 					skill=0.60000002;
 					text="UnitUSMC_1Plt_ASL";
-					init="GrpUSMC_1Plt_Alpha = group this; nul = [""sl"",this] execVM ""f\common\@ShackTac_assignGear_alpha.sqf""; this addEventHandler [""killed"", {_this execVM ""save_gear.sqf""}];";
+					init="GrpUSMC_1Plt_Alpha = group this; nul = [""sl"",this] execVM ""f\common\@ShackTac_assignGear_alpha.sqf""; this addEventHandler [""killed"", {_this execVM ""save_gear.sqf""}];this addBackpack  ""US_UAV_Pack_EP1"";";
 					description="USMC 1Plt Alpha Squad Leader";
 				};
 				class Item1
@@ -884,7 +884,7 @@ class Mission
 			side="WEST";
 			class Vehicles
 			{
-				items=2;
+				items=3;
 				class Item0
 				{
 					position[]={3724.3159,34.89716,3704.3264};
@@ -909,6 +909,18 @@ class Mission
 					rank="CORPORAL";
 					skill=0.60000002;
 					text="UnitUSMC_1Plt_ARA1";
+					init="GrpUSMC_1Plt_AR1 = group this; nul = [""arg"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";this addEventHandler [""killed"", {_this execVM ""save_gear.sqf""}];";
+					description="USMC Artillery Lead Gunner";
+				};
+				class Item2
+				{
+					position[]={3723.3486,34.62479,3703.2432};
+					id=421;
+					side="WEST";
+					vehicle="USMC_Soldier";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="UnitUSMC_1Plt_ARA1_1";
 					init="GrpUSMC_1Plt_AR1 = group this; nul = [""ara"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";this addEventHandler [""killed"", {_this execVM ""save_gear.sqf""}];";
 					description="USMC Artillery Lead Assistant Gunner";
 				};
@@ -1721,7 +1733,7 @@ class Mission
 			side="EAST";
 			class Vehicles
 			{
-				items=2;
+				items=3;
 				class Item0
 				{
 					position[]={3781.7583,19,3607.384};
@@ -1746,6 +1758,18 @@ class Mission
 					rank="CORPORAL";
 					skill=0.60000002;
 					text="UnitRU_1Plt_ARA1";
+					init="GrpRU_1Plt_AR1 = group this; nul = [""arg"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";this addEventHandler [""killed"", {_this execVM ""save_gear.sqf""}];";
+					description="Russian Artillery Lead Gunner";
+				};
+				class Item2
+				{
+					position[]={3779.7122,19,3605.1931};
+					id=424;
+					side="EAST";
+					vehicle="RU_Soldier2";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="UnitRU_1Plt_ARA1_1";
 					init="GrpRU_1Plt_AR1 = group this; nul = [""ara"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";this addEventHandler [""killed"", {_this execVM ""save_gear.sqf""}];";
 					description="Russian Artillery Lead Assistant Gunner";
 				};
@@ -1756,7 +1780,7 @@ class Mission
 			side="EAST";
 			class Vehicles
 			{
-				items=2;
+				items=3;
 				class Item0
 				{
 					position[]={3781.7593,19,3597.1042};
@@ -1784,6 +1808,18 @@ class Mission
 					init="GrpRU_1Plt_AR2 = group this; nul = [""ara"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";this addEventHandler [""killed"", {_this execVM ""save_gear.sqf""}];";
 					description="Russian Artillery Team 2 Assistant Gunner";
 				};
+				class Item2
+				{
+					position[]={3780.0061,19,3594.7471};
+					id=425;
+					side="EAST";
+					vehicle="RU_Soldier2";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="UnitRU_1Plt_ARA1_1_1";
+					init="GrpRU_1Plt_AR2 = group this; nul = [""aram"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";this addEventHandler [""killed"", {_this execVM ""save_gear.sqf""}];";
+					description="Russian Artillery Team 2 Ammoman";
+				};
 			};
 		};
 		class Item36
@@ -1791,7 +1827,7 @@ class Mission
 			side="EAST";
 			class Vehicles
 			{
-				items=2;
+				items=3;
 				class Item0
 				{
 					position[]={3781.6265,19,3587.1599};
@@ -1818,6 +1854,18 @@ class Mission
 					text="UnitRU_1Plt_ARA3";
 					init="GrpRU_1Plt_AR3 = group this; nul = [""ara"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";this addEventHandler [""killed"", {_this execVM ""save_gear.sqf""}];";
 					description="Russian Artillery Team 2 Assistant Gunner";
+				};
+				class Item2
+				{
+					position[]={3780.2266,19,3584.6672};
+					id=426;
+					side="EAST";
+					vehicle="RU_Soldier2";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="UnitRU_1Plt_ARA1_1_1_1";
+					init="GrpRU_1Plt_AR3 = group this; nul = [""aram"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";this addEventHandler [""killed"", {_this execVM ""save_gear.sqf""}];";
+					description="Russian Artillery Team 3 Ammoman";
 				};
 			};
 		};
@@ -2620,24 +2668,6 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={3871.2715,31.532375,3758.7756};
-					id=420;
-					side="LOGIC";
-					vehicle="BIS_animals_Logic";
-					leader=1;
-					lock="UNLOCKED";
-					skill=0.60000002;
-				};
-			};
-		};
-		class Item56
-		{
-			side="LOGIC";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
 					position[]={3902.8484,32.334198,3749.491};
 					id=177;
 					side="LOGIC";
@@ -2650,7 +2680,7 @@ class Mission
 				};
 			};
 		};
-		class Item57
+		class Item56
 		{
 			side="LOGIC";
 			class Vehicles
@@ -2670,12 +2700,12 @@ class Mission
 				};
 			};
 		};
-		class Item58
+		class Item57
 		{
 			side="WEST";
 			class Vehicles
 			{
-				items=2;
+				items=3;
 				class Item0
 				{
 					position[]={3722.4282,25.812872,3683.6321};
@@ -2684,6 +2714,7 @@ class Mission
 					vehicle="USMC_Soldier_TL";
 					player="PLAY CDG";
 					leader=1;
+					rank="CORPORAL";
 					skill=0.60000002;
 					text="UnitUSMC_1Plt_ARG2";
 					init="GrpUSMC_1Plt_AR2 = group this; nul = [""arg"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";this addEventHandler [""killed"", {_this execVM ""save_gear.sqf""}];";
@@ -2701,14 +2732,26 @@ class Mission
 					init="GrpUSMC_1Plt_AR2 = group this; nul = [""ara"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";this addEventHandler [""killed"", {_this execVM ""save_gear.sqf""}];";
 					description="USMC Artillery Team 2 Assistant Gunner";
 				};
+				class Item2
+				{
+					position[]={3721.5432,25.420816,3682.6475};
+					id=423;
+					side="WEST";
+					vehicle="USMC_Soldier";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="UnitUSMC_1Plt_ARA1_1_2";
+					init="GrpUSMC_1Plt_AR2 = group this; nul = [""aram"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";this addEventHandler [""killed"", {_this execVM ""save_gear.sqf""}];";
+					description="USMC Artillery Team 2 Ammoman";
+				};
 			};
 		};
-		class Item59
+		class Item58
 		{
 			side="WEST";
 			class Vehicles
 			{
-				items=2;
+				items=3;
 				class Item0
 				{
 					position[]={3723.2349,30.412231,3693.8723};
@@ -2736,9 +2779,21 @@ class Mission
 					init="GrpUSMC_1Plt_AR3 = group this; nul = [""ara"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";this addEventHandler [""killed"", {_this execVM ""save_gear.sqf""}];";
 					description="USMC Artillery Team 3 Assistant Gunner";
 				};
+				class Item2
+				{
+					position[]={3722.2705,29.959339,3692.6528};
+					id=422;
+					side="WEST";
+					vehicle="USMC_Soldier";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="UnitUSMC_1Plt_ARA1_1_1";
+					init="GrpUSMC_1Plt_AR3 = group this; nul = [""aram"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";this addEventHandler [""killed"", {_this execVM ""save_gear.sqf""}];";
+					description="USMC Artillery Team 3 Ammoman";
+				};
 			};
 		};
-		class Item60
+		class Item59
 		{
 			side="WEST";
 			class Vehicles
@@ -2784,7 +2839,7 @@ class Mission
 				};
 			};
 		};
-		class Item61
+		class Item60
 		{
 			side="WEST";
 			class Vehicles
@@ -2830,7 +2885,7 @@ class Mission
 				};
 			};
 		};
-		class Item62
+		class Item61
 		{
 			side="WEST";
 			class Vehicles
@@ -2876,7 +2931,7 @@ class Mission
 				};
 			};
 		};
-		class Item63
+		class Item62
 		{
 			side="WEST";
 			class Vehicles
@@ -2922,7 +2977,7 @@ class Mission
 				};
 			};
 		};
-		class Item64
+		class Item63
 		{
 			side="WEST";
 			class Vehicles
@@ -2968,7 +3023,7 @@ class Mission
 				};
 			};
 		};
-		class Item65
+		class Item64
 		{
 			side="WEST";
 			class Vehicles
@@ -3014,7 +3069,7 @@ class Mission
 				};
 			};
 		};
-		class Item66
+		class Item65
 		{
 			side="WEST";
 			class Vehicles
@@ -3060,7 +3115,7 @@ class Mission
 				};
 			};
 		};
-		class Item67
+		class Item66
 		{
 			side="WEST";
 			class Vehicles
@@ -3106,7 +3161,7 @@ class Mission
 				};
 			};
 		};
-		class Item68
+		class Item67
 		{
 			side="WEST";
 			class Vehicles
@@ -3152,7 +3207,7 @@ class Mission
 				};
 			};
 		};
-		class Item69
+		class Item68
 		{
 			side="WEST";
 			class Vehicles
@@ -3198,7 +3253,7 @@ class Mission
 				};
 			};
 		};
-		class Item70
+		class Item69
 		{
 			side="WEST";
 			class Vehicles
@@ -3244,7 +3299,7 @@ class Mission
 				};
 			};
 		};
-		class Item71
+		class Item70
 		{
 			side="WEST";
 			class Vehicles
@@ -3290,7 +3345,7 @@ class Mission
 				};
 			};
 		};
-		class Item72
+		class Item71
 		{
 			side="WEST";
 			class Vehicles
@@ -3324,7 +3379,7 @@ class Mission
 				};
 			};
 		};
-		class Item73
+		class Item72
 		{
 			side="WEST";
 			class Vehicles
@@ -3358,7 +3413,7 @@ class Mission
 				};
 			};
 		};
-		class Item74
+		class Item73
 		{
 			side="WEST";
 			class Vehicles
@@ -3417,7 +3472,7 @@ class Mission
 				};
 			};
 		};
-		class Item75
+		class Item74
 		{
 			side="WEST";
 			class Vehicles
@@ -3504,7 +3559,7 @@ class Mission
 				};
 			};
 		};
-		class Item76
+		class Item75
 		{
 			side="WEST";
 			class Vehicles
@@ -3591,7 +3646,7 @@ class Mission
 				};
 			};
 		};
-		class Item77
+		class Item76
 		{
 			side="WEST";
 			class Vehicles
@@ -3638,7 +3693,7 @@ class Mission
 				};
 			};
 		};
-		class Item78
+		class Item77
 		{
 			side="WEST";
 			class Vehicles
@@ -3685,7 +3740,7 @@ class Mission
 				};
 			};
 		};
-		class Item79
+		class Item78
 		{
 			side="WEST";
 			class Vehicles
@@ -3732,7 +3787,7 @@ class Mission
 				};
 			};
 		};
-		class Item80
+		class Item79
 		{
 			side="WEST";
 			class Vehicles
@@ -3779,7 +3834,7 @@ class Mission
 				};
 			};
 		};
-		class Item81
+		class Item80
 		{
 			side="WEST";
 			class Vehicles
@@ -3814,7 +3869,7 @@ class Mission
 				};
 			};
 		};
-		class Item82
+		class Item81
 		{
 			side="WEST";
 			class Vehicles
@@ -3849,7 +3904,7 @@ class Mission
 				};
 			};
 		};
-		class Item83
+		class Item82
 		{
 			side="WEST";
 			class Vehicles
@@ -3884,7 +3939,7 @@ class Mission
 				};
 			};
 		};
-		class Item84
+		class Item83
 		{
 			side="WEST";
 			class Vehicles
@@ -3919,7 +3974,7 @@ class Mission
 				};
 			};
 		};
-		class Item85
+		class Item84
 		{
 			side="WEST";
 			class Vehicles
@@ -3936,12 +3991,12 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="cameraman";
-					init="this setcaptive true; this addaction [""operate camera auto"", ""gcam_auto.sqf""]; this addaction [""operate camera"", ""gcam.sqf""];";
+					init="this setcaptive true; this addaction [""operate camera"", ""camera.sqs""];";
 					description="Camera Man";
 				};
 			};
 		};
-		class Item86
+		class Item85
 		{
 			side="WEST";
 			class Vehicles
@@ -3963,7 +4018,7 @@ class Mission
 				};
 			};
 		};
-		class Item87
+		class Item86
 		{
 			side="WEST";
 			class Vehicles
@@ -3985,7 +4040,7 @@ class Mission
 				};
 			};
 		};
-		class Item88
+		class Item87
 		{
 			side="WEST";
 			class Vehicles
@@ -4007,7 +4062,7 @@ class Mission
 				};
 			};
 		};
-		class Item89
+		class Item88
 		{
 			side="GUER";
 			class Vehicles
@@ -4042,7 +4097,7 @@ class Mission
 				};
 			};
 		};
-		class Item90
+		class Item89
 		{
 			side="GUER";
 			class Vehicles
@@ -4077,7 +4132,7 @@ class Mission
 				};
 			};
 		};
-		class Item91
+		class Item90
 		{
 			side="GUER";
 			class Vehicles
@@ -4112,12 +4167,12 @@ class Mission
 				};
 			};
 		};
-		class Item92
+		class Item91
 		{
 			side="GUER";
 			class Vehicles
 			{
-				items=2;
+				items=3;
 				class Item0
 				{
 					position[]={3993.6541,19,3530.5554};
@@ -4143,16 +4198,28 @@ class Mission
 					skill=0.60000002;
 					text="UnitGUE_1Plt_ARA1";
 					init="GrpGUE_1Plt_AR1 = group this; nul = [""ara"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";this addEventHandler [""killed"", {_this execVM ""save_gear.sqf""}];";
+					description="NAPA Artillery Lead Gunner";
+				};
+				class Item2
+				{
+					position[]={3992.491,19,3528.0071};
+					id=427;
+					side="GUER";
+					vehicle="GUE_Soldier_3";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="UnitGUE_1Plt_ARA1_1";
+					init="GrpGUE_1Plt_AR1 = group this; nul = [""ara"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";this addEventHandler [""killed"", {_this execVM ""save_gear.sqf""}];";
 					description="NAPA Artillery Lead Assistant Gunner";
 				};
 			};
 		};
-		class Item93
+		class Item92
 		{
 			side="GUER";
 			class Vehicles
 			{
-				items=2;
+				items=3;
 				class Item0
 				{
 					position[]={3993.5554,18.945305,3520.9753};
@@ -4180,14 +4247,27 @@ class Mission
 					init="GrpGUE_1Plt_AR2 = group this; nul = [""ara"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";this addEventHandler [""killed"", {_this execVM ""save_gear.sqf""}];";
 					description="NAPA Artillery Team 2 Assistant Gunner";
 				};
+				class Item2
+				{
+					position[]={3991.8335,18.918327,3518.8401};
+					id=428;
+					side="GUER";
+					vehicle="GUE_Soldier_3";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="UnitGUE_1Plt_ARA1_1_1";
+					init="GrpGUE_1Plt_AR2 = group this; nul = [""aram"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";this addEventHandler [""killed"", {_this execVM ""save_gear.sqf""}];";
+					description="NAPA Artillery Team 2 Ammoman";
+					synchronizations[]={428};
+				};
 			};
 		};
-		class Item94
+		class Item93
 		{
 			side="GUER";
 			class Vehicles
 			{
-				items=2;
+				items=3;
 				class Item0
 				{
 					position[]={3993.6726,19,3508.2781};
@@ -4215,9 +4295,22 @@ class Mission
 					init="GrpGUE_1Plt_AR2 = group this; nul = [""ara"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";this addEventHandler [""killed"", {_this execVM ""save_gear.sqf""}];";
 					description="NAPA Artillery Team 3 Assistant Gunner";
 				};
+				class Item2
+				{
+					position[]={3992.1028,19,3505.5276};
+					id=429;
+					side="GUER";
+					vehicle="GUE_Soldier_3";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="UnitGUE_1Plt_ARA1_1_1_1";
+					init="GrpGUE_1Plt_AR3 = group this; nul = [""aram"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";this addEventHandler [""killed"", {_this execVM ""save_gear.sqf""}];";
+					description="NAPA Artillery Team 3 Ammoman";
+					synchronizations[]={429};
+				};
 			};
 		};
-		class Item95
+		class Item94
 		{
 			side="GUER";
 			class Vehicles
@@ -4263,7 +4356,7 @@ class Mission
 				};
 			};
 		};
-		class Item96
+		class Item95
 		{
 			side="GUER";
 			class Vehicles
@@ -4309,7 +4402,7 @@ class Mission
 				};
 			};
 		};
-		class Item97
+		class Item96
 		{
 			side="GUER";
 			class Vehicles
@@ -4355,7 +4448,7 @@ class Mission
 				};
 			};
 		};
-		class Item98
+		class Item97
 		{
 			side="GUER";
 			class Vehicles
@@ -4401,7 +4494,7 @@ class Mission
 				};
 			};
 		};
-		class Item99
+		class Item98
 		{
 			side="GUER";
 			class Vehicles
@@ -4447,7 +4540,7 @@ class Mission
 				};
 			};
 		};
-		class Item100
+		class Item99
 		{
 			side="GUER";
 			class Vehicles
@@ -4493,7 +4586,7 @@ class Mission
 				};
 			};
 		};
-		class Item101
+		class Item100
 		{
 			side="GUER";
 			class Vehicles
@@ -4539,7 +4632,7 @@ class Mission
 				};
 			};
 		};
-		class Item102
+		class Item101
 		{
 			side="GUER";
 			class Vehicles
@@ -4585,7 +4678,7 @@ class Mission
 				};
 			};
 		};
-		class Item103
+		class Item102
 		{
 			side="GUER";
 			class Vehicles
@@ -4631,7 +4724,7 @@ class Mission
 				};
 			};
 		};
-		class Item104
+		class Item103
 		{
 			side="GUER";
 			class Vehicles
@@ -4677,7 +4770,7 @@ class Mission
 				};
 			};
 		};
-		class Item105
+		class Item104
 		{
 			side="GUER";
 			class Vehicles
@@ -4723,7 +4816,7 @@ class Mission
 				};
 			};
 		};
-		class Item106
+		class Item105
 		{
 			side="GUER";
 			class Vehicles
@@ -4769,7 +4862,7 @@ class Mission
 				};
 			};
 		};
-		class Item107
+		class Item106
 		{
 			side="GUER";
 			class Vehicles
@@ -4803,7 +4896,7 @@ class Mission
 				};
 			};
 		};
-		class Item108
+		class Item107
 		{
 			side="GUER";
 			class Vehicles
@@ -4837,7 +4930,7 @@ class Mission
 				};
 			};
 		};
-		class Item109
+		class Item108
 		{
 			side="GUER";
 			class Vehicles
@@ -4896,7 +4989,7 @@ class Mission
 				};
 			};
 		};
-		class Item110
+		class Item109
 		{
 			side="GUER";
 			class Vehicles
@@ -4943,7 +5036,7 @@ class Mission
 				};
 			};
 		};
-		class Item111
+		class Item110
 		{
 			side="GUER";
 			class Vehicles
@@ -4990,7 +5083,7 @@ class Mission
 				};
 			};
 		};
-		class Item112
+		class Item111
 		{
 			side="GUER";
 			class Vehicles
@@ -5037,7 +5130,7 @@ class Mission
 				};
 			};
 		};
-		class Item113
+		class Item112
 		{
 			side="GUER";
 			class Vehicles
@@ -5084,7 +5177,7 @@ class Mission
 				};
 			};
 		};
-		class Item114
+		class Item113
 		{
 			side="GUER";
 			class Vehicles
@@ -5119,7 +5212,7 @@ class Mission
 				};
 			};
 		};
-		class Item115
+		class Item114
 		{
 			side="GUER";
 			class Vehicles
@@ -5154,7 +5247,7 @@ class Mission
 				};
 			};
 		};
-		class Item116
+		class Item115
 		{
 			side="GUER";
 			class Vehicles
@@ -5189,7 +5282,7 @@ class Mission
 				};
 			};
 		};
-		class Item117
+		class Item116
 		{
 			side="GUER";
 			class Vehicles
@@ -5224,7 +5317,7 @@ class Mission
 				};
 			};
 		};
-		class Item118
+		class Item117
 		{
 			side="GUER";
 			class Vehicles
@@ -5246,7 +5339,7 @@ class Mission
 				};
 			};
 		};
-		class Item119
+		class Item118
 		{
 			side="GUER";
 			class Vehicles
@@ -5268,7 +5361,7 @@ class Mission
 				};
 			};
 		};
-		class Item120
+		class Item119
 		{
 			side="GUER";
 			class Vehicles
@@ -5290,7 +5383,7 @@ class Mission
 				};
 			};
 		};
-		class Item121
+		class Item120
 		{
 			side="EAST";
 			class Vehicles
@@ -5336,7 +5429,7 @@ class Mission
 				};
 			};
 		};
-		class Item122
+		class Item121
 		{
 			side="EAST";
 			class Vehicles
@@ -5382,7 +5475,7 @@ class Mission
 				};
 			};
 		};
-		class Item123
+		class Item122
 		{
 			side="EAST";
 			class Vehicles
@@ -5428,7 +5521,7 @@ class Mission
 				};
 			};
 		};
-		class Item124
+		class Item123
 		{
 			side="EAST";
 			class Vehicles
@@ -5474,7 +5567,7 @@ class Mission
 				};
 			};
 		};
-		class Item125
+		class Item124
 		{
 			side="EAST";
 			class Vehicles
@@ -5520,7 +5613,7 @@ class Mission
 				};
 			};
 		};
-		class Item126
+		class Item125
 		{
 			side="EAST";
 			class Vehicles
@@ -5566,7 +5659,7 @@ class Mission
 				};
 			};
 		};
-		class Item127
+		class Item126
 		{
 			side="EAST";
 			class Vehicles
@@ -5612,7 +5705,7 @@ class Mission
 				};
 			};
 		};
-		class Item128
+		class Item127
 		{
 			side="EAST";
 			class Vehicles
@@ -5658,7 +5751,7 @@ class Mission
 				};
 			};
 		};
-		class Item129
+		class Item128
 		{
 			side="EAST";
 			class Vehicles
@@ -5704,7 +5797,7 @@ class Mission
 				};
 			};
 		};
-		class Item130
+		class Item129
 		{
 			side="EAST";
 			class Vehicles
@@ -5750,7 +5843,7 @@ class Mission
 				};
 			};
 		};
-		class Item131
+		class Item130
 		{
 			side="EAST";
 			class Vehicles
@@ -5796,7 +5889,7 @@ class Mission
 				};
 			};
 		};
-		class Item132
+		class Item131
 		{
 			side="EAST";
 			class Vehicles
@@ -5842,7 +5935,7 @@ class Mission
 				};
 			};
 		};
-		class Item133
+		class Item132
 		{
 			side="EAST";
 			class Vehicles
@@ -5876,7 +5969,7 @@ class Mission
 				};
 			};
 		};
-		class Item134
+		class Item133
 		{
 			side="EAST";
 			class Vehicles
@@ -5910,7 +6003,7 @@ class Mission
 				};
 			};
 		};
-		class Item135
+		class Item134
 		{
 			side="EAST";
 			class Vehicles
@@ -5969,7 +6062,7 @@ class Mission
 				};
 			};
 		};
-		class Item136
+		class Item135
 		{
 			side="EAST";
 			class Vehicles
@@ -6056,7 +6149,7 @@ class Mission
 				};
 			};
 		};
-		class Item137
+		class Item136
 		{
 			side="EAST";
 			class Vehicles
@@ -6143,7 +6236,7 @@ class Mission
 				};
 			};
 		};
-		class Item138
+		class Item137
 		{
 			side="EAST";
 			class Vehicles
@@ -6190,7 +6283,7 @@ class Mission
 				};
 			};
 		};
-		class Item139
+		class Item138
 		{
 			side="EAST";
 			class Vehicles
@@ -6237,7 +6330,7 @@ class Mission
 				};
 			};
 		};
-		class Item140
+		class Item139
 		{
 			side="EAST";
 			class Vehicles
@@ -6284,7 +6377,7 @@ class Mission
 				};
 			};
 		};
-		class Item141
+		class Item140
 		{
 			side="EAST";
 			class Vehicles
@@ -6331,7 +6424,7 @@ class Mission
 				};
 			};
 		};
-		class Item142
+		class Item141
 		{
 			side="EAST";
 			class Vehicles
@@ -6366,7 +6459,7 @@ class Mission
 				};
 			};
 		};
-		class Item143
+		class Item142
 		{
 			side="EAST";
 			class Vehicles
@@ -6401,7 +6494,7 @@ class Mission
 				};
 			};
 		};
-		class Item144
+		class Item143
 		{
 			side="EAST";
 			class Vehicles
@@ -6436,7 +6529,7 @@ class Mission
 				};
 			};
 		};
-		class Item145
+		class Item144
 		{
 			side="EAST";
 			class Vehicles
@@ -6471,7 +6564,7 @@ class Mission
 				};
 			};
 		};
-		class Item146
+		class Item145
 		{
 			side="EAST";
 			class Vehicles
@@ -6493,7 +6586,7 @@ class Mission
 				};
 			};
 		};
-		class Item147
+		class Item146
 		{
 			side="EAST";
 			class Vehicles
@@ -6515,7 +6608,7 @@ class Mission
 				};
 			};
 		};
-		class Item148
+		class Item147
 		{
 			side="EAST";
 			class Vehicles
@@ -6537,7 +6630,7 @@ class Mission
 				};
 			};
 		};
-		class Item149
+		class Item148
 		{
 			side="LOGIC";
 			class Vehicles
@@ -6555,7 +6648,7 @@ class Mission
 				};
 			};
 		};
-		class Item150
+		class Item149
 		{
 			side="LOGIC";
 			class Vehicles
@@ -6573,7 +6666,7 @@ class Mission
 				};
 			};
 		};
-		class Item151
+		class Item150
 		{
 			side="LOGIC";
 			class Vehicles
@@ -6591,7 +6684,7 @@ class Mission
 				};
 			};
 		};
-		class Item152
+		class Item151
 		{
 			side="LOGIC";
 			class Vehicles
@@ -6608,7 +6701,7 @@ class Mission
 				};
 			};
 		};
-		class Item153
+		class Item152
 		{
 			side="LOGIC";
 			class Vehicles
@@ -6617,7 +6710,7 @@ class Mission
 				class Item0
 				{
 					position[]={3953.2263,37.232079,3760.3208};
-					id=421;
+					id=420;
 					side="LOGIC";
 					vehicle="ACE_AITalk_Logic";
 					leader=1;
