@@ -44,7 +44,6 @@ _height        = _this select 1;
 _landing       = _this select 2;
 
 if (!local _heli) exitWith {hint "mando_heliroute: vehicle must be local";};
-if (!_landing) then { _heli addMagazineCargo ["ACE_Rope_M_120",3]};
 // First of all chopper gets its indicated flying height for the route
 _pilot = driver _heli;
 

@@ -11,7 +11,7 @@ switch (_type) do
 	   hintsilent "Synchronizing with the server...";
 	   WaitUntil{mcc_sync_status};
 	   [] spawn compile mcc_sync;
-	   hint "Sync Complete";
+	    hint "Sync Complete";
 	};
    
    case 1:
@@ -24,6 +24,6 @@ switch (_type) do
 	   _cloudLevel = overcast;
 	   _weather = [_cloudLevel, _foglevel, _RainLevel];
 	   ['cba_network_weather', _weather] call CBA_fnc_globalEvent ;
-	   [-1, {mcc_sync = _this;mcc_sync_status = true},mcc_sync] call CBA_fnc_globalExecute;
+	   [-1, {mcc_sync = _this select 0;mcc_missionmaker = _this select 1; mcc_sync_status = true},[mcc_sync, mcc_missionmaker]] call CBA_fnc_globalExecute;
 	};
  };

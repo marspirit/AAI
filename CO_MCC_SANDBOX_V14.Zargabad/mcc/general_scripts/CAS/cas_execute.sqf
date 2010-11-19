@@ -285,11 +285,10 @@ if (_planeType=="C130J") then 		//If it's an airdrop
 			   case "LGB":	//LGB
 				{ 
 				waitUntil {(_plane distance _pos) < 1000};
-				_lasertargets = nearestObjects[_pos,["LaserTarget"],500];
-				hint format ["%1", _lasertargets];
+				_lasertargets = nearestObjects[_pos,["LaserTarget"],1000];
 				_pos = getpos (_lasertargets select 0);
-				waitUntil {(_plane distance[_pos select 0, _pos select 1, 200]) < 100};
-				"Bo_GBU12_LGB" createVehicle [_pos select 0, _pos select 1, (_pos select 2) + 20];
+				waitUntil {(_plane distance[_pos select 0, _pos select 1, 200]) < 300};
+				"Bo_GBU12_LGB" createVehicle [_pos select 0, _pos select 1, (_pos select 2) + 10];
 				};
 				
 				case "Bombing-run":	//Bombing run

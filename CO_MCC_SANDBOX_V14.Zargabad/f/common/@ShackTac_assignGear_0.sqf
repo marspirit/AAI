@@ -90,7 +90,7 @@ switch (_faction) do
    _mediumMG = "PK";
    _mediumMGmag = "100Rnd_762x54_PK";
    
-   _sfrifle = "AKS_74_U";
+   _sfrifle = "AKS_74_UN_kobra";
    _sfrifleGL = "AK_74_GL_kobra";
    _sfriflemag = "30Rnd_545x39_AK";
    _sfsnrifle = "VSS_Vintorez";

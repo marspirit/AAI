@@ -34,6 +34,11 @@ switch (_faction) do
 	evac_p = evac_group createUnit [evac_p_type, _loc, [], 0, "NONE"];		//spawn pilot
 	evac disableai "TARGET";
 	evac disableai "AUTOTARGET";
+	group evac setBehaviour "CARELESS";
 	evac_p assignAsDriver evac;
 	evac_p moveindriver evac;
+	evac_p disableai "TARGET";
+	evac_p disableai "AUTOTARGET";
+	group evac_p setBehaviour "CARELESS";
+	evac addMagazineCargo ["ACE_Rope_M_120",2];
 	
