@@ -580,7 +580,7 @@ switch (_typeofUnit) do
       [_unit,_bandage,17] spawn f_addMagToRuck; 
       [_unit,_morphine,16] spawn f_addMagToRuck; 
       [_unit,_epinephrine,16] spawn f_addMagToRuck;
-	  [_unit,_medkit,17] spawn f_addMagToRuck;	  
+	  [_unit,_medkit,3] spawn f_addMagToRuck;	  
       
       _unit selectweapon primaryweapon _unit;
    };
@@ -638,7 +638,7 @@ switch (_typeofUnit) do
       [_unit,_bandage,17] spawn f_addMagToRuck; 
       [_unit,_morphine,16] spawn f_addMagToRuck; 
       [_unit,_epinephrine,16] spawn f_addMagToRuck;
-	  [_unit,_medkit,17] spawn f_addMagToRuck;	  
+	  [_unit,_medkit,3] spawn f_addMagToRuck;	  
       
       _unit selectweapon primaryweapon _unit;
    };
@@ -1881,7 +1881,7 @@ switch (_typeofUnit) do
       [_unit,_bandage,17] spawn f_addMagToRuck; 
       [_unit,_morphine,16] spawn f_addMagToRuck; 
       [_unit,_epinephrine,16] spawn f_addMagToRuck;
-	  [_unit,_medkit,17] spawn f_addMagToRuck;
+	  [_unit,_medkit,3] spawn f_addMagToRuck;
 	  [_unit,"IR_Strobe_Marker",1] spawn f_addMagToRuck;
       
       _unit selectweapon primaryweapon _unit;
