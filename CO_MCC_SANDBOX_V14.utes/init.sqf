@@ -342,6 +342,8 @@ CASApproach_index = 0;
 evacFlyInHight_array = [["50m",50],["100m",100],["150m",150],["200m",200],["300m",300],["400m",400],["500m",500]];
 evacFlyInHight_index = 1;
 
+townCount = 0; 
+
 
 //====================================================================================MCC Engine Init============================================================================================================================
 // Disable Respawn & Organise start en death location 
@@ -350,8 +352,9 @@ nul=[] execVM "mcc\general_scripts\mcc_player_disableRespawn.sqf";
 // Initialize and load the pop up menu
 nul=[] execVM "mcc\pop_menu\mcc_init_menu.sqf";
 
-// Make action menu items available
-[["> Teleport to TEAM", "mcc\general_scripts\mcc_SpawnToPosition.sqf", [], 0, false, false, 'teamSwitch']] call CBA_fnc_addPlayerAction;
+// Teleport to team on Alt + T
+teleportToTeam = true; 
+[20, [false, false, true], {player execvm "mcc\general_scripts\mcc_SpawnToPosition.sqf"}] call CBA_fnc_addKeyHandler;
 
 mcc_spawntype   		= "";
 mcc_classtype   		= "";
@@ -425,3 +428,5 @@ call {[] execVM "mcc\general_scripts\arrestinggear\Arrestinggear.sqf";};
 //=============================Sync with server when JIP======================
 waituntil {alive player};
 [0] execVM "mcc\general_scripts\sync.sqf";
+
+["Welcome", "MCC Sandbox V1.4", "Have fun"] spawn BIS_fnc_infoText;

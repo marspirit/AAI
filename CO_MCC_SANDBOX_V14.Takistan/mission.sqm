@@ -40,7 +40,6 @@ class Mission
 		"ca_modules_e_uav",
 		"ca_modules_e_uav_heli",
 		"ace_sys_aitalk",
-		"CA_Modules_Alice2",
 		"ca_modules_silvie",
 		"camisc3",
 		"takistan"
@@ -61,7 +60,7 @@ class Mission
 	};
 	class Groups
 	{
-		items=154;
+		items=153;
 		class Item0
 		{
 			side="WEST";
@@ -920,7 +919,7 @@ class Mission
 				class Item2
 				{
 					position[]={2950.3352,402.87036,959.96606};
-					id=420;
+					id=419;
 					side="WEST";
 					vehicle="US_Soldier_EP1";
 					player="PLAY CDG";
@@ -1769,7 +1768,7 @@ class Mission
 				class Item2
 				{
 					position[]={3007.6121,396.32748,861.98053};
-					id=423;
+					id=422;
 					side="EAST";
 					vehicle="TK_Soldier_EP1";
 					player="PLAY CDG";
@@ -1816,7 +1815,7 @@ class Mission
 				class Item2
 				{
 					position[]={3007.3416,395.99869,851.63489};
-					id=424;
+					id=423;
 					side="EAST";
 					vehicle="TK_Soldier_EP1";
 					player="PLAY CDG";
@@ -1863,7 +1862,7 @@ class Mission
 				class Item2
 				{
 					position[]={3007.9956,395.75769,841.64496};
-					id=425;
+					id=424;
 					side="EAST";
 					vehicle="TK_Soldier_EP1";
 					player="PLAY CDG";
@@ -2756,7 +2755,7 @@ class Mission
 				class Item2
 				{
 					position[]={2948.9189,402.66733,939.2948};
-					id=422;
+					id=421;
 					side="WEST";
 					vehicle="US_Soldier_EP1";
 					player="PLAY CDG";
@@ -2803,7 +2802,7 @@ class Mission
 				class Item2
 				{
 					position[]={2949.2649,402.71066,949.4801};
-					id=421;
+					id=420;
 					side="WEST";
 					vehicle="US_Soldier_EP1";
 					player="PLAY CDG";
@@ -4224,7 +4223,7 @@ class Mission
 				class Item2
 				{
 					position[]={2910.5293,378.89456,709.7027};
-					id=427;
+					id=426;
 					side="GUER";
 					vehicle="TK_GUE_Soldier_5_EP1";
 					player="PLAY CDG";
@@ -4271,7 +4270,7 @@ class Mission
 				class Item2
 				{
 					position[]={2910.5972,378.43811,700.22333};
-					id=428;
+					id=427;
 					side="GUER";
 					vehicle="TK_GUE_Soldier_EP1";
 					player="PLAY CDG";
@@ -4318,7 +4317,7 @@ class Mission
 				class Item2
 				{
 					position[]={2910.3516,377.29181,686.83075};
-					id=429;
+					id=428;
 					side="GUER";
 					vehicle="TK_GUE_Soldier_EP1";
 					player="PLAY CDG";
@@ -6697,10 +6696,10 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={3159.9202,408.26831,1053.1959};
+					position[]={3170.0767,406.14606,1053.0297};
 					id=416;
 					side="LOGIC";
-					vehicle="Alice2Manager";
+					vehicle="SilvieManager";
 					leader=1;
 					lock="UNLOCKED";
 					skill=0.60000002;
@@ -6715,26 +6714,8 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={3170.0767,406.14606,1053.0297};
-					id=417;
-					side="LOGIC";
-					vehicle="SilvieManager";
-					leader=1;
-					lock="UNLOCKED";
-					skill=0.60000002;
-				};
-			};
-		};
-		class Item153
-		{
-			side="LOGIC";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
 					position[]={3185.6299,399.75729,1031.955};
-					id=426;
+					id=425;
 					side="LOGIC";
 					vehicle="ACE_AITalk_Logic";
 					leader=1;
@@ -6806,7 +6787,7 @@ class Mission
 		{
 			position[]={-92.786392,394.33151,-4664.7471};
 			azimut=-88.437469;
-			id=418;
+			id=417;
 			side="EMPTY";
 			vehicle="Land_ConcreteBlock";
 			skill=0.60000002;
@@ -6817,7 +6798,7 @@ class Mission
 		{
 			position[]={-90.490494,394.52127,-4666.3965};
 			azimut=90.148682;
-			id=419;
+			id=418;
 			side="EMPTY";
 			vehicle="FlagCarrierUSA";
 			skill=0.60000002;

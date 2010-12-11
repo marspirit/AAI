@@ -85,7 +85,6 @@ class ExtrasDialog2 {
 	Zone_y,
 	Zone_yTitle,
 	Zone_set,
-	Zone_select,
 	faction,
 	factionTitle,
 	Update_Faction,
@@ -281,10 +280,9 @@ class ExtrasDialog2 {
 //-------------------------------------------Buttons-------------------------------------------
 //Zones
   class Zone_set : RscGUIShortcutButton {idc = -1;colorDisabled[] = {1, 0.4, 0.3, 0.8};x = 0.35; y = 0.8;	text = "Update Zone";onButtonClick = "[1] execVM 'mcc\pop_menu\zones.sqf'";};
-  class Zone_select : RscGUIShortcutButton {idc = -1;colorDisabled[] = {1, 0.4, 0.3, 0.8};x = 0.48; y =0.65 ;w = 0.07; h = 0.0422876;size = 0.02;sizeEx = 0.02821;text = "select";onButtonClick = "[0] execVM 'mcc\pop_menu\zones.sqf'";};
 //Bottom Buttons
   class Close_dialog : RscGUIShortcutButton {idc = -1;colorDisabled[] = {1, 0.4, 0.3, 0.8};x = 0.895; y = 0.84;text = "Close";onButtonClick = "closeDialog 0";};
-  class Update_Faction : Zone_select {y = 0.55;text = "Update";onButtonClick = "mcc_screen=2;[] execVM 'mcc\pop_menu\faction.sqf'";};
+  class Update_Faction : RscGUIShortcutButton {idc = -1;colorDisabled[] = {1, 0.4, 0.3, 0.8};x = 0.48;y = 0.55;w = 0.07; h = 0.0422876;size = 0.02;sizeEx = 0.02821;text = "Update";onButtonClick = "mcc_screen=2;[] execVM 'mcc\pop_menu\faction.sqf'";};
   class Logout : Close_dialog {x = 0.7;text = "Logout";onButtonClick = "mcc_resetmissionmaker=true;nul=[0] execVM 'mcc\general_scripts\mcc_SpawnStuff.sqf';closeDialog 0";};
   class Safe : Close_dialog {x = 0.01;text = "Safe";onButtonClick = "copyToClipboard mcc_safe;hint 'SAVED to Clipboard! Now you can paste this code where you like to save it. Simple copy it all back in clipboard (ctrl-c) and press load to rebuild your mission.';";};
   class Load : Close_dialog {x = 0.2;text = "Load";onButtonClick = "mcc_safe = CopyFromClipboard;mcc_load='mcc_isloading=true;' + mcc_safe + 'mcc_isloading=false;';[] spawn compile mcc_load;";};

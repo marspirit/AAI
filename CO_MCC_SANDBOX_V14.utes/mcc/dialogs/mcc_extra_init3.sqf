@@ -18,6 +18,10 @@ unit_array_ready=false;
 #define TRIGGER_SHAPE 7005
 #define TRIGGER_SELECTED 7007
 
+#define GITA_SIZEX 7010
+#define GITA_DAMAGE 7013
+#define GITA_STYLE 7014
+
 disableSerialization;
 _mccdialog = findDisplay ExtrasDialog3_IDD;
 if (!mcc_capture_state) then { ctrlEnable [CAPTURE,false];};
@@ -113,6 +117,32 @@ _comboBox = _mccdialog displayCtrl TRIGGER_SELECTED;		//fill combobox Active tri
 		_displayname = _x select 0;
 		_comboBox lbAdd _displayname;
 	} foreach mcc_triggers;
+	_comboBox lbSetCurSel 0;
+	
+//------------------------------------Gita--------------------------------------------------------------------------------------------------------
+	
+_comboBox = _mccdialog displayCtrl GITA_SIZEX;		//fill combobox Trigger Shape 
+	lbClear _comboBox;
+	{
+		_displayname = _x select 0;
+		_comboBox lbAdd _displayname;
+	} foreach zones_x;
+	_comboBox lbSetCurSel 0;
+	
+_comboBox = _mccdialog displayCtrl GITA_DAMAGE;		//fill combobox Trigger Shape 
+	lbClear _comboBox;
+	{
+		_displayname = format ["%1", _x];
+		_comboBox lbAdd _displayname;
+	} foreach [0,1,2,3,4,5,6,7,8,9,10];
+	_comboBox lbSetCurSel 0;
+
+_comboBox = _mccdialog displayCtrl GITA_STYLE;		//fill combobox Trigger Shape 
+	lbClear _comboBox;
+	{
+		_displayname = _x;
+		_comboBox lbAdd _displayname;
+	} foreach ["European", "Takistany"];
 	_comboBox lbSetCurSel 0;
 
 

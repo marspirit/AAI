@@ -666,7 +666,7 @@ if !mcc_isloading then
 								, iedside
 								, trapkind
 								];
-								[""trap_cw_single"", [_pos,iedside,trapkind select 0]] call CBA_fnc_globalEvent;
+								[""sb_bomber"", [_pos,iedside,trapkind select 0]] call CBA_fnc_globalEvent;
 								onMapSingleClick """";";
 					};
 			};

@@ -26,7 +26,7 @@ _y2 = _pos2 select 1;
 _angle = (_x2 - _x1) atan2 (_y2 - _y1);			//define convoy heading
 if (_angle < 0) then { _angle = 360 + _angle; };
 
-if (_faction=="GUE" || _faction=="GUE" || _faction=="BIS_TK_GUE"|| _faction=="BIS_UN") then {
+if (_faction=="GUE" || _faction=="GUE" || _faction=="BIS_TK_GUE"|| _faction=="BIS_UN" || _faction=="PMC_BAF") then {
 	car1 = [[(_pos1 select 0),(_pos1 select 1)] , _angle, _vehicle1, resistance] call BIS_fnc_spawnVehicle;
 	car2 = [(car1 select 0) modelToWorld [0,-25,0] , getdir (car1 select 0), _vehicle2, resistance] call BIS_fnc_spawnVehicle;
 	
@@ -54,7 +54,7 @@ removeAllWeapons this ;this allowFleeing 0 ;"];
 	car5 = [(car1 select 0) modelToWorld [0,-100,0]  , getdir (car1 select 0), _vehicle5, resistance] call BIS_fnc_spawnVehicle;
 	};
 
-if (_faction=="CDF" || _faction=="USMC" || _faction=="BIS_US" || _faction=="BIS_CZ"  || _faction=="BIS_GER") then {
+if (_faction=="CDF" || _faction=="USMC" || _faction=="BIS_US" || _faction=="BIS_CZ"  || _faction=="BIS_GER" || _faction=="BIS_BAF") then {
 	car1 = [[(_pos1 select 0),(_pos1 select 1)] , _angle, _vehicle1, west] call BIS_fnc_spawnVehicle;
 	car2 = [(car1 select 0) modelToWorld [0,-25,0] , getdir (car1 select 0), _vehicle2, west] call BIS_fnc_spawnVehicle;
 	
@@ -83,7 +83,7 @@ removeAllWeapons this ;this allowFleeing 0 ;"];
 	};
 
 
-if (_faction=="RU" || _faction=="INS" || _faction=="BIS_TK" || _faction=="BIS_TK_INS") then {
+if (_faction=="RU" || _faction=="INS" || _faction=="BIS_TK" || _faction=="BIS_TK_INS" ) then {
 	car1 = [[(_pos1 select 0),(_pos1 select 1)] , _angle, _vehicle1, east] call BIS_fnc_spawnVehicle;
 	car2 = [(car1 select 0) modelToWorld [0,-25,0] , getdir (car1 select 0), _vehicle2, east] call BIS_fnc_spawnVehicle;
 	

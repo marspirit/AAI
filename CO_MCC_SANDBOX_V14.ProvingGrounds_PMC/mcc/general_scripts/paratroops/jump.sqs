@@ -1,0 +1,16 @@
+?!(isServer) : exit
+_grp = _this select 0
+_flz = _this select 1
+_jmp = units _grp
+
+_i = 0
+_j = count _jmp
+~(random 3)
+
+#start
+unassignvehicle (_jmp select _i)
+(_jmp select _i) action ["EJECT",_flz]
+_i=_i+1
+~.4
+?_j>_i:goto "start"
+exit;

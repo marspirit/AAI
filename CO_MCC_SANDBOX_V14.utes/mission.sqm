@@ -36,8 +36,6 @@ class Mission
 		"ca_modules_e_uav",
 		"ca_modules_e_uav_heli",
 		"ace_sys_aitalk",
-		"ca_modules_silvie",
-		"CA_Modules_Alice",
 		"ace_sys_wounds",
 		"camisc3",
 		"utes"
@@ -58,7 +56,7 @@ class Mission
 	};
 	class Groups
 	{
-		items=153;
+		items=151;
 		class Item0
 		{
 			side="WEST";
@@ -127,7 +125,8 @@ class Mission
 				items=2;
 				class Item0
 				{
-					position[]={3657.6372,38.633499,3716.2053};
+					position[]={3664.2156,39.683552,3715.2263};
+					azimut=184.37573;
 					id=4;
 					side="WEST";
 					vehicle="USMC_Soldier_SL";
@@ -141,7 +140,8 @@ class Mission
 				};
 				class Item1
 				{
-					position[]={3659.6099,38.454025,3714.1072};
+					position[]={3662.1738,39.922367,3717.064};
+					azimut=187.5321;
 					id=5;
 					side="WEST";
 					vehicle="USMC_Soldier_Medic";
@@ -162,7 +162,8 @@ class Mission
 				items=4;
 				class Item0
 				{
-					position[]={3657.6196,35.433102,3707.2};
+					position[]={3661.3367,36.999428,3708.9495};
+					azimut=6.3028097;
 					id=6;
 					side="WEST";
 					vehicle="USMC_Soldier_TL";
@@ -176,7 +177,8 @@ class Mission
 				};
 				class Item1
 				{
-					position[]={3659.5923,35.085781,3705.1018};
+					position[]={3661.6052,36.361179,3707.2883};
+					azimut=6.3028097;
 					id=7;
 					side="WEST";
 					vehicle="USMC_Soldier_AR";
@@ -189,7 +191,8 @@ class Mission
 				};
 				class Item2
 				{
-					position[]={3661.9458,35.503555,3705.0554};
+					position[]={3663.0012,36.519527,3707.0935};
+					azimut=6.3028097;
 					id=8;
 					side="WEST";
 					vehicle="USMC_Soldier";
@@ -201,7 +204,8 @@ class Mission
 				};
 				class Item3
 				{
-					position[]={3664.3452,35.912239,3705.0574};
+					position[]={3664.6572,36.897308,3707.2832};
+					azimut=6.3028097;
 					id=9;
 					side="WEST";
 					vehicle="USMC_Soldier";
@@ -221,7 +225,8 @@ class Mission
 				items=4;
 				class Item0
 				{
-					position[]={3657.606,31.090654,3696.8289};
+					position[]={3661.9727,32.408371,3697.9817};
+					azimut=4.4217696;
 					id=10;
 					side="WEST";
 					vehicle="USMC_Soldier_TL";
@@ -235,7 +240,8 @@ class Mission
 				};
 				class Item1
 				{
-					position[]={3659.5786,30.579247,3694.7307};
+					position[]={3662.5168,31.486933,3695.8367};
+					azimut=4.4217696;
 					id=11;
 					side="WEST";
 					vehicle="USMC_Soldier_AR";
@@ -248,7 +254,8 @@ class Mission
 				};
 				class Item2
 				{
-					position[]={3661.9321,30.88669,3694.6843};
+					position[]={3664.2649,31.757189,3695.9453};
+					azimut=4.4217696;
 					id=12;
 					side="WEST";
 					vehicle="USMC_Soldier";
@@ -260,7 +267,8 @@ class Mission
 				};
 				class Item3
 				{
-					position[]={3664.3315,31.175484,3694.6863};
+					position[]={3666.1851,32.132954,3696.0422};
+					azimut=4.4217696;
 					id=13;
 					side="WEST";
 					vehicle="USMC_Soldier";
@@ -280,7 +288,8 @@ class Mission
 				items=4;
 				class Item0
 				{
-					position[]={3657.6812,26.730232,3686.821};
+					position[]={3662.3906,27.851542,3688.0911};
+					azimut=6.3028097;
 					id=14;
 					side="WEST";
 					vehicle="USMC_Soldier_TL";
@@ -294,7 +303,8 @@ class Mission
 				};
 				class Item1
 				{
-					position[]={3659.6538,26.122967,3684.7234};
+					position[]={3663.9138,27.018429,3686.01};
+					azimut=6.3028097;
 					id=15;
 					side="WEST";
 					vehicle="USMC_Soldier_AR";
@@ -307,7 +317,8 @@ class Mission
 				};
 				class Item2
 				{
-					position[]={3662.0073,26.298183,3684.6765};
+					position[]={3665.0916,27.109446,3685.915};
+					azimut=6.3028097;
 					id=16;
 					side="WEST";
 					vehicle="USMC_Soldier";
@@ -319,7 +330,8 @@ class Mission
 				};
 				class Item3
 				{
-					position[]={3664.4058,26.467012,3684.6785};
+					position[]={3666.5002,27.248581,3685.854};
+					azimut=6.3028097;
 					id=17;
 					side="WEST";
 					vehicle="USMC_Soldier";
@@ -915,7 +927,7 @@ class Mission
 				class Item2
 				{
 					position[]={3723.3486,34.62479,3703.2432};
-					id=421;
+					id=419;
 					side="WEST";
 					vehicle="USMC_Soldier";
 					player="PLAY CDG";
@@ -1764,7 +1776,7 @@ class Mission
 				class Item2
 				{
 					position[]={3779.7122,19,3605.1931};
-					id=424;
+					id=422;
 					side="EAST";
 					vehicle="RU_Soldier2";
 					player="PLAY CDG";
@@ -1811,7 +1823,7 @@ class Mission
 				class Item2
 				{
 					position[]={3780.0061,19,3594.7471};
-					id=425;
+					id=423;
 					side="EAST";
 					vehicle="RU_Soldier2";
 					player="PLAY CDG";
@@ -1858,7 +1870,7 @@ class Mission
 				class Item2
 				{
 					position[]={3780.2266,19,3584.6672};
-					id=426;
+					id=424;
 					side="EAST";
 					vehicle="RU_Soldier2";
 					player="PLAY CDG";
@@ -2735,7 +2747,7 @@ class Mission
 				class Item2
 				{
 					position[]={3721.5432,25.420816,3682.6475};
-					id=423;
+					id=421;
 					side="WEST";
 					vehicle="USMC_Soldier";
 					player="PLAY CDG";
@@ -2782,7 +2794,7 @@ class Mission
 				class Item2
 				{
 					position[]={3722.2705,29.959339,3692.6528};
-					id=422;
+					id=420;
 					side="WEST";
 					vehicle="USMC_Soldier";
 					player="PLAY CDG";
@@ -3502,7 +3514,7 @@ class Mission
 					rank="SERGEANT";
 					skill=0.46666664;
 					text="UnitUSMC_SF1_SFHg";
-					init="GrpUSMC_SF1 = group this; nul = [""sfhg"",this] execVM ""f\common\@ShackTac_assignGear_sf1.sqf"";_null = this addaction [""Add/Remove Silencer"", ""mcc\general_scripts\silencer\silencer.sqf""];this addEventHandler [""killed"", {_this execVM ""save_gear_sf.sqf""}];";
+					init="GrpUSMC_SF1 = group this; nul = [""sfhg"",this] execVM ""f\common\@ShackTac_assignGear_sf1.sqf"";_null = this addaction [""Add/Remove Silencer"", ""mcc\general_scripts\silencer\silencer.sqf""];this addEventHandler [""killed"", {_this execVM ""mcc\general_scripts\save_gear_sf.sqf""}];";
 					description="USMC SF1 - Heavy gunner";
 				};
 				class Item2
@@ -3515,7 +3527,7 @@ class Mission
 					rank="SERGEANT";
 					skill=0.46666664;
 					text="UnitUSMC_SF1R";
-					init="GrpUSMC_SF1 = group this; nul = [""sfg"",this] execVM ""f\common\@ShackTac_assignGear_sf1.sqf"";_null = this addaction [""Add/Remove Silencer"", ""mcc\general_scripts\silencer\silencer.sqf""];this addEventHandler [""killed"", {_this execVM ""save_gear_sf.sqf""}];";
+					init="GrpUSMC_SF1 = group this; nul = [""sfg"",this] execVM ""f\common\@ShackTac_assignGear_sf1.sqf"";_null = this addaction [""Add/Remove Silencer"", ""mcc\general_scripts\silencer\silencer.sqf""];this addEventHandler [""killed"", {_this execVM ""mcc\general_scripts\save_gear_sf.sqf""}];";
 					description="USMC SF1 - Radioman";
 				};
 				class Item3
@@ -3528,7 +3540,7 @@ class Mission
 					rank="SERGEANT";
 					skill=0.46666664;
 					text="UnitUSMC_SF1_SFM";
-					init="GrpUSMC_SF1 = group this; nul = [""sfm"",this] execVM ""f\common\@ShackTac_assignGear_sf1.sqf"";_null = this addaction [""Add/Remove Silencer"", ""mcc\general_scripts\silencer\silencer.sqf""];this addEventHandler [""killed"", {_this execVM ""save_gear_sf.sqf""}];";
+					init="GrpUSMC_SF1 = group this; nul = [""sfm"",this] execVM ""f\common\@ShackTac_assignGear_sf1.sqf"";_null = this addaction [""Add/Remove Silencer"", ""mcc\general_scripts\silencer\silencer.sqf""];this addEventHandler [""killed"", {_this execVM ""mcc\general_scripts\save_gear_sf.sqf""}];";
 					description="USMC SF1 - Marksman";
 				};
 				class Item4
@@ -3541,7 +3553,7 @@ class Mission
 					rank="SERGEANT";
 					skill=0.46666664;
 					text="UnitUSMC_SF1_SFS";
-					init="GrpUSMC_SF1 = group this; nul = [""sfs"",this] execVM ""f\common\@ShackTac_assignGear_sf1.sqf"";_null = this addaction [""Add/Remove Silencer"", ""mcc\general_scripts\silencer\silencer.sqf""];this addEventHandler [""killed"", {_this execVM ""save_gear_sf.sqf""}];";
+					init="GrpUSMC_SF1 = group this; nul = [""sfs"",this] execVM ""f\common\@ShackTac_assignGear_sf1.sqf"";_null = this addaction [""Add/Remove Silencer"", ""mcc\general_scripts\silencer\silencer.sqf""];this addEventHandler [""killed"", {_this execVM ""mcc\general_scripts\save_gear_sf.sqf""}];";
 					description="USMC SF1 - Saboteur";
 				};
 				class Item5
@@ -3554,7 +3566,7 @@ class Mission
 					rank="SERGEANT";
 					skill=0.46666664;
 					text="UnitUSMC_SF1_SFC";
-					init="GrpUSMC_SF1 = group this; nul = [""sfc"",this] execVM ""f\common\@ShackTac_assignGear_sf1.sqf"";_null = this addaction [""Add/Remove Silencer"", ""mcc\general_scripts\silencer\silencer.sqf""];this addEventHandler [""killed"", {_this execVM ""save_gear_sf.sqf""}];";
+					init="GrpUSMC_SF1 = group this; nul = [""sfc"",this] execVM ""f\common\@ShackTac_assignGear_sf1.sqf"";_null = this addaction [""Add/Remove Silencer"", ""mcc\general_scripts\silencer\silencer.sqf""];this addEventHandler [""killed"", {_this execVM ""mcc\general_scripts\save_gear_sf.sqf""}];";
 					description="USMC SF1 - Corpsman";
 				};
 			};
@@ -4203,7 +4215,7 @@ class Mission
 				class Item2
 				{
 					position[]={3992.491,19,3528.0071};
-					id=427;
+					id=425;
 					side="GUER";
 					vehicle="GUE_Soldier_3";
 					player="PLAY CDG";
@@ -4250,7 +4262,7 @@ class Mission
 				class Item2
 				{
 					position[]={3991.8335,18.918327,3518.8401};
-					id=428;
+					id=426;
 					side="GUER";
 					vehicle="GUE_Soldier_3";
 					player="PLAY CDG";
@@ -4258,7 +4270,7 @@ class Mission
 					text="UnitGUE_1Plt_ARA1_1_1";
 					init="GrpGUE_1Plt_AR2 = group this; nul = [""aram"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";this addEventHandler [""killed"", {_this execVM ""save_gear.sqf""}];";
 					description="NAPA Artillery Team 2 Ammoman";
-					synchronizations[]={428};
+					synchronizations[]={426};
 				};
 			};
 		};
@@ -4298,7 +4310,7 @@ class Mission
 				class Item2
 				{
 					position[]={3992.1028,19,3505.5276};
-					id=429;
+					id=427;
 					side="GUER";
 					vehicle="GUE_Soldier_3";
 					player="PLAY CDG";
@@ -4306,7 +4318,7 @@ class Mission
 					text="UnitGUE_1Plt_ARA1_1_1_1";
 					init="GrpGUE_1Plt_AR3 = group this; nul = [""aram"",this] execVM ""f\common\@ShackTac_assignGear.sqf"";this addEventHandler [""killed"", {_this execVM ""save_gear.sqf""}];";
 					description="NAPA Artillery Team 3 Ammoman";
-					synchronizations[]={429};
+					synchronizations[]={427};
 				};
 			};
 		};
@@ -6432,7 +6444,7 @@ class Mission
 				items=2;
 				class Item0
 				{
-					position[]={3760.2495,19,3625.8318};
+					position[]={3759.2886,19,3625.8318};
 					id=406;
 					side="EAST";
 					vehicle="RU_Soldier_Pilot";
@@ -6446,7 +6458,7 @@ class Mission
 				};
 				class Item1
 				{
-					position[]={3760.8599,19,3619.5183};
+					position[]={3759.8989,19,3619.5183};
 					id=407;
 					side="EAST";
 					vehicle="RU_Soldier_Pilot";
@@ -6656,12 +6668,11 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={3858.5239,30.465855,3759.1982};
-					id=418;
+					position[]={3940.5386,37.622314,3760.5542};
+					id=176;
 					side="LOGIC";
-					vehicle="SilvieManager";
+					vehicle="ACE_Wounds_Logic";
 					leader=1;
-					lock="UNLOCKED";
 					skill=0.60000002;
 				};
 			};
@@ -6674,43 +6685,8 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={3856.9839,28.60944,3750.301};
-					id=419;
-					side="LOGIC";
-					vehicle="AliceManager";
-					leader=1;
-					lock="UNLOCKED";
-					skill=0.60000002;
-				};
-			};
-		};
-		class Item151
-		{
-			side="LOGIC";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={3940.5386,37.622314,3760.5542};
-					id=176;
-					side="LOGIC";
-					vehicle="ACE_Wounds_Logic";
-					leader=1;
-					skill=0.60000002;
-				};
-			};
-		};
-		class Item152
-		{
-			side="LOGIC";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
 					position[]={3953.2263,37.232079,3760.3208};
-					id=420;
+					id=418;
 					side="LOGIC";
 					vehicle="ACE_AITalk_Logic";
 					leader=1;

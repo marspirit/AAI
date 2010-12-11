@@ -39,4 +39,5 @@ if (isServer) then
 	["evac_relocate", {[(_this select 0)] execvm "mcc\general_scripts\evac\evac_relocate.sqf";}] call CBA_fnc_addEventHandler;
 	["airDrop", {[(_this select 0), (_this select 1), (_this select 2), (_this select 3), (_this select 4)] execvm "mcc\general_scripts\cas\cas_execute.sqf";}] call CBA_fnc_addEventHandler;
 	["artillery", {[(_this select 0), (_this select 1), (_this select 2), (_this select 3)] execvm "mcc\general_scripts\artillery\artillery_fire.sqf";}] call CBA_fnc_addEventHandler;
+	["gita", {[(_this select 0), (_this select 1), (_this select 2), (_this select 3), (_this select 4)] execvm "mcc\general_scripts\gita\gita_server.sqf";}] call CBA_fnc_addEventHandler;
 };

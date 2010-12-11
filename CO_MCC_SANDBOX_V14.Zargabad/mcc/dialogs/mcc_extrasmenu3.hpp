@@ -23,6 +23,10 @@
 #define TRIGGER_TEXT 7006 
 #define TRIGGER_SELECTED 7007
 
+#define GITA_SIZEX 7010
+#define GITA_TEXT 7012 
+#define GITA_DAMAGE 7013
+#define GITA_STYLE 7014
 
 //-----------------------------------------------------------------------------
 // Main dialog
@@ -40,7 +44,9 @@ class ExtrasDialog3 {
 	briefingFrame,
 	factionFrame,
 	markersFrame,
-	triggerTextBackground
+	triggerTextBackground,
+	gitaTextBackground,
+	gitaFrame
   };
   
 
@@ -61,7 +67,6 @@ class ExtrasDialog3 {
 	Zone_y,
 	Zone_yTitle,
 	Zone_set,
-	Zone_select,
 	faction,
 	factionTitle,
 	Update_Faction,
@@ -92,7 +97,18 @@ class ExtrasDialog3 {
 	triggersGenerateButton,
 	triggersTriggerTittle,
 	triggerSelected,
-	triggersMoveButton
+	triggersMoveButton,
+	townGeneratorTittle, //Gita
+	gitaXTittle,
+	gitaSizeX,
+	gitaText,
+	gitaTextTittle,
+	placeMarkerGita,
+	gitaDamageTittle,
+	gitaDamage,
+	gitaStyleTittle,
+	gitaStyle
+	
   };
  //========================================= Background========================================
  class MCC_Title : RscText {x = 0.02; y = 0.01;w = 3; colorBackground[] = { 1, 1, 1, 0 };text = "MCC Sandbox V1.4 redone by Shay_gman";};
@@ -103,6 +119,8 @@ class ExtrasDialog3 {
  class factionFrame : RscFrame {moving = true; x = 0.35; y = 0.54;w = 0.21; h = 0.07;};
  class markersFrame : factionFrame {x = 0.005; y = 0.04;w = 0.345; h = 0.36;}; 
  class triggerTextBackground : RscText {idc = -1;moving = true;colorBackground[] = { 0, 0, 0, 0.6 };colorText[] = { 1, 1, 1, 0 };x = 0.09; y = 0.2;w = 0.16; h = 0.04;text = "";};
+ class gitaTextBackground : RscText {idc = -1;moving = true;colorBackground[] = { 0, 0, 0, 0.6 };colorText[] = { 1, 1, 1, 0 };x = 0.11; y = 0.52;w = 0.14; h = 0.04;text = "";};
+ class gitaFrame : markersFrame {y = 0.44;w = 0.345; h = 0.4;};
  //========================================= Controls========================================
   
 //mapDialog
@@ -123,7 +141,11 @@ class ExtrasDialog3 {
   class triggerAngle : triggerActivate {idc = TRIGGER_ANGLE;y = 0.16;};
   class triggerShape : triggerAngle {idc = TRIGGER_SHAPE;x = 0.24;};
   class triggerSelected : triggerAngle {idc = TRIGGER_SELECTED;y = 0.25;w = 0.16;};
- 
+//Gita
+  class gitaSizeX : triggerActivate {idc = GITA_SIZEX;y = 0.48;};
+  class gitaDamage : gitaSizeX {idc = GITA_DAMAGE;x = 0.26;w = 0.04;};
+  class gitaStyle : triggerActivate {idc = GITA_STYLE;y = 0.58;};
+   
 //-------------------------------------------Titels-------------------------------------------
 //Zones
   class Zone_NumberTitle : RscText {idc = -1;style = ST_LEFT;colorBackground[] = { 1, 1, 1, 0 };colorText[] = { 1, 1, 1, 1 };x = 0.35; y = 0.65 - 0.015;	w = 0.22; h = 0.05;	sizeEx = 0.03;text = "Zone:";};
@@ -141,16 +163,22 @@ class ExtrasDialog3 {
   class triggersShapeTittle : triggersAngleTittle {x = 0.18;text = "Shape:";};
   class triggersTextTittle : triggerActivateTitle {y = 0.19;text = "Text:";};
   class triggersTriggerTittle : triggerActivateTitle {y = 0.24;text = "Trigger:";};
+//Gita
+  class townGeneratorTittle : Zone_NumberTitle {x = 0;y = 0.43;colorText[] = {0,1,1,1};text = "Town Generator:";};
+  class gitaXTittle : triggerActivateTitle {y = 0.47;text = "Radius:";};
+  class gitaTextTittle : gitaXTittle {y = 0.51;text = "Town Name:";};
+  class gitaDamageTittle : gitaXTittle {x = 0.18;text = "Damage:";};
+  class gitaStyleTittle : gitaTextTittle {y = 0.57;text = "Style:";};
 //----------------------------------------TextBox---------------------------------------------
   class triggersText : RscText {idc = TRIGGER_TEXT;type = CT_EDIT;style = ST_MULTI;colorBackground[] = { 0, 0, 0, 0 };colorText[] = { 1, 1, 1, 1 };colorSelection[] = { 1, 1, 1, 1 };colorBorder[] = { 1, 1, 1, 1 };
 		BorderSize = 0.01;autocomplete = false;x = 0.09; y = 0.2;w = 0.16; h = 0.04;sizeEx = 0.03;text = "";};
+  class gitaText : triggersText {idc = GITA_TEXT;x = 0.11; y = 0.52;w = 0.14;};
 //-------------------------------------------Buttons-------------------------------------------
 //Zones
   class Zone_set : RscGUIShortcutButton {idc = -1;colorDisabled[] = {1, 0.4, 0.3, 0.8};x = 0.35; y = 0.8;	text = "Update Zone";onButtonClick = "[1] execVM 'mcc\pop_menu\zones.sqf'";};
-  class Zone_select : RscGUIShortcutButton {idc = -1;colorDisabled[] = {1, 0.4, 0.3, 0.8};x = 0.48; y =0.65 ;w = 0.07; h = 0.0422876;size = 0.02;sizeEx = 0.02821;text = "select";onButtonClick = "[0] execVM 'mcc\pop_menu\zones.sqf'";};
 //Bottom Buttons
   class Close_dialog : RscGUIShortcutButton {idc = -1;colorDisabled[] = {1, 0.4, 0.3, 0.8};x = 0.895; y = 0.84;text = "Close";onButtonClick = "closeDialog 0";};
-  class Update_Faction : Zone_select {y = 0.55;text = "Update";onButtonClick = "mcc_screen=3;[] execVM 'mcc\pop_menu\faction.sqf'";};
+  class Update_Faction : RscGUIShortcutButton {idc = -1;colorDisabled[] = {1, 0.4, 0.3, 0.8};x = 0.48;y = 0.55;w = 0.07; h = 0.0422876;size = 0.02;sizeEx = 0.02821;text = "Update";onButtonClick = "mcc_screen=3;[] execVM 'mcc\pop_menu\faction.sqf'";};
   class Logout : Close_dialog {x = 0.7;text = "Logout";onButtonClick = "mcc_resetmissionmaker=true;nul=[0] execVM 'mcc\general_scripts\mcc_SpawnStuff.sqf';closeDialog 0";};
   class Safe : Close_dialog {x = 0.01;text = "Safe";onButtonClick = "copyToClipboard mcc_safe;hint 'SAVED to Clipboard! Now you can paste this code where you like to save it. Simple copy it all back in clipboard (ctrl-c) and press load to rebuild your mission.';";};
   class Load : Close_dialog {x = 0.2;text = "Load";onButtonClick = "mcc_safe = CopyFromClipboard;mcc_load='mcc_isloading=true;' + mcc_safe + 'mcc_isloading=false;';[] spawn compile mcc_load;";};
@@ -159,4 +187,6 @@ class ExtrasDialog3 {
 //Triggers
   class triggersGenerateButton : RscButton {idc = -1;x = 0.26;y = 0.2;w = 0.08;h = 0.04;colorText[] = {0,1,0,1};text = "Generate";action = "if (mcc_missionmaker == (name player)) then {nul=[0] execVM 'mcc\general_scripts\triggers\triggers.sqf';} else {player globalchat 'Access Denied'};";};
   class triggersMoveButton : RscButton {idc = -1;x = 0.26;y = 0.25;w = 0.08;h = 0.04;colorText[] = {0,0,1,1};text = "Move";action = "if (mcc_missionmaker == (name player)) then {nul=[2] execVM 'mcc\general_scripts\triggers\triggers.sqf';} else {player globalchat 'Access Denied'};";};
-  };
+//Gita  
+  class placeMarkerGita : RscButton {idc = -1;x = 0.26;y = 0.52;w = 0.08;h = 0.04;colorText[] = {0,0,1,1};text = "Create";action = "if (mcc_missionmaker == (name player)) then {nul=[0] execVM 'mcc\general_scripts\gita\generate_request.sqf';} else {player globalchat 'Access Denied'};";};
+   };

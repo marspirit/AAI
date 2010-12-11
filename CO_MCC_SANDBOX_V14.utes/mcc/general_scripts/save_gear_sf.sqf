@@ -1,6 +1,7 @@
 private ["_unit", "_weapons", "_items", "_magazines", "_currweap", "_hasruck", "_ruckMags", "_ruckWeaps", "_weaponback", "_success", "_muzzles","_null"];
 
 _unit = _this select 0;
+teleportToTeam = true;
 _weapons = (weapons _unit) - (items _unit);	
 _items = items _unit;		
 _magazines = magazines _unit;	
