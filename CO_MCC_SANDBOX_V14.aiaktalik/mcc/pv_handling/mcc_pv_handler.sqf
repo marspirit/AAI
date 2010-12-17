@@ -148,26 +148,26 @@ if (isServer) then
 									case "AIR":
 									{
 										if !_p_mcc_spawnwithcrew then 
-										{_safepos     =[_p_mcc_zone_markposition,10,_p_maxrange,10,0,100,0,[],[[-500,-500,0],[-500,-500,0]]] call BIS_fnc_findSafePos; }
+										{_safepos     =[_p_mcc_zone_markposition,1,_p_maxrange,2,0,100,0,[],[[-500,-500,0],[-500,-500,0]]] call BIS_fnc_findSafePos; }
 										else
-										{_safepos     =[_p_mcc_zone_markposition ,10,_p_maxrange,10,1,10,0,[],[[-500,-500,0],[-500,-500,0]]] call BIS_fnc_findSafePos;};						
+										{_safepos     =[_p_mcc_zone_markposition ,1,_p_maxrange,2,1,10,0,[],[[-500,-500,0],[-500,-500,0]]] call BIS_fnc_findSafePos;};						
 									};
 									
 									case "PARATROOPER":
 									{
 										
-										_safepos     =[_p_mcc_zone_markposition,10,_p_maxrange,10,1,100,0,[],[[-500,-500,0],[-500,-500,0]]] call BIS_fnc_findSafePos;					
+										_safepos     =[_p_mcc_zone_markposition,1,_p_maxrange,2,1,100,0,[],[[-500,-500,0],[-500,-500,0]]] call BIS_fnc_findSafePos;					
 										
 									};
 									
 									case "LAND":
 									{
-										_safepos     =[_p_mcc_zone_markposition,10,_p_maxrange,10,0,100,0,[],[[-500,-500,0],[-500,-500,0]]] call BIS_fnc_findSafePos;					
+										_safepos     =[_p_mcc_zone_markposition,1,_p_maxrange,2,0,100,0,[],[[-500,-500,0],[-500,-500,0]]] call BIS_fnc_findSafePos;					
 									};
 
 									case "WATER":
 									{					
-										_safepos     =[_p_mcc_zone_markposition,10,_p_maxrange,10,2,100,0,[],[[-500,-500,0],[-500,-500,0]]] call BIS_fnc_findSafePos; 
+										_safepos     =[_p_mcc_zone_markposition,1,_p_maxrange,2,2,100,0,[],[[-500,-500,0],[-500,-500,0]]] call BIS_fnc_findSafePos; 
 									};
 								};
 							if (format["%1",_safepos] != "[-500,-500,0]" ) then

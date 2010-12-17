@@ -28,6 +28,18 @@
 #define GITA_DAMAGE 7013
 #define GITA_STYLE 7014
 
+#define MODULES_ANIMAL 7015 
+#define MODULES_ALICE 7016 
+#define MODULES_ALICE2 7017 
+#define MODULES_SILVIE 7018 
+
+#define BATTLEFIELD_RADIUS 7025
+
+#define MOBILESPAWN_CARS 7030 
+#define MOBILESPAWN_TANKS 7031
+#define MOBILESPAWN_HELIS 7032
+#define MOBILESPAWN_SIDE 7033
+
 //-----------------------------------------------------------------------------
 // Main dialog
 //-----------------------------------------------------------------------------
@@ -46,7 +58,10 @@ class ExtrasDialog3 {
 	markersFrame,
 	triggerTextBackground,
 	gitaTextBackground,
-	gitaFrame
+	gitaFrame,
+	modulesFrame,
+	battlefieldFrame,
+	mobileSpawnFrame
   };
   
 
@@ -107,8 +122,28 @@ class ExtrasDialog3 {
 	gitaDamageTittle,
 	gitaDamage,
 	gitaStyleTittle,
-	gitaStyle
-	
+	gitaStyle,
+	ModuleTittle, //Modules
+	animal,
+	alice,
+	alice2,
+	silvie,
+	battlefieldTittle, //battlefield
+	battlefieldRadiusTittle,
+	battlefieldRadius,
+	battlefieldGenerate,
+	mobileSpawnTittle,	//Mobile spawn
+	mobileSpawnSideTittle,
+	mobileSpawnCarsTittle,
+	mobileSpawnTanksTittle,
+	mobileSpawnHelisTittle,
+	mobileSpawnCars,
+	mobileSpawnTanks,
+	mobileSpawnHelis,
+	mobileSpawnCarsButton,
+	mobileSpawnTanksButton,
+	mobileSpawnHelisButton,
+	mobileSpawnSide
   };
  //========================================= Background========================================
  class MCC_Title : RscText {x = 0.02; y = 0.01;w = 3; colorBackground[] = { 1, 1, 1, 0 };text = "MCC Sandbox V1.4 redone by Shay_gman";};
@@ -121,6 +156,9 @@ class ExtrasDialog3 {
  class triggerTextBackground : RscText {idc = -1;moving = true;colorBackground[] = { 0, 0, 0, 0.6 };colorText[] = { 1, 1, 1, 0 };x = 0.09; y = 0.2;w = 0.16; h = 0.04;text = "";};
  class gitaTextBackground : RscText {idc = -1;moving = true;colorBackground[] = { 0, 0, 0, 0.6 };colorText[] = { 1, 1, 1, 0 };x = 0.11; y = 0.52;w = 0.14; h = 0.04;text = "";};
  class gitaFrame : markersFrame {y = 0.44;w = 0.345; h = 0.4;};
+ class modulesFrame : markersFrame {y = 0.04; h = 0.26;};
+ class battlefieldFrame : markersFrame {y = 0.44; h = 0.18;};
+ class mobileSpawnFrame : markersFrame {y = 0.7; h = 0.14;};
  //========================================= Controls========================================
   
 //mapDialog
@@ -145,7 +183,14 @@ class ExtrasDialog3 {
   class gitaSizeX : triggerActivate {idc = GITA_SIZEX;y = 0.48;};
   class gitaDamage : gitaSizeX {idc = GITA_DAMAGE;x = 0.26;w = 0.04;};
   class gitaStyle : triggerActivate {idc = GITA_STYLE;y = 0.58;};
-   
+//Battlefield
+  class battlefieldRadius : triggerActivate {idc = BATTLEFIELD_RADIUS;y = 0.66;};
+//Mobile Spawn
+ class mobileSpawnSide : triggerActivate {idc = MOBILESPAWN_SIDE;x = 0.21;y = 0.7;};
+ class mobileSpawnCars : triggerActivate {idc = MOBILESPAWN_CARS;x = 0.01;y = 0.76;};
+ class mobileSpawnTanks: mobileSpawnCars {idc = MOBILESPAWN_TANKS;x = 0.11;};
+ class mobileSpawnHelis: mobileSpawnCars {idc = MOBILESPAWN_HELIS;x = 0.21;};
+ 
 //-------------------------------------------Titels-------------------------------------------
 //Zones
   class Zone_NumberTitle : RscText {idc = -1;style = ST_LEFT;colorBackground[] = { 1, 1, 1, 0 };colorText[] = { 1, 1, 1, 1 };x = 0.35; y = 0.65 - 0.015;	w = 0.22; h = 0.05;	sizeEx = 0.03;text = "Zone:";};
@@ -169,6 +214,17 @@ class ExtrasDialog3 {
   class gitaTextTittle : gitaXTittle {y = 0.51;text = "Town Name:";};
   class gitaDamageTittle : gitaXTittle {x = 0.18;text = "Damage:";};
   class gitaStyleTittle : gitaTextTittle {y = 0.57;text = "Style:";};
+//Modules
+  class ModuleTittle : townGeneratorTittle {y = 0.29;text = "Enable Modules:";};
+//Battlefield
+  class battlefieldTittle : ModuleTittle {y = 0.61;text = "Battlefield Generator:";};
+  class battlefieldRadiusTittle : triggerActivateTitle {y = 0.65;text = "Radius:";};
+//Mobile Spawn
+  class mobileSpawnTittle : ModuleTittle {y = 0.69;text = "Mobile Spawn:";};
+  class mobileSpawnSideTittle : triggerActivateTitle {x = 0.16;y = 0.69;text = "Side:";};
+  class mobileSpawnCarsTittle : triggerActivateTitle {x = 0.01;y = 0.72;text = "Cars:";};
+  class mobileSpawnTanksTittle : mobileSpawnCarsTittle {x = 0.11;text = "Tanks:";};
+  class mobileSpawnHelisTittle : mobileSpawnCarsTittle {x = 0.21;text = "Helis:";};
 //----------------------------------------TextBox---------------------------------------------
   class triggersText : RscText {idc = TRIGGER_TEXT;type = CT_EDIT;style = ST_MULTI;colorBackground[] = { 0, 0, 0, 0 };colorText[] = { 1, 1, 1, 1 };colorSelection[] = { 1, 1, 1, 1 };colorBorder[] = { 1, 1, 1, 1 };
 		BorderSize = 0.01;autocomplete = false;x = 0.09; y = 0.2;w = 0.16; h = 0.04;sizeEx = 0.03;text = "";};
@@ -189,4 +245,15 @@ class ExtrasDialog3 {
   class triggersMoveButton : RscButton {idc = -1;x = 0.26;y = 0.25;w = 0.08;h = 0.04;colorText[] = {0,0,1,1};text = "Move";action = "if (mcc_missionmaker == (name player)) then {nul=[2] execVM 'mcc\general_scripts\triggers\triggers.sqf';} else {player globalchat 'Access Denied'};";};
 //Gita  
   class placeMarkerGita : RscButton {idc = -1;x = 0.26;y = 0.52;w = 0.08;h = 0.04;colorText[] = {0,0,1,1};text = "Create";action = "if (mcc_missionmaker == (name player)) then {nul=[0] execVM 'mcc\general_scripts\gita\generate_request.sqf';} else {player globalchat 'Access Denied'};";};
+//Modules
+  class animal : RscButton {idc = MODULES_ANIMAL;x = 0.01;y = 0.34;w = 0.07;h = 0.04;colorText[] = {0,0,1,1};text = "Animals";action = "if (mcc_missionmaker == (name player)) then {nul=[1] execVM 'mcc\general_scripts\gita\generate_request.sqf';} else {player globalchat 'Access Denied'};";};
+  class alice : RscButton {idc = MODULES_ALICE;x = 0.09;y = 0.34;w = 0.07;h = 0.04;colorText[] = {0,0,1,1};text = "Civ Euro";action = "if (mcc_missionmaker == (name player)) then {nul=[2] execVM 'mcc\general_scripts\gita\generate_request.sqf';} else {player globalchat 'Access Denied'};";};
+  class alice2 : RscButton {idc = MODULES_ALICE2;x = 0.18;y = 0.34;w = 0.07;h = 0.04;colorText[] = {0,0,1,1};text = "Civ Arab";action = "if (mcc_missionmaker == (name player)) then {nul=[3] execVM 'mcc\general_scripts\gita\generate_request.sqf';} else {player globalchat 'Access Denied'};";};
+  class silvie : RscButton {idc = MODULES_SILVIE;x = 0.27;y = 0.34;w = 0.07;h = 0.04;colorText[] = {0,0,1,1};text = "Vehicles";action = "if (mcc_missionmaker == (name player)) then {nul=[4] execVM 'mcc\general_scripts\gita\generate_request.sqf';} else {player globalchat 'Access Denied'};";};
+//Battlefield
+  class battlefieldGenerate : RscButton {idc = -1;x = 0.2;y = 0.65;w = 0.08;h = 0.04;colorText[] = {0,0,1,1};text = "Create";action = "if (mcc_missionmaker == (name player)) then {nul=[5] execVM 'mcc\general_scripts\gita\generate_request.sqf';} else {player globalchat 'Access Denied'};";};
+//MobileSpawn
+  class mobileSpawnCarsButton : RscGUIShortcutButton {idc = -1;colorDisabled[] = {1, 0.4, 0.3, 0.8};x = 0.01; y = 0.8;w = 0.08;h = 0.04;size = 0.02;sizeEx = 0.03;text = "Spawn";onButtonClick = "if (mcc_missionmaker == (name player)) then {nul=[0] execVM 'mcc\general_scripts\mobileSpawn\mobileSpawn_request.sqf';} else {player globalchat 'Access Denied'};";};
+  class mobileSpawnTanksButton : RscGUIShortcutButton {idc = -1;colorDisabled[] = {1, 0.4, 0.3, 0.8};x = 0.11; y = 0.8;w = 0.08;h = 0.04;size = 0.02;sizeEx = 0.03;text = "Spawn";onButtonClick = "if (mcc_missionmaker == (name player)) then {nul=[1] execVM 'mcc\general_scripts\mobileSpawn\mobileSpawn_request.sqf';} else {player globalchat 'Access Denied'};";};
+  class mobileSpawnHelisButton : RscGUIShortcutButton {idc = -1;colorDisabled[] = {1, 0.4, 0.3, 0.8};x = 0.21; y = 0.8;w = 0.08;h = 0.04;size = 0.02;sizeEx = 0.03;text = "Spawn";onButtonClick = "if (mcc_missionmaker == (name player)) then {nul=[2] execVM 'mcc\general_scripts\mobileSpawn\mobileSpawn_request.sqf';} else {player globalchat 'Access Denied'};";};
    };

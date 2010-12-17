@@ -25,7 +25,9 @@ class Mission
 		"CAAir_E",
 		"ace_sys_aitalk",
 		"ca_modules_animals",
-		"cacharacters_e"
+		"cacharacters_e",
+		"ca_missions_garbagecollector",
+		"ca_modules_e_weather"
 	};
 	addOnsAuto[]=
 	{
@@ -37,6 +39,8 @@ class Mission
 		"ca_modules_e_uav_heli",
 		"ace_sys_aitalk",
 		"ace_sys_wounds",
+		"ca_missions_garbagecollector",
+		"ca_modules_e_weather",
 		"camisc3",
 		"utes"
 	};
@@ -56,7 +60,7 @@ class Mission
 	};
 	class Groups
 	{
-		items=151;
+		items=154;
 		class Item0
 		{
 			side="WEST";
@@ -2663,7 +2667,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={3912.2585,36.291855,3769.2639};
+					position[]={3904.9287,34.820503,3761.7307};
 					id=175;
 					side="LOGIC";
 					vehicle="FunctionsManager";
@@ -6650,7 +6654,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={3952.636,35.771336,3750.7603};
+					position[]={3927.5923,34.968994,3749.3352};
 					id=417;
 					side="LOGIC";
 					vehicle="ACE_RadioTalk_Logic";
@@ -6668,7 +6672,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={3940.5386,37.622314,3760.5542};
+					position[]={3927.3044,36.798889,3761.5723};
 					id=176;
 					side="LOGIC";
 					vehicle="ACE_Wounds_Logic";
@@ -6685,10 +6689,64 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={3953.2263,37.232079,3760.3208};
+					position[]={3942.0278,37.656815,3761.542};
 					id=418;
 					side="LOGIC";
 					vehicle="ACE_AITalk_Logic";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+				};
+			};
+		};
+		class Item151
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={3890.7129,33.650196,3761.543};
+					id=428;
+					side="LOGIC";
+					vehicle="GarbageCollector";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+				};
+			};
+		};
+		class Item152
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={3904.1147,29.100348,3735.3201};
+					id=430;
+					side="LOGIC";
+					vehicle="WeatherParticlesManager";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+				};
+			};
+		};
+		class Item153
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={3889.5989,28.001377,3735.366};
+					id=429;
+					side="LOGIC";
+					vehicle="WeatherPostprocessManager";
 					leader=1;
 					lock="UNLOCKED";
 					skill=0.60000002;
@@ -6792,7 +6850,7 @@ class Mission
 		items=18;
 		class Item0
 		{
-			position[]={3472.0232,33.685547,3774.6077};
+			position[]={3945.9028,29.317369,3726.6116};
 			name="center";
 			text="Center";
 			type="Empty";
@@ -6893,7 +6951,7 @@ class Mission
 		};
 		class Item14
 		{
-			position[]={3472.0232,33.685547,3774.6077};
+			position[]={3945.9028,29.317369,3726.6116};
 			name="center_1";
 			text="Center";
 			type="Empty";

@@ -40,4 +40,7 @@ if (isServer) then
 	["airDrop", {[(_this select 0), (_this select 1), (_this select 2), (_this select 3), (_this select 4)] execvm "mcc\general_scripts\cas\cas_execute.sqf";}] call CBA_fnc_addEventHandler;
 	["artillery", {[(_this select 0), (_this select 1), (_this select 2), (_this select 3)] execvm "mcc\general_scripts\artillery\artillery_fire.sqf";}] call CBA_fnc_addEventHandler;
 	["gita", {[(_this select 0), (_this select 1), (_this select 2), (_this select 3), (_this select 4)] execvm "mcc\general_scripts\gita\gita_server.sqf";}] call CBA_fnc_addEventHandler;
+	["modules", {[(_this select 0), (_this select 1)] execvm "mcc\general_scripts\gita\modules_server.sqf";}] call CBA_fnc_addEventHandler;
+	["battlefield", {[(_this select 0), (_this select 1)] execvm "mcc\general_scripts\gita\battlefield_server.sqf";}] call CBA_fnc_addEventHandler;
+	["mobileSpawn", {[(_this select 0), (_this select 1), (_this select 2)] execvm "mcc\general_scripts\mobileSpawn\mobileSpawn_execute.sqf";}] call CBA_fnc_addEventHandler;
 };

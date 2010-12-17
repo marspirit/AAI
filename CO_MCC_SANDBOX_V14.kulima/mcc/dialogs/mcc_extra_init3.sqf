@@ -22,9 +22,26 @@ unit_array_ready=false;
 #define GITA_DAMAGE 7013
 #define GITA_STYLE 7014
 
+#define MODULES_ANIMAL 7015 
+#define MODULES_ALICE 7016 
+#define MODULES_ALICE2 7017 
+#define MODULES_SILVIE 7018 
+
+#define BATTLEFIELD_RADIUS 7025
+
+#define MOBILESPAWN_CARS 7030 
+#define MOBILESPAWN_TANKS 7031
+#define MOBILESPAWN_HELIS 7032
+#define MOBILESPAWN_SIDE 7033
+
 disableSerialization;
 _mccdialog = findDisplay ExtrasDialog3_IDD;
 if (!mcc_capture_state) then { ctrlEnable [CAPTURE,false];};
+
+if (animalModule) then {ctrlEnable [MODULES_ANIMAL,false];}; //enable buttons for active modules
+if (aliceModule) then {ctrlEnable [MODULES_ALICE,false];};
+if (aliceModule2) then {ctrlEnable [MODULES_ALICE2,false];};
+if (silvieModule) then {ctrlEnable [MODULES_SILVIE,false];};
 
 //-----------------------------------------------------Zones & Factions--------------------------------------------
 _comboBox = _mccdialog displayCtrl MCC_ZONE_NUMBERS; //fill combobox zone's numbers
@@ -121,15 +138,15 @@ _comboBox = _mccdialog displayCtrl TRIGGER_SELECTED;		//fill combobox Active tri
 	
 //------------------------------------Gita--------------------------------------------------------------------------------------------------------
 	
-_comboBox = _mccdialog displayCtrl GITA_SIZEX;		//fill combobox Trigger Shape 
+_comboBox = _mccdialog displayCtrl GITA_SIZEX;		//fill combobox gita size 
 	lbClear _comboBox;
 	{
-		_displayname = _x select 0;
+		_displayname = format ["%1", _x];
 		_comboBox lbAdd _displayname;
-	} foreach zones_x;
+	} foreach [100,200,300,400,500,600,700,800,900,1000];
 	_comboBox lbSetCurSel 0;
 	
-_comboBox = _mccdialog displayCtrl GITA_DAMAGE;		//fill combobox Trigger Shape 
+_comboBox = _mccdialog displayCtrl GITA_DAMAGE;		//fill combobox Gita damage
 	lbClear _comboBox;
 	{
 		_displayname = format ["%1", _x];
@@ -137,7 +154,7 @@ _comboBox = _mccdialog displayCtrl GITA_DAMAGE;		//fill combobox Trigger Shape
 	} foreach [0,1,2,3,4,5,6,7,8,9,10];
 	_comboBox lbSetCurSel 0;
 
-_comboBox = _mccdialog displayCtrl GITA_STYLE;		//fill combobox Trigger Shape 
+_comboBox = _mccdialog displayCtrl GITA_STYLE;		//fill combobox gita style
 	lbClear _comboBox;
 	{
 		_displayname = _x;
@@ -145,9 +162,55 @@ _comboBox = _mccdialog displayCtrl GITA_STYLE;		//fill combobox Trigger Shape
 	} foreach ["European", "Takistany"];
 	_comboBox lbSetCurSel 0;
 
+//------------------------------------Battlefield--------------------------------------------------------------------------------------------------------
+	
+_comboBox = _mccdialog displayCtrl BATTLEFIELD_RADIUS;		//fill combobox Battlefield size 
+	lbClear _comboBox;
+	{
+		_displayname =  _x select 0;
+		_comboBox lbAdd _displayname;
+	} foreach zones_x;
+	_comboBox lbSetCurSel 0;
+
+//-------------------------------Mobile Spawn--------------------------------------------------------------------------------------------------------------
 
 if (faction_choice) then {waituntil {(unit_array_ready)}}; //wait for arrays to build up if faction choice
 faction_choice=false; 
+
+_comboBox = _mccdialog displayCtrl MOBILESPAWN_CARS;		//fill combobox CFG unit's Car
+lbClear _comboBox;
+{
+	_displayname = format ["%1",(_x select 3) select 0];
+	_index = _comboBox lbAdd _displayname;
+	_comboBox lbsetpicture [_index, (_x select 3) select 1];
+} foreach U_GEN_CAR;
+_comboBox lbSetCurSel 0;
+
+_comboBox = _mccdialog displayCtrl MOBILESPAWN_TANKS;		//fill combobox CFG unit's TANK
+lbClear _comboBox;
+{
+	_displayname = format ["%1",(_x select 3) select 0];
+	_index = _comboBox lbAdd _displayname;
+	_comboBox lbsetpicture [_index, (_x select 3) select 1];
+} foreach U_GEN_TANK;
+_comboBox lbSetCurSel 0;
+
+_comboBox = _mccdialog displayCtrl MOBILESPAWN_HELIS;		//fill combobox CFG unit's HELI
+lbClear _comboBox;
+{
+	_displayname = format ["%1",(_x select 3) select 0];
+	_index = _comboBox lbAdd _displayname;
+	_comboBox lbsetpicture [_index, (_x select 3) select 1];
+} foreach U_GEN_HELICOPTER;
+_comboBox lbSetCurSel 0;
+
+_comboBox = _mccdialog displayCtrl MOBILESPAWN_SIDE;		//fill combobox CFG unit's HELI
+lbClear _comboBox;
+{
+	_displayname = format ["%1",_x];
+	_index = _comboBox lbAdd _displayname;
+} foreach [west, east, resistance];
+_comboBox lbSetCurSel 0;
 
 
 
