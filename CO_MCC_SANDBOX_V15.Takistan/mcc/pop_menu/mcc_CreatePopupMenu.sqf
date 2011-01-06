@@ -21,7 +21,7 @@ _MenuStructureArray =
         [
          [ ["Item", "Menu2: LHD/AirDrop/UAV/CAS/Artillery/IED/Convoy > "], ["Action", "closeDialog 0;_ok = createDialog 'ExtrasDialog';"] ],
 		 [ ["Item", "Menu3: Markers/Briefing/Brushes/Tasks/Evac/JukeBox> "], ["Action", "closeDialog 0;_ok = createDialog 'ExtrasDialog2';"] ],
-		 [ ["Item", "Menu4: Triggers> "], ["Action", "closeDialog 0;_ok = createDialog 'ExtrasDialog3';"] ]
+		 [ ["Item", "Menu4: Triggers/Gita> "], ["Action", "closeDialog 0;_ok = createDialog 'ExtrasDialog3';"] ]
 		]        
       ]
     ]

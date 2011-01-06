@@ -5,6 +5,7 @@ _weapons = (weapons _unit) - (items _unit);
 _items = items _unit;		
 _magazines = magazines _unit;	
 _currweap = currentWeapon _unit;	
+teleportToTeam = true;
 
 
 	_hasruck = player call ACE_Sys_Ruck_fnc_hasRuck;

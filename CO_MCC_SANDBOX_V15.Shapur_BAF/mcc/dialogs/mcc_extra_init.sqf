@@ -16,19 +16,15 @@ unit_array_ready=false;
 #define UNIT_SHIP 3016
 
 
-#define SMALL_OBJECTS 4500
-#define MEDIUM_OBJECTS 4501
-#define LARGE_OBJECTS 4502
-#define AMMOBOX_OBJECTS 4503
-#define WRECKS_OBJECTS 4504
-#define CARS_OBJECTS 4505
-#define MINES_OBJECTS 4506
-#define ROADSIDE_OBJECTS 4507
-#define ARMED_OBJECTS 4508
-#define SB_OBJECTS 4509
+#define IED_TYPE 4500
+#define IED_EXPLOSION 4502
+#define IED_EXPTYPE 4503
+#define IED_DISARM 4504
+#define IED_JAM 4505
+#define IED_TRIGGER 4506
+#define IED_AMBUSH 4507
 
 #define IED_PROX 4510
-#define IED_NUMBER 4511
 #define IED_TARGET 4512
 
 #define CONVOY_CAR1 5001
@@ -192,10 +188,7 @@ lbClear _comboBox;
 	_displayname = format ["%1",_x];
 	_index = _comboBox lbAdd _displayname;
 } foreach ied_target;
-_comboBox lbSetCurSel ied_targetIndex;
-
-	
-//--------------------------------------------------------TRAPS Objects---------------------------------------------------------
+_comboBox lbSetCurSel 0;
 
 _comboBox = _mccdialog displayCtrl IED_PROX;		//fill combobox IED Prox
 lbClear _comboBox;
@@ -203,106 +196,65 @@ lbClear _comboBox;
 	_displayname = format ["%1",_x];
 	_index = _comboBox lbAdd _displayname;
 } foreach ied_prox;
-_comboBox lbSetCurSel ied_proxIndex;
-
-_comboBox = _mccdialog displayCtrl IED_NUMBER;		//fill combobox IED number
-lbClear _comboBox;
-{
-	_displayname = format ["%1",_x];
-	_index = _comboBox lbAdd _displayname;
-} foreach ied_number;
-_comboBox lbSetCurSel ied_numberIndex;
-
-_comboBox = _mccdialog displayCtrl IED_TARGET;		//fill combobox IED target
-lbClear _comboBox;
-{
-	_displayname = format ["%1",_x];
-	_index = _comboBox lbAdd _displayname;
-} foreach ied_target;
-_comboBox lbSetCurSel ied_targetIndex;
-
-_comboBox = _mccdialog displayCtrl SMALL_OBJECTS;		//fill combobox IED Small objects
-lbClear _comboBox;
-{
-	_displayname = format ["%1",(_x select 0)];
-	_index = _comboBox lbAdd _displayname;
-} foreach ied_small;
 _comboBox lbSetCurSel 0;
 
-_comboBox = _mccdialog displayCtrl MEDIUM_OBJECTS;		//fill combobox IED Medium objects
+_comboBox = _mccdialog displayCtrl IED_TYPE;		//fill combobox IED Type
 lbClear _comboBox;
 {
-	_displayname = format ["%1",(_x select 0)];
+	_displayname = _x;
 	_index = _comboBox lbAdd _displayname;
-} foreach ied_medium;
+} foreach ["Small objects", "Medium objects", "Hidden IEDs", "Wrecks", "Roadside Charges", "Mines", "Ammoboxes", "Cars", "Armed Civilians","Suicide bombers"];
 _comboBox lbSetCurSel 0;
 
-_comboBox = _mccdialog displayCtrl LARGE_OBJECTS;		//fill combobox IED Large objects
+_comboBox = _mccdialog displayCtrl IED_EXPLOSION;		//fill combobox IED Explosion size
 lbClear _comboBox;
 {
-	_displayname = format ["%1",(_x select 0)];
+	_displayname = _x;
 	_index = _comboBox lbAdd _displayname;
-} foreach ied_large;
+} foreach ["Small", "Medium", "Large"];
 _comboBox lbSetCurSel 0;
 
-_comboBox = _mccdialog displayCtrl WRECKS_OBJECTS;		//fill combobox IED Wrecks
+_comboBox = _mccdialog displayCtrl IED_EXPTYPE;		//fill combobox IED Explosion type
 lbClear _comboBox;
 {
-	_displayname = format ["%1",(_x select 0)];
+	_displayname = _x;
 	_index = _comboBox lbAdd _displayname;
-} foreach ied_wrecks;
+} foreach ["Deadly", "Disabling", "Fake"];
 _comboBox lbSetCurSel 0;
 
-_comboBox = _mccdialog displayCtrl MINES_OBJECTS;		//fill combobox IED Mines
+_comboBox = _mccdialog displayCtrl IED_DISARM;		//fill combobox IED Disarm time
 lbClear _comboBox;
 {
-	_displayname = format ["%1",(_x select 0)];
+	_displayname = _x;
 	_index = _comboBox lbAdd _displayname;
-} foreach ied_mine;
+} foreach ["10 Sec", "20 Sec", "30 Sec", "40 Sec", "50 Sec", "1 Min", "2 Min", "3 Min", "4 Min", "5 Min"];
 _comboBox lbSetCurSel 0;
 
-_comboBox = _mccdialog displayCtrl ROADSIDE_OBJECTS;		//fill combobox IED Roadside Charges
+_comboBox = _mccdialog displayCtrl IED_JAM;		//fill combobox IED Jameable
 lbClear _comboBox;
 {
-	_displayname = format ["%1",(_x select 0)];
+	_displayname = _x;
 	_index = _comboBox lbAdd _displayname;
-} foreach ied_rc;
+} foreach ["True", "False"];
 _comboBox lbSetCurSel 0;
-	
+
+_comboBox = _mccdialog displayCtrl IED_TRIGGER;		//fill combobox IED Trigger Type
+lbClear _comboBox;
+{
+	_displayname = _x;
+	_index = _comboBox lbAdd _displayname;
+} foreach ["Proximity", "Mission maker only"];
+_comboBox lbSetCurSel 0;
+
 if (faction_choice) then {waituntil {(unit_array_ready)}}; //wait for arrays to build up if faction choice
 faction_choice=false; 
 
-_comboBox = _mccdialog displayCtrl AMMOBOX_OBJECTS;		//fill combobox IED Ammoboxes
+_comboBox = _mccdialog displayCtrl IED_AMBUSH;		//fill combobox IED Ambush group
 lbClear _comboBox;
 {
-	_displayname = format ["%1",(_x select 3)select 0];
+	_displayname = format ["%1",_x select 3];
 	_index = _comboBox lbAdd _displayname;
-} foreach U_AMMO;
-_comboBox lbSetCurSel 0;
-
-_comboBox = _mccdialog displayCtrl CARS_OBJECTS;		//fill combobox IED Cars
-lbClear _comboBox;
-{
-	_displayname = format ["%1",(_x select 3) select 0];
-	_index = _comboBox lbAdd _displayname;
-	_comboBox lbsetpicture [_index, (_x select 3) select 1];
-} foreach U_GEN_CAR;
-_comboBox lbSetCurSel 0;	
-
-_comboBox = _mccdialog displayCtrl ARMED_OBJECTS;		//fill combobox IED Armed Civilians
-lbClear _comboBox;
-{
-	_displayname = format ["%1",(_x select 3) select 0];
-	_index = _comboBox lbAdd _displayname;
-} foreach U_GEN_SOLDIER;
-_comboBox lbSetCurSel 0;
-
-_comboBox = _mccdialog displayCtrl SB_OBJECTS;		//fill combobox IED Suicide Bombers
-lbClear _comboBox;
-{
-	_displayname = format ["%1",(_x select 3) select 0];
-	_index = _comboBox lbAdd _displayname;
-} foreach U_GEN_SOLDIER;
+} foreach GEN_INFANTRY;
 _comboBox lbSetCurSel 0;
 
 _comboBox = _mccdialog displayCtrl SUPPORT_HOSTAGES;		//fill combobox SUPPORT Hostages

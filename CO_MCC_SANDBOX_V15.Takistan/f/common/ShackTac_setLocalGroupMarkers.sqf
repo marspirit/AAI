@@ -17,7 +17,7 @@ switch (faction player) do
 // MARKERS: USMC
 // Markers seen by players in USMC slots (includes black markers for CDF groups). 
 
-       case "BIS_US":
+       case "USMC":
        {
                ["GrpUSMC_1Plt_PltHQ", 0, "PltHQ", "ColorYellow"] execVM "f\common\ShackTac_localGroupMarker.sqf";
                ["GrpUSMC_1Plt_Alpha", 1, "ASL", "ColorRed"] execVM "f\common\ShackTac_localGroupMarker.sqf";
@@ -212,7 +212,7 @@ switch (faction player) do
 // MARKERS: RUSSIAN
 // Markers seen by players in Russian slots (includes black markers for ChDKZ groups).
 
-       case "BIS_TK":
+       case "RU":
        {
                ["GrpRU_1Plt_PltHQ", 0, "PltHQ", "ColorYellow"] execVM "f\common\ShackTac_localGroupMarker.sqf";
                ["GrpRU_1Plt_Alpha", 1, "ASL", "ColorRed"] execVM "f\common\ShackTac_localGroupMarker.sqf";
@@ -405,7 +405,7 @@ switch (faction player) do
 // MARKERS: NAPA
 // Markers seen by players in NAPA slots.
 
-       case "BIS_TK_GUE":
+       case "GUE":
        {
                ["GrpGUE_1Plt_PltHQ", 0, "PltHQ", "ColorYellow"] execVM "f\common\ShackTac_localGroupMarker.sqf";
                ["GrpGUE_1Plt_Alpha", 1, "ASL", "ColorRed"] execVM "f\common\ShackTac_localGroupMarker.sqf";

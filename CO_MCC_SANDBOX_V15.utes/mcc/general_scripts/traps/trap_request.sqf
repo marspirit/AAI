@@ -1,708 +1,357 @@
 //Made by Shay_Gman (c) 09.10
-#define SMALL_OBJECTS 4500
-#define MEDIUM_OBJECTS 4501
-#define LARGE_OBJECTS 4502
-#define AMMOBOX_OBJECTS 4503
-#define WRECKS_OBJECTS 4504
-#define CARS_OBJECTS 4505
-#define MINES_OBJECTS 4506
-#define ROADSIDE_OBJECTS 4507
-#define ARMED_OBJECTS 4508
-#define SB_OBJECTS 4509
+#define IED_TYPE 4500
+#define IED_OBJECT 4501
+#define IED_EXPLOSION 4502
+#define IED_EXPTYPE 4503
+#define IED_DISARM 4504
+#define IED_JAM 4505
+#define IED_TRIGGER 4506
+#define IED_AMBUSH 4507
 
 #define IED_PROX 4510
 #define IED_NUMBER 4511
 #define IED_TARGET 4512
-private ["_type"];
+
+private ["_spawnType","_IEDtype","_trapsArray"];
 if !mcc_isloading then 
 	{
 	if (mcc_missionmaker == (name player)) then
-	{
-		iedside = ied_target select (lbCurSel IED_TARGET);
-		_type = _this select 0; 
-		trapdistance = ied_prox select (lbCurSel IED_PROX);
-		trapsnumber = ied_number select (lbCurSel IED_NUMBER);
-		ied_proxIndex = lbCurSel IED_PROX;
-		ied_numberIndex = lbCurSel IED_NUMBER;
-		ied_targetIndex = lbCurSel IED_TARGET;
-		
-		switch (_type) do		//Which trap do we want
 		{
-		   case 0:	//small single
+		_spawnType = _this select 0; 	//Zone or single
+		_IEDtype = lbCurSel IED_TYPE;	//Type of IED to spawn
+		switch (lbCurSel IED_EXPLOSION) do {case 0:{trapvolume = ["small"];};	case 1:{trapvolume = ["medium"];}; case 2:{trapvolume = ["large"];}; case 3:{trapvolume = ["at"];};};	//Size of the explosion
+		IEDExplosionType = lbCurSel IED_EXPTYPE;	//Size of the explosion
+		IEDDisarmTime = lbCurSel IED_DISARM;	//Time to disarm the IED
+		IEDJammable = lbCurSel IED_JAM;	//Can jam the IED with CREW device
+		IEDTriggerType = lbCurSel IED_TRIGGER;	//The type of trigger for the IED
+		trapdistance = ied_prox select (lbCurSel IED_PROX);	//The minimum distance to activate the IED
+		trapsnumber = ied_number select (lbCurSel IED_NUMBER); //The amount of traps to spawn in a zone
+		iedside = ied_target select (lbCurSel IED_TARGET);	//The target faction
+		IEDCount = IEDCount +1;
+	
+		switch (_IEDtype) do		//Which trap do we want
+		{
+			case 0:	
 			{
-				trapkind = [(ied_small select (lbCurSel SMALL_OBJECTS)) select 1];
-				hint "click on map"; 
-				if (mcc_capture_state) then
-					{
-						onMapSingleClick " 	hint ""trap captured.""; 
-								mcc_capture_var=mcc_capture_var + FORMAT ['
-								[""trap_single"", [%1, %2, %3, %4, %5 select 0 , %6 select 0]] call CBA_fnc_globalEvent;'								 
-								,_pos
-								, trapdistance
-								, trapsnumber
-								, iedside
-								, trapvolume 
-								, trapkind
-								];
-								onMapSingleClick """";";
-					} else 
-					{
-						onMapSingleClick " 	hint ""trap placed.""; 
-								mcc_safe=mcc_safe + FORMAT ['
-								[""trap_single"", [%1, %2, %3, %4, %5 select 0 , %6 select 0]] call CBA_fnc_globalEvent;
-								sleep 1;'								 
-								,_pos
-								, trapdistance
-								, trapsnumber
-								, iedside
-								, trapvolume 
-								, trapkind
-								];
-								[""trap_single"", [_pos, trapdistance, trapsnumber, iedside, trapvolume select 0, trapkind select 0]] call CBA_fnc_globalEvent;
-								onMapSingleClick """";";
-					};
+				_trapsArray = ied_small;
 			};
 			
-			case 1:	//small area
+			case 1:	
 			{
-				if (mcc_capture_state) then
-				{
-					hint "Traps captured";
-					mcc_capture_var=mcc_capture_var + FORMAT ['
-					["trap_area", [%1,%2,%3, %4, %5, %6, %7 select 0, [0,0]]] call CBA_fnc_globalEvent;'								 
-					,mcc_zone_pos select (mcc_zone_number)
-					,mcc_zone_size select (mcc_zone_number) select 0
-					,mcc_zone_size select (mcc_zone_number) select 1
-					, trapdistance
-					, trapsnumber
-					, iedside
-					, trapvolume 
-					];
-				} else 
-				{
-					hint "Traps placed";
-					mcc_safe=mcc_safe + FORMAT ['
-					["trap_area", [%1,%2,%3, %4, %5, %6, %7 select 0, [0,0]]] call CBA_fnc_globalEvent;
-					sleep 1;'								 
-					,mcc_zone_pos select (mcc_zone_number)
-					,mcc_zone_size select (mcc_zone_number) select 0
-					,mcc_zone_size select (mcc_zone_number) select 1
-					, trapdistance
-					, trapsnumber
-					, iedside
-					, trapvolume 
-					];
-					["trap_area", [(mcc_zone_pos select (mcc_zone_number)),((mcc_zone_size select (mcc_zone_number)) select 0),((mcc_zone_size select (mcc_zone_number)) select 1), trapdistance, trapsnumber, iedside, trapvolume select 0, [0,0]]] call CBA_fnc_globalEvent;
-				};
+				_trapsArray = ied_medium;
 			};
 			
-			case 2:	//medium single
+			case 2:	
 			{
-				trapkind = [(ied_medium select (lbCurSel MEDIUM_OBJECTS)) select 1];
-				hint "click on map"; 
-				if (mcc_capture_state) then
-					{
-						onMapSingleClick " 	hint ""trap captured.""; 
-								mcc_capture_var=mcc_capture_var + FORMAT ['
-								[""trap_single"", [%1, %2, %3, %4, %5 select 0 , %6 select 0]] call CBA_fnc_globalEvent;'								 
-								,_pos
-								, trapdistance
-								, trapsnumber
-								, iedside
-								, trapvolume 
-								, trapkind
-								];
-								onMapSingleClick """";";
-					} else 
-					{
-						onMapSingleClick " 	hint ""trap placed.""; 
-								mcc_safe=mcc_safe + FORMAT ['
-								[""trap_single"", [%1, %2, %3, %4, %5 select 0 , %6 select 0]] call CBA_fnc_globalEvent;
-								sleep 1;'								 
-								,_pos
-								, trapdistance
-								, trapsnumber
-								, iedside
-								, trapvolume 
-								, trapkind
-								];
-								[""trap_single"", [_pos, trapdistance, trapsnumber, iedside, trapvolume select 0, trapkind select 0]] call CBA_fnc_globalEvent;
-								onMapSingleClick """";";
-					};
-			};
-						
-			case 3:	//medium area
-			{
-				if (mcc_capture_state) then
-				{
-					hint "Traps captured";
-					mcc_capture_var=mcc_capture_var + FORMAT ['
-					["trap_area", [%1,%2,%3, %4, %5, %6, %7 select 0, [1,0]]] call CBA_fnc_globalEvent;'								 
-					,mcc_zone_pos select (mcc_zone_number)
-					,mcc_zone_size select (mcc_zone_number) select 0
-					,mcc_zone_size select (mcc_zone_number) select 1
-					, trapdistance
-					, trapsnumber
-					, iedside
-					, trapvolume 
-					];
-				} else 
-				{
-					hint "Traps placed";
-					mcc_safe=mcc_safe + FORMAT ['
-					["trap_area", [%1,%2,%3, %4, %5, %6, %7 select 0, [1,0]]] call CBA_fnc_globalEvent;
-					sleep 1;'								 
-					,mcc_zone_pos select (mcc_zone_number)
-					,mcc_zone_size select (mcc_zone_number) select 0
-					,mcc_zone_size select (mcc_zone_number) select 1
-					, trapdistance
-					, trapsnumber
-					, iedside
-					, trapvolume 
-					];
-					["trap_area", [(mcc_zone_pos select (mcc_zone_number)),((mcc_zone_size select (mcc_zone_number)) select 0),((mcc_zone_size select (mcc_zone_number)) select 1), trapdistance, trapsnumber, iedside, trapvolume select 0, [1,0]]] call CBA_fnc_globalEvent;
-				};
+				_trapsArray = ied_large;
 			};
 			
-			 case 4:	//Conealed IEDs
+			case 3:	
 			{
-				trapkind = [(ied_large select (lbCurSel LARGE_OBJECTS)) select 1];
-				if (trapkind select 0 == "BAF_ied_v2" || trapkind select 0 == "BAF_ied_v4") then {trapvolume set [0, "ied_medium"]} else {trapvolume set [0, "ied_small"]};
-				hint format ["%1", trapvolume];
-				//hint "click on map"; 
-				if (mcc_capture_state) then
-					{
-						onMapSingleClick " 	hint ""trap captured.""; 
-								mcc_capture_var=mcc_capture_var + FORMAT ['
-								[""trap_single"", [%1, %2, %3, %4, %5 select 0 , %6 select 0]] call CBA_fnc_globalEvent;'								 
-								,_pos
-								, trapdistance
-								, trapsnumber
-								, iedside
-								, trapvolume 
-								, trapkind
-								];
-								onMapSingleClick """";";
-					} else 
-					{
-						onMapSingleClick " 	hint ""trap placed.""; 
-								mcc_safe=mcc_safe + FORMAT ['
-								[""trap_single"", [%1, %2, %3, %4, %5 select 0 , %6 select 0]] call CBA_fnc_globalEvent;
-								sleep 1;'								 
-								,_pos
-								, trapdistance
-								, trapsnumber
-								, iedside
-								, trapvolume 
-								, trapkind
-								];
-								[""trap_single"", [_pos, trapdistance, trapsnumber, iedside, trapvolume select 0, trapkind select 0]] call CBA_fnc_globalEvent;
-								onMapSingleClick """";";
-					};
-			};
-						
-			case 5:	//Conealed IEDs area
-			{
-				if (mcc_capture_state) then
-				{
-					trapvolume set [0, "ied_small"];
-					hint "Traps captured";
-					mcc_capture_var=mcc_capture_var + FORMAT ['
-					["trap_area", [%1,%2,%3, %4, %5, %6, %7 select 0, [2,0]]] call CBA_fnc_globalEvent;'								 
-					,mcc_zone_pos select (mcc_zone_number)
-					,mcc_zone_size select (mcc_zone_number) select 0
-					,mcc_zone_size select (mcc_zone_number) select 1
-					, trapdistance
-					, trapsnumber
-					, iedside
-					, trapvolume 
-					];
-				} else 
-				{
-					trapvolume set [0, "ied_small"];
-					hint "Traps placed";
-					mcc_safe=mcc_safe + FORMAT ['
-					["trap_area", [%1,%2,%3, %4, %5, %6, %7 select 0, [2,0]]] call CBA_fnc_globalEvent;
-					sleep 1;'								 
-					,mcc_zone_pos select (mcc_zone_number)
-					,mcc_zone_size select (mcc_zone_number) select 0
-					,mcc_zone_size select (mcc_zone_number) select 1
-					, trapdistance
-					, trapsnumber
-					, iedside
-					, trapvolume 
-					];
-					["trap_area", [(mcc_zone_pos select (mcc_zone_number)),((mcc_zone_size select (mcc_zone_number)) select 0),((mcc_zone_size select (mcc_zone_number)) select 1), trapdistance, trapsnumber, iedside, trapvolume select 0, [2,0]]] call CBA_fnc_globalEvent;
-				};
+				_trapsArray = ied_wrecks;
 			};
 			
-			case 6:	//Ammoboxes single
+			case 4:	
 			{
-				trapkind = [(U_AMMO select (lbCurSel AMMOBOX_OBJECTS)) select 1];
-				hint "click on map"; 
-				if (mcc_capture_state) then
-					{
-						onMapSingleClick " 	hint ""trap captured.""; 
-								mcc_capture_var=mcc_capture_var + FORMAT ['
-								[""trap_single"", [%1, %2, %3, %4, %5 select 0 , %6 select 0]] call CBA_fnc_globalEvent;'								 
-								,_pos
-								, trapdistance
-								, trapsnumber
-								, iedside
-								, trapvolume 
-								, trapkind
-								];
-								onMapSingleClick """";";
-					} else 
-					{
-						onMapSingleClick " 	hint ""trap placed.""; 
-								mcc_safe=mcc_safe + FORMAT ['
-								[""trap_single"", [%1, %2, %3, %4, %5 select 0 , %6 select 0]] call CBA_fnc_globalEvent;
-								sleep 1;'								 
-								,_pos
-								, trapdistance
-								, trapsnumber
-								, iedside
-								, trapvolume 
-								, trapkind
-								];
-								[""trap_single"", [_pos, trapdistance, trapsnumber, iedside, trapvolume select 0, trapkind select 0]] call CBA_fnc_globalEvent;
-								onMapSingleClick """";";
-					};
-			};
-						
-			case 7:	//Ammoboxes area
-			{
-				if (mcc_capture_state) then
-				{
-					hint "Traps captured";
-					mcc_capture_var=mcc_capture_var + FORMAT ['
-					["trap_area", [%1,%2,%3, %4, %5, %6, %7 select 0, [3,0]]] call CBA_fnc_globalEvent;'								 
-					,mcc_zone_pos select (mcc_zone_number)
-					,mcc_zone_size select (mcc_zone_number) select 0
-					,mcc_zone_size select (mcc_zone_number) select 1
-					, trapdistance
-					, trapsnumber
-					, iedside
-					, trapvolume 
-					];
-				} else 
-				{
-					hint "Traps placed";
-					mcc_safe=mcc_safe + FORMAT ['
-					["trap_area", [%1,%2,%3, %4, %5, %6, %7 select 0, [3,0]]] call CBA_fnc_globalEvent;
-					sleep 1;'								 
-					,mcc_zone_pos select (mcc_zone_number)
-					,mcc_zone_size select (mcc_zone_number) select 0
-					,mcc_zone_size select (mcc_zone_number) select 1
-					, trapdistance
-					, trapsnumber
-					, iedside
-					, trapvolume 
-					];
-					["trap_area", [(mcc_zone_pos select (mcc_zone_number)),((mcc_zone_size select (mcc_zone_number)) select 0),((mcc_zone_size select (mcc_zone_number)) select 1), trapdistance, trapsnumber, iedside, trapvolume select 0, [3,0]]] call CBA_fnc_globalEvent;
-				};
+				_trapsArray = ied_rc;
 			};
 			
-			case 8:	//Wrecks single
+			case 5:	
 			{
-				trapkind = [(ied_wrecks select (lbCurSel WRECKS_OBJECTS)) select 1];
-				hint "click on map"; 
-				if (mcc_capture_state) then
-					{
-						onMapSingleClick " 	hint ""trap captured.""; 
-								mcc_capture_var=mcc_capture_var + FORMAT ['
-								[""trap_single"", [%1, %2, %3, %4, %5 select 0 , %6 select 0]] call CBA_fnc_globalEvent;'								 
-								,_pos
-								, trapdistance
-								, trapsnumber
-								, iedside
-								, trapvolume 
-								, trapkind
-								];
-								onMapSingleClick """";";
-					} else 
-					{
-						onMapSingleClick " 	hint ""trap placed.""; 
-								mcc_safe=mcc_safe + FORMAT ['
-								[""trap_single"", [%1, %2, %3, %4, %5 select 0 , %6 select 0]] call CBA_fnc_globalEvent;
-								sleep 1;'								 
-								,_pos
-								, trapdistance
-								, trapsnumber
-								, iedside
-								, trapvolume 
-								, trapkind
-								];
-								[""trap_single"", [_pos, trapdistance, trapsnumber, iedside, trapvolume select 0, trapkind select 0]] call CBA_fnc_globalEvent;
-								onMapSingleClick """";";
-					};
-			};
-						
-			case 9:	//Wrecks area
-			{
-				if (mcc_capture_state) then
-				{
-					hint "Traps captured";
-					mcc_capture_var=mcc_capture_var + FORMAT ['
-					["trap_area", [%1,%2,%3, %4, %5, %6, %7 select 0, [4,0]]] call CBA_fnc_globalEvent;'								 
-					,mcc_zone_pos select (mcc_zone_number)
-					,mcc_zone_size select (mcc_zone_number) select 0
-					,mcc_zone_size select (mcc_zone_number) select 1
-					, trapdistance
-					, trapsnumber
-					, iedside
-					, trapvolume 
-					];
-				} else 
-				{
-					hint "Traps placed";
-					mcc_safe=mcc_safe + FORMAT ['
-					["trap_area", [%1,%2,%3, %4, %5, %6, %7 select 0, [4,0]]] call CBA_fnc_globalEvent;
-					sleep 1;'								 
-					,mcc_zone_pos select (mcc_zone_number)
-					,mcc_zone_size select (mcc_zone_number) select 0
-					,mcc_zone_size select (mcc_zone_number) select 1
-					, trapdistance
-					, trapsnumber
-					, iedside
-					, trapvolume 
-					];
-					["trap_area", [(mcc_zone_pos select (mcc_zone_number)),((mcc_zone_size select (mcc_zone_number)) select 0),((mcc_zone_size select (mcc_zone_number)) select 1), trapdistance, trapsnumber, iedside, trapvolume select 0, [4,0]]] call CBA_fnc_globalEvent;
-				};
+				_trapsArray = ied_mine; 
 			};
 			
-			case 10:	//Cars single
+			case 6:	
 			{
-				trapkind = [(U_GEN_CAR select (lbCurSel CARS_OBJECTS)) select 1];
-				hint "click on map"; 
-				if (mcc_capture_state) then
-					{
-						onMapSingleClick " 	hint ""trap captured.""; 
-								mcc_capture_var=mcc_capture_var + FORMAT ['
-								[""trap_single"", [%1, %2, %3, %4, %5 select 0 , %6 select 0]] call CBA_fnc_globalEvent;'								 
-								,_pos
-								, trapdistance
-								, trapsnumber
-								, iedside
-								, trapvolume 
-								, trapkind
-								];
-								onMapSingleClick """";";
-					} else 
-					{
-						onMapSingleClick " 	hint ""trap placed.""; 
-								mcc_safe=mcc_safe + FORMAT ['
-								[""trap_single"", [%1, %2, %3, %4, %5 select 0 , %6 select 0]] call CBA_fnc_globalEvent;
-								sleep 1;'								 
-								,_pos
-								, trapdistance
-								, trapsnumber
-								, iedside
-								, trapvolume 
-								, trapkind
-								];
-								[""trap_single"", [_pos, trapdistance, trapsnumber, iedside, trapvolume select 0, trapkind select 0]] call CBA_fnc_globalEvent;
-								onMapSingleClick """";";
-					};
-			};
-						
-			case 11:	//Cars area
-			{
-				if (mcc_capture_state) then
-				{
-					hint "Traps captured";
-					mcc_capture_var=mcc_capture_var + FORMAT ['
-					["trap_area", [%1,%2,%3, %4, %5, %6, %7 select 0, [5,0]]] call CBA_fnc_globalEvent;'								 
-					,mcc_zone_pos select (mcc_zone_number)
-					,mcc_zone_size select (mcc_zone_number) select 0
-					,mcc_zone_size select (mcc_zone_number) select 1
-					, trapdistance
-					, trapsnumber
-					, iedside
-					, trapvolume 
-					];
-				} else 
-				{
-					hint "Traps placed";
-					mcc_safe=mcc_safe + FORMAT ['
-					["trap_area", [%1,%2,%3, %4, %5, %6, %7 select 0, [5,0]]] call CBA_fnc_globalEvent;
-					sleep 1;'								 
-					,mcc_zone_pos select (mcc_zone_number)
-					,mcc_zone_size select (mcc_zone_number) select 0
-					,mcc_zone_size select (mcc_zone_number) select 1
-					, trapdistance
-					, trapsnumber
-					, iedside
-					, trapvolume 
-					];
-					["trap_area", [(mcc_zone_pos select (mcc_zone_number)),((mcc_zone_size select (mcc_zone_number)) select 0),((mcc_zone_size select (mcc_zone_number)) select 1), trapdistance, trapsnumber, iedside, trapvolume select 0, [5,0]]] call CBA_fnc_globalEvent;
-				};
+				_trapsArray = U_AMMO;
 			};
 			
-			case 12:	//Mine single
+			case 7:	
 			{
-				trapkind = [(ied_mine select (lbCurSel MINES_OBJECTS)) select 1];
-				hint "click on map"; 
-				if (mcc_capture_state) then
-					{
-						onMapSingleClick " 	hint ""trap captured.""; 
-								mcc_capture_var=mcc_capture_var + FORMAT ['
-								[""trap_single"", [%1, %2, %3, %4, %5 select 0 , %6 select 0]] call CBA_fnc_globalEvent;'								 
-								,_pos
-								, trapdistance
-								, trapsnumber
-								, iedside
-								, trapvolume 
-								, trapkind
-								];
-								onMapSingleClick """";";
-					} else 
-					{
-						onMapSingleClick " 	hint ""trap placed.""; 
-								mcc_safe=mcc_safe + FORMAT ['
-								[""trap_single"", [%1, %2, %3, %4, %5 select 0 , %6 select 0]] call CBA_fnc_globalEvent;
-								sleep 1;'								 
-								,_pos
-								, trapdistance
-								, trapsnumber
-								, iedside
-								, trapvolume 
-								, trapkind
-								];
-								[""trap_single"", [_pos, trapdistance, trapsnumber, iedside, trapvolume select 0, trapkind select 0]] call CBA_fnc_globalEvent;
-								onMapSingleClick """";";
-					};
-			};
-						
-			case 13:	//Mines area
-			{
-				trapkind = (ied_mine select (lbCurSel MINES_OBJECTS)) select 1;
-				if (mcc_capture_state) then
-				{
-					hint "Traps captured";
-					mcc_capture_var=mcc_capture_var + FORMAT ['
-					["trap_area", [%1,%2,%3, %4, %5, %6, %7 select 0, [6,"%8"]]] call CBA_fnc_globalEvent;'								 
-					,mcc_zone_pos select (mcc_zone_number)
-					,mcc_zone_size select (mcc_zone_number) select 0
-					,mcc_zone_size select (mcc_zone_number) select 1
-					, trapdistance
-					, trapsnumber
-					, iedside
-					, trapvolume 
-					, trapkind
-					];
-				} else 
-				{
-					hint "Traps placed";
-					mcc_safe=mcc_safe + FORMAT ['
-					["trap_area", [%1,%2,%3, %4, %5, %6, %7 select 0, [6,"%8"]]] call CBA_fnc_globalEvent;
-					sleep 1;'								 
-					,mcc_zone_pos select (mcc_zone_number)
-					,mcc_zone_size select (mcc_zone_number) select 0
-					,mcc_zone_size select (mcc_zone_number) select 1
-					, trapdistance
-					, trapsnumber
-					, iedside
-					, trapvolume 
-					, trapkind
-					];
-					["trap_area", [(mcc_zone_pos select (mcc_zone_number)),((mcc_zone_size select (mcc_zone_number)) select 0),((mcc_zone_size select (mcc_zone_number)) select 1), trapdistance, trapsnumber, iedside, trapvolume select 0, [6,trapkind]]] call CBA_fnc_globalEvent;
-				};
+				_trapsArray = U_GEN_CAR;
 			};
 			
-			case 14:	//Road chargs single
+			case 8:	
 			{
-				trapkind = [(ied_rc select (lbCurSel ROADSIDE_OBJECTS)) select 1];
-				trapvolume = [(ied_rc select (lbCurSel ROADSIDE_OBJECTS)) select 2];
-				hint "click on map"; 
-				if (mcc_capture_state) then
-					{
-						onMapSingleClick " 	hint ""trap captured.""; 
-								mcc_capture_var=mcc_capture_var + FORMAT ['
-								[""trap_rc_single"", [%1, %2, %3, %4, %5 select 0 , %6 select 0]] call CBA_fnc_globalEvent;'								 
-								,_pos
-								, trapdistance
-								, trapsnumber
-								, iedside
-								, trapvolume 
-								, trapkind
-								];
-								onMapSingleClick """";";
-					} else 
-					{
-						onMapSingleClick " 	hint ""trap placed.""; 
-								mcc_safe=mcc_safe + FORMAT ['
-								[""trap_rc_single"", [%1, %2, %3, %4, %5 select 0 , %6 select 0]] call CBA_fnc_globalEvent;
-								sleep 1;'								 
-								,_pos
-								, trapdistance
-								, trapsnumber
-								, iedside
-								, trapvolume 
-								, trapkind
-								];
-								[""trap_rc_single"", [_pos, trapdistance, trapsnumber, iedside, trapvolume select 0, trapkind select 0]] call CBA_fnc_globalEvent;
-								onMapSingleClick """";";
-					};
-			};
-						
-			case 15:	//Roadchargs area
-			{
-				trapkind = [(ied_rc select (lbCurSel ROADSIDE_OBJECTS)) select 1];
-				trapvolume = [(ied_rc select (lbCurSel ROADSIDE_OBJECTS)) select 2];
-				if (mcc_capture_state) then
-				{
-					hint "Traps captured";
-					mcc_capture_var=mcc_capture_var + FORMAT ['
-					["trap_rc_area", [%1,%2,%3, %4, %5, %6, %7 select 0, %8 select 0]] call CBA_fnc_globalEvent;'								 
-					,mcc_zone_pos select (mcc_zone_number)
-					,mcc_zone_size select (mcc_zone_number) select 0
-					,mcc_zone_size select (mcc_zone_number) select 1
-					, trapdistance
-					, trapsnumber
-					, iedside
-					, trapvolume 
-					, trapkind
-					];
-				} else 
-				{
-					hint "Traps placed";
-					mcc_safe=mcc_safe + FORMAT ['
-					["trap_rc_area", [%1,%2,%3, %4, %5, %6, %7 select 0, %8 select 0]] call CBA_fnc_globalEvent;
-					sleep 1;'								 
-					,mcc_zone_pos select (mcc_zone_number)
-					,mcc_zone_size select (mcc_zone_number) select 0
-					,mcc_zone_size select (mcc_zone_number) select 1
-					, trapdistance
-					, trapsnumber
-					, iedside
-					, trapvolume 
-					, trapkind
-					];
-					["trap_rc_area", [(mcc_zone_pos select (mcc_zone_number)),((mcc_zone_size select (mcc_zone_number)) select 0),((mcc_zone_size select (mcc_zone_number)) select 1), trapdistance, trapsnumber, iedside, trapvolume select 0, trapkind select 0]] call CBA_fnc_globalEvent;
-				};
+				_trapsArray = U_GEN_SOLDIER;
 			};
 			
-			case 16:	//Armed civilians single
+			case 9:	
 			{
-				trapkind = [(U_GEN_SOLDIER select (lbCurSel ARMED_OBJECTS)) select 1];
-				hint "click on map"; 
-				if (mcc_capture_state) then
-					{
-						onMapSingleClick " 	hint ""trap captured.""; 
-								mcc_capture_var=mcc_capture_var + FORMAT ['
-								[""trap_cw_single"", [%1,%2,%3 select 0]] call CBA_fnc_globalEvent;'								 
-								,_pos
-								, iedside
-								, trapkind
-								];
-								onMapSingleClick """";";
-					} else 
-					{
-						onMapSingleClick " 	hint ""trap placed.""; 
-								mcc_safe=mcc_safe + FORMAT ['
-								[""trap_cw_single"", [%1,%2,%3 select 0]] call CBA_fnc_globalEvent;
-								sleep 1;'								 
-								,_pos
-								, iedside
-								, trapkind
-								];
-								[""trap_cw_single"", [_pos,iedside,trapkind select 0]] call CBA_fnc_globalEvent;
-								onMapSingleClick """";";
-					};
-			};
-						
-			case 17:	//Armed civilians area
-			{
-				if (mcc_capture_state) then
-				{
-					hint "Traps captured";
-					mcc_capture_var=mcc_capture_var + FORMAT ['
-					["trap_cw_area", [%1,%2,%3,%4, %5]] call CBA_fnc_globalEvent;'								 
-					,mcc_zone_pos select (mcc_zone_number)
-					,mcc_zone_size select (mcc_zone_number) select 0
-					,mcc_zone_size select (mcc_zone_number) select 1
-					, trapsnumber
-					, iedside
-					];
-				} else 
-				{
-					hint "Traps placed";
-					mcc_safe=mcc_safe + FORMAT ['
-					["trap_cw_area", [%1,%2,%3,%4, %5]] call CBA_fnc_globalEvent;
-					sleep 1;'								 
-					,mcc_zone_pos select (mcc_zone_number)
-					,mcc_zone_size select (mcc_zone_number) select 0
-					,mcc_zone_size select (mcc_zone_number) select 1
-					, trapsnumber
-					, iedside
-					];
-					["trap_cw_area", [(mcc_zone_pos select (mcc_zone_number)),((mcc_zone_size select (mcc_zone_number)) select 0),((mcc_zone_size select (mcc_zone_number)) select 1), trapsnumber, iedside]] call CBA_fnc_globalEvent;
-				};
-			};
-			
-			case 18:	//Suicide Bombers single
-			{
-				trapkind = [(U_GEN_SOLDIER select (lbCurSel SB_OBJECTS)) select 1];
-				hint "click on map"; 
-				if (mcc_capture_state) then
-					{
-						onMapSingleClick " 	hint ""trap captured.""; 
-								mcc_capture_var=mcc_capture_var + FORMAT ['
-								[""sb_bomber"", [%1 ,%2 ,%3 select 0]] call CBA_fnc_globalEvent;'								 
-								,_pos
-								, iedside
-								, trapkind
-								];
-								onMapSingleClick """";";
-					} else 
-					{
-						onMapSingleClick " 	hint ""trap placed.""; 
-								mcc_safe=mcc_safe + FORMAT ['
-								[""sb_bomber"", [%1 ,%2 ,%3 select 0]] call CBA_fnc_globalEvent;
-								sleep 1;'								 
-								,_pos
-								, iedside
-								, trapkind
-								];
-								[""trap_cw_single"", [_pos,iedside,trapkind select 0]] call CBA_fnc_globalEvent;
-								onMapSingleClick """";";
-					};
-			};
-						
-			case 19:	//Suicide Bombers area
-			{
-				if (mcc_capture_state) then
-				{
-					hint "Traps captured";
-					mcc_capture_var=mcc_capture_var + FORMAT ['
-					["sb_bomber_area", [%1,%2,%3,%4, %5]] call CBA_fnc_globalEvent;'								 
-					,mcc_zone_pos select (mcc_zone_number)
-					,mcc_zone_size select (mcc_zone_number) select 0
-					,mcc_zone_size select (mcc_zone_number) select 1
-					, trapsnumber
-					, iedside
-					];
-				} else 
-				{
-					hint "Traps placed";
-					mcc_safe=mcc_safe + FORMAT ['
-					["sb_bomber_area", [%1,%2,%3,%4, %5]] call CBA_fnc_globalEvent;
-					sleep 1;'								 
-					,mcc_zone_pos select (mcc_zone_number)
-					,mcc_zone_size select (mcc_zone_number) select 0
-					,mcc_zone_size select (mcc_zone_number) select 1
-					, trapsnumber
-					, iedside
-					];
-					["sb_bomber_area", [(mcc_zone_pos select (mcc_zone_number)),((mcc_zone_size select (mcc_zone_number)) select 0),((mcc_zone_size select (mcc_zone_number)) select 1), trapsnumber, iedside]] call CBA_fnc_globalEvent;
-				};
+				_trapsArray = U_GEN_SOLDIER;
 			};
 		};
+		
+		if (_spawnType==0) then
+			{
+				if ((_IEDtype <= 3) || (_IEDtype == 6) || (_IEDtype == 7)) then	//if object
+				{
+					IedName = [format ["ied_%1", IEDCount]];
+					trapkind = [(_trapsArray select (lbCurSel IED_OBJECT)) select 1];
+					hint "click on the map to place the trap"; 
+					if (mcc_capture_state) then
+						{
+							onMapSingleClick " 	hint ""trap captured.""; 
+									mcc_capture_var=mcc_capture_var + FORMAT ['
+									[""trap_single"", [%1 , %2 select 0, %3 select 0, %4, %5 , %6, %7, %8, %9, %10 select 0]] call CBA_fnc_globalEvent;
+									_eib_marker = createMarkerlocal [%10 select 0 ,%1];
+									_eib_marker setMarkerTypelocal ""selector_selectedMission"";
+									_eib_marker setMarkerColorlocal ""ColorRed"";
+									_eib_marker setMarkerTextlocal (%10 select 0);
+									'								 
+									, _pos
+									, trapkind
+									, trapvolume
+									, IEDExplosionType
+									, IEDDisarmTime
+									, IEDJammable
+									, IEDTriggerType 
+									, trapdistance
+									, iedside
+									, IedName
+									];
+									onMapSingleClick """";";
+						} else 
+						{
+							onMapSingleClick " 	hint ""trap placed.""; 
+									_eib_marker = createMarkerlocal [IedName select 0 ,_pos];
+									_eib_marker setMarkerTypelocal 'selector_selectedMission';
+									_eib_marker setMarkerColorlocal 'ColorRed';
+									_eib_marker setMarkerTextlocal (IedName select 0);
+									mcc_safe=mcc_safe + FORMAT ['
+									[""trap_single"", [%1 , %2 select 0, %3 select 0, %4, %5 , %6, %7, %8, %9, %10 select 0]] call CBA_fnc_globalEvent;
+									sleep 1;
+									_eib_marker = createMarkerlocal [%10 select 0 ,%1];
+									_eib_marker setMarkerTypelocal ""selector_selectedMission"";
+									_eib_marker setMarkerColorlocal ""ColorRed"";
+									_eib_marker setMarkerTextlocal (%10 select 0);
+									'								 
+									, _pos
+									, trapkind
+									, trapvolume
+									, IEDExplosionType
+									, IEDDisarmTime
+									, IEDJammable
+									, IEDTriggerType 
+									, trapdistance
+									, iedside
+									, IedName 
+									];
+									[""trap_single"", [_pos , trapkind select 0, trapvolume select 0, IEDExplosionType, IEDDisarmTime , IEDJammable, IEDTriggerType, trapdistance, iedside, IedName select 0]] call CBA_fnc_globalEvent;
+									onMapSingleClick """";";
+						};
+				};
+				
+				if (_IEDtype == 5) then	//if Mine
+				{
+					trapkind = [(_trapsArray select (lbCurSel IED_OBJECT)) select 1];
+					if (trapkind select 0=="apv" || trapkind select 0=="ap" ||trapkind select 0=="atv" ||trapkind select 0=="at") then		//If mine field
+						{
+						IedName = [format ["mine_field_%1", IEDCount]];
+						hint format ["Mine Field generated at zone %1",mcc_zone_number]; 
+						if (mcc_capture_state) then
+							{
+							mcc_capture_var=mcc_capture_var + FORMAT ["
+							['mine_single', [%1 , %2 select 0, %3 select 0]] call CBA_fnc_globalEvent;
+							_eib_marker = createMarkerlocal [%3 select 0 ,mcc_zone_pos select %1];
+							_eib_marker setMarkerSizeLocal [mcc_zone_size select (%1) select 0,mcc_zone_size select (%1) select 1];
+							_eib_marker setMarkerShapeLocal 'RECTANGLE';
+							_eib_marker setMarkerBrushLocal  'GRID';
+							_eib_marker setMarkerColorlocal 'ColorBlue';
+							"								 
+							, mcc_zone_number
+							, trapkind
+							, IedName
+							];
+							} else 
+								{
+								_eib_marker = createMarkerlocal [IedName select 0 ,mcc_zone_pos select mcc_zone_number];
+								_eib_marker setMarkerSizeLocal [mcc_zone_size select (mcc_zone_number) select 0,mcc_zone_size select (mcc_zone_number) select 1];
+								_eib_marker setMarkerShapeLocal 'RECTANGLE';
+								_eib_marker setMarkerBrushLocal  'GRID';
+								_eib_marker setMarkerColorlocal 'ColorBlue';
+								mcc_safe=mcc_safe + FORMAT ["
+								['mine_single', [%1 , %2 select 0, %3 select 0]] call CBA_fnc_globalEvent;
+								sleep 1;
+								_eib_marker = createMarkerlocal [%3 select 0 ,mcc_zone_pos select %1];
+								_eib_marker setMarkerSizeLocal [mcc_zone_size select (%1) select 0,mcc_zone_size select (%1) select 1];
+								_eib_marker setMarkerShapeLocal 'RECTANGLE';
+								_eib_marker setMarkerBrushLocal  'GRID';
+								_eib_marker setMarkerColorlocal 'ColorBlue';
+								"								 
+								, mcc_zone_number
+								, trapkind
+								, IedName 
+								];
+								["mine_single", [mcc_zone_number , trapkind select 0,IedName select 0]] call CBA_fnc_globalEvent;
+							};
+						} else 	//If single mine
+							{
+							IedName = [format ["mine_%1", IEDCount]];
+							hint "click on the map to place the trap"; 
+							if (mcc_capture_state) then
+								{
+									onMapSingleClick " 	hint ""trap captured.""; 
+											mcc_capture_var=mcc_capture_var + FORMAT ['
+											[""mine_single"", [%1 , %2 select 0, %3 select 0]] call CBA_fnc_globalEvent;
+											_eib_marker = createMarkerlocal [%3 select 0 ,%1];
+											_eib_marker setMarkerTypelocal ""selector_selectedMission"";
+											_eib_marker setMarkerColorlocal ""ColorBlue"";
+											_eib_marker setMarkerTextlocal (%3 select 0);
+											'								 
+											, _pos
+											, trapkind
+											, IedName
+											];
+											onMapSingleClick """";";
+								} else 
+								{
+									onMapSingleClick " 	hint ""trap placed.""; 
+											_eib_marker = createMarkerlocal [IedName select 0 ,_pos];
+											_eib_marker setMarkerTypelocal 'selector_selectedMission';
+											_eib_marker setMarkerColorlocal 'ColorBlue';
+											_eib_marker setMarkerTextlocal (IedName select 0);
+											mcc_safe=mcc_safe + FORMAT ['
+											[""mine_single"", [%1 , %2 select 0, %3 select 0]] call CBA_fnc_globalEvent;
+											sleep 1;
+											_eib_marker = createMarkerlocal [%3 select 0 ,%1];
+											_eib_marker setMarkerTypelocal ""selector_selectedMission"";
+											_eib_marker setMarkerColorlocal ""ColorBlue"";
+											_eib_marker setMarkerTextlocal (%3 select 0);
+											'								 
+											, _pos
+											, trapkind
+											, IedName 
+											];
+											[""mine_single"", [_pos , trapkind select 0,IedName select 0]] call CBA_fnc_globalEvent;
+											onMapSingleClick """";";
+								};
+							};
+				};
+				
+				if (_IEDtype == 4) then	//if Road Charge
+				{
+					IedName = [format ["RC_%1", IEDCount]];
+					trapkind = [(_trapsArray select (lbCurSel IED_OBJECT)) select 1];
+					hint "click, hold and then drag the cursor to place the road charge pointing the desired direction"; 
+					rcPlacing = true; 
+				};
+				
+				if (_IEDtype == 8) then	//if Armed Civilian
+				{
+					IedName = [format ["Armed_Civilian_%1", IEDCount]];
+					trapkind = [(_trapsArray select (lbCurSel IED_OBJECT)) select 1];
+					hint "click on the map to place the trap"; 
+					if (mcc_capture_state) then
+						{
+							onMapSingleClick " 	hint ""trap captured.""; 
+									mcc_capture_var=mcc_capture_var + FORMAT ['
+									[""AC_single"", [%1 , %2 select 0, %3 , %4 select 0]] call CBA_fnc_globalEvent;
+									_eib_marker = createMarkerlocal [%4 select 0 ,%1];
+									_eib_marker setMarkerTypelocal ""selector_selectedMission"";
+									_eib_marker setMarkerColorlocal ""ColorBlue"";
+									_eib_marker setMarkerTextlocal (%4 select 0);
+									'								 
+									, _pos
+									, trapkind
+									, iedside
+									, IedName
+									];
+									onMapSingleClick """";";
+						} else 
+						{
+							onMapSingleClick " 	hint ""trap placed.""; 
+									_eib_marker = createMarkerlocal [IedName select 0 ,_pos];
+									_eib_marker setMarkerTypelocal 'selector_selectedMission';
+									_eib_marker setMarkerColorlocal 'ColorBlue';
+									_eib_marker setMarkerTextlocal (IedName select 0);
+									mcc_safe=mcc_safe + FORMAT ['
+									[""AC_single"", [%1 , %2 select 0, %3 , %4 select 0]] call CBA_fnc_globalEvent;
+									sleep 1;
+									_eib_marker = createMarkerlocal [%4 select 0 ,%1];
+									_eib_marker setMarkerTypelocal ""selector_selectedMission"";
+									_eib_marker setMarkerColorlocal ""ColorBlue"";
+									_eib_marker setMarkerTextlocal (%4 select 0);
+									'								 
+									, _pos
+									, trapkind
+									, iedside
+									, IedName 
+									];
+									[""AC_single"", [_pos , trapkind select 0,iedside,IedName select 0]] call CBA_fnc_globalEvent;
+									onMapSingleClick """";";
+						};
+				};
+				
+				if (_IEDtype == 9) then	//if Suicide bomber
+				{
+					IedName = [format ["Sucide_Bomber_%1", IEDCount]];
+					trapkind = [(_trapsArray select (lbCurSel IED_OBJECT)) select 1];
+					hint "click on the map to place the trap"; 
+					if (mcc_capture_state) then
+						{
+							onMapSingleClick " 	hint ""trap captured.""; 
+									mcc_capture_var=mcc_capture_var + FORMAT ['
+									[""SB_single"", [%1 , %2 select 0, %3 select 0, %4, %5, %6 select 0]] call CBA_fnc_globalEvent;
+									_eib_marker = createMarkerlocal [%6 select 0 ,%1];
+									_eib_marker setMarkerTypelocal ""selector_selectedMission"";
+									_eib_marker setMarkerColorlocal ""ColorRed"";
+									_eib_marker setMarkerTextlocal (%6 select 0);
+									'								 
+									, _pos
+									, trapkind
+									, trapvolume
+									, IEDExplosionType
+									, iedside
+									, IedName
+									];
+									onMapSingleClick """";";
+						} else 
+						{
+							onMapSingleClick " 	hint ""trap placed.""; 
+									_eib_marker = createMarkerlocal [IedName select 0 ,_pos];
+									_eib_marker setMarkerTypelocal 'selector_selectedMission';
+									_eib_marker setMarkerColorlocal 'ColorRed';
+									_eib_marker setMarkerTextlocal (IedName select 0);
+									mcc_safe=mcc_safe + FORMAT ['
+									[""SB_single"", [%1 , %2 select 0, %3 select 0, %4, %5, %6 select 0]] call CBA_fnc_globalEvent;
+									sleep 1;
+									_eib_marker = createMarkerlocal [%6 select 0 ,%1];
+									_eib_marker setMarkerTypelocal ""selector_selectedMission"";
+									_eib_marker setMarkerColorlocal ""ColorRed"";
+									_eib_marker setMarkerTextlocal (%6 select 0);
+									'								 
+									, _pos
+									, trapkind
+									, trapvolume
+									, IEDExplosionType
+									, iedside
+									, IedName 
+									];
+									[""SB_single"", [_pos , trapkind select 0,trapvolume select 0, IEDExplosionType, iedside,IedName select 0]] call CBA_fnc_globalEvent;
+									onMapSingleClick """";";
+						};
+				};
+			};
+		if (_spawnType==1) then	//Ambush placing
+			{
+			IedName = [format ["Ambush_Group_%1", IEDCount]];
+			IEDAmbushspawnname = (GEN_INFANTRY select (lbCurSel IED_AMBUSH)) select 2;
+			hint "click, hold and then drag the cursor to place the ambushe group pointing the desired direction"; 
+			ambushPlacing = true;
+			};
+		if (_spawnType==2) then	//RTE AC
+			{
+			RTEVariable = "";
+			RTEVariable =format ["this setvariable ['armed',true,true];removeallweapons this;_null = [this,%1,25,'M9','15Rnd_9x19_M9'] execVM 'mcc\general_scripts\traps\cw.sqf';removeallweapons this; this setbehaviour 'CARELESS'; this allowfleeing 0; this addaction ['Neutralize Suspect','mcc\general_scripts\traps\neutralize.sqf'];",iedside];
+			copytoclipboard RTEVariable;
+			hint "SAVED to Clipboard! Now you can paste this code to the init of the spawned unit in RTE (ctrl-V).";
+			};
+		};
+				
 	}	
-		else { player globalchat "Access Denied"};
-	};	
+	else { player globalchat "Access Denied"};
+	
 	
 
 

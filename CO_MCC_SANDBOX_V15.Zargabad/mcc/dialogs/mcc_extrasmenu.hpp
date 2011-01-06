@@ -19,19 +19,16 @@
 #define UNIT_AIR 3015
 #define UNIT_SHIP 3016
 
-#define SMALL_OBJECTS 4500
-#define MEDIUM_OBJECTS 4501
-#define LARGE_OBJECTS 4502
-#define AMMOBOX_OBJECTS 4503
-#define WRECKS_OBJECTS 4504
-#define CARS_OBJECTS 4505
-#define MINES_OBJECTS 4506
-#define ROADSIDE_OBJECTS 4507
-#define ARMED_OBJECTS 4508
-#define SB_OBJECTS 4509
+#define IED_TYPE 4500
+#define IED_OBJECT 4501
+#define IED_EXPLOSION 4502
+#define IED_EXPTYPE 4503
+#define IED_DISARM 4504
+#define IED_JAM 4505
+#define IED_TRIGGER 4506
+#define IED_AMBUSH 4507
 
 #define IED_PROX 4510
-#define IED_NUMBER 4511
 #define IED_TARGET 4512
 
 #define CONVOY_CAR1 5001
@@ -101,7 +98,6 @@ class ExtrasDialog {
 	Zone_y,
 	Zone_yTitle,
 	Zone_set,
-	Zone_select,
 	faction,
 	factionTitle,
 	Update_Faction,
@@ -142,61 +138,31 @@ class ExtrasDialog {
 	IedTitle,	//Traps
 	iedProxTitle,
 	iedProx,
-	iedNumberTitle,
-	iedNumber,
+	
+	typeIEDTitle,
+	typeIED,
+	explosionSizeIEDTitle,
+	explosionSizeIED,
+	explosionTypeIEDTitle,
+	explosionTypeIED,
+	disarmIEDTitle,
+	disarmIED,
+	jammIEDTitle,
+	jammIED,
 	iedTargetTitle,
 	iedTarget,
+	iedTriggerTitle,
+	iedTrigger,
+	iedAmbushGroupTitle,
+	iedAmbushGroup,
+	typeIEDSpawn,
+	typeIEDSpawnGroup,
+	iedHelpTitle,
 	
-	smallObjectsTitle,
-	smallObjects,
-	smallObjectsSpawn,
-	smallObjectsZone,
+	objectIEDTitle,
+	objectIED,
+	typeIEDRteSave,
 	
-	mediumObjectsTitle,
-	mediumObjects,
-	mediumObjectsSpawn,
-	mediumObjectsZone,
-	
-	largeObjectsTitle,
-	largeObjects,
-	largeObjectsSpawn,
-	largeObjectsZone,
-	
-	AmmoboxObjectsTitle,
-	ammoboxObjects,
-	ammoboxObjectsSpawn,
-	ammoboxObjectsZone,
-	
-	wrecksObjectsTitle,
-	wrecksObjects,
-	wrecksObjectsSpawn,
-	wrecksObjectsZone,
-	
-	carsObjectsTitle,
-	carsObjects,
-	carsObjectsSpawn,
-	carsObjectsZone,
-	
-	minesObjectsTitle,
-	minesObjects,
-	minesObjectsSpawn,
-	minesObjectsZone,
-	
-	roadsideObjectsTitle,
-	roadsideObjects,
-	roadsideObjectsSpawn,
-	roadsideObjectsZone,
-		
-	armedObjectsTitle,
-	armedObjects,
-	armedObjectsSpawn,
-	armedObjectsZone,
-	
-	sbObjectsTitle,
-	sbObjects,
-	sbObjectsSpawn,
-	sbObjectsZone,
-
 	car1Title,			//Convoy
 	car2Title,
 	car3Title,
@@ -255,7 +221,7 @@ class ExtrasDialog {
 	
   };
  //========================================= Background========================================
- class MCC_Title : RscText {x = 0.02; y = 0.01;w = 3; colorBackground[] = { 1, 1, 1, 0 };text = "MCC Sandbox V1.4 redone by Shay_gman";};
+ class MCC_Title : RscText {x = 0.02; y = 0.01;w = 3; colorBackground[] = { 1, 1, 1, 0 };text = "MCC Sandbox V1.5 redone by Shay_gman";};
  class MCC_Bckgrnd : RscPicture {idc = -1; moving = true; x = 0.0; y = 0.0; w = 1.5; h = 1.5; text = "\ca\ui\data\igui_background_diary_ca.paa";};
  class MCC_mapBackground : RscText {idc = -1; moving = true; colorBackground[] = { 1, 1, 1, 1}; colorText[] = { 1, 1, 1, 0}; x = 0.555; y = 0.44;	w = 0.52; h = 0.4; text = "";};
  class zonesFrame : RscFrame {moving = true; x = 0.35; y = 0.61;w = 0.21; h = 0.23;};
@@ -271,12 +237,12 @@ class ExtrasDialog {
  //========================================= Controls========================================
   
   //mapDialog
-  class MCC_map : RscMapControl {idc = -1; moving = true; colorBackground[] = { 0, 0, 0, 1}; colorText[] = { 1, 1, 1, 0}; x = 0.555; y = 0.44; w = 0.52; h = 0.4;text = "";};
+  class MCC_map : RscMapControl {idc = -1; moving = true; colorBackground[] = { 0, 0, 0, 1}; colorText[] = { 1, 1, 1, 0}; x = 0.555; y = 0.44; w = 0.52; h = 0.4;text = "";onMouseButtonDown = "[_this] execVM 'mcc\mouseDown.sqf'";onMouseButtonUp = "[_this] execVM 'mcc\mouseUp.sqf'";};
   
   //-------------------------------------------ComboBox-------------------------------------------
   //zones
   class Zone_Number : RscComboBox {	idc = MCC_ZONE_NUMBERS;	style = ST_LEFT;colorText[] = { 1, 1, 1, 1 };colorSelect[] = { 1.0, 0.35, 0.3, 1 };	colorBackground[] = { 0, 0, 0, 0.6 };
-									colorSelectBackground[] = { 0, 0, 0, 1 };font = "BitStream";sizeEx =0.028;	x = 0.42; y = 0.65;w = 0.06; h = 0.028;};
+									colorSelectBackground[] = { 0, 0, 0, 1 };font = "BitStream";sizeEx =0.028;	x = 0.42; y = 0.65;w = 0.06; h = 0.028;onLBSelChanged = "[0] execVM 'mcc\pop_menu\zones.sqf'";};
   class Zone_x : Zone_Number {idc = MCC_ZONE_X;y = 0.65 + 0.05;};
   class Zone_y : Zone_Number {idc = MCC_ZONE_Y;y = 0.65 + 0.05 + 0.05;};
   class faction : Zone_Number {idc = MCC_FACTION;x = 0.45;y = 0.05;sizeEx = 0.028;w = 0.10; h = 0.028;};
@@ -292,52 +258,23 @@ class ExtrasDialog {
   class lhdTankSpawn : lhdAirSpawn {x = 0.19+0.08; y = 0.08+0.21;text = "Spawn";onButtonClick = "nul=[3] execVM 'mcc\general_scripts\LHD\lhd_spawn.sqf';";};
   class lhdShipSpawn : lhdAirSpawn {x = 0.19+0.08; y = 0.08+0.28;text = "Spawn";onButtonClick = "nul=[4] execVM 'mcc\general_scripts\LHD\lhd_spawn.sqf';";};
   //Traps
-  class iedProx : unit_Air {idc = IED_PROX;x = 0.55;y = 0.09;sizeEx = 0.02;w = 0.06; h = 0.03;};  
-  class iedNumber : iedProx {idc = IED_NUMBER;x = 0.55+0.18;};  
-  class iedTarget : iedProx {idc = IED_TARGET;x = 0.55+0.35;}; 
-  
-  class smallObjects : unit_Air {idc = SMALL_OBJECTS;x = 0.35;y = 0.16;sizeEx = 0.02;w = 0.12; h = 0.03;};  
-  class smallObjectsSpawn : lhdAirSpawn {x = 0.35; y = 0.19;w = 0.06; text = "Map";onButtonClick = "trapvolume=['small']; nul=[0] execVM 'mcc\general_scripts\traps\trap_request.sqf';";};
-  class smallObjectsZone : smallObjectsSpawn {x = 0.35+0.06; y = 0.19;text = "Zone";onButtonClick = "trapvolume=['small']; nul=[1] execVM 'mcc\general_scripts\traps\trap_request.sqf';";};
-  
-  class mediumObjects : smallObjects {idc = MEDIUM_OBJECTS;x = 0.35+0.15;}; 
-  class mediumObjectsSpawn : lhdAirSpawn {x = 0.35+0.15; y = 0.19;w = 0.06; text = "Map";onButtonClick = "trapvolume=['medium']; nul=[2] execVM 'mcc\general_scripts\traps\trap_request.sqf';";};
-  class mediumObjectsZone : smallObjectsSpawn {x = 0.35+0.15+0.06; y = 0.19;text = "Zone";onButtonClick = "trapvolume=['medium']; nul=[3] execVM 'mcc\general_scripts\traps\trap_request.sqf';";};
-  
-  class largeObjects : smallObjects {idc = LARGE_OBJECTS;x = 0.35+0.3;}; 
-  class largeObjectsSpawn : lhdAirSpawn {x = 0.35+0.3; y = 0.19;w = 0.06; text = "Map";onButtonClick = "nul=[4] execVM 'mcc\general_scripts\traps\trap_request.sqf';";};
-  class largeObjectsZone : smallObjectsSpawn {x = 0.35+0.3+0.06; y = 0.19;text = "Zone";onButtonClick = "nul=[5] execVM 'mcc\general_scripts\traps\trap_request.sqf';";};
-  
-  class ammoboxObjects : smallObjects {idc = AMMOBOX_OBJECTS;x = 0.35+0.45;}; 
-  class ammoboxObjectsSpawn : lhdAirSpawn {x = 0.35+0.45; y = 0.19;w = 0.06; text = "Map";onButtonClick = "trapvolume=['small']; nul=[6] execVM 'mcc\general_scripts\traps\trap_request.sqf';";};
-  class ammoboxObjectsZone : smallObjectsSpawn {x = 0.35+0.45+0.06; y = 0.19;text = "Zone";onButtonClick = "trapvolume=['small']; nul=[7] execVM 'mcc\general_scripts\traps\trap_request.sqf';";};
-  
-  class wrecksObjects : smallObjects {idc = WRECKS_OBJECTS;x = 0.35+0.6;}; 
-  class wrecksObjectsSpawn : lhdAirSpawn {x = 0.35+0.6; y = 0.19;w = 0.06; text = "Map";onButtonClick = "trapvolume=['medium']; nul=[8] execVM 'mcc\general_scripts\traps\trap_request.sqf';";};
-  class wrecksObjectsZone : smallObjectsSpawn {x = 0.35+0.6+0.06; y = 0.19;text = "Zone";onButtonClick = "trapvolume=['medium']; nul=[9] execVM 'mcc\general_scripts\traps\trap_request.sqf';";};
-  
-  class carsObjects : unit_Air {idc = CARS_OBJECTS;x = 0.35;y = 0.26;sizeEx = 0.02;w = 0.12; h = 0.03;};  
-  class carsObjectsSpawn : lhdAirSpawn {x = 0.35; y = 0.29;w = 0.06; text = "Map";onButtonClick = "trapvolume=['large']; nul=[10] execVM 'mcc\general_scripts\traps\trap_request.sqf';";};
-  class carsObjectsZone : carsObjectsSpawn {x = 0.35+0.06;text = "Zone";onButtonClick = "trapvolume=['large']; nul=[11] execVM 'mcc\general_scripts\traps\trap_request.sqf';";};
-  
-  class minesObjects : carsObjects {idc = MINES_OBJECTS;x = 0.35+0.15;}; 
-  class minesObjectsSpawn : carsObjectsSpawn {x = 0.35+0.15; text = "Map";onButtonClick = "trapvolume=['small']; nul=[12] execVM 'mcc\general_scripts\traps\trap_request.sqf';";};
-  class minesObjectsZone : carsObjectsSpawn {x = 0.35+0.15+0.06;text = "Zone";onButtonClick =  "trapvolume=['small']; nul=[13] execVM 'mcc\general_scripts\traps\trap_request.sqf';";};
-  
-  class roadsideObjects : carsObjects {idc = ROADSIDE_OBJECTS;x = 0.35+0.3;}; 
-  class roadsideObjectsSpawn : carsObjectsSpawn {x = 0.35+0.3; text = "Map";onButtonClick = "nul=[14] execVM 'mcc\general_scripts\traps\trap_request.sqf';";};
-  class roadsideObjectsZone : carsObjectsSpawn {x = 0.35+0.3+0.06;text = "Zone";onButtonClick = "nul=[15] execVM 'mcc\general_scripts\traps\trap_request.sqf';";};
-  
-  class armedObjects : carsObjects {idc = ARMED_OBJECTS;x = 0.35+0.45;}; 
-  class armedObjectsSpawn : carsObjectsSpawn {x = 0.35+0.45; text = "Map";onButtonClick = "nul=[16] execVM 'mcc\general_scripts\traps\trap_request.sqf';";};
-  class armedObjectsZone : carsObjectsSpawn {x = 0.35+0.45+0.06;text = "Zone";onButtonClick = "nul=[17] execVM 'mcc\general_scripts\traps\trap_request.sqf';";};
-  
-  class sbObjects : carsObjects {idc = SB_OBJECTS;x = 0.35+0.6;}; 
-  class sbObjectsSpawn : carsObjectsSpawn {x = 0.35+0.6; text = "Map";onButtonClick = "nul=[18] execVM 'mcc\general_scripts\traps\trap_request.sqf';";};
-  class sbObjectsZone : carsObjectsSpawn {x = 0.35+0.6+0.06;text = "Zone";onButtonClick = "nul=[19] execVM 'mcc\general_scripts\traps\trap_request.sqf';";};
-  
+  class typeIED : unit_Air {idc = IED_TYPE;x = 0.5;y = 0.13;sizeEx = 0.02;w = 0.1; h = 0.03;onLBSelChanged = "[0] execVM 'mcc\general_scripts\traps\trap_change.sqf'";};  
+  class objectIED : unit_Air {idc = IED_OBJECT;x = 0.5;y = 0.16;sizeEx = 0.02;w = 0.1; h = 0.03;};  
+  class explosionSizeIED : objectIED {idc = IED_EXPLOSION;y = 0.19;};  
+  class explosionTypeIED : objectIED {idc = IED_EXPTYPE;y = 0.22;};
+  class disarmIED : objectIED {idc = IED_DISARM;y = 0.25;};
+  class jammIED : objectIED {idc = IED_JAM;y = 0.28;};
+  class iedTarget : objectIED {idc = IED_TARGET;y = 0.31;}; 
+  class iedTrigger : objectIED {idc = IED_TRIGGER;x = 0.75;y = 0.13;};
+  class iedProx : iedTrigger {idc = IED_PROX;y = 0.16;}; 
+  class iedAmbushGroup : iedTrigger {idc = IED_AMBUSH;y = 0.19;};
+     
+  class typeIEDSpawn : RscButton {x = 0.61; y = 0.24;w = 0.11;h = 0.025;colorText[] = {0,0,1,1}; text = "Create IED";onButtonClick = "nul=[0] execVM 'mcc\general_scripts\traps\trap_request.sqf';";};
+  class typeIEDSpawnGroup : RscButton {x = 0.74; y = 0.24;w = 0.11;h = 0.025;colorText[] = {0,0,1,1}; text = "Create Ambush";onButtonClick = "nul=[1] execVM 'mcc\general_scripts\traps\trap_request.sqf';";};
+  class typeIEDRteSave : RscButton {x = 0.61; y = 0.27;w = 0.24;h = 0.025;colorText[] = {0,0,1,1}; text = "Save armed civilian to clipboard";onButtonClick = "nul=[2] execVM 'mcc\general_scripts\traps\trap_request.sqf';";};
+    
   //Convoy
-  class car1 : carsObjects {idc = CONVOY_CAR1;x = 0.35+0.06;y = 0.36;}; 
+  class car1 : typeIED {idc = CONVOY_CAR1;x = 0.35+0.06;y = 0.36;}; 
   class car2 : car1 {idc = CONVOY_CAR2;y = 0.36+0.05;}; 
   class car3 : car1 {idc = CONVOY_CAR3;y = 0.36+0.1;}; 
   class car4 : car1 {idc = CONVOY_CAR4;y = 0.36+0.15;}; 
@@ -376,19 +313,18 @@ class ExtrasDialog {
   class shipsTitle : airTitle {y = 0.04+0.28;text = "Ships:";};
   //Traps
   class IedTitle : airTitle {x = 0.35;y = 0.08;colorText[] = {0,1,1};text = "Explosives:";};
-  class smallObjectsTitle : airTitle {x = 0.35;y = 0.12;text = "Small IED:";};
-  class mediumObjectsTitle : smallObjectsTitle {x = 0.35+0.15;text = "Medium IED:";};
-  class largeObjectsTitle : smallObjectsTitle {x = 0.35+0.3;text = "Concealed IED:";};
-  class AmmoboxObjectsTitle : smallObjectsTitle {x = 0.35+0.45;text = "Rigged Boxes:";};
-  class wrecksObjectsTitle : smallObjectsTitle {x = 0.35+0.6;text = "Rigged Wrecks:";};
-  class carsObjectsTitle : airTitle {x = 0.35;y = 0.22;text = "Rigged Cars:";};
-  class minesObjectsTitle : carsObjectsTitle {x = 0.35+0.15;text = "Mines:";};
-  class roadsideObjectsTitle : carsObjectsTitle {x = 0.35+0.3;text = "Road sides:";};
-  class armedObjectsTitle : carsObjectsTitle {x = 0.35+0.45;text = "Armed Civis:";};
-  class sbObjectsTitle : carsObjectsTitle {x = 0.35+0.6;text = "S Bombers:";};
-  class iedProxTitle : IedTitle {x = 0.35+0.1;colorText[] = {0,0,1};text = "Proximity:";};
-  class iedNumberTitle : iedProxTitle {x = 0.35+0.28;text = "Quantity:";};
-  class iedTargetTitle : iedProxTitle {x = 0.35+0.45;text = "Target:";};
+  class typeIEDTitle : airTitle {x = 0.35;y = 0.12;text = "Type:";};
+  class objectIEDTitle : typeIEDTitle {y = 0.15;text ="Object:";};
+  class explosionSizeIEDTitle : typeIEDTitle {y = 0.18;text ="Explosion Size:";};
+  class explosionTypeIEDTitle : typeIEDTitle {y = 0.21;text ="Explosion Type:";};
+  class disarmIEDTitle : typeIEDTitle {y = 0.24;text = "Disarm Duration:";};
+  class jammIEDTitle : typeIEDTitle {y = 0.27;text = "Jammable:";};
+  class iedTargetTitle : typeIEDTitle {y = 0.3;text = "Target Faction:";};
+  class iedTriggerTitle : typeIEDTitle {x = 0.6;y = 0.12;text = "Trigger Type:";};
+  class iedProxTitle : iedTriggerTitle {y = 0.15;text = "Proximity:";};
+  class iedAmbushGroupTitle : iedTriggerTitle {y = 0.18;text = "Ambush Group:";};
+  class iedHelpTitle : RscStructuredText {x = 0.86;y = 0.12;w = 0.2; h = 0.2;text = "*Press Ctrl + left mouse button to trigger an IED or ambushing party --------------------------- *Press Shift + drag left mouse button to link between IEDs and ambush parties";};
+  
   //convoy
   class car1Title : IedTitle {x = 0.35;y = 0.35;colorText[] = {1,1,1};text = "Car1:";};
   class car2Title : car1Title {y = 0.35+0.05;text = "Car2:";};
@@ -418,7 +354,6 @@ class ExtrasDialog {
 //-------------------------------------------Buttons-------------------------------------------
 //Zones
   class Zone_set : RscGUIShortcutButton {idc = -1;colorDisabled[] = {1, 0.4, 0.3, 0.8};x = 0.35; y = 0.8;	text = "Update Zone";onButtonClick = "[1] execVM 'mcc\pop_menu\zones.sqf'";};
-  class Zone_select : RscGUIShortcutButton {idc = -1;colorDisabled[] = {1, 0.4, 0.3, 0.8};x = 0.48; y =0.65 ;w = 0.07; h = 0.0422876;size = 0.02;sizeEx = 0.02821;text = "select";onButtonClick = "[0] execVM 'mcc\pop_menu\zones.sqf'";};
 //Bottom Buttons
   class Close_dialog : RscGUIShortcutButton {idc = -1;colorDisabled[] = {1, 0.4, 0.3, 0.8};x = 0.895; y = 0.84;text = "Close";onButtonClick = "closeDialog 0";};
   class Update_Faction : RscGUIShortcutButton {idc = -1;colorDisabled[] = {1, 0.4, 0.3, 0.8};x = 0.56; y = 0.05;w = 0.105825; h = 0.0422876;size = 0.02821;sizeEx = 0.02821;text = "Update";onButtonClick = "mcc_screen=1;[] execVM 'mcc\pop_menu\faction.sqf'";};

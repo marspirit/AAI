@@ -301,18 +301,22 @@ grass_array = [["No grass",50],["Meduim grass",25], ["High grass",12.5]];
 view_array = [500,1000,1500,2000,2500,3000,3500,4000,4500,5000,6000,7000,8000,9000,10000];
 
 ied_prox = [3,5,10,15,20,25,30,35,45,50];
-ied_number = [1,2,3,4,5,6,7,8,9,10,15,20,30,40,50,60];
 ied_target = [west, east, resistance, civilian];
-ied_small = [["Pneu","Land_Pneu"],["Notebook","Notebook"],["Radio","Radio"],["SatPhone","SatPhone"],["SmallTV","SmallTV"],["Suitcase","Suitcase"],["Pomz","ACE_Pomz"],["Bag (OA)","Land_Bag_EP1"],["Canister (OA)","Land_Canister_EP1"],["Reservoir (OA)","Land_Reservoir_EP1"],["tires (OA)","Land_tires_EP1"],["Vase (OA)","Land_Vase_loam_EP1"]];
+ied_small = [["Pneu","Land_Pneu"],["Notebook","Notebook"],["Radio","Radio"],["SatPhone","SatPhone"],["SmallTV","SmallTV"],["Suitcase","Suitcase"],["Pomz","ACE_Pomz"],["Bag (OA)","Land_Bag_EP1"],["Canister (OA)","Land_Canister_EP1"],["Reservoir (OA)","Land_Reservoir_EP1"],["tires (OA)","Land_tires_EP1"],["Vase (OA)","Land_Vase_loam_EP1"], ["Invisible","ACE_Target_CInf"]];
 ied_medium = [["Barrel Red","Barrel1"],["Barrel Black","Barrel4"],["Barrel Green","Barrel5"],["Pneu","Land_Pneu"],["Garbage Can","Garbage_can"],["Camp Tent","ACamp"],["Military Tent","Land_A_tent"],["Backpackheap","Misc_Backpackheap"],["Crates (OA)","Land_Crates_stack_EP1"],["Transport Crates (OA)","Land_transport_crates_EP1"],["tires (OA)","Land_tires_EP1"]];
 ied_large = [["IED (garbage large)","BAF_ied_v2"],["IED (garbage)","BAF_ied_v1"],["IED (ground large)","BAF_ied_v4"],["IED (ground)","BAF_ied_v3"]];
 ied_wrecks = [["BMP2 Wreck","BMP2Wreck"],["BRDM Wreck","BRDMWreck"],["HMMWV Wreck","HMMWVWreck"],["LADA Wreck","LADA Wreck"],["SKODA Wreck","SKODAWreck"],["T72 Wreck","T72Wreck"],["Mi8 Wreck","Mi8 Wreck"],["UAZ Wreck","UAZWreck"],["UralWreck","UralWreck"],["datsun02Wreck","datsun02Wreck"],["UH60_wreck_EP1","UH60_wreck_EP1"]];
-ied_mine = [["BBetty Burried","ACE_BBetty_burried"],["BBetty","ACE_BBetty"],["AT Mine US","Mine"],["AT Mine RU","MineE"],["Pomz","ACE_Pomz"],["Sign Danger","Sign_Danger"],["Hedgehog","Hedgehog"]];
-ied_rc = [["Claymore","ACE_Claymore","small"],["M2SLAM","ACE_M2SLAM","at"],["Pomz","ACE_Pomz","medium"]];
+ied_mine = [["BBetty Burried","ACE_BBetty_burried_Editor"],["AT Mine US","Mine"],["AT Mine RU","MineE"], ["Mine Field AP - Visable","apv"], ["Mine Field AP - Hidden","ap"], ["Mine Field AT - Visable","atv"], ["Mine Field AT - Hidden","at"]];
+ied_rc = [["Claymore US","ACE_Claymore_Editor"],["Claymore RU","ACE_MON50_Editor"],["Pomz","ACE_Pomz_Editor"],["Trip Flare","ACE_TripFlare_Editor"]];
+IEDJammerVehicles = ["M2A3_EP1", "HMMWV_M1151_M2_CZ_DES_EP1", "HMMWV_M1151_M2_DES_EP1"];
+IEDDisarmTimeArray = [10, 20, 30, 40, 50, 60, 120, 180, 240, 300];
+IEDCount = 0;
+IEDLineCount = 0;
+rcPlacing = false; 
+ambushPlacing = false;
+IEDnearObjects =[];
+natureIsRuning = false;
 
-ied_proxIndex = 0;
-ied_numberIndex = 0;
-ied_targetIndex = 0;
 trapvolume = [];
 
 convoyHVT = [["None","0"],["Doctor","Doctor"],["Citizen","Citizen4"],["Functionary","Functionary1"],["Policeman","Policeman"],["Priest","Priest"],["Rocker","Rocker2"],["Damsel","Damsel1"],["Hooker","Hooker2"],["Secretary","Secretary3"],["Sportswoman","Sportswoman5"],["Boss","Ins_Lopotev"],["Insurgent - Warlord","Ins_Bardak"],
@@ -342,6 +346,8 @@ CASApproach_index = 0;
 evacFlyInHight_array = [["50m",50],["100m",100],["150m",150],["200m",200],["300m",300],["400m",400],["500m",500]];
 evacFlyInHight_index = 1;
 
+townCount = 0; 
+
 
 //====================================================================================MCC Engine Init============================================================================================================================
 // Disable Respawn & Organise start en death location 
@@ -350,8 +356,9 @@ nul=[] execVM "mcc\general_scripts\mcc_player_disableRespawn.sqf";
 // Initialize and load the pop up menu
 nul=[] execVM "mcc\pop_menu\mcc_init_menu.sqf";
 
-// Make action menu items available
-[["> Teleport to TEAM", "mcc\general_scripts\mcc_SpawnToPosition.sqf", [], 0, false, false, 'teamSwitch']] call CBA_fnc_addPlayerAction;
+// Teleport to team on Alt + T
+teleportToTeam = true; 
+[20, [false, false, true], {player execvm "mcc\general_scripts\mcc_SpawnToPosition.sqf"}] call CBA_fnc_addKeyHandler;
 
 mcc_spawntype   		= "";
 mcc_classtype   		= "";
@@ -413,6 +420,7 @@ civilian setfriend [west, 0.7];
 // Handler code for on the server for MP purpose
 nul=[] execVM "mcc\pv_handling\mcc_pv_handler.sqf";
 nul=[] execVM "mcc\pv_handling\mcc_extras_pv_handler.sqf";
+nul=[] execVM "mcc\pv_handling\mcc_functions.sqf";
 
 //==========================Bon Artillery ===================
 waitUntil { !(isnil ("f_param_arty"))  };
@@ -425,3 +433,5 @@ call {[] execVM "mcc\general_scripts\arrestinggear\Arrestinggear.sqf";};
 //=============================Sync with server when JIP======================
 waituntil {alive player};
 [0] execVM "mcc\general_scripts\sync.sqf";
+
+["Welcome", "MCC Sandbox V1.5", "Have fun"] spawn BIS_fnc_infoText;

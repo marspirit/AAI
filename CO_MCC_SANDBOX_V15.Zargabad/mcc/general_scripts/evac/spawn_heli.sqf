@@ -31,6 +31,7 @@ switch (_faction) do
 	evac setposasl [_loc select 0, _loc select 1, 17];
 	if (((getdir deck) + 180) > 360) then {_dir = (getdir deck + 180)- 360;} else {_dir = getdir deck + 180};
 	evac setdir _dir;
+	evac addMagazineCargo ["ACE_Rope_M_120",2];
 	evac_p = evac_group createUnit [evac_p_type, _loc, [], 0, "NONE"];		//spawn pilot
 	evac disableai "TARGET";
 	evac disableai "AUTOTARGET";
@@ -40,5 +41,4 @@ switch (_faction) do
 	evac_p disableai "TARGET";
 	evac_p disableai "AUTOTARGET";
 	group evac_p setBehaviour "CARELESS";
-	evac addMagazineCargo ["ACE_Rope_M_120",2];
 	

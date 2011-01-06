@@ -171,7 +171,7 @@ _planeApproach				= _this select 4;
 		
 	NUKE = 
 		{
-			private ["_plane", "_pos", "_nukeType","_x","_i"];
+			private ["_plane", "_pos", "_nukeType","_x"];
 			_plane = _this select 0;
 			_pos = _this select 1;
 			_nukeType = _this select 2;
@@ -190,7 +190,7 @@ _planeApproach				= _this select 4;
 			for [{_x=0},{_x<3+random 5},{_x=_x+1}] do
 			{
 				_dummy= "HeliHEmpty" createvehicle [((_pos select 0)+ 200 - random 400),((_pos select 1)+ 200 - random 400), _pos select 2];
-				_i=[_dummy,10,time,false,false] spawn BIS_Effects_Burn;
+				[-2, {[_this,10,time,false,false] spawn BIS_Effects_Burn}, _dummy] call CBA_fnc_globalExecute;
 			};
 			[0, {30 setOvercast 1;sleep 35 + random 20; setWind [10 - random 20,10 - random 20, true];}] call CBA_fnc_globalExecute; 	
 		};
