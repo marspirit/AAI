@@ -74,9 +74,9 @@ KRON_UPS_useMines = true;
 KRON_UPS_searchVehicledist = 500;
 
 //Percentage of units to surrender.
-KRON_UPS_EAST_SURRENDER = 10;
-KRON_UPS_WEST_SURRENDER = 10;
-KRON_UPS_GUER_SURRENDER = 15;
+KRON_UPS_EAST_SURRENDER = 0;
+KRON_UPS_WEST_SURRENDER = 0;
+KRON_UPS_GUER_SURRENDER = 0;
 
 //Efective distance for doing perfect ambush (max distance is this x2)
 KRON_UPS_ambushdist = 50;
