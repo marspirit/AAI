@@ -17,7 +17,7 @@ class Header
 
 respawn      ="BASE";
 respawndelay = 10;
-disabledAI   = true;
+disabledAI   = false;
 
 // ============================================================================================
 
