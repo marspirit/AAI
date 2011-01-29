@@ -255,7 +255,7 @@ switch (_side) do
 		   _oldrifle = "ACE_SKS";
 		   _oldmag = "ACE_10Rnd_762x39_B_SKS";
 		   
-		   _radio = "ACE_PRC119_MAR";
+		   _radio = "ACE_PRC119_ACU";
 		};
  };
 

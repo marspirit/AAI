@@ -39,8 +39,8 @@ class Mission
 	randomSeed=4931020;
 	class Intel
 	{
-		briefingName="CO_MCC_SANDBOX_V1.51";
-		briefingDescription="*** CO_MCC_SANDBOX_V1.51 ***";
+		briefingName="CO_MCC_SANDBOX_V1.52";
+		briefingDescription="*** CO_MCC_SANDBOX_V1.52 ***";
 		resistanceWest=0;
 		startWeather=0.36250508;
 		forecastWeather=0.37342513;

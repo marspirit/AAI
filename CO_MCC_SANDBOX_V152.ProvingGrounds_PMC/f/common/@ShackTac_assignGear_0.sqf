@@ -200,7 +200,7 @@ switch (_side) do
 		   _oldrifle = "ACE_M16A4_Iron";
 		   _oldmag = "20Rnd_556x45_Stanag";
 		   
-		   _radio = "ACE_PRC119_MAR";
+		   _radio = "ACE_PRC119_ACU";
 		};
 
 	// ====================================================================================
