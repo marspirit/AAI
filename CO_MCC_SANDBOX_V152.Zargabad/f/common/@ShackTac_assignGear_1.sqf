@@ -191,8 +191,8 @@ switch (_side) do
 		   _pistol = "M9";
 		   _pistolmag = "15Rnd_9x19_M9";
 		   
-		   _rucksack = "ACE_Rucksack_MOLLE_WMARPAT";
-		   _medicrucksack = "ACE_Rucksack_MOLLE_WMARPAT_Medic";
+		   _rucksack = "ACE_Rucksack_MOLLE_ACU";
+		   _medicrucksack = "ACE_Rucksack_MOLLE_ACU_Medic";
 
 		   _oldrifle = "ACE_M16A4_Iron";
 		   _oldmag = "20Rnd_556x45_Stanag";

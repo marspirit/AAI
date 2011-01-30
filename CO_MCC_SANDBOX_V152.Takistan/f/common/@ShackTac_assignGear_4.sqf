@@ -188,13 +188,13 @@ switch (_side) do
 		   _pistol = "M9";
 		   _pistolmag = "15Rnd_9x19_M9";
 		   
-		   _rucksack = "ACE_Rucksack_MOLLE_WMARPAT";
-		   _medicrucksack = "ACE_Rucksack_MOLLE_WMARPAT_Medic";
+		   _rucksack = "ACE_Rucksack_MOLLE_ACU";
+		   _medicrucksack = "ACE_Rucksack_MOLLE_ACU_Medic";
 
 		   _oldrifle = "ACE_M16A4_Iron";
 		   _oldmag = "20Rnd_556x45_Stanag";
 		   
-		   _radio = "ACE_PRC119_MAR";
+		   _radio = "ACE_PRC119_ACU";
 		};
 
 	// ====================================================================================
@@ -255,7 +255,7 @@ switch (_side) do
 		   _oldrifle = "ACE_SKS";
 		   _oldmag = "ACE_10Rnd_762x39_B_SKS";
 		   
-		   _radio = "ACE_PRC119_ACU";
+		   _radio = "ACE_PRC119_MAR";
 		};
  };
 

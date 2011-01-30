@@ -163,8 +163,8 @@ switch (_side) do
 		   _sprifle = "m16a4_acg";
 		   _spmag = "30Rnd_556x45_Stanag";
 		   
-		   _dmrifle = "m16a4_acg";
-		   _dmriflemag = "30Rnd_556x45_Stanag";
+		   _dmrifle = "ACE_M14_ACOG";
+		   _dmriflemag = "20Rnd_762x51_DMR";
 		   
 		   _mediumMG = "M240";
 		   _mediumMGmag = "100Rnd_762x51_M240";
@@ -189,8 +189,8 @@ switch (_side) do
 		   _pistol = "M9";
 		   _pistolmag = "15Rnd_9x19_M9";
 		   
-		   _rucksack = "ACE_Rucksack_MOLLE_WMARPAT";
-		   _medicrucksack = "ACE_Rucksack_MOLLE_WMARPAT_Medic";
+		   _rucksack = "ACE_Rucksack_MOLLE_ACU";
+		   _medicrucksack = "ACE_Rucksack_MOLLE_ACU_Medic";
 
 		   _oldrifle = "ACE_M16A4_Iron";
 		   _oldmag = "20Rnd_556x45_Stanag";
