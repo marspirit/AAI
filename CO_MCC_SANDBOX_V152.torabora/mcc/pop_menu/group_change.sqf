@@ -239,6 +239,30 @@ if (_group==1) then
 						} foreach _groupArray;
 					_comboBox lbSetCurSel 0;
 				};
+				
+				case 17:	//Wrecks
+				{
+					_groupArray = U_WRECKS;
+					_comboBox = _mccdialog displayCtrl UNIT_CLASS;		
+					lbClear _comboBox;
+						{
+							_displayname = format ["%1",(_x select 3) select 0];
+							_comboBox lbAdd _displayname;
+						} foreach _groupArray;
+					_comboBox lbSetCurSel 0;
+				};
+				
+				case 18:	//Fire
+				{
+					_groupArray = U_WRECKS;
+					_comboBox = _mccdialog displayCtrl UNIT_CLASS;		
+					lbClear _comboBox;
+						{
+							_displayname = _x;
+							_comboBox lbAdd _displayname;
+						} foreach ["Small", "Medium", "Large"];
+					_comboBox lbSetCurSel 0;
+				};
 			};
 		};
 	};

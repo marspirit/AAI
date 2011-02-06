@@ -13,11 +13,8 @@
 
 #define MCC_FACTION 3003
 
-#define UNIT_CAR 3011
-#define UNIT_TANK 3012
-#define UNIT_HELI 3014
-#define UNIT_AIR 3015
-#define UNIT_SHIP 3016
+#define LHD_CLASS 3011
+#define LHD_TYPE 3012
 
 #define IED_TYPE 4500
 #define IED_OBJECT 4501
@@ -109,21 +106,11 @@ class ExtrasDialog {
 	Extras,
 	trigger_capturing,
 	
-	airTitle, //LHD spawn
-	unit_Air,
-	lhdAirSpawn,
-	heliTitle,
-	unit_Heli,
-	lhdHeliSpawn,
-	carsTitle,
-	unit_Car,
-	lhdCarSpawn,
-	tanksTitle,
-	unit_Tank,
-	lhdTankSpawn,
-	shipsTitle,
-	unit_ship,
-	lhdShipSpawn,
+	LHDClassTitle, //LHD spawn
+	LHDClass,
+	LHDTypeTitle,
+	LHDType,
+	LHDHelpTitle,
 	LHD_pos1,
 	LHD_pos2,
 	LHD_pos3,
@@ -185,9 +172,11 @@ class ExtrasDialog {
 	hostageTitle,
 	hostages,
 	hostageSpawn,
+	hostage3DSpawn,
 	uav,
 	uavTitle,
 	uavSpawn,
+	uav3DSpawn,
 	airDropTitle,
 	airDropAmmountTitle,
 	airDropType,
@@ -246,20 +235,14 @@ class ExtrasDialog {
   class Zone_x : Zone_Number {idc = MCC_ZONE_X;y = 0.65 + 0.05;};
   class Zone_y : Zone_Number {idc = MCC_ZONE_Y;y = 0.65 + 0.05 + 0.05;};
   class faction : Zone_Number {idc = MCC_FACTION;x = 0.45;y = 0.05;sizeEx = 0.028;w = 0.10; h = 0.028;};
+  
   //LHD
-  class unit_Air : Zone_Number {idc = UNIT_AIR;x = 0.19;y = 0.08;sizeEx = 0.02;w = 0.07; h = 0.028;};
-  class lhdAirSpawn : RscGUIShortcutButton {idc = -1;colorDisabled[] = {1, 0.4, 0.3, 0.8};x = 0.19+0.08; y = 0.08;w = 0.08;h = 0.04;size = 0.02;sizeEx = 0.03;text = "Spawn";onButtonClick = "nul=[0] execVM 'mcc\general_scripts\LHD\lhd_spawn.sqf';";};
-  class unit_Heli : unit_Air {idc = UNIT_HELI;y = 0.08+0.07;};
-  class lhdHeliSpawn : lhdAirSpawn {x = 0.19+0.08; y = 0.08+0.07;text = "Spawn";onButtonClick = "nul=[1] execVM 'mcc\general_scripts\LHD\lhd_spawn.sqf';";};
-  class unit_Car : unit_Air {idc = UNIT_CAR;x = 0.19;y = 0.08+0.14;sizeEx = 0.02;w = 0.07; h = 0.028;};
-  class lhdCarSpawn : lhdAirSpawn {x = 0.19+0.08; y = 0.08+0.14;text = "Spawn";onButtonClick = "nul=[2] execVM 'mcc\general_scripts\LHD\lhd_spawn.sqf';";};
-  class unit_Tank : unit_Air {idc = UNIT_TANK;x = 0.19;y = 0.08+0.21;sizeEx = 0.02;w = 0.07; h = 0.028;};
-  class unit_ship : unit_Air {idc = UNIT_SHIP;x = 0.19;y = 0.08+0.28;sizeEx = 0.02;w = 0.07; h = 0.028;};
-  class lhdTankSpawn : lhdAirSpawn {x = 0.19+0.08; y = 0.08+0.21;text = "Spawn";onButtonClick = "nul=[3] execVM 'mcc\general_scripts\LHD\lhd_spawn.sqf';";};
-  class lhdShipSpawn : lhdAirSpawn {x = 0.19+0.08; y = 0.08+0.28;text = "Spawn";onButtonClick = "nul=[4] execVM 'mcc\general_scripts\LHD\lhd_spawn.sqf';";};
+  class LHDClass : Zone_Number {idc = LHD_CLASS;x = 0.19;y = 0.08;sizeEx = 0.028;w = 0.14; h = 0.028;onLBSelChanged = "[0] execVM 'mcc\general_scripts\LHD\lhd_change.sqf'";};
+  class LHDType : Zone_Number {idc = LHD_TYPE;x = 0.19;y = 0.15;sizeEx = 0.028;w = 0.14; h = 0.028;};
+  
   //Traps
-  class typeIED : unit_Air {idc = IED_TYPE;x = 0.5;y = 0.13;sizeEx = 0.02;w = 0.1; h = 0.03;onLBSelChanged = "[0] execVM 'mcc\general_scripts\traps\trap_change.sqf'";};  
-  class objectIED : unit_Air {idc = IED_OBJECT;x = 0.5;y = 0.16;sizeEx = 0.02;w = 0.1; h = 0.03;};  
+  class typeIED : Zone_Number {idc = IED_TYPE;x = 0.5;y = 0.13;sizeEx = 0.02;w = 0.1; h = 0.03;onLBSelChanged = "[0] execVM 'mcc\general_scripts\traps\trap_change.sqf'";};  
+  class objectIED : Zone_Number {idc = IED_OBJECT;x = 0.5;y = 0.16;sizeEx = 0.02;w = 0.1; h = 0.03;};  
   class explosionSizeIED : objectIED {idc = IED_EXPLOSION;y = 0.19;};  
   class explosionTypeIED : objectIED {idc = IED_EXPTYPE;y = 0.22;};
   class disarmIED : objectIED {idc = IED_DISARM;y = 0.25;};
@@ -306,14 +289,12 @@ class ExtrasDialog {
   class factionTitle : Zone_NumberTitle {x = 0.45-0.1;y = 0.05;colorText[] = {0,1,1,1};text = "Faction:";};
   class zoneTitle : Zone_NumberTitle {x = 0.39;y = 0.6;colorText[] = {0,1,1};text = "Zones:*";};
   //LHD
-  class airTitle : Zone_NumberTitle {x = 0.2;y = 0.04;text = "Planes:";};
-  class heliTitle : airTitle {y = 0.04+0.07;text = "Helis:";};
-  class carsTitle : airTitle {y = 0.04+0.14;text = "Cars:";};
-  class tanksTitle : airTitle {y = 0.04+0.21;text = "Tanks:";};
-  class shipsTitle : airTitle {y = 0.04+0.28;text = "Ships:";};
+  class LHDClassTitle : Zone_NumberTitle {x = 0.2;y = 0.04;text = "Class:";};
+  class LHDTypeTitle : LHDClassTitle {y = 0.04+0.07;text = "Type:";};
+  class LHDHelpTitle : RscStructuredText {x = 0.19;y = 0.22;w = 0.15; h = 0.16;text = "*Choose the type of vehicle you want to spawn and press the desired position";};
   //Traps
-  class IedTitle : airTitle {x = 0.35;y = 0.08;colorText[] = {0,1,1};text = "Explosives:";};
-  class typeIEDTitle : airTitle {x = 0.35;y = 0.12;text = "Type:";};
+  class IedTitle : LHDClassTitle {x = 0.35;y = 0.08;colorText[] = {0,1,1};text = "Explosives:";};
+  class typeIEDTitle : LHDClassTitle {x = 0.35;y = 0.12;text = "Type:";};
   class objectIEDTitle : typeIEDTitle {y = 0.15;text ="Object:";};
   class explosionSizeIEDTitle : typeIEDTitle {y = 0.18;text ="Explosion Size:";};
   class explosionTypeIEDTitle : typeIEDTitle {y = 0.21;text ="Explosion Type:";};
@@ -363,23 +344,25 @@ class ExtrasDialog {
   class Extras : Close_dialog {x = 0.01;y=0.4;w = 0.33;text = "Main Menu";onButtonClick = "mcc_screen=0;closeDialog 0;[] execVM 'mcc\pop_menu\mcc_CreatePopupMenu.sqf'";};
   class trigger_capturing : RscButton {idc = CAPTURE;x = 0.4;y = 0.01;w = 0.15;colorText[] = {1,0,0,1};text = "Stop Capturing";action = "ctrlEnable [3204,false];mcc_capture_state=false;";};
   //LHD spawn positions
-  class LHD_pos1 : RscButton {idc = -1;x = 0.08;y = 0.07;w = 0.025; h = 0.025;colorText[] = {0,0,1,1};text = "1";action = "lhdpos = 'pos1'"};
-  class LHD_pos2 : LHD_pos1 {y = 0.07+0.03;text = "2";action = "lhdpos = 'pos2'";};
-  class LHD_pos3 : LHD_pos1 {y = 0.07+0.06;text = "3";action = "lhdpos = 'pos3'";};
-  class LHD_pos4 : LHD_pos1 {y = 0.07+0.23;text = "4";action = "lhdpos = 'pos5'";};
-  class LHD_pos5 : LHD_pos1 {y = 0.07+0.26;text = "5";action = "lhdpos = 'pos6'";};
-  class LHD_pos6 : LHD_pos1 {y = 0.07+0.29;text = "6";action = "lhdpos = 'pos7'";};
-  class LHD_pos7 : LHD_pos1 {x = 0.04;y = 0.05;text = "7";action = "lhdpos =  'pos8'";};
-  class LHD_pos8 : LHD_pos1 {x = 0.02;y = 0.26;text = "8";action = "lhdpos =  'pos9'";};
-  class LHD_pos9 : LHD_pos3 {x = 0.14;y = 0.12;text = "9";action = "lhdpos =  'pos10'";};
-  class LHD_pos10 : LHD_pos9 {y = 0.18;text = "10";action = "lhdpos =  'pos11'";};
+  class LHD_pos1 : RscButton {idc = -1;x = 0.08;y = 0.07;w = 0.025; h = 0.025;colorText[] = {0,0,1,1};text = "1";action = "lhdpos = 'pos1';nul=[1] execVM 'mcc\general_scripts\LHD\lhd_spawn.sqf';";};
+  class LHD_pos2 : LHD_pos1 {y = 0.07+0.03;text = "2";action = "lhdpos = 'pos2';nul=[1] execVM 'mcc\general_scripts\LHD\lhd_spawn.sqf';";};
+  class LHD_pos3 : LHD_pos1 {y = 0.07+0.06;text = "3";action = "lhdpos = 'pos3';nul=[1] execVM 'mcc\general_scripts\LHD\lhd_spawn.sqf';";};
+  class LHD_pos4 : LHD_pos1 {y = 0.07+0.23;text = "4";action = "lhdpos = 'pos5';nul=[1] execVM 'mcc\general_scripts\LHD\lhd_spawn.sqf';";};
+  class LHD_pos5 : LHD_pos1 {y = 0.07+0.26;text = "5";action = "lhdpos = 'pos6';nul=[1] execVM 'mcc\general_scripts\LHD\lhd_spawn.sqf';";};
+  class LHD_pos6 : LHD_pos1 {y = 0.07+0.29;text = "6";action = "lhdpos = 'pos7';nul=[1] execVM 'mcc\general_scripts\LHD\lhd_spawn.sqf';";};
+  class LHD_pos7 : LHD_pos1 {x = 0.04;y = 0.05;text = "7";action = "lhdpos =  'pos8';nul=[1] execVM 'mcc\general_scripts\LHD\lhd_spawn.sqf';";};
+  class LHD_pos8 : LHD_pos1 {x = 0.02;y = 0.26;text = "8";action = "lhdpos =  'pos9';nul=[1] execVM 'mcc\general_scripts\LHD\lhd_spawn.sqf';";};
+  class LHD_pos9 : LHD_pos3 {x = 0.14;y = 0.12;text = "9";action = "lhdpos =  'pos10';nul=[0] execVM 'mcc\general_scripts\LHD\lhd_spawn.sqf';";};
+  class LHD_pos10 : LHD_pos9 {y = 0.18;text = "10";action = "lhdpos =  'pos11';nul=[0] execVM 'mcc\general_scripts\LHD\lhd_spawn.sqf';";};
   //Covoy
   class convoyPlace : RscGUIShortcutButton {idc = -1;colorDisabled[] = {1, 0.4, 0.3, 0.8};w = 0.15;h = 0.04;size = 0.025;sizeEx = 0.025;x = 0.75;y = 0.35;text = "Place Convoy";onButtonClick = "nul=[3] execVM 'mcc\general_scripts\convoy\make_convoy_WP.sqf'";};
   class convoyStart : convoyPlace {x = 0.9;text = "Start Convoy";onButtonClick = "nul=[3] execVM 'mcc\general_scripts\convoy\start_convoy.sqf';";};
   class convoyResetWaypoints : convoyPlace {x = 0.9;y = 0.4;text = "Reset Waypoints";onButtonClick = "nul=[3] execVM 'mcc\general_scripts\convoy\reset_convoy_WP.sqf';";};
   //Support
-  class hostageSpawn : RscGUIShortcutButton {idc = -1;colorDisabled[] = {1, 0.4, 0.3, 0.8};x = 0.25; y = 0.47;w = 0.07;h = 0.04;size = 0.025;sizeEx = 0.028;text = "Spawn";onButtonClick = "nul=[3] execVM 'mcc\general_scripts\hostages\hostage_request.sqf'";};
-  class uavSpawn : hostageSpawn {y = 0.47+0.03;text = "Spawn";onButtonClick = "nul=[3] execVM 'mcc\general_scripts\uav\uav_request.sqf';";};
+  class hostageSpawn : RscGUIShortcutButton {idc = -1;colorDisabled[] = {1, 0.4, 0.3, 0.8};x = 0.23; y = 0.47;w = 0.07;h = 0.04;size = 0.022;sizeEx = 0.028;text = "Spawn";onButtonClick = "nul=[0] execVM 'mcc\general_scripts\hostages\hostage_request.sqf'";};
+  class hostage3DSpawn : RscGUIShortcutButton {idc = -1;colorDisabled[] = {1, 0.4, 0.3, 0.8};x = 0.3; y = 0.47;w = 0.04;h = 0.04;size = 0.022;sizeEx = 0.028;text = "3D";onButtonClick = "nul=[1] execVM 'mcc\general_scripts\hostages\hostage_request.sqf'";};
+  class uavSpawn : hostageSpawn {y = 0.47+0.03;text = "Spawn";onButtonClick = "nul=[0] execVM 'mcc\general_scripts\uav\uav_request.sqf';";};
+  class uav3DSpawn : RscGUIShortcutButton {idc = -1;colorDisabled[] = {1, 0.4, 0.3, 0.8};x = 0.3; y = 0.5;w = 0.04;h = 0.04;size = 0.022;sizeEx = 0.028;text = "3D";onButtonClick = "nul=[1] execVM 'mcc\general_scripts\uav\uav_request.sqf'";};
   class airDropCarSpawn : hostageSpawn {x = 0.01;y = 0.6+0.03;text = "Spawn";onButtonClick = "if (mcc_missionmaker == (name player)) then {nul=[0] execVM 'mcc\general_scripts\cas\cas_request.sqf';} else {player globalchat 'Access Denied'};";};
   class airDropTankSpawn : airDropCarSpawn {x = 0.08;text = "Spawn";onButtonClick = "if (mcc_missionmaker == (name player)) then {nul=[1] execVM 'mcc\general_scripts\cas\cas_request.sqf';} else {player globalchat 'Access Denied'};";};
   class airDropAmmoSpawn : airDropCarSpawn {x = 0.15;text = "Spawn";onButtonClick = "if (mcc_missionmaker == (name player)) then {nul=[2] execVM 'mcc\general_scripts\cas\cas_request.sqf';} else {player globalchat 'Access Denied'};";};

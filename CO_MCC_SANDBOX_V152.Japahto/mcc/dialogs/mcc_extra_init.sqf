@@ -9,12 +9,8 @@ unit_array_ready=false;
 
 #define CAPTURE 3204
 
-#define UNIT_CAR 3011
-#define UNIT_TANK 3012
-#define UNIT_HELI 3014
-#define UNIT_AIR 3015
-#define UNIT_SHIP 3016
-
+#define LHD_CLASS 3011
+#define LHD_TYPE 3012
 
 #define IED_TYPE 4500
 #define IED_EXPLOSION 4502
@@ -265,49 +261,12 @@ lbClear _comboBox;
 } foreach U_GEN_SOLDIER;
 _comboBox lbSetCurSel 0;
 //-----------------------------------------------------------------------LHD Spawn-------------------------------------------------------------------
-_comboBox = _mccdialog displayCtrl UNIT_AIR;		//fill combobox CFG unit's AIR
+_comboBox = _mccdialog displayCtrl LHD_CLASS;		//LHD_CLASS
 lbClear _comboBox;
 {
-	_displayname = format ["%1",(_x select 3) select 0];
+	_displayname = _x;
 	_index = _comboBox lbAdd _displayname;
-	_comboBox lbsetpicture [_index, (_x select 3) select 1];
-} foreach U_GEN_AIRPLANE;
-_comboBox lbSetCurSel 0;
-
-_comboBox = _mccdialog displayCtrl UNIT_CAR;		//fill combobox CFG unit's Car
-lbClear _comboBox;
-{
-	_displayname = format ["%1",(_x select 3) select 0];
-	_index = _comboBox lbAdd _displayname;
-	_comboBox lbsetpicture [_index, (_x select 3) select 1];
-} foreach U_GEN_CAR;
-_comboBox lbSetCurSel 0;
-
-_comboBox = _mccdialog displayCtrl UNIT_TANK;		//fill combobox CFG unit's TANK
-lbClear _comboBox;
-{
-	_displayname = format ["%1",(_x select 3) select 0];
-	_index = _comboBox lbAdd _displayname;
-	_comboBox lbsetpicture [_index, (_x select 3) select 1];
-} foreach U_GEN_TANK;
-_comboBox lbSetCurSel 0;
-
-_comboBox = _mccdialog displayCtrl UNIT_HELI;		//fill combobox CFG unit's HELI
-lbClear _comboBox;
-{
-	_displayname = format ["%1",(_x select 3) select 0];
-	_index = _comboBox lbAdd _displayname;
-	_comboBox lbsetpicture [_index, (_x select 3) select 1];
-} foreach U_GEN_HELICOPTER;
-_comboBox lbSetCurSel 0;
-
-_comboBox = _mccdialog displayCtrl UNIT_SHIP;		//fill combobox CFG unit's SHIP
-lbClear _comboBox;
-{
-	_displayname = format ["%1",(_x select 3) select 0];
-	_index = _comboBox lbAdd _displayname;
-	_comboBox lbsetpicture [_index, (_x select 3) select 1];
-} foreach U_GEN_SHIP;
+} foreach ["Vhicles", "Tracked/Static", "Motorcycles", "Helicopters", "Fixed-Wings", "Boats"];
 _comboBox lbSetCurSel 0;
 
 //------------------------------------------Convoy Generator--------------------------------------------------------

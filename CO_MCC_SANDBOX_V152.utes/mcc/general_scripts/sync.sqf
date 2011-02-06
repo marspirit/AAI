@@ -9,7 +9,7 @@ switch (_type) do
 		mcc_sync_status = false; 
 		[0, {[_this] execVM "mcc\general_scripts\sync.sqf";},1] call CBA_fnc_globalExecute; 
 		_ok = [] spawn compile mcc_sync;
-		_loop = 10; 
+		_loop = 20; 
 		for [{_x=1},{_x<=_loop},{_x=_x+1}]  do //Create progress bar
 		{
 			_footer = [_x,_loop] call BIS_AdvHints_createCountdownLine;
@@ -20,8 +20,8 @@ switch (_type) do
 			//add _footer
 			_html = _html + "<br/><br/><t color='#818960' size='0.85' shadow='0' align='right'>" + _footer + "</t>";
 			hintsilent parseText(_html);
-			sleep 0.3;
-			if (!scriptdone _ok) then {sleep 1}; 
+			sleep 0.1;
+			if (!mcc_sync_status) then {sleep 3}; 
 		};
 		Hint "Synchronizing Done";		
 	};

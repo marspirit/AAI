@@ -397,7 +397,7 @@ class PUM3_PopupMenuDialog {
  //spawn units
 	class unit_type : Zone_Number {idc = UNIT_TYPE;x = 0.45;y = 0.25;sizeEx = 0.028;w = 0.10; h = 0.028;onLBSelChanged = "[1] execVM 'mcc\pop_menu\group_change.sqf'";};
 	class unit_Class : Zone_x {idc = UNIT_CLASS;x = 0.45+0.11;y = 0.25;sizeEx = 0.028;w = 0.20; h = 0.028;};
-	class spawnHelpTitle : RscStructuredText {x = 0.36;y = 0.325;w = 0.335; h = 0.1;text = "*3D Editor instructions: Hold Ctrl to rotate the object --- *Press Space to place the object --- Press BackSpace or Esc to exit the 3D editor";};
+	class spawnHelpTitle : RscStructuredText {x = 0.36;y = 0.325;w = 0.335; h = 0.1;text = "*3D Editor: Hold Ctrl to rotate the object -- *Press Space to place the object -- *Press BackSpace or Esc to exit -- *Use mousewheel to change the elevation";};
 //Spawn setting
 	class setting_Empty : Zone_Number {idc = SETTING_EMPTY;x = 0.45+0.27;y = 0.4;sizeEx = 0.028;w = 0.07; h = 0.028;};
 	class setting_Behavior : setting_Empty {idc = SETTING_BEHAVIOR;x = 0.45+0.36;};

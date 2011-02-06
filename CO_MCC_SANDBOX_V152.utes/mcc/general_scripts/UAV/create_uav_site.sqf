@@ -1,6 +1,6 @@
 //UAV/ULB  script made by Shay_Gman 09/2010 (c)
 disableSerialization;
-private ["_pos", "_uavSyncObj", "_uav_index"];
+private ["_pos", "_uavSyncObj", "_uav_index", "_grp","_uav","_dummy","_lbpos","_pilot"];
 _pos = _this select 0; 
 _uavSyncObj = _this select 1; 
 _uav_index = _this select 2;
@@ -39,7 +39,7 @@ spawnUAV=
 
 spawnULB=
 			{
-				private ["_pos","_uavType","_uavSyncObj""_grpSide", "_grp","_uav","_dummy","_lbpos","_pilot"];
+				private ["_pos","_uavType","_uavSyncObj","_grpSide", "_grp","_uav","_dummy","_lbpos","_pilot"];
 				_pos = _this select 0; 
 				_uavType = _this select 1;
 				_uavSyncObj = _this select 2;
@@ -66,7 +66,7 @@ spawnULB=
 				_grp setCombatMode "BLUE";
 				_grp setBehaviour "careless";
 				if (_uavSyncObj != "ACE_Target_CInf") then {BIS_ULB synchronizeObjectsAdd [_uav, _dummy]} //If it's a backpack ULB
-				else {BIS_ULB synchronizeObjectsAdd [_uav,_dummy, _pos]};
+				else {BIS_ULB synchronizeObjectsAdd [_uav, _pos]};
 			};
 			
 			
@@ -92,9 +92,21 @@ switch (_uav_index) do //Now lets see what are we spawning?
 	[_pos, "MQ9PredatorB_US_EP1", "HMMWV_Terminal_EP1", west] spawn spawnUAV;
 	};
 	
-	case 4: //West mobile ULB
-	{
-	[_pos, "AH6X_EP1", "HMMWV_Terminal_EP1", west] spawn spawnULB;
+	case 4: //AH64D
+	{	
+	_dummy = "AH64D_EP1" createvehicle _pos;
+	_grp = creategroup west; 
+	_lbpos = getmarkerpos "pos8"; 
+	_pilot = _grp createUnit ["US_Soldier_Pilot_EP1", _pos, [], 0, "NONE"];
+	AHuav= createVehicle ["AH6X_EP1",[_lbpos select 0, _lbpos select 1,50], [], 0, "FLY"];
+	_pilot assignAsDriver AHuav;
+	_pilot moveindriver AHuav;
+	_pilot disableAI "AUTOTARGET"; 
+	_pilot disableAI "TARGET" ; 
+	_pilot flyinheight 150 ;
+	_grp setCombatMode "BLUE";
+	_grp setBehaviour "careless";
+	_dummy addeventhandler ["GetIn",{BIS_ULB synchronizeObjectsRemove (synchronizedObjects BIS_ULB);BIS_ULB synchronizeObjectsAdd [_this select 0, AHuav];hint format ["%1", synchronizedObjects BIS_ULB];}];
 	};
 	
 	case 5: //East mobile UAV

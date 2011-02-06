@@ -28,7 +28,7 @@ if (isServer) then
 	["SB_single", {[(_this select 0), (_this select 1), (_this select 2), (_this select 3), (_this select 4), (_this select 5)] execvm  "mcc\general_scripts\traps\put_sb.sqf";}] call CBA_fnc_addEventHandler;
 	["ambush_single", {[(_this select 0), (_this select 1), (_this select 2), (_this select 3), (_this select 4), (_this select 5)] execvm  "mcc\general_scripts\traps\put_ambush.sqf";}] call CBA_fnc_addEventHandler;
 	["ied_sync", {[(_this select 0), (_this select 1), (_this select 2)] execvm  "mcc\general_scripts\traps\ied_sync.sqf";}] call CBA_fnc_addEventHandler;
-	["hostage_req", {[(_this select 0), (_this select 1)] spawn hostage_req}] call CBA_fnc_addEventHandler;
+	["hostage_req", {[(_this select 0), (_this select 1), (_this select 2)] spawn hostage_req}] call CBA_fnc_addEventHandler;
 	["place_convoy", {[(_this select 0), (_this select 1), (_this select 2), (_this select 3) , (_this select 4), (_this select 5), (_this select 6), (_this select 7), (_this select 8), (_this select 9), (_this select 10), (_this select 11), (_this select 12)] spawn place_convoy}] call CBA_fnc_addEventHandler;
 	["start_convoy", {[(_this select 0), (_this select 1)] execvm "mcc\general_scripts\convoy\start_convoy_execute.sqf";}] call CBA_fnc_addEventHandler;
 	["uav", {[(_this select 0), (_this select 1), (_this select 2)] spawn uav}] call CBA_fnc_addEventHandler;

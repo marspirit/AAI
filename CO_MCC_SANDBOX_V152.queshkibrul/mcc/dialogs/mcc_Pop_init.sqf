@@ -166,8 +166,8 @@ lbClear _comboBox;
 {
 	_displayname =  _x;
 	_index = _comboBox lbAdd _displayname;
-} foreach ["Infantry", "Car", "Armored", "Motorcycle", "Helicopter", "Fixed-wing", "Ship", "D.O.C", "Ammo", "ACE Ammo", "Fortifications", "Dead Bodies", "Furnitures", 
-			"Military", "Misc", "Signs", "Warfare"];
+} foreach ["Infantry", "Vehicles", "Tracked/Static", "Motorcycle", "Helicopter", "Fixed-wing", "Ship", "D.O.C", "Ammo", "ACE Ammo", "Fortifications", "Dead Bodies", "Furnitures", 
+			"Military", "Misc", "Signs", "Warfare", "Wrecks", "Fire (Only on 3D)"];
 _comboBox lbSetCurSel 0;	
 	
 //----------------------------------------------------------------------------------------------------------------------------------------------------------------------

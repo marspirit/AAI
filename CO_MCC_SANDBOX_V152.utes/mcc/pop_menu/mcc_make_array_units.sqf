@@ -121,19 +121,20 @@ for "_i" from 1 to (count _CfgVehicles - 1) do {
 	
 	//VKing making ammo spawnable
 	if ((toLower(_vehicleclass) == "ammo")) then
-	{
-		_type="LAND";
-		U_AMMO set[_u_ammo_idx,[_type,_cfgclass,mcc_sidename,_vehicleDisplayName]];
-		_u_ammo_idx = _u_ammo_idx+1;
-	};
+		{
+			_type="LAND";
+			U_AMMO set[_u_ammo_idx,[_type,_cfgclass,mcc_sidename,_vehicleDisplayName]];
+			_u_ammo_idx = _u_ammo_idx+1;
+		};
 	
 	//For separate menu for ACE stuff, problems with the length when combined into single menu, I think.
-	if (toLower(_vehicleclass) == "ace_ammunition" || toLower(_vehicleclass) == "ace_ammunitiontransportus" || toLower(_vehicleclass) == "ace_ammunitiontransportru")then
-	{
-		_type="LAND";
-		U_ACE_AMMO set[_u_ace_ammo_idx,[_type,_cfgclass,mcc_sidename,_vehicleDisplayName]];
-		_u_ace_ammo_idx = _u_ace_ammo_idx+1;
-	};
+	if (toLower(_vehicleclass) == "ace_ammunition" || toLower(_vehicleclass) == "ace_ammunitiontransportus" || toLower(_vehicleclass) == "ace_ammunitiontransportru"
+		|| toLower(_vehicleclass) == "ace_ammunition_rope" || toLower(_vehicleclass) == "ace_objects")then
+		{
+			_type="LAND";
+			U_ACE_AMMO set[_u_ace_ammo_idx,[_type,_cfgclass,mcc_sidename,_vehicleDisplayName]];
+			_u_ace_ammo_idx = _u_ace_ammo_idx+1;
+		};
   };
    // End VK edit
 

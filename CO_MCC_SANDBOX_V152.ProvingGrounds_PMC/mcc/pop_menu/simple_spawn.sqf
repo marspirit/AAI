@@ -44,4 +44,28 @@ switch (_type) do		//Which type do we want
 				_dummy setpos _pos;
 				_dummy setdir _dir;
 			};
+			
+			case "FIRE":	
+			{
+				_dummy = "ACE_Target_CInf" createvehicle _pos;
+				_dummy setpos _pos;
+				_dummy setpos _pos;
+				switch (_class) do		//what's burning baby?
+					{
+					   case "USBasicAmmunitionBox":	
+						{
+						[-2, {[_this,1.,time,false,false] spawn BIS_Effects_Burn}, _dummy] call CBA_fnc_globalExecute;
+						};
+						
+						case "USLaunchersBox":	
+						{
+						[-2, {[_this,5,time,false,false] spawn BIS_Effects_Burn}, _dummy] call CBA_fnc_globalExecute;
+						};
+						
+						case "USOrdnanceBox":	
+						{
+						[-2, {[_this,10,time,false,false] spawn BIS_Effects_Burn}, _dummy] call CBA_fnc_globalExecute;
+						};
+					};
+			};
 		};

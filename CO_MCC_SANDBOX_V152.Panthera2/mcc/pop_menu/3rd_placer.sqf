@@ -42,7 +42,7 @@ startLoadingScreen ["3D Placing","RscDisplayLoadMission"];
 
 _camera = BIS_CONTROL_CAM;
 if (isnil "BIS_CONTROL_CAM") then {
-	_camera = "camconstruct" camcreate [_pos select 0, _pos select 1,15];
+	_camera = "camconstruct" camcreate [_pos select 0, _pos select 1,((getpos player) select 2) +15];
 	_camera cameraeffect ["internal","back"];
 	_camera camPrepareFOV 0.900;
 	_camera campreparefocus [-1,-1];
@@ -67,6 +67,7 @@ showcinemaborder false;
 (uinamespace getvariable "MCC_3D_displayMain") displayseteventhandler ["MouseButtonUp",	"if !(isnil 'BIS_CONTROL_CAM_Handler') then {BIS_CONTROL_CAM_RMB = false; BIS_CONTROL_CAM_LMB = false;}"];
 (uinamespace getvariable "MCC_3D_displayMain") displayseteventhandler ["mousemoving",	"if !(isnil 'BIS_CONTROL_CAM_Handler') then {BIS_temp = ['mousemoving',_this,commandingmenu] spawn BIS_CONTROL_CAM_Handler; BIS_temp = nil;}"];
 (uinamespace getvariable "MCC_3D_displayMain") displayseteventhandler ["mouseholding",	"if !(isnil 'BIS_CONTROL_CAM_Handler') then {BIS_temp = ['mouseholding',_this,commandingmenu] spawn BIS_CONTROL_CAM_Handler; BIS_temp = nil;}"];
+(uinamespace getvariable "MCC_3D_displayMain") displayseteventhandler ["MouseZChanged",	"if !(isnil 'BIS_CONTROL_CAM_Handler') then {BIS_temp = ['MouseZChanged',_this,commandingmenu] spawn BIS_CONTROL_CAM_Handler; BIS_temp = nil;}"];
 
 BIS_CONTROL_CAM_keys = [];
 
@@ -84,6 +85,9 @@ camusenvg _nvgstate;
 _logic setvariable ["MCC_3D_nvg",_nvgstate];
 
 Object3D = preview3DClass createvehicle (screentoworld [0.5,0.5]);	//move the unit	
+dummyObject =  "Baseball" createvehicle (getpos Object3D);
+Object3D enableSimulation false;
+z3DHight = (getpos dummyObject) select 2;
 
 debugLog format ["MCC_3D cam handler %1",_logic];
 //--- This block is pretty important
@@ -92,7 +96,7 @@ if !(isnil "BIS_CONTROL_CAM_Handler") exitwith {hint "BIS_CONTROL_CAM_Handler is
 BIS_CONTROL_CAM_Handler =
 	{
 	private ["_mode", "_input", "_camera", "_logic", "_terminate", "_keysCancel", "_keysUpObj", "_keysDownObj", "_keysUp", "_keysDown" ,"_keysShift"
-			,"_keysBanned", "_keyNightVision","_finished", "_keyplace","_objectPos","_objectDir"];
+			,"_keysBanned", "_keyNightVision","_finished", "_keyplace","_objectPos","_objectDir","_keyalt"];
 			
 	_mode = _this select 0;
 	_input = _this select 1;
@@ -111,14 +115,16 @@ BIS_CONTROL_CAM_Handler =
 	_keysBanned		= [1];
 	_keyNightVision	= actionKeys "NightVision";
 	_keyplace 		= [57];
-
+	_keyalt 		= [56];
 
 	//--- Mouse Moving/Holding
-	if (_mode in ["mousemoving","mouseholding"]) then 
+	if (_mode in ["mousemoving", "mouseholding"]) then 
 		{
 		_key = _input select 1;
-		BIS_CONTROL_CAM camsettarget Object3D;
+		BIS_CONTROL_CAM camsettarget dummyObject;
 		BIS_CONTROL_CAM camcommit 0;
+		Object3D setpos [getpos dummyObject select 0, getpos dummyObject select 1, z3DHight];
+		Object3D setdir (getdir dummyObject);
 		};
 
 	//--- Key DOWN
@@ -136,12 +142,22 @@ BIS_CONTROL_CAM_Handler =
 			};
 		//Place
 		if (_key in _keyplace) then {_finished = true;hint "Object placed"};
+		};
+		
+	if (_mode == "MouseZChanged") then
+		{
+		_key = _input select 1;
 		//raise
-		if (_key in _keysUpObj) then 
+		if (_key < 0) then 
 			{
-			BIS_CONTROL_CAM camPrepareTarget [(getpos Object3D) select 0,(getpos Object3D) select 1,((getpos Object3D) select 1)+1];
-			BIS_CONTROL_CAM camPreload 0;
-			BIS_CONTROL_CAM camcommit 0;
+			z3DHight =z3DHight + 0.5;
+			Object3D setpos [getpos Object3D select 0, getpos Object3D select 1,z3DHight];
+			};
+		//Lower	
+		if (_key > 0) then 
+			{
+			z3DHight =z3DHight - 0.5;
+			Object3D setpos [getpos Object3D select 0, getpos Object3D select 1,z3DHight];
 			};
 		};
 		
@@ -162,13 +178,14 @@ BIS_CONTROL_CAM_Handler =
 		camdestroy BIS_CONTROL_CAM;
 		BIS_CONTROL_CAM = nil;
 		deletevehicle Object3D;
+		deletevehicle dummyObject;
 		player setvariable ["3D_isRuning",nil];
 		};
 	
 	//--- Finished
 	if (_finished) then 
 		{
-		_objectPos = getpos Object3D;
+		_objectPos = [getpos Object3D select 0, getpos Object3D select 1, z3DHight] ;
 		_objectDir = getdir Object3D;
 		MCC3DgotValue = true; 
 		MCC3DValue = [_objectPos,_objectDir]; 

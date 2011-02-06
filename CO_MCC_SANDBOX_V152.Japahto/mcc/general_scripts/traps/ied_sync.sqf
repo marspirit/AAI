@@ -5,8 +5,8 @@ _pointA = _this select 0;
 _pointB = _this select 1; 
 _IEDLineName = _this select 2; 
 
-_nearObjectsA = pointA nearObjects ["ACE_Target_CInf",20];
-_nearObjectsB = pointB nearObjects ["ACE_Target_CInf",20];
+_nearObjectsA = pointA nearObjects ["ACE_Target_CInf",50];
+_nearObjectsB = pointB nearObjects ["ACE_Target_CInf",50];
 if (count _nearObjectsA>0 && count _nearObjectsB >0) then
 			{
 			waituntil {(_nearObjectsB select 0) getvariable "iedTrigered"}; 

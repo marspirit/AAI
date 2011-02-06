@@ -333,7 +333,7 @@ convoyHVTIndex = 0;
 convoyHVTCarIndex = 0;
 
 artySiteArray = [["Tent",0], ["Mobile USMC",1], ["Mobile CDF",2], ["Mobile Russians",3], ["Mobile Insurgent",4], ["Mobile Guerilla",5]];
-uavSiteArray = [["Static West-UAV",0], ["Static West-ULB",1], ["Static East-UAV",2], ["Mobile West-UAV",3], ["Mobile West-ULB",4], ["Mobile East-UAV",5],["Backpack West-UAV",6],["Backpack West-ULB",8],["Backpack East-UAV",10]];
+uavSiteArray = [["Static West-UAV",0], ["Static East-UAV",2], ["Mobile West-UAV",3], ["Apache AH64 + ULB",4], ["Mobile East-UAV",5],["Backpack West-UAV",6],["Backpack West-ULB",8],["Backpack East-UAV",10]];
 artilleryTypeArray = [["HE 105mm","ARTY_Sh_105_HE"], ["HE 85mm","Sh_85_HE"], ["HE 40mm","G_40mm_HE"], ["WP","ARTY_Sh_105_WP"], ["Smoke White","Smokeshell"], ["Smoke Green","SmokeShellGreen"], ["Smoke Red","SmokeShellRed"], ["Flare White","F_40mm_White"], ["Flare Green","F_40mm_Green"], ["Flare Red","F_40mm_Red"],
  ["Tactical Nuke(0.3k)","Tactical Nuke(0.3k)"], ["Tactical Nuke(1.5k)","Tactical Nuke(1.5k)"], ["Tactical Nuke(5.0k)","Tactical Nuke(5.0k)"], ["Air Burst(0.3k)","Air Burst(0.3k)"], ["Air Burst(1.5k)","Air Burst(1.5k)"], ["Air Burst(5.0k)","Air Burst(5.0k)"]];
 artillerySpreadArray = [["On-target",0], ["Precise",50], ["Tight",100], ["Wide",200]];
@@ -398,6 +398,7 @@ U_MILITARY				= [];
 U_MISC					= [];
 U_SIGHNS				= [];
 U_WARFARE				= [];
+U_WRECKS				= [];
 _nul=[] execVM "mcc\pop_menu\mcc_make_array_obj.sqf";
 
 //Lets create our MCC subject in the diary

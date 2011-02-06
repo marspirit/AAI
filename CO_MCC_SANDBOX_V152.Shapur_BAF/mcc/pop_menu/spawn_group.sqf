@@ -180,6 +180,18 @@ if (_group ==1) then //Unit
 				_groupArray = U_WARFARE;
 				mcc_spawntype="AMMO";
 			};
+			
+			case 17:	//Wrecks
+			{
+				_groupArray = U_WRECKS;
+				mcc_spawntype="AMMO";
+			};
+			
+			case 18:	//fire
+			{
+				_groupArray = [[0,"USBasicAmmunitionBox",0,0],[0,"USLaunchersBox",0,0],[0,"USOrdnanceBox",0,0]];
+				mcc_spawntype="FIRE";
+			};
 		};
 	mcc_classtype = (_groupArray select (lbCurSel UNIT_CLASS)) select 0;
 	mcc_spawnname = (_groupArray select (lbCurSel UNIT_CLASS)) select 1;
@@ -238,6 +250,13 @@ if (!_3d) then
 			};
 		sleep 0.1;
 		};
+		mcc_isnewzone = false;	//reset stuff
+		mcc_grouptype = "";
+		mcc_spawntype = "";
+		mcc_classtype = "";
+		mcc_spawnname = "";
+		mcc_spawnfaction ="";
+		mcc_resetmissionmaker = false;
 	};
 
 
