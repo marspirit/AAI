@@ -1,0 +1,510 @@
+// ============================================================================================
+
+// F2 - Mission Header
+// Credits: Please see the F2 online manual (http://www.ferstaberinde.com/f2/en/)
+
+class Header
+{
+	gameType = Coop;
+	minPlayers = 1;
+	maxPlayers = 90;
+};
+
+// ============================================================================================
+
+// F2A2 - Respawn Settings
+// Credits: Please see the F2 online manual (http://www.ferstaberinde.com/f2/en/)
+
+respawn      ="BASE";
+respawndelay = 10;
+disabledAI   = true;
+
+// ============================================================================================
+
+// F2 - JIP Reinforcement Options
+// Credits: Please see the F2 online manual (http://www.ferstaberinde.com/f2/en/)
+
+//#include "f\common\f_JIP_kitpicker.h"
+//#include "f\common\f_JIP_grppicker.h"
+
+// ============================================================================================
+
+class Params
+{
+
+// ============================================================================================
+
+// F2 - Debug Mode
+// Credits: Please see the F2 online manual (http://www.ferstaberinde.com/f2/en/)
+// WARNING: DO NOT DISABLE THIS COMPONENT
+
+        class f_param_debugMode
+        {
+                title = "$STR_f_param_debugMode";
+                values[] = {0,1};
+                texts[] = {"Off","On"};
+                default = 0;
+                code = "f_var_debugMode = %1";
+        }; 
+
+// ============================================================================================
+// ============================================================================================
+
+// F2 - Layouts
+// WARNING: DO NOT DISABLE THIS COMPONENT
+
+        class f_param_layout_plthq
+        {
+                title = "Gear Layout PltHQ";
+                values[] = {0,1,2,3};
+                texts[] = {"Standard","Scoped","Paratrooper","CQB"};
+                default = 0;
+                code = "f_var_layout_plthq = %1;publicVariable ""f_var_layout_plthq"";";
+        }; 
+
+        class f_param_layout_alpha
+        {
+                title = "Gear Layout Alpha";
+                values[] = {0,1,2,3};
+                texts[] = {"Standard","Scoped","Paratrooper","CQB"};
+                default = 0;
+                code = "f_var_layout_alpha = %1;publicVariable ""f_var_layout_alpha"";";
+        }; 
+		
+		class f_param_layout_bravo
+        {
+                title = "Gear Layout Bravo";
+                values[] = {0,1,2,3};
+                texts[] = {"Standard","Scoped","Paratrooper","CQB"};
+                default = 0;
+                code = "f_var_layout_bravo = %1;publicVariable ""f_var_layout_bravo"";";
+        }; 
+
+        class f_param_layout_charlie
+        {
+                title = "Gear Layout Charlie";
+                values[] = {0,1,2,3};
+                texts[] = {"Standard","Scoped","Paratrooper","CQB"};
+                default = 0;
+                code = "f_var_layout_charlie = %1;publicVariable ""f_var_layout_charlie"";";
+        }; 
+		
+		class f_param_layout_sf1
+        {
+                title = "Gear Layout Sf1";
+                values[] = {0,1,2,3,4};
+                texts[] = {"Standard","Scoped","Paratrooper","CQB","Modern"};
+                default = 0;
+                code = "f_var_layout_sf1 = %1;publicVariable ""f_var_layout_sf1"";";
+        }; 
+
+        class f_param_layout_sf2
+        {
+                title = "Gear Layout Sf2";
+                values[] = {0,1,2,3,4};
+                texts[] = {"Standard","Scoped","Paratrooper","CQB","Modern"};
+                default = 0;
+                code = "f_var_layout_sf2 = %1;publicVariable ""f_var_layout_sf2"";";
+        }; 
+		
+		class f_param_layout
+        {
+                title = "Gear Layout Rest";
+                values[] = {0,1,2,3};
+                texts[] = {"Standard","Scoped","Paratrooper","CQB"};
+                default = 0;
+                code = "f_var_layout = %1;publicVariable ""f_var_layout"";";
+        }; 
+//=======================Arty Params============================
+		class f_param_arty_bon
+        {
+                title = "Number of Artillery round availabe per hour";
+                values[] = {0,5,10,20,30};
+                texts[] = {"0","5","10","20","30"};
+                default = 5;
+                code = "f_param_arty = %1; publicVariable ""f_param_arty"";";
+        }; 
+
+// ============================================================================================
+
+// F2 - Mission Conditions Selector
+// Credits: Please see the F2 online manual (http://www.ferstaberinde.com/f2/en/)
+
+        class f_param_timeOfDay
+        {
+                title = "$STR_f_param_timeOfDay";
+                values[] = {0,1,2,3,4,5,6,7};
+                texts[] = {$STR_f_param_timeOfDay_Option0,$STR_f_param_timeOfDay_Option1,$STR_f_param_timeOfDay_Option2,$STR_f_param_timeOfDay_Option3,$STR_f_param_timeOfDay_Option4,$STR_f_param_timeOfDay_Option5,$STR_f_param_timeOfDay_Option6,$STR_f_param_timeOfDay_Option7};
+                default = 3;
+                code = "f_param_timeOfDay = %1";
+        };   
+        class f_param_weather
+		{
+		title = "$STR_f_param_weather";
+		values[] = {0,1,2,3,4};
+		texts[] = {$STR_f_param_weather_Option0,$STR_f_param_weather_Option1,$STR_f_param_weather_Option2,$STR_f_param_weather_Option3,$STR_f_param_weather_Option4};
+		default = 0;
+		code = "f_param_weather = %1";
+        };
+		
+//=======================Undercover Agents============================
+		class f_param_undercover
+        {
+                title = "Undercover agents detected by:";
+                values[] = {0,1};
+                texts[] = {"East","West"};
+                default = 0;
+                code = "f_param_undercover = %1; publicVariable ""f_param_undercover"";";
+        }; 
+		
+//=======================Resistance relations============================
+		class f_param_resistance
+        {
+                title = "Resistance hostile to:";
+                values[] = {0,1,2};
+                texts[] = {"All","East","West"};
+                default = 0;
+                code = "f_param_resistance = %1; publicVariable ""f_param_resistance"";";
+        }; 
+// ============================================================================================
+
+// F2 - AI Skill Selector (coop)
+// Credits: Please see the F2 online manual (http://www.ferstaberinde.com/f2/en/)
+
+//	class f_param_AISkill_Friendly
+//	{
+//		title = "$STR_f_param_AISkill_Friendly";
+//		values[] = {0,1,2,3};
+//		texts[] = {$STR_f_param_AISkill_Option0,$STR_f_param_AISkill_Option1,$STR_f_param_AISkill_Option2,$STR_f_param_AISkill_Option3};
+//		default = 2;
+//		code = "f_param_AISkill_Friendly = %1";
+//	};
+//	class f_param_AISkill_Enemy
+//	{
+//		title = "$STR_f_param_AISkill_Enemy";
+//		values[] = {0,1,2,3};
+//		texts[] = {$STR_f_param_AISkill_Option0,$STR_f_param_AISkill_Option1,$STR_f_param_AISkill_Option2,$STR_f_param_AISkill_Option3};
+//		default = 2;
+//		code = "f_param_AISkill_Enemy = %1";
+//	};
+
+// ============================================================================================
+
+// F2 - AI Skill Selector (A&D)
+// Credits: Please see the F2 online manual (http://www.ferstaberinde.com/f2/en/)
+
+//	class f_param_AISkill_BLUFOR
+//	{
+//		title = "$STR_f_param_AISkill_BLUFOR";
+//		values[] = {0,1,2,3};
+//		texts[] = {$STR_f_param_AISkill_Option0,$STR_f_param_AISkill_Option1,$STR_f_param_AISkill_Option2,$STR_f_param_AISkill_Option3};
+//		default = 2;
+//		code = "f_param_AISkill_BLUFOR = %1";
+//	};
+//	class f_param_AISkill_OPFOR
+//	{
+//		title = "$STR_f_param_AISkill_OPFOR";
+//		values[] = {0,1,2,3};
+//		texts[] = {$STR_f_param_AISkill_Option0,$STR_f_param_AISkill_Option1,$STR_f_param_AISkill_Option2,$STR_f_param_AISkill_Option3};
+//		default = 2;
+//		code = "f_param_AISkill_OPFOR = %1";
+//	};
+
+// ============================================================================================
+
+// F2 - Norrin's Revive Respawn (Part 1)
+// Credits: Please see the F2 online manual (http://www.ferstaberinde.com/f2/en/)
+
+//	class f_param_lives
+//	{
+//		title = "Number of Lives:";
+//		values[] = {2000,1000,20,10,7,5};
+//		texts[] = {"No Revive","Infinite - Cadet","20 - Easy ","10 - Normal","7  - Hard","5  - Extreme"};
+//		default = 10;
+//		code = "f_param_lives = %1";
+//	};
+        
+// ============================================================================================
+
+};
+
+
+// ============================================================================================
+
+// F2 - Kegetys Spectator Script
+// Credits: Please see the F2 online manual (http://www.ferstaberinde.com/f2/en/)
+
+//#include "f\common\f_spect\spectating.hpp"
+
+// ============================================================================================
+
+// F2 - Norrin's Revive Respawn (Part 2)
+// Credits: Please see the F2 online manual (http://www.ferstaberinde.com/f2/en/)
+
+// disabledAI = 0;
+// #include "f\revive\dialogs\revive.cpp"
+
+// ============================================================================================
+
+// F2 - Gear Snippets
+// Credits: Please see the F2 online manual (http://www.ferstaberinde.com/f2/en/)
+
+// #include "f\common\f_gearSnippets.hpp"
+
+// ============================================================================================
+
+//class RscTitles {
+
+// ============================================================================================
+
+// F2 - Name Tags
+// Credits: Please see the F2 online manual (http://www.ferstaberinde.com/f2/en/)
+
+// #include "f\common\f_recog\recogOverlay.hpp"
+
+// ============================================================================================
+
+//};
+
+// ============================================================================================
+// Desc: Dialog Template & Framework
+//-----------------------------------------------------------------------------
+// Note: ordering of these #include statements is important.
+
+#include "mcc\Dialogs\mcc_DialogColorConstants.hpp"
+#include "mcc\Dialogs\mcc_DialogColorScheme.hpp"
+#include "mcc\Dialogs\mcc_DialogControlClasses.hpp"
+#include "mcc\Dialogs\mcc_PopupMenu.hpp"
+#include "mcc\Dialogs\mcc_extrasmenu.hpp"
+#include "mcc\Dialogs\mcc_extrasmenu2.hpp"
+#include "mcc\Dialogs\mcc_extrasmenu3.hpp"
+#include "mcc\Dialogs\mcc_3d_dialog.hpp"
+
+//===========================Bon Artilery=================================
+#include "bon_artillery\dialog\Common.hpp"
+#include "bon_artillery\dialog\Artillery.hpp"
+
+//==========================Sounds========================================
+class CfgSounds
+{
+	sounds[] = {Landing,suicide};
+		class landing
+		{
+		name = "Landing";
+		sound[] = {"Sounds\Landing.ogg", 1, 1};
+		titles[] = {0, ""};
+		};
+		class suicide
+		{
+		name = "suicide";
+		sound[] = {"Sounds\suicide.ogg", 1, 1};
+		titles[] = {0, ""};
+		};
+		class dontshot
+		{
+		name = "dontshot";
+		sound[] = {"Sounds\dont_shot.ogg", 1, 1};
+		titles[] = {0, ""};
+		};
+		class enough
+		{
+		name = "enough";
+		sound[] = {"Sounds\enough.ogg", 1, 1};
+		titles[] = {0, ""};
+		};
+		class hands
+		{
+		name = "hands";
+		sound[] = {"Sounds\hands.ogg", 1, 1};
+		titles[] = {0, ""};
+		};
+		class dontmove
+		{
+		name = "dontmove";
+		sound[] = {"Sounds\dont_move.ogg", 1, 1};
+		titles[] = {0, ""};
+		};
+		class hell
+		{
+		name = "hell";
+		sound[] = {"Sounds\hell.ogg", 1, 1};
+		titles[] = {0, ""};
+		};
+		class alone
+		{
+		name = "alone";
+		sound[] = {"Sounds\alone.ogg", 1, 1};
+		titles[] = {0, ""};
+		};
+		class pig
+		{
+		name = "pig";
+		sound[] = {"Sounds\pig.ogg", 1, 1};
+		titles[] = {0, ""};
+		};
+		class disarm1
+		{
+		name = "disarm1";
+		sound[] = {"Sounds\disarm1.ogg", 1, 1};
+		titles[] = {0, ""};
+		};
+		class disarm2
+		{
+		name = "disarm2";
+		sound[] = {"Sounds\disarm2.ogg", 1, 1};
+		titles[] = {0, ""};
+		};
+		class disarm3
+		{
+		name = "disarm3";
+		sound[] = {"Sounds\disarm3.ogg", 1, 1};
+		titles[] = {0, ""};
+		};
+		class disarm4
+		{
+		name = "disarm4";
+		sound[] = {"Sounds\disarm4.ogg", 1, 1};
+		titles[] = {0, ""};
+		};
+		class disarmfail1
+		{
+		name = "disarmfail1";
+		sound[] = {"Sounds\disarmfail1.ogg", 1, 1};
+		titles[] = {0, ""};
+		};
+		class disarmfail2
+		{
+		name = "disarmfail2";
+		sound[] = {"Sounds\disarmfail2.ogg", 1, 1};
+		titles[] = {0, ""};
+		};
+		class disarmfail3
+		{
+		name = "disarmfail3";
+		sound[] = {"Sounds\disarmfail3.ogg", 1, 1};
+		titles[] = {0, ""};
+		};
+		class disarmcrit1
+		{
+		name = "disarmcrit1";
+		sound[] = {"Sounds\disarmcrit1.ogg", 1, 1};
+		titles[] = {0, ""};
+		};
+		class disarmcrit2
+		{
+		name = "disarmcrit2";
+		sound[] = {"Sounds\disarmcrit2.ogg", 1, 1};
+		titles[] = {0, ""};
+		};
+		//====================================Evac sounds===============================
+		class Launch
+		{
+		name = "Launch";
+		sound[] = {"Sounds\Launch.ogg", 1, 1};
+		titles[] = {0, ""};
+		};
+		class going_down
+		{
+		name = "going_down";
+		sound[] = {"Sounds\going_down.ogg", 1, 1};
+		titles[] = {0, ""};
+		};
+		//================================Arti sound================================
+		class bon_Shell_In_v01 {
+		name = "bon_Shell_In_v01";
+		sound[] = {"\bon_artillery\sounds\bon_Shell_In_v01.wss", db-0, 1};
+		titles[] = {};
+		};
+		class bon_Shell_In_v02 {
+		name = "bon_Shell_In_v02";
+		sound[] = {"\bon_artillery\sounds\bon_Shell_In_v02.wss", db-0, 1};
+		titles[] = {};
+		};
+		class bon_Shell_In_v03 {
+		name = "bon_Shell_In_v03";
+		sound[] = {"\bon_artillery\sounds\bon_Shell_In_v03.wss", db-0, 1};
+		titles[] = {};
+		};
+		class bon_Shell_In_v04 {
+		name = "bon_Shell_In_v04";
+		sound[] = {"\bon_artillery\sounds\bon_Shell_In_v04.wss", db-0, 1};
+		titles[] = {};
+		};
+		class bon_Shell_In_v05 {
+		name = "bon_Shell_In_v05";
+		sound[] = {"\bon_artillery\sounds\bon_Shell_In_v05.wss", db-0, 1};
+		titles[] = {};
+		};
+		class bon_Shell_In_v06 { 
+		name = "bon_Shell_In_v06";
+		sound[] = {"\bon_artillery\sounds\bon_Shell_In_v06.wss", db-0, 1};
+		titles[] = {};
+		};
+		class bon_Shell_In_v07 {
+		name = "bon_Shell_In_v07";
+		sound[] = {"\bon_artillery\sounds\bon_Shell_In_v07.wss", db-0, 1};
+		titles[] = {};
+		};
+		//================================Arti observer sounds================================
+		class req_unit
+		{
+		name = "req_unit";
+		sound[] = {"Sounds\req_unit.ogg", db-0, 1};
+		titles[] = {0, ""};
+		};
+		class req_art
+		{
+		name = "req_art";
+		sound[] = {"Sounds\req_art.ogg", db-0, 1};
+		titles[] = {0, ""};
+		};
+		class request
+		{
+		name = "request";
+		sound[] = {"Sounds\request.ogg", db-0, 1};
+		titles[] = {0, ""};
+		};
+		class confirm_art
+		{
+		name = "confirm_art";
+		sound[] = {"Sounds\confirm_art.ogg", db-0, 1};
+		titles[] = {0, ""};
+		};
+		class shot_art
+		{
+		name = "shot_art";
+		sound[] = {"Sounds\shot_art.ogg", db-0, 1};
+		titles[] = {0, ""};
+		};
+		class shot_unit
+		{
+		name = "shot_unit";
+		sound[] = {"Sounds\shot_unit.ogg", db-0, 1};
+		titles[] = {0, ""};
+		};
+		class splash_art
+		{
+		name = "splash_art";
+		sound[] = {"Sounds\splash_art.ogg", db-0, 1};
+		titles[] = {0, ""};
+		};
+		class splash_unit
+		{
+		name = "splash_unit";
+		sound[] = {"Sounds\splash_unit.ogg", db-0, 1};
+		titles[] = {0, ""};
+		};
+		class end_mission
+		{
+		name = "end_mission";
+		sound[] = {"Sounds\end_mission.ogg", db-0, 1};
+		titles[] = {0, ""};
+		};
+		class ICE_null
+		{
+		name = "";
+		sound[] = {"", 1, 1};
+		titles[] = {0};
+		};
+};
+		
