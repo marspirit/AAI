@@ -3827,7 +3827,7 @@ class Mission
 					rank="LIEUTENANT";
 					skill=0.59999996;
 					text="UnitUSMC_SF1_SF1L";
-					init="GrpUSMC_SF1 = group this; nul = [""sfl"",this] execVM ""f\common\@ShackTac_assignGear_sf1.sqf"";_null = this addaction [""Add/Remove Silencer"", ""mcc\general_scripts\silencer\silencer.sqf""];";
+					init="GrpUSMC_SF1 = group this; nul = [""sfl"",this] execVM ""f\common\@ShackTac_assignGear_sf1.sqf"";_null =  this addaction [""Add/Remove Silencer"", ""mcc\general_scripts\silencer\silencer.sqf"","""",6,false,true,"""",""_target == _this"" ];";
 					description="USMC SF1 - Leader";
 				};
 				class Item1
@@ -3841,7 +3841,7 @@ class Mission
 					rank="SERGEANT";
 					skill=0.46666664;
 					text="UnitUSMC_SF1_SFHg";
-					init="GrpUSMC_SF1 = group this; nul = [""sfhg"",this] execVM ""f\common\@ShackTac_assignGear_sf1.sqf"";_null = this addaction [""Add/Remove Silencer"", ""mcc\general_scripts\silencer\silencer.sqf""];;";
+					init="GrpUSMC_SF1 = group this; nul = [""sfhg"",this] execVM ""f\common\@ShackTac_assignGear_sf1.sqf"";_null =  this addaction [""Add/Remove Silencer"", ""mcc\general_scripts\silencer\silencer.sqf"","""",6,false,true,"""",""_target == _this"" ];;";
 					description="USMC SF1 - Heavy gunner";
 				};
 				class Item2
@@ -3855,7 +3855,7 @@ class Mission
 					rank="SERGEANT";
 					skill=0.46666664;
 					text="UnitUSMC_SF1R";
-					init="GrpUSMC_SF1 = group this; nul = [""sfg"",this] execVM ""f\common\@ShackTac_assignGear_sf1.sqf"";_null = this addaction [""Add/Remove Silencer"", ""mcc\general_scripts\silencer\silencer.sqf""];";
+					init="GrpUSMC_SF1 = group this; nul = [""sfg"",this] execVM ""f\common\@ShackTac_assignGear_sf1.sqf"";_null =  this addaction [""Add/Remove Silencer"", ""mcc\general_scripts\silencer\silencer.sqf"","""",6,false,true,"""",""_target == _this"" ];";
 					description="USMC SF1 - Radioman";
 				};
 				class Item3
@@ -3869,7 +3869,7 @@ class Mission
 					rank="SERGEANT";
 					skill=0.46666664;
 					text="UnitUSMC_SF1_SFM";
-					init="GrpUSMC_SF1 = group this; nul = [""sfm"",this] execVM ""f\common\@ShackTac_assignGear_sf1.sqf"";_null = this addaction [""Add/Remove Silencer"", ""mcc\general_scripts\silencer\silencer.sqf""];";
+					init="GrpUSMC_SF1 = group this; nul = [""sfm"",this] execVM ""f\common\@ShackTac_assignGear_sf1.sqf"";_null =  this addaction [""Add/Remove Silencer"", ""mcc\general_scripts\silencer\silencer.sqf"","""",6,false,true,"""",""_target == _this"" ];";
 					description="USMC SF1 - Marksman";
 				};
 				class Item4
@@ -3883,7 +3883,7 @@ class Mission
 					rank="SERGEANT";
 					skill=0.46666664;
 					text="UnitUSMC_SF1_SFS";
-					init="GrpUSMC_SF1 = group this; nul = [""sfs"",this] execVM ""f\common\@ShackTac_assignGear_sf1.sqf"";_null = this addaction [""Add/Remove Silencer"", ""mcc\general_scripts\silencer\silencer.sqf""];";
+					init="GrpUSMC_SF1 = group this; nul = [""sfs"",this] execVM ""f\common\@ShackTac_assignGear_sf1.sqf"";_null =  this addaction [""Add/Remove Silencer"", ""mcc\general_scripts\silencer\silencer.sqf"","""",6,false,true,"""",""_target == _this"" ];";
 					description="USMC SF1 - Saboteur";
 				};
 				class Item5
@@ -3897,7 +3897,7 @@ class Mission
 					rank="SERGEANT";
 					skill=0.46666664;
 					text="UnitUSMC_SF1_SFC";
-					init="GrpUSMC_SF1 = group this; nul = [""sfc"",this] execVM ""f\common\@ShackTac_assignGear_sf1.sqf"";_null = this addaction [""Add/Remove Silencer"", ""mcc\general_scripts\silencer\silencer.sqf""];";
+					init="GrpUSMC_SF1 = group this; nul = [""sfc"",this] execVM ""f\common\@ShackTac_assignGear_sf1.sqf"";_null =  this addaction [""Add/Remove Silencer"", ""mcc\general_scripts\silencer\silencer.sqf"","""",6,false,true,"""",""_target == _this"" ];";
 					description="USMC SF1 - Corpsman";
 				};
 			};
@@ -3920,7 +3920,7 @@ class Mission
 					rank="LIEUTENANT";
 					skill=0.59999996;
 					text="UnitUSMC_SF2_SF1L";
-					init="GrpUSMC_SF2 = group this; nul = [""sfl"",this] execVM ""f\common\@ShackTac_assignGear_sf2.sqf"";_null = this addaction [""Add/Remove Silencer"", ""mcc\general_scripts\silencer\silencer.sqf""];";
+					init="GrpUSMC_SF2 = group this; nul = [""sfl"",this] execVM ""f\common\@ShackTac_assignGear_sf2.sqf"";_null =  this addaction [""Add/Remove Silencer"", ""mcc\general_scripts\silencer\silencer.sqf"","""",6,false,true,"""",""_target == _this"" ];";
 					description="USMC SF2 - Leader";
 				};
 				class Item1
@@ -3934,7 +3934,7 @@ class Mission
 					rank="SERGEANT";
 					skill=0.46666664;
 					text="UnitUSMC_SF2_SFHg";
-					init="GrpUSMC_SF2 = group this; nul = [""sfhg"",this] execVM ""f\common\@ShackTac_assignGear_sf2.sqf"";_null = this addaction [""Add/Remove Silencer"", ""mcc\general_scripts\silencer\silencer.sqf""];";
+					init="GrpUSMC_SF2 = group this; nul = [""sfhg"",this] execVM ""f\common\@ShackTac_assignGear_sf2.sqf"";_null =  this addaction [""Add/Remove Silencer"", ""mcc\general_scripts\silencer\silencer.sqf"","""",6,false,true,"""",""_target == _this"" ];";
 					description="USMC SF2 - Heavy gunner";
 				};
 				class Item2
@@ -3948,7 +3948,7 @@ class Mission
 					rank="SERGEANT";
 					skill=0.46666664;
 					text="UnitUSMC_SF2R";
-					init="GrpUSMC_SF2 = group this; nul = [""sfg"",this] execVM ""f\common\@ShackTac_assignGear_sf2.sqf"";_null = this addaction [""Add/Remove Silencer"", ""mcc\general_scripts\silencer\silencer.sqf""];";
+					init="GrpUSMC_SF2 = group this; nul = [""sfg"",this] execVM ""f\common\@ShackTac_assignGear_sf2.sqf"";_null =  this addaction [""Add/Remove Silencer"", ""mcc\general_scripts\silencer\silencer.sqf"","""",6,false,true,"""",""_target == _this"" ];";
 					description="USMC SF2 - Radioman";
 				};
 				class Item3
@@ -3962,7 +3962,7 @@ class Mission
 					rank="SERGEANT";
 					skill=0.46666664;
 					text="UnitUSMC_SF2_SFM";
-					init="GrpUSMC_SF2 = group this; nul = [""sfm"",this] execVM ""f\common\@ShackTac_assignGear_sf2.sqf"";_null = this addaction [""Add/Remove Silencer"", ""mcc\general_scripts\silencer\silencer.sqf""];";
+					init="GrpUSMC_SF2 = group this; nul = [""sfm"",this] execVM ""f\common\@ShackTac_assignGear_sf2.sqf"";_null =  this addaction [""Add/Remove Silencer"", ""mcc\general_scripts\silencer\silencer.sqf"","""",6,false,true,"""",""_target == _this"" ];";
 					description="USMC SF2 - Marksman";
 				};
 				class Item4
@@ -3976,7 +3976,7 @@ class Mission
 					rank="SERGEANT";
 					skill=0.46666664;
 					text="UnitUSMC_SF2_SFS";
-					init="GrpUSMC_SF2 = group this; nul = [""sfs"",this] execVM ""f\common\@ShackTac_assignGear_sf2.sqf"";_null = this addaction [""Add/Remove Silencer"", ""mcc\general_scripts\silencer\silencer.sqf""];";
+					init="GrpUSMC_SF2 = group this; nul = [""sfs"",this] execVM ""f\common\@ShackTac_assignGear_sf2.sqf"";_null =  this addaction [""Add/Remove Silencer"", ""mcc\general_scripts\silencer\silencer.sqf"","""",6,false,true,"""",""_target == _this"" ];";
 					description="USMC SF2 - Saboteur";
 				};
 				class Item5
@@ -3990,7 +3990,7 @@ class Mission
 					rank="SERGEANT";
 					skill=0.46666664;
 					text="UnitUSMC_SF2_SFC";
-					init="GrpUSMC_SF2 = group this; nul = [""sfc"",this] execVM ""f\common\@ShackTac_assignGear_sf2.sqf"";_null = this addaction [""Add/Remove Silencer"", ""mcc\general_scripts\silencer\silencer.sqf""];";
+					init="GrpUSMC_SF2 = group this; nul = [""sfc"",this] execVM ""f\common\@ShackTac_assignGear_sf2.sqf"";_null =  this addaction [""Add/Remove Silencer"", ""mcc\general_scripts\silencer\silencer.sqf"","""",6,false,true,"""",""_target == _this"" ];";
 					description="USMC SF2 - Corpsman";
 				};
 			};
@@ -4587,7 +4587,7 @@ class Mission
 					rank="LIEUTENANT";
 					skill=0.67817551;
 					text="UnitRU_SF1L";
-					init="GrpRU_SF1 = group this; nul = [""sfl"",this] execVM ""f\common\@ShackTac_assignGear_sf1.sqf"";_null = this addaction [""Add/Remove Silencer"", ""mcc\general_scripts\silencer\silencer.sqf""];";
+					init="GrpRU_SF1 = group this; nul = [""sfl"",this] execVM ""f\common\@ShackTac_assignGear_sf1.sqf"";_null =  this addaction [""Add/Remove Silencer"", ""mcc\general_scripts\silencer\silencer.sqf"","""",6,false,true,"""",""_target == _this"" ];";
 					description="Russian SF1 - Leader";
 				};
 				class Item1
@@ -4601,7 +4601,7 @@ class Mission
 					rank="SERGEANT";
 					skill=0.62582558;
 					text="UnitRU_SF1Hg";
-					init="GrpRU_SF1 = group this; nul = [""sfhg"",this] execVM ""f\common\@ShackTac_assignGear_sf1.sqf"";_null = this addaction [""Add/Remove Silencer"", ""mcc\general_scripts\silencer\silencer.sqf""];";
+					init="GrpRU_SF1 = group this; nul = [""sfhg"",this] execVM ""f\common\@ShackTac_assignGear_sf1.sqf"";_null =  this addaction [""Add/Remove Silencer"", ""mcc\general_scripts\silencer\silencer.sqf"","""",6,false,true,"""",""_target == _this"" ];";
 					description="Russian SF1 - Heavy gunner";
 				};
 				class Item2
@@ -4615,7 +4615,7 @@ class Mission
 					rank="SERGEANT";
 					skill=0.60837549;
 					text="UnitRU_SF1R";
-					init="GrpRU_SF1 = group this; nul = [""sfg"",this] execVM ""f\common\@ShackTac_assignGear_sf1.sqf"";_null = this addaction [""Add/Remove Silencer"", ""mcc\general_scripts\silencer\silencer.sqf""];";
+					init="GrpRU_SF1 = group this; nul = [""sfg"",this] execVM ""f\common\@ShackTac_assignGear_sf1.sqf"";_null =  this addaction [""Add/Remove Silencer"", ""mcc\general_scripts\silencer\silencer.sqf"","""",6,false,true,"""",""_target == _this"" ];";
 					description="Russian SF1 - Radioman";
 				};
 				class Item3
@@ -4629,7 +4629,7 @@ class Mission
 					rank="SERGEANT";
 					skill=0.60255855;
 					text="UnitRU_SF1M";
-					init="GrpRU_SF1 = group this; nul = [""sfm"",this] execVM ""f\common\@ShackTac_assignGear_sf1.sqf"";_null = this addaction [""Add/Remove Silencer"", ""mcc\general_scripts\silencer\silencer.sqf""];";
+					init="GrpRU_SF1 = group this; nul = [""sfm"",this] execVM ""f\common\@ShackTac_assignGear_sf1.sqf"";_null =  this addaction [""Add/Remove Silencer"", ""mcc\general_scripts\silencer\silencer.sqf"","""",6,false,true,"""",""_target == _this"" ];";
 					description="Russian SF1 - Marksman";
 				};
 				class Item4
@@ -4643,7 +4643,7 @@ class Mission
 					rank="CORPORAL";
 					skill=0.53275853;
 					text="UnitRU_SF1S";
-					init="GrpRU_SF1 = group this; nul = [""sfs"",this] execVM ""f\common\@ShackTac_assignGear_sf1.sqf"";_null = this addaction [""Add/Remove Silencer"", ""mcc\general_scripts\silencer\silencer.sqf""];";
+					init="GrpRU_SF1 = group this; nul = [""sfs"",this] execVM ""f\common\@ShackTac_assignGear_sf1.sqf"";_null =  this addaction [""Add/Remove Silencer"", ""mcc\general_scripts\silencer\silencer.sqf"","""",6,false,true,"""",""_target == _this"" ];";
 					description="Russian SF1 - Saboteur";
 				};
 				class Item5
@@ -4657,7 +4657,7 @@ class Mission
 					rank="CORPORAL";
 					skill=0.63745874;
 					text="UnitRU_SF1C";
-					init="GrpRU_SF1 = group this; nul = [""sfc"",this] execVM ""f\common\@ShackTac_assignGear_sf1.sqf"";_null = this addaction [""Add/Remove Silencer"", ""mcc\general_scripts\silencer\silencer.sqf""];";
+					init="GrpRU_SF1 = group this; nul = [""sfc"",this] execVM ""f\common\@ShackTac_assignGear_sf1.sqf"";_null =  this addaction [""Add/Remove Silencer"", ""mcc\general_scripts\silencer\silencer.sqf"","""",6,false,true,"""",""_target == _this"" ];";
 					description="Russian SF1 - Corpsman";
 				};
 			};
@@ -4680,7 +4680,7 @@ class Mission
 					rank="LIEUTENANT";
 					skill=0.67817551;
 					text="UnitRU_SF2L";
-					init="GrpRU_SF2 = group this; nul = [""sfl"",this] execVM ""f\common\@ShackTac_assignGear_sf2.sqf"";_null = this addaction [""Add/Remove Silencer"", ""mcc\general_scripts\silencer\silencer.sqf""];";
+					init="GrpRU_SF2 = group this; nul = [""sfl"",this] execVM ""f\common\@ShackTac_assignGear_sf2.sqf"";_null =  this addaction [""Add/Remove Silencer"", ""mcc\general_scripts\silencer\silencer.sqf"","""",6,false,true,"""",""_target == _this"" ];";
 					description="Russian SF2 - Leader";
 				};
 				class Item1
@@ -4694,7 +4694,7 @@ class Mission
 					rank="SERGEANT";
 					skill=0.62582558;
 					text="UnitRU_SF2Hg";
-					init="GrpRU_SF2 = group this; nul = [""sfhg"",this] execVM ""f\common\@ShackTac_assignGear_sf2.sqf"";_null = this addaction [""Add/Remove Silencer"", ""mcc\general_scripts\silencer\silencer.sqf""];";
+					init="GrpRU_SF2 = group this; nul = [""sfhg"",this] execVM ""f\common\@ShackTac_assignGear_sf2.sqf"";_null =  this addaction [""Add/Remove Silencer"", ""mcc\general_scripts\silencer\silencer.sqf"","""",6,false,true,"""",""_target == _this"" ];";
 					description="Russian SF2 - Heavy gunner";
 				};
 				class Item2
@@ -4708,7 +4708,7 @@ class Mission
 					rank="SERGEANT";
 					skill=0.60837549;
 					text="UnitRU_SF2R";
-					init="GrpRU_SF2 = group this; nul = [""sfg"",this] execVM ""f\common\@ShackTac_assignGear_sf2.sqf"";_null = this addaction [""Add/Remove Silencer"", ""mcc\general_scripts\silencer\silencer.sqf""];";
+					init="GrpRU_SF2 = group this; nul = [""sfg"",this] execVM ""f\common\@ShackTac_assignGear_sf2.sqf"";_null =  this addaction [""Add/Remove Silencer"", ""mcc\general_scripts\silencer\silencer.sqf"","""",6,false,true,"""",""_target == _this"" ];";
 					description="Russian SF2 - Radioman";
 				};
 				class Item3
@@ -4722,7 +4722,7 @@ class Mission
 					rank="SERGEANT";
 					skill=0.60255855;
 					text="UnitRU_SF2M";
-					init="GrpRU_SF2 = group this; nul = [""sfm"",this] execVM ""f\common\@ShackTac_assignGear_sf2.sqf"";_null = this addaction [""Add/Remove Silencer"", ""mcc\general_scripts\silencer\silencer.sqf""];";
+					init="GrpRU_SF2 = group this; nul = [""sfm"",this] execVM ""f\common\@ShackTac_assignGear_sf2.sqf"";_null =  this addaction [""Add/Remove Silencer"", ""mcc\general_scripts\silencer\silencer.sqf"","""",6,false,true,"""",""_target == _this"" ];";
 					description="Russian SF2 - Marksman";
 				};
 				class Item4
@@ -4736,7 +4736,7 @@ class Mission
 					rank="CORPORAL";
 					skill=0.53275853;
 					text="UnitRU_SF2S";
-					init="GrpRU_SF2 = group this; nul = [""sfs"",this] execVM ""f\common\@ShackTac_assignGear_sf2.sqf"";_null = this addaction [""Add/Remove Silencer"", ""mcc\general_scripts\silencer\silencer.sqf""];";
+					init="GrpRU_SF2 = group this; nul = [""sfs"",this] execVM ""f\common\@ShackTac_assignGear_sf2.sqf"";_null =  this addaction [""Add/Remove Silencer"", ""mcc\general_scripts\silencer\silencer.sqf"","""",6,false,true,"""",""_target == _this"" ];";
 					description="Russian SF2 - Saboteur";
 				};
 				class Item5
@@ -4750,7 +4750,7 @@ class Mission
 					rank="CORPORAL";
 					skill=0.63745874;
 					text="UnitRU_SF2C";
-					init="GrpRU_SF2 = group this; nul = [""sfc"",this] execVM ""f\common\@ShackTac_assignGear_sf2.sqf"";_null = this addaction [""Add/Remove Silencer"", ""mcc\general_scripts\silencer\silencer.sqf""];";
+					init="GrpRU_SF2 = group this; nul = [""sfc"",this] execVM ""f\common\@ShackTac_assignGear_sf2.sqf"";_null =  this addaction [""Add/Remove Silencer"", ""mcc\general_scripts\silencer\silencer.sqf"","""",6,false,true,"""",""_target == _this"" ];";
 					description="Russian SF2 - Corpsman";
 				};
 			};
