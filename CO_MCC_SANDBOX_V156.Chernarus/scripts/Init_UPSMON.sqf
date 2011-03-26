@@ -30,7 +30,7 @@
 if (!isServer) exitWith {};
 
 //1=Enable or 0=disable debug. in debug could see a mark positioning de leader and another mark of the destinity of movement, very useful for editing mision
-KRON_UPS_Debug = 1;
+KRON_UPS_Debug = 0;
 
 //Time that lider wait until doing another movement, this time reduced dinamically under fire, and on new targets
 KRON_UPS_react = 60;
