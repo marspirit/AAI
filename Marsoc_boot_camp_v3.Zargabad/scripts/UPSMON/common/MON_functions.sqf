@@ -1,3 +1,51 @@
+ "Kiss my ass";		
+	};
+
+	if (_rnd > 20  && _rnd <= 40) then {
+		_npc setmimic "Agresive";	
+		_npc switchmove "CtsPercMstpSnonWnonDnon_idle33rejpaniVzadku";	
+		sleep 3;
+		_npc globalchat "Que te den";	
+	};
+	
+	if (_rnd > 40  && _rnd <= 60) then {
+		_npc setmimic "Agresive";
+		_npc switchmove "CtsPercMstpSnonWnonDnon_idle33rejpaniVzadku";	
+		sleep 1;
+		_npc globalchat "Fuck you";		
+	};
+	
+	if (_rnd > 60  && _rnd <= 80) then {
+		_npc setmimic "Agresive";
+		_npc switchmove "CtsPercMstpSnonWnonDnon_idle32podrbaniNanose";		
+		sleep 0.5;
+		_npc globalchat "Follow your mother";		
+	};
+		
+	if (_rnd > 80  && _rnd <= 100) then {	
+		_npc setmimic "angry";
+		sleep 0.1;
+		_npc switchmove "CtsPercMstpSnonWnonDnon_idle32podrbaniNanose";		
+		_npc globalchat "Fuck you";			
+	};
+};
+
+if (_join) then {
+	// remove the action once it is activated
+	_npc stop false;
+	if (_npc == leader _npc) then {	
+		_npc globalchat "All follow that man";
+		{					
+			_x switchmove "";			
+			[_x] joinSilent _caller;
+		}foreach units _npc;
+	} else {
+		_npc removeAction _id;
+		[_npc] joinSilent _caller;	
+	};
+};
+
+if (true) exitWith {};
 // =========================================================================================================
 //  Biblioteca de funciones comunes
 //  Version: 5.0.7
@@ -2182,48 +2230,4 @@ MON_artillery_dofire = {
 //	<-	_distance:  max distance from npc
 //	->	_vehicles:  array of vehicles
 MON_deadbodies = {
-		private["_vehicles","_npc","_bodies","_OCercanos","_distance","_side"];	
-					
-	_npc = _this select 0;	
-	_distance = _this select 1;					
-	//_side = _this select 2;	
-		
-		_OCercanos = [];
-		_bodies = [];
-		
-		//Buscamos objetos cercanos
-		_OCercanos = nearestObjects [_npc, ["Man"] , _distance];
-			
-		{			
-			if (_npc knowsabout _x >0.5 && (!canmove _x || !alive _x)) then { _bodies = _bodies + [_x];};
-		}foreach _OCercanos;
-		
-		_bodies;
-	};	
-
-//Función que devuelve un array con los vehiculos terrestres más cercanos
-//Parámeters: [_npc,_distance]
-//	<-	_npc: object for  position search
-//	<-	_distance:  max distance from npc
-//	->	_vehicles:  array of vehicles
-MON_nearestSoldiers = {
-	private["_vehicles","_npc","_soldiers","_OCercanos","_distance","_side"];	
-				
-	_npc = _this select 0;	
-	_distance = _this select 1;					
-	
-	if (isnull _npc) exitwith {};
-	
-	_OCercanos = [];
-	_soldiers = [];
-	
-	//Buscamos objetos cercanos
-	_OCercanos = nearestObjects [_npc, ["Man"] , _distance];					
-	_OCercanos = _OCercanos - [_npc];			
-	
-	{			
-		if ( alive _x && canmove _x ) then { _soldiers = _soldiers + [_x];};
-	}foreach _OCercanos;
-	
-	_soldiers;
-};		
+		private["_vehicles","_npc","_bodies","_OCercanos"

@@ -1,19 +1,20 @@
-/**
- * Sélectionne un objet à remorquer
+* Initialise un véhicule remorqueur
  * 
- * @param 0 l'objet à sélectionner
+ * @param 0 le remorqueur
  */
 
-if (R3F_LOG_mutex_local_verrou) then
+private ["_remorqueur", "_est_desactive", "_remorque"];
+
+_remorqueur = _this select 0;
+
+_est_desactive = _remorqueur getVariable "R3F_LOG_disabled";
+if (isNil "_est_desactive") then
 {
-	player globalChat localize "STR_R3F_LOG_mutex_action_en_cours";
-}
-else
-{
-	R3F_LOG_mutex_local_verrou = true;
-	
-	R3F_LOG_objet_selectionne = _this select 0;
-	player globalChat format [localize "STR_R3F_LOG_action_selectionner_objet_remorque_fait", getText (configFile >> "CfgVehicles" >> (typeOf R3F_LOG_objet_selectionne) >> "displayName")];
-	
-	R3F_LOG_mutex_local_verrou = false;
+	_remorqueur setVariable ["R3F_LOG_disabled", false];
 };
+
+// Définition locale de la variable si elle n'est pas définie sur le réseau
+_remorque = _remorqueur getVariable "R3F_LOG_remorque";
+if (isNil "_remorque") then
+{
+	_remorqueur setVariable ["R3F_L

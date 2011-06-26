@@ -1,29 +1,27 @@
-/**
- * Suit un projectile et met un marqueur sur la carte au lieu de l'impact
- * 
- * @param 0 le projectile à suivre
- * 
- * Copyright (C) 2010 madbull ~R3F~
- * 
- * This program is free software under the terms of the GNU General Public License version 3.
- * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+3 raisons :
+ *     - permettre des appels conditionnels optimisés (ex : seulement pour des slots particuliers)
+ *     - l'execVM est mieux connu et compris par l'éditeur de mission
+ *     - l'init client de l'arty devient bloquant : il attend une PUBVAR du serveur (le point d'attache)
  */
-
-private ["_projectile", "_pos_impact", "_marqueur"];
-
-_projectile = _this select 0;
-
-// Tant que le projectile n'a pas explosé
-while {alive _projectile} do
+[] spawn
 {
-	// Mise à jour de la position
-	_pos_impact = getPos _projectile;
+	if (isServer) then
+	{
+		// Service offert par le serveur : orienter un objet (car setDir est à argument local)
+		R3F_ARTY_AND_LOG_FNCT_PUBVAR_setDir =
+		{
+			private ["_objet", "_direction"];
+			_objet = _this select 1 select 0;
+			_direction = _this select 1 select 1;
+			
+			// Orienter l'objet et broadcaster l'effet
+			_objet setDir _direction;
+			_objet setPos (getPos _objet);
+		};
+		"R3F_ARTY_AND_LOG_PUBVAR_setDir" addPublicVariableEventHandler R3F_ARTY_AND_LOG_FNCT_PUBVAR_setDir;
+	};
 	
-	sleep 0.0075;
-};
-
-// On crée un marqueur sur la dernière position du projectile
-_marqueur = createMarker [format ["impact%1%2%3", _pos_impact select 0, _pos_impact select 1, _pos_impact select 2], _pos_impact];
-_marqueur setMarkerType "Dot";
-_marqueur setMarkerColor "colorRed";
+	#include "R3F_ARTY_disable_enable.sqf"
+	#ifdef R3F_ARTY_enable
+		R3F_ARTY_active = true;
+		#include "R3F_ART

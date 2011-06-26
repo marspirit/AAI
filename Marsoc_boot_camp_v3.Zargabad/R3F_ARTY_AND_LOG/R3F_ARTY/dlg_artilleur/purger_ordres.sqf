@@ -1,5 +1,11 @@
-/**
- * Purge la liste des ordres en attente
+ot, see <http://www.gnu.org/licenses/>.
+ */
+
+terminate R3F_ARTY_fil_exec_affichage_dlg_artilleur;
+sleep 0.1;
+(uiNamespace getVariable "R3F_ARTY_dlg_artilleur") closeDisplay 0;
+uiNamespace setVariable ["R3F_ARTY_dlg_artilleur", displayNull];/**
+ * Marque l'ordre actuel comme accompli et raffraichit la boîte de dialogue de l'artilleur
  * 
  * Copyright (C) 2010 madbull ~R3F~
  * 
@@ -8,14 +14,4 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-// On efface
-R3F_ARTY_ordres_recus = [];
-
-// On avertit
-player globalChat localize "STR_R3F_ARTY_action_purger_ordres_fait";
-
-// On raffraichit la boîte de dialogue de l'artilleur
-if (!isNull (uiNamespace getVariable "R3F_ARTY_dlg_artilleur")) then
-{
-	execVM "R3F_ARTY_AND_LOG\R3F_ARTY\dlg_artilleur\afficher_ordre.sqf";
-};
+// On marque l'ordre actuel comm

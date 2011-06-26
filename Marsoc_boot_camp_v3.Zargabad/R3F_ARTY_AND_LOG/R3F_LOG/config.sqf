@@ -1,4 +1,31 @@
-/**
+on dans la valeur de retour
+		_position_retour = [(_position_centrale select 0) + (_distance_xy * (cos (_orientation + _angle_xy))), (_position_centrale select 1) + (_distance_xy * (sin (_orientation + _angle_xy)))];
+		
+		_est_dans_ellispe = true;
+	}
+	else
+	{
+		_est_dans_ellispe = false;
+	};
+};
+
+// Si on a pas trouvé de point valide à temps, on prend le centre
+if (!_est_dans_ellispe) then
+{
+	_position_retour = + _position_centrale;
+};
+
+_position_retour/*
+ * Add a double-slash ( // ) at the begining of the #include line to disable the R3F_ARTY system.
+ * (In addition you can delete the R3F_ARTY directory to lighten your mission. More than 300kB saved.)
+ * To enable the R3F_ARTY system, write #define R3F_ARTY_enable withouth double-slash.
+ * 
+ * Ajouter deux barres obliques ( // ) au début de la ligne #include pour désactiver le système R3F_ARTY.
+ * (En plus de ça, vous pouvez supprimer le répertoire R3F_ARTY pour alléger votre mission. Plus de 300ko économisés.)
+ * Pour activer le système R3F_ARTY, écrivez #define R3F_ARTY_enable sans les deux barres obliques.
+ */
+
+#define R3F_ARTY_enable/**
  * English and French comments
  * Commentaires anglais et français
  * 
@@ -323,60 +350,4 @@ R3F_LOG_CFG_objets_transportables =
 	["Fuel_can", 1],
 	["Notice_board", 0.5],
 	["Pallets_comlumn", 2],
-	["Unwrapped_sleeping_bag", 2],
-	["Wheel_barrow", 2],
-	["RoadCone", 0.2],
-	["Sign_1L_Border", 0.2],
-	["Sign_Danger", 0.2],
-	["Suitcase", 0.2],
-	["SmallTable", 0.2]
-];
-
-
-/****** MOVABLE-BY-PLAYER OBJECTS / OBJETS DEPLACABLES PAR LE JOUEUR ******/
-
-/**
- * List of class names of objects moveables by player.
- * Liste des noms de classes des objets transportables par le joueur.
- */
-R3F_LOG_CFG_objets_deplacables =
-[
-	"SatPhone", // Needed for the R3F_ARTY module (arty HQ) (nécessaire pour le module R3F_ARTY (PC d'arti))
-	"StaticWeapon",
-	
-	"RubberBoat",
-	
-	"FlagCarrierSmall",
-	
-	"Land_BagFenceCorner",
-	"RoadBarrier_light",
-	"FlagCarrierCore",
-	"Hedgehog",
-	"Land_fortified_nest_small",
-	
-	"Land_HBarrier1",
-	"Land_HBarrier3",
-	"Land_HBarrier5",
-	"Base_WarfareBBarrier5x",
-	
-	"Camp_base",
-	"ReammoBox",
-	
-	"TargetE",
-	"TargetEpopUp",
-	"TargetPopUpTarget",
-	
-	"FoldChair",
-	"FoldTable",
-	"BarrelBase",
-	"Fuel_can",
-	"Notice_board",
-	"Pallets_comlumn",
-	"Unwrapped_sleeping_bag",
-	"Wheel_barrow",
-	"RoadCone",
-	"Sign_1L_Border",
-	"Sign_Danger",
-	"Suitcase",
-	"SmallTable"
-];
+	["Unwrapped_sleeping_bag"

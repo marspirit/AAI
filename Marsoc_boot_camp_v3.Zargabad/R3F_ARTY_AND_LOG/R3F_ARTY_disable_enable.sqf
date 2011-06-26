@@ -1,11 +1,18 @@
-/*
- * Add a double-slash ( // ) at the begining of the #include line to disable the R3F_ARTY system.
- * (In addition you can delete the R3F_ARTY directory to lighten your mission. More than 300kB saved.)
- * To enable the R3F_ARTY system, write #define R3F_ARTY_enable withouth double-slash.
- * 
- * Ajouter deux barres obliques ( // ) au début de la ligne #include pour désactiver le système R3F_ARTY.
- * (En plus de ça, vous pouvez supprimer le répertoire R3F_ARTY pour alléger votre mission. Plus de 300ko économisés.)
- * Pour activer le système R3F_ARTY, écrivez #define R3F_ARTY_enable sans les deux barres obliques.
- */
 
-#define R3F_ARTY_enable
+for [{_nb_iterations = 0}, {!_est_dans_ellispe && _nb_iterations < 50}, {_nb_iterations = _nb_iterations+1}] do
+{
+	private [ "_x", "_y"];
+	
+	// Tirage d'une position dans notre carré avec comme origine le centre
+	_x = (random _cote) - (_cote/2);
+	_y = (random _cote) - (_cote/2);
+	
+	// Si les coordonnées (x,y) rentre dans l'ellipse
+	if (((_x*_x)/(_dimension_x*_dimension_x)) + ((_y*_y)/(_dimension_y*_dimension_y)) <= 1) then
+	{
+		private ["_angle_xy", "_distance_xy"];
+		
+		_angle_xy = _y atan2 _x;
+		_distance_xy = sqrt ((_x*_x) + (_y*_y));
+		
+		// Changement des repère cartésien pour prendre en compte l'orientation de l'ellipse et mémorisati

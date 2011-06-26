@@ -1,4 +1,52 @@
-/**
+_basique
+	{
+		idc = R3F_ARTY_IDC_dlg_artilleur_valeur_elevation;
+		style = ST_RIGHT;
+		x = 0.61; y = 0.38;
+		w = 0.07; h = 0.04;
+		text = "";
+	};
+	// FIN Info pièce d'artillerie
+	
+	class R3F_ARTY_dlg_artilleur_astuce_bordure : R3F_ARTY_dlg_artilleur_texte_basique
+	{
+		x = -0.003; y = 0.826;
+		w = 0.406; h = 0.178;
+		colorBackground[] = {0, 0, 0, 0.8};
+		text = "";
+	};
+	
+	class R3F_ARTY_dlg_artilleur_astuce_texte : R3F_ARTY_dlg_artilleur_texte_basique
+	{
+		type = CT_STRUCTURED_TEXT;
+		size = 0.03;
+		x = 0.0; y = 0.83;
+		w = 0.4; h = 0.17;
+		colorBackground[] = {0.25, 0.35, 0.22, 0.5};
+		text = "$STR_R3F_ARTY_dlg_artilleur_astuce_texte";
+		class Attributes
+		{
+			font = "BitStream";
+			color = "#aaee88";
+			align = "left";
+			valign = "top";
+			shadow = false;
+			shadowColor = "#000000";
+			size = "1";
+		};
+	};
+	
+	class R3F_ARTY_dlg_artilleur_credits : R3F_ARTY_dlg_artilleur_texte_basique
+	{
+		style = ST_RIGHT;
+		x = 0.20; y = 0.977;
+		w = 0.20; h = 0.02;
+		sizeEx = 0.02;
+		colorBackground[] = {0,0,0,0};
+		colorText[] = {0.75, 1, 0.55, 0.5};
+		text = "$STR_R3F_ARTY_LOG_nom_produit";
+	};
+};/**
  * Constantes pour rendre les définitions des boîtes de dialogue plus lisible et maintenable
  */
 
@@ -49,46 +97,4 @@
 #define CT_USER             99
 #define CT_MAP              100
 #define CT_MAP_MAIN         101
-#define CT_List_N_Box       102 // Arma 2 - N columns list box
-
-// Static styles
-#define ST_POS            0x0F
-#define ST_HPOS           0x03
-#define ST_VPOS           0x0C
-#define ST_LEFT           0x00
-#define ST_RIGHT          0x01
-#define ST_CENTER         0x02
-#define ST_DOWN           0x04
-#define ST_UP             0x08
-#define ST_VCENTER        0x0c
-
-#define ST_TYPE           0xF0
-#define ST_SINGLE         0
-#define ST_MULTI          16
-#define ST_TITLE_BAR      32
-#define ST_PICTURE        48
-#define ST_FRAME          64
-#define ST_BACKGROUND     80
-#define ST_GROUP_BOX      96
-#define ST_GROUP_BOX2     112
-#define ST_HUD_BACKGROUND 128
-#define ST_TILE_PICTURE   144
-#define ST_WITH_RECT      160
-#define ST_LINE           176
-
-#define ST_SHADOW         0x100
-#define ST_NO_RECT        0x200
-#define ST_KEEP_ASPECT_RATIO  0x800
-
-#define ST_TITLE          ST_TITLE_BAR + ST_CENTER
-
-// Slider styles
-#define SL_DIR            0x400
-#define SL_VERT           0
-#define SL_HORZ           0x400
-
-#define SL_TEXTURES       0x10
-
-// Listbox styles
-#define LB_TEXTURES       0x10
-#define LB_MULTI          0x20
+#define CT_List

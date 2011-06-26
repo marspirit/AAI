@@ -1,4 +1,27 @@
-/**
+{_i < _nb_tirs}, {_i = _i + 1}] do
+{
+	private ["_coordonnees_choisies", "_joueur_choisi"];
+	
+	if (_amplitude_azimut > 0 && _amplitude_elevation > 0) then
+	{
+		// On tire une position dans l'ellipse
+		_coordonnees_choisies = [[_milieu_azimut, _milieu_elevation], _amplitude_azimut, _amplitude_elevation] call R3F_ARTY_FNCT_tirer_position_dans_zone_elliptique;
+	}
+	else
+	{
+		_coordonnees_choisies = [_milieu_azimut - _amplitude_azimut + 2*(random _amplitude_azimut), _milieu_elevation - _amplitude_elevation + 2*(random _amplitude_elevation)];
+	};
+	
+	_joueur_choisi = _table_correspondance_index_artilleur select (_liste_artilleurs select (_i mod (count _liste_artilleurs)));
+	
+	_table_ordres_tirs = _table_ordres_tirs + [[name player, _joueur_choisi, _coordonnees_choisies select 0, _coordonnees_choisies select 1, _index_munition]];
+};
+
+R3F_ARTY_table_ordres_tirs = + _table_ordres_tirs;
+publicVariable "R3F_ARTY_table_ordres_tirs";
+["R3F_ARTY_table_ordres_tirs", R3F_ARTY_table_ordres_tirs] spawn R3F_ARTY_FNCT_PUBVAR_table_ordres_tirs;
+
+player globalChat localize "STR_R3F_ARTY_dlg_SM_ordres_transmis";/**
  * Récupère les coordonnées du joueur et préremplie les champs correspondant à la position de la batterie
  * 
  * Copyright (C) 2010 madbull ~R3F~
@@ -13,26 +36,4 @@ private ["_pos", "_x_grille", "_y_grille", "_longitude", "_latitude", "_dlg_sais
 // Récupération de la position 2D
 _pos = getPosASL player;
 
-// Conversion de la pos 2D en coordonnées GPS à 4 chiffres
-_x_grille = round ((_pos select 0) / 10);
-_y_grille = round ((R3F_ARTY_CFG_hauteur_ile - (_pos select 1)) / 10);
-
-if (_x_grille < 0 || _y_grille < 0) exitWith {player globalChat localize "STR_R3F_ARTY_dlg_clic_carte_erreur_hors_champ";};
-
-// Passage en notation à 4 chiffres, avec zéros devant
-_longitude = str _x_grille;
-while {count toArray _longitude < 4} do {_longitude = "0" + _longitude;};
-_latitude = str _y_grille;
-while {count toArray _latitude < 4} do {_latitude = "0" + _latitude;};
-
-disableSerialization; // A cause des displayCtrl
-
-#include "dlg_constantes.h"
-
-_dlg_saisie_mission = findDisplay R3F_ARTY_IDD_dlg_saisie_mission;
-// Mise à jour des champs de texte
-_dlg_saisie_mission displayCtrl R3F_ARTY_IDC_dlg_SM_position_batterie_valeur_long ctrlSetText _longitude;
-_dlg_saisie_mission displayCtrl R3F_ARTY_IDC_dlg_SM_position_batterie_valeur_lat ctrlSetText _latitude;
-_dlg_saisie_mission displayCtrl R3F_ARTY_IDC_dlg_SM_position_batterie_valeur_alt ctrlSetText str (round (_pos select 2));
-
-player globalChat localize "STR_R3F_ARTY_pos_joueur_fait";
+// Conversion de la po

@@ -1,4 +1,8 @@
-/**
+ntable", true];
+};
+
+_calculateur addAction [("<t color=""#dddd00"">" + (localize "STR_R3F_ARTY_action_ouvrir_dlg_SM") + "</t>"), "R3F_ARTY_AND_LOG\R3F_ARTY\poste_commandement\ouvrir_dlg_saisie_mission.sqf", nil, 6, true, true, "", "vehicle player == player && isNull R3F_LOG_joueur_deplace_objet && (isNull (_target getVariable ""R3F_LOG_est_deplace_par"") || (!alive (_target getVariable ""R3F_LOG_est_deplace_par""))) && isNull (_target getVariable ""R3F_LOG_est_transporte_par"") && (_target getVariable ""R3F_ARTY_est_calculateur"")"];
+_calculateur addAction [("<t color=""#dddd00"">" + (localize "STR_R3F_ARTY_action_demonter_poste") + "</t>"), "R3F_ARTY_AND_LOG\R3F_ARTY\poste_commandement\deplacer_calculateur.sqf", nil, 5, true, true, "", "vehicle player == player && isNull R3F_LOG_joueur_deplace_objet && (isNull (_target getVariable ""R3F_LOG_est_deplace_par"") || (!alive (_target getVariable ""R3F_LOG_est_deplace_par""))) && isNull (_target getVariable ""R3F_LOG_est_transporte_par"") && (_target getVariable ""R3F_ARTY_est_calculateur"") && (_target getVariable ""R3F_ARTY_demontable"")"];/**
  * Supprime un poste de de commandement lié à un calculateur
  * A exécuter sur le serveur (via d'un publicVariable)
  * 
@@ -66,33 +70,4 @@ if (isServer) then
 	_temp_pos = [[2.5, -3.5], _direction, _position] call _fnct_calc_pos_angle;
 	_pancarte = "Notice_board" createVehicle _temp_pos;
 	_pancarte setVariable ["R3F_LOG_disabled", true, true];
-	_pancarte setPos _temp_pos;
-	_pancarte setDir (_direction+165);
-	sleep 0.2;
-	
-	_temp_pos = [[0.8, -0.8], _direction, _position] call _fnct_calc_pos_angle;
-	_chaise = "FoldChair" createVehicle _temp_pos;
-	_chaise setVariable ["R3F_LOG_disabled", true, true];
-	_chaise setPos _temp_pos;
-	_chaise setDir (_direction+140);
-	sleep 0.2;
-	
-	_temp_pos = [[-1.2, -0.3], _direction, _position] call _fnct_calc_pos_angle;
-	_chaise2 = "FoldChair" createVehicle _temp_pos;
-	_chaise2 setVariable ["R3F_LOG_disabled", true, true];
-	_chaise2 setPos _temp_pos;
-	_chaise2 setDir (_direction-100);
-	sleep 0.2;
-	
-	_table = "SmallTable" createVehicle _position;
-	_table setVariable ["R3F_LOG_disabled", true, true];
-	_table setPos _position;
-	_table setDir _direction;
-	sleep 0.2;
-	
-	_calculateur setPos [_position select 0, _position select 1, (_position select 2) + 1.1];
-	
-	// On mémorise quels sont les objets du poste de commandement du calculateur
-	_calculateur setVariable ["R3F_ARTY_poste_commandement_objets_crees", [_filet, _caisse_mun, _pancarte, _table, _chaise, _chaise2]];
-	_calculateur setVariable ["R3F_LOG_disabled", true, true];
-};
+	_pancarte setPos _temp_p

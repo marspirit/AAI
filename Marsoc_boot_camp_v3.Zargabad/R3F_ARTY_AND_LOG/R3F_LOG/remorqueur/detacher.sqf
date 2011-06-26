@@ -1,4 +1,17 @@
-/**
+f", nil, 5, false, true, "", "R3F_LOG_objet_addAction == _target && R3F_LOG_action_selectionner_objet_remorque_valide"];
+	
+	_objet addAction [("<t color=""#dddd00"">" + (localize "STR_R3F_LOG_action_detacher") + "</t>"), "R3F_ARTY_AND_LOG\R3F_LOG\remorqueur\detacher.sqf", nil, 6, true, true, "", "R3F_LOG_objet_addAction == _target && R3F_LOG_action_detacher_valide"];
+};
+
+if ({_objet isKindOf _x} count R3F_LOG_classes_objets_transportables > 0) then
+{
+	if ({_objet isKindOf _x} count R3F_LOG_CFG_objets_deplacables > 0) then
+	{
+		_objet addAction [("<t color=""#dddd00"">" + (localize "STR_R3F_LOG_action_charger_deplace") + "</t>"), "R3F_ARTY_AND_LOG\R3F_LOG\transporteur\charger_deplace.sqf", nil, 6, true, true, "", "R3F_LOG_objet_addAction == _target && R3F_LOG_action_charger_deplace_valide"];
+	};
+	
+	_objet addAction [("<t color=""#dddd00"">" + (localize "STR_R3F_LOG_action_selectionner_objet_charge") + "</t>"), "R3F_ARTY_AND_LOG\R3F_LOG\transporteur\selectionner_objet.sqf", nil, 5, false, true, "", "R3F_LOG_objet_addAction == _target && R3F_LOG_action_selectionner_objet_charge_valide"];
+};/**
  * Détacher un objet d'un véhicule
  * 
  * @param 0 l'objet à détacher
@@ -24,39 +37,4 @@ else
 	_remorqueur = _objet getVariable "R3F_LOG_est_transporte_par";
 	
 	// Ne pas permettre de décrocher un objet s'il est porté héliporté
-	if ({_remorqueur isKindOf _x} count R3F_LOG_CFG_remorqueurs > 0) then
-	{
-		// On mémorise sur le réseau que le véhicule remorque quelque chose
-		_remorqueur setVariable ["R3F_LOG_remorque", objNull, true];
-		// On mémorise aussi sur le réseau que le objet est attaché en remorque
-		_objet setVariable ["R3F_LOG_est_transporte_par", objNull, true];
-		
-		detach _objet;
-		_objet setVelocity [0, 0, 0];
-		
-		player playMove "AinvPknlMstpSlayWrflDnon_medic";
-		sleep 7;
-		
-		if ({_objet isKindOf _x} count R3F_LOG_CFG_objets_deplacables > 0) then
-		{
-			// Si personne n'a re-remorquer l'objet pendant le sleep 7
-			if (isNull (_remorqueur getVariable "R3F_LOG_remorque") &&
-				(isNull (_objet getVariable "R3F_LOG_est_transporte_par")) &&
-				(isNull (_objet getVariable "R3F_LOG_est_deplace_par"))
-			) then
-			{
-				[_objet] execVM "R3F_ARTY_AND_LOG\R3F_LOG\objet_deplacable\deplacer.sqf";
-			};
-		}
-		else
-		{
-			player globalChat localize "STR_R3F_LOG_action_detacher_fait";
-		};
-	}
-	else
-	{
-		player globalChat localize "STR_R3F_LOG_action_detacher_impossible_pour_ce_vehicule";
-	};
-	
-	R3F_LOG_mutex_local_verrou = false;
-};
+	if ({_remorqueur isKind

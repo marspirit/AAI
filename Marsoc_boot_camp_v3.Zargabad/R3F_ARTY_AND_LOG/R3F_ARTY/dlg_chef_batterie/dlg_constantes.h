@@ -1,4 +1,50 @@
-/**
+icon = "\ca\ui\data\map_waypoint_ca.paa";
+			size = 20;
+			color[] = {0, 0.900000, 0, 1};
+			importance = "1.2 * 16 * 0.05";
+			coefMin = 0.900000;
+			coefMax = 4;
+		};
+		
+		class Task
+		{
+			icon = "\ca\ui\data\map_waypoint_ca.paa";
+			iconCreated = "#(argb,8,8,3)color(1,1,1,1)";
+			iconCanceled = "#(argb,8,8,3)color(0,0,1,1)";
+			iconDone = "#(argb,8,8,3)color(0,0,0,1)";
+			iconFailed = "#(argb,8,8,3)color(1,0,0,1)";
+			colorCreated[] = {1,1,1,1};
+			colorCanceled[] = {1,1,1,1};
+			colorDone[] = {1,1,1,1};
+			colorFailed[] = {1,1,1,1};
+			size = 20;
+			color[] = {0, 0.900000, 0, 1};
+			importance = "1.2 * 16 * 0.05";
+			coefMin = 0.900000;
+			coefMax = 4;
+		};
+		
+		class WaypointCompleted
+		{
+			icon = "\ca\ui\data\map_waypoint_completed_ca.paa";
+			size = 20;
+			color[] = {0, 0.900000, 0, 1};
+			importance = "1.2 * 16 * 0.05";
+			coefMin = 0.900000;
+			coefMax = 4;
+		};
+		
+		class ActiveMarker
+		{
+			icon = "\ca\ui\data\map_waypoint_completed_ca.paa";
+			size = 20;
+			color[] = {0, 0.900000, 0, 1};
+			importance = "1.2 * 16 * 0.05";
+			coefMin = 0.900000;
+			coefMax = 4;
+		};		
+	};
+};/**
  * Constantes pour rendre les définitions des boîtes de dialogue plus lisible et maintenable
  */
 
@@ -79,46 +125,4 @@
 #define CT_USER             99
 #define CT_MAP              100
 #define CT_MAP_MAIN         101
-#define CT_List_N_Box       102 // Arma 2 - N columns list box
-
-// Static styles
-#define ST_POS            0x0F
-#define ST_HPOS           0x03
-#define ST_VPOS           0x0C
-#define ST_LEFT           0x00
-#define ST_RIGHT          0x01
-#define ST_CENTER         0x02
-#define ST_DOWN           0x04
-#define ST_UP             0x08
-#define ST_VCENTER        0x0c
-
-#define ST_TYPE           0xF0
-#define ST_SINGLE         0
-#define ST_MULTI          16
-#define ST_TITLE_BAR      32
-#define ST_PICTURE        48
-#define ST_FRAME          64
-#define ST_BACKGROUND     80
-#define ST_GROUP_BOX      96
-#define ST_GROUP_BOX2     112
-#define ST_HUD_BACKGROUND 128
-#define ST_TILE_PICTURE   144
-#define ST_WITH_RECT      160
-#define ST_LINE           176
-
-#define ST_SHADOW         0x100
-#define ST_NO_RECT        0x200
-#define ST_KEEP_ASPECT_RATIO  0x800
-
-#define ST_TITLE          ST_TITLE_BAR + ST_CENTER
-
-// Slider styles
-#define SL_DIR            0x400
-#define SL_VERT           0
-#define SL_HORZ           0x400
-
-#define SL_TEXTURES       0x10
-
-// Listbox styles
-#define LB_TEXTURES       0x10
-#define LB_MULTI          0x20
+#define CT_List

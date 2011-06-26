@@ -1,4 +1,31 @@
-/**
+0];
+	} forEach R3F_LOG_CFG_objets_transportables;
+	
+	
+	/** Indique quel est l'objet concerné par les variables d'actions des addAction */
+	R3F_LOG_objet_addAction = objNull;
+	
+	// Liste des variables activant ou non les actions de menu
+	R3F_LOG_action_charger_deplace_valide = false;
+	R3F_LOG_action_charger_selection_valide = false;
+	R3F_LOG_action_contenu_vehicule_valide = false;
+	
+	R3F_LOG_action_remorquer_deplace_valide = false;
+	R3F_LOG_action_remorquer_selection_valide = false;
+	
+	R3F_LOG_action_heliporter_valide = false;
+	R3F_LOG_action_heliport_larguer_valide = false;
+	
+	R3F_LOG_action_deplacer_objet_valide = false;
+	R3F_LOG_action_remorquer_deplace_valide = false;
+	R3F_LOG_action_selectionner_objet_remorque_valide = false;
+	R3F_LOG_action_detacher_valide = false;
+	R3F_LOG_action_charger_deplace_valide = false;
+	R3F_LOG_action_selectionner_objet_charge_valide = false;
+	
+	/** Ce fil d'exécution permet de diminuer la fréquence des vérifications des conditions normalement faites dans les addAction (~60Hz) */
+	execVM "R3F_ARTY_AND_LOG\R3F_LOG\surveiller_conditions_actions_menu.sqf";
+};/**
  * Fait déplacer un objet par le joueur. Il garde l'objet tant qu'il ne le relâche pas ou ne meurt pas.
  * L'objet est relaché quand la variable R3F_LOG_joueur_deplace_objet passe à objNull ce qui terminera le script
  * 
@@ -86,41 +113,4 @@ else
 	
 	_action_menu = player addAction [("<t color=""#dddd00"">" + (localize "STR_R3F_LOG_action_relacher_objet")+ "</t>"), "R3F_ARTY_AND_LOG\R3F_LOG\objet_deplacable\relacher.sqf", nil, 5, true, true];
 	
-	// On limite la vitesse de marche et on interdit de monter dans un véhicule tant que l'objet est porté
-	while {!isNull R3F_LOG_joueur_deplace_objet && alive player} do
-	{
-		if (vehicle player != player) then
-		{
-			player globalChat localize "STR_R3F_LOG_ne_pas_monter_dans_vehicule";
-			player action ["eject", vehicle player];
-			sleep 1;
-		};
-		
-		if ([0,0,0] distance (velocity player) > 2.8) then
-		{
-			player globalChat localize "STR_R3F_LOG_courir_trop_vite";
-			player playMove "AmovPpneMstpSnonWnonDnon";
-			sleep 1;
-		};
-		
-		sleep 0.25;
-	};
-	
-	// L'objet n'est plus porté, on le repose
-	detach _objet;
-	_objet setPos [getPos _objet select 0, getPos _objet select 1, 0];
-	_objet setVelocity [0, 0, 0];
-	
-	player removeAction _action_menu;
-	R3F_LOG_joueur_deplace_objet = objNull;
-	
-	_objet setVariable ["R3F_LOG_est_deplace_par", objNull, true];
-	
-	// Restauration de l'arme primaire
-	if (alive player && _arme_principale != "") then
-	{
-		player addWeapon _arme_principale;
-		player selectWeapon _arme_principale;
-		player selectWeapon (getArray (configFile >> "cfgWeapons" >> _arme_principale >> "muzzles") select 0);
-	};
-};
+	// On limite la vitesse de march

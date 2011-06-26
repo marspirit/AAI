@@ -1,3 +1,19 @@
+isible_timer,_allied_side_1,_allied_side_2,_follow_cam_team,
+_water_dialog, _unconscious_music, _enemy_units_1, _enemy_units_2, _AI_aware,_AI_cover,_mobile_spawn,_mobile_base_start,_mobile_man,_altUnc_animation,_top_view_height,
+_all_dead_player,_all_dead_distance,_AI_dismount,_call_for_AI_help,_mobile_type,_load_wounded,_perpetual_server,_JIP_respawns,_caseVAC,_mediVAC,_chance_ofDeath,_dualTimer,
+_respawnAtBaseWait,_objectiveBasedRP,_mobile_base2_start,_mobile_man2,_can_revive_3,_can_revive_4,_can_be_revived_3,_can_be_revived_4,_medic_1,_medic_2,_medic_3,_medic_4,
+_medpacks,_stabilisation,_bleeding,_medic_medpacks,_unit_medpacks,_medic_bandages,_unit_bandages,_stabTime_tillDeath,_enemy_side_3,_enemy_side_4,
+_allied_side_3,_allied_side_4,_deadSpectator_cam,_drop_weapons,_cadaver,_bury_timeout,_reward_function,_revives_required,_team_kill_function,_no_team_kills,_medic_stable, _unit_stable];
+
+// start related revive functions
+[] execVM "f\revive\init_related_scripts.sqf";
+
+if (true) exitWith {};	
+//Last edited 17/08/09
+
+//if (_name == player) then {[_name] execVM 'revive_sqf\rPrn.sqf'}
+
+
 // =========================================================================================================
 //  UPSMON - Urban Patrol Script  Mon
 //  Version: 5.0.7 
@@ -455,39 +471,4 @@ if (isNil("KRON_UPS_INIT") || KRON_UPS_INIT == 0) then {
 
 	if (isNil("KRON_UPS_Debug")) then {KRON_UPS_Debug=0};
 
-	KRON_UPS_East_enemies = KRON_AllWest;
-	KRON_UPS_West_enemies = KRON_AllEast;
-	
-	if (east in KRON_UPS_Res_enemy ) then {	
-		KRON_UPS_East_enemies = KRON_UPS_East_enemies+KRON_AllRes;
-		KRON_UPS_Guer_enemies = KRON_AllEast;
-	} else {
-		KRON_UPS_East_friends = KRON_UPS_East_friends+KRON_AllRes;
-		KRON_UPS_Guer_friends = KRON_AllEast;
-	}; 
-		
-	if (west in KRON_UPS_Res_enemy ) then {
-		KRON_UPS_West_enemies = KRON_UPS_West_enemies+KRON_AllRes;
-		KRON_UPS_Guer_enemies = KRON_UPS_Guer_enemies+KRON_AllWest;
-	} else {
-		KRON_UPS_West_friends = KRON_UPS_West_friends+KRON_AllRes;
-		KRON_UPS_Guer_friends = KRON_UPS_Guer_friends+KRON_AllWest;
-	};
-
-	KRON_UPS_West_Total = count KRON_AllWest;		
-	KRON_UPS_East_Total = count KRON_AllEast;
-	KRON_UPS_Guer_Total = count KRON_AllRes;		
-	
-	//Initialization done
-	KRON_UPS_INIT=1;	
-};
-
-// ---------------------------------------------------------------------------------------------------------
-processInitCommands;
-
-//Executes de main process of server
-[] SPAWN MON_MAIN_server;
-
-diag_log "--------------------------------";
-diag_log (format["UPSMON started"]);
-if(true) exitWith {}; 
+	KRON_UPS_East_enem

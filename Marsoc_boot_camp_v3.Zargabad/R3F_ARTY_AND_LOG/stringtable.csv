@@ -1,9 +1,5 @@
-ï»¿#include "R3F_ARTY_disable_enable.sqf"
+ de Frappe Française, team-r3f.org).
 
-#ifdef R3F_ARTY_enable
-#include "R3F_ARTY\stringtable.csv"
-#endif
+Vous pouvez obtenir la version complète du [R3F] Artillery and Logistic (avec le guide d'installation et la licence GPL) ici : http://forums.bistudio.com/showthread.php?t=94280
 
-#include "R3F_LOG\stringtable.csv"
-
-STR_R3F_ARTY_LOG_nom_produit,	"[R3F] Artillery and Logistic",	"[R3F] Artillery and Logistic"
+N'hésitez pas à donner

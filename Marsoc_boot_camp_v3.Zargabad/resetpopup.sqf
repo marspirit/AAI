@@ -1,4 +1,6 @@
-{
-	_x animate ["terc", 0];
-} foreach doopopup;
-hint "Targets reset";
+om The Author(s) is expressly prohibited.
+
+
+
+04. LEGAL DISCLAIMER
+=======

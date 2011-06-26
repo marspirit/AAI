@@ -1,4 +1,27 @@
-﻿STR_R3F_LOG_action_heliporter,	"Lift the object",	"Heliporter l'objet"
+OG_remorque", objNull, false];
+};
+
+_remorqueur addAction [("<t color=""#dddd00"">" + (localize "STR_R3F_LOG_action_remorquer_deplace") + "</t>"), "R3F_ARTY_AND_LOG\R3F_LOG\remorqueur\remorquer_deplace.sqf", nil, 6, true, true, "", "R3F_LOG_objet_addAction == _target && R3F_LOG_action_remorquer_deplace_valide"];
+
+_remorqueur addAction [("<t color=""#eeeeee"">" + (localize "STR_R3F_LOG_action_remorquer_selection") + "</t>"), "R3F_ARTY_AND_LOG\R3F_LOG\remorqueur\remorquer_selection.sqf", nil, 6, true, true, "", "R3F_LOG_objet_addAction == _target && R3F_LOG_action_remorquer_selection_valide"];/**
+ * S�lectionne un objet � remorquer
+ * 
+ * @param 0 l'objet � s�lectionner
+ */
+
+if (R3F_LOG_mutex_local_verrou) then
+{
+	player globalChat localize "STR_R3F_LOG_mutex_action_en_cours";
+}
+else
+{
+	R3F_LOG_mutex_local_verrou = true;
+	
+	R3F_LOG_objet_selectionne = _this select 0;
+	player globalChat format [localize "STR_R3F_LOG_action_selectionner_objet_remorque_fait", getText (configFile >> "CfgVehicles" >> (typeOf R3F_LOG_objet_selectionne) >> "displayName")];
+	
+	R3F_LOG_mutex_local_verrou = false;
+};﻿STR_R3F_LOG_action_heliporter,	"Lift the object",	"Heliporter l'objet"
 STR_R3F_LOG_action_heliporter_fait,	"Object ""%1"" attached.",	"Objet ""%1"" attaché."
 STR_R3F_LOG_action_heliporter_deja_transporte,	"The object ""%1"" is already transported by a vehicle.",	"L'objet ""%1"" est déjà transporté un véhicule."
 STR_R3F_LOG_action_heliporter_deplace_par_joueur,	"The object ""%1"" is being moved by a player.",	"L'objet ""%1"" est en train d'être déplacé par un joueur."
@@ -37,19 +60,4 @@ STR_R3F_LOG_action_remorquer_selection_objet_transporte,	"The object ""%1"" is i
 STR_R3F_LOG_action_remorquer_deplace,	"Tow the object",	"Remorquer l'objet"
 STR_R3F_LOG_action_detacher,	"Untow the object",	"Décrocher l'objet"
 STR_R3F_LOG_action_detacher_fait,	"Object untowed.",	"Objet décroché."
-STR_R3F_LOG_action_detacher_impossible_pour_ce_vehicule,	"Only the pilot can detach this object.",	"Seul le pilote peut décrocher cet objet."
-
-STR_R3F_LOG_action_contenu_vehicule,	"View the vehicle content",	"Voir le contenu du véhicule"
-STR_R3F_LOG_action_decharger_en_cours,	"Unloading in progress...",	"Déchargement en cours..."
-STR_R3F_LOG_action_decharger_fait,	"The object has been unloaded from the vehicle.",	"L'objet a été déchargé du véhicule."
-STR_R3F_LOG_action_decharger_deja_fait,	"The object has already been unloaded.",	"L'objet a déjà été déchargé."
-
-STR_R3F_LOG_transport_en_cours,	"This vehicle is being transported.",	"Ce véhicule est en cours de transport."
-STR_R3F_LOG_mutex_action_en_cours,	"The current operation isn't finished.",	"L'opération en cours n'est pas finie."
-
-STR_R3F_LOG_dlg_CV_titre,	"Content of vehicle",	"Contenu du véhicule"
-STR_R3F_LOG_dlg_CV_capacite_vehicule,	"Loading : %1/%2",	"Chargement : %1/%2"
-STR_R3F_LOG_dlg_CV_btn_decharger,	"Unload",	"Décharger"
-STR_R3F_LOG_dlg_CV_btn_fermer,	"Cancel",	"Annuler"
-
-STR_R3F_LOG_nom_pc_arti,	"Artillery CQ",	"PC d'artillerie"
+STR_R3F_LOG_action_detac

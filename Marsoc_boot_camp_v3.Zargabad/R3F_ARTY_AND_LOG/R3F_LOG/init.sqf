@@ -1,4 +1,35 @@
-/**
+* This program is free software under the terms of the GNU General Public License version 3.
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
+if (R3F_LOG_mutex_local_verrou) then
+{
+	player globalChat localize "STR_R3F_LOG_mutex_action_en_cours";
+}
+else
+{
+	R3F_LOG_mutex_local_verrou = true;
+	
+	private ["_heliporteur", "_objet"];
+	
+	_heliporteur = _this select 0;
+	_objet = _heliporteur getVariable "R3F_LOG_heliporte";
+	
+	// On mémorise sur le réseau que le véhicule n'héliporte plus rien
+	_heliporteur setVariable ["R3F_LOG_heliporte", objNull, true];
+	// On mémorise aussi sur le réseau que l'objet n'est plus attaché
+	_objet setVariable ["R3F_LOG_est_transporte_par", objNull, true];
+	
+	detach _objet;
+	
+	_objet setPos [getPos _objet select 0, getPos _objet select 1, 0];
+	_objet setVelocity [0, 0, 0];
+	
+	player globalChat format [localize "STR_R3F_LOG_action_heliport_larguer_fait", getText (configFile >> "CfgVehicles" >> (typeOf _objet) >> "displayName")];
+	
+	R3F_LOG_mutex_local_verrou = false;
+};/**
  * Script principal qui initialise le système de logistique
  * 
  * Copyright (C) 2010 madbull ~R3F~
@@ -52,31 +83,4 @@ if !(isServer && isDedicated) then
 	R3F_LOG_classes_objets_transportables = [];
 	
 	{
-		R3F_LOG_classes_objets_transportables = R3F_LOG_classes_objets_transportables + [_x select 0];
-	} forEach R3F_LOG_CFG_objets_transportables;
-	
-	
-	/** Indique quel est l'objet concerné par les variables d'actions des addAction */
-	R3F_LOG_objet_addAction = objNull;
-	
-	// Liste des variables activant ou non les actions de menu
-	R3F_LOG_action_charger_deplace_valide = false;
-	R3F_LOG_action_charger_selection_valide = false;
-	R3F_LOG_action_contenu_vehicule_valide = false;
-	
-	R3F_LOG_action_remorquer_deplace_valide = false;
-	R3F_LOG_action_remorquer_selection_valide = false;
-	
-	R3F_LOG_action_heliporter_valide = false;
-	R3F_LOG_action_heliport_larguer_valide = false;
-	
-	R3F_LOG_action_deplacer_objet_valide = false;
-	R3F_LOG_action_remorquer_deplace_valide = false;
-	R3F_LOG_action_selectionner_objet_remorque_valide = false;
-	R3F_LOG_action_detacher_valide = false;
-	R3F_LOG_action_charger_deplace_valide = false;
-	R3F_LOG_action_selectionner_objet_charge_valide = false;
-	
-	/** Ce fil d'exécution permet de diminuer la fréquence des vérifications des conditions normalement faites dans les addAction (~60Hz) */
-	execVM "R3F_ARTY_AND_LOG\R3F_LOG\surveiller_conditions_actions_menu.sqf";
-};
+		R3F_LOG_classes_objets_transportables = R3F_LOG_classes_objets_transportables + [_x select 

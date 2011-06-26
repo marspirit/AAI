@@ -1,4 +1,43 @@
-README
+.sqf";
+			};
+			
+			// Si l'objet est un véhicule remorqueur
+			if ({_objet isKindOf _x} count R3F_LOG_CFG_remorqueurs > 0) then
+			{
+				[_objet] execVM "R3F_ARTY_AND_LOG\R3F_LOG\remorqueur\remorqueur_init.sqf";
+			};
+			
+			// Si l'objet est un véhicule remorqueur
+			if ({_objet isKindOf _x} count R3F_LOG_classes_transporteurs > 0) then
+			{
+				[_objet] execVM "R3F_ARTY_AND_LOG\R3F_LOG\transporteur\transporteur_init.sqf";
+			};
+			
+			#ifdef R3F_ARTY_enable
+			// Si l'objet est un pièce d'artillerie d'un type à gérer
+			if ({_objet isKindOf _x} count R3F_ARTY_CFG_pieces_artillerie > 0) then
+			{
+				[_objet] execVM "R3F_ARTY_AND_LOG\R3F_ARTY\piece\piece_init.sqf";
+			};
+			
+			// Si c'est un calculateur
+			if (typeOf _objet == "SatPhone") then
+			{
+				[_objet] execVM "R3F_ARTY_AND_LOG\R3F_ARTY\poste_commandement\calculateur_init.sqf";
+			};
+			#endif
+			
+			sleep (20/_count_liste_vehicules);
+		};
+		
+		// Les objets ont été initialisés, on les mémorise pour ne plus les ré-initialiser
+		_liste_vehicules_connus = _liste_vehicules_connus + _liste_vehicules;
+	}
+	else
+	{
+		sleep 20;
+	};
+};README
 ======
 
 Mission: [ Insert name of mission ]
@@ -45,50 +84,4 @@ This mission (hereafter 'Software') contains files to be used in the PC CD-ROM s
 
 1. [ Insert your name(s) here. ] (hereafter 'The Author(s)') grant to you a personal, non-exclusive license to use the Software.
 
-2. The commercial exploitation of the Software without written permission from The Author(s) is expressly prohibited.
-
-
-
-04. LEGAL DISCLAIMER
-====================
-
-The Software is distributed without any warranty; without even the implied warranty of merchantability or fitness for a particular purpose. The Software is not an official addon or tool. Use of the Software (in whole or in part) is entirely at your own risk.
-
-
-
-05. INSTALLATION
-================
-
-To begin using the Software:
-
-1. Move the folder [ Insert name of your mission file here. ] into the following directory:
-
-\Program Files\Bohemia Interactive\ArmA 2\MPMissions\
-
-
-
-06. REQUIRED ADDONS
-===================
-
-To play this mission the following addons are required:
-
-[ Insert name of addon ] - [URL for downloadable copy of the addon ]
-[ Insert name of addon ] - [URL for downloadable copy of the addon ]
-[ Insert name of addon ] - [URL for downloadable copy of the addon ]
-
-
-07. NOTES
-=========
-
-[ Insert your notes here. ]
-
-
-
-08. CHANGE HISTORY
-==================
-
-Version | Date
-
-[ Insert version, format: N-N-N ] | [ Insert date, format: DD MM CCYY ]
-[ Insert change #1 here. ]
-[ Insert change #2 here. ]
+2. The commercial exploitation of the Software without written permission fr

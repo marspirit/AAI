@@ -1,4 +1,50 @@
-/**
+se;
+			_iterateur = _chargeur;
+			while {!_stop} do
+			{
+				_iterateur = inheritsFrom _iterateur;
+				
+				if (configName _iterateur in _chargeurs_base) then
+				{
+					if !(configName _chargeur in _chargeurs_compatibles) then
+					{
+						_chargeurs_compatibles = _chargeurs_compatibles + [configName _chargeur];
+					};
+					_stop = true;
+				}
+				else
+				{
+					// On est remonté à la racine de l'arborescence du configFile
+					if (configName _iterateur == "") then {_stop = true;};
+				};
+			};
+		};
+	};
+};
+
+// On retire les munitions qui nécessitent le module d'ARTY de BIS pour fonctionner
+_chargeurs_compatibles = _chargeurs_compatibles - [
+	"ARTY_30Rnd_105mmWP_M119",
+	"ARTY_30Rnd_105mmSADARM_M119",
+	"ARTY_30Rnd_105mmLASER_M119",
+	"ARTY_30Rnd_105mmSMOKE_M119",
+	"ARTY_30Rnd_105mmILLUM_M119",
+	
+	"ARTY_30Rnd_122mmWP_D30",
+	"ARTY_30Rnd_122mmSADARM_D30",
+	"ARTY_30Rnd_122mmLASER_D30",
+	"ARTY_30Rnd_122mmSMOKE_D30",
+	"ARTY_30Rnd_122mmILLUM_D30",
+	
+	"ARTY_8Rnd_81mmWP_M252",
+	"ARTY_8Rnd_81mmILLUM_M252",
+	
+	"ARTY_8Rnd_82mmWP_2B14",
+	"ARTY_8Rnd_82mmILLUM_2B14"
+];
+
+// Retour
+_chargeurs_compatibles/**
  * Lancer par une ligne d'initialisation d'une pièce d'artillerie ou d'un mortier
  * 
  * @param 0 la pièce d'artillerie ou le mortier
@@ -64,12 +110,4 @@ if !(isServer && isDedicated) then
 	
 	// Ajout des actions de menu de gestion des ordres, valide seulement quand on est à bord
 	//_piece addAction [("<t color=""#22ee22"">" + (localize "STR_R3F_ARTY_action_ordre_suivant")+ "</t>"), "R3F_ARTY_AND_LOG\R3F_ARTY\dlg_artilleur\ordre_suivant.sqf", nil, 6, false, true, "", "gunner _target == player"];
-	_piece addAction [("<t color=""#22ee22"">" + (localize "STR_R3F_ARTY_action_ouvrir_dlg_artilleur")+ "</t>"), "R3F_ARTY_AND_LOG\R3F_ARTY\dlg_artilleur\afficher_dlg_artilleur.sqf", nil, 6, false, true, "", "gunner _target == player && (isNull (uiNamespace getVariable ""R3F_ARTY_dlg_artilleur""))"];
-	_piece addAction [localize "STR_R3F_ARTY_action_fermer_dlg_artilleur", "R3F_ARTY_AND_LOG\R3F_ARTY\dlg_artilleur\fermer_dlg_artilleur.sqf", nil, 0, false, true, "", "gunner _target == player && (!isNull (uiNamespace getVariable ""R3F_ARTY_dlg_artilleur""))"];
-	_piece addAction [("<t color=""#22ee22"">" + (localize "STR_R3F_ARTY_action_purger_ordres")+ "</t>"), "R3F_ARTY_AND_LOG\R3F_ARTY\dlg_artilleur\purger_ordres.sqf", nil, 6, false, true, "", "gunner _target == player"];
-	
-	// On ajoute une action de rechargement pour chaque type de munition compatible
-	{
-		_piece addAction [("<t color=""#aa0000"">" + (localize "STR_R3F_ARTY_action_recharger_piece") + getText (configFile >> "CfgMagazines" >> _x >> "displayName") + "</t>"), "R3F_ARTY_AND_LOG\R3F_ARTY\piece\recharger_piece.sqf", [_piece, _x], 0, false, true, "", "vehicle player == _target"];
-	} forEach ([typeOf _piece] call R3F_ARTY_FNCT_get_chargeurs_compatibles_piece);
-};
+	_piece addAction [("<t color=""#22ee22"">" + (localize "STR_R3F_ARTY_action_ouvrir_dlg_artilleur")+ "</t>"), "R3F_ARTY_AND_LOG\R3F_

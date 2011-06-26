@@ -1,4 +1,38 @@
-/**
+e accompli
+private ["_index_premier_ordre"];
+_index_premier_ordre = 0;
+while {count (R3F_ARTY_ordres_recus select _index_premier_ordre) == 0} do
+{
+	_index_premier_ordre = _index_premier_ordre + 1
+};
+
+R3F_ARTY_ordres_recus set [_index_premier_ordre, []];
+
+// On raffraichit la boîte de dialogue de l'artilleur
+if (!isNull (uiNamespace getVariable "R3F_ARTY_dlg_artilleur")) then
+{
+	execVM "R3F_ARTY_AND_LOG\R3F_ARTY\dlg_artilleur\afficher_ordre.sqf";
+};/**
+ * Purge la liste des ordres en attente
+ * 
+ * Copyright (C) 2010 madbull ~R3F~
+ * 
+ * This program is free software under the terms of the GNU General Public License version 3.
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
+// On efface
+R3F_ARTY_ordres_recus = [];
+
+// On avertit
+player globalChat localize "STR_R3F_ARTY_action_purger_ordres_fait";
+
+// On raffraichit la boîte de dialogue de l'artilleur
+if (!isNull (uiNamespace getVariable "R3F_ARTY_dlg_artilleur")) then
+{
+	execVM "R3F_ARTY_AND_LOG\R3F_ARTY\dlg_artilleur\afficher_ordre.sqf";
+};/**
  * Executé lors du clic sur le bouton "Calculer". Contrôle la saisie et lance la calcul de la solution de tir
  * 
  * Copyright (C) 2010 madbull ~R3F~
@@ -166,23 +200,4 @@ else
 
 if (_tir_tendu_possible) then
 {
-	ctrlSetText [R3F_ARTY_IDC_dlg_SM_tir_tendu_valeur_azimut, [_tir_tendu_valeur_azimut] call R3F_ARTY_FNCT_formater_deux_decimales];
-	ctrlSetText [R3F_ARTY_IDC_dlg_SM_tir_tendu_valeur_azimut2, [_tir_tendu_valeur_azimut2] call R3F_ARTY_FNCT_formater_deux_decimales];
-	ctrlSetText [R3F_ARTY_IDC_dlg_SM_tir_tendu_valeur_elevation, [_tir_tendu_valeur_elevation] call R3F_ARTY_FNCT_formater_deux_decimales];
-	ctrlSetText [R3F_ARTY_IDC_dlg_SM_tir_tendu_valeur_elevation2, [_tir_tendu_valeur_elevation2] call R3F_ARTY_FNCT_formater_deux_decimales];
-	ctrlSetText [R3F_ARTY_IDC_dlg_SM_tir_tendu_valeur_temps_vol, ((str round _tir_tendu_valeur_temps_vol) + "s")];
-}
-else
-{
-	ctrlSetText [R3F_ARTY_IDC_dlg_SM_tir_tendu_valeur_azimut, "-"];
-	ctrlSetText [R3F_ARTY_IDC_dlg_SM_tir_tendu_valeur_azimut2, "-"];
-	ctrlSetText [R3F_ARTY_IDC_dlg_SM_tir_tendu_valeur_elevation, "-"];
-	ctrlSetText [R3F_ARTY_IDC_dlg_SM_tir_tendu_valeur_elevation2, "-"];
-	ctrlSetText [R3F_ARTY_IDC_dlg_SM_tir_tendu_valeur_temps_vol, "-"];
-};
-
-// Avertissement quand aucune solution trouvée (sinon on croit qu'il ne se passe rien ou que ça plante)
-if !(_tir_courbe_possible || _tir_tendu_possible) then
-{
-	player globalChat localize "STR_R3F_ARTY_aucune_solution_trouvee";
-};
+	ctrlSetText [R3F_ARTY_IDC_dlg_SM_tir_tendu_valeur_azimut, [_tir_tendu_valeur_azimut] call R3F_ARTY_FNCT_formater_deux_decimales

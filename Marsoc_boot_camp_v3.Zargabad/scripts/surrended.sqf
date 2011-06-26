@@ -1,23 +1,24 @@
-// =========================================================================================================
-//  Script for adding the action of follow player.
-//  Version: 1.0 
-//  Author: Monsada (smirall@hotmail.com)
-// ---------------------------------------------------------------------------------------------------------
-private ["_side","_soldiers"];
-_side = _this select 0;
-
-_soldiers = switch (_side) do {
-  case west: {KRON_AllWest};
-  case east: {KRON_AllEast};
-  case resistance: {KRON_AllRes};
-};
-
-{
-	if ( leader _x == _x ) then {
-		_x addaction ["Order your men to follow me", "scripts\actions\followme.sqf", [], 1, false];
+ies = KRON_AllWest;
+	KRON_UPS_West_enemies = KRON_AllEast;
+	
+	if (east in KRON_UPS_Res_enemy ) then {	
+		KRON_UPS_East_enemies = KRON_UPS_East_enemies+KRON_AllRes;
+		KRON_UPS_Guer_enemies = KRON_AllEast;
 	} else {
-		_x addaction ["Follow me", "scripts\actions\followme.sqf", [], 1, false];
+		KRON_UPS_East_friends = KRON_UPS_East_friends+KRON_AllRes;
+		KRON_UPS_Guer_friends = KRON_AllEast;
+	}; 
+		
+	if (west in KRON_UPS_Res_enemy ) then {
+		KRON_UPS_West_enemies = KRON_UPS_West_enemies+KRON_AllRes;
+		KRON_UPS_Guer_enemies = KRON_UPS_Guer_enemies+KRON_AllWest;
+	} else {
+		KRON_UPS_West_friends = KRON_UPS_West_friends+KRON_AllRes;
+		KRON_UPS_Guer_friends = KRON_UPS_Guer_friends+KRON_AllWest;
 	};
-}foreach _soldiers;	
- 
-if (true) exitWith {};
+
+	KRON_UPS_West_Total = count KRON_AllWest;		
+	KRON_UPS_East_Total = count KRON_AllEast;
+	KRON_UPS_Guer_Total = count KRON_AllRes;		
+	
+	//Initialization

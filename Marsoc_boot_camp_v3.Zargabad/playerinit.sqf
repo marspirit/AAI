@@ -1,4 +1,82 @@
-player creatediaryrecord ["diary", ["Factories", "Heavy Factory can produce tracked vehicles such as the M1A1.<br /><br />Light Factory can produce cars like the HMMWV.<br /><br />Aircraft Factory can make helicopters and planes.<br /><br />MTVR (Repair) can make Field Hospitals and fortifications.<br /><br />MTVR (Ammunition) can make ammo crates and guns like the M119.<br /><br />LAV-25 (HQ) can make bikes and ammo crates."]];
+""Bargate"", 1]";
+			class Effects
+			{
+			};
+		};
+	};
+};
+class Intro
+{
+	addOns[]=
+	{
+		"zargabad"
+	};
+	addOnsAuto[]=
+	{
+		"zargabad"
+	};
+	randomSeed=5875250;
+	class Intel
+	{
+		startWeather=0.25;
+		forecastWeather=0.25;
+		year=2008;
+		month=10;
+		day=11;
+		hour=9;
+		minute=20;
+	};
+};
+class OutroWin
+{
+	addOns[]=
+	{
+		"zargabad"
+	};
+	addOnsAuto[]=
+	{
+		"zargabad"
+	};
+	randomSeed=15434763;
+	class Intel
+	{
+		startWeather=0.25;
+		forecastWeather=0.25;
+		year=2008;
+		month=10;
+		day=11;
+		hour=9;
+		minute=20;
+	};
+};
+class OutroLoose
+{
+	addOns[]=
+	{
+		"zargabad"
+	};
+	addOnsAuto[]=
+	{
+		"zargabad"
+	};
+	randomSeed=477795;
+	class Intel
+	{
+		startWeather=0.25;
+		forecastWeather=0.25;
+		year=2008;
+		month=10;
+		day=11;
+		hour=9;
+		minute=20;
+	};
+};
+; F2 - Kegetys Spectator Script
+; Credits: Please see the F2 online manual (http://www.ferstaberinde.com/f2/en/)
+; ====================================================================================
+
+; Initialize spectating script when player dies:
+_this call ace_fnc_startSpectator;player creatediaryrecord ["diary", ["Factories", "Heavy Factory can produce tracked vehicles such as the M1A1.<br /><br />Light Factory can produce cars like the HMMWV.<br /><br />Aircraft Factory can make helicopters and planes.<br /><br />MTVR (Repair) can make Field Hospitals and fortifications.<br /><br />MTVR (Ammunition) can make ammo crates and guns like the M119.<br /><br />LAV-25 (HQ) can make bikes and ammo crates."]];
 //player creatediaryrecord ["diary", ["Revive", "If anyone is incapacitated they will roll in pain on the ground. You can revive them by going up to them and running the action First Aid. If they were hurt inside a vehicle, you can go up to the vehicle and take out injured.<br /><br />If you try to crawl and fight while in this incapacitated state you may risk death if you take any more damage.<br /><br />When someone is revived, they are not healed, only allowed to move around again freely. They should still find an actual medic to heal them."]];
 player creatediaryrecord ["diary", ["About", "You can create vehicles from factories by pressing the <execute expression=""[nil, nil, nil, nil] execvm 'dlg.sqf'"">teamswitch button</execute> (default T).<br /><br />If you press the teamswitch key near a flagpole, hospital tent, or LAV-25 (HQ) you can warp to any other on the map.<br /><br />Go to the <execute expression=""if not isnil 'BIS_MENU_GroupCommunication' then {showcommandingmenu '#User:BIS_MENU_GroupCommunication'}"">Communication menu</execute> by pressing 0, then 8 for some extra commands, like the ability to change view distance or tow vehicles.<br /><br />There is a UAV Terminal available at base if a UAV is in the sky. You may need to adjust the brightness by using the mouse wheel.<br /><br />Map by Doolittle<br />For 1st Infantry Division"]];
 player setvariable ["BIS_noCoreConversations", true];
@@ -387,32 +465,4 @@ doomouseup = {
 	if (doomousedownpos distance doomouseuppos < 5) exitwith {};
 	if not (createdialog "doodialog") exitwith {};
 	"spawnmarker" setmarkerposlocal [((doomousedownpos select 0) + (doomouseuppos select 0)) / 2, ((doomousedownpos select 1) + (doomouseuppos select 1)) / 2];
-	"spawnmarker" setmarkerdirlocal ((doomousedownpos select 0) - (doomouseuppos select 0)) atan2 ((doomousedownpos select 1) - (doomouseuppos select 1));
-	"spawnmarker" setmarkersizelocal [20, (doomousedownpos distance doomouseuppos) / 2];
-	uinamespace setvariable ["doolb", finddisplay 3000 displayctrl 3002];
-	for [{_i = 0}, {_i < count spawnarray}, {_i = _i + 1}] do {
-		_s = (spawnarray select _i) select 0;
-		if (_s in [doowptype, doospawntype, dooforcesize]) then {
-			_s = _s + " (Current)";
-		};
-		_index = (uinamespace getvariable "doolb") lbadd _s;
-		(uinamespace getvariable "doolb") lbsetdata [_index, str _i];
-		(uinamespace getvariable "doolb") lbsetpicture [_index, (spawnarray select _i) select 1];
-	};
-	buytype = "spawn";
-	lbsetcursel [3002, currentselect];
-};
-finddisplay 12 displayctrl 51 ctrladdeventhandler ["mousebuttondown", "_this call doomousedown"];
-finddisplay 12 displayctrl 51 ctrladdeventhandler ["mousebuttonup", "_this call doomouseup"];
-
-doowptype = "Waypoint is Move";
-doospawntype = "Spawn as Russian";
-dooforcesize = "Random size force";
-[] spawn {
-	while {true} do {
-		waituntil {dialog};
-		waituntil {not dialog};
-		"spawnmarker" setmarkersizelocal [20, 0];
-		sleep 1;
-	};
-};
+	"spawnmarker" setmarkerdirlocal ((doomousedownpos select 0) - (doomouseuppos select 0)) atan2 ((doomousedownpos select 1) - (doomouseupp

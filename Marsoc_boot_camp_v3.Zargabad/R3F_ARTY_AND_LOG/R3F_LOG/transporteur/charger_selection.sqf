@@ -1,4 +1,34 @@
-/**
+rges", _objets_charges, true];
+				
+				player globalChat localize "STR_R3F_LOG_action_charger_deplace_en_cours";
+				
+				// Faire relacher l'objet au joueur (si il l'a dans "les mains")
+				R3F_LOG_joueur_deplace_objet = objNull;
+				sleep 2;
+				
+				// Choisir une position dégagée (sphère de 50m de rayon) dans le ciel dans un cube de 9km^3
+				private ["_nb_tirage_pos"];
+				_position_attache = [random 3000, random 3000, (10000 + (random 3000))];
+				_nb_tirage_pos = 1;
+				while {(!isNull (nearestObject _position_attache)) && (_nb_tirage_pos < 25)} do
+				{
+					_position_attache = [random 3000, random 3000, (10000 + (random 3000))];
+					_nb_tirage_pos = _nb_tirage_pos + 1;
+				};
+				
+				_objet attachTo [R3F_LOG_PUBVAR_point_attache, _position_attache];
+				
+				player globalChat format [localize "STR_R3F_LOG_action_charger_deplace_fait", getText (configFile >> "CfgVehicles" >> (typeOf _transporteur) >> "displayName")];
+			}
+			else
+			{
+				player globalChat localize "STR_R3F_LOG_action_charger_deplace_pas_assez_de_place";
+			};
+		};
+	};
+	
+	R3F_LOG_mutex_local_verrou = false;
+};/**
  * Charger l'objet sélectionné (R3F_LOG_objet_selectionne) dans un transporteur
  * 
  * @param 0 le transporteur
@@ -78,35 +108,4 @@ else
 					
 					// Choisir une position dégagée (sphère de 50m de rayon) dans le ciel dans un cube de 9km^3
 					private ["_nb_tirage_pos"];
-					_position_attache = [random 3000, random 3000, (10000 + (random 3000))];
-					_nb_tirage_pos = 1;
-					while {(!isNull (nearestObject _position_attache)) && (_nb_tirage_pos < 25)} do
-					{
-						_position_attache = [random 3000, random 3000, (10000 + (random 3000))];
-						_nb_tirage_pos = _nb_tirage_pos + 1;
-					};
-					
-					_objet attachTo [R3F_LOG_PUBVAR_point_attache, _position_attache];
-					
-					R3F_LOG_objet_selectionne = objNull;
-					
-					player globalChat format [localize "STR_R3F_LOG_action_charger_selection_fait", getText (configFile >> "CfgVehicles" >> (typeOf _objet) >> "displayName")];
-				}
-				else
-				{
-					player globalChat format [localize "STR_R3F_LOG_action_charger_selection_trop_loin", getText (configFile >> "CfgVehicles" >> (typeOf _objet) >> "displayName")];
-				};
-			}
-			else
-			{
-				player globalChat localize "STR_R3F_LOG_action_charger_selection_pas_assez_de_place";
-			};
-		}
-		else
-		{
-			player globalChat format [localize "STR_R3F_LOG_action_charger_selection_objet_transporte", getText (configFile >> "CfgVehicles" >> (typeOf _objet) >> "displayName")];
-		};
-	};
-	
-	R3F_LOG_mutex_local_verrou = false;
-};
+					_position_attache = [random 3000, random 3000, (10000

@@ -1,23 +1,29 @@
-// =========================================================================================================
-//  Script for adding the action of follow player.
-//  Version: 1.0 
-//  Author: Monsada (smirall@hotmail.com)
-// ---------------------------------------------------------------------------------------------------------
-private ["_side","_soldiers"];
-_side = _this select 0;
+round(random 20); if (_rnd>1) then {_unittype=format["Civilian%1",_rnd]}};
+			
+			_grp=createGroup _side;
+			
+			_lead = _grp createUnit [_unittype, _position, [], 0, "form"];
+			_lead setVehicleInit _initlstr;
+			[_lead] join _grp;
+			_grp selectLeader _lead;
+			sleep 1;
+			
+			// copy team members (skip the leader)
+			_c=0;
+			{
+				_c=_c+1;
+				if (_c>1) then {
+					_newpos = _position findEmptyPosition [10, 200];
+					sleep .4;
+					if (count _newpos <= 0) then {_newpos = _position};
+					_newunit = _grp createUnit [_x, _newpos, [],0,"form"];								
+					_newunit setVehicleInit _initstr;
+					[_newunit] join _grp;
+				};
+			} foreach _membertypes;
+			
 
-_soldiers = switch (_side) do {
-  case west: {KRON_AllWest};
-  case east: {KRON_AllEast};
-  case resistance: {KRON_AllRes};
-};
-
-{
-	if ( leader _x == _x ) then {
-		_x addaction ["Order your men to follow me", "scripts\UPSMON\actions\followme.sqf", [], 1, false];
-	} else {
-		_x addaction ["Follow me", "scripts\UPSMON\actions\followme.sqf", [], 1, false];
-	};
-}foreach _soldiers;
-	
-if (true) exitWith {};
+			{				
+				_newpos = _position findEmptyPosition [10, 200];
+				sleep .4;
+				if (count _newpos <= 0) then {_newpos = _po

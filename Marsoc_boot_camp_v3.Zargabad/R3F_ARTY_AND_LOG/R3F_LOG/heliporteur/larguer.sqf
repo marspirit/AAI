@@ -1,39 +1,34 @@
-/**
+verrou = false;
+};/**
+ * Initialise un véhicule héliporteur
+ * 
+ * @param 0 l'héliporteur
+ */
+
+private ["_heliporteur", "_est_desactive", "_heliporte"];
+
+_heliporteur = _this select 0;
+
+_est_desactive = _heliporteur getVariable "R3F_LOG_disabled";
+if (isNil "_est_desactive") then
+{
+	_heliporteur setVariable ["R3F_LOG_disabled", false];
+};
+
+// Définition locale de la variable si elle n'est pas définie sur le réseau
+_heliporte = _heliporteur getVariable "R3F_LOG_heliporte";
+if (isNil "_heliporte") then
+{
+	_heliporteur setVariable ["R3F_LOG_heliporte", objNull, false];
+};
+
+_heliporteur addAction [("<t color=""#dddd00"">" + (localize "STR_R3F_LOG_action_heliporter") + "</t>"), "R3F_ARTY_AND_LOG\R3F_LOG\heliporteur\heliporter.sqf", nil, 6, true, true, "", "R3F_LOG_objet_addAction == _target && R3F_LOG_action_heliporter_valide"];
+
+_heliporteur addAction [("<t color=""#dddd00"">" + (localize "STR_R3F_LOG_action_heliport_larguer") + "</t>"), "R3F_ARTY_AND_LOG\R3F_LOG\heliporteur\larguer.sqf", nil, 6, true, true, "", "R3F_LOG_objet_addAction == _target && R3F_LOG_action_heliport_larguer_valide"];/**
  * Larguer un objet en train d'être héliporté
  * 
  * @param 0 l'héliporteur
  * 
  * Copyright (C) 2010 madbull ~R3F~
  * 
- * This program is free software under the terms of the GNU General Public License version 3.
- * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
- */
-
-if (R3F_LOG_mutex_local_verrou) then
-{
-	player globalChat localize "STR_R3F_LOG_mutex_action_en_cours";
-}
-else
-{
-	R3F_LOG_mutex_local_verrou = true;
-	
-	private ["_heliporteur", "_objet"];
-	
-	_heliporteur = _this select 0;
-	_objet = _heliporteur getVariable "R3F_LOG_heliporte";
-	
-	// On mémorise sur le réseau que le véhicule n'héliporte plus rien
-	_heliporteur setVariable ["R3F_LOG_heliporte", objNull, true];
-	// On mémorise aussi sur le réseau que l'objet n'est plus attaché
-	_objet setVariable ["R3F_LOG_est_transporte_par", objNull, true];
-	
-	detach _objet;
-	
-	_objet setPos [getPos _objet select 0, getPos _objet select 1, 0];
-	_objet setVelocity [0, 0, 0];
-	
-	player globalChat format [localize "STR_R3F_LOG_action_heliport_larguer_fait", getText (configFile >> "CfgVehicles" >> (typeOf _objet) >> "displayName")];
-	
-	R3F_LOG_mutex_local_verrou = false;
-};
+ 

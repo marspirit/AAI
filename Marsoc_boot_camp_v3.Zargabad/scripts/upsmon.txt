@@ -1,4 +1,53 @@
-// ---------------------------------------------------------------------------------------------------------
+d] join _grp;
+	_grp selectLeader _lead;
+	//sleep 1;
+	
+	// copy team members (skip the leader)
+	_c=0;
+	{
+		_c=_c+1;
+		if (_c>1) then {
+			_newunit = _grp createUnit [_x, _orgpos, [],0,"form"];
+			_newunit setVehicleInit _initstr;
+			[_newunit] join _grp;
+		};
+	} foreach _membertypes;
+	
+	{				
+		_targetpos = _orgpos findEmptyPosition [10, 200];
+		sleep .4;
+		if (count _newpos <= 0) then {_targetpos = _orgpos};
+		//if (KRON_UPS_Debug>0) then {player globalchat format["%1 create vehicle _newpos %2 ",_x,_targetpos]};	
+		_newunit = _x createvehicle (_targetpos);											
+	} foreach _vehicletypes;		
+	
+	//Set new parameters
+	if (!_spawned) then {_UCthis = _UCthis + ["SPAWNED"]};	
+	_UCthis set [0,_lead];
+	_respawnmax = _respawnmax - 1;
+	_UCthis =  ["RESPAWN:",_respawnmax,_UCthis] call KRON_UPSsetArg;
+	
+	//Exec UPSMON script			
+	_UCthis SPAWN UPSMON;
+	
+	processInitCommands;
+};	
+
+_friends=nil;
+_enemies=nil;
+_enemytanks = nil;
+_friendlytanks = nil;
+_roads = nil;
+_targets = nil;
+_members = nil;
+_membertypes = nil;
+_UCthis = nil;
+
+if (!alive _npc) then {
+	deleteGroup _grp;
+};
+
+if(true) exitWith {}; // ---------------------------------------------------------------------------------------------------------
 //  Autor: Monsada (SMM) 27.11.2009
 //		(smirall@hotmail.com)
 //		http://www.simulacion-esp.com/
@@ -239,21 +288,4 @@ Historial de modificaciones:
 //		Sistema de combate urbano.  La Ia ajusta el flanjeo y sus movimientos al tipo de superficie.
 //	Modificaciones
 //		Ahora los pelotones verifican la presencia de aliados para determinar otras rutas de flanqueo.
-//		Se ha substituido el algoritmo de determinación de posiciones de flanqueo por un bug con las funciones cos y sin 
-//		que retornan aleatoriamente valores positivos o negativos con el mismo ángulo.
-//
-//-------------------------------------------------------------------------------------------------------------
-// Version: 3.0.0
-// 	Added:
-// 		Improved IA flanking possitions
-// 		Improved IA movements in combat
-// 		Now IA can be supressed by fire
-// 		IA may use smoke grenades when in fire
-// 		Improved performance (this script now runs every 15s and do not need to stress to 1 second)
-// 		Implemented comunications simulating radio to know enemy position
-//Errores corregidos y modificaciones
-//	Corregida la función KRON_distancePosSqr que no devolvia la distancia correcta entre dos puntos
-//	Corregido bug que no alimentaba correctamente el objetivocompartido cuando este fallecia
-//	Corregido control de la distancia al objetivo que hacia que la IA no flanquera
-//    Algoritmo de control de acción y movimiento modificado
-// =========================================================================================================
+//		Se ha substituido el algoritmo de determ

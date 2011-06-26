@@ -1,4 +1,38 @@
-﻿STR_R3F_ARTY_action_installer_poste,	"Deploy artillery command quarter",	"Déployer poste de commandement d'artillerie"
+t";
+	};
+	
+	R3F_LOG_mutex_local_verrou = false;
+};/** Ouvre la bo�te de dialogue de saisie de mision de tir (lanc� depuis addAction) */
+
+createDialog "R3F_ARTY_dlg_saisie_mission";/**
+ * Supprime un poste de de commandement li� � un calculateur
+ * A ex�cuter sur le serveur (via un publicVariable)
+ * 
+ * @param 0 le calculateur du poste de commandement d'artillerie
+ * 
+ * Copyright (C) 2010 madbull ~R3F~
+ * 
+ * This program is free software under the terms of the GNU General Public License version 3.
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
+if (isServer) then
+{
+	private ["_calculateur", "_objets_crees"];
+	
+	_calculateur = _this select 0;
+	_objets_crees = _calculateur getVariable "R3F_ARTY_poste_commandement_objets_crees";
+	
+	for [{_i = 0}, {_i < count _objets_crees}, {_i = _i + 1}] do
+	{
+		deleteVehicle (_objets_crees select _i);
+		sleep 0.2;
+	};
+	
+	_calculateur setVariable ["R3F_ARTY_poste_commandement_objets_crees", []];
+	_calculateur setVariable ["R3F_LOG_disabled", false, true];
+};﻿STR_R3F_ARTY_action_installer_poste,	"Deploy artillery command quarter",	"Déployer poste de commandement d'artillerie"
 STR_R3F_ARTY_action_demonter_poste,	"Uninstall artillery command quarter",	"Désinstaller poste de commandement d'artillerie"
 
 STR_R3F_ARTY_action_recharger_piece,	"Reload with ",	"Recharger avec "
@@ -96,4 +130,4 @@ STR_R3F_ARTY_dlg_SM_ordres_recus_un,	"%1 gave you a new fire order.",	"%1 vous a
 STR_R3F_ARTY_dlg_clic_carte_titre,	"Click on map to pick the coordinates :",	"Cliquez sur la carte pour récupérer les coordonnées :"
 STR_R3F_ARTY_dlg_clic_carte_btn_annuler,	"Cancel",	"Annuler"
 
-STR_R3F_ARTY_dlg_SM_aide_contenu,	"<t size=""1.22"">Interface in two parts :</t><br />- At top : input the fire informations<br />- At bottom : consult the fire solution and transmit orders<br /><t size=""0.5""> </t><br /><t size=""1.25"">Position's coordinate :</t><br />- Based on GPS coordinates<br />- Longitude : from left to right<br />- Latitude : from top to bottom<br />- The input format is 4 digits with zeros leading. The latitude value 0254 indicates the subdivision 4 of the latitude 025. The origin is the top-left corner.<br /><t size=""0.5""> </t><br /><t size=""1.25"">Correction :</t><br />- Dir. to target : relative to the observer<br />- Two axis. The way for an axis is defined by the sign of the value.<br /><t size=""0.5""> </t><br /><t size=""1.25"">Dispersion and nb of rounds :</t><br />How many shells to fire in the area of the defined diameter.<br /><t size=""0.5""> </t><br /><t size=""1.25"">Solution high and low :</t><br />To hit a target, there are usually a ""straight"" shot (low) and a ""curved"" shot (high). The curved shot is often better or imposed.<br /><t size=""0.5""> </t><br /><t size=""1.25"">Selection of operators :</t><br />All players are listed. Select one or several player(s) to whom transmit orders. The nb of rounds is distributed between them.",	"<t size=""1.22"">Interface en deux parties :</t><br />- En haut : saisir les informations<br />- En bas : consulter les solutions de tir et transmettre les ordres<br /><t size=""0.5""> </t><br /><t size=""1.25"">Coordonnée de position :</t><br />- Basé sur les coordonnées GPS<br />- Longitude : de gauche à droite<br />- Latitude : de haut en bas<br />- Le format de saisie est de 4 chiffres, avec des zéros devant. La valeur de latitude 0254 indique la sous-division 4 de la latitude 025. L'origine est le coin haut-gauche.<br /><t size=""0.5""> </t><br /><t size=""1.25"">Correction :</t><br />- Direction cible : depuis l'observateur<br />- Deux axes. Le sens pour un axe est donnée par le signe de la valeur.<br /><t size=""0.5""> </t><br /><t size=""1.25"">Dispersion et nb de tirs :</t><br />Combien d'obus tirer dans la zone du diamètre indiqué.<br /><t size=""0.5""> </t><br /><t size=""1.25"">Solution haute et basse :</t><br />Pour atteindre une cible, il y a généralement un tir ""tendu"" (bas) et un tir ""courbé"" (haut). Le tir courbé est souvent préferable ou imposé.<br /><t size=""0.5""> </t><br /><t size=""1.25"">Sélection des artilleurs :</t><br />Tout les joueurs sont listés. Sélectionnez un ou plusieurs joueur(s) à qui transmettre les ordres. Le nb de tirs sera réparti entre eux."
+STR_R3F_ARTY_dlg_SM_aide_contenu,	"<t size=""1.22"">Interface in two parts :</t><br />- At top : input the fire informations<br />- At bottom : consult the fire solution and transmit orders<br /><t size=""0.5""> </t><br /><t size=""1.25"">Position's coordinate :</t><br />- Based on GPS coordinates<br />- Longitude : from left to right<br />- Latitude : from top to bottom<br />- The input format is 4 digits with zeros leading. The latitude value 0254 indicates the subdivision 4 of the latitude 025. The origin is the top-left corner.<br /><t size=""0.5""> </t><br /><t size=""1.25"">Correction :</t><br />- Dir. to target : relative to the observer<br />- Two axis. The way for an axis is defined by the sign of the value.<br /><t size=""0.5""> </t><br /><t size=""1.25"">Dispersion and nb of rounds :</t><br />How many shells to fire in the area of the defined diameter.<br /><t size=""0.5""> </t><br /><t size=""1.25"">Solution high and low :</t><br />To hit a target, there are usually a ""straight"" shot (low) and a ""curved"" shot (high). The curved shot is often better or imposed.<br /><t size=""0.5""> </t><br /><t size=""1.25"">Selection of operators :</t><br />All players are listed. Select one or several player(s) to whom transmit orders. The nb of rounds is distributed between them.",	"<t size=""1.22"">Interface en deux parties :</t><br />- En haut : saisir les informations<br />- En bas : consulter les solutions de tir et transmettre les ordres<br /><t size=""0.5""> </t><br /><t size=""1.25"">Coordonn�

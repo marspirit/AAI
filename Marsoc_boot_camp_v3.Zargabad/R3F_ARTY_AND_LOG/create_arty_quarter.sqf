@@ -1,6 +1,3 @@
-/**
- * Redirects to the script creating the artillery command quarter
- * 
- * @param 0 le calculateur du poste de commandement d'artillerie
- */
-[_this select 0] execVM "R3F_ARTY_AND_LOG\R3F_ARTY\poste_commandement\creer_poste_commandement.sqf";
+weightness of the logistics (objects auto-detection)
+- Improved : Fire solution search algorithm (max duration decreased and script warning removed)
+- Fixed : Something seemed to make the ArmA 2 game engine unstable on specific computer config

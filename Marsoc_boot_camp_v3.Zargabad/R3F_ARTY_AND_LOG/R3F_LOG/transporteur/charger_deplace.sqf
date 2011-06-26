@@ -1,4 +1,21 @@
-/**
+_selection_valide = false;
+		R3F_LOG_action_contenu_vehicule_valide = false;
+		R3F_LOG_action_remorquer_deplace_valide = false;
+		R3F_LOG_action_remorquer_selection_valide = false;
+		
+		// Condition action heliporter
+		R3F_LOG_action_heliporter_valide = (driver R3F_LOG_objet_addAction == player &&
+			({_x != R3F_LOG_objet_addAction && !(_x getVariable "R3F_LOG_disabled")} count (nearestObjects [R3F_LOG_objet_addAction, R3F_LOG_CFG_objets_heliportables, 15]) > 0) &&
+			isNull (R3F_LOG_objet_addAction getVariable "R3F_LOG_heliporte") && ([0,0,0] distance velocity R3F_LOG_objet_addAction < 6) && (getPos R3F_LOG_objet_addAction select 2 > 1) &&
+			!(R3F_LOG_objet_addAction getVariable "R3F_LOG_disabled"));
+		
+		// Condition action heliport_larguer
+		R3F_LOG_action_heliport_larguer_valide = (driver R3F_LOG_objet_addAction == player && !isNull (R3F_LOG_objet_addAction getVariable "R3F_LOG_heliporte") &&
+			([0,0,0] distance velocity R3F_LOG_objet_addAction < 15) && (getPos R3F_LOG_objet_addAction select 2 < 40) && !(R3F_LOG_objet_addAction getVariable "R3F_LOG_disabled"));
+	};
+	
+	sleep 0.3;
+};/**
  * Charger l'objet déplacé par le joueur dans un transporteur
  * 
  * Copyright (C) 2010 madbull ~R3F~
@@ -71,34 +88,4 @@ else
 			{
 				// On mémorise sur le réseau le nouveau contenu du véhicule
 				_objets_charges = _objets_charges + [_objet];
-				_transporteur setVariable ["R3F_LOG_objets_charges", _objets_charges, true];
-				
-				player globalChat localize "STR_R3F_LOG_action_charger_deplace_en_cours";
-				
-				// Faire relacher l'objet au joueur (si il l'a dans "les mains")
-				R3F_LOG_joueur_deplace_objet = objNull;
-				sleep 2;
-				
-				// Choisir une position dégagée (sphère de 50m de rayon) dans le ciel dans un cube de 9km^3
-				private ["_nb_tirage_pos"];
-				_position_attache = [random 3000, random 3000, (10000 + (random 3000))];
-				_nb_tirage_pos = 1;
-				while {(!isNull (nearestObject _position_attache)) && (_nb_tirage_pos < 25)} do
-				{
-					_position_attache = [random 3000, random 3000, (10000 + (random 3000))];
-					_nb_tirage_pos = _nb_tirage_pos + 1;
-				};
-				
-				_objet attachTo [R3F_LOG_PUBVAR_point_attache, _position_attache];
-				
-				player globalChat format [localize "STR_R3F_LOG_action_charger_deplace_fait", getText (configFile >> "CfgVehicles" >> (typeOf _transporteur) >> "displayName")];
-			}
-			else
-			{
-				player globalChat localize "STR_R3F_LOG_action_charger_deplace_pas_assez_de_place";
-			};
-		};
-	};
-	
-	R3F_LOG_mutex_local_verrou = false;
-};
+				_transporteur setVariable ["R3F_LOG_objets_cha

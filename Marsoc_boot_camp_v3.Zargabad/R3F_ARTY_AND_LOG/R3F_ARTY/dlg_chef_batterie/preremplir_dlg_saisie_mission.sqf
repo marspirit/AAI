@@ -1,4 +1,26 @@
-/**
+s 2D en coordonnées GPS à 4 chiffres
+_x_grille = round ((_pos select 0) / 10);
+_y_grille = round ((R3F_ARTY_CFG_hauteur_ile - (_pos select 1)) / 10);
+
+if (_x_grille < 0 || _y_grille < 0) exitWith {player globalChat localize "STR_R3F_ARTY_dlg_clic_carte_erreur_hors_champ";};
+
+// Passage en notation à 4 chiffres, avec zéros devant
+_longitude = str _x_grille;
+while {count toArray _longitude < 4} do {_longitude = "0" + _longitude;};
+_latitude = str _y_grille;
+while {count toArray _latitude < 4} do {_latitude = "0" + _latitude;};
+
+disableSerialization; // A cause des displayCtrl
+
+#include "dlg_constantes.h"
+
+_dlg_saisie_mission = findDisplay R3F_ARTY_IDD_dlg_saisie_mission;
+// Mise à jour des champs de texte
+_dlg_saisie_mission displayCtrl R3F_ARTY_IDC_dlg_SM_position_batterie_valeur_long ctrlSetText _longitude;
+_dlg_saisie_mission displayCtrl R3F_ARTY_IDC_dlg_SM_position_batterie_valeur_lat ctrlSetText _latitude;
+_dlg_saisie_mission displayCtrl R3F_ARTY_IDC_dlg_SM_position_batterie_valeur_alt ctrlSetText str (round (_pos select 2));
+
+player globalChat localize "STR_R3F_ARTY_pos_joueur_fait";/**
  * Prérempli le formulaire de saisie de mission
  * 
  * Copyright (C) 2010 madbull ~R3F~
@@ -71,19 +93,4 @@ if (uiNamespace getVariable "R3F_ARTY_mem_info_tir_valeur_munition" > 0) then
 (_dlg_saisie_mission displayCtrl R3F_ARTY_IDC_dlg_SM_tir_courbe_valeur_temps_vol) ctrlSetText (uiNamespace getVariable "R3F_ARTY_mem_tir_courbe_valeur_temps_vol");
 
 (_dlg_saisie_mission displayCtrl R3F_ARTY_IDC_dlg_SM_tir_tendu_valeur_elevation) ctrlSetText (uiNamespace getVariable "R3F_ARTY_mem_tir_tendu_valeur_elevation");
-(_dlg_saisie_mission displayCtrl R3F_ARTY_IDC_dlg_SM_tir_tendu_valeur_elevation2) ctrlSetText (uiNamespace getVariable "R3F_ARTY_mem_tir_tendu_valeur_elevation2");
-(_dlg_saisie_mission displayCtrl R3F_ARTY_IDC_dlg_SM_tir_tendu_valeur_azimut) ctrlSetText (uiNamespace getVariable "R3F_ARTY_mem_tir_tendu_valeur_azimut");
-(_dlg_saisie_mission displayCtrl R3F_ARTY_IDC_dlg_SM_tir_tendu_valeur_azimut2) ctrlSetText (uiNamespace getVariable "R3F_ARTY_mem_tir_tendu_valeur_azimut2");
-(_dlg_saisie_mission displayCtrl R3F_ARTY_IDC_dlg_SM_tir_tendu_valeur_temps_vol) ctrlSetText (uiNamespace getVariable "R3F_ARTY_mem_tir_tendu_valeur_temps_vol");
-
-// Selon la configuration on grise les boutons "Pos joueur" et "Clic carte"
-if (!R3F_ARTY_CFG_autoriser_pos_joueur) then
-{
-	(_dlg_saisie_mission displayCtrl R3F_ARTY_IDC_dlg_SM_position_batterie_btn_pos_joueur) ctrlEnable false;
-};
-
-if (!R3F_ARTY_CFG_autoriser_clic_carte) then
-{
-	(_dlg_saisie_mission displayCtrl R3F_ARTY_IDC_dlg_SM_position_batterie_btn_clic_carte) ctrlEnable false;
-	(_dlg_saisie_mission displayCtrl R3F_ARTY_IDC_dlg_SM_position_cible_btn_clic_carte) ctrlEnable false;
-};
+(_dlg_saisie_mission display

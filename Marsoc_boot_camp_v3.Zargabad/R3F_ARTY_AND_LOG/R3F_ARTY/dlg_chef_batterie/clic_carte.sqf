@@ -1,4 +1,23 @@
-/**
+];
+	ctrlSetText [R3F_ARTY_IDC_dlg_SM_tir_tendu_valeur_azimut2, [_tir_tendu_valeur_azimut2] call R3F_ARTY_FNCT_formater_deux_decimales];
+	ctrlSetText [R3F_ARTY_IDC_dlg_SM_tir_tendu_valeur_elevation, [_tir_tendu_valeur_elevation] call R3F_ARTY_FNCT_formater_deux_decimales];
+	ctrlSetText [R3F_ARTY_IDC_dlg_SM_tir_tendu_valeur_elevation2, [_tir_tendu_valeur_elevation2] call R3F_ARTY_FNCT_formater_deux_decimales];
+	ctrlSetText [R3F_ARTY_IDC_dlg_SM_tir_tendu_valeur_temps_vol, ((str round _tir_tendu_valeur_temps_vol) + "s")];
+}
+else
+{
+	ctrlSetText [R3F_ARTY_IDC_dlg_SM_tir_tendu_valeur_azimut, "-"];
+	ctrlSetText [R3F_ARTY_IDC_dlg_SM_tir_tendu_valeur_azimut2, "-"];
+	ctrlSetText [R3F_ARTY_IDC_dlg_SM_tir_tendu_valeur_elevation, "-"];
+	ctrlSetText [R3F_ARTY_IDC_dlg_SM_tir_tendu_valeur_elevation2, "-"];
+	ctrlSetText [R3F_ARTY_IDC_dlg_SM_tir_tendu_valeur_temps_vol, "-"];
+};
+
+// Avertissement quand aucune solution trouvée (sinon on croit qu'il ne se passe rien ou que ça plante)
+if !(_tir_courbe_possible || _tir_tendu_possible) then
+{
+	player globalChat localize "STR_R3F_ARTY_aucune_solution_trouvee";
+};/**
  * Récupère les coordonnées du clic et préremplie les champs correspondant à la position de la batterie ou de la cible
  * 
  * @param les infos du clic effectué sur la carte
@@ -41,27 +60,4 @@ if (_this select 1 == 0) then
 	#include "dlg_constantes.h"
 	
 	// Si l'appel a été fait pour la position de la cible
-	if (uiNamespace getVariable "R3F_ARTY_dlg_saisie_mission_preremplir" == "cible") then
-	{
-		private ["_dlg_saisie_mission"];
-		
-		_dlg_saisie_mission = findDisplay R3F_ARTY_IDD_dlg_saisie_mission;
-		// Mise à jour des champs de texte
-		_dlg_saisie_mission displayCtrl R3F_ARTY_IDC_dlg_SM_position_cible_valeur_long ctrlSetText _longitude;
-		_dlg_saisie_mission displayCtrl R3F_ARTY_IDC_dlg_SM_position_cible_valeur_lat ctrlSetText _latitude;
-		_dlg_saisie_mission displayCtrl R3F_ARTY_IDC_dlg_SM_position_cible_valeur_alt ctrlSetText (str _altitude);
-	}
-	// Si l'appel a été fait pour la position de la batterie
-	else
-	{
-		private ["_dlg_saisie_mission"];
-		
-		_dlg_saisie_mission = findDisplay R3F_ARTY_IDD_dlg_saisie_mission;
-		// Mise à jour des champs de texte
-		_dlg_saisie_mission displayCtrl R3F_ARTY_IDC_dlg_SM_position_batterie_valeur_long ctrlSetText _longitude;
-		_dlg_saisie_mission displayCtrl R3F_ARTY_IDC_dlg_SM_position_batterie_valeur_lat ctrlSetText _latitude;
-		_dlg_saisie_mission displayCtrl R3F_ARTY_IDC_dlg_SM_position_batterie_valeur_alt ctrlSetText (str _altitude);
-	};
-	
-	closeDialog 0;
-};
+	if (uiName

@@ -1,3 +1,50 @@
+ven the implied warranty of merchantability or fitness for a particular purpose. The Software is not an official addon or tool. Use of the Software (in whole or in part) is entirely at your own risk.
+
+
+
+05. INSTALLATION
+================
+
+To begin using the Software:
+
+1. Move the folder [ Insert name of your mission file here. ] into the following directory:
+
+\Program Files\Bohemia Interactive\ArmA 2\MPMissions\
+
+
+
+06. REQUIRED ADDONS
+===================
+
+To play this mission the following addons are required:
+
+[ Insert name of addon ] - [URL for downloadable copy of the addon ]
+[ Insert name of addon ] - [URL for downloadable copy of the addon ]
+[ Insert name of addon ] - [URL for downloadable copy of the addon ]
+
+
+07. NOTES
+=========
+
+[ Insert your notes here. ]
+
+
+
+08. CHANGE HISTORY
+==================
+
+Version | Date
+
+[ Insert version, format: N-N-N ] | [ Insert date, format: DD MM CCYY ]
+[ Insert change #1 here. ]
+[ Insert change #2 here. ]{
+	_x animate ["terc", 0];
+} foreach doopopup;
+hint "Targets reset";
+{
+	_x animate ["terc", 0];
+} foreach doopopup2;
+hint "Targets reset";
 /*
   ARMA2 REVIVE SCRIPT - AI enabled or disabled
 
@@ -190,19 +237,4 @@ NORRN_revive_array = [_mission_end_function,_all_dead_dialog,_JIP_spawn_dialog,_
 _heal_yourself,_goto_revive,_unconscious_invincibility,_respawn_at_base_addWeapons,_no_respawn_points,_Base_1,_Base_2,_Base_3,_Base_4,_time_b4_JIP_spawn_dialog,
 _can_revive,_can_revive_2,_can_be_revived,_can_be_revived_2,_no_enemy_sides,_enemy_side_1,_enemy_side_2,_respawn_button_timer,_distance_to_friend,
 _revive_time_limit,_respawn_position,_no_of_heals,_lower_bound_heal,_upper_bound_heal,_follow_cam_distance,_goto_revive_distance,_respawn_at_base_magazines,
-_respawn_at_base_weapons, _Base_free_respawn, _revive_damage, _max_respawns, _unconscious_drag,_AI_smoke,_visible_timer,_allied_side_1,_allied_side_2,_follow_cam_team,
-_water_dialog, _unconscious_music, _enemy_units_1, _enemy_units_2, _AI_aware,_AI_cover,_mobile_spawn,_mobile_base_start,_mobile_man,_altUnc_animation,_top_view_height,
-_all_dead_player,_all_dead_distance,_AI_dismount,_call_for_AI_help,_mobile_type,_load_wounded,_perpetual_server,_JIP_respawns,_caseVAC,_mediVAC,_chance_ofDeath,_dualTimer,
-_respawnAtBaseWait,_objectiveBasedRP,_mobile_base2_start,_mobile_man2,_can_revive_3,_can_revive_4,_can_be_revived_3,_can_be_revived_4,_medic_1,_medic_2,_medic_3,_medic_4,
-_medpacks,_stabilisation,_bleeding,_medic_medpacks,_unit_medpacks,_medic_bandages,_unit_bandages,_stabTime_tillDeath,_enemy_side_3,_enemy_side_4,
-_allied_side_3,_allied_side_4,_deadSpectator_cam,_drop_weapons,_cadaver,_bury_timeout,_reward_function,_revives_required,_team_kill_function,_no_team_kills,_medic_stable, _unit_stable];
-
-// start related revive functions
-[] execVM "f\revive\init_related_scripts.sqf";
-
-if (true) exitWith {};	
-//Last edited 17/08/09
-
-//if (_name == player) then {[_name] execVM 'revive_sqf\rPrn.sqf'}
-
-
+_respawn_at_base_weapons, _Base_free_respawn, _revive_damage, _max_respawns, _unconscious_drag,_AI_smoke,_v

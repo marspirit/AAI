@@ -1,4 +1,35 @@
-/**
+ + (random 3000))];
+					_nb_tirage_pos = 1;
+					while {(!isNull (nearestObject _position_attache)) && (_nb_tirage_pos < 25)} do
+					{
+						_position_attache = [random 3000, random 3000, (10000 + (random 3000))];
+						_nb_tirage_pos = _nb_tirage_pos + 1;
+					};
+					
+					_objet attachTo [R3F_LOG_PUBVAR_point_attache, _position_attache];
+					
+					R3F_LOG_objet_selectionne = objNull;
+					
+					player globalChat format [localize "STR_R3F_LOG_action_charger_selection_fait", getText (configFile >> "CfgVehicles" >> (typeOf _objet) >> "displayName")];
+				}
+				else
+				{
+					player globalChat format [localize "STR_R3F_LOG_action_charger_selection_trop_loin", getText (configFile >> "CfgVehicles" >> (typeOf _objet) >> "displayName")];
+				};
+			}
+			else
+			{
+				player globalChat localize "STR_R3F_LOG_action_charger_selection_pas_assez_de_place";
+			};
+		}
+		else
+		{
+			player globalChat format [localize "STR_R3F_LOG_action_charger_selection_objet_transporte", getText (configFile >> "CfgVehicles" >> (typeOf _objet) >> "displayName")];
+		};
+	};
+	
+	R3F_LOG_mutex_local_verrou = false;
+};/**
  * Décharger un objet d'un transporteur - appelé deuis l'interface listant le contenu du transporteur
  * 
  * Copyright (C) 2010 madbull ~R3F~
@@ -46,32 +77,4 @@ else
 		
 		if ({_objet_a_decharger isKindOf _x} count R3F_LOG_CFG_objets_deplacables > 0) then
 		{
-			[_objet_a_decharger] execVM "R3F_ARTY_AND_LOG\R3F_LOG\objet_deplacable\deplacer.sqf";
-		}
-		else
-		{
-			private ["_dimension_max"];
-			_dimension_max = (((boundingBox _objet_a_decharger select 1 select 1) max (-(boundingBox _objet_a_decharger select 0 select 1))) max ((boundingBox _objet_a_decharger select 1 select 0) max (-(boundingBox _objet_a_decharger select 0 select 0))));
-			
-			player globalChat localize "STR_R3F_LOG_action_decharger_en_cours";
-			
-			sleep 2;
-			
-			// On pose l'objet au hasard vers l'arrière du transporteur
-			_objet_a_decharger setPos [
-				(getPos _transporteur select 0) - ((_dimension_max+5+(random 10)-(boundingBox _transporteur select 0 select 1))*sin (getDir _transporteur - 90+random 180)),
-				(getPos _transporteur select 1) - ((_dimension_max+5+(random 10)-(boundingBox _transporteur select 0 select 1))*cos (getDir _transporteur - 90+random 180)),
-				0
-			];
-			_objet_a_decharger setVelocity [0, 0, 0];
-			
-			player globalChat localize "STR_R3F_LOG_action_decharger_fait";
-		};
-	}
-	else
-	{
-		player globalChat localize "STR_R3F_LOG_action_decharger_deja_fait";
-	};
-	
-	R3F_LOG_mutex_local_verrou = false;
-};
+			[_objet_a_decharger] execVM "R3F_ARTY_AND_LOG\R3F

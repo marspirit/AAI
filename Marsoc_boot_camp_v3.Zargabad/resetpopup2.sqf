@@ -1,4 +1,3 @@
-{
-	_x animate ["terc", 0];
-} foreach doopopup2;
-hint "Targets reset";
+=============
+
+The Software is distributed without any warranty; without e

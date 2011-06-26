@@ -1,4 +1,30 @@
-/**
+ vos impressions sur le fil de discussion chez BIS : http://forums.bistudio.com/showthread.php?t=94280
+
+	Copyright (C) 2010 madbull ~R3F~
+	
+	Ce programme est un logiciel libre ; vous pouvez le redistribuer ou le
+	modifier suivant les termes de la "GNU General Public License" telle que
+	publiée par la Free Software Foundation : soit la version 3 de cette
+	licence, soit (à votre gré) toute version ultérieure.
+	
+	Ce programme est distribué dans l’espoir qu’il vous sera utile, mais SANS
+	AUCUNE GARANTIE : sans même la garantie implicite de COMMERCIALISABILITÉ
+	ni d’ADÉQUATION À UN OBJECTIF PARTICULIER. Consultez la Licence Générale
+	Publique GNU pour plus de détails.
+	
+	Vous devriez avoir reçu une copie de la Licence Générale Publique GNU avec
+	ce programme ; si ce n’est pas le cas, consultez :
+	<http://www.gnu.org/licenses/>.
+
+Contact : madbull@team-r3f.orgï»¿#include "R3F_ARTY_disable_enable.sqf"
+
+#ifdef R3F_ARTY_enable
+#include "R3F_ARTY\stringtable.csv"
+#endif
+
+#include "R3F_LOG\stringtable.csv"
+
+STR_R3F_ARTY_LOG_nom_produit,	"[R3F] Artillery and Logistic",	"[R3F] Artillery and Logistic"/**
  * Recherche périodiquement les nouveaux objets pour leur ajouter les fonctionnalités d'artillerie et de logistique si besoin
  * Script à faire tourner dans un fil d'exécution dédié
  * 
@@ -45,43 +71,4 @@ while {true} do
 			// Si l'objet est un véhicule héliporteur
 			if ({_objet isKindOf _x} count R3F_LOG_CFG_heliporteurs > 0) then
 			{
-				[_objet] execVM "R3F_ARTY_AND_LOG\R3F_LOG\heliporteur\heliporteur_init.sqf";
-			};
-			
-			// Si l'objet est un véhicule remorqueur
-			if ({_objet isKindOf _x} count R3F_LOG_CFG_remorqueurs > 0) then
-			{
-				[_objet] execVM "R3F_ARTY_AND_LOG\R3F_LOG\remorqueur\remorqueur_init.sqf";
-			};
-			
-			// Si l'objet est un véhicule remorqueur
-			if ({_objet isKindOf _x} count R3F_LOG_classes_transporteurs > 0) then
-			{
-				[_objet] execVM "R3F_ARTY_AND_LOG\R3F_LOG\transporteur\transporteur_init.sqf";
-			};
-			
-			#ifdef R3F_ARTY_enable
-			// Si l'objet est un pièce d'artillerie d'un type à gérer
-			if ({_objet isKindOf _x} count R3F_ARTY_CFG_pieces_artillerie > 0) then
-			{
-				[_objet] execVM "R3F_ARTY_AND_LOG\R3F_ARTY\piece\piece_init.sqf";
-			};
-			
-			// Si c'est un calculateur
-			if (typeOf _objet == "SatPhone") then
-			{
-				[_objet] execVM "R3F_ARTY_AND_LOG\R3F_ARTY\poste_commandement\calculateur_init.sqf";
-			};
-			#endif
-			
-			sleep (20/_count_liste_vehicules);
-		};
-		
-		// Les objets ont été initialisés, on les mémorise pour ne plus les ré-initialiser
-		_liste_vehicules_connus = _liste_vehicules_connus + _liste_vehicules;
-	}
-	else
-	{
-		sleep 20;
-	};
-};
+				[_objet] execVM "R3F_ARTY_AND_LOG\R3F_LOG\heliporteur\heliporteur_init

@@ -1,41 +1,41 @@
-/**
- * Installe un poste de commadement d'artillerie à partir du calculateur
- * Passe la variable R3F_LOG_joueur_deplace_objet à objNull pour informer le script "deplacer_calculateur" d'arrêter de déplacer l'objet
- * Réinstalle le calculateur
- * 
- * Copyright (C) 2010 madbull ~R3F~
- * 
- * This program is free software under the terms of the GNU General Public License version 3.
- * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
- */
-
- if (R3F_LOG_mutex_local_verrou) then
-{
-	player globalChat localize "STR_R3F_LOG_mutex_action_en_cours";
-}
-else
-{
-	R3F_LOG_mutex_local_verrou = true;
-	
-	private ["_calculateur"];
-	
-	_calculateur = R3F_LOG_joueur_deplace_objet;
-	
-	// Relacher le calculateur
-	R3F_LOG_joueur_deplace_objet = objNull;
-	sleep 3;
-	
-	// Déployer le poste de commandement d'artillerie là où se trouve le calculateur
-	R3F_ARTY_PUBVAR_creer_poste_commandement = _calculateur;
-	if (isServer) then
-	{
-		["R3F_ARTY_PUBVAR_creer_poste_commandement", R3F_ARTY_PUBVAR_creer_poste_commandement] spawn R3F_ARTY_FNCT_PUBVAR_creer_poste_commandement;
-	}
-	else
-	{
-		publicVariable "R3F_ARTY_PUBVAR_creer_poste_commandement";
+alChat localize "STR_R3F_LOG_ne_pas_monter_dans_vehicule";
+			player action ["eject", vehicle player];
+			sleep 1;
+		};
+		
+		if ([0,0,0] distance (velocity player) > 2.8) then
+		{
+			player globalChat localize "STR_R3F_LOG_courir_trop_vite";
+			player playMove "AmovPpneMstpSnonWnonDnon";
+			sleep 1;
+		};
+		
+		sleep 0.25;
 	};
 	
-	R3F_LOG_mutex_local_verrou = false;
-};
+	// L'objet n'est plus porté, on le repose
+	detach _calculateur;
+	_calculateur setPos [getPos _calculateur select 0, getPos _calculateur select 1, 0];
+	_calculateur setVelocity [0, 0, 0];
+	
+	player removeAction _action_menu;
+	R3F_LOG_joueur_deplace_objet = objNull;
+	
+	_calculateur setVariable ["R3F_LOG_est_deplace_par", objNull, true];
+	
+	if (!alive player) then
+	{
+		R3F_LOG_joueur_deplace_objet = _calculateur;
+		execVM "R3F_ARTY_AND_LOG\R3F_ARTY\poste_commandement\installer_poste.sqf";
+	};
+	
+	// Restauration de l'arme primaire
+	if (alive player && _arme_principale != "") then
+	{
+		player addWeapon _arme_principale;
+		player selectWeapon _arme_principale;
+		player selectWeapon (getArray (configFile >> "cfgWeapons" >> _arme_principale >> "muzzles") select 0);
+	};
+};/**
+ * Installe un poste de commadement d'artillerie à partir du calculateur
+ * Passe la variable R3F_LOG_joueur_deplace_objet à objNull pour informer le scr

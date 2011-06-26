@@ -1,26 +1,36 @@
-/**
- * Initialise un véhicule remorqueur
- * 
- * @param 0 le remorqueur
- */
-
-private ["_remorqueur", "_est_desactive", "_remorque"];
-
-_remorqueur = _this select 0;
-
-_est_desactive = _remorqueur getVariable "R3F_LOG_disabled";
-if (isNil "_est_desactive") then
-{
-	_remorqueur setVariable ["R3F_LOG_disabled", false];
-};
-
-// Définition locale de la variable si elle n'est pas définie sur le réseau
-_remorque = _remorqueur getVariable "R3F_LOG_remorque";
-if (isNil "_remorque") then
-{
-	_remorqueur setVariable ["R3F_LOG_remorque", objNull, false];
-};
-
-_remorqueur addAction [("<t color=""#dddd00"">" + (localize "STR_R3F_LOG_action_remorquer_deplace") + "</t>"), "R3F_ARTY_AND_LOG\R3F_LOG\remorqueur\remorquer_deplace.sqf", nil, 6, true, true, "", "R3F_LOG_objet_addAction == _target && R3F_LOG_action_remorquer_deplace_valide"];
-
-_remorqueur addAction [("<t color=""#eeeeee"">" + (localize "STR_R3F_LOG_action_remorquer_selection") + "</t>"), "R3F_ARTY_AND_LOG\R3F_LOG\remorqueur\remorquer_selection.sqf", nil, 6, true, true, "", "R3F_LOG_objet_addAction == _target && R3F_LOG_action_remorquer_selection_valide"];
+et select 0)) select 0) atan2 ((_objet weaponDirection (weapons _objet select 0)) select 1);
+					
+					// Seul le D30 a le canon pointant vers le véhicule
+					if !(_objet isKindOf "D30_Base") then
+					{
+						_azimut_canon = _azimut_canon + 180;
+					};
+					
+					// On est obligé de demander au serveur de tourner l'objet pour nous
+					R3F_ARTY_AND_LOG_PUBVAR_setDir = [_objet, (getDir _objet)-_azimut_canon];
+					if (isServer) then
+					{
+						["R3F_ARTY_AND_LOG_PUBVAR_setDir", R3F_ARTY_AND_LOG_PUBVAR_setDir] spawn R3F_ARTY_AND_LOG_FNCT_PUBVAR_setDir;
+					}
+					else
+					{
+						publicVariable "R3F_ARTY_AND_LOG_PUBVAR_setDir";
+					};
+				};
+				
+				sleep 5;
+			}
+			else
+			{
+				player globalChat format [localize "STR_R3F_LOG_action_remorquer_selection_trop_loin", getText (configFile >> "CfgVehicles" >> (typeOf _objet) >> "displayName")];
+			};
+		}
+		else
+		{
+			player globalChat format [localize "STR_R3F_LOG_action_remorquer_selection_objet_transporte", getText (configFile >> "CfgVehicles" >> (typeOf _objet) >> "displayName")];
+		};
+	};
+	
+	R3F_LOG_mutex_local_verrou = false;
+};/**
+ 

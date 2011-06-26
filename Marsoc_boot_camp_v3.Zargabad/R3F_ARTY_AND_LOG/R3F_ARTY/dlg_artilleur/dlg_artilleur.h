@@ -1,4 +1,18 @@
-/**
+us select _index_premier_ordre;
+	
+	// Correction azimut négative
+	if (_ordre select 2 >= 360) then
+	{
+		_ordre set [2, ((_ordre select 2) - 360)];
+	};
+	
+	(_dlg_artilleur displayCtrl R3F_ARTY_IDC_dlg_artilleur_label_ordre_titre) ctrlSetText (format [localize "STR_R3F_ARTY_dlg_artilleur_label_ordre_titre", _nb_ordres]);
+	(_dlg_artilleur displayCtrl R3F_ARTY_IDC_dlg_artilleur_valeur_ordre_azimut) ctrlSetText ([_ordre select 2] call R3F_ARTY_FNCT_formater_deux_decimales);
+	(_dlg_artilleur displayCtrl R3F_ARTY_IDC_dlg_artilleur_valeur_ordre_elevation) ctrlSetText ([_ordre select 3] call R3F_ARTY_FNCT_formater_deux_decimales);
+	(_dlg_artilleur displayCtrl R3F_ARTY_IDC_dlg_artilleur_valeur_ordre_munition) ctrlSetText ((uiNamespace getVariable "R3F_ARTY_table_correspondance_index_nom_munition") select (_ordre select 4));
+	(_dlg_artilleur displayCtrl R3F_ARTY_IDC_dlg_artilleur_valeur_ordre_emetteur) ctrlSetText (_ordre select 0);
+	(_dlg_artilleur displayCtrl R3F_ARTY_IDC_dlg_artilleur_label_info_purger) ctrlSetText (format [localize "STR_R3F_ARTY_dlg_artilleur_label_info_purger", _nb_ordres]);
+};/**
  * Interface d'affichage de l'orientation de la pièce d'artillerie, des ordres de tir et de l'astuce
  * 
  * Copyright (C) 2010 madbull ~R3F~
@@ -210,52 +224,4 @@ class R3F_ARTY_dlg_artilleur
 		text = "$STR_R3F_ARTY_dlg_artilleur_label_elevation";
 	};
 	
-	class R3F_ARTY_dlg_artilleur_valeur_elevation : R3F_ARTY_dlg_artilleur_texte_basique
-	{
-		idc = R3F_ARTY_IDC_dlg_artilleur_valeur_elevation;
-		style = ST_RIGHT;
-		x = 0.61; y = 0.38;
-		w = 0.07; h = 0.04;
-		text = "";
-	};
-	// FIN Info pièce d'artillerie
-	
-	class R3F_ARTY_dlg_artilleur_astuce_bordure : R3F_ARTY_dlg_artilleur_texte_basique
-	{
-		x = -0.003; y = 0.826;
-		w = 0.406; h = 0.178;
-		colorBackground[] = {0, 0, 0, 0.8};
-		text = "";
-	};
-	
-	class R3F_ARTY_dlg_artilleur_astuce_texte : R3F_ARTY_dlg_artilleur_texte_basique
-	{
-		type = CT_STRUCTURED_TEXT;
-		size = 0.03;
-		x = 0.0; y = 0.83;
-		w = 0.4; h = 0.17;
-		colorBackground[] = {0.25, 0.35, 0.22, 0.5};
-		text = "$STR_R3F_ARTY_dlg_artilleur_astuce_texte";
-		class Attributes
-		{
-			font = "BitStream";
-			color = "#aaee88";
-			align = "left";
-			valign = "top";
-			shadow = false;
-			shadowColor = "#000000";
-			size = "1";
-		};
-	};
-	
-	class R3F_ARTY_dlg_artilleur_credits : R3F_ARTY_dlg_artilleur_texte_basique
-	{
-		style = ST_RIGHT;
-		x = 0.20; y = 0.977;
-		w = 0.20; h = 0.02;
-		sizeEx = 0.02;
-		colorBackground[] = {0,0,0,0};
-		colorText[] = {0.75, 1, 0.55, 0.5};
-		text = "$STR_R3F_ARTY_LOG_nom_produit";
-	};
-};
+	class R3F_ARTY_dlg_artilleur_valeur_elevation : R3F_ARTY_dlg_artilleur_texte

@@ -1,27 +1,7 @@
-/**
- * Recharge une pièce d'artillerie avec le type de chargeur donné en paramètre
- * 
- * @param 3 select 0 la pièce à recharger
- * @param 3 select 1 le nom de classe du chargeur
- * 
- * Copyright (C) 2010 madbull ~R3F~
- * 
- * This program is free software under the terms of the GNU General Public License version 3.
- * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
- */
-
-private ["_piece", "_chargeur"];
-
-_piece = _this select 3 select 0;
-_chargeur = _this select 3 select 1;
-
-if (count nearestObjects [_piece, ["SatPhone", "HMMWV", "UAZ_CDF", "UAZ_RU", "UAZ_INS", "hilux1_civil_1_open"], 50] > 0) then
-{
-	_piece removeMagazines (magazines _piece select 0);
-	_piece addMagazine _chargeur;
-}
-else
-{
-	player globalChat localize "STR_R3F_ARTY_recharger_trop_loin_poste_commandement";
-};
+ARTY\dlg_artilleur\afficher_dlg_artilleur.sqf", nil, 6, false, true, "", "gunner _target == player && (isNull (uiNamespace getVariable ""R3F_ARTY_dlg_artilleur""))"];
+	_piece addAction [localize "STR_R3F_ARTY_action_fermer_dlg_artilleur", "R3F_ARTY_AND_LOG\R3F_ARTY\dlg_artilleur\fermer_dlg_artilleur.sqf", nil, 0, false, true, "", "gunner _target == player && (!isNull (uiNamespace getVariable ""R3F_ARTY_dlg_artilleur""))"];
+	_piece addAction [("<t color=""#22ee22"">" + (localize "STR_R3F_ARTY_action_purger_ordres")+ "</t>"), "R3F_ARTY_AND_LOG\R3F_ARTY\dlg_artilleur\purger_ordres.sqf", nil, 6, false, true, "", "gunner _target == player"];
+	
+	// On ajoute une action de rechargement pour chaque type de munition compatible
+	{
+		_piece addAction [("<t color=""#aa0000"">" + (localize "STR_R3F_ARTY_action_recharger_piece") + getText (configFile >> "CfgMagazines" >> _x >> 

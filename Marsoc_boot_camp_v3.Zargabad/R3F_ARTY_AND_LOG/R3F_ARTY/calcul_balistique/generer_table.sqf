@@ -1,4 +1,33 @@
-/**
+vation);
+_vitesse_y = _vitesse * (sin _elevation);
+_temps_vol = 0;
+_altitude_apogee = 0;
+
+// Boucle faisant évoluer le temps de la simulation tant que le projectile peut encore potentiellement atteindre sa cible
+while {_pos_y > _altitude_impact || _vitesse_y > 0} do
+{
+	// Les vitesses changent en fonction des frottements dans l'air et de la gravité
+	_vitesse_x = _vitesse_x - (_coef_frottement * _vitesse_x * _vitesse * _deltat);
+	_vitesse_y = _vitesse_y - (_coef_frottement * _vitesse_y * _vitesse * _deltat) - (_gravite * _deltat);
+	_vitesse = sqrt ((_vitesse_x * _vitesse_x) + (_vitesse_y * _vitesse_y));
+	
+	// On fait avance le projectile pour ce pas de simulation en fonction des vitesses actuelles
+	_pos_x = _pos_x + (_vitesse_x * _deltat);
+	_pos_y = _pos_y + (_vitesse_y * _deltat);
+	
+	_temps_vol = _temps_vol + _deltat;
+	_altitude_apogee = _altitude_apogee max _pos_y;
+};
+
+// Si le projectile n'est pas monté plus haut que la cible (arrive lorsque l'altitude d'impact est positive)
+if (_altitude_apogee < _altitude_impact) then
+{
+	_pos_x = 0;
+	_temps_vol = 0;
+};
+
+// Retour
+[_pos_x, _temps_vol]/**
  * Generate the table of ranges with different elevations and impact altitude.
  * The table is printed in the ARMA2.RPT file, it's also returned by the script.
  * One you generate the table, save it in a text file in the directory "R3F_ARTY_AND_LOG\R3F_ARTY\tables\".
@@ -125,46 +154,4 @@ for [{_indice_altitude_impact = 0}, {_indice_altitude_impact < count _liste_alti
 			_vitesse_initiale,
 			_coef_frottement,
 			R3F_ARTY_CFG_deltat
-		] call R3F_ARTY_FNCT_calculer_portee;
-		
-		_table select 1 select _indice_altitude_impact set [_indice_elevation, floor (_res select 0)];
-		
-		if ((_indice_elevation%30 == 0 && _indice_elevation != 0) || (_indice_elevation+1 == count _liste_elevations)) then
-		{
-			if (_indice_elevation+1 == count _liste_elevations) then
-			{
-				_str_diag_log = _str_diag_log + format ["%1", _table select 1 select _indice_altitude_impact select _indice_elevation];
-			}
-			else
-			{
-				_str_diag_log = _str_diag_log + format ["%1,", _table select 1 select _indice_altitude_impact select _indice_elevation];
-			};
-			
-			diag_log text format ["			%1", _str_diag_log];
-			_str_diag_log = "";
-		}
-		else
-		{
-			_str_diag_log = _str_diag_log + format ["%1,", _table select 1 select _indice_altitude_impact select _indice_elevation];
-		};
-	};
-	
-	if (_indice_altitude_impact+1 == count _liste_altitudes_impact) then
-	{
-		diag_log text "		]";
-	}
-	else
-	{
-		diag_log text "		],";
-	};
-};
-
-// Impression du pied de la table dans le RPT
-diag_log text "	]";
-diag_log text "]";
-diag_log text "/****** FIN DE LA TABLE ******/";
-
-endLoadingScreen;
-
-// Retour
-_table
+		] call R3F_ARTY_FNCT_calculer_port

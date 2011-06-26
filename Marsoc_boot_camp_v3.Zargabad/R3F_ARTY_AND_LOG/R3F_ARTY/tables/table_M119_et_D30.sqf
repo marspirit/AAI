@@ -1,4 +1,24 @@
-// M119 et D30 - calculé avec un pas de temps de 0.002
+fois que vous avez générer la table, enregistrez là dans un fichier texte dans le répertoire "R3F_ARTY_AND_LOG\R3F_ARTY\tables\".
+Ensuite ajoutez une ligne d'inclusion dans la variable "R3F_ARTY_tables" du fichier "R3F_ARTY_AND_LOG\R3F_ARTY\init.sqf".
+
+Les fichiers de table doivent respecter le format suivant :
+The table files must respect the folowing format :
+
+[
+    // Méta-données (meta-data)
+    [
+        vitesse initiale, (initial velocity)
+        coef frottement, (friction coef)
+        [liste des altitudes d'impact], // ordonné croissant (list of impact altitudes, ascendant sorted)
+        [liste des angles correspondants aux indices dans les tableaux qui suivent] // ordonné croissant (liste of angles, ascendant sorted)
+    ],
+    // Données  (data)
+    [
+        [portée arrondie à l'inférieur pour chaque angle pour la première altitude d'impact], (floored range for each angle for the first impact altitude)
+        [portée arrondie à l'inférieur pour chaque angle pour la deuxième altitude d'impact], (floored range for each angle for the second impact altitude)
+        ...
+    ]
+]// M119 et D30 - calculé avec un pas de temps de 0.002
 [
 	// Meta-donnees
 	[
@@ -156,14 +176,4 @@
 		[
 			0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 			0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-			0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4045,4190,4294,4377,4449,4511,4567,4618,4665,
-			4708,4749,4786,4821,4854,4885,4914,4942,4969,4994,5017,5040,5061,5081,5101,5119,5137,5153,5169,5184,5199,5212,5225,5238,5249,5260,5271,5281,5290,5299,
-			5307,5315,5322,5329,5335,5341,5346,5351,5355,5359,5363,5366,5369,5372,5374,5375,5376,5377,5378,5378,5378,5377,5377,5376,5374,5372,5370,5368,5365,5362,
-			5358,5355,5351,5346,5342,5337,5332,5326,5320,5315,5308,5302,5295,5288,5280,5273,5265,5257,5248,5240,5231,5222,5212,5202,5193,5182,5172,5161,5151,5139,
-			5128,5116,5105,5092,5080,5068,5055,5042,5029,5015,5002,4988,4974,4959,4945,4930,4915,4900,4884,4869,4853,4837,4820,4804,4787,4770,4753,4736,4718,4701,
-			4683,4664,4646,4628,4609,4590,4571,4551,4532,4512,4492,4472,4451,4431,4410,4389,4368,4346,4325,4303,4281,4259,4237,4214,4191,4168,4145,4122,4098,4075,
-			4051,4027,4003,3978,3953,3929,3904,3878,3853,3827,3802,3776,3750,3723,3697,3670,3643,3616,3589,3561,3534,3506,3478,3450,3422,3393,3364,3335,3306,3277,
-			3248,3218,3188,3158,3128,3098,3067,3037,3006,2975,2944,2912,2881,2849,2817,2785,2753,2720,2688,2655,2622,2589,2556,2522,2489,2455,2421,2387,2353,2318
-		]
-	]
-]
+			0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4045,4190,4294,4377,4449,45

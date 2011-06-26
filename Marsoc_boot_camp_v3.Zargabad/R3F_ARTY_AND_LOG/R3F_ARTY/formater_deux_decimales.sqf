@@ -1,20 +1,4 @@
-/*
- * Formate un entier en chaîne de caractères avec des décimales
- * @param 0 l'entier
- * @return la chaîne formtée à deux décimales
- */
-private ["_valeur", "_chaine_formatee"];
-_valeur = _this select 0;
-
-_valeur = round (_valeur*100) / 100;
-
-_chaine_formatee = str _valeur;
-if (round (_valeur*100) mod 10 == 0) then {
-	if (round (_valeur*100) mod 100 == 0) then {
-		_chaine_formatee = _chaine_formatee + ".00";
-	} else {
-		_chaine_formatee = _chaine_formatee + "0";
-	};
-};
-
-_chaine_formatee
+Ctrl R3F_ARTY_IDC_dlg_SM_tir_tendu_valeur_elevation2) ctrlSetText (uiNamespace getVariable "R3F_ARTY_mem_tir_tendu_valeur_elevation2");
+(_dlg_saisie_mission displayCtrl R3F_ARTY_IDC_dlg_SM_tir_tendu_valeur_azimut) ctrlSetText (uiNamespace getVariable "R3F_ARTY_mem_tir_tendu_valeur_azimut");
+(_dlg_saisie_mission displayCtrl R3F_ARTY_IDC_dlg_SM_tir_tendu_valeur_azimut2) ctrlSetText (uiNamespace getVariable "R3F_ARTY_mem_tir_tendu_valeur_azimut2");
+(_dlg_saisie_mission displayCtrl R3F_ARTY_

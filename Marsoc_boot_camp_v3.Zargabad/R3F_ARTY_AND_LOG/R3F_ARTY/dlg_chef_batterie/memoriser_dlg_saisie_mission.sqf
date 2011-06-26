@@ -1,4 +1,45 @@
-/**
+ScrollDelay = 0;
+		autoScrollSpeed = 0;
+	};
+	// FIN Zone liste des joueurs
+	
+	
+	class R3F_ARTY_dlg_SM_btn_ordonner_tir_courbe : R3F_ARTY_dlg_SM_bouton_basique
+	{
+		x = 0.285; y = 0.57;
+		w = 0.155; h = 0.07;
+		sizeEx = 0.035;
+		text = "$STR_R3F_ARTY_dlg_SM_btn_ordonner_tir_courbe";
+		action = "[""courbe""] execVM ""R3F_ARTY_AND_LOG\R3F_ARTY\dlg_chef_batterie\ordonner_tir.sqf"";"; 
+	};
+	
+	class R3F_ARTY_dlg_SM_btn_ordonner_tir_tendu : R3F_ARTY_dlg_SM_bouton_basique
+	{
+		x = 0.555; y = 0.57;
+		w = 0.155; h = 0.07;
+		sizeEx = 0.035;
+		text = "$STR_R3F_ARTY_dlg_SM_btn_ordonner_tir_tendu";
+		action = "[""tendu""] execVM ""R3F_ARTY_AND_LOG\R3F_ARTY\dlg_chef_batterie\ordonner_tir.sqf"";"; 
+	};
+	
+	class R3F_ARTY_dlg_SM_credits : R3F_ARTY_dlg_SM_texte_basique
+	{
+		style = ST_RIGHT;
+		x = 0.68; y = 0.96;
+		w = 0.20; h = 0.02;
+		sizeEx = 0.02;
+		text = "$STR_R3F_ARTY_LOG_nom_produit";
+	};
+	
+	class R3F_ARTY_dlg_SM_btn_fermer : R3F_ARTY_dlg_SM_bouton_basique
+	{
+		x = 0.88; y = 0.93;
+		w = 0.1; h = 0.05;
+		sizeEx = 0.035;
+		text = "$STR_R3F_ARTY_dlg_SM_btn_fermer";
+		action = "closeDialog 0;"; 
+	};
+};/**
  * Enregistre les valeurs des champs avant fermeture de la boîte de dialogue de saisie de mission.
  * R3F_ARTY_preremplir_dlg_saisie_mission.sqf s'en servira pour le préremplir à l'ouverture
  * 
@@ -43,15 +84,4 @@ uiNamespace setVariable ["R3F_ARTY_mem_tir_courbe_valeur_azimut", ctrlText (_dlg
 uiNamespace setVariable ["R3F_ARTY_mem_tir_courbe_valeur_azimut2", ctrlText (_dlg_saisie_mission displayCtrl R3F_ARTY_IDC_dlg_SM_tir_courbe_valeur_azimut2)];
 uiNamespace setVariable ["R3F_ARTY_mem_tir_courbe_valeur_temps_vol", ctrlText (_dlg_saisie_mission displayCtrl R3F_ARTY_IDC_dlg_SM_tir_courbe_valeur_temps_vol)];
 
-uiNamespace setVariable ["R3F_ARTY_mem_tir_tendu_valeur_elevation", ctrlText (_dlg_saisie_mission displayCtrl R3F_ARTY_IDC_dlg_SM_tir_tendu_valeur_elevation)];
-uiNamespace setVariable ["R3F_ARTY_mem_tir_tendu_valeur_elevation2", ctrlText (_dlg_saisie_mission displayCtrl R3F_ARTY_IDC_dlg_SM_tir_tendu_valeur_elevation2)];
-uiNamespace setVariable ["R3F_ARTY_mem_tir_tendu_valeur_azimut", ctrlText (_dlg_saisie_mission displayCtrl R3F_ARTY_IDC_dlg_SM_tir_tendu_valeur_azimut)];
-uiNamespace setVariable ["R3F_ARTY_mem_tir_tendu_valeur_azimut2", ctrlText (_dlg_saisie_mission displayCtrl R3F_ARTY_IDC_dlg_SM_tir_tendu_valeur_azimut2)];
-uiNamespace setVariable ["R3F_ARTY_mem_tir_tendu_valeur_temps_vol", ctrlText (_dlg_saisie_mission displayCtrl R3F_ARTY_IDC_dlg_SM_tir_tendu_valeur_temps_vol)];
-
-_table_correspondance_index_artilleur = uiNamespace getVariable "R3F_ARTY_dlg_SM_table_correspondance_index_artilleur";
-_lite_pseudo_artilleurs = [];
-{
-	_lite_pseudo_artilleurs = _lite_pseudo_artilleurs + [_table_correspondance_index_artilleur select _x];
-} forEach (lbSelection (_dlg_saisie_mission displayCtrl R3F_ARTY_IDC_dlg_SM_artilleurs_liste));
-uiNamespace setVariable ["R3F_ARTY_mem_artilleurs_liste", _lite_pseudo_artilleurs];
+uiNamespace setVariable ["R3F_ARTY_mem_tir_tendu_valeur_elevation", ctrlText (_dlg_saisie_mission displayCtrl R3F_ARTY_IDC_d

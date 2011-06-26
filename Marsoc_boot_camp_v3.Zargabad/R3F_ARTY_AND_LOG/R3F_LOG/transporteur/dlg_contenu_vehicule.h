@@ -1,4 +1,46 @@
-/**
+_N_Box       102 // Arma 2 - N columns list box
+
+// Static styles
+#define ST_POS            0x0F
+#define ST_HPOS           0x03
+#define ST_VPOS           0x0C
+#define ST_LEFT           0x00
+#define ST_RIGHT          0x01
+#define ST_CENTER         0x02
+#define ST_DOWN           0x04
+#define ST_UP             0x08
+#define ST_VCENTER        0x0c
+
+#define ST_TYPE           0xF0
+#define ST_SINGLE         0
+#define ST_MULTI          16
+#define ST_TITLE_BAR      32
+#define ST_PICTURE        48
+#define ST_FRAME          64
+#define ST_BACKGROUND     80
+#define ST_GROUP_BOX      96
+#define ST_GROUP_BOX2     112
+#define ST_HUD_BACKGROUND 128
+#define ST_TILE_PICTURE   144
+#define ST_WITH_RECT      160
+#define ST_LINE           176
+
+#define ST_SHADOW         0x100
+#define ST_NO_RECT        0x200
+#define ST_KEEP_ASPECT_RATIO  0x800
+
+#define ST_TITLE          ST_TITLE_BAR + ST_CENTER
+
+// Slider styles
+#define SL_DIR            0x400
+#define SL_VERT           0
+#define SL_HORZ           0x400
+
+#define SL_TEXTURES       0x10
+
+// Listbox styles
+#define LB_TEXTURES       0x10
+#define LB_MULTI          0x20/**
  * Interface d'affichage du contenu du véhicule
  * 
  * Copyright (C) 2010 madbull ~R3F~
@@ -193,47 +235,4 @@ class R3F_LOG_dlg_contenu_vehicule
 		text = "$STR_R3F_LOG_dlg_CV_titre";
 	};
 	
-	class R3F_LOG_dlg_CV_capacite_vehicule : R3F_LOG_dlg_CV_texte
-	{
-		idc = R3F_LOG_IDC_dlg_CV_capacite_vehicule;
-		x = 0.255; w = 0.4;
-		y = 0.185; h = 0.03;
-		sizeEx = 0.03;
-		text = "$STR_R3F_LOG_dlg_CV_capacite_vehicule";
-	};
-	
-	class R3F_LOG_dlg_CV_liste_contenu : R3F_LOG_dlg_CV_liste
-	{
-		idc = R3F_LOG_IDC_dlg_CV_liste_contenu;
-		x = 0.26; w = 0.45;
-		y = 0.22; h = 0.44;
-		onLBDblClick = "execVM ""R3F_ARTY_AND_LOG\R3F_LOG\transporteur\decharger.sqf"";";
-	};
-	
-	class R3F_LOG_dlg_CV_credits : R3F_LOG_dlg_CV_texte
-	{
-		x = 0.250; w = 0.19;
-		y = 0.737; h = 0.02;
-		sizeEx = 0.02;
-		colorText[] = {0.5, 0.5, 0.5, 0.75};
-		text = "$STR_R3F_ARTY_LOG_nom_produit";
-	};
-	
-	class R3F_LOG_dlg_CV_btn_decharger : R3F_LOG_dlg_CV_btn
-	{
-		idc = R3F_LOG_IDC_dlg_CV_btn_decharger;
-		x = 0.355; w = 0.18;
-		y = 0.66;
-		sizeEx = 0.02;
-		text = "$STR_R3F_LOG_dlg_CV_btn_decharger";
-		action = "execVM ""R3F_ARTY_AND_LOG\R3F_LOG\transporteur\decharger.sqf"";";
-	};
-	
-	class R3F_LOG_dlg_CV_btn_fermer : R3F_LOG_dlg_CV_btn
-	{
-		x = 0.537; w = 0.16;
-		y = 0.66;
-		text = "$STR_R3F_LOG_dlg_CV_btn_fermer";
-		action = "closeDialog 0;"; 
-	};
-};
+	class R3F_LOG_dlg_CV_cap

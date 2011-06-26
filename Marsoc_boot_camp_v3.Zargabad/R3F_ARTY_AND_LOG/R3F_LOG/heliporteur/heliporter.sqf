@@ -1,4 +1,60 @@
+, 2],
+	["Wheel_barrow", 2],
+	["RoadCone", 0.2],
+	["Sign_1L_Border", 0.2],
+	["Sign_Danger", 0.2],
+	["Suitcase", 0.2],
+	["SmallTable", 0.2]
+];
+
+
+/****** MOVABLE-BY-PLAYER OBJECTS / OBJETS DEPLACABLES PAR LE JOUEUR ******/
+
 /**
+ * List of class names of objects moveables by player.
+ * Liste des noms de classes des objets transportables par le joueur.
+ */
+R3F_LOG_CFG_objets_deplacables =
+[
+	"SatPhone", // Needed for the R3F_ARTY module (arty HQ) (nécessaire pour le module R3F_ARTY (PC d'arti))
+	"StaticWeapon",
+	
+	"RubberBoat",
+	
+	"FlagCarrierSmall",
+	
+	"Land_BagFenceCorner",
+	"RoadBarrier_light",
+	"FlagCarrierCore",
+	"Hedgehog",
+	"Land_fortified_nest_small",
+	
+	"Land_HBarrier1",
+	"Land_HBarrier3",
+	"Land_HBarrier5",
+	"Base_WarfareBBarrier5x",
+	
+	"Camp_base",
+	"ReammoBox",
+	
+	"TargetE",
+	"TargetEpopUp",
+	"TargetPopUpTarget",
+	
+	"FoldChair",
+	"FoldTable",
+	"BarrelBase",
+	"Fuel_can",
+	"Notice_board",
+	"Pallets_comlumn",
+	"Unwrapped_sleeping_bag",
+	"Wheel_barrow",
+	"RoadCone",
+	"Sign_1L_Border",
+	"Sign_Danger",
+	"Suitcase",
+	"SmallTable"
+];/**
  * Héliporte un objet avec un héliporteur
  * 
  * @param 0 l'héliporteur
@@ -61,32 +117,4 @@ else
 							_objet attachTo [_heliporteur, [
 								0,
 								0,
-								(boundingBox _heliporteur select 0 select 2) - (boundingBox _objet select 0 select 2) - (getPos _heliporteur select 2) + 0.5
-							]];
-							
-							player globalChat format [localize "STR_R3F_LOG_action_heliporter_fait", getText (configFile >> "CfgVehicles" >> (typeOf _objet) >> "displayName")];
-						}
-						else
-						{
-							player globalChat format [localize "STR_R3F_LOG_action_heliporter_objet_remorque", getText (configFile >> "CfgVehicles" >> (typeOf _objet) >> "displayName")];
-						};
-					}
-					else
-					{
-						player globalChat format [localize "STR_R3F_LOG_action_heliporter_deplace_par_joueur", getText (configFile >> "CfgVehicles" >> (typeOf _objet) >> "displayName")];
-					};
-				}
-				else
-				{
-					player globalChat format [localize "STR_R3F_LOG_action_heliporter_joueur_dans_objet", getText (configFile >> "CfgVehicles" >> (typeOf _objet) >> "displayName")];
-				};
-			}
-			else
-			{
-				player globalChat format [localize "STR_R3F_LOG_action_heliporter_deja_transporte", getText (configFile >> "CfgVehicles" >> (typeOf _objet) >> "displayName")];
-			};
-		};
-	};
-	
-	R3F_LOG_mutex_local_verrou = false;
-};
+								(boundingBox _heliporteur select

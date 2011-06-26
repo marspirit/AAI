@@ -1,4 +1,45 @@
-/**
+tr _elevation;
+					if (round (_elevation*100) mod 10 == 0) then {
+						if (round (_elevation*100) mod 100 == 0) then {
+							_str_elevation = _str_elevation + ".00";
+						} else {
+							_str_elevation = _str_elevation + "0";
+						};
+					};
+				}
+				else
+				{
+					_str_elevation = str (-_elevation);
+					if (round (-_elevation*100) mod 10 == 0) then {
+						if (round (-_elevation*100) mod 100 == 0) then {
+							_str_elevation = _str_elevation + ".00";
+						} else {
+							_str_elevation = _str_elevation + "0";
+						};
+					};
+					
+					_str_elevation = "-" + _str_elevation;
+				};
+				
+				// Affichage à l'écran des paramètres de la pièce
+				_champ_azimut ctrlSetText _str_azimut;
+				_champ_elevation ctrlSetText _str_elevation;
+				
+				sleep 0.06;
+			}
+			else
+			{
+				(uiNamespace getVariable "R3F_ARTY_dlg_artilleur") closeDisplay 0;
+				uiNamespace setVariable ["R3F_ARTY_dlg_artilleur", displayNull];
+				
+				sleep 1;
+			};
+		};
+		
+		(uiNamespace getVariable "R3F_ARTY_dlg_artilleur") closeDisplay 0;
+		uiNamespace setVariable ["R3F_ARTY_dlg_artilleur", displayNull];
+	};
+};/**
  * Affiche l'ordre de tir actuel dans la boîte de dialogue de l'artilleur
  * 
  * Copyright (C) 2010 madbull ~R3F~
@@ -38,18 +79,4 @@ else
 		_index_premier_ordre = _index_premier_ordre + 1
 	};
 	
-	_ordre = R3F_ARTY_ordres_recus select _index_premier_ordre;
-	
-	// Correction azimut négative
-	if (_ordre select 2 >= 360) then
-	{
-		_ordre set [2, ((_ordre select 2) - 360)];
-	};
-	
-	(_dlg_artilleur displayCtrl R3F_ARTY_IDC_dlg_artilleur_label_ordre_titre) ctrlSetText (format [localize "STR_R3F_ARTY_dlg_artilleur_label_ordre_titre", _nb_ordres]);
-	(_dlg_artilleur displayCtrl R3F_ARTY_IDC_dlg_artilleur_valeur_ordre_azimut) ctrlSetText ([_ordre select 2] call R3F_ARTY_FNCT_formater_deux_decimales);
-	(_dlg_artilleur displayCtrl R3F_ARTY_IDC_dlg_artilleur_valeur_ordre_elevation) ctrlSetText ([_ordre select 3] call R3F_ARTY_FNCT_formater_deux_decimales);
-	(_dlg_artilleur displayCtrl R3F_ARTY_IDC_dlg_artilleur_valeur_ordre_munition) ctrlSetText ((uiNamespace getVariable "R3F_ARTY_table_correspondance_index_nom_munition") select (_ordre select 4));
-	(_dlg_artilleur displayCtrl R3F_ARTY_IDC_dlg_artilleur_valeur_ordre_emetteur) ctrlSetText (_ordre select 0);
-	(_dlg_artilleur displayCtrl R3F_ARTY_IDC_dlg_artilleur_label_info_purger) ctrlSetText (format [localize "STR_R3F_ARTY_dlg_artilleur_label_info_purger", _nb_ordres]);
-};
+	_ordre = R3F_ARTY_ordres_rec

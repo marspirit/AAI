@@ -1,4 +1,31 @@
-/**
+lations (speed and precision)
+- The longitude/latitude coordinates format are now in a 4 digits notation
+- The fire adjustments is now in a "Add, Drop, Left, Right + Dir. to target" notation
+- Add the possibility to close/open the interface in an artillery piece
+
+v1.1
+- Fix of a bug with velocity of objects with ACE2
+- Add the possibility to have a non-movable artillery command quarter
+- Some additionnal precisions in the explanation about the ballistic table generation
+
+v1.0
+- First public release/**
+ * Redirects to the script creating the artillery command quarter
+ * 
+ * @param 0 le calculateur du poste de commandement d'artillerie
+ */
+[_this select 0] execVM "R3F_ARTY_AND_LOG\R3F_ARTY\poste_commandement\creer_poste_commandement.sqf";#include "R3F_ARTY_disable_enable.sqf"
+
+#ifdef R3F_ARTY_enable
+#include "R3F_ARTY\dlg_chef_batterie\dlg_saisie_mission.h"
+#include "R3F_ARTY\dlg_chef_batterie\dlg_clic_carte.h"
+#endif
+
+#include "R3F_LOG\transporteur\dlg_contenu_vehicule.h"#include "R3F_ARTY_disable_enable.sqf"
+
+#ifdef R3F_ARTY_enable
+#include "R3F_ARTY\dlg_artilleur\dlg_artilleur.h"
+#endif/**
  * Script principal qui initialise les systèmes d'artillerie réaliste et de logistique
  * 
  * Copyright (C) 2010 madbull ~R3F~
@@ -20,40 +47,4 @@
 /*
  * Nouveau fil d'exécution pour assurer une compatibilité ascendante (v1.0 à v1.2).
  * Ces versions préconisaient un #include plutôt que execVM pour appeler ce script.
- * A partir de la v1.3 l'exécution par execVM prend l'avantage pour 3 raisons :
- *     - permettre des appels conditionnels optimisés (ex : seulement pour des slots particuliers)
- *     - l'execVM est mieux connu et compris par l'éditeur de mission
- *     - l'init client de l'arty devient bloquant : il attend une PUBVAR du serveur (le point d'attache)
- */
-[] spawn
-{
-	if (isServer) then
-	{
-		// Service offert par le serveur : orienter un objet (car setDir est à argument local)
-		R3F_ARTY_AND_LOG_FNCT_PUBVAR_setDir =
-		{
-			private ["_objet", "_direction"];
-			_objet = _this select 1 select 0;
-			_direction = _this select 1 select 1;
-			
-			// Orienter l'objet et broadcaster l'effet
-			_objet setDir _direction;
-			_objet setPos (getPos _objet);
-		};
-		"R3F_ARTY_AND_LOG_PUBVAR_setDir" addPublicVariableEventHandler R3F_ARTY_AND_LOG_FNCT_PUBVAR_setDir;
-	};
-	
-	#include "R3F_ARTY_disable_enable.sqf"
-	#ifdef R3F_ARTY_enable
-		R3F_ARTY_active = true;
-		#include "R3F_ARTY\init.sqf"
-	#endif
-	
-	#include "R3F_LOG\init.sqf"
-	
-	// Un serveur dédié n'en a pas besoin
-	if !(isServer && isDedicated) then
-	{
-		execVM "R3F_ARTY_AND_LOG\surveiller_nouveaux_objets.sqf";
-	};
-};
+ * A partir de la v1.3 l'exécution par execVM prend l'avantage pour 

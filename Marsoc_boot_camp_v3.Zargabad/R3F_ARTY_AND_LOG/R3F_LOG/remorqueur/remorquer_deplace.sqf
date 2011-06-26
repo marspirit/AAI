@@ -1,4 +1,39 @@
-/**
+Of _x} count R3F_LOG_CFG_remorqueurs > 0) then
+	{
+		// On mémorise sur le réseau que le véhicule remorque quelque chose
+		_remorqueur setVariable ["R3F_LOG_remorque", objNull, true];
+		// On mémorise aussi sur le réseau que le objet est attaché en remorque
+		_objet setVariable ["R3F_LOG_est_transporte_par", objNull, true];
+		
+		detach _objet;
+		_objet setVelocity [0, 0, 0];
+		
+		player playMove "AinvPknlMstpSlayWrflDnon_medic";
+		sleep 7;
+		
+		if ({_objet isKindOf _x} count R3F_LOG_CFG_objets_deplacables > 0) then
+		{
+			// Si personne n'a re-remorquer l'objet pendant le sleep 7
+			if (isNull (_remorqueur getVariable "R3F_LOG_remorque") &&
+				(isNull (_objet getVariable "R3F_LOG_est_transporte_par")) &&
+				(isNull (_objet getVariable "R3F_LOG_est_deplace_par"))
+			) then
+			{
+				[_objet] execVM "R3F_ARTY_AND_LOG\R3F_LOG\objet_deplacable\deplacer.sqf";
+			};
+		}
+		else
+		{
+			player globalChat localize "STR_R3F_LOG_action_detacher_fait";
+		};
+	}
+	else
+	{
+		player globalChat localize "STR_R3F_LOG_action_detacher_impossible_pour_ce_vehicule";
+	};
+	
+	R3F_LOG_mutex_local_verrou = false;
+};/**
  * Remorque l'objet déplacé par le joueur avec un remorqueur
  * 
  * Copyright (C) 2010 madbull ~R3F~
@@ -53,40 +88,4 @@ else
 			// Attacher à l'arrière du véhicule au ras du sol
 			_objet attachTo [_remorqueur, [
 				0,
-				(boundingBox _remorqueur select 0 select 1) + (boundingBox _objet select 0 select 1) + 3,
-				(boundingBox _remorqueur select 0 select 2) - (boundingBox _objet select 0 select 2)
-			]];
-			
-			detach player;
-			
-			// Si l'objet est une arme statique, on corrige l'orientation en fonction de la direction du canon
-			if (_objet isKindOf "StaticWeapon") then
-			{
-				private ["_azimut_canon"];
-				
-				_azimut_canon = ((_objet weaponDirection (weapons _objet select 0)) select 0) atan2 ((_objet weaponDirection (weapons _objet select 0)) select 1);
-				
-				// Seul le D30 a le canon pointant vers le véhicule
-				if !(_objet isKindOf "D30_Base") then
-				{
-					_azimut_canon = _azimut_canon + 180;
-				};
-				
-				// On est obligé de demander au serveur de tourner l'objet pour nous
-				R3F_ARTY_AND_LOG_PUBVAR_setDir = [_objet, (getDir _objet)-_azimut_canon];
-				if (isServer) then
-				{
-					["R3F_ARTY_AND_LOG_PUBVAR_setDir", R3F_ARTY_AND_LOG_PUBVAR_setDir] spawn R3F_ARTY_AND_LOG_FNCT_PUBVAR_setDir;
-				}
-				else
-				{
-					publicVariable "R3F_ARTY_AND_LOG_PUBVAR_setDir";
-				};
-			};
-			
-			sleep 5;
-		};
-	};
-	
-	R3F_LOG_mutex_local_verrou = false;
-};
+				(boundingBox _remorqueur select 0 select 1) + (boundingBox

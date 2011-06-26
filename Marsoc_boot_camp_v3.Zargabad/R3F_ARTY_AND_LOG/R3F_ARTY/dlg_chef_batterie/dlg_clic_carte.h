@@ -1,4 +1,27 @@
-/**
+space getVariable "R3F_ARTY_dlg_saisie_mission_preremplir" == "cible") then
+	{
+		private ["_dlg_saisie_mission"];
+		
+		_dlg_saisie_mission = findDisplay R3F_ARTY_IDD_dlg_saisie_mission;
+		// Mise à jour des champs de texte
+		_dlg_saisie_mission displayCtrl R3F_ARTY_IDC_dlg_SM_position_cible_valeur_long ctrlSetText _longitude;
+		_dlg_saisie_mission displayCtrl R3F_ARTY_IDC_dlg_SM_position_cible_valeur_lat ctrlSetText _latitude;
+		_dlg_saisie_mission displayCtrl R3F_ARTY_IDC_dlg_SM_position_cible_valeur_alt ctrlSetText (str _altitude);
+	}
+	// Si l'appel a été fait pour la position de la batterie
+	else
+	{
+		private ["_dlg_saisie_mission"];
+		
+		_dlg_saisie_mission = findDisplay R3F_ARTY_IDD_dlg_saisie_mission;
+		// Mise à jour des champs de texte
+		_dlg_saisie_mission displayCtrl R3F_ARTY_IDC_dlg_SM_position_batterie_valeur_long ctrlSetText _longitude;
+		_dlg_saisie_mission displayCtrl R3F_ARTY_IDC_dlg_SM_position_batterie_valeur_lat ctrlSetText _latitude;
+		_dlg_saisie_mission displayCtrl R3F_ARTY_IDC_dlg_SM_position_batterie_valeur_alt ctrlSetText (str _altitude);
+	};
+	
+	closeDialog 0;
+};/**
  * Interface d'affichage de la carte pour y récupérer les coordonnées du clic
  * 
  * Copyright (C) 2010 madbull ~R3F~
@@ -524,50 +547,4 @@ class R3F_ARTY_dlg_clic_carte
 		
 		class Waypoint
 		{
-			icon = "\ca\ui\data\map_waypoint_ca.paa";
-			size = 20;
-			color[] = {0, 0.900000, 0, 1};
-			importance = "1.2 * 16 * 0.05";
-			coefMin = 0.900000;
-			coefMax = 4;
-		};
-		
-		class Task
-		{
-			icon = "\ca\ui\data\map_waypoint_ca.paa";
-			iconCreated = "#(argb,8,8,3)color(1,1,1,1)";
-			iconCanceled = "#(argb,8,8,3)color(0,0,1,1)";
-			iconDone = "#(argb,8,8,3)color(0,0,0,1)";
-			iconFailed = "#(argb,8,8,3)color(1,0,0,1)";
-			colorCreated[] = {1,1,1,1};
-			colorCanceled[] = {1,1,1,1};
-			colorDone[] = {1,1,1,1};
-			colorFailed[] = {1,1,1,1};
-			size = 20;
-			color[] = {0, 0.900000, 0, 1};
-			importance = "1.2 * 16 * 0.05";
-			coefMin = 0.900000;
-			coefMax = 4;
-		};
-		
-		class WaypointCompleted
-		{
-			icon = "\ca\ui\data\map_waypoint_completed_ca.paa";
-			size = 20;
-			color[] = {0, 0.900000, 0, 1};
-			importance = "1.2 * 16 * 0.05";
-			coefMin = 0.900000;
-			coefMax = 4;
-		};
-		
-		class ActiveMarker
-		{
-			icon = "\ca\ui\data\map_waypoint_completed_ca.paa";
-			size = 20;
-			color[] = {0, 0.900000, 0, 1};
-			importance = "1.2 * 16 * 0.05";
-			coefMin = 0.900000;
-			coefMax = 4;
-		};		
-	};
-};
+			

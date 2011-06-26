@@ -1,26 +1,6 @@
-The tables can be generated via the script "R3F_ARTY_AND_LOG\R3F_ARTY\calcul_balistique\generer_table.sqf". Read the header of this file for more informations.
+©e de position :</t><br />- BasÃ© sur les coordonnÃ©es GPS<br />- Longitude : de gauche Ã  droite<br />- Latitude : de haut en bas<br />- Le format de saisie est de 4 chiffres, avec des zÃ©ros devant. La valeur de latitude 0254 indique la sous-division 4 de la latitude 025. L'origine est le coin haut-gauche.<br /><t size=""0.5""> </t><br /><t size=""1.25"">Correction :</t><br />- Direction cible : depuis l'observateur<br />- Deux axes. Le sens pour un axe est donnÃ©e par le signe de la valeur.<br /><t size=""0.5""> </t><br /><t size=""1.25"">Dispersion et nb de tirs :</t><br />Combien d'obus tirer dans la zone du diamÃ¨tre indiquÃ©.<br /><t size=""0.5""> </t><br /><t size=""1.25"">Solution haute et basse :</t><br />Pour atteindre une cible, il y a gÃ©nÃ©ralement un tir ""tendu"" (bas) et un tir ""courbÃ©"" (haut). Le tir courbÃ© est souvent prÃ©ferable ou imposÃ©.<br /><t size=""0.5""> </t><br /><t size=""1.25"">SÃ©lection des artilleurs :</t><br />Tout les joueurs sont listÃ©s. SÃ©lectionnez un ou plusieurs joueur(s) Ã  qui transmettre les ordres. Le nb de tirs sera rÃ©parti entre eux."The tables can be generated via the script "R3F_ARTY_AND_LOG\R3F_ARTY\calcul_balistique\generer_table.sqf". Read the header of this file for more informations.
 One you generate the table, save it in a text file in the directory "R3F_ARTY_AND_LOG\R3F_ARTY\tables\".
 Then add an include line in the variable "R3F_ARTY_tables" in the file "R3F_ARTY_AND_LOG\R3F_ARTY\init.sqf".
 
 Les tables peuvent être générées grâce au script "R3F_ARTY_AND_LOG\R3F_ARTY\calcul_balistique\generer_table.sqf". Consulter l'en-tête de ce fichier pour plus d'informations.
-Une fois que vous avez générer la table, enregistrez là dans un fichier texte dans le répertoire "R3F_ARTY_AND_LOG\R3F_ARTY\tables\".
-Ensuite ajoutez une ligne d'inclusion dans la variable "R3F_ARTY_tables" du fichier "R3F_ARTY_AND_LOG\R3F_ARTY\init.sqf".
-
-Les fichiers de table doivent respecter le format suivant :
-The table files must respect the folowing format :
-
-[
-    // Méta-données (meta-data)
-    [
-        vitesse initiale, (initial velocity)
-        coef frottement, (friction coef)
-        [liste des altitudes d'impact], // ordonné croissant (list of impact altitudes, ascendant sorted)
-        [liste des angles correspondants aux indices dans les tableaux qui suivent] // ordonné croissant (liste of angles, ascendant sorted)
-    ],
-    // Données  (data)
-    [
-        [portée arrondie à l'inférieur pour chaque angle pour la première altitude d'impact], (floored range for each angle for the first impact altitude)
-        [portée arrondie à l'inférieur pour chaque angle pour la deuxième altitude d'impact], (floored range for each angle for the second impact altitude)
-        ...
-    ]
-]
+Une 

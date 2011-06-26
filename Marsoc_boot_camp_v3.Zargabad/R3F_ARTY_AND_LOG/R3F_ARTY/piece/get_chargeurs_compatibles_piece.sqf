@@ -1,4 +1,24 @@
-/**
+ sélectionné lors de la validation
+	uiNamespace setVariable ["R3F_ARTY_table_correspondance_index_munition", + _table_correspondance_index_munition];
+	uiNamespace setVariable ["R3F_ARTY_table_correspondance_index_nom_munition", + _table_correspondance_index_nom_munition];
+};
+
+if (isServer) then
+{
+	// Service offert par le serveur : créer un poste de commandement d'artillerie (valeur = calculateur associé)
+	R3F_ARTY_FNCT_PUBVAR_creer_poste_commandement =
+	{
+		[_this select 1] execVM "R3F_ARTY_AND_LOG\R3F_ARTY\poste_commandement\creer_poste_commandement.sqf";
+	};
+	"R3F_ARTY_PUBVAR_creer_poste_commandement" addPublicVariableEventHandler R3F_ARTY_FNCT_PUBVAR_creer_poste_commandement;
+	
+	// Service offert par le serveur : supprimer un poste de commandement d'artillerie (valeur = calculateur associé)
+	R3F_ARTY_FNCT_PUBVAR_supprimer_poste_commandement =
+	{
+		[_this select 1] execVM "R3F_ARTY_AND_LOG\R3F_ARTY\poste_commandement\supprimer_poste_commandement.sqf";
+	};
+	"R3F_ARTY_PUBVAR_supprimer_poste_commandement" addPublicVariableEventHandler R3F_ARTY_FNCT_PUBVAR_supprimer_poste_commandement;
+};/**
  * Récupère tous les noms de classes des chargeurs compatibles avec un pièce
  * 
  * @param 0 le nom de classe de la pièce
@@ -53,50 +73,4 @@ for [{_i = 0}, {_i < _nb_chargeurs_CfgMagazines}, {_i = _i + 1}] do
 		else
 		{
 			private ["_stop", "_iterateur"];
-			_stop = false;
-			_iterateur = _chargeur;
-			while {!_stop} do
-			{
-				_iterateur = inheritsFrom _iterateur;
-				
-				if (configName _iterateur in _chargeurs_base) then
-				{
-					if !(configName _chargeur in _chargeurs_compatibles) then
-					{
-						_chargeurs_compatibles = _chargeurs_compatibles + [configName _chargeur];
-					};
-					_stop = true;
-				}
-				else
-				{
-					// On est remonté à la racine de l'arborescence du configFile
-					if (configName _iterateur == "") then {_stop = true;};
-				};
-			};
-		};
-	};
-};
-
-// On retire les munitions qui nécessitent le module d'ARTY de BIS pour fonctionner
-_chargeurs_compatibles = _chargeurs_compatibles - [
-	"ARTY_30Rnd_105mmWP_M119",
-	"ARTY_30Rnd_105mmSADARM_M119",
-	"ARTY_30Rnd_105mmLASER_M119",
-	"ARTY_30Rnd_105mmSMOKE_M119",
-	"ARTY_30Rnd_105mmILLUM_M119",
-	
-	"ARTY_30Rnd_122mmWP_D30",
-	"ARTY_30Rnd_122mmSADARM_D30",
-	"ARTY_30Rnd_122mmLASER_D30",
-	"ARTY_30Rnd_122mmSMOKE_D30",
-	"ARTY_30Rnd_122mmILLUM_D30",
-	
-	"ARTY_8Rnd_81mmWP_M252",
-	"ARTY_8Rnd_81mmILLUM_M252",
-	
-	"ARTY_8Rnd_82mmWP_2B14",
-	"ARTY_8Rnd_82mmILLUM_2B14"
-];
-
-// Retour
-_chargeurs_compatibles
+			_stop = fal

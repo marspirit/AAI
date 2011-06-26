@@ -1,0 +1,317 @@
+// ============================================================================================
+
+// F2 - Mission Header
+// Credits: Please see the F2 online manual (http://www.ferstaberinde.com/f2/en/)
+
+class Header
+{
+	gameType = Coop;
+	minPlayers = 1;
+	maxPlayers = 90;
+};
+
+// ============================================================================================
+// F2A2 - Respawn Settings
+// Credits: Please see the F2 online manual (http://www.ferstaberinde.com/f2/en/)
+
+respawn      = "BASE";
+respawndelay = 4;
+disabledAI   = 1;
+
+// ============================================================================================
+
+// F2 - JIP Reinforcement Options
+// Credits: Please see the F2 online manual (http://www.ferstaberinde.com/f2/en/)
+
+//#include "f\common\f_JIP_kitpicker.h"
+//#include "f\common\f_JIP_grppicker.h"
+
+//=============================================================================================
+//sounds
+
+#include "mcc\config.cpp"
+// ============================================================================================
+
+class Params
+{
+
+// ============================== Debug Mode ======================================
+
+// F2 - Debug Mode
+// Credits: Please see the F2 online manual (http://www.ferstaberinde.com/f2/en/)
+// WARNING: DO NOT DISABLE THIS COMPONENT
+
+        class f_param_debugMode
+        {
+                title = "$STR_f_param_debugMode";
+                values[] = {0,1};
+                texts[] = {"Off","On"};
+                default = 0;
+                code = "f_var_debugMode = %1";
+        }; 
+
+// ============================= Layouts ===========================================
+
+// F2 - Layouts
+// WARNING: DO NOT DISABLE THIS COMPONENT
+
+        class f_param_layout_plthq
+        {
+                title = "Gear Layout PltHQ";
+                values[] = {0,1,2,3,4};
+                texts[] = {"Standard","Scoped","Paratrooper","CQB","Basic"};
+                default = 0;
+                code = "f_var_layout_plthq = %1;publicVariable ""f_var_layout_plthq"";";
+        }; 
+
+        class f_param_layout_alpha
+        {
+                title = "Gear Layout Alpha";
+                values[] = {0,1,2,3,4};
+                texts[] = {"Standard","Scoped","Paratrooper","CQB","Basic"};
+                default = 0;
+                code = "f_var_layout_alpha = %1;publicVariable ""f_var_layout_alpha"";";
+        }; 
+		
+		class f_param_layout_bravo
+        {
+                title = "Gear Layout Bravo";
+                values[] = {0,1,2,3,4};
+                texts[] = {"Standard","Scoped","Paratrooper","CQB","Basic"};
+                default = 0;
+                code = "f_var_layout_bravo = %1;publicVariable ""f_var_layout_bravo"";";
+        }; 
+
+        class f_param_layout_charlie
+        {
+                title = "Gear Layout Charlie";
+                values[] = {0,1,2,3,4};
+                texts[] = {"Standard","Scoped","Paratrooper","CQB","Basic"};
+                default = 0;
+                code = "f_var_layout_charlie = %1;publicVariable ""f_var_layout_charlie"";";
+        }; 
+		
+		class f_param_layout_sf1
+        {
+                title = "Gear Layout Sf1";
+                values[] = {0,1,2,3,4};
+                texts[] = {"Standard","Scoped","Paratrooper","CQB","Modern"};
+                default = 0;
+                code = "f_var_layout_sf1 = %1;publicVariable ""f_var_layout_sf1"";";
+        }; 
+
+        class f_param_layout_sf2
+        {
+                title = "Gear Layout Sf2";
+                values[] = {0,1,2,3,4};
+                texts[] = {"Standard","Scoped","Paratrooper","CQB","Modern"};
+                default = 0;
+                code = "f_var_layout_sf2 = %1;publicVariable ""f_var_layout_sf2"";";
+        }; 
+		
+		class f_param_layout
+        {
+                title = "Gear Layout Rest";
+                values[] = {0,1,2,3,4};
+                texts[] = {"Standard","Scoped","Paratrooper","CQB","Basic"};
+                default = 0;
+                code = "f_var_layout = %1;publicVariable ""f_var_layout"";";
+        }; 
+//======================= Arty Params ==================================
+		class f_param_arty_bon
+        {
+                title = "Number Of Artillery Round Availabe Per Hour";
+                values[] = {0,5,10,20,30};
+                texts[] = {"0","5","10","20","30"};
+                default = 5;
+                code = "f_param_arty = %1; publicVariable ""f_param_arty"";";
+        }; 
+
+// =================== Mission Conditions Selector ======================
+
+// F2 - Mission Conditions Selector
+// Credits: Please see the F2 online manual (http://www.ferstaberinde.com/f2/en/)
+
+        class f_param_timeOfDay
+        {
+                title = "$STR_f_param_timeOfDay";
+                values[] = {0,1,2,3,4,5,6,7};
+                texts[] = {$STR_f_param_timeOfDay_Option0,$STR_f_param_timeOfDay_Option1,$STR_f_param_timeOfDay_Option2,$STR_f_param_timeOfDay_Option3,$STR_f_param_timeOfDay_Option4,$STR_f_param_timeOfDay_Option5,$STR_f_param_timeOfDay_Option6,$STR_f_param_timeOfDay_Option7};
+                default = 3;
+                code = "f_param_timeOfDay = %1";
+        };   
+        class f_param_weather
+		{
+		title = "$STR_f_param_weather";
+		values[] = {0,1,2,3,4};
+		texts[] = {$STR_f_param_weather_Option0,$STR_f_param_weather_Option1,$STR_f_param_weather_Option2,$STR_f_param_weather_Option3,$STR_f_param_weather_Option4};
+		default = 0;
+		code = "f_param_weather = %1";
+        };
+		
+//======================= Undercover Agents ============================
+		class f_param_undercover
+        {
+                title = "Undercover Agents Detected By:";
+                values[] = {0,1};
+                texts[] = {"East","West"};
+                default = 0;
+                code = "f_param_undercover = %1; publicVariable ""f_param_undercover"";";
+        }; 
+		
+//======================= Resistance relations ===========================
+		class f_param_resistance
+        {
+                title = "Resistance Hostile To:";
+                values[] = {0,1,2};
+                texts[] = {"All","East","West"};
+                default = 0;
+                code = "f_param_resistance = %1; publicVariable ""f_param_resistance"";";
+        }; 
+		
+//======================= Markers ====================================
+		class f_param_markers
+        {
+                title = "Group Markers:";
+                values[] = {0,1};
+                texts[] = {"Disable","Enable"};
+                default = 1;
+                code = "f_param_markers = %1; publicVariable ""f_param_markers"";";
+        }; 
+// =========================== Revive ==================================
+		class f_param_revive
+		{
+			title = "Revive:";
+			values[] = {10,5,3,2,1,0};
+			texts[] = {"Revive Enabled - 10 Revives","Revive Enabled- 5 Revives","Revive Enabled- 3 Revives","Revive Enabled- 2 Revives","Revive Enabled- 1 Revive","Revive Disabled"};
+			default = 1;
+			code = "f_param_revive = %1";
+		};
+		
+// =========================== Revive Time==================================
+		class f_param_revive_time
+		{
+			title = "Revive time:";
+			values[] = {30,60,120,180,240,300,360,420,480,540,600};
+			texts[] = {"30 Seconds" ,"1 Minute","2 Minutes","3 Minutes","4 Minutes","5 Minutes","6 Minutes","7 Minutes","8 Minutes","9 Minutes","10 Minutes"};
+			default = 300;
+			code = "f_param_revive_time = %1";
+		};
+// ==================== Teleport To Team After Death =====================
+		class f_param_teleport
+		{
+			title = "Teleport To Team After Death:";
+			values[] = {1,0};
+			texts[] = {"Enable", "Disable"};
+			default = 0;
+			code = "f_param_teleport = %1";
+		};
+		
+// ================ Spectator Mod While Unconscious ==============
+		class f_param_spectator
+		{
+			title = "Spectator Mod While Unconscious:";
+			values[] = {1,0};
+			texts[] = {"Enable", "Disable"};
+			default = 1;
+			code = "f_param_spectator = %1";
+		};
+		
+// ================ Name Tags ====================================
+		class f_param_nameTags
+		{
+			title = "Name Tags:";
+			values[] = {1,0};
+			texts[] = {"Enable", "Disable"};
+			default = 0;
+			code = "f_param_nameTags = %1";
+		};
+		
+		
+// ============================================================================================
+// F2 - AI Skill Selector (coop)
+// Credits: Please see the F2 online manual (http://www.ferstaberinde.com/f2/en/)
+
+//	class f_param_AISkill_Friendly
+//	{
+//		title = "$STR_f_param_AISkill_Friendly";
+//		values[] = {0,1,2,3};
+//		texts[] = {$STR_f_param_AISkill_Option0,$STR_f_param_AISkill_Option1,$STR_f_param_AISkill_Option2,$STR_f_param_AISkill_Option3};
+//		default = 2;
+//		code = "f_param_AISkill_Friendly = %1";
+//	};
+//	class f_param_AISkill_Enemy
+//	{
+//		title = "$STR_f_param_AISkill_Enemy";
+//		values[] = {0,1,2,3};
+//		texts[] = {$STR_f_param_AISkill_Option0,$STR_f_param_AISkill_Option1,$STR_f_param_AISkill_Option2,$STR_f_param_AISkill_Option3};
+//		default = 2;
+//		code = "f_param_AISkill_Enemy = %1";
+//	};
+// ============================================================================================
+// F2 - AI Skill Selector (A&D)
+// Credits: Please see the F2 online manual (http://www.ferstaberinde.com/f2/en/)
+//	class f_param_AISkill_BLUFOR
+//	{
+//		title = "$STR_f_param_AISkill_BLUFOR";
+//		values[] = {0,1,2,3};
+//		texts[] = {$STR_f_param_AISkill_Option0,$STR_f_param_AISkill_Option1,$STR_f_param_AISkill_Option2,$STR_f_param_AISkill_Option3};
+//		default = 2;
+//		code = "f_param_AISkill_BLUFOR = %1";
+//	};
+//	class f_param_AISkill_OPFOR
+//	{
+//		title = "$STR_f_param_AISkill_OPFOR";
+//		values[] = {0,1,2,3};
+//		texts[] = {$STR_f_param_AISkill_Option0,$STR_f_param_AISkill_Option1,$STR_f_param_AISkill_Option2,$STR_f_param_AISkill_Option3};
+//		default = 2;
+//		code = "f_param_AISkill_OPFOR = %1";
+//	};
+// ============================================================================================
+};
+
+// F2 - Gear Snippets
+// Credits: Please see the F2 online manual (http://www.ferstaberinde.com/f2/en/)
+
+// #include "f\common\f_gearSnippets.hpp"
+
+// ============================================================================================
+
+// ============================================================================================
+// Desc: Dialog Template & Framework
+//-----------------------------------------------------------------------------
+// Note: ordering of these #include statements is important.
+
+#include "mcc\Dialogs\mcc_DialogColorConstants.hpp"
+#include "mcc\Dialogs\mcc_DialogColorScheme.hpp"
+#include "mcc\Dialogs\mcc_DialogControlClasses.hpp"
+#include "mcc\Dialogs\mcc_PopupMenu.hpp"
+#include "mcc\Dialogs\mcc_extrasmenu.hpp"
+#include "mcc\Dialogs\mcc_extrasmenu2.hpp"
+#include "mcc\Dialogs\mcc_extrasmenu3.hpp"
+#include "mcc\Dialogs\mcc_3d_dialog.hpp"
+#include "mcc\Dialogs\mcc_boxGen.hpp"
+
+//===========================Bon Artilery=================================
+#include "bon_artillery\dialog\Common.hpp"
+#include "bon_artillery\dialog\Artillery.hpp"
+
+class RscTitles {
+	titles[]={"introPic"};
+// ============================================================================================
+// F2 - Name Tags
+// Credits: Please see the F2 online manual (http://www.ferstaberinde.com/f2/en/)
+
+#include "f\common\f_recog\recogOverlay.hpp"
+// ============================================================================================
+
+
+
+	class introPic
+	{
+		idd=-1; movingEnable=0; duration=5; fadein=2; fadeout = 1;	 name="introPic";
+		controls[]={"MCCPIC"};
+		class MCCPIC : RscPicture {x=0.1;y=0.15;w=0.8;h=0.5;sizeEx = 0.04;text="mcc\pop_menu\mcc1.paa";};
+	};
+
+};

@@ -1,6 +1,13 @@
-; F2 - Kegetys Spectator Script
-; Credits: Please see the F2 online manual (http://www.ferstaberinde.com/f2/en/)
-; ====================================================================================
-
-; Initialize spectating script when player dies:
-_this call ace_fnc_startSpectator;
+lass Item15
+		{
+			position[]={3364.7771,29.176897,5866.5332};
+			a=2;
+			b=8;
+			angle=272.61288;
+			rectangular=1;
+			activationBy="WEST";
+			repeating=1;
+			interruptable=1;
+			age="UNKNOWN";
+			expActiv="gate8 animate [""Bargate"", 0]";
+			expDesactiv="gate6 animate [

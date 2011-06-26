@@ -1,3 +1,42 @@
+sition};				
+				_newunit = _x createvehicle (_newpos);											
+			} foreach _vehicletypes;			
+			
+			//Set new parameters			
+			_params = [_lead] + _UCthis;						
+			
+			//Exec UPSMON script			
+			_params SPAWN UPSMON;
+			
+			processInitCommands;			
+		};
+	};
+}foreach KRON_UPS_TEMPLATES;
+
+if (true) exitwith{};
+// =========================================================================================================
+//  Script for adding the action of follow player.
+//  Version: 1.0 
+//  Author: Monsada (smirall@hotmail.com)
+// ---------------------------------------------------------------------------------------------------------
+private ["_side","_soldiers"];
+_side = _this select 0;
+
+_soldiers = switch (_side) do {
+  case west: {KRON_AllWest};
+  case east: {KRON_AllEast};
+  case resistance: {KRON_AllRes};
+};
+
+{
+	if ( leader _x == _x ) then {
+		_x addaction ["Order your men to follow me", "scripts\UPSMON\actions\followme.sqf", [], 1, false];
+	} else {
+		_x addaction ["Follow me", "scripts\UPSMON\actions\followme.sqf", [], 1, false];
+	};
+}foreach _soldiers;
+	
+if (true) exitWith {};
 // =========================================================================================================
 //  UPSMON - Urban Patrol Script  Mon
 //  Version: 5.0.7 
@@ -2128,53 +2167,4 @@ if (_respawn && _respawnmax > 0 &&  !_surrended  && _dist > _closeenough) then {
 	_grp=createGroup _side;
 	_lead = _grp createUnit [_unittype, _orgpos, [], 0, "form"];
 	_lead setVehicleInit _initstr;
-	[_lead] join _grp;
-	_grp selectLeader _lead;
-	//sleep 1;
-	
-	// copy team members (skip the leader)
-	_c=0;
-	{
-		_c=_c+1;
-		if (_c>1) then {
-			_newunit = _grp createUnit [_x, _orgpos, [],0,"form"];
-			_newunit setVehicleInit _initstr;
-			[_newunit] join _grp;
-		};
-	} foreach _membertypes;
-	
-	{				
-		_targetpos = _orgpos findEmptyPosition [10, 200];
-		sleep .4;
-		if (count _newpos <= 0) then {_targetpos = _orgpos};
-		//if (KRON_UPS_Debug>0) then {player globalchat format["%1 create vehicle _newpos %2 ",_x,_targetpos]};	
-		_newunit = _x createvehicle (_targetpos);											
-	} foreach _vehicletypes;		
-	
-	//Set new parameters
-	if (!_spawned) then {_UCthis = _UCthis + ["SPAWNED"]};	
-	_UCthis set [0,_lead];
-	_respawnmax = _respawnmax - 1;
-	_UCthis =  ["RESPAWN:",_respawnmax,_UCthis] call KRON_UPSsetArg;
-	
-	//Exec UPSMON script			
-	_UCthis SPAWN UPSMON;
-	
-	processInitCommands;
-};	
-
-_friends=nil;
-_enemies=nil;
-_enemytanks = nil;
-_friendlytanks = nil;
-_roads = nil;
-_targets = nil;
-_members = nil;
-_membertypes = nil;
-_UCthis = nil;
-
-if (!alive _npc) then {
-	deleteGroup _grp;
-};
-
-if(true) exitWith {}; 
+	[_lea

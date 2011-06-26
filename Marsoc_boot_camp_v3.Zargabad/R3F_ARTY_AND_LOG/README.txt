@@ -1,4 +1,34 @@
-[R3F] Artillery and Logistic : Manual artillery and advanced logistic (mission script)
+_i = 0}, {_i < count _tab_objets}, {_i = _i + 1}] do
+		{
+			private ["_index", "_icone"];
+			
+			_icone = getText (configFile >> "CfgVehicles" >> (_tab_objets select _i) >> "icon");
+			
+			// Si l'icône est valide
+			if (toString ([toArray _icone select 0]) == "\") then
+			{
+				_index = _ctrl_liste lbAdd (getText (configFile >> "CfgVehicles" >> (_tab_objets select _i) >> "displayName") + format [" (%1x)", _tab_quantite select _i]);
+				_ctrl_liste lbSetPicture [_index, _icone];
+			}
+			else
+			{
+				// Si le téléphone satellite est utilisé pour un PC d'artillerie
+				if (!(isNil "R3F_ARTY_active") && (_tab_objets select _i) == "SatPhone") then
+				{
+					_index = _ctrl_liste lbAdd ("     " + (localize "STR_R3F_LOG_nom_pc_arti") + format [" (%1x)", _tab_quantite select _i]);
+				}
+				else
+				{
+					_index = _ctrl_liste lbAdd ("     " + getText (configFile >> "CfgVehicles" >> (_tab_objets select _i) >> "displayName") + format [" (%1x)", _tab_quantite select _i]);
+				};
+			};
+			
+			_ctrl_liste lbSetData [_index, _tab_objets select _i];
+		};
+	};
+	
+	R3F_LOG_mutex_local_verrou = false;
+};[R3F] Artillery and Logistic : Manual artillery and advanced logistic (mission script)
 --------------------------------------------------------------------------------------
 You have the manual artillery and advanced logistic system for ArmA 2,
 developed by the R3F (Régiment Force de Frappe Française, team-r3f.org).
@@ -28,26 +58,4 @@ Contact : madbull@team-r3f.org
 [R3F] Artillery and Logistic : Artillerie manuelle et logistique avancée (script de mission)
 --------------------------------------------------------------------------------------------
 Vous disposez du système d'artillerie manuelle et de logistique avancée pour ArmA 2,
-mis au point par le R3F (Régiment Force de Frappe Française, team-r3f.org).
-
-Vous pouvez obtenir la version complète du [R3F] Artillery and Logistic (avec le guide d'installation et la licence GPL) ici : http://forums.bistudio.com/showthread.php?t=94280
-
-N'hésitez pas à donner vos impressions sur le fil de discussion chez BIS : http://forums.bistudio.com/showthread.php?t=94280
-
-	Copyright (C) 2010 madbull ~R3F~
-	
-	Ce programme est un logiciel libre ; vous pouvez le redistribuer ou le
-	modifier suivant les termes de la "GNU General Public License" telle que
-	publiée par la Free Software Foundation : soit la version 3 de cette
-	licence, soit (à votre gré) toute version ultérieure.
-	
-	Ce programme est distribué dans l’espoir qu’il vous sera utile, mais SANS
-	AUCUNE GARANTIE : sans même la garantie implicite de COMMERCIALISABILITÉ
-	ni d’ADÉQUATION À UN OBJECTIF PARTICULIER. Consultez la Licence Générale
-	Publique GNU pour plus de détails.
-	
-	Vous devriez avoir reçu une copie de la Licence Générale Publique GNU avec
-	ce programme ; si ce n’est pas le cas, consultez :
-	<http://www.gnu.org/licenses/>.
-
-Contact : madbull@team-r3f.org
+mis au point par le R3F (Régiment Force

@@ -1,4 +1,18 @@
-/**
+e];
+};
+
+// Définition locale de la variable si elle n'est pas définie sur le réseau
+_objets_charges = _transporteur getVariable "R3F_LOG_objets_charges";
+if (isNil "_objets_charges") then
+{
+	_transporteur setVariable ["R3F_LOG_objets_charges", [], false];
+};
+
+_transporteur addAction [("<t color=""#dddd00"">" + (localize "STR_R3F_LOG_action_charger_deplace") + "</t>"), "R3F_ARTY_AND_LOG\R3F_LOG\transporteur\charger_deplace.sqf", nil, 6, true, true, "", "R3F_LOG_objet_addAction == _target && R3F_LOG_action_charger_deplace_valide"];
+
+_transporteur addAction [("<t color=""#eeeeee"">" + (localize "STR_R3F_LOG_action_charger_selection") + "</t>"), "R3F_ARTY_AND_LOG\R3F_LOG\transporteur\charger_selection.sqf", nil, 6, true, true, "", "R3F_LOG_objet_addAction == _target && R3F_LOG_action_charger_selection_valide"];
+
+_transporteur addAction [("<t color=""#dddd00"">" + (localize "STR_R3F_LOG_action_contenu_vehicule") + "</t>"), "R3F_ARTY_AND_LOG\R3F_LOG\transporteur\voir_contenu_vehicule.sqf", nil, 5, false, true, "", "R3F_LOG_objet_addAction == _target && R3F_LOG_action_contenu_vehicule_valide"];/**
  * Ouvre la boîte de dialogue du contenu du véhicule et la prérempli en fonction de véhicule
  * 
  * @param 0 le véhicule dont il faut afficher le contenu
@@ -91,34 +105,4 @@ else
 	else
 	{
 		// Insertion de chaque type d'objets dans la liste
-		for [{_i = 0}, {_i < count _tab_objets}, {_i = _i + 1}] do
-		{
-			private ["_index", "_icone"];
-			
-			_icone = getText (configFile >> "CfgVehicles" >> (_tab_objets select _i) >> "icon");
-			
-			// Si l'icône est valide
-			if (toString ([toArray _icone select 0]) == "\") then
-			{
-				_index = _ctrl_liste lbAdd (getText (configFile >> "CfgVehicles" >> (_tab_objets select _i) >> "displayName") + format [" (%1x)", _tab_quantite select _i]);
-				_ctrl_liste lbSetPicture [_index, _icone];
-			}
-			else
-			{
-				// Si le téléphone satellite est utilisé pour un PC d'artillerie
-				if (!(isNil "R3F_ARTY_active") && (_tab_objets select _i) == "SatPhone") then
-				{
-					_index = _ctrl_liste lbAdd ("     " + (localize "STR_R3F_LOG_nom_pc_arti") + format [" (%1x)", _tab_quantite select _i]);
-				}
-				else
-				{
-					_index = _ctrl_liste lbAdd ("     " + getText (configFile >> "CfgVehicles" >> (_tab_objets select _i) >> "displayName") + format [" (%1x)", _tab_quantite select _i]);
-				};
-			};
-			
-			_ctrl_liste lbSetData [_index, _tab_objets select _i];
-		};
-	};
-	
-	R3F_LOG_mutex_local_verrou = false;
-};
+		for [{

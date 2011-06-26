@@ -1,4 +1,33 @@
-/**
+os;
+	_pancarte setDir (_direction+165);
+	sleep 0.2;
+	
+	_temp_pos = [[0.8, -0.8], _direction, _position] call _fnct_calc_pos_angle;
+	_chaise = "FoldChair" createVehicle _temp_pos;
+	_chaise setVariable ["R3F_LOG_disabled", true, true];
+	_chaise setPos _temp_pos;
+	_chaise setDir (_direction+140);
+	sleep 0.2;
+	
+	_temp_pos = [[-1.2, -0.3], _direction, _position] call _fnct_calc_pos_angle;
+	_chaise2 = "FoldChair" createVehicle _temp_pos;
+	_chaise2 setVariable ["R3F_LOG_disabled", true, true];
+	_chaise2 setPos _temp_pos;
+	_chaise2 setDir (_direction-100);
+	sleep 0.2;
+	
+	_table = "SmallTable" createVehicle _position;
+	_table setVariable ["R3F_LOG_disabled", true, true];
+	_table setPos _position;
+	_table setDir _direction;
+	sleep 0.2;
+	
+	_calculateur setPos [_position select 0, _position select 1, (_position select 2) + 1.1];
+	
+	// On mémorise quels sont les objets du poste de commandement du calculateur
+	_calculateur setVariable ["R3F_ARTY_poste_commandement_objets_crees", [_filet, _caisse_mun, _pancarte, _table, _chaise, _chaise2]];
+	_calculateur setVariable ["R3F_LOG_disabled", true, true];
+};/**
  * Fait remballer et déplacer le calculateur par le joueur.
  * Il garde le calculateur tant qu'il ne le relâche pas ou ne meurt pas.
  * L'objet est relaché quand la variable R3F_LOG_joueur_deplace_objet passe à objNull ce qui terminera le script.
@@ -74,42 +103,4 @@ else
 	{
 		if (vehicle player != player) then
 		{
-			player globalChat localize "STR_R3F_LOG_ne_pas_monter_dans_vehicule";
-			player action ["eject", vehicle player];
-			sleep 1;
-		};
-		
-		if ([0,0,0] distance (velocity player) > 2.8) then
-		{
-			player globalChat localize "STR_R3F_LOG_courir_trop_vite";
-			player playMove "AmovPpneMstpSnonWnonDnon";
-			sleep 1;
-		};
-		
-		sleep 0.25;
-	};
-	
-	// L'objet n'est plus porté, on le repose
-	detach _calculateur;
-	_calculateur setPos [getPos _calculateur select 0, getPos _calculateur select 1, 0];
-	_calculateur setVelocity [0, 0, 0];
-	
-	player removeAction _action_menu;
-	R3F_LOG_joueur_deplace_objet = objNull;
-	
-	_calculateur setVariable ["R3F_LOG_est_deplace_par", objNull, true];
-	
-	if (!alive player) then
-	{
-		R3F_LOG_joueur_deplace_objet = _calculateur;
-		execVM "R3F_ARTY_AND_LOG\R3F_ARTY\poste_commandement\installer_poste.sqf";
-	};
-	
-	// Restauration de l'arme primaire
-	if (alive player && _arme_principale != "") then
-	{
-		player addWeapon _arme_principale;
-		player selectWeapon _arme_principale;
-		player selectWeapon (getArray (configFile >> "cfgWeapons" >> _arme_principale >> "muzzles") select 0);
-	};
-};
+			player glob

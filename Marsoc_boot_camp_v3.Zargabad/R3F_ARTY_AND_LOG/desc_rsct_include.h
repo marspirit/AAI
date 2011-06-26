@@ -1,5 +1,2 @@
-#include "R3F_ARTY_disable_enable.sqf"
-
-#ifdef R3F_ARTY_enable
-#include "R3F_ARTY\dlg_artilleur\dlg_artilleur.h"
-#endif
+djust the cost capacity of the containers which were equals to their own capacity
+- Optimization of the ballistic calcu

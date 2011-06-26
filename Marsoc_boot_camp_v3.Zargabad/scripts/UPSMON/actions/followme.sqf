@@ -1,3 +1,38 @@
+ done
+	KRON_UPS_INIT=1;	
+};
+
+// ---------------------------------------------------------------------------------------------------------
+processInitCommands;
+
+//Executes de main process of server
+[] SPAWN MON_MAIN_server;
+
+diag_log "--------------------------------";
+diag_log (format["UPSMON started"]);
+if(true) exitWith {}; // =========================================================================================================
+//  Script for adding the action of follow player.
+//  Version: 1.0 
+//  Author: Monsada (smirall@hotmail.com)
+// ---------------------------------------------------------------------------------------------------------
+private ["_side","_soldiers"];
+_side = _this select 0;
+
+_soldiers = switch (_side) do {
+  case west: {KRON_AllWest};
+  case east: {KRON_AllEast};
+  case resistance: {KRON_AllRes};
+};
+
+{
+	if ( leader _x == _x ) then {
+		_x addaction ["Order your men to follow me", "scripts\actions\followme.sqf", [], 1, false];
+	} else {
+		_x addaction ["Follow me", "scripts\actions\followme.sqf", [], 1, false];
+	};
+}foreach _soldiers;	
+ 
+if (true) exitWith {};
 // =========================================================================================================
 //  Script for action follow me when surrended,  adds the soldier to player squad in a random choice.
 //  Version: 1.0 
@@ -43,51 +78,4 @@ if (_rnd > 50  && _rnd <= 100) then {
 	if (_rnd < 20) then {
 		_npc setmimic "angry";
 		_npc switchmove "CtsPercMstpSnonWnonDnon_idle31rejpaniVnose";	
-		_npc globalchat "Kiss my ass";		
-	};
-
-	if (_rnd > 20  && _rnd <= 40) then {
-		_npc setmimic "Agresive";	
-		_npc switchmove "CtsPercMstpSnonWnonDnon_idle33rejpaniVzadku";	
-		sleep 3;
-		_npc globalchat "Que te den";	
-	};
-	
-	if (_rnd > 40  && _rnd <= 60) then {
-		_npc setmimic "Agresive";
-		_npc switchmove "CtsPercMstpSnonWnonDnon_idle33rejpaniVzadku";	
-		sleep 1;
-		_npc globalchat "Fuck you";		
-	};
-	
-	if (_rnd > 60  && _rnd <= 80) then {
-		_npc setmimic "Agresive";
-		_npc switchmove "CtsPercMstpSnonWnonDnon_idle32podrbaniNanose";		
-		sleep 0.5;
-		_npc globalchat "Follow your mother";		
-	};
-		
-	if (_rnd > 80  && _rnd <= 100) then {	
-		_npc setmimic "angry";
-		sleep 0.1;
-		_npc switchmove "CtsPercMstpSnonWnonDnon_idle32podrbaniNanose";		
-		_npc globalchat "Fuck you";			
-	};
-};
-
-if (_join) then {
-	// remove the action once it is activated
-	_npc stop false;
-	if (_npc == leader _npc) then {	
-		_npc globalchat "All follow that man";
-		{					
-			_x switchmove "";			
-			[_x] joinSilent _caller;
-		}foreach units _npc;
-	} else {
-		_npc removeAction _id;
-		[_npc] joinSilent _caller;	
-	};
-};
-
-if (true) exitWith {};
+		_npc globalchat

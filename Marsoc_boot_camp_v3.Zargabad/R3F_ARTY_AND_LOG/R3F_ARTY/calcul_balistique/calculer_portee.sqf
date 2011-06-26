@@ -1,4 +1,44 @@
-/**
+eu", "_nb_iterations"];
+			_res_calcul = [-100, 0];
+			_nb_iterations = 0;
+			
+			// Dichotomie entre angle_min et angle_max tant que la précision souhaitée n'est pas atteinte
+			while {abs (_distance_cible - (_res_calcul select 0)) > _precision && (_nb_iterations < 15)} do
+			{
+				_angle_milieu = (_angle_sup+_angle_inf)/2;
+				
+				// Calculer la portée pour un angle de (angle_min+angle_max)/2
+				_res_calcul = [_angle_milieu, _altitude_cible, _vitesse_initiale, _coef_frottement, R3F_ARTY_CFG_deltat] call R3F_ARTY_FNCT_calculer_portee;
+				
+				// Mise à jour des bornes sup et inf
+				if (_res_calcul select 0 < _distance_cible) then
+				{
+					_angle_inf = _angle_milieu;
+				}
+				else
+				{
+					_angle_sup = _angle_milieu;
+				};
+				
+				_nb_iterations = _nb_iterations + 1;
+			};
+			
+			if (_nb_iterations < 15) then
+			{
+				// On enregistre la solution de tir
+				_retour set [3, true];
+				_retour set [4, _angle_milieu];
+				_retour set [5, _res_calcul select 1];
+			}
+			else
+			{
+				player globalChat localize "STR_R3F_ARTY_altitude_erreur_calcul_courbe";
+			};
+		};
+	};
+};
+
+_retour/**
  * Calcule la portée du projectile pour l'angle de tir et l'altitude d'impact relative au canon donnés
  * 
  * @param 0 angle d'élévation du canon pour le tir
@@ -31,33 +71,4 @@ _gravite = 9.80665;
 _pos_x = 0; // Distance par rapport au canon
 _pos_y = 0; // Altitude par rapport au canon
 _vitesse = _vitesse_initiale;
-_vitesse_x = _vitesse * (cos _elevation);
-_vitesse_y = _vitesse * (sin _elevation);
-_temps_vol = 0;
-_altitude_apogee = 0;
-
-// Boucle faisant évoluer le temps de la simulation tant que le projectile peut encore potentiellement atteindre sa cible
-while {_pos_y > _altitude_impact || _vitesse_y > 0} do
-{
-	// Les vitesses changent en fonction des frottements dans l'air et de la gravité
-	_vitesse_x = _vitesse_x - (_coef_frottement * _vitesse_x * _vitesse * _deltat);
-	_vitesse_y = _vitesse_y - (_coef_frottement * _vitesse_y * _vitesse * _deltat) - (_gravite * _deltat);
-	_vitesse = sqrt ((_vitesse_x * _vitesse_x) + (_vitesse_y * _vitesse_y));
-	
-	// On fait avance le projectile pour ce pas de simulation en fonction des vitesses actuelles
-	_pos_x = _pos_x + (_vitesse_x * _deltat);
-	_pos_y = _pos_y + (_vitesse_y * _deltat);
-	
-	_temps_vol = _temps_vol + _deltat;
-	_altitude_apogee = _altitude_apogee max _pos_y;
-};
-
-// Si le projectile n'est pas monté plus haut que la cible (arrive lorsque l'altitude d'impact est positive)
-if (_altitude_apogee < _altitude_impact) then
-{
-	_pos_x = 0;
-	_temps_vol = 0;
-};
-
-// Retour
-[_pos_x, _temps_vol]
+_vitesse_x = _vitesse * (cos _ele

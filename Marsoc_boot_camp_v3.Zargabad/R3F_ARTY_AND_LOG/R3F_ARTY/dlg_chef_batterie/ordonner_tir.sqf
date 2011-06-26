@@ -1,4 +1,15 @@
-/**
+lg_SM_tir_tendu_valeur_elevation)];
+uiNamespace setVariable ["R3F_ARTY_mem_tir_tendu_valeur_elevation2", ctrlText (_dlg_saisie_mission displayCtrl R3F_ARTY_IDC_dlg_SM_tir_tendu_valeur_elevation2)];
+uiNamespace setVariable ["R3F_ARTY_mem_tir_tendu_valeur_azimut", ctrlText (_dlg_saisie_mission displayCtrl R3F_ARTY_IDC_dlg_SM_tir_tendu_valeur_azimut)];
+uiNamespace setVariable ["R3F_ARTY_mem_tir_tendu_valeur_azimut2", ctrlText (_dlg_saisie_mission displayCtrl R3F_ARTY_IDC_dlg_SM_tir_tendu_valeur_azimut2)];
+uiNamespace setVariable ["R3F_ARTY_mem_tir_tendu_valeur_temps_vol", ctrlText (_dlg_saisie_mission displayCtrl R3F_ARTY_IDC_dlg_SM_tir_tendu_valeur_temps_vol)];
+
+_table_correspondance_index_artilleur = uiNamespace getVariable "R3F_ARTY_dlg_SM_table_correspondance_index_artilleur";
+_lite_pseudo_artilleurs = [];
+{
+	_lite_pseudo_artilleurs = _lite_pseudo_artilleurs + [_table_correspondance_index_artilleur select _x];
+} forEach (lbSelection (_dlg_saisie_mission displayCtrl R3F_ARTY_IDC_dlg_SM_artilleurs_liste));
+uiNamespace setVariable ["R3F_ARTY_mem_artilleurs_liste", _lite_pseudo_artilleurs];/**
  * Exécuté lors du clic sur un bouton "ordonner" (haut ou bas)
  * Génère une série de paramètres de tir et les envoi au joueurs sélectionnés
  * 
@@ -71,27 +82,4 @@ _amplitude_elevation = _milieu_elevation - _elevation;
 _table_ordres_tirs = [];
 // Autant de fois qu'on a de tir a effectué, on génère une position dans la zone et on l'affecte à un artilleur
 // Le principe de tirage d'une position dans la zone est de s'écarter du centre avec un pas fonction du nombre de tirs, et de choisir un angle aléatoire
-for [{_i = 0}, {_i < _nb_tirs}, {_i = _i + 1}] do
-{
-	private ["_coordonnees_choisies", "_joueur_choisi"];
-	
-	if (_amplitude_azimut > 0 && _amplitude_elevation > 0) then
-	{
-		// On tire une position dans l'ellipse
-		_coordonnees_choisies = [[_milieu_azimut, _milieu_elevation], _amplitude_azimut, _amplitude_elevation] call R3F_ARTY_FNCT_tirer_position_dans_zone_elliptique;
-	}
-	else
-	{
-		_coordonnees_choisies = [_milieu_azimut - _amplitude_azimut + 2*(random _amplitude_azimut), _milieu_elevation - _amplitude_elevation + 2*(random _amplitude_elevation)];
-	};
-	
-	_joueur_choisi = _table_correspondance_index_artilleur select (_liste_artilleurs select (_i mod (count _liste_artilleurs)));
-	
-	_table_ordres_tirs = _table_ordres_tirs + [[name player, _joueur_choisi, _coordonnees_choisies select 0, _coordonnees_choisies select 1, _index_munition]];
-};
-
-R3F_ARTY_table_ordres_tirs = + _table_ordres_tirs;
-publicVariable "R3F_ARTY_table_ordres_tirs";
-["R3F_ARTY_table_ordres_tirs", R3F_ARTY_table_ordres_tirs] spawn R3F_ARTY_FNCT_PUBVAR_table_ordres_tirs;
-
-player globalChat localize "STR_R3F_ARTY_dlg_SM_ordres_transmis";
+for [{_i = 0}, 

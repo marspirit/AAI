@@ -1,26 +1,28 @@
-/**
- * Initialise un véhicule héliporteur
- * 
- * @param 0 l'héliporteur
- */
-
-private ["_heliporteur", "_est_desactive", "_heliporte"];
-
-_heliporteur = _this select 0;
-
-_est_desactive = _heliporteur getVariable "R3F_LOG_disabled";
-if (isNil "_est_desactive") then
-{
-	_heliporteur setVariable ["R3F_LOG_disabled", false];
-};
-
-// Définition locale de la variable si elle n'est pas définie sur le réseau
-_heliporte = _heliporteur getVariable "R3F_LOG_heliporte";
-if (isNil "_heliporte") then
-{
-	_heliporteur setVariable ["R3F_LOG_heliporte", objNull, false];
-};
-
-_heliporteur addAction [("<t color=""#dddd00"">" + (localize "STR_R3F_LOG_action_heliporter") + "</t>"), "R3F_ARTY_AND_LOG\R3F_LOG\heliporteur\heliporter.sqf", nil, 6, true, true, "", "R3F_LOG_objet_addAction == _target && R3F_LOG_action_heliporter_valide"];
-
-_heliporteur addAction [("<t color=""#dddd00"">" + (localize "STR_R3F_LOG_action_heliport_larguer") + "</t>"), "R3F_ARTY_AND_LOG\R3F_LOG\heliporteur\larguer.sqf", nil, 6, true, true, "", "R3F_LOG_objet_addAction == _target && R3F_LOG_action_heliport_larguer_valide"];
+ 0 select 2) - (boundingBox _objet select 0 select 2) - (getPos _heliporteur select 2) + 0.5
+							]];
+							
+							player globalChat format [localize "STR_R3F_LOG_action_heliporter_fait", getText (configFile >> "CfgVehicles" >> (typeOf _objet) >> "displayName")];
+						}
+						else
+						{
+							player globalChat format [localize "STR_R3F_LOG_action_heliporter_objet_remorque", getText (configFile >> "CfgVehicles" >> (typeOf _objet) >> "displayName")];
+						};
+					}
+					else
+					{
+						player globalChat format [localize "STR_R3F_LOG_action_heliporter_deplace_par_joueur", getText (configFile >> "CfgVehicles" >> (typeOf _objet) >> "displayName")];
+					};
+				}
+				else
+				{
+					player globalChat format [localize "STR_R3F_LOG_action_heliporter_joueur_dans_objet", getText (configFile >> "CfgVehicles" >> (typeOf _objet) >> "displayName")];
+				};
+			}
+			else
+			{
+				player globalChat format [localize "STR_R3F_LOG_action_heliporter_deja_transporte", getText (configFile >> "CfgVehicles" >> (typeOf _objet) >> "displayName")];
+			};
+		};
+	};
+	
+	R3F_LOG_mutex_local_

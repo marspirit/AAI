@@ -1,4 +1,46 @@
-/**
+_N_Box       102 // Arma 2 - N columns list box
+
+// Static styles
+#define ST_POS            0x0F
+#define ST_HPOS           0x03
+#define ST_VPOS           0x0C
+#define ST_LEFT           0x00
+#define ST_RIGHT          0x01
+#define ST_CENTER         0x02
+#define ST_DOWN           0x04
+#define ST_UP             0x08
+#define ST_VCENTER        0x0c
+
+#define ST_TYPE           0xF0
+#define ST_SINGLE         0
+#define ST_MULTI          16
+#define ST_TITLE_BAR      32
+#define ST_PICTURE        48
+#define ST_FRAME          64
+#define ST_BACKGROUND     80
+#define ST_GROUP_BOX      96
+#define ST_GROUP_BOX2     112
+#define ST_HUD_BACKGROUND 128
+#define ST_TILE_PICTURE   144
+#define ST_WITH_RECT      160
+#define ST_LINE           176
+
+#define ST_SHADOW         0x100
+#define ST_NO_RECT        0x200
+#define ST_KEEP_ASPECT_RATIO  0x800
+
+#define ST_TITLE          ST_TITLE_BAR + ST_CENTER
+
+// Slider styles
+#define SL_DIR            0x400
+#define SL_VERT           0
+#define SL_HORZ           0x400
+
+#define SL_TEXTURES       0x10
+
+// Listbox styles
+#define LB_TEXTURES       0x10
+#define LB_MULTI          0x20/**
  * Interface d'affichage de l'orientation de la pièce d'artillerie
  * 
  * Copyright (C) 2010 madbull ~R3F~
@@ -913,45 +955,4 @@ class R3F_ARTY_dlg_saisie_mission
 		x = 0.005; y = 0.61;
 		w = 0.25; h = 0.37;
 		autoScrollRewind = 0;
-		autoScrollDelay = 0;
-		autoScrollSpeed = 0;
-	};
-	// FIN Zone liste des joueurs
-	
-	
-	class R3F_ARTY_dlg_SM_btn_ordonner_tir_courbe : R3F_ARTY_dlg_SM_bouton_basique
-	{
-		x = 0.285; y = 0.57;
-		w = 0.155; h = 0.07;
-		sizeEx = 0.035;
-		text = "$STR_R3F_ARTY_dlg_SM_btn_ordonner_tir_courbe";
-		action = "[""courbe""] execVM ""R3F_ARTY_AND_LOG\R3F_ARTY\dlg_chef_batterie\ordonner_tir.sqf"";"; 
-	};
-	
-	class R3F_ARTY_dlg_SM_btn_ordonner_tir_tendu : R3F_ARTY_dlg_SM_bouton_basique
-	{
-		x = 0.555; y = 0.57;
-		w = 0.155; h = 0.07;
-		sizeEx = 0.035;
-		text = "$STR_R3F_ARTY_dlg_SM_btn_ordonner_tir_tendu";
-		action = "[""tendu""] execVM ""R3F_ARTY_AND_LOG\R3F_ARTY\dlg_chef_batterie\ordonner_tir.sqf"";"; 
-	};
-	
-	class R3F_ARTY_dlg_SM_credits : R3F_ARTY_dlg_SM_texte_basique
-	{
-		style = ST_RIGHT;
-		x = 0.68; y = 0.96;
-		w = 0.20; h = 0.02;
-		sizeEx = 0.02;
-		text = "$STR_R3F_ARTY_LOG_nom_produit";
-	};
-	
-	class R3F_ARTY_dlg_SM_btn_fermer : R3F_ARTY_dlg_SM_bouton_basique
-	{
-		x = 0.88; y = 0.93;
-		w = 0.1; h = 0.05;
-		sizeEx = 0.035;
-		text = "$STR_R3F_ARTY_dlg_SM_btn_fermer";
-		action = "closeDialog 0;"; 
-	};
-};
+		auto

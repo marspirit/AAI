@@ -1,3 +1,31 @@
+UPS_INIT==1};
+	
+private ["_artillery","_smoke1","_i","_area","_position","_maxcadence","_mincadence","_sleep","_rounds"];
+_range = 800;
+_area = 150;
+_maxcadence = 10;
+_mincadence = 5;
+_sleep = 0;
+_rounds = 1;
+_bullet = "ARTY_Sh_81_HE";	
+_vector =[];
+
+_artillery  = _this select 0;
+//if (KRON_UPS_Debug>0) then {player globalchat format["MON_artillery_add before %1 %2 %3",isnull _artillery,alive _artillery]};		
+if (isnull _artillery || !alive _artillery) exitwith{};
+if ((count _this) > 1) then {_rounds = _this select 1;};	
+if ((count _this) > 2) then {_range = _this select 2;};
+if ((count _this) > 3) then {_area = _this select 3;};	
+if ((count _this) > 4) then {_maxcadence = _this select 4;};	
+if ((count _this) > 5) then {_mincadence = _this select 5;};	
+if ((count _this) > 6) then {_bullet = _this select 6;};	
+
+//Add artillery to array of artilleries
+_vector = [_artillery,_rounds,_range,_area,_maxcadence,_mincadence,_bullet];
+if (isnil "KRON_UPS_ARTILLERY_UNITS" ) then  {KRON_UPS_ARTILLERY_UNITS = []};
+KRON_UPS_ARTILLERY_UNITS = KRON_UPS_ARTILLERY_UNITS + [_vector];
+
+if (true) exitwith{};
 /* =====================================================================================================
 	MON_spawn.sqf
 	Author: Monsada (chs.monsada@gmail.com) 
@@ -69,47 +97,4 @@ if (KRON_UPS_Debug>0) then {player globalchat format["Spawning %3 copies of temp
 	
 			// make the clones civilians
 			// use random Civilian models for single unit groups
-			if ((_unittype=="Civilian") && (count _members==1)) then {_rnd=1+round(random 20); if (_rnd>1) then {_unittype=format["Civilian%1",_rnd]}};
-			
-			_grp=createGroup _side;
-			
-			_lead = _grp createUnit [_unittype, _position, [], 0, "form"];
-			_lead setVehicleInit _initlstr;
-			[_lead] join _grp;
-			_grp selectLeader _lead;
-			sleep 1;
-			
-			// copy team members (skip the leader)
-			_c=0;
-			{
-				_c=_c+1;
-				if (_c>1) then {
-					_newpos = _position findEmptyPosition [10, 200];
-					sleep .4;
-					if (count _newpos <= 0) then {_newpos = _position};
-					_newunit = _grp createUnit [_x, _newpos, [],0,"form"];								
-					_newunit setVehicleInit _initstr;
-					[_newunit] join _grp;
-				};
-			} foreach _membertypes;
-			
-
-			{				
-				_newpos = _position findEmptyPosition [10, 200];
-				sleep .4;
-				if (count _newpos <= 0) then {_newpos = _position};				
-				_newunit = _x createvehicle (_newpos);											
-			} foreach _vehicletypes;			
-			
-			//Set new parameters			
-			_params = [_lead] + _UCthis;						
-			
-			//Exec UPSMON script			
-			_params SPAWN UPSMON;
-			
-			processInitCommands;			
-		};
-	};
-}foreach KRON_UPS_TEMPLATES;
-
-if (true) exitwith{};
+			if ((_unittype=="Civilian") && (count _members==1)) then {_rnd=1+
