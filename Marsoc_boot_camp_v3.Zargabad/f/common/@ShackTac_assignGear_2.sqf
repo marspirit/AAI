@@ -461,7 +461,7 @@ switch (_typeofUnit) do
       _unit addweapon _pistol;
       _unit addweapon "NVGoggles";   
       _unit addweapon "ACE_ParachuteRoundPack";
-      _unit addweapon "ACE_Map_Tools"; 
+       
       
       _unit addweapon "ACE_P159_RD90";
 	   	        
@@ -487,7 +487,7 @@ switch (_typeofUnit) do
       _unit addweapon _rifleGL;
       _unit addweapon "NVGoggles";   
       _unit addweapon "ACE_ParachuteRoundPack";
-      _unit addweapon "ACE_Map_Tools";
+      
       
       _unit addweapon _rucksack;
       
@@ -518,7 +518,7 @@ switch (_typeofUnit) do
       _unit addweapon _pistol;
       _unit addweapon "NVGoggles";
       _unit addweapon "ACE_ParachuteRoundPack";
-      _unit addweapon "ACE_Map_Tools";
+      
       
       _unit addweapon _rucksack;
 
@@ -545,7 +545,7 @@ switch (_typeofUnit) do
       {_unit addmagazine _morphine;} foreach [1,2,3];
       {_unit addmagazine _epinephrine;} foreach [1,2,3];
       _unit addweapon "ACE_ParachuteRoundPack";
-      _unit addweapon "ACE_Map_Tools";
+      
       
       _unit addweapon _medicrucksack;
 
@@ -575,7 +575,7 @@ switch (_typeofUnit) do
       _unit addweapon _rifleGL;
       _unit addweapon "NVGoggles";   
       _unit addweapon "ACE_ParachuteRoundPack";
-      _unit addweapon "ACE_Map_Tools";
+      
       
        _unit addweapon "ACE_P159_RD90";
 	   	        
@@ -601,7 +601,7 @@ switch (_typeofUnit) do
       {_unit addmagazine _morphine;} foreach [1,2,3];
       {_unit addmagazine _epinephrine;} foreach [1,2,3];
       _unit addweapon "ACE_ParachuteRoundPack";
-      _unit addweapon "ACE_Map_Tools";
+      
       
       _unit addweapon _medicrucksack;
 
@@ -630,7 +630,7 @@ switch (_typeofUnit) do
       _unit addweapon _rifleTL;
       _unit addweapon "NVGoggles";   
       _unit addweapon "ACE_ParachuteRoundPack";
-      _unit addweapon "ACE_Map_Tools";
+      
       
       _unit addweapon _rucksack;
 
@@ -667,7 +667,7 @@ switch (_typeofUnit) do
               {_unit addmagazine _smokegrenade;} foreach [1,2];
 	      _unit addweapon "NVGoggles";
       	      _unit addweapon "ACE_ParachuteRoundPack";
-              _unit addweapon "ACE_Map_Tools";
+              
 			  _unit addweapon "ACE_Earplugs";
 	      
 	      _unit addweapon _rucksack;
@@ -688,7 +688,7 @@ switch (_typeofUnit) do
               {_unit addmagazine _smokegrenade;} foreach [1,2];
 	      _unit addweapon "NVGoggles";
       	      _unit addweapon "ACE_ParachuteRoundPack";
-              _unit addweapon "ACE_Map_Tools";
+              
 			  _unit addweapon "ACE_Earplugs";
 	      
 	      _unit addweapon _rucksack;
@@ -709,7 +709,7 @@ switch (_typeofUnit) do
               {_unit addmagazine _smokegrenade;} foreach [1,2];
 	      _unit addweapon "NVGoggles";
               _unit addweapon "ACE_ParachuteRoundPack";
-              _unit addweapon "ACE_Map_Tools";
+              
 			  _unit addweapon "ACE_Earplugs";
 	      
 	      _unit addweapon _rucksack;
@@ -730,7 +730,7 @@ switch (_typeofUnit) do
               {_unit addmagazine _smokegrenade;} foreach [1,2];
 	      _unit addweapon "NVGoggles";
      	      _unit addweapon "ACE_ParachuteRoundPack";
-              _unit addweapon "ACE_Map_Tools";
+              
 			  _unit addweapon "ACE_Earplugs";
 	      
 	      _unit addweapon _rucksack;
@@ -751,7 +751,7 @@ switch (_typeofUnit) do
               {_unit addmagazine _smokegrenade;} foreach [1,2];
 	      _unit addweapon "NVGoggles";
      	      _unit addweapon "ACE_ParachuteRoundPack";
-              _unit addweapon "ACE_Map_Tools";
+              
 			  _unit addweapon "ACE_Earplugs";
 	      
 	      _unit addweapon _rucksack;
@@ -785,7 +785,7 @@ switch (_typeofUnit) do
 	      _unit addweapon _pistol;
 	      _unit addweapon "NVGoggles";
      	      _unit addweapon "ACE_ParachuteRoundPack";
-              _unit addweapon "ACE_Map_Tools";
+              
 	      
 	      _unit addweapon _rucksack;
 	      
@@ -809,7 +809,7 @@ switch (_typeofUnit) do
 	      _unit addweapon _pistol;
 	      _unit addweapon "NVGoggles";
      	      _unit addweapon "ACE_ParachuteRoundPack";
-              _unit addweapon "ACE_Map_Tools";
+              
 	      
 	      _unit addweapon _rucksack;
 
@@ -833,7 +833,7 @@ switch (_typeofUnit) do
 	      _unit addweapon _pistol;
 	      _unit addweapon "NVGoggles";
      	      _unit addweapon "ACE_ParachuteRoundPack";
-              _unit addweapon "ACE_Map_Tools";
+              
 	      
 	      _unit addweapon _rucksack;
 	      
@@ -857,7 +857,7 @@ switch (_typeofUnit) do
 	      _unit addweapon _pistol;
 	      _unit addweapon "NVGoggles";
      	      _unit addweapon "ACE_ParachuteRoundPack";
-              _unit addweapon "ACE_Map_Tools";
+              
 	      
 	      _unit addweapon _rucksack;
 	      
@@ -881,7 +881,7 @@ switch (_typeofUnit) do
 	      _unit addweapon _pistol;
 	      _unit addweapon "NVGoggles";
      	      _unit addweapon "ACE_ParachuteRoundPack";
-              _unit addweapon "ACE_Map_Tools";
+              
 	      
 	      _unit addweapon _rucksack;
 	      
@@ -911,7 +911,7 @@ switch (_typeofUnit) do
       _unit addweapon _pistol;
       _unit addweapon "NVGoggles";
       _unit addweapon "ACE_ParachuteRoundPack";
-      _unit addweapon "ACE_Map_Tools";
+      
       
       _unit addweapon _rucksack;
 
@@ -940,7 +940,7 @@ switch (_typeofUnit) do
       _unit addweapon _pistol;
       _unit addweapon "NVGoggles";
       _unit addweapon "ACE_ParachuteRoundPack";
-      _unit addweapon "ACE_Map_Tools";
+      
       
 //      _unit addweapon _rucksack;
       
@@ -964,7 +964,7 @@ switch (_typeofUnit) do
       _unit addweapon "NVGoggles";
       _unit addweapon "ACE_Earplugs";
       _unit addweapon "ACE_ParachuteRoundPack";
-      _unit addweapon "ACE_Map_Tools";
+      
       
       _unit selectweapon primaryweapon _unit;
    };
@@ -988,7 +988,7 @@ switch (_typeofUnit) do
       _unit addmagazine "ACE_Battery_Rangefinder";
       _unit addweapon "NVGoggles";
       _unit addweapon "ACE_Earplugs";
-      _unit addweapon "ACE_Map_Tools";
+      
       
       _unit addweapon _rucksack;
 
@@ -1018,7 +1018,7 @@ switch (_typeofUnit) do
       _unit addweapon "NVGoggles";
       _unit addweapon "ACE_ParachuteRoundPack";
       _unit addweapon "ACE_Earplugs";
-      _unit addweapon "ACE_Map_Tools";
+      
       
       _unit addweapon _rucksack;
       
@@ -1043,7 +1043,7 @@ switch (_typeofUnit) do
       _unit addweapon "NVGoggles";
       _unit addweapon "ACE_ParachuteRoundPack";
       _unit addweapon "ACE_Earplugs";
-      _unit addweapon "ACE_Map_Tools";
+      
       
       // We add this special case for a more even weight distribution in KORD-based
       // HMG teams.
@@ -1071,7 +1071,7 @@ switch (_typeofUnit) do
       _unit addweapon "ACE_ParachuteRoundPack";
       _unit addweapon "NVGoggles";
       _unit addweapon "ACE_Earplugs";
-      _unit addweapon "ACE_Map_Tools";
+      
 
       _unit addweapon _rucksack;
 
@@ -1113,7 +1113,7 @@ switch (_typeofUnit) do
       _unit addweapon "NVGoggles";
       _unit addweapon "ACE_ParachuteRoundPack";
       _unit addweapon "ACE_Earplugs";
-      _unit addweapon "ACE_Map_Tools";
+      
       
       _unit addweapon _rucksack;
       
@@ -1157,7 +1157,7 @@ switch (_typeofUnit) do
       _unit addweapon _medicrifle;
       _unit addweapon "NVGoggles";
       _unit addweapon "ACE_ParachuteRoundPack";
-      _unit addweapon "ACE_Map_Tools";
+      
    };
 
 // ====================================================================================
@@ -1175,7 +1175,7 @@ switch (_typeofUnit) do
       _unit addmagazine "ACE_Battery_Rangefinder";
       _unit addweapon "NVGoggles";
       _unit addweapon "ACE_ParachuteRoundPack";
-      _unit addweapon "ACE_Map_Tools";
+      
       
       _unit addweapon _rucksack;
       
@@ -1202,7 +1202,7 @@ switch (_typeofUnit) do
       _unit addweapon _rifle;
       _unit addweapon "NVGoggles";
       _unit addweapon "ACE_ParachuteRoundPack";
-      _unit addweapon "ACE_Map_Tools";
+      
       
       _unit addweapon _rucksack;
       
@@ -1228,7 +1228,7 @@ switch (_typeofUnit) do
       _unit addweapon _medicrifle;
       _unit addweapon "NVGoggles";
       _unit addweapon "ACE_ParachuteRoundPack";
-      _unit addweapon "ACE_Map_Tools";
+      
    };
 
 // ====================================================================================
@@ -1246,7 +1246,7 @@ switch (_typeofUnit) do
       _unit addmagazine "ACE_Battery_Rangefinder";
       _unit addweapon "NVGoggles";
       _unit addweapon "ACE_ParachuteRoundPack";
-      _unit addweapon "ACE_Map_Tools";
+      
       
       _unit addweapon _rucksack;
         
@@ -1270,7 +1270,7 @@ switch (_typeofUnit) do
       _unit addweapon _rifle;
       _unit addweapon "NVGoggles";
       _unit addweapon "ACE_ParachuteRoundPack";
-      _unit addweapon "ACE_Map_Tools";
+      
       
       _unit addweapon _rucksack;
       
@@ -1295,7 +1295,7 @@ switch (_typeofUnit) do
       _unit addweapon _snrifle;
       _unit addweapon "ACE_ParachuteRoundPack";
       _unit addweapon "NVGoggles";
-      _unit addweapon "ACE_Map_Tools";
+      
       
       _unit addweapon _rucksack;
       [_unit,"Binocular",1] spawn f_addWepToRuck;
@@ -1320,7 +1320,7 @@ switch (_typeofUnit) do
       _unit addmagazine "ACE_Battery_Rangefinder";
       _unit addweapon "NVGoggles";
       _unit addweapon "ACE_ParachuteRoundPack";
-      _unit addweapon "ACE_Map_Tools";
+      
 
       _unit addweapon _rucksack;
       [_unit,"ACE_Rangefinder_OD",1] spawn f_addWepToRuck;
@@ -1351,7 +1351,7 @@ switch (_typeofUnit) do
       _unit addweapon _oldrifle;
       _unit addweapon _pistol;
       _unit addweapon "ACE_ParachuteRoundPack";
-      _unit addweapon "ACE_Map_Tools";
+      
       
 //      _unit addweapon _rucksack;
             
@@ -1373,7 +1373,7 @@ switch (_typeofUnit) do
       _unit addweapon _sfrifleGL;
       _unit addweapon "NVGoggles";   
       _unit addweapon "Binocular";
-      _unit addweapon "ACE_Map_Tools";
+      
 	  _unit addweapon "ACE_GlassesBalaklava";
 	
       
@@ -1407,7 +1407,7 @@ switch (_typeofUnit) do
       _unit addweapon _sfrifle;
       _unit addweapon "NVGoggles";   
 	  _unit addweapon "ACE_GlassesBalaklava";
-	  _unit addweapon "ACE_Map_Tools";
+	  
 	  _unit addweapon "Laserdesignator";
 	              
       _unit addweapon "ACE_P159_RD90";
@@ -1435,7 +1435,7 @@ switch (_typeofUnit) do
       {_unit addmagazine _smokegrenade;} foreach [1,2];
 	  _unit addweapon "NVGoggles";
 	  _unit addweapon "ACE_ParachutePack";
-      _unit addweapon "ACE_Map_Tools";
+      
 	  _unit addweapon "ACE_GlassesBalaklava";
 	  _unit addweapon "ACE_Earplugs";
 	      
@@ -1464,7 +1464,7 @@ switch (_typeofUnit) do
       _unit addweapon _sfsnrifle;
       _unit addweapon "NVGoggles";   
 	  _unit addweapon "ACE_GlassesBalaklava";
-	  _unit addweapon "ACE_Map_Tools";
+	  
             
       _unit addweapon _rucksack;
 
@@ -1496,7 +1496,7 @@ switch (_typeofUnit) do
       _unit addweapon "NVGoggles";   
 	  _unit addweapon "ACE_ParachutePack";
 	  _unit addweapon "ACE_GlassesBalaklava";
-	  _unit addweapon "ACE_Map_Tools";
+	  
             
       _unit addweapon _rucksack;
 
@@ -1526,11 +1526,11 @@ switch (_typeofUnit) do
       {_unit addmagazine _bandage;} foreach [1,2];
       {_unit addmagazine _morphine;} foreach [1,2,3];
       {_unit addmagazine _epinephrine;} foreach [1,2,3];
-      _unit addweapon "ACE_Map_Tools";
+      
 	  _unit addweapon "NVGoggles";
 	  _unit addweapon "ACE_ParachutePack";
 	  _unit addweapon "ACE_GlassesBalaklava";
-	  _unit addweapon "ACE_Map_Tools";
+	  
       
       _unit addweapon _medicrucksack;
 
@@ -1561,7 +1561,7 @@ switch (_typeofUnit) do
 	  _unit addweapon _pistol;
       _unit addweapon _dmrifle;
       _unit addweapon "NVGoggles";   
-	  _unit addweapon "ACE_Map_Tools";
+	  
 	   _unit addweapon "ACE_ParachutePack";
             
                    

@@ -1,0 +1,54 @@
+
+
+=====================================================================
+== D:\CleintInstalls\SHAYG\GameServers\TC50553113724501114461638\arma2oaserver.exe
+== "D:\CleintInstalls\SHAYG\GameServers\TC50553113724501114461638\arma2oaserver.exe" -mod=@CBA;@ACE;@ACEX;@ACEX_SM;@sthud;@ACRE;@fallujah;@FRAN_quesh_kibrul;@japahto;@RH_HK416;@rkt_f15;@rkt_f4;@SGW_Israel;@SMK -world=empty -config=server.cfg -port=2302 -profiles=D:\CleintInstalls\SHAYG\GameServers\TC50553113724501114461638\ -name=server -maxplayers=16  
+=====================================================================
+Exe timestamp: 2011/07/27 06:10:59
+Current time:  2011/08/04 11:34:30
+
+Version 1.59.79384
+Item str_disp_server_control listed twice
+File sg\tracked_i\m113\config.cpp, line 143: '/CfgVehicles/M113Reammo_IS.faction': Missing ';' at the end of line
+Updating base class ->CZ_Backpack_EP1, by ca\weapons_e\ammoboxes\config.bin/cfgVehicles/CZ_Backpack_AmmoMG_EP1/
+Updating base class ->CZ_VestPouch_EP1, by ca\weapons_e\ammoboxes\config.bin/cfgVehicles/CZ_VestPouch_M4_EP1/
+Updating base class StandBase->Default, by smk_anims\config.bin/CfgMovesMaleSdr/States/AmovPercMstpSlowWrflDnon/
+Updating base class StandBase->StandBase, by smk_anims\config.bin/CfgMovesMaleSdr/States/SprintBaseDf/
+Updating base class ->US_Soldier_Base_EP1, by ca\characters_e\config.bin/CfgVehicles/US_Soldier_EP1/
+Updating base class ->US_Soldier_EP1, by ca\characters_e\config.bin/CfgVehicles/US_Soldier_AMG_EP1/
+Updating base class ->US_Soldier_Base_EP1, by ca\characters_e\config.bin/CfgVehicles/US_Soldier_GL_EP1/
+Updating base class ->US_Soldier_Base_EP1, by ca\characters_e\config.bin/CfgVehicles/US_Soldier_Officer_EP1/
+Updating base class ->US_Soldier_Base_EP1, by ca\characters_e\config.bin/CfgVehicles/US_Soldier_SL_EP1/
+Updating base class ->US_Soldier_Base_EP1, by ca\characters_e\config.bin/CfgVehicles/US_Soldier_TL_EP1/
+Updating base class ->US_Soldier_AT_Base_EP1, by ca\characters_e\config.bin/CfgVehicles/US_Soldier_LAT_EP1/
+Updating base class ->US_Soldier_AT_Base_EP1, by ca\characters_e\config.bin/CfgVehicles/US_Soldier_AA_EP1/
+Updating base class ->US_Soldier_Base_EP1, by ca\characters_e\config.bin/CfgVehicles/US_Soldier_Medic_EP1/
+Updating base class ->US_Soldier_Base_EP1, by ca\characters_e\config.bin/CfgVehicles/US_Soldier_MG_EP1/
+Updating base class ->US_Soldier_Base_EP1, by ca\characters_e\config.bin/CfgVehicles/US_Soldier_Spotter_EP1/
+Updating base class ->US_Soldier_Base_EP1, by ca\characters_e\config.bin/CfgVehicles/US_Soldier_Sniper_EP1/
+Updating base class ->US_Soldier_Sniper_EP1, by ca\characters_e\config.bin/CfgVehicles/US_Soldier_SniperH_EP1/
+Updating base class ->US_Soldier_Base_EP1, by ca\characters_e\config.bin/CfgVehicles/US_Soldier_Marksman_EP1/
+Updating base class ->US_Soldier_Base_EP1, by ca\characters_e\config.bin/CfgVehicles/US_Soldier_Engineer_EP1/
+Updating base class ->US_Soldier_Base_EP1, by ca\characters_e\config.bin/CfgVehicles/US_Soldier_Pilot_EP1/
+Updating base class ->US_Soldier_Base_EP1, by ca\characters_e\config.bin/CfgVehicles/US_Soldier_Crew_EP1/
+Updating base class ->US_Delta_Force_EP1, by ca\characters_e\config.bin/CfgVehicles/US_Delta_Force_Air_Controller_EP1/
+Updating base class ->HMMWV_Base, by ca\wheeled2\hmmwv\m997a2_ambulance\config.bin/CfgVehicles/HMMWV_Ambulance/
+Updating base class ->MTVR_base, by ca\wheeled_e\config.bin/CfgVehicles/MTVR_DES_EP1/
+Updating base class ->MtvrRefuel_base, by ca\wheeled_e\config.bin/CfgVehicles/MtvrRefuel_DES_EP1/
+Updating base class ->Car, by ca\wheeled_e\atv\config.bin/CfgVehicles/ATV_Base_EP1/
+Updating base class ->HMMWV_M1151_M2_DES_Base_EP1, by ca\wheeled_e\hmmwv\config.bin/CfgVehicles/HMMWV_M1151_M2_DES_EP1/
+Updating base class ->LandRover_Base, by ca\wheeled_e\lr\config.bin/CfgVehicles/LandRover_CZ_EP1/
+Updating base class ->Plane, by ca\air2\c130j\config.bin/CfgVehicles/C130J/
+Updating base class CA_Magazine->200Rnd_556x45_M249, by ca\weapons_baf\config.bin/CfgMagazines/200Rnd_556x45_L110A1/
+Updating base class CA_Magazine->200Rnd_556x45_M249, by ca\weapons_e\config.bin/CfgMagazines/100Rnd_556x45_M249/
+Updating base class ->M16_base, by ca\weapons_e\config.bin/cfgWeapons/M4A3_CCO_EP1/
+Updating base class ->M240, by ca\weapons_e\m240\config.bin/CfgWeapons/m240_scoped_EP1/
+Updating base class ->AH64_base_EP1, by ca\air_e\ah64\config.bin/CfgVehicles/AH64D_EP1/
+Updating base class ->UH1H_base, by ca\air_e\uh1h\config.bin/CfgVehicles/UH1H_TK_EP1/
+Updating base class ->UH60M_US_base_EP1, by ca\air_e\uh60m\config.bin/CfgVehicles/UH60M_EP1/
+Updating base class ->Tank, by ca\tracked_e\m113\config.bin/CfgVehicles/M113_Base/
+Updating base class ->M113Ambul_Base, by ca\tracked_e\m113\config.bin/CfgVehicles/M113Ambul_UN_EP1/
+Updating base class Default->StandBase, by x\ace\addons\sys_stamina\config.bin/CfgMovesMaleSdr/States/AmovPercMstpSlowWrflDnon/
+Updating base class StandBase->StandBase, by x\ace\addons\sys_stamina\config.bin/CfgMovesMaleSdr/States/AmovPercMstpSrasWpstDnon/
+Updating base class StandBase->StandBase, by x\ace\addons\sys_stamina\config.bin/CfgMovesMaleSdr/States/AmovPercMstpSnonWnonDnon/
+ErrorMessage: Data file too short 'MPMissions\CO_MCC_SANDBOX_V161.eden.pbo'. Expected 2864165 B, got 2855856 B

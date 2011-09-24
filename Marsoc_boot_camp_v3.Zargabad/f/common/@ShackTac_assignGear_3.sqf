@@ -1288,7 +1288,7 @@ switch (_typeofUnit) do
       _unit addweapon _sfrifleGL;
       _unit addweapon "NVGoggles";   
       _unit addweapon "Binocular";
-      _unit addweapon "ACE_Map_Tools";
+      
 	  _unit addweapon "ACE_GlassesBalaklava";
 	
       
@@ -1323,7 +1323,7 @@ switch (_typeofUnit) do
       _unit addweapon _sfrifle;
       _unit addweapon "NVGoggles";   
 	  _unit addweapon "ACE_GlassesBalaklava";
-	  _unit addweapon "ACE_Map_Tools";
+	  
 	  _unit addweapon "Laserdesignator";
 	              
       _unit addweapon "ACE_P159_RD90";
@@ -1354,7 +1354,7 @@ switch (_typeofUnit) do
       {_unit addmagazine _smokegrenade;} foreach [1];
 	  {_unit addmagazine "ACE_M7A3";} foreach [1];
 	  _unit addweapon "NVGoggles";
-      _unit addweapon "ACE_Map_Tools";
+      
 	  _unit addweapon "ACE_GlassesBalaklava";
 	  _unit addweapon "ACE_Earplugs";
 	  _unit addweapon "ACE_GlassesGasMask_US";
@@ -1382,7 +1382,7 @@ switch (_typeofUnit) do
       _unit addweapon _sfsnrifle;
       _unit addweapon "NVGoggles";   
 	  _unit addweapon "ACE_GlassesBalaklava";
-	  _unit addweapon "ACE_Map_Tools";
+	  
             
       _unit addweapon _rucksack;
 
@@ -1414,7 +1414,7 @@ switch (_typeofUnit) do
       _unit addweapon "NVGoggles";   
 	  _unit addweapon "ACE_GlassesBalaklava";
 	  _unit addweapon "ACE_GlassesGasMask_US";
-	  _unit addweapon "ACE_Map_Tools";
+	  
             
       _unit addweapon _rucksack;
 
@@ -1444,11 +1444,11 @@ switch (_typeofUnit) do
       {_unit addmagazine _bandage;} foreach [1,2];
       {_unit addmagazine _morphine;} foreach [1,2,3];
       {_unit addmagazine _epinephrine;} foreach [1,2,3];
-      _unit addweapon "ACE_Map_Tools";
+      
 	  _unit addweapon "NVGoggles";
 	  _unit addweapon "ACE_GlassesBalaklava";
 	  _unit addweapon "ACE_GlassesGasMask_US";
-	  _unit addweapon "ACE_Map_Tools";
+	  
       
       _unit addweapon _medicrucksack;
 
@@ -1478,7 +1478,7 @@ switch (_typeofUnit) do
 	  _unit addweapon _pistol;
       _unit addweapon _dmrifle;
       _unit addweapon "NVGoggles";   
-	  _unit addweapon "ACE_Map_Tools";
+	  
             
                    
       _unit selectweapon primaryweapon _unit;
